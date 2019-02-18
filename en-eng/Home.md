@@ -9,19 +9,19 @@ We are contributing to this project on our spare time. If you do consider that i
 The aim of the plugin is to bridge Zigate hardware to the Domoticz UI. This will allow you to manage all your devices through widgets created on the Domoticz side.
 
 Here after is a non-exhaustive list of compatible devices. What is listed here is all devices which have been 'certified', we know that it operates with the plugin. It might happen that you have some other ZigBee compliant devices which can work.
-* [List of certified devices](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Compatible-Devices)
+* [List of certified devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices)
 
 ## To start
-* [Plugin installation and Update](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Plugin-Installation)
-* [Plugin Configuration](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Plugin-Configuration)
+* [Plugin installation and Update](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation)
+* [Plugin Configuration](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Configuration)
 
 ## Advanced
 
-* [Plugin admin widgets](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Plugin-Administration) (_4.1_)
-* [Group Management](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Group-Management) (_4.1_)
-* [Plugin parameters](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/PluginConf.txt)
-* [Network status](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Network-Status) (_4.1_ beta)
-* [Network Topology - Mesh](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Network-Topology---LQI-report) (4.1_ beta)
+* [Plugin admin widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Administration) (_4.1_)
+* [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management) (_4.1_)
+* [Plugin parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.txt)
+* [Network status](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Status) (_4.1_ beta)
+* [Network Topology - Mesh](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Topology---LQI-report) (4.1_ beta)
 
 ## In case of Trouble
 
@@ -33,15 +33,15 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 
 ## 
 ## The FAQ Corners
-* [IKEA Tradfri corner](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/IKEA-Tradfri-corner)
-* [Xiaomi/Aqara corner](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Xiaomi-Corner)
-* [Zigate](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Zigate-FAQ)
-* [Zigate Plugin](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Zigate-Plugin-FAQ)
+* [IKEA Tradfri corner](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/IKEA-Tradfri-corner)
+* [Xiaomi/Aqara corner](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Xiaomi-Corner)
+* [Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-FAQ)
+* [Zigate Plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-Plugin-FAQ)
 
 ## You want more
 You'll find advanced information like How to configure the plugin for adding new - non-certfied devices -
-* [Coexistence between Wifi and Zigbee](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Co-existence-of-IEEE-802.15.4-at-2.4-GHz-and-Zigbee)
-* [Dealing with un-certified devices](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Dealing-with-un-certified-device)
-* [Enrolment Process](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Enrolment-process)
-* Documentation of [DeviceConf.txt](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/DeviceConf)
-* [Internal Structure List Of devices ( DeviceList-xx.txt )](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Structure-of-ListOfDevices)
+* [Coexistence between Wifi and Zigbee](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Co-existence-of-IEEE-802.15.4-at-2.4-GHz-and-Zigbee)
+* [Dealing with un-certified devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Dealing-with-un-certified-device)
+* [Enrolment Process](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Enrolment-process)
+* Documentation of [DeviceConf.txt](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DeviceConf)
+* [Internal Structure List Of devices ( DeviceList-xx.txt )](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Structure-of-ListOfDevices)
