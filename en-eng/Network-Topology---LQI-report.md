@@ -21,7 +21,7 @@ The report will take a certain time based on the size of the network ( number of
 A raw format is also provided and is analysed via the Web UI.
 
 ** Graphical using the Web User Interface
-![Network Toplogy](https://github.com/sasu-drooz/Domoticz-Zigate/blob/master/Images/Network_Topology.png)
+![Network Toplogy](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network_Topology.png)
 
 **(Zigate) LQI Results:**
 

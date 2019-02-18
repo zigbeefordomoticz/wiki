@@ -2,7 +2,7 @@
 
 In Domoticz, go in Setup&gt;Hardware, in Type select &quot;Zigate plugin&quot;.
 
-[[File:https://github.com/sasu-drooz/Domoticz-Zigate/blob/master/Images/Zigate-Configuration.png|frame|none|alt=|caption ]]
+[[File:https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Zigate-Configuration.png|frame|none|alt=|caption ]]
 
 * Name: Select a name for your hardware (here it's zigate)
 * Type: Zigate plugin
