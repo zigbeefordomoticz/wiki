@@ -19,7 +19,8 @@ For deployment in an environment where resource planning and bandwidth allocatio
  ‘Channel Allocation’), a channel centre-frequency offset of 7 MHz is recommended to ensure acceptable co-existence with Wi-Fi.   The non-overlapping channels (1, 6 and 11 for North America, 1, 7 and 13 for Europe) can also be used 
 to avoid Wi-Fi interference where non-overlapping Wi-Fi channels have been allocated.
 
-![Channel overlap](https://github.com/sasu-drooz/Domoticz-Zigate/blob/dev-grpmgt/images/Channel-Allocations.png)
+![Channel overlap](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Channel-Allocations.png)
+
 
 ## 2. Physical Separation
 Ensuring a physical separation of at least 8 m from a Wi-Fi Access Point (AP) will ensure acceptable co-channel IEEE 802.15.4 performance.

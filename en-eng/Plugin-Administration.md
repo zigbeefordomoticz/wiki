@@ -2,7 +2,7 @@ The plugin is providing 3 widgets for administration purposes. Those Widgets are
 
 ## 1.1 Status Widget
 
-![Administration Widgets](https://github.com/sasu-drooz/Domoticz-Zigate/blob/pre-4.1/images/Widgets_Admin.png)
+![Administration Widgets](https://github.com/sasu-drooz/Domoticz-Zigate/blob/master/Images/Widgets_Admin.png)
 
 In domoticz you will find a Widget name 'Zigate Status xx' (in the Measurement dashboard) where 'xx is the HardwareID of the plugin
 This status widget will give you information on the current state of the plugin. You can even see in the Log of the widget what have been the different states in the past 
@@ -35,4 +35,4 @@ Here is a non-exhaustive list of notifications:
 
 Here is an example of the Notifications Widget Logs
 
-![Notification Widgets](https://github.com/sasu-drooz/Domoticz-Zigate/blob/pre-4.1/images/Widget_Notifications.png)
+![Notification Widgets](https://github.com/sasu-drooz/Domoticz-Zigate/blob/master/Images/Widget_Notifications.png)

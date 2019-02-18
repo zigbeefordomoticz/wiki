@@ -6,7 +6,7 @@ The here after process will help to identify as much information from this devic
 
 1. Enable frame discovery archiving
 Purpose is to archive the discovery frames during the pairing process.
-To do so, edit [PluginConf.txt](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/PluginConf) and set 'allowStoreDiscoveryFrames' to '1'. 
+To do so, edit [PluginConf.txt](https://github.com/pipiche38/Domoticz-Zigate-Wiki/wiki/PluginConf) and set 'allowStoreDiscoveryFrames' to '1'. 
 
 ATTENTION: do not leave it to 1 after the test, as it will force the system and the DeviceConf.txt (where you have pre-configured devices) will never be look at.
 This will create a json file at the end of the discovery process under `Zdatas` directory
