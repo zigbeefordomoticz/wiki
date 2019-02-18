@@ -5,6 +5,9 @@ For more information on Python requirements we advice you to go to the [Domoticz
 
 To install:
 
+1. If you are on a Synology NAS platform
+   * [Plugin-Installation on Syno](Plugin-Installation-on-Synology-NAS.md)
+
 1. For Unix system using the Python Plugin Manager
    * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
    * Just search for "Zigate Plugin" entry and add it.
