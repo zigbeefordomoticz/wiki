@@ -61,6 +61,7 @@ Either the information is coming from one of the plugin user (through direct com
 | LST002 |  Color Switch RGBWW | Hue LightStrips Plus | Full Op. |   4.1.0        |
 | LCT007 |  Color Switch RGBWW | Hue bulb A19 | Full Op. |   4.1.0        |
 | RWL021 | Remote Control | Remote Control with On/Off/DIM+/DIM- |  | 4.1.0 & Firm 3.0f |
+| SML001 | Motion Sensor | Temperature, Lux and Motion detection | Fully Op. | 4.1.0 |
 
 ### Philio Technology Corporation
 
