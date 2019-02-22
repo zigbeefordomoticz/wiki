@@ -7,6 +7,7 @@ Either the information is coming from one of the plugin user (through direct com
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Thermostat  | Setpoint+ Temp | Setpoint/ Temp | Operational. Currently investigating the Thermostat Mode capability | 4.1    |
+| Dimmer      | Switch / LvlControl | Dimmer | Full Op. | 4.1.0 |
 
 ### EUROTRONIC
 
