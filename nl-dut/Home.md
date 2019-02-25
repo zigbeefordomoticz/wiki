@@ -7,9 +7,9 @@ Dit open-source project wordt onderhouden door vrijwilligers, dit betekent dus d
 [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 ## Introductie
-Het doel van de plugin is om een koppeling te maken tussen de Zigate (hardware) en de Domoticz GUI. Dit zorgt ervoor dat je alle Zigbee producten kan bedienen via Domoticz. De plugin is volledig geschreven in python en dient los geÔnstalleerd te worden.
+Het doel van de plugin is om een koppeling te maken tussen de Zigate (hardware) en de Domoticz GUI. Dit zorgt ervoor dat je alle Zigbee producten kan bedienen via Domoticz. De plugin is volledig geschreven in python en dient los ge√Ønstalleerd te worden.
 
-Hieronder is een lijst met de verschillende apparaten welke compatible zijn met de plugin, deze producten zijn daadwerkelijk door het team getest en zijn dus ìgecertificeerdî. Het is mogelijk dat een ander Zigbee product ook functioneert met de plugin, echter is dit niet uitvoerig getest door het team. 
+Hieronder is een lijst met de verschillende apparaten welke compatible zijn met de plugin, deze producten zijn daadwerkelijk door het team getest en zijn dus ‚Äúgecertificeerd‚Äù. Het is mogelijk dat een ander Zigbee product ook functioneert met de plugin, echter is dit niet uitvoerig getest door het team. 
 * [Lijst met certificeerde apparaten] https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Compatible-Devices)
 
 ## Om te beginnen:
@@ -26,7 +26,7 @@ Hieronder is een lijst met de verschillende apparaten welke compatible zijn met 
 
 ## In het geval van problemen met de plugin:
 
-1. Controleer de log-file van Domotic, hier kan je veel informatie vinden als er iets niet goed gaat.
+1. Controleer de log-file van Domoticz, hier kan je veel informatie vinden als er iets niet goed gaat.
 2. Gebruik 1 van onderstaande forums (helaas geen Nederlands forum):
    * [Frans Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * [Engels Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
