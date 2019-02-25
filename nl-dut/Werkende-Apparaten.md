@@ -61,6 +61,7 @@ Deze data is afkomstig van gebruikers van de plugin (via bijvoorbeeld forums) of
 | Apparaat/Type | Gebruik door Domoticz | Beschrijving | Status | Plugin Versie |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Slim Multisensor PST03-A/B/C | | | Operationnal | 2.4.0 |
+| SML001 | Motion Sensor | Temperature, Lux and Motion detection | Fully Op. | 4.1.0 |
 
 ### Profalux
 
