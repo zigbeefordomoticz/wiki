@@ -1,4 +1,4 @@
-﻿# Om gaan met niet gecertificeerde apparaten
+﻿# Omgaan met niet gecertificeerde apparaten
 
 Het proces wat hierna volgt helpt ons het probleem te identificeren met niet gecertificeerde apparaten (als deze zich voordoen) deze informatie kan je dus verzamelen om mee te geven als je een probleem aan maakt op GitHub.
 
