@@ -8,6 +8,7 @@ In het PluginConf.txt bestand is een parameter welke aangepast kan worden om een
 `'channel':'0',` ( Standaard en gebruikt dus een kanaal tussen 11 en 26 in )
 
 `'channel':'21',` (Stelt het netwerk vast in op kanaal 21)
+
 `'channel':'11,15,16,21,22',`(Deze optie kiest een kanaal welke het rustigst is uit de opgegeven lijst)
 
 **Om een kanaal wijziging door te voeren dient er een software reset uitgevoerd te worden, dit kan je in Domoticz doen bij de plugin instellingen.
