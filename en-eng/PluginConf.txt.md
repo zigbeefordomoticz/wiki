@@ -21,8 +21,9 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | -----                | ------- | ----------- | ------ |
 | allowStoreDiscoveryFrames | 0 | If set to '1' it will store the Frames during the discovery messages. DONT'T use it on operational system as the side effect is to push for a full discovery process and it doesn't take DeviceConf.txt in consideration | 4.0 |
 | allowForceCreationDomoDevice | 0 | If set to '1' it will allow to create Domoticz widget even if there is one existing | 4.0 |
-| forceConfigureReporting | 0 | If set to '1' it will force to re-set all configure reporting attributes | 4.0 |
-| forceReadAttributes | 0 | If set to 1 it will force to reset all ReadAttributes |  4.0 |
+| resetConfigureReporting | 0 | If set to '1' it will force to re-set all configure reporting attributes | 4.0 |
+| resetReadAttributes | 0 | If set to 1 it will force to reset all ReadAttributes |  4.0 |
+| enableReadAttributes | 0 | If set to 1, the plugin will poll information from each of the main powered devices. It might be needed for some devices which doesn't all to set Configure Automatic reporting |
 | resetMotiondelay | 30 | Number of seconds before a reset of the Motion widget status | 4.1 |
 | vibrationAqarasensitivity | 'medium' | Sensitivity of Vibration aqara device ('high', 'medium', 'low') | 4.1 |
 
