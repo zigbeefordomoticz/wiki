@@ -15,12 +15,14 @@ To install:
 1. For manual installation
    * Go in your Domoticz directory using a command line and open the plugins directory.
    * Usually you should be under <code>domoticz/plugin</code>
-   * Run: <code>git clone https://github.com/sasu-drooz/Domoticz-Zigate.git</code>
+   * Run: `git clone https://github.com/sasu-drooz/Domoticz-Zigate.git`
    * It will create a folder 'Domoticz-Zigate'
+   * Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
    * Restart Domoticz.
 
 Attention:
-* If you are installing the plugin on Synlogy, 
+
+* If you are installing the plugin on Synlogy,
   * You need git-server package
   * Domoticz with python
 
@@ -28,13 +30,15 @@ Attention:
 In the web UI, navigate to the Hardware page. In the hardware dropdown there will be an entry called &quot;Zigate plugin&quot;.
 
 ## Update
+
 The plugin is regularly updated. For bug fixing or enhancement. In order to keep the plugin up to date
 
 * Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
-* Run: <code>git pull</code>
+* Run: `git pull`
 * Restart Domoticz.
 
 ## Protect your data
+
 You have some critical files under the Domoticz-Zigate folder. In case of crash, you might want to have backup to restore. Here after are the files to backup
 
     DeviceList-xx.txt
@@ -52,6 +56,7 @@ The code is available under different branches
 In order to provide stability and also provide more recent development, Zigate plugin has the following channels
 
 ### stable
+
 This is considered as a solid , reliable version.
 
 ### beta
