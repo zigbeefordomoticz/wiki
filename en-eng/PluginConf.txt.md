@@ -7,13 +7,21 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 
 
 `{
-'allowStoreDiscoveryFrames':'0',
-'logFORMAT':'0',
-'logLQI':'0',
+'channel':'11,15,16,21,22',
+'Certification':'CE',
+'Ping':'1',
+'self.eraseZigatePDM':'0',
+'vibrationAqarasensitivity':'medium',
+'resetMotiondelay':'30',
+'enableReadAttributes':'0',
+'enablegroupmanagement':'0',
+'allowReBindingClusters':'0',
+'resetConfigureReporting':'0',
+'resetReadAttributes':'0',
 'allowRemoveZigateDevice':'0',
-'allowForceCreationDomoDevice':'0',
-'networkScan':'0',
-'channel':'0'
+'allowStoreDiscoveryFrames':'0',
+'logLQI':'0',
+'logFORMAT':'0'
 }`
 
 ### Device Management
@@ -21,6 +29,7 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | -----                | ------- | ----------- | ------ |
 | allowStoreDiscoveryFrames | 0 | If set to '1' it will store the Frames during the discovery messages. DONT'T use it on operational system as the side effect is to push for a full discovery process and it doesn't take DeviceConf.txt in consideration | 4.0 |
 | allowForceCreationDomoDevice | 0 | If set to '1' it will allow to create Domoticz widget even if there is one existing | 4.0 |
+| allowReBindingClusters | 1 | By default we allow to rebind clusters of a particular device when receving Device Annoucement.| 4.1 |
 | resetConfigureReporting | 0 | If set to '1' it will force to re-set all configure reporting attributes | 4.0 |
 | resetReadAttributes | 0 | If set to 1 it will force to reset all ReadAttributes |  4.0 |
 | enableReadAttributes | 0 | If set to 1, the plugin will poll information from each of the main powered devices. It might be needed for some devices which doesn't all to set Configure Automatic reporting |
