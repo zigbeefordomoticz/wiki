@@ -17,7 +17,7 @@ For example : If you power off an Ikea bulb (with the physical switch) and then 
 
 If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
 
-1. Open the PluginConf.txt file (more information about this here .....)
+1. Open the PluginConf.txt file (more information about this here https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.txt.md)
 1. Please check if the parameter "AllowRebindingClusters" is set to 1.
     If it is not, set it to "1"
 1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
