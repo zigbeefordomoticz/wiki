@@ -13,10 +13,12 @@ This is more an OS issue, but here are few hints
 
 ## I don't get the device updated in Domoticz when interacting via a remote control or manualy
 
-If I power Off an Ikea Bulb (with a physical switch), when switching it on I don't have a status updated in Domoticz. I have the same issue if using a remote controller .
+For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again the status of the bulb is not updated in Domoticz. and are having the same issue with a remote controller which also doesn't update it's current state to Domoticz.
 
-Most likely the issue is that the automatic reporting is not correctly configured at the device end. 
+If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
 
-1. Make sure that you have Allow reBinding Cluster in the PluginConf.txt ( that is the default ). check the parameters allowReBindingClusters it must be set to 1.
-1. Switch off the Ikea bulb with the physical switch, and then switch it on. It will re-do the rebinding and the configuration reporting.
-
+1. Open the PluginConf.txt file (more information about this here .....)
+1. Please check if the parameter "AllowRebindingClusters" is set to 1.
+    If it is not, set it to "1"
+1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
+The rebinding process will start itself, the status problems should now be fixed.
