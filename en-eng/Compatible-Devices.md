@@ -47,6 +47,8 @@ Either the information is coming from one of the plugin user (through direct com
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Celiane with Netatmo Plug | Switch and Power Meter | It might happend the Power Meter doesn't work. In that case it is because the device requirers firmware update. To do so you need to have at your disposal the Legrand gateway | Tested | 2.4.0 |
 | Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Tested | 2.4.0 |
+| Micro Module | Switch On/Off | Switch On/Off | Fully Op. | 4.1 and Fw 3.0f |
+| Shutter/Window Covering | Level Control | Level Control | in progress | 4.1 and Fw 3.0f |
 | Switch for rolling shutter | Switch/LvlControl | On/Off | Op. | 4.1 & Firm 3.0f |
 
 ### OSRAM
