@@ -42,7 +42,7 @@ At that stage, you have:
 1. Restart the plugin
    * This will rescan for groups, and it should discover a new group created when pairing the Remote Command and Bulb.
    * A Group will be created in Domoticz. This group will command the Bulb, so you can cross check that is the right one. Do note the address of that group 'xxxx'
-1. Edit the file Conf/ZigateGroupsConfig-xx.txt (where xx is the ID of your Zigate Hardware in Domoticz). And add a new line
+1. Edit (or create if not existing ) the file Conf/ZigateGroupsConfig-xx.txt (where xx is the ID of your Zigate Hardware in Domoticz). And add a new line
 	xxxx, Group Remote Command, Zigate IEEE, Bulb IEEE
 1. Restart the plugin
 
