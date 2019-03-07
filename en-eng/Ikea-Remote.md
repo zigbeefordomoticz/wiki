@@ -52,7 +52,13 @@ At that stage, you have:
 After the restart of the plugin and when it is in Ready state, you should be able to see any action done on the Remote visible on the Remote widget in domoticz.
 From that if you want to associate actions based on Remote action you can use either Blocky, dzVents or LUA script.
 
-### Phase 4: Remove the Bulb from the group
+### Option 1: Make Left/Right buttons changing Color schema of the group
+
+By default after Phase3, you see the remote events coming to the Domoticz widget and you can eventually use then via Blocky/dzVents or LUA script.
+The plugin allow also to 'natively' interpret Left and Right and change the color of the group the remote belongs too.
+In order to enable this feature, you have to edit once more the Conf/ZigateGroupsConfig-xx.txt and add the Tradfri Remote control IEEE to the group you have already added the Zigate IEEE.
+
+### Option 2: Remove the Bulb from the group
 
 If you want to use the Remote only for remote command, and don't have the bulb involved at all, you simply have to remove the Bulb IEEE from the group definition.
 
