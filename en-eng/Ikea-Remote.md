@@ -7,11 +7,11 @@ If you want to use the Ikea Tradfri 5 buttons remote command and to control anyt
 
 To start with, you need the following pre-requisites:
 1. A zigate  with firmware level above 3.0f
-1. A Tradfri remote command (we will call it remote)
-1. A Tradfri bulb (we will call it bulb)
+1. A Tradfri remote command (call remote and IEEE= 00158d0001ededde )
+1. A Tradfri bulb (we will call it bulb and 2 are used in the example: 00158d0002c63af3 and 90fd9ffffe86c7a1 )
 1. Domoticz-Plugin version pre-4.1 or 4.1 or above
-1. You know the Hardware ID of the Zigate plugin. You can find it in the Domoticz Hardware Tab. (call it HardwareID)
-1. You known the Zigate IEEE. You can be found in the utility tab under the Text Notification Widget) (call it Zigate IEEE)
+1. You know the Hardware ID of the Zigate plugin. You can find it in the Domoticz Hardware Tab. (call it HardwareID and 35 in the example)
+1. You known the Zigate IEEE. You can be found in the utility tab under the Text Notification Widget) (call it Zigate IEEE, and is 00158d0001ededde in the example)
 
 ## Step-by-step
 
@@ -24,7 +24,7 @@ Make sure that you have also enabled 'accept New Hardware' in Domoticz settings.
    * You must have the following entry in Domoticz-Zigate plugin file Conf/PluginConf.txt 'enablegroupmanagement':'1',
    The file will looks like that:
    
-`   {
+`{
 'channel':'11,15,19,20,25,26',
 'vibrationAqarasensitivity':'medium',
 'resetMotiondelay':'30',
@@ -38,7 +38,7 @@ Make sure that you have also enabled 'accept New Hardware' in Domoticz settings.
 1. Pair your bulb with Zigate. For that you have to reset the bulb by doing, from a power on state, 6 times power-off power-on ( in a short time ). At the end of that process, you should have a new Widget in Domoticz which will command the Bulb.
    * You can at that stage note the Bulb IEEE, by looking after the List of Devices (in Domoticz) and the IEEE is the 3rd columns named ID.
    
-[[https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Images/Domoticz-ListOfDevices.png]]
+![List of Devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Images/Domoticz-ListOfDevices.png])
    
 1. Pair the Tradfri remote command with Zigate. For that you have to reset the remote command, by pressing 4 times, the small setup button. At the end of that process, you should have a new widget in Domoticz representing the Remote Command. At that stage the widget do not get any event from the remote - this is normal -. The widget is passive.
 1. Pair the Remote Command with the Tradfri Bulb. For that, you need to bring the remote command close to the bulb and press the setup button. The light will fluctuate, and when you have a peak of intensity, the pairing should have been done. Check that you can switch off/off the bulb from the remote. If not retry the pairing and make sure that you stay up to the end of this pairing process.
@@ -57,6 +57,14 @@ At that stage, you have:
    * A Group will be created in Domoticz. This group will command the Bulb, so you can cross check that is the right one. Do note the address of that group 'xxxx'
 1. Edit the file Conf/ZigateGroupsConfig-xx.txt (where xx is the ID of your Zigate Hardware in Domoticz). And add a new line
 	xxxx, Group Remote Command, Zigate IEEE, Bulb IEEE
+	
+ZigateGroupsConfig-35.txt
+
+`# Zigate -> 00158d0001ededde`
+`# IKEA Remote 90fd9ffffeea89e8`
+`1001,Groupe Lampes IKEA,90fd9ffffe86c7a1`
+`633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1`
+
 1. Restart the plugin
 
 
@@ -71,6 +79,13 @@ By default after Phase3, you see the remote events coming to the Domoticz widget
 The plugin allow also to 'natively' interpret Left and Right and change the color of the group the remote belongs too.
 In order to enable this feature, you have to edit once more the Conf/ZigateGroupsConfig-xx.txt and add the Tradfri Remote control IEEE to the group you have already added the Zigate IEEE.
 
+ZigateGroupsConfig-35.txt
+
+`# Zigate -> 00158d0001ededde`
+`# IKEA Remote 90fd9ffffeea89e8`
+`633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8`
+
+
 ### Option 2: Remove the Bulb from the group
 
 If you want to use the Remote only for remote command, and don't have the bulb involved at all, you simply have to remove the Bulb IEEE from the group definition.
@@ -83,16 +98,15 @@ If you want to use the Remote only for remote command, and don't have the bulb i
 
 ## For reference
 
-ZigateGroupsConfig-35.txt
-`
-# Zigate -> 00158d0001ededde
-# IKEA Remote 90fd9ffffeea89e8
-1001,Groupe Lampes IKEA,90fd9ffffe86c7a1
-633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8
-`
+* ZigateGroupsConfig-35.txt
 
-List of Devices in Domoticz
+`# Zigate -> 00158d0001ededde`
+`# IKEA Remote 90fd9ffffeea89e8`
+`1001,Groupe Lampes IKEA,90fd9ffffe86c7a1`
+`633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8`
 
-[[https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Images/Domoticz-ListOfDevices.png]]
+* List of Devices in Domoticz
+
+![List of Devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Images/Domoticz-ListOfDevices.png)
 
 
