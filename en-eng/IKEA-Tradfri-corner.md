@@ -25,3 +25,5 @@ With Zigate firmware 3.0f you can get the remote control event in domoticz (via 
 * Enable the Group Management (if not yet done)
   * Let's the plugin do the work and identify the Group created by the Ikea Bulb/Control association
   * You then need to associate the Zigate to this group (see in the Group Management on how to do that )
+  
+* A step-by-step approach is presented here: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Ikea-Remote.md
