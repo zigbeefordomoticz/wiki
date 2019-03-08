@@ -112,3 +112,4 @@ Either the information is coming from one of the plugin user (through direct com
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
 | KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
+| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
