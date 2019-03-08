@@ -7,4 +7,4 @@ We would like thanks all of the contributors whom by any means contributed to in
 @thiklop
 
 
-@zraki673 & @pipiche38
+@zaraki673 & @pipiche38
