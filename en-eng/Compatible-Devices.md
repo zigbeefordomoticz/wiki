@@ -13,7 +13,7 @@ Either the information is coming from one of the plugin user (through direct com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| Thermostat | Setpoint + Temp | Setpoint to configure the target temperature, and you can get the local temperature | Operational | 4.1.0 |
+| Thermostat | Setpoint + Temp | Setpoint to configure the target temperature, and you can get the local temperature | Operational | 4.1.0 & Firm 3.0f|
 
 ### IKEA Tradfri
 
