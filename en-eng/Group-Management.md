@@ -26,8 +26,9 @@ The Device Widget definition will be based on the most powerful device capabilit
 * If we have switches, plugs, blind and dimable lights, the group Device widget will be a LevelControl light
 
 
-
 ### 4.1. How to enable it
+
+A step-by-step approach is presented here: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Ikea-Remote.md
 
 **You must have a 3.0f or above firmware installed on Zigate**
 
@@ -38,7 +39,7 @@ Edit the file `Conf/PluginConf.txt` and add in the middle the here after line:
 
 ## 4.2. Using a Remote Controller (Pairing a remote control)
 
-In order to use an IKEA/Tradfri or a Philipps Hue remote:
+In order to use an IKEA/Tradfri:
 1. Pair/Commission each single object to the Zigate (including the remote controller)
 1. Pair the Remote Control with each Bulb you want to be part of such group
 1. Re-Start the plugin and make sure to enable the Group Management (See above Enable the functionality in the plugin)  and to accept new device in Domoticz
@@ -150,8 +151,6 @@ What does mean the log produced by the plugin at the end of the Group Processing
 `Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1001 - [('f748', '01')]`
 `Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: f748/01 90fd9ffffe86c7a1`
 `Feb 14 14:09:03 rasp domoticz[21610]: Status: (Zigate-DEV) Group startup done`
-
-
 
 
 Out of the 4 Groups,
