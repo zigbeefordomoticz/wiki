@@ -20,6 +20,12 @@ For more information on the certified list of devices, please check
 Addition work have been also done around the discovery mecanishm in order to speed up the process, but also to handle
 as much as possible ZLL and ZHA compliant devices.
 
+## KNOWN ISSUES and LIMITATIONS
+
+1. When creating a group of blind/shutter, the plugin will create a group of switch type. Simply edit it and change the Type.
+However if there is some group changes later on, the plugin will override this change, and you will have to edit again to Blind Percentage Inverted.
+
+
 ## WARNING
 Last but not least, we have also restructured the plugin filesystem in order to have a cleaner situation. As a result,
 a short migration step needs to performed by yourself, before restarting the plugin.
