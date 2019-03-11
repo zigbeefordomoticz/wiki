@@ -14,23 +14,30 @@ Important efforts have been made to support a number of additional devices and e
 * Zipato smoke detector
 * Hue Motion Sensor
 
+The plugin has been tested with the new up-coming PiZigate. No special integration have been done, except than providing a
+tool (shell script) to switch the PiZigate in **run** mode or in **flash** mode. More information 
+can be found [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md).
+
 For more information on the certified list of devices, please check 
 [List of certified devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices.md)
 
 Addition work have been also done around the discovery mecanishm in order to speed up the process, but also to handle
 as much as possible ZLL and ZHA compliant devices.
 
-## KNOWN ISSUES and LIMITATIONS
-
-1. When creating a group of blind/shutter, the plugin will create a group of switch type. Simply edit it and change the Type.
-However if there is some group changes later on, the plugin will override this change, and you will have to edit again to Blind Percentage Inverted.
-
-
-## WARNING
+## IMPORTANT
 Last but not least, we have also restructured the plugin filesystem in order to have a cleaner situation. As a result,
 a short migration step needs to performed by yourself, before restarting the plugin.
 
 You'll have to move the file DeviceList-xx from the Domoticz-Zigate (plugin directory) to Domoticz-Zigate/Data ( data plugin directory)
+
+## Notes:
+* If you want to have the full power of the plugin, some of the features rely on the latest developement of Domoticz. 
+We recommend using Domoticz V4.10547 or higher. However the plugin remains compatible with the current Domoticz V4.9700.
+
+## KNOWN ISSUES and LIMITATIONS
+
+1. When creating a group of blind/shutter, the plugin will create a group of switch type. Simply edit it and change the Type.
+However if there is some group changes later on, the plugin will override this change, and you will have to edit again to Blind Percentage Inverted.
 
 ## FOR SUPPORT
 Please feel free to ask for support and for that please use the existing Domoticz Forums.
@@ -38,7 +45,6 @@ Please feel free to ask for support and for that please use the existing Domotic
    * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
    
-
 ## DOCUMENTATION
 We are currently translating the wiki for our Dutch users (big thanks to Karsten for the work done). 
 Anyone willing to improve , translate in other languages are more than welcome
@@ -49,10 +55,6 @@ We would like also to encourage sharing and if you wouldn't to share with the ot
 feel free to get an account on GitHub and push to the plugin [Contrib](https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Contrib)
 
 More details can be found in the Release Notes.
-
-Note:
-* If you want to have the full power of the plugin, some of the features rely on the latest developement of Domoticz. 
-We recommend using Domoticz V4.10547 or higher. However you an still run with a lower version of Domoticz
 
 
 Last but not least, we are looking to improve the User Experience and especially the administration part. For that we 
