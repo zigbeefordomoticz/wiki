@@ -7,6 +7,32 @@ To install:
 
 1. If you are on a Synology NAS platform
    * [Plugin-Installation on Syno](Plugin-Installation-on-Synology-NAS.md)
+   
+1. If you are installing and be using the Plugin with a PiZigate you have some follow some pre-requisities
+   * You must be on a Raspbian distribution
+   * You must install the wiringPi package to get access to gpio commands
+   
+     `$ sudo apt-get purge wiringpi`
+     
+     `$ hash -r`
+     
+     In order to test if wiringPi is well installed you can :
+     
+     `$ gpio -v`
+     
+     `$ gpio readall`
+     
+     More information are available [here](http://wiringpi.com/download-and-install/)
+     
+   * You must be on a plugin version at least equal to 4.1
+     Starting with that version, you have a tool available under the plugin Tools folder named `pi-zigate.sh`
+     Before starting the plugin, you must set the PiZigate in running mode and for that you have to run
+     
+     `pi-zigate.sh run`
+     
+     You'll see the Blue lead on the Pi-Zigate switchin on.
+     
+     From there go ahead
 
 1. For Unix system using the Python Plugin Manager
    * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
