@@ -104,6 +104,7 @@ The update configuration will will be :
 
 From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate. For that you'll have to use the configuration file and add or create a group where you have the Bulb as well as the Zigate IEEE (Zigate IEEE can be found in the utility tab under the Text Notification Widget). If you only modify the automatically created group widget, you don't have to put the Remote Controller IEEE as it has been already added in the previous stage.
 
+Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller. When you have done 4.4 and everything is working (you are receiving the remote event to the Domoticz corresponding widget), you have to add the IEEE address of the Tradfri 5 buttons remote controller to the group you have initially created with it and for which you have added the IEEE Zigate.
 ### 4.5 Warnings
 
 * In the current implementation of the Zigate and its plugin, when Zigate is sending a command to an object or a list of objects, there is no guaranty that the object receives the command. 
