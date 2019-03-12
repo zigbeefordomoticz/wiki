@@ -1,4 +1,4 @@
-== Configuration ==
+## Configuration
 
 In Domoticz, go in Setup&gt;Hardware, in Type select &quot;Zigate plugin&quot;.
 
