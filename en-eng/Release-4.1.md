@@ -28,14 +28,16 @@ Addition work have been also done around the discovery mecanishm in order to spe
 as much as possible ZLL and ZHA compliant devices.
 
 ## IMPORTANT
-Last but not least, we have also restructured the plugin filesystem in order to have a cleaner situation. As a result,
+* There is not Migration path from 3.x.x to 4.1. If you are still in 3.x.x version you have unfortunatly to start from scratch.
+
+* Last but not least, we have also restructured the plugin filesystem in order to have a cleaner situation. As a result,
 a short migration step needs to performed by yourself, before restarting the plugin.
 
-You'll have to move the file DeviceList-xx from the Domoticz-Zigate (plugin directory) to Domoticz-Zigate/Data ( data plugin directory)
+   You'll have to move the file DeviceList-xx from the Domoticz-Zigate (plugin directory) to Domoticz-Zigate/Data ( data plugin directory)
 
-Read with attention [here](https://github.com/sasu-drooz/Domoticz-Zigate/blob/pre-4.1/00-UPGRADE-FROM-STABLE-4.0.md)
+   Read with attention [here](https://github.com/sasu-drooz/Domoticz-Zigate/blob/pre-4.1/00-UPGRADE-FROM-STABLE-4.0.md)
 
-## Notes:
+## NOTES:
 * If you want to have the full power of the plugin, some of the features rely on the latest developement of Domoticz. 
 We recommend using Domoticz V4.10547 or higher. However the plugin remains compatible with the current Domoticz V4.9700.
 
