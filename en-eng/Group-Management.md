@@ -28,7 +28,7 @@ The Device Widget definition will be based on the most powerful device capabilit
 
 ### 4.1. How to enable it
 
-A step-by-step approach is presented here: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Ikea-Remote.md
+A step-by-step approach is presented [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Ikea-Remote.md)
 
 **You must have a 3.0f or above firmware installed on Zigate**
 
@@ -90,11 +90,12 @@ You want to add or to remove a device from the group, you simply edit the `Conf/
 
 for example:
 
-I wanted to remove one shutter '20918a0000038f6f'
+I wanted to remove one shutter `20918a0000038f6f`
 
 My initial setup was:
 
-`0014,Shutters North,20918a0000038f6f,20918a0000038f6f, 
+`0014,Shutters North,20918a0000038f6f,20918a0000038f6f, `
+
 
 The update configuration will will be : 
 
@@ -104,7 +105,11 @@ The update configuration will will be :
 
 From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate. For that you'll have to use the configuration file and add or create a group where you have the Bulb as well as the Zigate IEEE (Zigate IEEE can be found in the utility tab under the Text Notification Widget). If you only modify the automatically created group widget, you don't have to put the Remote Controller IEEE as it has been already added in the previous stage.
 
-Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller. When you have done 4.4 and everything is working (you are receiving the remote event to the Domoticz corresponding widget), you have to add the IEEE address of the Tradfri 5 buttons remote controller to the group you have initially created with it and for which you have added the IEEE Zigate.
+Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller. 
+![](https://user-images.githubusercontent.com/4406440/54182600-3ec50200-44a2-11e9-8be7-c2e6b15b4deb.png)
+
+When you have done 4.4 and everything is working (you are receiving the remote event to the Domoticz corresponding widget), you have to add the IEEE address of the Tradfri 5 buttons remote controller to the group you have initially created with it and for which you have added the IEEE Zigate.
+
 ### 4.5 Warnings
 
 * In the current implementation of the Zigate and its plugin, when Zigate is sending a command to an object or a list of objects, there is no guaranty that the object receives the command. 
@@ -137,21 +142,22 @@ Here after is an abstract on how the Group Management is handled by the plugin.
 What does mean the log produced by the plugin at the end of the Group Processing:
 
 
-
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1003 - Groupe Plug Aqara`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1003 - [('c9da', '01')]`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: c9da/01 00158d00024d873d`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 0000 - Groupe Xiaomi`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 0000 - [('c9da', '01')]`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: c9da/01 00158d00024d873d`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 630d - Groupe IKEA 1`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 630d - [('f748', '01'), ('0000', '01')]`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: f748/01 90fd9ffffe86c7a1`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: 0000/01 00158d0001ededde`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1001 - Groupe Lampes IKEA`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1001 - [('f748', '01')]`
-`Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: f748/01 90fd9ffffe86c7a1`
-`Feb 14 14:09:03 rasp domoticz[21610]: Status: (Zigate-DEV) Group startup done`
+```
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1003 - Groupe Plug Aqara
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1003 - [('c9da', '01')]
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: c9da/01 00158d00024d873d
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 0000 - Groupe Xiaomi
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 0000 - [('c9da', '01')]
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: c9da/01 00158d00024d873d
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 630d - Groupe IKEA 1
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 630d - [('f748', '01'), ('0000', '01')]
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: f748/01 90fd9ffffe86c7a1
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: 0000/01 00158d0001ededde
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1001 - Groupe Lampes IKEA
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV) Group: 1001 - [('f748', '01')]
+Feb 14 14:09:03 rasp domoticz[21610]: (Zigate-DEV)   - device: f748/01 90fd9ffffe86c7a1
+Feb 14 14:09:03 rasp domoticz[21610]: Status: (Zigate-DEV) Group startup done
+```
 
 
 Out of the 4 Groups,
