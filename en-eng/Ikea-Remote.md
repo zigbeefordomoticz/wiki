@@ -25,15 +25,17 @@ Make sure that you have also enabled 'accept New Hardware' in Domoticz settings.
 1. Enable 'group management' :
    * You must have the following entry in Domoticz-Zigate plugin file Conf/PluginConf.txt 'enablegroupmanagement':'1',
    The file will looks like that:
-   
-`{
-'channel':'11,15,19,20,25,26',
-'vibrationAqarasensitivity':'medium',
-'resetMotiondelay':'30',
-'enablegroupmanagement':'1',
-'logLQI':'0',
-'logFORMAT':'0'
-}`
+
+```   
+{
+channel':'11,15,19,20,25,26',
+vibrationAqarasensitivity':'medium',
+resetMotiondelay':'30',
+enablegroupmanagement':'1',
+logLQI':'0',
+logFORMAT':'0'
+}
+```
 
 1. Restart the plugin by selecting the ZiGate in the Setup/Hardware section and click on Update. In case the 'Group Management' was enabled, it will scan for existing groups and will eventually create those in Domoticz.
 
@@ -85,10 +87,11 @@ In order to enable this feature, you have to edit once more the Conf/ZigateGroup
 
 ZigateGroupsConfig-35.txt
 
-`# Zigate -> 00158d0001ededde`
-`# IKEA Remote 90fd9ffffeea89e8`
-`633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8`
-
+```
+# Zigate -> 00158d0001ededde
+# IKEA Remote 90fd9ffffeea89e8
+633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8
+```
 
 ### Option 2: Remove the Bulb from the group
 
@@ -104,10 +107,12 @@ If you want to use the Remote only for remote command, and don't have the bulb i
 
 * ZigateGroupsConfig-35.txt
 
-`# Zigate -> 00158d0001ededde`
-`# IKEA Remote 90fd9ffffeea89e8`
-`1001,Groupe Lampes IKEA,90fd9ffffe86c7a1`
-`633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8`
+```
+# Zigate -> 00158d0001ededde
+# IKEA Remote 90fd9ffffeea89e8
+1001,Groupe Lampes IKEA,90fd9ffffe86c7a1
+633a,Groupe IKEA/Tradfri WC,00158d0001ededde,00158d0002c63af3,90fd9ffffe86c7a1,90fd9ffffeea89e8
+```
 
 * List of Devices in Domoticz
 
