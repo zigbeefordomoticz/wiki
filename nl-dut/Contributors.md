@@ -7,4 +7,4 @@ Graag willen we de mensen bedanken welke mee hebben ontwikkeld aan het maken & t
 @thiklop
 
 
-@zraki673 & @pipiche38
+@zaraki673 & @pipiche38
