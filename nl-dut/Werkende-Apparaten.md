@@ -7,8 +7,7 @@ Deze data is afkomstig van gebruikers van de plugin (via bijvoorbeeld forums) of
 
 | Apparaat/Type | Domoticz usage | Beschrijving | Status | Plugin Versie |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| Thermostat | Setpoint + Temp | Setpoint to configure the target temperature, and you can get the local temperature | 4.1.0
-
+| Thermostat | Setpoint + Temp | Setpoint to configure the target temperature, and you can get the local temperature | Operational | 4.1.0 & Firm 3.0f|
 ### IKEA Tradfri
 
 | Apparaat/Type | Gebruik door Domoticz | Beschrijving | Status | Plugin Versie |
