@@ -1,4 +1,4 @@
-The plugin is providing 3 widgets for administration purposes. Those Widgets are created by the plugin itself at startup phase
+The plugin is providing 2 widgets for administration purposes. Those Widgets are created by the plugin itself at startup phase
 
 ## 1.1 Status Widget
 
