@@ -4,8 +4,13 @@
 -- instead of domoticz variable we use dzvents variable (data) to 'remember' state
 -- since these (data) variables are not remembered by domoticz, a domoticz restart will 'forget' the previous state.
 -- beware that dzvents variables have to be unique over all dzvents scripts since they are shared.
--- 3 notifications possible: log Error, mail and notify (telegram, kodi, google cloud...)
+-- 3 notifications possible: log Error, mail (not tested: line 59) and notify (telegram, kodi, google cloud...)
 
+local cdd_username = '' --base 64
+local cdd_password = '' --base 64
+local cdd_https = false -- true if only https supported
+local cdd_port = '8080' -- http or https port
+local cdd_ReturnNotif = true --Notification on normal condition return
 
 local devicesToCheck = {
 	{ ['name'] = 'Device1', ['threshold'] = 60 },
@@ -14,78 +19,130 @@ local devicesToCheck = {
 }
 
 local SubSystem =   nil
- --domoticz.NSS_TELEGRAM --domoticz.NSS_PUSHBULLET 
-                    --[[ Systèmes de notification disponibles :
-                    --    NSS_GOOGLE_CLOUD_MESSAGING NSS_HTTP NSS_KODI NSS_LOGITECH_MEDIASERVER NSS_NMA NSS_PROWL NSS_PUSHALOT NSS_PUSHBULLET NSS_PUSHOVER NSS_PUSHSAFER
-                    --    Pour une notification sur plusieurs systèmes, séparez les systèmes par une virgule et entourez l'ensemble par des {}.
-                    --    Exemple :{domoticz.NSS_TELEGRAM, domoticz.NSS_HTTP}
+		    --[[ Notifications available :
+                    --    NSS_GOOGLE_CLOUD_MESSAGING NSS_HTTP NSS_KODI NSS_LOGITECH_MEDIASERVER NSS_NMA NSS_PROWL NSS_PUSHALOT NSS_PUSHBULLET NSS_PUSHOVER NSS_PUSHSAFER NSS_TELEGRAM
+                    --    If severals needed, use {}.
+                    --    Example :{domoticz.NSS_TELEGRAM, domoticz.NSS_HTTP}
                     --]]
 
-local message = '.'
+--
+--Nothing to change under
+--
+
+local callBackString = "getDevices"
+local message = ''
+local message_light = 'Device(s): '
 
 return {
 	active = true,
-	on = {
-		['timer'] = {
-			'every 5 minutes'
-		}
-	},
- 
-     
-  data    =   {   state                 = { initial = ""                  }},    -- thanks waaren for persistent data notification
+    on      =   {   timer           =   { 'every 10 minutes' },   -- call to url will be done at this set time
+                    httpResponses   =   { callBackString }       -- Script will be triggered again when url call rcomes back with data (= almost immediate)
+                },
+               
+	data  =  {state = { initial = ""}, messageSent = "Nothing" },    -- thanks waaren for persistent data notification
+        
+	execute = function(dz, trigger)
+		local Time = require('Time')
+		local conditionDeviceState = "Off"
 
-	execute = function(domoticz)
-
-	local conditionDeviceState              = "Off"        
-    -- FUNCTIONS
-    local function notification(fenetre, message)
-
-            domoticz.log("State before notify : "  .. domoticz.data.state,domoticz.LOG_DEBUG)
-            domoticz.log("State after notify : "  .. conditionDeviceState,domoticz.LOG_DEBUG)
-            if conditionDeviceState ~= domoticz.data.state then
-                domoticz.log("Notification sending",domoticz.LOG_INFO)
-                if SubSystem == nil then 
-                    domoticz.notify(fenetre, message)
-                else
-                    domoticz.notify(fenetre, message, '', '', '', SubSystem)
-                end 
-                domoticz.log(message, domoticz.LOG_INFO)
-                domoticz.data.notificationSent = domoticz.time.raw      -- Store time of notification 
-                domoticz.data.state = "On"
-            else
-                domoticz.log("Nothing to send",domoticz.LOG_INFO)        
-            end
-    end
-	
-	-- Devices Check
-		local message = ""
-
-		for i, deviceToCheck in pairs(devicesToCheck) do
-			local name = deviceToCheck['name']
-			local threshold = deviceToCheck['threshold']
-			local minutes = domoticz.devices(name).lastUpdate.minutesAgo
-
-			if ( minutes > threshold) then
-				message = message .. 'Device ' ..
-						name .. ' seems to be dead. No heartbeat for at least ' ..
-						minutes .. ' minutes.\r'
+		-- FUNCTIONS
+		local function notification(fenetre, message)
+			dz.log("State before notify : "  .. dz.data.state,dz.LOG_DEBUG)
+			dz.log("State after notify : "  .. conditionDeviceState,dz.LOG_DEBUG)
+			if conditionDeviceState ~= dz.data.state then
+				dz.log("Notification sending",dz.LOG_INFO)
+				if SubSystem == nil then 
+					dz.notify(fenetre, message, dz.PRIORITY_NORMAL)
+				else
+					dz.notify(fenetre, message, dz.PRIORITY_NORMAL, '', '', SubSystem)
+				end 
+				dz.data.state = "On"
+				dz.data.messageSent = message
+				--dz.email('Dead devices', message, 'me@address.nl')
+			else
+				dz.log("Nothing to send, message not updated",dz.LOG_INFO)        
 			end
 		end
 
-		if (message ~= "") then
-			--domoticz.email('Dead devices', message, 'me@address.nl')
-			conditionDeviceState = "On"
-			notification('Warning','Dead devices found: ' .. message)
-			domoticz.log('Dead devices found: ' .. message, domoticz.LOG_ERROR)
-		end
 
-	
-		if domoticz.data.state ~= conditionDeviceState then   -- state change ?
-		   domoticz.data.state = conditionDeviceState
+		local function triggerJSON()
+			local  URLString  = "http"
+			if cdd_https then 
+				URLString = URLString .. 's'
+			end
+			if (cdd_password == nil or cdd_username == nil) then
+				URLString = URLString .. "://localhost:"..cdd_port.."/json.htm?type=devices&used=true"
+			else
+				URLString = URLString .. "://localhost:"..cdd_port.."/json.htm?type=devices&used=true&username="..cdd_username.."&password="..cdd_password
+			end
+            		dz.openURL({    url = URLString,
+                            method = "GET",
+                            callback = callBackString })                      
+        	end
+
+        
+        -- main 
+        if not (trigger.isHTTPResponse) then
+            triggerJSON()                              -- call to url
+        elseif trigger.ok then                         -- statusCode == 2xx
+		if trigger.isJSON then
+			local rt = dz.utils.fromJSON(trigger.data)  -- convert json data to Lua table
+								
+			for i, deviceToCheck in pairs(devicesToCheck) do
+				local name = deviceToCheck['name']
+				local id = dz.devices(name).id
+				local threshold = deviceToCheck['threshold']
+				local lastup = Time()
+
+				for k in pairs(rt.result) do
+					if (rt.result[k].idx == tostring(id)) then
+						lastup = Time(tostring(rt.result[k].LastUpdate))
+						break
+					end
+				end
+				
+				--dz.log(name .. ' ' .. lastup.minutesAgo,dz.LOG_DEBUG)				
+				if ( lastup.minutesAgo > threshold) then
+					message = message .. 'Device ' ..
+							name .. ' seems to be dead. No heartbeat for at least ' ..
+							lastup.minutesAgo .. ' minutes at ' .. lastup.raw .. '. \n\r'
+					message_light = message_light .. name .. ', '
+				end					
+			end
+				
+			if (message ~= "") then
+				message_light = message_light .. 'seem(s) to be dead'
+				dz.log(message_light, dz.LOG_DEBUG)
+				dz.log(dz.data.messageSent, dz.LOG_DEBUG)
+				if (message_light ~= dz.data.messageSent) then 
+					dz.data.state = "Off"  -- force sending if new device added
+				end						
+				conditionDeviceState = "On"
+				notification('Warning',message_light)
+				dz.log('Dead devices found: ' .. message, dz.LOG_ERROR)
+			end
+
+		
+			if dz.data.state ~= conditionDeviceState then   --Normal state return
+				dz.data.state = conditionDeviceState
+				if cdd_ReturnNotif then
+					if SubSystem == nil then 
+						dz.notify('Information','Return to normal state, all devices are operational')
+					else
+						dz.notify('Information','Return to normal state, all devices are operational', '', '', '', SubSystem)
+					end
+				end
+			else
+				dz.log("State Reset not needed",dz.LOG_DEBUG)
+			end
+			dz.log("Etat state: "  .. dz.data.state,dz.LOG_DEBUG)
+			dz.log("Etat condition: "  .. conditionDeviceState,dz.LOG_DEBUG)
+				
 		else
-		domoticz.log("State Reset no needed",domoticz.LOG_DEBUG)
+		dz.log("Trig OK but JSON NOK",dz.LOG_DEBUG)
 		end
-		domoticz.log("State: "  .. domoticz.data.state,domoticz.LOG_DEBUG)
-		domoticz.log("State condition: "  .. conditionDeviceState,domoticz.LOG_DEBUG) 
-end
+        else
+		    dz.log("triggerJSON() : Could not get (valid) data" ,dz.LOG_ERROR)
+        end
+    end
 }
