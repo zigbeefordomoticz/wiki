@@ -71,9 +71,9 @@ return {
 				URLString = URLString .. 's'
 			end
 			if (cdd_password == nil or cdd_username == nil) then
-				URLString = URLString .. "://localhost:"..cdd_port.."/json.htm?type=devices&used=true"
+				URLString = URLString .. "://127.0.0.1:"..cdd_port.."/json.htm?type=devices&used=true"
 			else
-				URLString = URLString .. "://localhost:"..cdd_port.."/json.htm?type=devices&used=true&username="..cdd_username.."&password="..cdd_password
+				URLString = URLString .. "://127.0.0.1:"..cdd_port.."/json.htm?type=devices&used=true&username="..cdd_username.."&password="..cdd_password
 			end
             		dz.openURL({    url = URLString,
                             method = "GET",
@@ -95,7 +95,7 @@ return {
 				local lastup = Time()
 
 				for k in pairs(rt.result) do
-					if (rt.result[k].idx == tostring(id)) then
+					if (rt.result[k].Name == name) then
 						lastup = Time(tostring(rt.result[k].LastUpdate))
 						break
 					end
