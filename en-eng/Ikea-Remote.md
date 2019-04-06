@@ -7,7 +7,7 @@ If you want to use the Ikea Tradfri 5 buttons remote command and to control anyt
 
 To start with, you need the following pre-requisites:
 1. A zigate  with firmware level above 3.0f
-1. A Tradfri remote command (call remote and IEEE= 00158d0001ededde )
+1. A Tradfri remote command (call remote and IEEE= 90fd9ffffeea89e8 )
 1. A Tradfri bulb (we will call it bulb and 2 are used in the example: 00158d0002c63af3 and 90fd9ffffe86c7a1 )
 1. Domoticz-Plugin version pre-4.1 or 4.1 or above
 1. You know the Hardware ID of the Zigate plugin. You can find it in the Domoticz Hardware Tab. (call it HardwareID and 35 in the example)
