@@ -34,8 +34,14 @@ By enable this feature, the plugin will propose to each devices the available fi
   * allowOTA set to 1, will enable the OTA upgrade feature in the plugin.
   * waitingOTA is the amount of time (in seconds) the plugin will wait from start before starting the process. Please do consider carefully seting a low value here, as the process can load the Zigate in terms of Traffic, so try to avoid value lower than 300 ( 5 minutes ).
   
-  
-  
+## Tracking Upgrade
+
+The plugin is pushing information via the admin Zigate Widget
+
+Here after is a screenshot of the Notification Text widget showing the starting time of the OTA process and its completion.
+
+![Admin Widget showing OTA](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/OTAu.png)
+
 ## Warnings
 
 * The Transfer process over the Zigbee network takes time. For an Ikea Tradfri WhiteColor bulb it took me about 15 minutes to get the transfer completed.
