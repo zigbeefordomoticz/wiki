@@ -1,0 +1,35 @@
+# Firmware update Over-The-Air
+
+Ikea is providing a lift of Firmware for their Tradfri devices. A copy of those firmware have been made available for you.
+
+The OTA upgrade process implemented in the plugin is pretty basic
+
+```
+for each available Firmware
+    Do
+         For each Device matching the Firmware brand
+             Do
+                  Propose the firmware to the device
+                  if the firmware is accepted for upgrade then
+                     Do 
+                        Transfert the firmware to the device
+                        Upgrade
+                     Done
+             Done
+    Done
+```  
+
+## How to enable the OTA update
+
+If you have Ikea/Tradfri main powered devices (for now), you might check if some of your devices are eligeable for Firmware update.
+By enable this feature, the plugin will propose to each devices the available firmware version for update. If eligeable the upgrade will be triggered.
+
+1. Edit the file `Conf/PluginConf-xx.txt`
+
+  ```
+  'allowOTA':'1',
+  'waitingOTA':'3600',
+  ```
+
+  * allowOTA set to 1, will enable the OTA upgrade feature in the plugin.
+  * waitingOTA is the amount of time (in seconds) the plugin will wait from start before starting the process
