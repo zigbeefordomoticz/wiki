@@ -46,6 +46,7 @@ Here after is a screenshot of the Notification Text widget showing the starting 
 
 * The Transfer process over the Zigbee network takes time. For an Ikea Tradfri WhiteColor bulb it took me about 15 minutes to get the transfer completed.
 * In case the plugin doesn't find any firmware to transfer, then it will hibernate, and be reactivated at the next Plugin start.
+* In the case the transfer failed or abort, the plugin will re-try during the next cycle. There is a full cycle every 6 hours
 
 ## Files location
 
