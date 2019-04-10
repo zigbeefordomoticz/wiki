@@ -33,6 +33,8 @@ To install:
      You'll see the Blue lead on the Pi-Zigate switchin on.
      
      From there go ahead
+     
+     A Cookbook for PiZigate on an RPI3B+ is available [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B+-Cookbook.md)
 
 1. For Unix system using the Python Plugin Manager
    * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
