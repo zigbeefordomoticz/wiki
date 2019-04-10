@@ -32,4 +32,12 @@ By enable this feature, the plugin will propose to each devices the available fi
   ```
 
   * allowOTA set to 1, will enable the OTA upgrade feature in the plugin.
-  * waitingOTA is the amount of time (in seconds) the plugin will wait from start before starting the process
+  * waitingOTA is the amount of time (in seconds) the plugin will wait from start before starting the process. Please do consider carefully seting a low value here, as the process can load the Zigate in terms of Traffic, so try to avoid value lower than 300 ( 5 minutes ).
+  
+  
+  
+## Warnings
+
+* The Transfer process over the Zigbee network takes time. For an Ikea Tradfri WhiteColor bulb it took me about 15 minutes to get the transfer completed.
+* In case the plugin doesn't find any firmware to transfer, then it will hibernate, and be reactivated at the next Plugin start.
+
