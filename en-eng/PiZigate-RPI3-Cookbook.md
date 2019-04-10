@@ -6,17 +6,16 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-2. WiringPi
-   1. Test if wiringpi is installed: 
+1. Test if wiringpi is installed: 
 ```
 gpio -v
 gpio readall
 ```
 
-  1. If not, install it : 
+1. If not, install it : 
 ```sudo apt-get install wiringpi```
 
-  1. Set the gpio pins for production mode in rc.local so that this will happen on every reboot: 
+1. Set the gpio pins for production mode in rc.local so that this will happen on every reboot: 
 ```
 sudo nano /etc/rc.local
 gpio mode 0 out
@@ -57,35 +56,35 @@ sudo shutdown
 
 ```
 
-Power off the RPi, plug the Pizigate card in the gpio slot and power up. 
-Set the accessability of the serial adapter to 'No' using raspi-config option P6 (Interfacing options / serial):
+1. Power off the RPi, plug the Pizigate card in the gpio slot and power up. 
+1. Set the accessability of the serial adapter to 'No' using raspi-config option P6 (Interfacing options / serial):
 ```
 sudo raspi-config
 
 ```
 
-Use at latest version (>4.10) of Domoticz. If you're still on stable version 4.9700, first update:
+1. Use at latest version (>4.10) of Domoticz. If you're still on stable version 4.9700, first update:
 ```
 cd /home/pi/domoticz
 ./updatebeta
 
 ```
 
-Get the latest Zigate plugin and make the plugin.py executable: 
+1. Get the latest Zigate plugin and make the plugin.py executable: 
 ```
 cd /home/pi/domoticz/plugins
 git clone https://github.com/sasu-drooz/Domoticz-Zigate.git
 chmod +x Domoticz-Zigate/plugin.py
 
 ```
-If already installed, update to the newest version:
+1. If already installed, update to the newest version:
 ```
 cd /home/pi/domoticz/plugins/Domoticz-Zigate
 git pull
 sudo reboot
 
 ```
-Startup the Pizigate: 
+1. Startup the Pizigate: 
 ```
 pi-zigate.sh run
 
