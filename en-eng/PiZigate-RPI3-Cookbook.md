@@ -1,4 +1,5 @@
 # Installation procedure of Pizigate on Domoticz running on RPi3B+
+( from Pierre Gielen )
 
 1. Make sure you have all the latest software: 
 ```
