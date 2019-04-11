@@ -47,6 +47,12 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | Ping | 1 | Enable or Disable a ping feature, which ensure that the Zigate connectivity is always on. In case of failure , retry to connect | 4.1 |
 | Certification |  CE | Set Certification to CE or FCC | 4.1 & Firm 3.0f |
 
+### Over-The-Air Upgrade
+| Field                | Default | Description | Version |
+| -----                | ------- | ----------- | ------- |
+| allowOTA             |   0     | If set to 1 it allow OTA firmware upgrade | beta |
+| waitingOTA           | 3600    | Delay in sec to start the OTA firmware process | beta |
+
 ### Plugin Directories
 | Field                | Default | Description | Version |
 | -----                | ------- | ----------- | ------- |
