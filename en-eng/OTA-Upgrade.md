@@ -67,6 +67,7 @@ This is a bit more tricky here, as the devices usally doesn't accept communicati
 ```
 OTA heartbeat - [12] Type: None out of   1 remaining Images, Device: None, out of   ? remaining devices
 OTA heartbeat - [13] Type: None out of   1 remaining Images, Device: None, out of   2 remaining devices
+OTA heartbeat - Image: 4545 from file: 159699-TRADFRI-remote-control-1.2.214.ota.ota
 OTA heartbeat - [14] Type: 4545 out of   1 remaining Images, Device: None, out of   2 remaining devices
 UpdateDevice - (     Lampe IKEA) 1:100
 OTA heartbeat - [15] Type: 4545 out of   1 remaining Images, Device: ecaf, out of   1 remaining devices
