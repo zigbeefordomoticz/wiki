@@ -115,3 +115,4 @@ All Firmwares are available under the `OTAFirmware` folder
 
 References:
 - [Latest firmware in IKEA Trådfri](https://www.reddit.com/r/tradfri/comments/8c29rm/latest_firmware_in_ikea_tr%C3%A5dfri/ )
+- [IKEA Trådfri Release notes](https://ww8.ikea.com/ikeahomesmart/releasenotes/releasenotes.html)
