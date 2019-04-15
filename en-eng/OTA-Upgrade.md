@@ -102,13 +102,16 @@ All Firmwares are available under the `OTAFirmware` folder
 
 | Filename                                             | Image Type | Image version | Applicable Device |
 | --------                                             | ---------- | ------------- | ----------------- |
-| 159699-TRADFRI-remote-control-1.2.214.ota.ota        | 4545       |  0x12214572   | Tradfri Remote 5 buttons |
-| 10005777-3.1-TRADFRI-control-outlet-2.0.019.ota.ota  | 4353       |  0x20019623   | Tradfri outlet / Plug    |
-| 10035514-TRADFRI-bulb-ws-1.2.221.ota.ota             | 8705       |  0x12221572   |                          |
-| 10035534-TRADFRI-bulb-ws-gu10-1.2.221.ota.ota        | 8707       |  0x12221572   |                          |           
-| 1004764-TRADFRI-bulb-cws-1.3.009.ota.ota             | 10241      |  0x13009572   |                          |
-| 159695-TRADFRI-bulb-ws-1000lm-1.2.217.ota.ota        | 8706       |  0x12217572   | Tradfri Bulb LED154G12 WS1749 |
-| 159696-TRADFRI-bulb-w-1000lm-1.2.214.ota.ota         | 8449       |  0x12214572   |                          |
-| 159700-TRADFRI-motion-sensor-1.2.214.ota.ota         | 4548       |  0x12214572   |                          |
-| 159701-TRADFRI-wireless-dimmer-1.2.248.ota.ota       | 4546       |  0x12248572   |                          |
+| 159699-TRADFRI-remote-control-1.2.214.ota.ota        | 4545       |  1.2.214 572   | Tradfri Remote 5 buttons |
+| 10005777-3.1-TRADFRI-control-outlet-2.0.019.ota.ota  | 4353       |  2.0.019 623   | Tradfri outlet / Plug    |
+| 10035514-TRADFRI-bulb-ws-1.2.221.ota.ota             | 8705       |  1.2.221 572   |                          |
+| 10035534-TRADFRI-bulb-ws-gu10-1.2.221.ota.ota        | 8707       |  1.2.221 572   |                          |           
+| 1004764-TRADFRI-bulb-cws-1.3.009.ota.ota             | 10241      |  1.3.009 572   | LED1624G9 Color 600ml 8.6 W |
+| 159695-TRADFRI-bulb-ws-1000lm-1.2.217.ota.ota        | 8706       |  1.2.217 572   | LED1546G12 White spectrum  950lm 12W |
+| 159696-TRADFRI-bulb-w-1000lm-1.2.214.ota.ota         | 8449       |  1.2.214 572   | LED1623G12 White 1000lm 12.5W 2700K  |
+| 159700-TRADFRI-motion-sensor-1.2.214.ota.ota         | 4548       |  1.2.214 572   |                          |
+| 159701-TRADFRI-wireless-dimmer-1.2.248.ota.ota       | 4546       |  1.2.248 572   |                          |
 
+
+References:
+- [Latest firmware in IKEA Trådfri](https://www.reddit.com/r/tradfri/comments/8c29rm/latest_firmware_in_ikea_tr%C3%A5dfri/ )
