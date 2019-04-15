@@ -42,6 +42,51 @@ Here after is a screenshot of the Notification Text widget showing the starting 
 
 ![Admin Widget showing OTA](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/OTAu.png)
 
+## Upgrade of Battery powered devices
+
+This is a bit more tricky here, as the devices usally doesn't accept communication from the Zigate. In order to allow such in-comming communication you need :
+
+- For Ikea Tradfri Remote : Press all of the time the central Button ( ON/OFF ) until the firmware transfert start.
+
+
+### Modus Operandi
+
+1. Identify the Network Short address of the device
+1. Configure the plugin some OTA upgrade is enabled.
+   Here after is an exemple of the OTA parameters ( PluginConf-xx.txt )set for OTA and battery device upgrade.
+   
+    ```
+    'allowOTA':'1',        # Enable OTA upgrade
+    'batteryOTA':'1',      # Enable to enroll battery powered devices
+    'waitingOTA':'60',     # Start the OTA upgrade process 60s after plugin start
+    ```
+    
+1. Start Domoticz and switch to the Log output in order to see when the device will get notified of the update
+1. When you see the Short address of your Device (in exemple here after 77d4 ), press the ON/OFF button of the Device
+
+```
+OTA heartbeat - [12] Type: None out of   1 remaining Images, Device: None, out of   ? remaining devices
+OTA heartbeat - [13] Type: None out of   1 remaining Images, Device: None, out of   2 remaining devices
+OTA heartbeat - [14] Type: 4545 out of   1 remaining Images, Device: None, out of   2 remaining devices
+UpdateDevice - (     Lampe IKEA) 1:100
+OTA heartbeat - [15] Type: 4545 out of   1 remaining Images, Device: ecaf, out of   1 remaining devices
+UpdateDevice - (     Lampe IKEA) 0:Off
+OTA heartbeat - [16] Type: 4545 out of   1 remaining Images, Device: ecaf, out of   1 remaining devices
+OTA heartbeat - [17] Type: 4545 out of   1 remaining Images, Device: ecaf, out of   1 remaining devices
+OTA heartbeat - [18] Type: 4545 out of   1 remaining Images, Device: ecaf, out of   1 remaining devices
+OTA heartbeat - [19] Type: 4545 out of   1 remaining Images, Device: None, out of   1 remaining devices
+UpdateDevice - (     Lampe IKEA) 1:On
+OTA heartbeat - [20] Type: 4545 out of   1 remaining Images, Device: 77d4, out of   0 remaining devices
+OTA heartbeat - [21] Type: 4545 out of   1 remaining Images, Device: 77d4, 
+Status: (Zigate-DEV) Starting firmware process on 77d4/01
+Firmware transfert for 77d4/01 - Progress:  0.0 %
+```
+
+PS/
+* In order to speedup the process, you can keep in the OTAFirmware folder only the 'remote' firmware. So only this Firmware will be presented to the device
+* In case there is no firmware transfert started, this is most-likely because your device is already on the latest version.
+
+
 ## Warnings
 
 * The Transfer process over the Zigbee network takes time. For an Ikea Tradfri WhiteColor bulb it took me about 15 minutes to get the transfer completed.
