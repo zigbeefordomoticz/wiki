@@ -1,3 +1,5 @@
+![zigate.fr](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/ZiGate.png)
+
 Welcome to the Domoticz-Zigate wiki!
 
 We try through this wiki, to put as much information as possible. 
