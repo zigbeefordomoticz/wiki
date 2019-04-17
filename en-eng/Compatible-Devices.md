@@ -93,6 +93,7 @@ Either the information is coming from one of the plugin user (through direct com
 |Aqara Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operationnal | 2.4.0 |
 | Aqara Vibration sensor | Selector Switch Take, Tilt, Move, Drop | | Under developement | dev |
 | Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operationnal | 2.4.0 |
+| Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cummulative Power and Meter consumption widget | Fully Op. | 4.2 |
 | Aqara Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
 | Aqara WXKG01LM (86sw1) | Push On | The following events are reported to the Domoticz Switch : ON | Fully operationnal | 3.1.0 |
 | Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operationnal | 3.1.0 |
