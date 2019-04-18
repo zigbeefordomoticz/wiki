@@ -63,6 +63,13 @@ The plugin is regularly updated. For bug fixing or enhancement. In order to keep
 
 * Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
 * Run: `git pull`
+* In case you have edited/updated some of the plugin controlled file, you might get an error message protecting any update. In such situation you can reset those files with the latest version with the following commands
+```
+git reset –-hard
+git pull --force
+```
+
+* Run: `sudo chmod +x plugin.py`
 * Restart Domoticz.
 
 ## Protect your data
