@@ -24,7 +24,13 @@ To install:
      
      1. You must also have the Python3 version of wiringPi in order to have the plugin able to set the piZigate in Run mode
      
-     `pip install wiringpi`
+     ```
+     cd /tmp
+     git clone --recursive https://github.com/WiringPi/WiringPi-Python.git
+     cd WiringPi-Python
+     sudo apt-get install python-dev python-setuptools swig wiringpi
+     sudo python3 setup.py install
+     `
      
      More information are available [here](http://wiringpi.com/download-and-install/)
      
