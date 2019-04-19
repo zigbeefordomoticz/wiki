@@ -12,15 +12,19 @@ To install:
    * You must be on a Raspbian distribution
    * You must install the wiringPi package to get access to gpio commands
    
-     `$ sudo apt-get purge wiringpi`
+     1. `$ sudo apt-get purge wiringpi`
      
-     `$ hash -r`
+     1. `$ hash -r`
      
-     In order to test if wiringPi is well installed you can :
+     1. In order to test if wiringPi is well installed you can :
      
      `$ gpio -v`
      
      `$ gpio readall`
+     
+     1. You must also have the Python3 version of wiringPi in order to have the plugin able to set the piZigate in Run mode
+     
+     `pip install wiringpi`
      
      More information are available [here](http://wiringpi.com/download-and-install/)
      
