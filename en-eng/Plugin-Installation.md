@@ -30,7 +30,7 @@ To install:
      cd WiringPi-Python
      sudo apt-get install python-dev python-setuptools swig wiringpi
      sudo python3 setup.py install
-     `
+     ```
      
      More information are available [here](http://wiringpi.com/download-and-install/)
      
