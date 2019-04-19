@@ -18,9 +18,9 @@ To install:
      
      1. In order to test if wiringPi is well installed you can :
      
-     `$ gpio -v`
+        `$ gpio -v`
      
-     `$ gpio readall`
+        `$ gpio readall`
      
      1. You must also have the Python3 version of wiringPi in order to have the plugin able to set the piZigate in Run mode
      
