@@ -1,7 +1,7 @@
 ## How to pair a device ?
 Just turn off/on 6 times your bulb (not with ikea remote, shut off then on power). Your bulb will send a device announce to your zigate, then your zigate will ask some information to your bulb to know wich model it is and add it to Domoticz. If your model is not in DeviceConf.txt it should take a little longer but it will be automatically add as soon as the zigate will have information need foor this.
 
-[Bulb Device](https://github.com/pipche38/Domoticz-Zigate-Wiki/blob/master/Images/Bulb-Device.png)
+![Bulb Device](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Zigate-Bulb-Device.png)
 
 You should find between 1 and 3 new devices in your Domoticz Device list :
 
