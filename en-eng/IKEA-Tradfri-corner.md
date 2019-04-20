@@ -27,3 +27,17 @@ With Zigate firmware 3.0f you can get the remote control event in domoticz (via 
   * You then need to associate the Zigate to this group (see in the Group Management on how to do that )
   
 * A step-by-step approach is presented here: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Ikea-Remote.md
+
+## How to use the tiny Remote switch On/off (squared usally sold with plug )
+
+1. Paired with Zigate
+   
+   * This will create a Switch widget on Domoticz and you'll get On and Off event
+   
+   * To paired the switch with Zigate, press 4 times in 5 secondes when the Zigate and the Plugin are in Permit to Join mode.
+   
+1. Paired with a device
+
+   * This is the normal setup documented in the Tradfri user manual. You'll paired the remote switch with as much as 10 different devices.
+   
+   * To paired the switch with a Device, press and hold the pairing button 10s (no more than 5cm of the outlet you want to add )
