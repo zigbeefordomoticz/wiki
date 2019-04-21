@@ -41,3 +41,19 @@ With Zigate firmware 3.0f you can get the remote control event in domoticz (via 
    * This is the normal setup documented in the Tradfri user manual. You'll paired the remote switch with as much as 10 different devices.
    
    * To paired the switch with a Device, press and hold the pairing button 10s (no more than 5cm of the outlet you want to add )
+
+
+## How to use the Tradfri Motion sensor
+
+1. Paired with Zigate
+
+   * This will create Motion widget
+   * If needed you have to reset the Motion sensor by pressing the pairing button 4 times within 5 secondes
+   
+1. Paired with a bulb 
+
+   * Hold the motion sensor close too the light source you want to add ( no more than 5cm). Press and hold the pairing button for at least 10 seconds. At the end of the pairing process, the light source will flash one time .
+   
+From that , every time the motion sensor will turn on the light, you'll get as well the motion widget to On.
+
+You might want to align the Time setting of the Motion sensor with the Reset Time of the Motion widget in Domoticz
