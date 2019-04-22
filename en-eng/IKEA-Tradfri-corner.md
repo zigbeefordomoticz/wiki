@@ -40,11 +40,6 @@ If you want to ge the Switch events ( On and Off), you'll have to add the Zigate
    
    * To paired the switch with Zigate, press 4 times in 5 secondes when the Zigate and the Plugin are in Permit to Join mode.
    
-1. Paired with a device
-
-   * This is the normal setup documented in the Tradfri user manual. You'll paired the remote switch with as much as 10 different devices.
-   
-   * To paired the switch with a Device, press and hold the pairing button 10s (no more than 5cm of the outlet you want to add )
 
 1. Make sure that Zigate IEEE is member of Group 0000
 
