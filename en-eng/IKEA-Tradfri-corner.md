@@ -30,9 +30,11 @@ With Zigate firmware 3.0f you can get the remote control event in domoticz (via 
 
 ## How to use the tiny Remote switch On/off (squared usally sold with plug )
 
+Here is the method to get a Widget associated in Domoticz and then to get it updated.
+
 ATTENTION: 
-The switch is controling group 0x0000 (which is usally a group used by Xiaomi plug and switches). 
-If you want to ge the Switch events ( On and Off), you'll have to add the Zigate IEEE to the 0x0000 group
+The switch is controling group 0x0000 (which is usally a group used by Xiaomi plugs and switches).  You might have to do some cleanup in group membership, if you want to avoid the tiny switch controling unexpected plug 
+In case you want to use the swicth for something else, you will have to remove all devices from group memebership 0000
 
 1. Paired with Zigate
    
@@ -43,7 +45,7 @@ If you want to ge the Switch events ( On and Off), you'll have to add the Zigate
 
 1. Make sure that Zigate IEEE is member of Group 0000
 
-   * Edit ZigateGroupsConfig-xx.txt and have a similar line
+   * Edit ZigateGroupsConfig-xx.txt and have a similar line. Here only the Zigate is part of this group and not any other devices
    
    ```
    0000,Groupe 0000, 00158d0001ededde
