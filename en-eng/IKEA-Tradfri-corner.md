@@ -52,6 +52,11 @@ In case you want to use the swicth for something else, you will have to remove a
    ```
    
    Where 00158d0001ededde is the IEEE of Zigate which can be find in the Log or in the Zigate notfication widget .
+   
+1. To add devices to the group
+
+   * Don't use the the Remote switch pairing button to pair devices, otherwise you'll loose the connectivity with Zigate and the events capture in Domoticz.
+   * You have to add the list of IEEE devices to group 0000 in ZigateGrouspConfig
 
 ## How to use the Tradfri Motion sensor
 
