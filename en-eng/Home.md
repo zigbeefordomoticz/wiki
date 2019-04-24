@@ -22,6 +22,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [Plugin admin widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Administration.md) (_4.1_)
 * [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management.md) (_4.1_)
 * [Plugin parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.txt.md)
+* [Over-the-Air Firmware upgrade](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/OTA-Upgrade.md)
 * [Network status](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Status.md) (_4.1_ beta)
 * [Network Topology - Mesh](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Topology---LQI-report.md) (4.1_ beta)
 
