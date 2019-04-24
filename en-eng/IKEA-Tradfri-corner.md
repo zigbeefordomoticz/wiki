@@ -69,6 +69,13 @@ In case you want to use the swicth for something else, you will have to remove a
 
    * Hold the motion sensor close too the light source you want to add ( no more than 5cm). Press and hold the pairing button for at least 10 seconds. At the end of the pairing process, the light source will flash one time .
    
+1. You need to add Zigate to the same group created by the Motion sensor.
+   * Enable the Group Management (if not yet done)
+   * Let's the plugin do the work and identify the Group created by the Ikea Bulb/Control association
+   * You then need to associate the Zigate to this group (see in the Group Management on how to do that )
+  
+   * A [step-by-step approach](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Ikea-Remote.md) is presented here for the Ikea Remote ( Phase1, Phase 2 and Phase3 Testing ), Option1 and Option2 are Remote Controller specific 
+
 From that , every time the motion sensor will turn on the light, you'll get as well the motion widget to On.
 
 You might want to align the Time setting of the Motion sensor with the Reset Time of the Motion widget in Domoticz
