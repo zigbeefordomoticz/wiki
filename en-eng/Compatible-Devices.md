@@ -108,9 +108,17 @@ Either the information is coming from one of the plugin user (through direct com
 | Wall Double Switch QBKG12LM | Switch, Power meter | 2 switches with Power meter n each line | Fully operationnal | 3.1.0  |
 | Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
 
-###
+### Zemismart
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
+| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off | 1 Switch | 1 Switch | Fully Op. | 4.1.0 |
+| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off | 2 Switch | 2 Switch | Fully Op. | 4.1.0 |
+| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off | 1 Switch | 1 Switch | Fully Op. | 4.1.0 |
+| Zemismart NUET56-DL27LX1.1 Zigbee RGBW 12w Downlight | Color Switch RGBWW | Fully Op. | 4.1.0 |
+
+### Other
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| -----------| -------------- | ----------- | ------ | -------------- |
 | KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
-| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
+
