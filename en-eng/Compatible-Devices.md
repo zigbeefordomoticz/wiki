@@ -114,7 +114,7 @@ Either the information is coming from one of the plugin user (through direct com
 | -----------| -------------- | ----------- | ------ | -------------- |
 | Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 1 Gang | 1 Switch | 1 Switch | Fully Op. | 4.1.0 |
 | Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 2 Gang| 2 Switch | 2 Switch | Fully Op. | 4.1.0 |
-| Zemismart NUET56-DL27LX1.1 Zigbee RGBW Downlight | Color Switch RGBWW | Fully Op. | 4.1.0 |
+| Zemismart NUET56-DL27LX1.1 Zigbee RGBW Downlight | Color Switch RGBWW | Color Switch RGBWW | Fully Op. | 4.1.0 |
 
 ### Other
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
