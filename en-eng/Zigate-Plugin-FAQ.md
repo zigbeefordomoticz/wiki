@@ -22,3 +22,14 @@ If you encounter problems like the above example, it is most likely the automati
     If it is not, set it to "1"
 1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
 The rebinding process will start itself, the status problems should now be fixed.
+
+## I'm getting 'Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150'
+
+Here after is an exemple of errors found in the log file. 
+```
+Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
+Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
+
+```
+
+This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem wit it -
