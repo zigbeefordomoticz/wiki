@@ -36,6 +36,7 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | enableReadAttributes | 0 | If set to 1, the plugin will poll information from each of the main powered devices. It might be needed for some devices which doesn't all to set Configure Automatic reporting |
 | resetMotiondelay | 30 | Number of seconds before a reset of the Motion widget status | 4.1 |
 | vibrationAqarasensitivity | 'medium' | Sensitivity of Vibration aqara device ('high', 'medium', 'low') | 4.1 |
+| numDeviceListVersion | 12 | Number of versions of DeviceList we will keep. | 4.2.1 |
 
 ### Zigate Configuration
 | Field                | Default | Description | Version |
@@ -49,7 +50,6 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | Certification |  CE | Set Certification to CE or FCC | 4.1 & Firm 3.0f |
 | enableAPSFailureLoging | 0 | If enable , Log the APS Failure messages | 4.2 |
 | enableAPSFailurereporting | 1 | In case of APS Failure messages, Log the failure and TimedOut the device in Domoticz | 4.2 |
-
 
 ### Over-The-Air Upgrade
 | Field                | Default | Description | Version |
