@@ -49,7 +49,7 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | Ping | 1 | Enable or Disable a ping feature, which ensure that the Zigate connectivity is always on. In case of failure , retry to connect | 4.1 |
 | Certification |  CE | Set Certification to CE or FCC | 4.1 & Firm 3.0f |
 | enableAPSFailureLoging | 0 | If enable , Log the APS Failure messages | 4.2 |
-| enableAPSFailurereporting | 1 | In case of APS Failure messages, Log the failure and TimedOut the device in Domoticz | 4.2 |
+| enableAPSFailurereporting | 0 | In case of APS Failure messages, Log the failure and TimedOut the device in Domoticz | 4.2 |
 
 ### Over-The-Air Upgrade
 | Field                | Default | Description | Version |
