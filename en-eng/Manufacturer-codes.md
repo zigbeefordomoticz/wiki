@@ -7,5 +7,5 @@ Manufacturer Codes
 | 1110 | Profalux | blind/shutter |
 | 117c | Ikea Tradfri | Bulbe |
 | 1021 | Legrand Netatmo | plug |
-| 1078 | Salus  | plug |
+| 1078 | Salus / Computime  | plug |
 | c05e | Philips Hue | Bulb |
