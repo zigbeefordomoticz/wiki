@@ -11,7 +11,6 @@ On a linux platform, the best way to check which one is in place
 
 ```
 dmesg | grep tty
-
 ```
 * Blue model : pl2303
 
@@ -22,13 +21,12 @@ dmesg | grep tty
 [89616.385448] pl2303 ttyUSB0: pl2303_set_control_lines - failed: -19
 [89616.392016] pl2303 ttyUSB0: error sending break = -19
 [89616.397789] pl2303 ttyUSB0: pl2303 converter now disconnected from ttyUSB0
-
 ```
+
 * Red model : cp210x
 
 
 ```
-
 [89768.836185] usb 1-1.3: cp210x converter now attached to ttyUSB0
 [89768.959865] cdc_acm 1-1.1.2:1.0: ttyACM1: USB ACM device
 [89789.691553] cdc_acm 1-1.1.2:1.0: ttyACM1: USB ACM device
@@ -36,5 +34,4 @@ dmesg | grep tty
 [89932.389263] usb 1-1.3: cp210x converter now attached to ttyUSB0
 [89963.008376] cp210x ttyUSB0: cp210x converter now disconnected from ttyUSB0
 [89995.620182] usb 1-1.3: cp210x converter now attached to ttyUSB0
-
 ```
