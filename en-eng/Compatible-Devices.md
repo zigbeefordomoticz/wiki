@@ -121,4 +121,5 @@ Either the information is coming from one of the plugin user (through direct com
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
 | KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
+| FB56-ZCW08KU1.1 | Strip Light WRGB | Switch/LvlControl/ColorControl | Fully Op. | 4.2.0 |
 
