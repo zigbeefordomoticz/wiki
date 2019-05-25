@@ -25,3 +25,4 @@ localhost:9440/rest-zigate/1/device
 | /zgroup        | GET   | list the current groups |
 | /nwk-stat      | GET   | list the timestamp of Network Interference reports. If you add TimeStamp as a parameter you'll get the report for this TimeStamp |
 | /zgroup-list-available-device | GET | List all eligeable devices for been part of a Group |
+| /zigate        | GET   | Provide the Zigate informations as IEEE, NwkID, PANid, ExtendedPANID and Channel |
