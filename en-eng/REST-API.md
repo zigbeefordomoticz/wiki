@@ -23,7 +23,6 @@ localhost:9440/rest-zigate/1/device
 | /req-topologie | GET   | Start a Network Topology discovery |
 | /setting       | GET, PUT | list the all plugin configurable parameters and update them (PUT) |
 | /topologie     | GET,DELETE   |  with no parameters, list the timestamp for which we have a Topology, with a TimeStamp as a parameter will send a full Topology report taken at that time |
-
 | /zdevice       | GET   | list the all Devices paired with the plugin |
 | /zdevice-name  | GET, PUT | list the all Devices paired with the plugin with limited information and with the list of Domoticz Widget associated , PUT allows the update of ZDeviceName |
 | /zdevice-raw   | GET   | Send the raw ListOfDevices data |
