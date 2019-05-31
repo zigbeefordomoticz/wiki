@@ -19,6 +19,7 @@ localhost:9440/rest-zigate/1/device
 | /permit-to-join | GET, PUT | give the current PermitToJoin state, and update it (PUT) |
 | /plugin        | GET   |  list all Domoticz plugin parameters | 
 | /plugin-stat   | GET   |  list the main Transport statistics  |
+| /restart-needed| GET   | Will respond if the Plugin needs to be restarted -due to a channge- or not |
 | /req-nwk-inter | GET   | Start a Network interferences discovery |
 | /req-topologie | GET   | Start a Network Topology discovery |
 | /setting       | GET, PUT | list the all plugin configurable parameters and update them (PUT) |
