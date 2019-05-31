@@ -15,6 +15,12 @@ Either the information is coming from one of the plugin user (through direct com
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Thermostat | Setpoint + Temp | Setpoint to configure the target temperature, and you can get the local temperature | Operational | 4.1.0 & Firm 3.0f|
 
+## GLEDOPTO
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| LED 4 W  | ColorControl/Switch/LvlControl | Led controled with Level Control, On/Off and RGB + WW | Fully Op. | 4.1 |
+
 ### IKEA Tradfri
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
