@@ -36,7 +36,7 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | enableReadAttributes | 0 | If set to 1, the plugin will poll information from each of the main powered devices. It might be needed for some devices which doesn't all to set Configure Automatic reporting |
 | resetMotiondelay | 30 | Number of seconds before a reset of the Motion widget status | 4.1 |
 | vibrationAqarasensitivity | 'medium' | Sensitivity of Vibration aqara device ('high', 'medium', 'low') | 4.1 |
-| numDeviceListVersion | 12 | Number of versions of DeviceList we will keep. | 4.2.1 |
+
 
 ### Zigate Configuration
 | Field                | Default | Description | Version |
@@ -45,9 +45,10 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | blueLedOff | 0 | If set to 1, the Zigate blue light will be disabled | 4.1 & Firm 3.0f |
 | TXpower | 0 (no attenuation) | This function allows control for transmission on a JN516x high-power module to be enabled or disabled. Values are 0,1,2,3 (indicate the level of attenuation )| 4.1 & Firm 3.0f |
 | channel | 0 | Channel list for the ZigBee Radio. WARNING: if you want to change the channel, you need to re-pair all of the devices as you will switch to a new communication channel | 4.0 |
+| eraseZigatePDM | 0 | You must set this flag to 1 , if you want to Erase Zigate Permanent Data Memory. This flag will automatically be reset to 0 after a plugin restart, or after an Erase Zigate action. |
 | extendedPANID | 0 | If the pre-set value is zero, the Co-ordinator will use its own IEEE/MAC address as the EPID. Otherwise specifiy the 16 hex digits of the specific network. WARNING: If you want to change the Extended PANID, you need to go through an Erase PDM to take it into account | 4.2 |
 | Ping | 1 | Enable or Disable a ping feature, which ensure that the Zigate connectivity is always on. In case of failure , retry to connect | 4.1 |
-| Certification |  CE | Set Certification to CE or FCC | 4.1 & Firm 3.0f |
+| Certification |  CE (0x01) | Set Certification to CE(0x01) or FCC (0x02) | 4.1 & Firm 3.0f |
 | enableAPSFailureLoging | 0 | If enable , Log the APS Failure messages | 4.2 |
 | enableAPSFailureReporting | 1 | In case of APS Failure messages, Log the failure and TimedOut the device in Domoticz | 4.2 |
 
@@ -65,6 +66,7 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | pluginConfig | pluginHome + './Conf' | Absolution path where Config files ( DeviceConf.txt ) will be find | 4.1 |
 | pluginWWW | pluginHome + '../../www/templates/' | Absolute path where Domoticz www/templates can be found | 4.1 |
 | pluginReports| pluginWWW + 'zigate/reports/' | Absolute path where reports will be created | 4.1 |
+| numDeviceListVersion | 12 | Number of versions of DeviceList we will keep. | 4.2.1 |
 
 ### Groups Management
 | Field                | Default | Description | Version |
