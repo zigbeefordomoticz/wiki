@@ -19,7 +19,8 @@ Either the information is coming from one of the plugin user (through direct com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| LED 4 W  | ColorControl/Switch/LvlControl | Led controled with Level Control, On/Off and RGB + WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
+| LED 4 W (GL-B-001Z) | ColorControl/Switch/LvlControl | Led controled with Level Control, On/Off and RGB + WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
+| Spot(GL-S-004Z) | Whitecolor/Switch/LvlControl | Sport controled with Level Control, On/Off and WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
 
 ### IKEA Tradfri
 
