@@ -42,7 +42,7 @@ sudo nano /boot/config.txt
 Put this on the end of the file: 
 
 ```
-dtoverlay = ft3-disable-bt
+dtoverlay = pi3-disable-bt
 
 ```
 
