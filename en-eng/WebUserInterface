@@ -14,10 +14,10 @@ Due to a problem in Domoticz Python Framework, the current version of the Web Us
 
 ### Enable the Web User Interface 
 
-edit the file `Conf/PluginConf-xx.json` please do not that the extension of the file is _.json_
+edit the file ```Conf/PluginConf-xx.json``` please do not that the extension of the file is _.json_
 
 Add the following line in the middle of the file
 
-`  "enableWebServer": 1, `
+```  "enableWebServer": 1, ```
   
   
