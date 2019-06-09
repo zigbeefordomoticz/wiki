@@ -18,6 +18,17 @@ edit the file ```Conf/PluginConf-xx.json``` please do not that the extension of 
 
 Add the following line in the middle of the file
 
-```  "enableWebServer": 1, ```
+```
+"enableWebServer": 1,
+```
+
+Then restart the plugin
+
+
+### Access the Web User Interface
+
+From the client where you will run a Web Browser you need first to open a ssh tunnel, then you can access the Web User Interface by accessing the following URL ```http://127.0.0.1:9440```
+
+
   
   
