@@ -1,0 +1,23 @@
+## Zigate Plugin Web Interface
+
+
+### Introduction
+Starting beta-4.3 there is a Web User Interface available. This will allow User to 
+1. edit all Plugin settings (previously managed under the file PluginConf.txt), 
+1. visualize the Network Topology and Mesh level
+1. edit the Equipment managed by Zigate and give a name to each physical device
+1. Administrate the plugin and Zigate, by allowing Setting Zigate in Pairing mode
+
+### Preamble
+Due to a problem in Domoticz Python Framework, the current version of the Web User Interface is only accessible through the loopback interface. This means that you must access the Web via the ip 127.0.0.1.
+
+
+### Enable the Web User Interface 
+
+edit the file `Conf/PluginConf-xx.json` please do not that the extension of the file is _.json_
+
+Add the following line in the middle of the file
+
+`  "enableWebServer": 1, `
+  
+  
