@@ -32,6 +32,7 @@ localhost:9440/rest-zigate/1/device
 | /zgroup        | GET   | list the current groups |
 | /zgroup-list-available-device | GET | List all eligeable devices for been part of a Group |
 | /zigate        | GET   | Provide the Zigate informations as IEEE, NwkID, PANid, ExtendedPANID and Channel |
+| /zigate-about  | GET   | Provide a short text description of the plugin as well as the list of main contributors. |
 | /zigate-erase-PDM | GET | Erase Permanent Data Memory of Zigate |
 
 
