@@ -27,7 +27,7 @@ Then restart the plugin
 
 ### Access the Web User Interface
 
-From the client where you will run a Web Browser you need first to open a ssh tunnel, then you can access the Web User Interface by accessing the following URL ```http://127.0.0.1:9440```
+If you have a stable Domoticz version or a Beta Domoticz version below 4.10900 you have to  you need first to open a ssh tunnel, then you can access the Web User Interface by accessing the following URL ```http://127.0.0.1:9440```
 
 
 ### Tunnel ssh
