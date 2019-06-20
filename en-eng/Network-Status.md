@@ -33,7 +33,7 @@ Here is an other exemple:
 In the here after exemple, channel 20 would be optimum, while device 0xa838 seems to be always at the same level what ever the channel is.
 
 ```
-	     11	 15	 19	 20	 25	 26
+	 11    	 15	 19	 20	 25	 26
 a838	162	165	164	168	165	164
 6a98	163	163	183	184	163	161
 a1fe	162	162	166	174	162	161
