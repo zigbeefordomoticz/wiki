@@ -27,7 +27,7 @@ Either the information is coming from one of the plugin user (through direct com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| HS2WD-E     | Switch Selector| Siren and Strobe | Fully Op. | 4.4 with Firm 3.1a |
+| HS2WD-E     | Switch Selector Off/Alarm/Siren/Strobe | Siren and Strobe | Fully Op. | 4.4 with Firm 3.1a |
 
 
 ### IKEA Tradfri
