@@ -112,9 +112,9 @@ Philips bulbs don't have Configure Reporting working. Due to that and in order t
 | Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operationnal | 2.4.0 |
 | Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cummulative Power and Meter consumption widget | Fully Op. | 4.2 |
 | Aqara Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
-| Aqara WXKG01LM (86sw1) | Push On | The following events are reported to the Domoticz Switch : ON | Fully operationnal | 3.1.0 |
+| Aqara WXKG01LM (86sw1) | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
 | Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operationnal | 3.1.0 |
-| Aqara WXKG11LM Square Device with round Button | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Click, 3 Click, 4 Click (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
+| Aqara WXKG11LM Square Device with round Button | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
 | Aqara WXKG03LM Aqara wireles switch single button | Push On | The following events are reported to the Domoticz Switch : ON | Fully operationnal | beta 3.3 |
 | Aqara Cube | Switch Selector | The following events are reported to the Domoticz Switch selectors : Shake, Wakepup, Drop, 90° and 180° rotation, Push, Tab and horizontal Rotation . | Fully operationnal | 2.4.0 |
 | Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Fully operationnal | 2.4.0 |
