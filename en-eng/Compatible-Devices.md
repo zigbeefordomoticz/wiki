@@ -74,6 +74,8 @@ Either the information is coming from one of the plugin user (through direct com
 
 ### Philipps
 
+Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | LCT001 |  Color Switch RGBWW | Hue bulb A19 | Full Op. |   4.1.0        |
