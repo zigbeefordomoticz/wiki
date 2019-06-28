@@ -93,5 +93,4 @@ Those parameters will enable/disabe more verbose informations in the Log
 | debugNetworkMap      | 0       | Enable debug-logs for Network Mapping feature | 4.4     |
 | debugNetworkEnergy   | 0       | Enable debug-logs for Network Energy feature| 4.4     |
 | debugGroups          | 0       | Enable debug- logs for Group Management feature | 4.4     |
-
 | debugWebServer       | 0       | Enable debug-logs for Web Admin interface | 4.4 |
