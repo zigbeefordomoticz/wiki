@@ -79,4 +79,13 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | logLQI | 0 | Time when the report must be trigger. 0 means disabled | 4.0 |
 | networkScan | 0 | Delay before doing a Scan for Interferences   | 4.0 |
 
+## Debuging
 
+| Field                | Default | Description | Version |
+| -----                | ------- | ----------- | ------- |
+| debugCluster         | 0       |             | 4.4     |
+| debugNetworkMap      | 0       |             | 4.4     |
+| debugNetworkEnergy   | 0       |             | 4.4     |
+| debugGroups          | 0       |             | 4.4     |
+| debugPairing         | 0       |             | 4.4     |
+| debugWebServer       | 0       |             | 4.4     |
