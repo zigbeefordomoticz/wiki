@@ -79,13 +79,19 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | logLQI | 0 | Time when the report must be trigger. 0 means disabled | 4.0 |
 | networkScan | 0 | Delay before doing a Scan for Interferences   | 4.0 |
 
-## Debuging
+## Verbose
+
+Those parameters will enable/disabe more verbose informations in the Log
 
 | Field                | Default | Description | Version |
 | -----                | ------- | ----------- | ------- |
-| debugCluster         | 0       |             | 4.4     |
-| debugNetworkMap      | 0       |             | 4.4     |
-| debugNetworkEnergy   | 0       |             | 4.4     |
-| debugGroups          | 0       |             | 4.4     |
-| debugPairing         | 0       |             | 4.4     |
-| debugWebServer       | 0       |             | 4.4     |
+| debugInput           | 0       | Enable debug-logs for all incoming messages | 4.4 |
+| debugCluster         | 0       | Enable debug-logs for all cluster incoming messages | 4.4     |
+| debugOutput          | 0       | Enable debug-logs for all outcoming messages | 4.4,  
+| debugNwkIDMatch      | ffff    | applicable for debugInputs,Outputs,Cluster will print debug-logs only for device matching this networkId | 4.4 |
+| debugPairing         | 0       | Enable debug-logs for Pairing process | 4.4     |
+| debugNetworkMap      | 0       | Enable debug-logs for Network Mapping feature | 4.4     |
+| debugNetworkEnergy   | 0       | Enable debug-logs for Network Energy feature| 4.4     |
+| debugGroups          | 0       | Enable debug- logs for Group Management feature | 4.4     |
+
+| debugWebServer       | 0       | Enable debug-logs for Web Admin interface | 4.4 |
