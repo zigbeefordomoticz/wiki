@@ -48,7 +48,7 @@ If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugi
 | eraseZigatePDM | 0 | You must set this flag to 1 , if you want to Erase Zigate Permanent Data Memory. This flag will automatically be reset to 0 after a plugin restart, or after an Erase Zigate action. |
 | extendedPANID | 0 | If the pre-set value is zero, the Co-ordinator will use its own IEEE/MAC address as the EPID. Otherwise specifiy the 16 hex digits of the specific network. WARNING: If you want to change the Extended PANID, you need to go through an Erase PDM to take it into account | 4.2 |
 | Ping | 1 | Enable or Disable a ping feature, which ensure that the Zigate connectivity is always on. In case of failure , retry to connect | 4.1 |
-| Certification |  CE (0x01) | Set Certification to CE(0x01) or FCC (0x02) . European devices are based on CE certification, Xiaomi devices are on FCC. | 4.1 & Firm 3.0f |
+| Certification |  CE (0x01) | Set Certification to CE(0x01) or FCC (0x02) . European devices are based on CE certification, Xiaomi devices are on FCC. In case you have FCC and CE devices, we recommend to use CE| 4.1 & Firm 3.0f |
 | enableAPSFailureLoging | 0 | If enable , Log the APS Failure messages | 4.2 |
 | enableAPSFailureReporting | 1 | In case of APS Failure messages, Log the failure and TimedOut the device in Domoticz | 4.2 |
 
