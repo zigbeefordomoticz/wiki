@@ -72,7 +72,7 @@ Either the information is coming from one of the plugin user (through direct com
 | Smart Plug  | Plug (On/off)  |             |  Fully Op. |            |
 
 
-### Philipps
+### Philips
 
 Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
 
@@ -141,3 +141,4 @@ Philips bulbs don't have Configure Reporting working. Due to that and in order t
 | KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
 | FB56-ZCW08KU1.1 | Strip Light WRGB | Switch/LvlControl/ColorControl | Fully Op. | 4.2.0 |
 | Müller-Licht 44062|  Color Switch RGBWW | "tint white + color" (LED E27 9,5W 806lm 1.800-6.500K RGB) | Fully Op. | 4.4 |
+| DIY CC2531 based router | Switch | Zigbee CC2531 based router with a test button to test connection | Fully Op. | 4.1  
