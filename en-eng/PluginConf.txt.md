@@ -88,7 +88,7 @@ Those parameters will enable/disabe more verbose informations in the Log
 | debugInput           | 0       | Enable debug-logs for all incoming messages | 4.4 |
 | debugCluster         | 0       | Enable debug-logs for all cluster incoming messages | 4.4     |
 | debugOutput          | 0       | Enable debug-logs for all outcoming messages | 4.4,  
-| debugNwkIDMatch      | ffff    | applicable for debugInputs,Outputs,Cluster will print debug-logs only for device matching this networkId | 4.4 |
+| debugMatchId         | ffff    | applicable for debugInputs,Outputs,Cluster will print debug-logs only for device matching this ShortAddress (4 Hexa) or the IEEE ( 16 Hexa ) | 4.4 |
 | debugPairing         | 0       | Enable debug-logs for Pairing process | 4.4     |
 | debugNetworkMap      | 0       | Enable debug-logs for Network Mapping feature | 4.4     |
 | debugNetworkEnergy   | 0       | Enable debug-logs for Network Energy feature| 4.4     |
