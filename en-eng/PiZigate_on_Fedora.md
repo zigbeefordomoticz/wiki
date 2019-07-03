@@ -17,8 +17,8 @@ Platform: RPI3 B+
        * reboot
        
    * Disable any Getty on /dev/ttyS1
-     * `systemctl stop system-getty@ttyS1.service`
-     * `systemctl disable system-getty@ttyS1.service`
+     * `systemctl stop getty@ttyS1`
+     * `systemctl disable getty@ttyS1`
   
      * Check that there is no more process attached to /dev/ttyS1
        * `lsof /dev/ttyS1` or `ps -ef | grep ttyS1`
@@ -30,8 +30,8 @@ Platform: RPI3 B+
    * edit /etc/group and make sure that the user running domoticz belongs to the tty group
      * `sudo usermod -aG tty domoticz`
      
-   * make sure that /dev/ttyS1 is read/write access for group
-     * `sudo chmod +g /dev/ttyS1
+   * make sure that /dev/ttyS1 is read/write access 
+     * `sudo chmod 666 /dev/ttyS1`
      
 1. Enable GPIO 
 
