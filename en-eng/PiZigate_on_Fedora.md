@@ -14,10 +14,10 @@ Platform: RPI3 B+
    * Edit file ` /boot/efi/config.txt`
      * Make sure that the following lines are uncommented
        * `enable_uart=1`
-       * `dtoverlay = pi3-disable-bt
+       * `dtoverlay = pi3-disable-bt`
        
-     * systemctl stop system-getty@ttyS1.service
-     * systemctl disable system-getty@ttyS1.service
+     * `systemctl stop system-getty@ttyS1.service`
+     * `systemctl disable system-getty@ttyS1.service`
 
 1. Check /dev/ttyS1 access rights
 
