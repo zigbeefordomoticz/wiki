@@ -1,0 +1,14 @@
+# Using PiZigate on a Fedora 29 distribution
+
+
+Fedora is my developpement platform, and I was a bit frustrated when the PiZigate came and was only running on Raspbian.
+Finally after few trials and changes, I have been able to get a Fedoar 29 , Domoticz , PiZigate stack fully oiperationnal
+
+
+## Fedora configuration
+
+1. Enable UART 
+
+   * Edit file ` /boot/efi/config.txt`
+     * Make sure that:
+       * 
