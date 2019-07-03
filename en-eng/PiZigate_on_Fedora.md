@@ -17,11 +17,11 @@ Platform: RPI3 B+
        * reboot
        
    * Disable any Getty on /dev/ttyS1
-     * `systemctl stop getty@ttyS1`
-     * `systemctl disable getty@ttyS1`
+     * `systemctl stop serial-getty@ttyS1.service1`
+     * `systemctl disable serial-getty@ttyS1.service`
   
-     * Check that there is no more process attached to /dev/ttyS1
-       * `lsof /dev/ttyS1` or `ps -ef | grep ttyS1`
+   * Check that there is no more process attached to /dev/ttyS1
+     * `lsof /dev/ttyS1` or `ps -ef | grep ttyS1`
 
 1. Check /dev/ttyS1 access rights
 
