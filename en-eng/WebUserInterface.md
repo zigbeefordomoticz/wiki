@@ -2,7 +2,7 @@
 
 
 ### Introduction
-Starting beta-4.3 there is a Web User Interface available. This will allow User to 
+Starting beta-4.4there is a Web User Interface available. This will allow User to 
 1. edit all Plugin settings (previously managed under the file PluginConf.txt), 
 1. visualize the Network Topology and Mesh level
 1. edit the Equipment managed by Zigate and give a name to each physical device
