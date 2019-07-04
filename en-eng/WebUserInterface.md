@@ -9,7 +9,7 @@ Starting beta-4.3 there is a Web User Interface available. This will allow User 
 1. Administrate the plugin and Zigate, by allowing Setting Zigate in Pairing mode
 
 ### Preamble
-Due to a problem in Domoticz Python Framework, the current version of the Web User Interface is only accessible through the loopback interface. This means that you must access the Web via the ip 127.0.0.1.
+You must have a Beta Domoticz version above 4.10900
 
 
 ### Enable the Web User Interface 
