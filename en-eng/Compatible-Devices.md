@@ -17,6 +17,8 @@ Either the information is coming from one of the plugin user (through direct com
 
 ## GLEDOPTO
 
+Please do not that it seems that GLEDOPTO do not provide LQI information, and due to that would probably behave as a very bad router. Controller and other routers won't have any clue on the LQI quality they have with such devices.
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | LED 12W     | ColorControl/Switch/LvlControl | Led controled with RGB+WW, On/Off, Lvl Control | Fully Op.| 4.3 |
