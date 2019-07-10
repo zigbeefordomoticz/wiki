@@ -46,6 +46,23 @@ The Device Management can be used for 2 purposes:
 
 ![Network Topology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network-Topology.png)
 
+At plugin start a report is triggered. It could take up to 15' to get the report extracted.
+You can after that manually trigger a scan
+
+All available reports are available in the upper-left list, sorted by date. From the list you can either:
+* delete a report
+* display the report
+
+There are 2 graphical representations of the report.
+
+#### Left: Topology weel
+
+Here are shown on a weel, all links between 2 devices. If you leave the mouse on a link, you'll see the direction and a number which correspond to the Link Quality ( the worst is 0, the best is 255).
+
+#### Right: Topology graph
+
+Here you can see more the hierarchical structure of your Zigbee network.
+
 ### 3.2 Network Energy 
 
 ![Network Energy ](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network-Energy.png)
