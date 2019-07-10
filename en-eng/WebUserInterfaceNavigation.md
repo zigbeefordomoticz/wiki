@@ -26,6 +26,16 @@ In the footer (here in Green) you have some quick overview of :
 
 ![Device Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Device-Management.png)
 
+The Device Management can be used for 2 purposes:
+
+* To assign a Friendly name to each of your devices, so it will be easier to identify them
+
+* To get more information such as :
+  * what are ShortId (Network Address) and IEEE (Mac Address) of the device
+  * what is the Model Name
+  * what are the Domoticz Widget names attached to this device
+  * an Health status
+  
 ### 2.2 Group Management
 
 ![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Group-Management.png)
