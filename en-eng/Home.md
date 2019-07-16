@@ -49,3 +49,4 @@ You'll find advanced information like How to configure the plugin for adding new
 * [Enrolment Process](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Enrolment-process.md)
 * Documentation of [DeviceConf.txt](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DeviceConf.md)
 * [Internal Structure List Of devices ( DeviceList-xx.txt )](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Structure-of-ListOfDevices.md)
+* [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
