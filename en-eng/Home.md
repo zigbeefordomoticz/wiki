@@ -16,15 +16,16 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 ## To start
 * [Plugin installation and Update](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md)
 * [Plugin Configuration](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Configuration.md)
+* [Plugin Web Interface](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) (_4.4_)
 
 ## Advanced
 
+* [Plugin Admin Web Interface - How to activate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterface.md) (_4.4_)
 * [Plugin admin widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Administration.md) (_4.1_)
 * [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management.md) (_4.1_)
 * [Plugin parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.txt.md)
 * [Over-the-Air Firmware upgrade](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/OTA-Upgrade.md)
-* [Network status](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Status.md) (_4.1_ beta)
-* [Network Topology - Mesh](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Topology---LQI-report.md) (4.1_ beta)
+* [On line debuging](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/debug-mode.md) (_4.4_)
 
 ## In case of Trouble
 
