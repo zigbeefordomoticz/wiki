@@ -58,6 +58,20 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | JW-A04-RGBW Led Strip Controler | Switch Light, Level Control, Color Control |  You can switch on/off the lead, managed the LUX via the level control and the LED color, through the Color Seting. | Fully operationnal | 3.1.0 |
 
+## KONKE
+
+### Attention:
+1. those devices works only on channel 15, 20 and 25
+1. for now there is no reporting of Battery level ( under investigation )
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| Entry Sensor| Door contact   | Door contact| Op. with 4.5, Fully Op. with 4.6 | 4.5 |
+| Button      | Switch Selector | 1 Click and 2 Click and long Click | Fully Op. 4.6 | 4.6 |
+| Temp Humi   | Temp & Humi    | Temp et Humi| Op. with 4.5, Fully Op. with 4.6 | 4.6 |
+| Motion      | Motion         | Motion      | Op. with 4.5, Fully Op. with 4.6 | 4.6 |
+
+
 ### Legrand
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
