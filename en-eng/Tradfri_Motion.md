@@ -1,4 +1,4 @@
-#Using the tradfri Motion Sensor with an ikea device (bulb or Outlet) and Stand alone with Zigate 
+# Using the tradfri Motion Sensor with an ikea device (bulb or Outlet) and Stand alone with Zigate 
 
 ## 1. Prerequisites
 Before you start these are the necessities.
