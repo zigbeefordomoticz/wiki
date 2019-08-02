@@ -104,6 +104,14 @@ Philips bulbs don't have Configure Reporting working. Due to that and in order t
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | SP600 | Plug, Power Meter Voltage | Can switch on/off the plug | Power and Meter required a firmware upgrade of Zigate > 3.0e | 3.1.0 |
 
+### TUYATEC
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| TYZDS-02    | Door Contact   | Door contact | Op with 4.5 , Fully Op. with 4.6| 4.5        |
+
+
+
 ### Xiaomi
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
