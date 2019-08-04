@@ -3,7 +3,9 @@
 This file is used to customized some behaviour of the plugin at run time
 If you are updating values in PluginConf, we strongly recommend you to make a copy of it in order to avoid any lost when doing an update of the plugin.
 
-If you name the file PluginConf-xx.txt ( where xx is the HardwareId of the plugin zigate), the plugin will use that one instead of the generic PluginConf.txt .
+If you name the file PluginConf-xx.json ( where xx is the HardwareId of the plugin zigate), the plugin will use that one instead of the generic PluginConf.txt .
+
+ATTENTION: Starting Version 4.5 the Configuration File Name is : PluginConf-xx.json and not '.txt'. The .txt' one is not more used and can be removed
 
 ```
 {
