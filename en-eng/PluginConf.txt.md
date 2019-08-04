@@ -53,6 +53,7 @@ ATTENTION: Starting Version 4.5 the Configuration File Name is : PluginConf-xx.j
 | Certification |  CE (0x01) | Set Certification to CE(0x01) or FCC (0x02) . European devices are based on CE certification, Xiaomi devices are on FCC. In case you have FCC and CE devices, we recommend to use CE| 4.1 & Firm 3.0f |
 | enableAPSFailureLoging | 0 | If enable , Log the APS Failure messages | 4.2 |
 | enableAPSFailureReporting | 1 | In case of APS Failure messages, Log the failure and TimedOut the device in Domoticz | 4.2 |
+| enableWebServer | 1 | Enable the Web Server part to allow Admin Interface | 4.5 |
 
 ### Over-The-Air Upgrade
 | Field                | Default | Description | Version |
