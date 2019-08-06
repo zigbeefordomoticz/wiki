@@ -9,6 +9,10 @@ The purpose of this document is to help you in the installation of the Zigate pl
 * The GitHub server Synology package must be installed . Install Git Server package via Diskstation. We don't need the 'Server' part of the GitHub Server package, just the 'git command', so no specific configurations are required.
 * it is assumed that you have 'root'/'admin' right access with the use of 'sudo' command
 
+Attention:
+  * You need git-server package
+  * Domoticz with python
+
 ## Installation of the Plugin
 Start a Putty session and login
 
