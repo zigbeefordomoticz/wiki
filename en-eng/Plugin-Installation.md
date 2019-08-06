@@ -8,54 +8,51 @@ To install:
 1. If you are on a Synology NAS platform
    * [Plugin-Installation on Syno](Plugin-Installation-on-Synology-NAS.md)
    
-1. If you are installing and be using the Plugin with a PiZigate you have some follow some pre-requisities
-   * You must be on a Raspbian distribution
-   * You must install the wiringPi package to get access to gpio commands
+1. Integrated Domoticz and Plugin installation
+   * Simply go to [Packaging Domoticz for Debian, Ubuntu, Raspbian and Fedora](https://danielpocock.com/domoticz-packaging-debian-ubuntu-raspbian-fedora/)
    
-     1. ```
+1. Installation from GitHub Repository
+   
+   1. If you are installing and be using the Plugin with a PiZigate you have some follow some pre-requisities
+      * You must be on a Raspbian distribution
+      * You must install the wiringPi package to get access to gpio commands
+      * A Cookbook for PiZigate on an RPI3B+ is available [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B+-Cookbook.md)
+   
+      1. ```
          sudo apt-get update
          sudo apt-get upgrade
          sudo apt-get install wiringpi
          ```
      
-     1. `hash -r`
+      1. `hash -r`
      
-     1. In order to test if wiringPi is well installed you can :
+      1. In order to test if wiringPi is well installed you can :
      
-        `gpio -v`
+         `gpio -v`
      
-        `$ gpio readall`
+         `$ gpio readall`
      
-   * You must be on a plugin version at least equal to 4.1
-     Starting with that version, you have a tool available under the plugin Tools folder named `pi-zigate.sh`
-     Before starting the plugin, you must set the PiZigate in running mode and for that you have to run
+      * You must be on a plugin version at least equal to 4.1
+        Starting with that version, you have a tool available under the plugin Tools folder named `pi-zigate.sh`
+        Before starting the plugin, you must set the PiZigate in running mode and for that you have to run
      
-     `Tools/pi-zigate.sh run`
+         `Tools/pi-zigate.sh run`
      
-     You'll see the Blue lead on the Pi-Zigate switchin on.
+         You'll see the Blue lead on the Pi-Zigate switchin on.
      
-     From there go ahead
+        From there go ahead
      
-     A Cookbook for PiZigate on an RPI3B+ is available [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B+-Cookbook.md)
+   1. For Unix system using the Python Plugin Manager
+      * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
+      * Just search for "Zigate Plugin" entry and add it.
 
-1. For Unix system using the Python Plugin Manager
-   * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
-   * Just search for "Zigate Plugin" entry and add it.
-
-1. For manual installation
-   * Go in your Domoticz directory using a command line and open the plugins directory.
-   * Usually you should be under <code>domoticz/plugin</code>
-   * Run: `git clone https://github.com/sasu-drooz/Domoticz-Zigate.git`
-   * It will create a folder 'Domoticz-Zigate'
-   * Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
-   * Restart Domoticz.
-
-Attention:
-
-* If you are installing the plugin on Synlogy,
-  * You need git-server package
-  * Domoticz with python
-
+   1. For manual installation
+      * Go in your Domoticz directory using a command line and open the plugins directory.
+      * Usually you should be under <code>domoticz/plugin</code>
+      * Run: `git clone https://github.com/sasu-drooz/Domoticz-Zigate.git`
+      * It will create a folder 'Domoticz-Zigate'
+      * Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
+      * Restart Domoticz.
 
 In the web UI, navigate to the Hardware page. In the hardware dropdown there will be an entry called &quot;Zigate plugin&quot;.
 
@@ -66,10 +63,10 @@ The plugin is regularly updated. For bug fixing or enhancement. In order to keep
 * Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
 * Run: `git pull`
 * In case you have edited/updated some of the plugin controlled file, you might get an error message protecting any update. In such situation you can reset those files with the latest version with the following commands
-```
-git reset –-hard
-git pull --force
-```
+  ```
+  git reset –-hard
+  git pull --force
+  ```
 
 * Run: `sudo chmod +x plugin.py`
 * Restart Domoticz.
