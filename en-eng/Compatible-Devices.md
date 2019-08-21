@@ -2,6 +2,22 @@ Purpose is to document the list of Hardware devices **tested** with the Zigate U
 
 Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
 
+## BITRON HOME 
+https://www.conrad.com/o/bitron-home-2805047
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| Smartplug (902010/28) | Plug   | Switch On/Off | Full Op. | 4.6 |
+| Door/Windows contact (902010/121A) | Door | Door sensor Open/Closed | Fully Op. | 4.6 |
+
+
+## Centralite Micro 
+https://centralite.com/
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| Door/Windows |  Door         | Open/Closed |        |                |
+
 ### ELKO
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
