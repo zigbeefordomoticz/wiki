@@ -148,7 +148,7 @@ Philips bulbs don't have Configure Reporting working. Due to that and in order t
 | -----------| -------------- | ----------- | ------ | -------------- |
 | Aqara Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Lux sensor included doesn't work on master - report false values - To be tested in developement branch | 2.4.0 |
 |Aqara Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operationnal | 2.4.0 |
-| Aqara Vibration sensor | Selector Switch Take, Tilt, Move, Drop | | Under developement | dev |
+| Aqara Vibration sensor | Selector Switch Take, Tilt, Move, Drop; Vibration Curve widget, Orientation widget | Fully. OP |  | 4.6 |
 | Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operationnal | 2.4.0 |
 | Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cummulative Power and Meter consumption widget | Fully Op. | 4.2 |
 | Aqara Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
