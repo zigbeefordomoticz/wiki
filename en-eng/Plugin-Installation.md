@@ -8,7 +8,7 @@ To install:
 1. If you are on a Synology NAS platform
    * [Plugin-Installation on Syno](Plugin-Installation-on-Synology-NAS.md)
    
-1. Integrated Domoticz and Plugin installation
+1. Integrated Domoticz and Plugin installation ** In case you start from green field (no Domoticz installed yet) **
    * Simply go to [Packaging Domoticz for Debian, Ubuntu, Raspbian and Fedora](https://danielpocock.com/domoticz-packaging-debian-ubuntu-raspbian-fedora/)
    
 1. Installation from GitHub Repository
