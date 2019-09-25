@@ -9,7 +9,7 @@ https://www.conrad.com/o/bitron-home-2805047
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Smartplug (902010/28) | Plug   | Switch On/Off | Full Op. | 4.6 |
 | Door/Windows contact (902010/121A) | Door | Door sensor Open/Closed | Fully Op. | 4.6 |
-| Motion Sensor (902010/22A) | Switch | Switch | In progress | 4.6 |
+| Motion Sensor (902010/22A) | Motion | Motion | Full Op. | 4.6 |
 
 
 ## Centralite Micro 
