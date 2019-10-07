@@ -70,6 +70,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | BY 265      | Light White    |             | Fully Op. | 4.1.0       |
+| RC 110      | 1 x Selector switch for scene mode, 6 x Selectors for Light mode | In Scene mode, the Remote broadcast command to ALL On/Off/LvlControl devices ( Bulb, Shutter, Plug ..); In Light mode, you have to press a Number first and then you press the command On/Off Up/Down which will be send to the corresponding widget | Under Dev. | 4.6 |
 
 ### Jiawen
 
