@@ -19,14 +19,14 @@ https://centralite.com/
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Door/Windows |  Door         | Open/Closed |        |                |
 
-### ELKO
+## ELKO
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Thermostat  | Setpoint+ Temp | Setpoint/ Temp | Operational. Currently investigating the Thermostat Mode capability | 4.1    |
 | Dimmer      | Switch / LvlControl | Dimmer | Full Op. | 4.1.0 |
 
-### EUROTRONIC
+## EUROTRONIC
 
 https://eurotronic.org/produkte/zigbee-heizkoerperthermostat/
 
@@ -51,7 +51,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | HS2WD-E     | Switch Selector Off/Alarm/Siren/Strobe | Siren and Strobe | Fully Op. | 4.4 with Firm 3.1a |
 
 
-### IKEA Tradfri
+## IKEA Tradfri
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -65,14 +65,14 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | remote control E1524 | Remote Control | Pair the device, then associate with Ikea devices using touchlink, finaly add Zigate to the group created | Fully Operationnal | 4.10 @ Firm 3.0f |
 | TRADFRI motion sensor |  | | Not supported | required Group/Scene |
 
-### Innr
+## Innr
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | BY 265      | Light White    |             | Fully Op. | 4.1.0       |
 | RC 110      | 1 x Selector switch for scene mode, 6 x Selectors for Light mode | In Scene mode, the Remote broadcast command to ALL On/Off/LvlControl devices ( Bulb, Shutter, Plug ..); In Light mode, you have to press a Number first and then you press the command On/Off Up/Down which will be send to the corresponding widget | Under Dev. | 4.6 |
 
-### Jiawen
+## Jiawen
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -108,13 +108,13 @@ Do note as well that they operate only on Channel 11
 | Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Op. | 2.4.0 | 
 | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
 
-### OSRAM
+## OSRAM
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Smart Plug  | Plug (On/off)  |             |  Fully Op. |            |
 
 
-### Philips
+## Philips
 
 * Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
 So there is a risk of latency when using Remote or Group command between the command and geting the status reflected on Domoticz (as it is based on the polling frequency)
@@ -127,32 +127,32 @@ So there is a risk of latency when using Remote or Group command between the com
 | RWL021 | Remote Control | Remote Control with On/Off/DIM+/DIM- |  | 4.1.0 & Firm 3.0f |
 | SML001 | Motion Sensor | Temperature, Lux and Motion detection | Fully Op. | 4.1.0 |
 
-### Philio Technology Corporation
+## Philio Technology Corporation
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Slim Multisensor PST03-A/B/C | | | Operationnal | 2.4.0 |
 
-### Profalux
+## Profalux
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | shutter | Blind percentage inverted switch | can command the shutter from the domoticz switch, but also you can pull shutter status and update the Domoticz device. | Fully operationnal | 2.3.5 | 
 
-### Salus
+## Salus
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | SP600 | Plug, Power Meter Voltage | Can switch on/off the plug | Power and Meter required a firmware upgrade of Zigate > 3.0e | 3.1.0 |
 
-### TUYATEC
+## TUYATEC
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | TYZDS-02    | Door Contact   | Door contact | Op with 4.5 , Fully Op. with 4.6| 4.5        |
 
 
-### Xiaomi
+## Xiaomi
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
@@ -177,7 +177,7 @@ So there is a risk of latency when using Remote or Group command between the com
 | Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
 | Smart Wireless Switch Key Built In Gyro Multi-Functional | Switch Selector | Selector Switch: Click, Double Click, Long Click, Release Click, Shake | Fully Op. | 4.2.1 |
 
-### Zemismart
+## Zemismart
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
@@ -185,7 +185,7 @@ So there is a risk of latency when using Remote or Group command between the com
 | Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 2 Gang| 2 Switch | 2 Switch | Fully Op. | 4.1.0 |
 | Zemismart NUET56-DL27LX1.1 Zigbee RGBW Downlight | Color Switch RGBWW | Color Switch RGBWW | Fully Op. | 4.1.0 |
 
-### Other
+## Other
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
 | KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
