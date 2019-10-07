@@ -92,13 +92,15 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | Motion      | Motion         | Motion      | Fully Op.| 4.6 |
 
 
-### Legrand
+## Legrand
 
-* The pairing process seems to be special. You might have 2 cases happening along the pairing.
-  .1 It works straight. Most likely this is a new device - never paired with the Legrand Hub - In such nothing much.
-  .1 It works, but after 10s the device is un-paired, because it is sending a leave message. In that case there 2 tricks found in order to make the pairing resilient.
-     * When the first pairing is done (before it sends the leav message, you do an electrical power off and then On
-     * Click on Reset once (or several time) more after the pairing .
+### Attention:
+The pairing process seems to be special. You might have 2 cases happening along the pairing.
+.1 It works straight. Most likely this is a new device - never paired with the Legrand Hub - In such nothing much.
+.1 It works, but after 10s the device is un-paired, because it is sending a leave message. In that case there 2 tricks found in order to make the pairing resilient.
+   * When the first pairing is done (before it sends the leav message, you do an electrical power off and then On
+   * Click on Reset once (or several time) more after the pairing .
+Do note as well that they operate only on Channel 11
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -148,7 +150,6 @@ So there is a risk of latency when using Remote or Group command between the com
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | TYZDS-02    | Door Contact   | Door contact | Op with 4.5 , Fully Op. with 4.6| 4.5        |
-
 
 
 ### Xiaomi
