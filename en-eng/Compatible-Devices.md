@@ -93,13 +93,16 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ### Legrand
 
+* The pairing process seems to be special. You might have 2 cases happening along the pairing.
+  .1 It works straight. Most likely this is a new device - never paired with the Legrand Hub - In such nothing much.
+  .1 It works, but after 10s the device is un-paired, because it is sending a leave message. In that case there 2 tricks found in order to make the pairing resilient.
+     * When the first pairing is done (before it sends the leav message, you do an electrical power off and then On
+     * Click on Reset once (or several time) more after the pairing .
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| Celiane with Netatmo Plug | Switch and Power Meter | It might happend the Power Meter doesn't work. In that case it is because the device requirers firmware update. To do so you need to have at your disposal the Legrand gateway | Tested | 2.4.0 |
-| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Tested | 2.4.0 |
-| Micro Module | Switch On/Off | Switch On/Off | Fully Op. | 4.1 and Fw 3.0f |
-| Shutter/Window Covering | Level Control | Level Control | in progress | 4.1 and Fw 3.0f |
-| Switch for rolling shutter | Switch/LvlControl | On/Off | Op. | 4.1 & Firm 3.0f |
+| Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switchn Power and Meter widget | Op. | 2.4.0 |
+| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Op. | 2.4.0 | | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
 
 ### OSRAM
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
@@ -109,7 +112,8 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ### Philips
 
-Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
+* Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
+So there is a risk of latency when using Remote or Group command between the command and geting the status reflected on Domoticz (as it is based on the polling frequency)
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
