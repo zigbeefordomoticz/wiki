@@ -102,7 +102,8 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switchn Power and Meter widget | Op. | 2.4.0 |
-| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Op. | 2.4.0 | | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
+| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Op. | 2.4.0 | 
+| Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
 
 ### OSRAM
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
