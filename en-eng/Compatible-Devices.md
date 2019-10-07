@@ -67,6 +67,9 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ## Innr
 
+* In order to reset the RC 110, press On and Program for about 5s until the led blink
+* In order to pair the RC 110, press - and program for about 3s until the led blink
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | BY 265      | Light White    |             | Fully Op. | 4.1.0       |
