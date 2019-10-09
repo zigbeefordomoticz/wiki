@@ -108,7 +108,7 @@ Do note as well that they operate only on Channel 11
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switchn Power and Meter widget | Op. | 2.4.0 |
-| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, Dimmmer | Dimmer not working, need update firmware ? | Op. | 2.4.0 | 
+| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, LvlControl | Op. (Dimmer has be enabled via Settings)| Op. | 4.6 & Firmware 3.1b | 
 | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
 | Micro Module | Switch  | Micromodule | Op. | 4.6 | 
 | Legrand Double gang wireless switch | 2 x Switchs | Switch Selector Off/On/Move Up/Move Down/Stop | Op. | 4.6 |
