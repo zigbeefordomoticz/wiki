@@ -103,6 +103,9 @@ The pairing process seems to be special. You might have 2 cases happening along 
 1. It works, but after 10s the device is un-paired, because it is sending a leave message. In that case there 2 tricks found in order to make the pairing resilient.
    * When the first pairing is done (before it sends the leav message, you do an electrical power off and then On
    * Click on Reset once (or several time) more after the pairing .
+   
+Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
+
 Do note as well that they operate only on Channel 11
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
