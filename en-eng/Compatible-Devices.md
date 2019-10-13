@@ -83,8 +83,10 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ## KONKE
 
+* Channels: 15, 30,25
+
 ### Attention:
-1. those devices works only on channel 15, 20 and 25
+
 1. for now there is no reporting of Battery level ( under investigation )
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
@@ -97,6 +99,8 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ## Legrand
 
+* Channels: 11
+
 ### Attention:
 The pairing process seems to be special. You might have 2 cases happening along the pairing.
 1. It works straight. Most likely this is a new device - never paired with the Legrand Hub - In such nothing much.
@@ -106,7 +110,6 @@ The pairing process seems to be special. You might have 2 cases happening along 
    
 Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
 
-Do note as well that they operate only on Channel 11
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -115,6 +118,16 @@ Do note as well that they operate only on Channel 11
 | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
 | Micro Module | Switch  | Micromodule | Op. | 4.6 | 
 | Legrand Double gang wireless switch | 2 x Switchs | Switch Selector Off/On/Move Up/Move Down/Stop | Op. | 4.6 |
+
+## LIVOLO
+
+* Channel: 26
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| One Gang C701SZ-11 | Switch | On/Off       | Under Dev | 4.6 & Firm 3.1b |
+
+
 
 ## OSRAM
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
@@ -194,6 +207,7 @@ So there is a risk of latency when using Remote or Group command between the com
 | Zemismart NUET56-DL27LX1.1 Zigbee RGBW Downlight | Color Switch RGBWW | Color Switch RGBWW | Fully Op. | 4.1.0 |
 
 ## Other
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
 | KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
