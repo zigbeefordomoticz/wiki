@@ -102,11 +102,8 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 * Channels: 11
 
 ### Attention:
-The pairing process seems to be special. You might have 2 cases happening along the pairing.
-1. It works straight. Most likely this is a new device - never paired with the Legrand Hub - In such nothing much.
-1. It works, but after 10s the device is un-paired, because it is sending a leave message. In that case there 2 tricks found in order to make the pairing resilient.
-   * When the first pairing is done (before it sends the leav message, you do an electrical power off and then On
-   * Click on Reset once (or several time) more after the pairing .
+
+* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md
    
 Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
 
@@ -122,6 +119,10 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 ## LIVOLO
 
 * Channel: 26
+
+### Attention
+
+* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Livolo-corner.md
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
