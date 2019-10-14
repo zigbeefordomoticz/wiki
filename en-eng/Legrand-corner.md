@@ -43,6 +43,11 @@ Some specific Legrand settings are accessible via the Web GUI settings page.
    * click immediatly on the factory reset once more
    * when turning the led is __green__ the pairing process is completed.
    
+Alternative is :
+
+When the led is red (not paired):
+* press the reset button until it flash green 3 times
+* when the led comes back to red, click once on the reset button
  
 
 ## Reference
