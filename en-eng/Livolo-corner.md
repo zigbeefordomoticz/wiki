@@ -41,6 +41,8 @@ The Livolo switch must already be paired on channel 26.
 
 After a while, the Livolo should be switching automatically to channel 11.
 
+Unfortunatly, if you get power outage, you'll have to delete the corresponding widgets from Domoticz and redo the pairing process on Channel 26.
+
 
 
 ## References
