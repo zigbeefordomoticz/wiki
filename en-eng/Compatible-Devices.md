@@ -118,11 +118,12 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 ## LIVOLO
 
-* Channel: 26
+* Channel: 26 (with a possibility to move to 11)
 
 ### Attention
 
 * https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Livolo-corner.md
+* Be aware that Livolo switches seems not to act as a router. In such they won't participate in the mesh and will not help in extending the network.
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
