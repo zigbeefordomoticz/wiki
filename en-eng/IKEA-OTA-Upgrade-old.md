@@ -1,3 +1,6 @@
+
+Require to be updated accoridngly to the Web GUI interface for Group Management
+
 # Firmware update Over-The-Air
 
 Ikea is providing a lift of Firmware for their Tradfri devices. A copy of those firmware have been made available for you.
