@@ -5,6 +5,12 @@
 Purpose is to document the findings around the Livolo switches and how to get them working with Zigate and the plugin.
 It is the result of Google findings and own sniffing 
 
+## Warning
+
+Livolo seems __not following__ the Zigbee standard. Some of the results are :
+* Stability might be an issue, time to time the switch get disconnected , and it was challenging to get it back. Once I had to do an erase PDM in order to redo the full pairing.
+* Scalability (capacity to get a lot of devices) could be a problem and could negatively impact other devices.
+
 ## Prerequisites
 
 * The Livolo switches ( 1 gang or double gang ) can be paired only on channel 26, however I found the possibility to switch them back to channel 11.
