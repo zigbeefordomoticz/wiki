@@ -16,6 +16,7 @@ Livolo seems __not following__ the Zigbee standard. Some of the results are :
 * The Livolo switches ( 1 gang or double gang ) can be paired only on channel 26, however I found the possibility to switch them back to channel 11.
 * Firmware 3.1b (if you have only firmware 3.1a you won't get any switch feedback like if you manualy switch On or Off).
 * Plugin above 4.6 (included)
+* You must leave the Zigate in pairing mode all of the time
 
 ## Pairing process
 
