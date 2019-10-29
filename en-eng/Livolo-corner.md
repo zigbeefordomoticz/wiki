@@ -50,7 +50,9 @@ After a while, the Livolo should be switching automatically to channel 11.
 
 Unfortunatly, if you get power outage, you'll have to delete the corresponding widgets from Domoticz and redo the pairing process on Channel 26.
 
+## Advanced 
 
+* It could happen that the switch is out of the network and failed every time to rejoin the network. Usally a Power Off/On or a simple reset ( Press 6 seconds on the left button) make the trick. In case it doesn't happen, you may try to go to the Settings and enable the __rebindLivolo__ parameter from the experimental section.
 
 ## References
 
