@@ -58,15 +58,33 @@ When the led is red (not paired):
 * Use the Present Value ( cluster 0x000f / 0x0055 ) to get On/Off or Shutter Up and Down
 * While with the Legrand HUB, there is no binding of cluster 0x0006 and 0x0008 for the remote switch, in order to get the Level Control when you do long press/long release, there is a need to bind Cluster 0x0006 and 0x0008
 
+* The Remote coming with the hub is named : 'Master remote SW Home / Away'
+
+### Scenes
+
+* From Master remote SW Home / Away
+ * Away : GroupId 0xfff6, SceneId 0x01
+ * Home : GroupId 0xfff7, SceneId 0x01
+ 
+
 ### Wired devices
 
-#### Plug-in Unit
+#### Plug-in Unit: Connected outlet
 
 * Profile: 0x0104
 * DeviceID: 0x010a
 * Application Version: 0x0001
 
-* Part of Group 0xfeff (is this group is randomly assigned or fixed for Plug-in, I don't know as I have only one).
+1. Add Group 0xfff7   
+1. Add SceneId 0x01 / Cluster 0x0006
+1. Add Group 0xfff5
+1. Add SceneId 0x01 / Cluster 0x0006
+1. Bind Cluster 0x0006
+1. Configure Report 0x0006 / 0x0001
+1. Bind Cluster 0x0b04
+1. Configure Report 0x0b04 / 0x050b
+1. Bind Cluster 0x0003
+
 
 
 ## Reference
