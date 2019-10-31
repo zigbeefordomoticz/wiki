@@ -71,20 +71,47 @@ When the led is red (not paired):
 
 #### Plug-in Unit: Connected outlet
 
-* Profile: 0x0104
-* DeviceID: 0x010a
-* Application Version: 0x0001
-
 1. Add Group 0xfff7   
-1. Add SceneId 0x01 / Cluster 0x0006
+   1. Add SceneId 0x01 / Cluster 0x0006
 1. Add Group 0xfff5
-1. Add SceneId 0x01 / Cluster 0x0006
+   1. Add SceneId 0x01 / Cluster 0x0006
 1. Bind Cluster 0x0006
 1. Configure Report 0x0006 / 0x0001
 1. Bind Cluster 0x0b04
 1. Configure Report 0x0b04 / 0x050b
+1. Bind 0x000f
 1. Bind Cluster 0x0003
 
+
+### Micromodule: Micromodule switch
+
+1. Add Group 0xfff6
+   1. Add Scene 0x01 / Cluster 0x0006
+1. Add Group 0xfff4
+   1. Add Scene 0x01 / Cluster 0x0006
+1. Bind 0x0006
+1. Configure Report 0x0006 / 0x0001
+1. Bind 0x000f
+1. Bind 0x0003
+
+### Inter w/o neutral: Dimmer switch w/o neutral
+
+1. Add Group 0xfff6
+   1. Add Scene 0x01 / Cluster 0x0006
+   1. Add Scene 0x01 / Cluster 0x0008
+1. Add Group 0xfff4
+   1. Add Scene 0x01 / Cluster 0x0006   
+   1. Add Scene 0x01 / Cluster 0x0008
+1. Bind 0x0006
+1. Configure Report 0x0006 / 0x0001   (Bind and Configure Reporting on 0x0008, will be done when enabling dimmer)
+1. Bind 0x000f
+1. Bind 0x0003
+
+
+### Shutter: Shutter switch with neutral
+
+1. Bind 0x000f
+1. Bind 0x0003
 
 
 ## Reference
