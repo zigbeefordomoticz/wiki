@@ -53,6 +53,7 @@ When the led is red (not paired):
 
 ### Wireless devices
 
+* Not able to use the Tap-Tap for pairing the wireless with an equipment. Could be related to the fact that no group was created yet!
 * Requires bindings of 0x0001, 0x000f and 0x0003 (in that order)
 * Use the Present Value ( cluster 0x000f / 0x0055 ) to get On/Off or Shutter Up and Down
 * While with the Legrand HUB, there is no binding of cluster 0x0006 and 0x0008 for the remote switch, in order to get the Level Control when you do long press/long release, there is a need to bind Cluster 0x0006 and 0x0008
