@@ -79,7 +79,6 @@ When the led is red (not paired):
 1. Configure Report 0x0006 / 0x0001
 1. Bind Cluster 0x0b04
 1. Configure Report 0x0b04 / 0x050b
-1. Bind 0x000f
 1. Bind Cluster 0x0003
 
 
