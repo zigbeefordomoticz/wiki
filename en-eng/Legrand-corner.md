@@ -57,6 +57,17 @@ When the led is red (not paired):
 * Use the Present Value ( cluster 0x000f / 0x0055 ) to get On/Off or Shutter Up and Down
 * While with the Legrand HUB, there is no binding of cluster 0x0006 and 0x0008 for the remote switch, in order to get the Level Control when you do long press/long release, there is a need to bind Cluster 0x0006 and 0x0008
 
+### Wired devices
+
+#### Plug-in Unit
+
+* Profile: 0x0104
+* DeviceID: 0x010a
+* Application Version: 0x0001
+
+* Part of Group 0xfeff (is this group is randomly assigned or fixed for Plug-in, I don't know as I have only one).
+
+
 ## Reference
 
 * https://faire-ca-soi-meme.fr/domotique/2018/09/24/test-legrand-celiane-by-netatmo-zigate/
