@@ -53,12 +53,17 @@ When the led is red (not paired):
 
 ### Wireless devices
 
-* Not able to use the Tap-Tap for pairing the wireless with an equipment. Could be related to the fact that no group was created yet!
+* Not able to use the Tap-Tap for pairing the wireless with an equipment. 
+* Wireless devices are using a proprieatory Cluster 0xfc01 to send some commands. I suspect that Managemet of Pairing as well as Battery level is done via that one.
 * Requires bindings of 0x0001, 0x000f and 0x0003 (in that order)
 * Use the Present Value ( cluster 0x000f / 0x0055 ) to get On/Off or Shutter Up and Down
 * While with the Legrand HUB, there is no binding of cluster 0x0006 and 0x0008 for the remote switch, in order to get the Level Control when you do long press/long release, there is a need to bind Cluster 0x0006 and 0x0008
 
 * The Remote coming with the hub is named : 'Master remote SW Home / Away'
+
+
+ATTENTION:
+* Battery seems not be provided by Cluster 0x0001!
 
 ### Scenes
 
@@ -66,6 +71,9 @@ When the led is red (not paired):
  * Away : GroupId 0xfff6, SceneId 0x01
  * Home : GroupId 0xfff7, SceneId 0x01
  
+### Groups when pairing a remote with a wired devices
+
+* Looks that group numbering is started at 0xfeff and going down to 0xfe00  ( 255 Wireless Gang )
 
 ### Wired devices
 
