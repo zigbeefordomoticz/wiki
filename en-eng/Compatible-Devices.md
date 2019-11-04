@@ -83,7 +83,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ## KONKE
 
-* Channels: 15, 30,25
+* Channels: 15, 20,25
 
 ### Attention:
 
