@@ -6,6 +6,6 @@ If you would like to translate a part or the totality of the Wiki into an other 
 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism
 
-The Domoticz-Zigate plugin code is available at https://github.com/sasu-drooz/Domoticz-Zigate
+The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Domoticz-Zigate
 
 
