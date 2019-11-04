@@ -207,7 +207,7 @@ So there is a risk of latency when using Remote or Group command between the com
 | Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 1 Gang | 1 Switch | 1 Switch | Fully Op. | 4.1.0 |
 | Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 2 Gang| 2 Switch | 2 Switch | Fully Op. | 4.1.0 |
 | Zemismart NUET56-DL27LX1.1 Zigbee RGBW Downlight | Color Switch RGBWW | Color Switch RGBWW | Fully Op. | 4.1.0 |
-| Zemismart ZM-CSW002 | EU Curtain Wall Switch | Venetian Blind inverted | Op. |  |
+| Zemismart ZM-CSW002 | EU Curtain Wall Switch | Venetian Blind EU or Blind | Op. | 4.6 |
 
 ## Other
 
