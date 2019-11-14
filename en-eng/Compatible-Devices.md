@@ -175,6 +175,16 @@ So there is a risk of latency when using Remote or Group command between the com
 | TYZDS-02    | Door Contact   | Door contact | Op with 4.5 , Fully Op. with 4.6| 4.5        |
 
 
+## Trust.com
+
+* https://www.trust.com/fr/zigbee
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| ZLED-EC2206 | Switch/Lvl Control | Warm Color, 470lm/6w, Dimable | Op. | 4.5 |
+
+
+
 ## Xiaomi
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
