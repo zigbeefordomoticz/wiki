@@ -43,6 +43,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | LED 12W     | ColorControl/Switch/LvlControl | Led controled with RGB+WW, On/Off, Lvl Control | Fully Op.| 4.3 |
 | LED 4 W (GL-B-001Z) | ColorControl/Switch/LvlControl | Led controled with Level Control, On/Off and RGB + WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
 | Spot(GL-S-004Z) | Whitecolor/Switch/LvlControl | Sport controled with Level Control, On/Off and WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
+| GL-C-009    | LvlControl | Dimable led | Op. | 4.6 |
 
 ## HEIMAN
 
