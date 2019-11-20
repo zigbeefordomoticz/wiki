@@ -123,7 +123,7 @@ When the led is red (not paired):
 * With the help of @Thorgal789
 
 | Device | Attribute | Values | Data Type | 
-| ------ | --------- - ------ | --------- | 
+| ------ | --------- | ------ | --------- | 
 | Dimmer switch w/o neutral | 0x0000 | 0x0101/0x0000 enable/disbale Dimmer mode ( cluster 0x0008 should be binded) | 0x09 (16bit data) |
 | Dimmer switch w/o neutral | 0x0001 | 0x01/0x00 enable/disbale Led in Dark | 0x10 ( Bool )|
 | Dimmer switch w/o neutral | 0x0002 | 0x01/0x00 enable/disable Led if On | 0x10 |
