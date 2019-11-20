@@ -130,7 +130,9 @@ When the led is red (not paired):
 | Connected outlet          | 0x0002 | 0x01/0x00 enable/disable Led if On | 0x10 |
 | Shutter switch with neutral | 0x0001 | 0x01/0x00 enable/disable Led if On | 0x10 |
 
-            
+### Other matters
+
+* When Zigate is in pairing mode, then the Legrand device led is Green.
 
 ## Reference
 
