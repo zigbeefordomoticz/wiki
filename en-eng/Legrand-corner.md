@@ -129,7 +129,19 @@ When the led is red (not paired):
 | Dimmer switch w/o neutral | 0x0002 | 0x01/0x00 enable/disable Led if On | 0x10 |
 | Connected outlet          | 0x0002 | 0x01/0x00 enable/disable Led if On | 0x10 |
 | Shutter switch with neutral | 0x0001 | 0x01/0x00 enable/disable Led if On | 0x10 |
+| Fil Pilote                | 0x0000 | 0x0001/0x0002 enable/disable fil pilote | 0x0x09 (16 bit data)
 
+## Cluster 0xfc40
+* Contirbution from @Thorgal789
+
+| Attribute | Heating Mode | Value | Data Type |
+| --------- | ------------ | ----- | --------- |
+| 0x0000    | Confort      | 0x00  | 0x30 (Enum8) |
+|           | Contort -1   | 0x01  | 0x30 (Enum8) |
+|           | Confort -2   | 0x02  | 0x30 (Enum8) |
+|           | Eco          | 0x03  | 0x30 (Enum8) |
+|           | Hors Gel     | 0x04  | 0x30 (Enum8) |
+|           | Off          | 0x05  | 0x30 (Enum8) |  
 ### Other matters
 
 * When Zigate is in pairing mode, then the Legrand device led is Green.
