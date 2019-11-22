@@ -142,10 +142,12 @@ When the led is red (not paired):
 |           | Eco          | 0x03  | 0x30 (Enum8) |
 |           | Hors Gel     | 0x04  | 0x30 (Enum8) |
 |           | Off          | 0x05  | 0x30 (Enum8) |  
+
+
 ### Other matters
 
 * When Zigate is in pairing mode, then the Legrand device led is Green.
-
+* When you just did the pairing, it is easy to add groupmembership to the device? However after a while I had issues to add new group membership. The workaround I found was. Power Off/On of the device, putting the Zigate in Pairing mode, and then I was able to add groupmembership.
 ## Reference
 
 * https://faire-ca-soi-meme.fr/domotique/2018/09/24/test-legrand-celiane-by-netatmo-zigate/
