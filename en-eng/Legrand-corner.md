@@ -156,7 +156,7 @@ When the led is red (not paired):
 * Block size for transfer: 64 bytes
 
 | Manuf Code | Image Type | Product | Size | App. Rel. | App Build | Stack Rel. | Stack Build |
-| ---------- | ---------- | ------- | --------- | --------- | ---------- | ----------- |
+| ---------- | ---------- | ------- | ---- | --------- | --------- | ---------- | ----------- |
 | 0x1021     | 0x0013 | Shutter     |              | 0   | 29 | 66   | 3 |
 | 0x1021     | 0x0010 | Micromodule | 221655 Bytes | 0   | 26 | 66   | 3 |
 | 0x1021     | 0x0011 | Hub Plug    |              | 0   | 35 | 66   | 3 |
