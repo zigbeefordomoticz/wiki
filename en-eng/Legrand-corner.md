@@ -166,6 +166,8 @@ When the led is red (not paired):
 
 * App. Rel. is shown on the MyHome application as Software Release
 
+More informations/scripts .... can be found here: https://github.com/pipiche38/Capture-OTA-from-Wireshark
+
 
 
 ### Other matters
