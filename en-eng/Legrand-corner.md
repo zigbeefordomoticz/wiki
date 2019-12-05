@@ -157,10 +157,12 @@ When the led is red (not paired):
 
 | Manuf Code | Image Type | Product | Size | App. Rel. | App Build | Stack Rel. | Stack Build |
 | ---------- | ---------- | ------- | ---- | --------- | --------- | ---------- | ----------- |
-| 0x1021     | 0x0013 | Shutter     |              | 0   | 29 | 66   | 3 |
-| 0x1021     | 0x0010 | Micromodule | 221655 Bytes | 0   | 26 | 66   | 3 |
-| 0x1021     | 0x0011 | Hub Plug    |              | 0   | 35 | 66   | 3 |
-| 0x1021     | 0x000e | Switch w/o neural |        | 0   | 38 | 66   | 3 |
+| 0x1021     | 0x000e | Switch w/o neural    | 229319 Bytes       | 0  | 38 | 66 | 3 |
+| 0x1021     | 0x0010 | Micromodule          | 221655 Bytes       | 0  | 26 | 66 | 3 |
+| 0x1021     | 0x0011 | Hub Plug             |                    | 0  | 35 | 66 | 3 |
+| 0x1021     | 0x0012 | Main Remote          |                    | 0  | 32 | 65 | 3 |
+| 0x1021     | 0x0013 | Shutter              |                    | 0  | 29 | 66 | 3 |
+| 0x1021     | 0x0016 | Double Remote Switch |                    | 0  |  4 | 66 | 3 |
 
 
 ### Other matters
