@@ -143,6 +143,11 @@ When the led is red (not paired):
 |           | Hors Gel     | 0x04  | 0x30 (Enum8) |
 |           | Off          | 0x05  | 0x30 (Enum8) |  
 
+## Specific Commands
+
+| Cluster | Command | Data Type | Data Value | Description |
+| ------- | ------- | --------- | ---------- | ----------- |
+| 0xfc01  | 0x02    | 1 byte    | 0x00       |             |
 
 ### Other matters
 
