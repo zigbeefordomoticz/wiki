@@ -149,6 +149,18 @@ When the led is red (not paired):
 | ------- | ------- | --------- | ---------- | ----------- |
 | 0xfc01  | 0x02    | 1 byte    | 0x00       |             |
 
+
+## OTA 
+
+* Manfufacturer Code: 0x1021
+
+| Manuf Code | Image Type | Product | App. Rel. | App Build | Stack Rel. | Stack Build |
+| ---------- | ---------- | ------- | --------- | --------- | ---------- | ----------- |
+| 0x1021     | 0x0013     |         | 0         | 29        |  66        | 3 |
+| 0x1021     | 0x0010     | Micromodule  0         | 26        |  66        | 3 |
+| 0x1021     | 0x000e     |         | 0         | 38        |  66        | 3 |
+
+
 ### Other matters
 
 * When Zigate is in pairing mode, then the Legrand device led is Green.
