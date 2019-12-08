@@ -64,7 +64,7 @@ When the led is red (not paired):
 * Use the Present Value ( cluster 0x000f / 0x0055 ) to get On/Off or Shutter Up and Down
 * While with the Legrand HUB, there is no binding of cluster 0x0006 and 0x0008 for the remote switch, in order to get the Level Control when you do long press/long release, there is a need to bind Cluster 0x0006 and 0x0008
 
-* The Remote coming with the hub is named : 'Master remote SW Home / Away'
+* The Remote coming with the hub is named : 'Master remote SW Home / Away', and was not able to pair with Zigate
 
 
 ### Scenes
