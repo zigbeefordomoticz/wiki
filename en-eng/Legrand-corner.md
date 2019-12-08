@@ -31,6 +31,11 @@ Some specific Legrand settings are accessible via the Web GUI settings page.
 * __EnableLedInDark__ By enabling this setting, the device Led will be on ( blue ) when the device is Off
 * __EnableDimmer__ By enabling this setting, the Switch w/o neutral will get dimmer enable.
 
+## Channels
+
+* Channel 11 , pair all devices
+* Channel 13, able to pair switch W/O neutral.
+* Channel 15, able to pair micromodule and switch W/O Neutral
 
 ## Pairing process
 
