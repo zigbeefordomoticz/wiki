@@ -199,7 +199,7 @@ So there is a risk of latency when using Remote or Group command between the com
 | Aqara WXKG01LM (86sw1) | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
 | Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operationnal | 3.1.0 |
 | Aqara WXKG11LM Square Device with round Button | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
-| Aqara WXKG03LM Aqara wireles switch single button | Button | The following events are reported to the Domoticz Switch : ON | Fully operationnal | 3.3 |
+| Aqara WXKG03LM Aqara wireles switch single button | Button | The following events are reported to the Domoticz Switch : Clickn Double Click and Long Click | Fully operationnal | 3.3 |
 | Aqara WXKG12LM | Button with giroscop | Simple and double click, Long Click and Long Release, Shake | Fully Op. | 4.3 |
 | Aqara Cube | Switch Selector | The following events are reported to the Domoticz Switch selectors : Shake, Wakepup, Drop, 90° and 180° rotation, Push, Tab and horizontal Rotation . | Fully operationnal | 2.4.0 |
 | Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Fully operationnal | 2.4.0 |
