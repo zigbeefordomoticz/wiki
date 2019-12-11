@@ -5,6 +5,8 @@
 Purpose is to present the finding around pairing Legrand/Netatmo devices (Celiane, Mosaic, dooxie to Zigate and Domoticz
 A big thanks to @fgrimaldi who contributes heaviliy to this, a big thanks also to @Thorgal789
 
+Quiet a lot of work have been done throught sniffing of the Zigbee traffic between the Legrand Hub and the devices as well as Try and Test approach.
+
 ## Preamble
 
 By default some of the Legrand/Netamoi devices come with a basic firmware, which do not provide all features. 
@@ -17,10 +19,15 @@ In that context, I still feel that having the Legrand Hub is a good investement 
 * Shutter switch with neutral - Open, Close and Stop
 * Micromodule switch - On and Off
 * Double gangs remote switch - On/Off/Dimmer
+* Simple gang remote switch - On/Off/Dimmer
+
+## Not Validated
+* The Home/Away remote which is provided with the Legrand Hub and which in addition of Home/Away scene allow to switch the Legrand Hub in pairing mode, do not show any Zigbee traffic .
+* For the other Scenes related devices, they can be connected to the Zigate, but the only send Group+Scene commands in broadcast mode. 
 
 ## Prerequisites
 
-* In order to enable the Dimmer feature on the Switch w/o neutral, you must have firmware 3.1b
+* In order to enable the Dimmer feature on the Switch w/o neutral, you must have Zigate firmware 3.1b
 
 
 ## Add on
