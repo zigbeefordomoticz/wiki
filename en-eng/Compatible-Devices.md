@@ -169,6 +169,16 @@ So there is a risk of latency when using Remote or Group command between the com
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | SP600 | Plug, Power Meter Voltage | Can switch on/off the plug | Power and Meter required a firmware upgrade of Zigate > 3.0e | 3.1.0 |
 
+## Schneider
+
+* https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN )
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| EER40X00    | Switch/Power/meter | Smart Plug | Op. | 4.6           |
+
+
+
 ## TUYATEC
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
