@@ -175,7 +175,7 @@ So there is a risk of latency when using Remote or Group command between the com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| EER40X00    | Switch/Power/meter | Smart Plug | Op. | 4.6           |
+| EER40020    | Switch/Power/meter | Smart Plug | Op. | 4.6           |
 
 
 
