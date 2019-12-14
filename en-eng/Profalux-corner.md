@@ -25,6 +25,16 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
    
    1. When the remote Led do not flash anymore press STOP
    
+## Findings
+
+Manufacturer Code: 0x1110
+ProfileID: 0x0104
+DeviceID: 0x0200 ( Shutter )
+DeviceID: 0x0201 ( remote 
+
+Unfortunatly Profalux do not provide any Model Name ( cluster 0x0000, attribute 0x0005)
+You an find Location in  basic cluster attribute 0x0010 (which can be set by ZOE for instance, or via a write attribute)
+
 
 ## Steering and other findings
 
@@ -32,15 +42,8 @@ The Profalux shutter can be steer with cluster ONOFF (0x0006) or cluster LevelCo
 
 Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
 
-Unfortunatly Profalux do not provide any Model Name ( cluster 0x0000, attribute 0x0005)
 
-For now, I'm getting the remote paired also with ZIgate as a dimer switch, but didn't find any way to make a use of it.
+For now, I'm getting the remote paired also with Zigate as a dimer switch, but didn't find any way to make a use of it. (it might be interesting to see if adding the remote to the a group would allow to capture
 
 If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... )
 
-Manufacturer Code: 0x1110
-ProfileID: 0x0104
-DeviceID: 0x0200 ( Shutter )
-DeviceID: 0x0201 ( remote 
-
-You an find Location in  basic cluster attribute 0x0010 (which can be set by ZOE for instance, or via a write attribute)
