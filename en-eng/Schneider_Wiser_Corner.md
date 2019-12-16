@@ -13,7 +13,7 @@ Purpose of this page is to share all findings regarding the WISER Zigbee product
 
 * Channel: 15
 * Extended PANID: 0x6734484504015e10 
-  For now it looks like the Extended PANID must be set to a compatible one. If not doing it, then the pairing process doesn't occur and we just see beacon messages. I'll investigate late if there is a range of Extended PANID (which I suspect)
+  Did test some alternate EPID without success.
   
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
 
