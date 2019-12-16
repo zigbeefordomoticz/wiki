@@ -84,6 +84,22 @@ At that stage, someone set a target temperature on the Application managing the 
 * 0x01 - Manuel
 * 0x00 - Normal
 
+### Decoding Cluster 0x0201 Command Specific 0xe0
 
-    
+* This command seems to be used to set Setpoint 
+
+  * ZigBee Cluster Lib Frame: 0x11 
+  * Sequence number         : 0xc1
+  * Command                 : 0xe0 
+  *                         : 0x00
+  * Length                  : 0x01
+  * Value                   : 0x34 0x08
+  *                         : 0xff
+                        
+                        
+
+
+
+
+
 
