@@ -73,3 +73,17 @@ At that stage, someone set a target temperature on the Application managing the 
 * Can the Zigate implement Cluster 0x0201 and store Attributes 0x0012, 0x0015, 0x0016 as well as when receiving command 0xe0 store the value into attribute 0x0012
 * We should investigate what are the various values of Cluster 0x0201 on Attribute 0xe010 ( 8bit enum)
 
+### Decoding Cluster 0x0201 on Attribute 0xe010
+
+* Data Type: 0x30 (8bit enum)
+* 0x06 - Vacation
+* 0x05 - 
+* 0x04 - 
+* 0x03 - Economie
+* 0x02 - Programme
+* 0x01 - Manuel
+* 0x00 - Normal
+
+
+    
+
