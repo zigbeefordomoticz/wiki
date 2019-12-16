@@ -6,6 +6,8 @@ Purpose of this page is to share all findings regarding the WISER Zigbee product
 
 * [Thermostat](https://www.se.com/fr/fr/product/EER51000/wiser---thermostat/)
 
+Work in progress, so only validated informations are written
+
 
 ## Pairing
 
@@ -73,6 +75,9 @@ At that stage, someone set a target temperature on the Application managing the 
 * Can the Zigate implement Cluster 0x0201 and store Attributes 0x0012, 0x0015, 0x0016 as well as when receiving command 0xe0 store the value into attribute 0x0012
 * We should investigate what are the various values of Cluster 0x0201 on Attribute 0xe010 ( 8bit enum)
 
+
+
+
 ### Decoding Cluster 0x0201 on Attribute 0xe010
 
 * Data Type: 0x30 (8bit enum)
@@ -98,8 +103,11 @@ At that stage, someone set a target temperature on the Application managing the 
   ```                     
                         
 
+## Pairing process
 
+The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
 
+1. Write Attribute #1
 
-
+1. Write Attribute #2
 
