@@ -66,3 +66,10 @@ At that stage, someone set a target temperature on the Application managing the 
    
 1. each Actuators sending Instantaneous Demand to
    1. Hub by Report Attribute Cluster 0x0702 Attribute 0x0400
+   
+### comments
+
+* The HUB is acting as a Zigbee controler but not only as it is responding to cluster 0x0201 (Thermostat)
+* Can the Zigate implement Cluster 0x0201 and store Attributes 0x0012, 0x0015, 0x0016 as well as when receiving command 0xe0 store the value into attribute 0x0012
+* We should investigate what are the various values of Cluster 0x0201 on Attribute 0xe010 ( 8bit enum)
+
