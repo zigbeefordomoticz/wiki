@@ -93,7 +93,7 @@ At that stage, someone set a target temperature on the Application managing the 
   Command                 : 0xe0 
                           : 0x00
   Length                  : 0x01
-  Value                   : 0x34 0x08
+  Value                   : 0x34 0x08 (Setpoint with LBHB , don't forgett the Endian ;-)
                           : 0xff
   ```                     
                         
