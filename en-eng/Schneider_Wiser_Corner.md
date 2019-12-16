@@ -18,12 +18,31 @@ Work in progress, so only validated informations are written
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
 
 
+## Registration process
+
+The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
+
+1. Write Attribute #1
+
+1. Write Attribute #2
+
+
 ## Device Informations
 
 ```
 ProfileID : "0104"
 ZDeviceID : "0302"
 Manufacturer : "105e"
+MacCapa: 0x80
+DeviceType : "RFD"
+LogicalType : "End Device"
+PowerSource : "Battery"
+ReceiveOnIdle : "Off"
+Stack Version : "2"
+ZCL Version : "1"
+Max Buffer Size : "50"
+Max Rx : "00a0"
+Max Tx : "00a0"
 Manufacturer Name : "Schneider Electric"
 Model: EH-ZB-RTS
 
@@ -40,7 +59,6 @@ Cluster OUT Count: 02
 Cluster Out 1: 0019 (Over-the-Air Upgrade)
 Cluster Out 2: 0201 (Thermostat)
 ```
-
 
 ## Decoded scenario ( Schneider HUB, 1 Thermostat, 2 Actuators )
 
@@ -102,12 +120,3 @@ At that stage, someone set a target temperature on the Application managing the 
                           : 0xff
   ```                     
                         
-
-## Pairing process
-
-The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
-
-1. Write Attribute #1
-
-1. Write Attribute #2
-
