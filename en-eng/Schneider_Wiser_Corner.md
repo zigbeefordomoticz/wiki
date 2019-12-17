@@ -149,5 +149,9 @@ At that stage, someone set a target temperature on the Application managing the 
   Length                  : 0x01
   Value                   : 0x34 0x08 (Setpoint with LBHB , don't forgett the Endian ;-)
                           : 0xff
-  ```                     
+  ```   
+  
+  
+  Sources of information:
+  * https://studylibfr.com/doc/2872316/compteur-d-%C3%A9nergie-sans-fil-s%C3%A9rie-em4300
                         
