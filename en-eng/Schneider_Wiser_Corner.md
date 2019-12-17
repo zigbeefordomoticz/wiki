@@ -17,6 +17,33 @@ Work in progress, so only validated informations are written
   
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
 
+## Smart Plug
+
+### Registration steps
+
+1. Get Active Endpoint List
+1. Simple Descriptor Request
+1. Get Model name via read attribute 0x0000/0x0005
+1. Bind 0x0019
+1. Bind 0x0000
+1. Bind 0x0009
+1. Bind 0x0003
+1. Bind 0x0006
+1. Bind 0x0702
+1. Configure Reporting on Cluster 0x0702 Attribute 0x0000 ( Min: 600, Max: 600)
+1. Configure Reporting on Cluster 0x0702 Attribute 0x0400 ( Min:  30, Max: 600)
+1. Configure Reporting on Cluster 0x0006 Attribute 0x0000 ( Min: 0, Max 600)
+1. Read Attribute 0x0000 Attribute 0x0007 (Power Source)
+1. Read Attribute 0x0000 Attribute 0x0013 (Alarm Mask)
+1. Read Attribute 0x0000 Attribute 0xe000 (Schneider Specific)
+1. Read Attribute 0x0000 Attribute 0xe001 (Schneider Specific)
+1. Read Attribute 0x0000 Attribute 0xe002 (Schneider Specific)
+1. Read Attribute 0x0702 Attribute 0x0000, 0x0400, 0x0300, 0x0301, 0x0302
+1. Read Attribute 0x0702 Attribute 0x5a20 (Schneider Specific)
+1. Read Attribute 0x0006 Attribute 0x0000 (ON/OFF)
+1. Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
+1. Write Attribute 0x0000 Attribute 0x0010 (Location Description) ( Data Type: String 0x42; Value: string )
+
 
 ## Wiser Thermostat
 
