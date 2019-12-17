@@ -36,9 +36,9 @@ There is also a strange thing which is the IEEE has the same prefix as the LIVOL
 1. Configure Reporting on Cluster 0x0006 Attribute 0x0000 ( Min: 0, Max 600)
 1. Read Attribute 0x0000 Attribute 0x0007 (Power Source)
 1. Read Attribute 0x0000 Attribute 0x0013 (Alarm Mask)
-1. Read Attribute 0x0000 Attribute 0xe000 (Schneider Specific)
-1. Read Attribute 0x0000 Attribute 0xe001 (Schneider Specific)
-1. Read Attribute 0x0000 Attribute 0xe002 (Schneider Specific)
+1. Read Attribute 0x0000 Attribute 0xe000 (Version logicielle processeur réseau)
+1. Read Attribute 0x0000 Attribute 0xe001 (Version logicielle application)
+1. Read Attribute 0x0000 Attribute 0xe002 (Version matérielle application)
 1. Read Attribute 0x0702 Attribute 0x0000, 0x0400, 0x0300, 0x0301, 0x0302
 1. Read Attribute 0x0702 Attribute 0x5a20 (Schneider Specific)
 1. Read Attribute 0x0006 Attribute 0x0000 (ON/OFF)
