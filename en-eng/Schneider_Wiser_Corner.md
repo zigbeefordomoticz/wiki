@@ -5,6 +5,7 @@
 Purpose of this page is to share all findings regarding the WISER Zigbee product familly.
 
 * [Thermostat](https://www.se.com/fr/fr/product/EER51000/wiser---thermostat/)
+* [Smart Plug](https://download.schneider-electric.com/files?p_Doc_Ref=Wiser-Smartplug_EAV89774-01_EER400xx_10-2016_DA-EN-FR-IT-SV)
 
 Work in progress, so only validated informations are written
 
@@ -17,7 +18,7 @@ Work in progress, so only validated informations are written
   
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
 
-## Smart Plug
+## Wiser Smart Plug
 
 ### Registration steps
 
