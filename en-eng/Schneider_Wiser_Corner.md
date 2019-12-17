@@ -18,7 +18,9 @@ Work in progress, so only validated informations are written
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
 
 
-## Registration process
+## Wiser Thermostat
+
+### Registration process
 
 The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
 
@@ -27,7 +29,7 @@ The HUB during the pairing process seems to be doing a number of actions on the 
 1. Write Attribute #2
 
 
-## Device Informations
+### Device Informations
 
 ```
 ProfileID : "0104"
@@ -60,7 +62,7 @@ Cluster Out 1: 0019 (Over-the-Air Upgrade)
 Cluster Out 2: 0201 (Thermostat)
 ```
 
-## Decoded scenario ( Schneider HUB, 1 Thermostat, 2 Actuators )
+### Decoded scenario ( Schneider HUB, 1 Thermostat, 2 Actuators )
 
 1. Thermostat sending local Temperature to:
    1. Hub by Report Attribute Cluster 0x0402 Attribute 0x0000
@@ -87,7 +89,7 @@ At that stage, someone set a target temperature on the Application managing the 
 1. each Actuators sending Instantaneous Demand to
    1. Hub by Report Attribute Cluster 0x0702 Attribute 0x0400
    
-### comments
+#### comments
 
 * The HUB is acting as a Zigbee controler but not only as it is responding to cluster 0x0201 (Thermostat)
 * Can the Zigate implement Cluster 0x0201 and store Attributes 0x0012, 0x0015, 0x0016 as well as when receiving command 0xe0 store the value into attribute 0x0012
@@ -95,6 +97,7 @@ At that stage, someone set a target temperature on the Application managing the 
 
 
 
+## Decoding specifc cluster
 
 ### Decoding Cluster 0x0201 on Attribute 0xe010
 
