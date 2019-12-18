@@ -48,7 +48,8 @@ There is also a strange thing which is the IEEE has the same prefix as the LIVOL
 
 ### Metering Attributes
 
-| DEC | HEX	| VALUE| 
+| DEC | HEX	| VALUE | 
+| --- | --- | ----- |
 | 0	| 0	| currentSummationDelivered| 
 | 256	| 100	| currentTier1SummationDelivered| 
 | 258	| 102	| currentTier2SummationDelivered| 
