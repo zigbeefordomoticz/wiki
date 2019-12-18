@@ -1,4 +1,4 @@
-# Schneider WISER system
+# Schneider WISER system ( big thanks to @hairv)
 
 ## Purpose
 
@@ -45,6 +45,58 @@ There is also a strange thing which is the IEEE has the same prefix as the LIVOL
 1. Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
 1. Write Attribute 0x0000 Attribute 0x0010 (Location Description) ( Data Type: String 0x42; Value: string )
 
+
+### Metering Attributes
+
+| DEC | HEX	| VALUE| 
+| 0	| 0	| currentSummationDelivered| 
+| 256	| 100	| currentTier1SummationDelivered| 
+| 258	| 102	| currentTier2SummationDelivered| 
+| 260	| 104	| currentTier3SummationDelivered| 
+| 262	| 106	| currentTier4SummationDelivered| 
+| 264	| 108	| currentTier5SummationDelivered| 
+| 266	| 10A	| currentTier6SummationDelivered| 
+| 2	| 2	| currentMaxDemandDelivered| 
+| 6	| 6	| powerFactor| 
+| 768	| 300	| unitOfMeasure| 
+| 769	| 301	| multiplier| 
+| 770	| 302	| divisor| 
+| 512	| 200	| meterStatus| 
+| 771	| 303	| summationFormatting| 
+| 772	| 304	| demandFormatting| 
+| 774	| 306	| meterType| 
+| 1024	| 400	| instantaneousDemand| 
+| 2049	| 801	| Electricity Alarm Mask| 
+| 20480	| 5000	| electricCurrentMultiplier| 
+| 20481	| 5001	| electricCurrentDivisor| 
+| 20737	| 5101	| RMSElectricCurrentPhase1| 
+| 20753	| 5111	| maxElectricCurrentPhase1| 
+| 20769	| 5121	| RMSElectricCurrentPhase1MaxThreshold| 
+| 21760	| 5500	| voltageMultiplier| 
+| 21761	| 5501	| voltageDivisor| 
+| 22017	| 5601	| RMSVoltagePhase1| 
+| 22049	| 5621	| RMSVoltagePhase1MinThreshold| 
+| 22050	| 5622	| RMSVoltagePhase1MaxThreshold| 
+| 23072	| 5A20	| activePowerAlarmMask| 
+| 23073	| 5A21	| activePowerMinThreshold| 
+| 23074	| 5A22	| activePowerMaxThreshold| 
+| 23296	| 5B00	| apparentPower| 
+| 23345	| 5B31	| apparentPowerMultiplier| 
+| 23346	| 5B32	| apparentPowerDivisor| 
+| 24576	| 6000	| loadConnectedLabel| 
+| 28674	| 7002	| numberOfPhases| 
+| 28675	| 7003	| supplierContractName| 
+| 28688	| 7010	| numberOfTiers| 
+| 28690	| 7012	| tiersAlarmMask| 
+| 28752	| 7050	| referencePowerFactor| 
+| 28753	| 7051	| referenceRMSElectricCurrent| 
+| 28758	| 7056	| referenceRMSVoltage| 
+| 28766	| 705E	| referenceFrequency| 
+| 57600	| E100	| MMSSensorType| 
+| 57632	| E120	| MMSAlarmsMask| 
+| 57856	| E200	| ctStatusRegister| 
+| 57857	| E201	| ctPowerConfiguration| 
+| 57858	| E202	| ctCalibrationMultiplier| 
 
 ## Wiser Thermostat
 
@@ -130,13 +182,15 @@ At that stage, someone set a target temperature on the Application managing the 
 ### Decoding Cluster 0x0201 on Attribute 0xe010
 
 * Data Type: 0x30 (8bit enum)
-* 0x06 - Vacation
-* 0x05 - 
-* 0x04 - 
-* 0x03 - Economie
-* 0x02 - Programme
-* 0x01 - Manuel
-* 0x00 - Normal
+* 0xff - USER_MODE_USER_UNKNOWN
+* 0x06 - USER_MODE_USER_MODE_HOLIDAY_FROST_PROTECTION
+* 0x05 - USER_MODE_USER_MODE_HOLIDAY_OFF
+* 0x04 - USER_MODE_USER_MODE_SCHEDULE_ENERGY_SAVER
+* 0x03 - USER_MODE_USER_MODE_MANUAL_ENERGY_SAVER
+* 0x02 - USER_MODE_USER_MODE_SCHEDULE
+* 0x01 - USER_MODE_USER_MODE_MANUAL
+* 0x00 - USER_MODE_USER_MODE_OFF
+
 
 ### Decoding Cluster 0x0201 Command Specific 0xe0
 
