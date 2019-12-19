@@ -209,4 +209,7 @@ At that stage, someone set a target temperature on the Application managing the 
   
   Sources of information:
   * https://studylibfr.com/doc/2872316/compteur-d-%C3%A9nergie-sans-fil-s%C3%A9rie-em4300
+  * https://damrexelprod.blob.core.windows.net/medias/1951d12a-39f3-4317-86c8-f95b6fb13ac5
+  * http://www.kele.com/Catalog/22%20Thermostats_Controllers/PDFs/SE8000%20Series%20Zigbee%20Pro%20Integration%20Manual-2014.pdf
+  
                         
