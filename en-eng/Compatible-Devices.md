@@ -132,10 +132,15 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 
 
-## OSRAM
+## OSRAM / LEDVANCE
+
+* I have noticed some auto-reset when devices are paired on a channel different than 11.
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Smart Plug  | Plug (On/off)  |             |  Fully Op. |            |
+| Smart+ Indoor Plug | Plug (On/Off) |       | Fully Op. |             |
+
 
 
 ## Philips
