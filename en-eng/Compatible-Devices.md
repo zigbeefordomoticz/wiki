@@ -205,16 +205,16 @@ So there is a risk of latency when using Remote or Group command between the com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
-| Aqara Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Lux sensor included doesn't work on master - report false values - To be tested in developement branch | 2.4.0 |
-|Aqara Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operationnal | 2.4.0 |
-| Aqara Vibration sensor | Selector Switch : Take, Tilt, Move, Drop; Vibration Curve widget, Orientation widget | Fully. OP |  | 4.6 & Firmware 3.1b |
+| Aqara RTCGQ11LM Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Lux sensor included doesn't work on master - report false values - To be tested in developement branch | 2.4.0 |
+| Aqara WSDCGQ11LM Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operationnal | 2.4.0 |
+| Aqara DJT11LM Vibration Sensor | Selector Switch : Take, Tilt, Move, Drop; Vibration Curve widget, Orientation widget | Fully. OP |  | 4.6 & Firmware 3.1a |
 | Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operationnal | 2.4.0 |
 | Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cummulative Power and Meter consumption widget | Fully Op. | 4.2 |
-| Aqara Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
+| Aqara MCCGQ11LM Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
 | Aqara WXKG01LM (86sw1) | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
 | Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operationnal | 3.1.0 |
-| Aqara WXKG11LM Square Device with round Button | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
-| Aqara WXKG03LM Aqara wireles switch single button | Button | The following events are reported to the Domoticz Switch : Clickn Double Click and Long Click | Fully operationnal | 3.3 |
+| Aqara WXKG11LM Square Device with round Button | Switch Selector | There are 2 versions of that device. The following events are reported to the Domoticz Switch selectors : Original version : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks), New version : 1 Click, 2 Clicks, Long Click (more than 400ms), Release Button | Fully operationnal (both versions) | 3.1.0 |
+| Aqara WXKG03LM Aqara wireless switch single button | Button | The following events are reported to the Domoticz Switch : Clickn Double Click and Long Click | Fully operationnal | 3.3 |
 | Aqara WXKG12LM | Button with giroscop | Simple and double click, Long Click and Long Release, Shake | Fully Op. | 4.3 |
 | Aqara Cube | Switch Selector | The following events are reported to the Domoticz Switch selectors : Shake, Wakepup, Drop, 90° and 180° rotation, Push, Tab and horizontal Rotation . | Fully operationnal | 2.4.0 |
 | Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Fully operationnal | 2.4.0 |
