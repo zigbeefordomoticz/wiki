@@ -12,6 +12,10 @@ Quiet a lot of work have been done throught sniffing of the Zigbee traffic betwe
 By default some of the Legrand/Netamoi devices come with a basic firmware, which do not provide all features. 
 In that context, I still feel that having the Legrand Hub is a good investement for upgrading your device, and then switching to Zigate to avoid Legrand cloud.
 
+## WARNING
+
+If you have the starter pack, do not reset it. It is factory preset with the corresponding remote and any reset will make it unusable and must be return to Legrand.
+
 ## Validated devices
 
 * Smart plug - with instant power feedback (if upgraded via the Legrand Hub)
