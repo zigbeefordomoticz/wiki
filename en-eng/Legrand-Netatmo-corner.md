@@ -24,6 +24,7 @@ If you have the starter pack, do not reset it. It is factory preset with the cor
 * Micromodule switch - On and Off
 * Double gangs remote switch - On/Off/Dimmer
 * Simple gang remote switch - On/Off/Dimmer
+* Mobile outlet - On/Off/Power (instant power feedback if upgraded via the Legrand Hub)
 
 ## Not Validated
 * The Home/Away remote which is provided with the Legrand Hub and which in addition of Home/Away scene allow to switch the Legrand Hub in pairing mode, do not show any Zigbee traffic .
