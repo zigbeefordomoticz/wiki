@@ -119,58 +119,55 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 
 
 ## Over The Air Upgrade
-        'OverTheAirUpgrade': { 'Order': 7, 'param': {
-                'batteryOTA':  { 'type':'bool', 'default':0 , 'current': None, 'restart':True , 'hidden':False, 'Advanced':False},
-                'waitingOTA':  { 'type':'int', 'default':3600 , 'current': None, 'restart':True , 'hidden':False, 'Advanced':False}
-            }},
 
+* Works currently for LEDVANCE and TRADFRI products
 
-
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| batteryOTA | disable | enable battery upgrade |
+| waitingOTA | 3600 | delay in second before starting the Over-the-Air upgrade |
 
 ## Verbose
-        'VerboseLogging': { 'Order': 11, 'param': {
-                'debugMatchId':  { 'type':'str', 'default':'ffff' , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'logDeviceUpdate':  { 'type':'bool', 'default':1 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'logFORMAT':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'capturePairingInfos': { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'debugInput':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugOutput':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugTransportTx':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':True, 'Advanced':True},
-                'debugTransportRx':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':True, 'Advanced':True},
-                'debugCluster':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugHeartbeat':{ 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugWidget':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugPlugin':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugDatabase':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugCommand':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugPairing':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugNetworkMap':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugNetworkEnergy':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugGroups':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugOTA':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugIAS':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugAPS':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugDZDB':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugWebServer':  { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                'debugzigateCmd': { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':True, 'Advanced':True}
-                }},
+
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| logDeviceUpdate | enable | display the Widget update message 'UpdateDevice - (DIN-ZiGate - lumi.sensor_motion.aq2_Motion-00158d0003021601-01) 1:On' |
+| debugMatchId | ffff | coma separated list of short address that you want to trace in the log |
+| debugInput | disable | debuging all incoming messages |
+| debugOutput | disable | debuging all outgoing messages |
+| debugCluster | disable | debuging incoming clusters |
+| debugHeartbeat | disable | debuging recurring activities |
+| debugWidget | disable | debuging widget/domoticz management |
+| debugPlugin | disable | debiging main plugin |
+| debugDatabase | disable | debuging plugin database |
+| debugCommand | disable | debuging Command/domoticz actions |
+| debugPairing | disable | debuging pairing process |
+
+
 
 ## Legrand Specific
-        'Legrand': { 'Order': 12, 'param': {
-                'EnableLedIfOn': {'type':'bool', 'default':1, 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'EnableLedInDark': {'type':'bool', 'default':0, 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'EnableDimmer': { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'LegrandFilPilote': { 'type':'bool', 'default':1 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':True},
-                }},
+
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| EnableLedIfOn | enable | blue led if On |
+| EnableLedInDark | disable | blue led if Off |
+| EnableDimmer | disable | enable dimmer |
+| LegrandFilPilote | enable | enable fil pilote |
+
+
 
 ## Others
-        'Others': { 'Order': 13, 'param': {
-                'alarmDuration': {'type':'int', 'default':1, 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'enableSchneiderWiser': { 'type':'bool', 'default':0 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'numTopologyReports': { 'type':'int', 'default':4 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'numEnergyReports': { 'type':'int', 'default':4 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'PowerOn_OnOff': { 'type':'int', 'default':255 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'TradfriKelvinStep': { 'type':'int', 'default':51 , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                'vibrationAqarasensitivity': { 'type':'str', 'default':'medium' , 'current': None, 'restart':False , 'hidden':False, 'Advanced':False},
-                }},
+
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| alarmDuration | 1 | 1s by default, this is the alarm duration |
+| enableSchneiderWiser | disable | mainly allow to make the difference between Livolo and Schneider IEEE |
+| numTopologyReports | number of Topology reports you want to keep |
+| numEnergyReports | number of Energy reports you want to keep |
+| PowerOn_OnOff | 
+| TradfriKelvinStep | 51 | when binding the Ikea Remote with plugin and Zigate you can control
+| vibrationAqarasensitivity | medium | low, medium, high for Aqara vibration sensitivity |
+
+
+
 
