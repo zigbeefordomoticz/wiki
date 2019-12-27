@@ -48,8 +48,8 @@ To install:
 
    1. For manual installation
       * Go in your Domoticz directory using a command line and open the plugins directory.
-      * Usually you should be under <code>domoticz/plugin</code>
-      * Run: `git clone https://github.com/sasu-drooz/Domoticz-Zigate.git`
+      * Usually you should be under <code>domoticz/plugins</code>
+      * Run: `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
       * It will create a folder 'Domoticz-Zigate'
       * Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
       * Restart Domoticz.
