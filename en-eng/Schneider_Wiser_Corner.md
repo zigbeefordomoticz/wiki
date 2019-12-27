@@ -13,7 +13,9 @@ Work in progress, so only validated informations are written
 ## Pairing
 
 * Channel: 15, 11
-* Extended PANID: 0x6734484504015e10 
+* Extended PANID: 
+  * 0x6734484504015e10 
+  * 0x67344845040160d0 - OK
   Did test some alternate EPID without success!
   
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
