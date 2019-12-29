@@ -78,6 +78,22 @@ When the led is red (not paired):
 
 * The Remote coming with the hub is named : 'Master remote SW Home / Away', and was not able to pair with Zigate
 
+#### Analysis of Double gangs remote switch
+
+* Model ( 0x0000/0x0005) : Double gangs remote switch
+* Manufacturer: ( 0x0000/0x0004 ): Legrand 1021
+* Manufacturer Code: 
+* ProfileID: 0104
+* DeviceID 0104
+* Application Version 0001
+* Cluster IN Count: 02
+* Cluster In 1: 0003 (Identify)
+* Cluster In 2: 000f (Binary Input (Basic))
+* Cluster OUT Count: 03
+* Cluster Out 1: 0003 (Identify)
+* Cluster Out 2: 0006 (On/Off)
+* Cluster Out 3: 0008 (Level Control)
+
 
 ### Scenes
 
