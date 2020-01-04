@@ -93,7 +93,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Entry Sensor| Door contact   | Door contact| Op. with 4.5, Fully Op. with 4.6 | 4.5 |
-| Button      | Switch Selector | 1 Click and 2 Click and long Click | Fully Op. 4.6 | 4.6 |
+| Button      | Switch Selector | 1 Click and 2 Click and long Click (Long click was difficult to get, maye an issue with the gear) | Fully Op. 4.6 | 4.6 |
 | Temp Humi   | Temp & Humi    | Temp et Humi| Op. with 4.5, Fully Op. with 4.6 | 4.6 |
 | Motion      | Motion         | Motion      | Fully Op.| 4.6 |
 
