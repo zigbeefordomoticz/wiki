@@ -27,10 +27,10 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
    
 ## Findings
 
-Manufacturer Code: 0x1110
-ProfileID: 0x0104
-DeviceID: 0x0200 ( Shutter )
-DeviceID: 0x0201 ( remote 
+* Manufacturer Code: 0x1110
+* ProfileID: 0x0104
+* DeviceID: 0x0200 ( Shutter )
+* DeviceID: 0x0201 ( remote 
 
 Unfortunatly Profalux do not provide any Model Name ( cluster 0x0000, attribute 0x0005)
 You an find Location in  basic cluster attribute 0x0010 (which can be set by ZOE for instance, or via a write attribute)
