@@ -47,7 +47,7 @@ The Profalux shutter can be steer with cluster ONOFF (0x0006) or cluster LevelCo
 Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
 
 
-For now, I'm getting the remote paired also with Zigate as a dimer switch, but didn't find any way to make a use of it. (it might be interesting to see if adding the remote to the a group would allow to capture
+For now, I'm getting the remote paired also with Zigate as a dimer switch, but didn't find any way to make a use of it. In case you bind the remote with Zigate, then the remote doesn't command the shutter anymore, but all messages are send to Zigate with message 0x8085
 
 If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... )
 
