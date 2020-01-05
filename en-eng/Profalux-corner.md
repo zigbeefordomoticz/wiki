@@ -35,6 +35,10 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
 Unfortunatly Profalux do not provide any Model Name ( cluster 0x0000, attribute 0x0005)
 You an find Location in  basic cluster attribute 0x0010 (which can be set by ZOE for instance, or via a write attribute)
 
+When using ZOE ( main remote command), it acts as a Zigbee controler with ShortID: 0x0000
+
+Interestingly, you can move the network from one Channel to an other one via the ZOE Admin menu
+
 
 ## Steering and other findings
 
