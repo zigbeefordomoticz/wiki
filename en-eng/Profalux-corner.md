@@ -39,6 +39,30 @@ When using ZOE ( main remote command), it acts as a Zigbee controler with ShortI
 
 Interestingly, you can move the network from one Channel to an other one via the ZOE Admin menu
 
+## VR
+
+* Remote Control
+
+```
+ProfileID 0104
+ZDeviceID 0201
+Application Version 0000
+Cluster IN Count: 03
+Cluster In 1: 0000 (Basic)
+Cluster In 2: 0003 (Identify)
+Cluster In 3: 0015 (Commissioning)
+Cluster OUT Count: 08
+Cluster Out 1: 0003 (Identify)
+Cluster Out 2: 0004 (Groups)
+Cluster Out 3: 0005 (Scenes)
+Cluster Out 4: 0006 (On/Off)
+Cluster Out 5: 0008 (Level Control)
+Cluster Out 6: 0100 (Shade Configuration)
+Cluster Out 7: fc20
+Cluster Out 8: fc21
+
+```
+
 
 ## Steering and other findings
 
