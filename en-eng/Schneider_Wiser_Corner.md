@@ -6,6 +6,7 @@ Purpose of this page is to share all findings regarding the WISER Zigbee product
 
 * [Thermostat](https://www.se.com/fr/fr/product/EER51000/wiser---thermostat/)
 * [Smart Plug](https://download.schneider-electric.com/files?p_Doc_Ref=Wiser-Smartplug_EAV89774-01_EER400xx_10-2016_DA-EN-FR-IT-SV)
+* Actuator
 
 Work in progress, so only validated informations are written
 
@@ -100,6 +101,32 @@ There is also a strange thing which is the IEEE has the same prefix as the LIVOL
 | 57856	| E200	| ctStatusRegister| 
 | 57857	| E201	| ctPowerConfiguration| 
 | 57858	| E202	| ctCalibrationMultiplier| 
+
+## Wiser Actuator
+
+### Device Informations
+
+```
+EP 0b
+ProfileID 0104
+ZDeviceID 0301
+Manufacturer Name : "Schneider Electric"
+Model: EH-ZB-HACT
+
+Application Version 0010
+Cluster IN Count: 06
+Cluster In 1: 0000 (Basic)
+Cluster In 2: 0003 (Identify)
+Cluster In 3: 0009 (Alarms)
+Cluster In 4: 0201 (Thermostat)
+Cluster In 5: 0702
+Cluster In 6: fe02
+Cluster OUT Count: 02
+Cluster Out 1: 0019 (Over-the-Air Upgrade)
+Cluster Out 2: 0402 (Temperature Measurement)
+
+```
+
 
 ## Wiser Thermostat
 
