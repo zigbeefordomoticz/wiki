@@ -172,6 +172,19 @@ At that stage, someone set a target temperature on the Application managing the 
 1. each Actuators sending Instantaneous Demand to
    1. Hub by Report Attribute Cluster 0x0702 Attribute 0x0400
    
+
+### Binding Thermostat with Actuator
+
+1. Binding cluster Thermostat of Actuator with Thermostat
+   * Source Actuator
+   * Target Thermostat
+   * Cluster 0x0201
+
+1. Binding cluster Temperature Measurement of Thermostat with Actuator
+   * Source Thermostat
+   * Target Actuator
+   * Cluster 0x0402
+   
 #### comments
 
 * The HUB is acting as a Zigbee controler but not only as it is responding to cluster 0x0201 (Thermostat)
