@@ -11,4 +11,6 @@ Manufacturer Codes
 | c05e | Philips Hue | Bulb |
 |      | OSRAM |   |
 |      | LEDVANCE |    |
+| 110C |          |    |
+| 1189 |          |
 
