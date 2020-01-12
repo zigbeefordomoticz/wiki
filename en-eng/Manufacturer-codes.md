@@ -9,3 +9,6 @@ Manufacturer Codes
 | 1021 | Legrand Netatmo | plug |
 | 1078 | Salus / Computime  | plug |
 | c05e | Philips Hue | Bulb |
+|      | OSRAM |   |
+|      | LEDVANCE |    |
+
