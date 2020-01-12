@@ -9,8 +9,13 @@ Manufacturer Codes
 | 1021 | Legrand Netatmo | plug |
 | 1078 | Salus / Computime  | plug |
 | c05e | Philips Hue | Bulb |
-|      | OSRAM |   |
-|      | LEDVANCE |    |
-| 110C |          |    |
-| 1189 |          |
+| 100B | Philips | |
+| 104E | Centralite | |
+| 110C | OSRAM |   |
+| 1189 | LEDVANCE |    |
+| 1166 | INNR | |
+| 1021 | Legrand | |
+
+
+
 
