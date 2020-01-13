@@ -11,10 +11,8 @@ Manufacturer Codes
 | c05e | Philips Hue | Bulb |
 | 100B | Philips | |
 | 104E | Centralite | |
+| 1166 | INNR | |
+| bbaa | OSRAM | Smart+ Plug |
 | 110C | OSRAM |   |
 | 1189 | LEDVANCE |    |
-| 1166 | INNR | |
-| 1021 | Legrand | |
-| bbaa | OSRAM | Smart+ Plug |
-
 
