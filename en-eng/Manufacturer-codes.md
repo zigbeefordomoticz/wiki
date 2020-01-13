@@ -15,7 +15,6 @@ Manufacturer Codes
 | 1189 | LEDVANCE |    |
 | 1166 | INNR | |
 | 1021 | Legrand | |
-
-
+| bbaa | OSRAM | Smart+ Plug |
 
 
