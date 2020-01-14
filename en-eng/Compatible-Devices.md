@@ -142,6 +142,12 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 | Smart+ Indoor Plug | Plug (On/Off) |       | Fully Op. |             |
 | Mini Switch | Switch Selector | 5 states selector | Fully Op. | 4.6  |
 
+## Paulmann
+
+
+| Device/Type | Domoticz usage | Description | Status | Plugin Version |
+| ----------- | -------------- | ----------- | ------ | -------------- |
+| Paulmann LED dimmer 300.43 | Switch/LvlControl | Switch and Dimmer | Fully Op. | 4.5 |
 
 
 ## Philips
