@@ -140,6 +140,7 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Smart Plug  | Plug (On/off)  |             |  Fully Op. |            |
 | Smart+ Indoor Plug | Plug (On/Off) |       | Fully Op. |             |
+| Mini Switch | Switch Selector | 5 states selector | Fully Op. | 4.6  |
 
 
 
