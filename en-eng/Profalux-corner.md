@@ -33,9 +33,10 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
 * DeviceID: 0x0201 ( remote 
 
 Unfortunatly Profalux do not provide any Model Name ( cluster 0x0000, attribute 0x0005)
-You an find Location in  basic cluster attribute 0x0010 (which can be set by ZOE for instance, or via a write attribute)
+Attribut 0x0010 of Basic Cluster should provide Type of device ( 'Store', 'BSO', Volet' )
 
 When using ZOE ( main remote command), it acts as a Zigbee controler with ShortID: 0x0000
+When you don't have any controler, one of the shutter act as a controler
 
 Interestingly, you can move the network from one Channel to an other one via the ZOE Admin menu
 
@@ -70,8 +71,7 @@ The Profalux shutter can be steer with cluster ONOFF (0x0006) or cluster LevelCo
 
 Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
 
-
-For now, I'm getting the remote paired also with Zigate as a dimer switch, but didn't find any way to make a use of it. In case you bind the remote with Zigate, then the remote doesn't command the shutter anymore, but all messages are send to Zigate with message 0x8085
+The remote is very basic and it is not adviced to try doing anything with it. During the pairing process, the Shutter and the Remote will announced themselve, just drop the remote.
 
 If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... )
 
