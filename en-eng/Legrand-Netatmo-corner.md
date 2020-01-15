@@ -122,7 +122,7 @@ When the led is red (not paired):
 1. Bind Cluster 0x0003
 
 
-### Micromodule: Micromodule switch
+#### Micromodule: Micromodule switch
 
 1. Add Group 0xfff6
    1. Add Scene 0x01 / Cluster 0x0006
@@ -133,7 +133,7 @@ When the led is red (not paired):
 1. Bind 0x000f
 1. Bind 0x0003
 
-### Inter w/o neutral: Dimmer switch w/o neutral
+#### Inter w/o neutral: Dimmer switch w/o neutral
 
 1. Add Group 0xfff6
    1. Add Scene 0x01 / Cluster 0x0006
@@ -147,12 +147,19 @@ When the led is red (not paired):
 1. Bind 0x0003
 
 
-### Shutter: Shutter switch with neutral
+#### Shutter: Shutter switch with neutral
 
 1. Bind 0x000f
 1. Bind 0x0003
 
-### Cluster 0xfc01
+### Other findings and decoding
+
+#### Attributes
+
+* Cluster 0x0000 / Attribute 0xf000 : Operating time in seconds
+
+
+#### Cluster 0xfc01
 * With the help of @Thorgal789
 
 | Device | Attribute | Values | Data Type | 
@@ -164,7 +171,7 @@ When the led is red (not paired):
 | Shutter switch with neutral | 0x0001 | 0x01/0x00 enable/disable Led if On | 0x10 |
 | Fil Pilote                | 0x0000 | 0x0001/0x0002 enable/disable fil pilote | 0x0x09 (16 bit data)
 
-## Cluster 0xfc40
+#### Cluster 0xfc40
 * Contirbution from @Thorgal789
 
 | Attribute | Heating Mode | Value | Data Type |
@@ -176,7 +183,7 @@ When the led is red (not paired):
 |           | Hors Gel     | 0x04  | 0x30 (Enum8) |
 |           | Off          | 0x05  | 0x30 (Enum8) |  
 
-## Specific Commands
+#### Specific Commands
 
 | Cluster | Command | Data Type | Data Value | Description |
 | ------- | ------- | --------- | ---------- | ----------- |
@@ -203,7 +210,7 @@ More informations/scripts .... can be found here: https://github.com/pipiche38/C
 
 
 
-### Other matters
+## Other matters
 
 * When Zigate is in pairing mode, then the Legrand device led is Green.
 * When you just did the pairing, it is easy to add groupmembership to the device? However after a while I had issues to add new group membership. The workaround I found was. Power Off/On of the device, putting the Zigate in Pairing mode, and then I was able to add groupmembership.
@@ -212,4 +219,5 @@ More informations/scripts .... can be found here: https://github.com/pipiche38/C
 * https://faire-ca-soi-meme.fr/domotique/2018/09/24/test-legrand-celiane-by-netatmo-zigate/
 * https://www.legrand.fr/catalogue/maison-connectee/prise-connectee
 * https://www.legrand.fr/catalogue/maison-connectee/interrupteur-connecte
+* https://github.com/Koenkk/zigbee2mqtt/issues/2399
 
