@@ -32,7 +32,7 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
 * DeviceID: 0x0200 ( Shutter )
 * DeviceID: 0x0201 ( remote 
 
-Unfortunatly Profalux do not provide any Model Name ( cluster 0x0000, attribute 0x0005)
+Profalux do not use attribut 0x0005 __Model Name__ of Basic cluster.
 Attribut 0x0010 of Basic Cluster should provide Type of device ( 'Store', 'BSO', Volet' )
 
 When using ZOE ( main remote command), it acts as a Zigbee controler with ShortID: 0x0000
@@ -63,6 +63,11 @@ Cluster Out 7: fc20
 Cluster Out 8: fc21
 
 ```
+
+## BSO
+
+
+## Store
 
 
 ## Steering and other findings
