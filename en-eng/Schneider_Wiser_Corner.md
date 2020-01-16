@@ -136,9 +136,8 @@ Cluster Out 2: 0402 (Temperature Measurement)
 
 The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
 
-1. Write Attribute #1
-
-1. Write Attribute #2
+* Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
+* Write Attribute 0x0000 Attribute 0x5011 ( Data Type: Str 0x42; Value: 'en' )
 
 
 ### Device Informations
