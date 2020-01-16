@@ -16,8 +16,8 @@ Work in progress, so only validated informations are written
 * Channel: 15, 11
 * Extended PANID: 
   * 0x6734484504015e10 
-  * 0x67344845040160d0 - OK
-  * 0x7996484504015e10 - Plug OK
+  * 0x67344845040160d0 - All OK
+  * 0x7996484504015e10 - Plug,Thermostat OK
   
   Did test some alternate EPID without success!
   
