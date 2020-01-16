@@ -23,7 +23,7 @@ There is also a strange thing which is the IEEE has the same prefix as the LIVOL
 
 ## Wiser Smart Plug
 
-### Registration steps
+### Discovery steps
 
 1. Get Active Endpoint List
 1. Simple Descriptor Request
