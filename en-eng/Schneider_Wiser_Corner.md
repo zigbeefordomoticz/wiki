@@ -7,6 +7,7 @@ Purpose of this page is to share all findings regarding the WISER Zigbee product
 * [Thermostat](https://www.se.com/fr/fr/product/EER51000/wiser---thermostat/)
 * [Smart Plug](https://download.schneider-electric.com/files?p_Doc_Ref=Wiser-Smartplug_EAV89774-01_EER400xx_10-2016_DA-EN-FR-IT-SV)
 * Actuator
+* sMeter
 
 Work in progress, so only validated informations are written
 
@@ -22,6 +23,71 @@ Work in progress, so only validated informations are written
   Did test some alternate EPID without success!
   
 There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
+
+
+## Wiser Smeter
+
+1. Get Active Endpoint List
+   * 6 EndPoints : 0b, 0c, 0d, 0e, 0f, 10
+1. Get Model name via read attribute 0x0000/0x0005
+   * EH-ZB-BMS
+1. For each EndPoint
+   1. Simple Descriptor Request
+      * Cluster In
+        * 0x0000
+        * 0x0001
+        * 0x0003
+        * 0x0009
+        * 0x0702
+        * 0xfe02
+      * Cluster Out
+        * 0x0019
+   1. Bind 0x0019, 0x0000, 0x0001, 0x0000, 0x0003, 0x0702
+   
+1. For each EndPoint
+   * Configure Reporting Cluster 0x0702 
+     * Attribute 0x0000 DataType: 0x25 Uint48 0x0000ffffffffffff , Min: 30, Max: 30
+     * Attribute 0x0400 DataType: 0x2a Int24: 400, Min: 30, Max: 30
+     * Attribute 0x0002 DataType: 0x25 Uint48 0x0000ffffffffffff, Min: 30, Max: 30
+     
+1. Read Attribute Cluster 0x0000 Attribute 0x0007
+1. Read Attribute Cluster 0x0000 Attribute 0x0013
+1. Read Attribute Cluster 0x0000 Attribute 0xe000
+1. Read Attribute Cluster 0x0000 Attribute 0xe001
+1. Read Attribute Cluster 0x0000 Attribute 0xe002
+
+1. For each EndPoint
+   1. Read Attribute Cluster 0x0702 Attribute 0x0000
+   1. Read Attribute Cluster 0x0702 Attribute 0x0400  
+   1. Read Attribute Cluster 0x0702 Attribute 0x0002
+   1. Read Attribute Cluster 0x0702 Attribute 0x0300
+   1. Read Attribute Cluster 0x0702 Attribute 0x0301
+
+
+   1. Read Attribute Cluster 0x0702 Attribute 0x0302
+   1. Read Attribute Cluster 0x0702 Attribute 0x0801
+   1. Read Attribute Cluster 0x0702 Attribute 0x5000
+   1. Read Attribute Cluster 0x0702 Attribute 0x5001
+
+   1. Read Attribute Cluster 0x0702 Attribute 0xe200
+   1. Read Attribute Cluster 0x0702 Attribute 0xe201
+   1. Read Attribute Cluster 0x0702 Attribute 0xe202
+
+1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x00 0x00 0x00
+1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x01 0x00 0x00
+
+1. On EndPoint 0x0b
+  1. Read Attribute Cluster 0x0001 Attribute 0x0035
+  1. Read Attribute Cluster 0x0001 Attribute 0x0036
+  1. Read Attribute Cluster 0x0001 Attribute 0x0020
+  
+1. Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
+
+1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x10 0x01 0x00
+1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x10 0x02 0x07
+1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x11 0x02 0x07
+1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x16 0x02 0x07
+
 
 ## Wiser Smart Plug
 
@@ -134,8 +200,8 @@ Cluster Out 2: 0402 (Temperature Measurement)
 
 ### Discovery process
 
-* Request Active End Point
-* Simple Descriptor Request
+1. Request Active End Point
+1. Simple Descriptor Request
   * Ep: 0b
   * Cluster In:
     * 0x0000
@@ -148,58 +214,40 @@ Cluster Out 2: 0402 (Temperature Measurement)
     * 0x0019
     * 0x0201
     
-* Read Attribute 0x0000 / 0x0005 ( Model Name )
+1. Read Attribute 0x0000 / 0x0005 ( Model Name )
   * EH-ZB-RTS
-* Read Attribute 0x0000 / 0xe000
+1. Read Attribute 0x0000 / 0xe000
   * SNP.R.04.01.14
 
-* Bind 0x0019
-* Bind 0x0201
-* Bind 0x0402
-* Bind 0x0000
-* Bind 0x0001
-* Bind 0x0009
-* Bind 0x0003
-* Bind 0x0204
+1. Bind 0x0019
+1. Bind 0x0201
+1. Bind 0x0402
+1. Bind 0x0000
+1. Bind 0x0001
+1. Bind 0x0009
+1. Bind 0x0003
+1. Bind 0x0204
 
-* Configure Reporting 0x0402 on Attribut 0x0000 / Min: 30 Max: 30 /Measured Value 0.01
+1. Configure Reporting 0x0402 on Attribut 0x0000 / Min: 30 Max: 30 /Measured Value 0.01
 
-* Read Attribute Cluster 0x0000 on attribute 0x0007 ( Power Source )
-* Read Attribute Cluster 0x0000 on attribute 0x0013 ( Alarm Mask)
-* Read Attribute Cluster 0x0000 on attribute 0xe000
-* Read Attribute Cluster 0x0000 on attribute 0xe001
-* Read Attribute Cluster 0x0000 on attribute 0xe002
-* Read Attribute Cluster 0x0001 on attribute 0x0035, 0x0036, 0x0020
-* Read Attribute Cluster 0x0402 on attribute 0x0000 ( Temperature )
+1. Read Attribute Cluster 0x0000 on attribute 0x0007 ( Power Source )
+1. Read Attribute Cluster 0x0000 on attribute 0x0013 ( Alarm Mask)
+1. Read Attribute Cluster 0x0000 on attribute 0xe000
+1. Read Attribute Cluster 0x0000 on attribute 0xe001
+1. Read Attribute Cluster 0x0000 on attribute 0xe002
+1. Read Attribute Cluster 0x0001 on attribute 0x0035, 0x0036, 0x0020
+1. Read Attribute Cluster 0x0402 on attribute 0x0000 ( Temperature )
 
-* Write attribute Cluster 0x0000 on attribute 0xe050 DataType: 0x10 Value 0x01
-* Write Attribute Cluster 0x0000 on attribute 0x5011 DataType: 0x42 Value 'en'
+1. Write attribute Cluster 0x0000 on attribute 0xe050 DataType: 0x10 Value 0x01
+1. Write Attribute Cluster 0x0000 on attribute 0x5011 DataType: 0x42 Value 'en'
 
-* Read Attribute Cluster 0x0001 on attribute 0x0020
-
-
-  
-* Write Attribute Cluster 0x0000 on attribute 0x0010 DataType: 0x42 Value is a string which give the name of the Zone 
-
-
-
-
+1. Read Attribute Cluster 0x0001 on attribute 0x0020
+1. Write Attribute Cluster 0x0000 on attribute 0x0010 DataType: 0x42 Value is a string which give the name of the Zone 
 
 At a point of time the device is quering the controler
 
 * Read Attribute Cluster 0x0201 on attribute 0xe010
   * Controler respond: DataType: 0x30 Value: 0x00    
-
-
-
-
-### Registration process
-
-The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
-
-* Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
-* Write Attribute 0x0000 Attribute 0x5011 ( Data Type: Str 0x42; Value: 'en' )
-
 
 ### Device Informations
 
