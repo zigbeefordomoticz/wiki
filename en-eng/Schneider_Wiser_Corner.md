@@ -132,6 +132,67 @@ Cluster Out 2: 0402 (Temperature Measurement)
 
 ## Wiser Thermostat
 
+### Discovery process
+
+* Request Active End Point
+* Simple Descriptor Request
+  * Ep: 0b
+  * Cluster In:
+    * 0x0000
+    * 0x0001
+    * 0x0003
+    * 0x0009
+    * 0x0204
+    * 0xfe02
+  * Cluster Out
+    * 0x0019
+    * 0x0201
+    
+* Read Attribute 0x0000 / 0x0005 ( Model Name )
+  * EH-ZB-RTS
+* Read Attribute 0x0000 / 0xe000
+  * SNP.R.04.01.14
+
+* Bind 0x0019
+* Bind 0x0201
+* Bind 0x0402
+* Bind 0x0000
+* Bind 0x0001
+* Bind 0x0009
+* Bind 0x0003
+* Bind 0x0204
+
+* Configure Reporting 0x0402 on Attribut 0x0000 / Min: 30 Max: 30 /Measured Value 0.01
+
+* Read Attribute Cluster 0x0000 on attribute 0x0007 ( Power Source )
+* Read Attribute Cluster 0x0000 on attribute 0x0013 ( Alarm Mask)
+* Read Attribute Cluster 0x0000 on attribute 0xe000
+* Read Attribute Cluster 0x0000 on attribute 0xe001
+* Read Attribute Cluster 0x0000 on attribute 0xe002
+* Read Attribute Cluster 0x0001 on attribute 0x0035, 0x0036, 0x0020
+* Read Attribute Cluster 0x0402 on attribute 0x0000 ( Temperature )
+
+* Write attribute Cluster 0x0000 on attribute 0xe050 DataType: 0x10 Value 0x01
+* Write Attribute Cluster 0x0000 on attribute 0x5011 DataType: 0x42 Value 'en'
+
+* Read Attribute Cluster 0x0001 on attribute 0x0020
+
+
+  
+* Write Attribute Cluster 0x0000 on attribute 0x0010 DataType: 0x42 Value is a string which give the name of the Zone 
+
+
+
+
+
+At a point of time the device is quering the controler
+
+* Read Attribute Cluster 0x0201 on attribute 0xe010
+  * Controler respond: DataType: 0x30 Value: 0x00    
+
+
+
+
 ### Registration process
 
 The HUB during the pairing process seems to be doing a number of actions on the End Device, something like registration
