@@ -332,19 +332,6 @@ At that stage, someone set a target temperature on the Application managing the 
 
 ## Decoding specifc cluster
 
-### Decoding Cluster 0x0201 on Attribute 0xe010
-
-* Data Type: 0x30 (8bit enum)
-* 0xff - USER_MODE_USER_UNKNOWN
-* 0x06 - USER_MODE_USER_MODE_HOLIDAY_FROST_PROTECTION
-* 0x05 - USER_MODE_USER_MODE_HOLIDAY_OFF
-* 0x04 - USER_MODE_USER_MODE_SCHEDULE_ENERGY_SAVER
-* 0x03 - USER_MODE_USER_MODE_MANUAL_ENERGY_SAVER
-* 0x02 - USER_MODE_USER_MODE_SCHEDULE
-* 0x01 - USER_MODE_USER_MODE_MANUAL
-* 0x00 - USER_MODE_USER_MODE_OFF
-
-
 ### Decoding Cluster 0x0201 Command Specific 0xe0
 
 * This command seems to be used to set Setpoint 
@@ -358,6 +345,26 @@ At that stage, someone set a target temperature on the Application managing the 
                           : 0xff
   ```   
   
+
+### Decoding Cluster 0x0201 on Attribute 0xe010
+
+* Data Type: 0x30 (8bit enum)
+* 0xff - USER_MODE_USER_UNKNOWN
+* 0x06 - USER_MODE_USER_MODE_HOLIDAY_FROST_PROTECTION
+* 0x05 - USER_MODE_USER_MODE_HOLIDAY_OFF
+* 0x04 - USER_MODE_USER_MODE_SCHEDULE_ENERGY_SAVER
+* 0x03 - USER_MODE_USER_MODE_MANUAL_ENERGY_SAVER
+* 0x02 - USER_MODE_USER_MODE_SCHEDULE
+* 0x01 - USER_MODE_USER_MODE_MANUAL
+* 0x00 - USER_MODE_USER_MODE_OFF
+
+## Decoding Cluster 0x0201 on Attribute 0xe011
+
+ATTRIBUTE_THERMOSTAT_HACT_CONFIG
+
+
+
+
   
   Sources of information:
   * https://studylibfr.com/doc/2872316/compteur-d-%C3%A9nergie-sans-fil-s%C3%A9rie-em4300
