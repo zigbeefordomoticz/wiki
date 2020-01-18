@@ -6,8 +6,8 @@ Purpose of this page is to share all findings regarding the WISER Zigbee product
 
 * [Thermostat](https://www.se.com/fr/fr/product/EER51000/wiser---thermostat/)
 * [Smart Plug](https://download.schneider-electric.com/files?p_Doc_Ref=Wiser-Smartplug_EAV89774-01_EER400xx_10-2016_DA-EN-FR-IT-SV)
-* Actuator
-* sMeter
+* Actuator (Heat ACT)
+* sMeter (BMS)
 
 Work in progress, so only validated informations are written
 
@@ -19,6 +19,8 @@ Work in progress, so only validated informations are written
   * 0x6734484504015e10 
   * 0x67344845040160d0 - All OK
   * 0x7996484504015e10 - Plug,Thermostat OK
+  
+* Pour le Permit Join Request il faut utiliser le masl 0xFFFD et non pas le 0xFFFC recommendé par NXP. (cela est notamment necessaire pour le BMS)
   
   Did test some alternate EPID without success!
   
