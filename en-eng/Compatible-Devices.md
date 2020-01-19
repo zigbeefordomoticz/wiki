@@ -196,6 +196,13 @@ So there is a risk of latency when using Remote or Group command between the com
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | TYZDS-02    | Door Contact   | Door contact | Op with 4.5 , Fully Op. with 4.6| 4.5        |
+| TS0011    | Switch   | 1 Switch Line Only| Op 4.6| 4.6        |
+| TS0012    | Switch   | 2 Switch Line Only| Op 4.6| 4.6        |
+| TS0013    | Switch   | 3 Switch Line Only| Op 4.6| 4.6        |
+| TS0001    | Switch   | 1 Switch | Op 4.6| 4.6        |
+| TS0002    | Switch   | 2 Switch | Op 4.6| 4.6        |
+| TS0003    | Switch   | 3 Switch | Op 4.6| 4.6        |
+| TS0201    | Temp + Humidity |Temp / Humidity / Temp + Humidity | Op 4.6| 4.6        |
 
 
 ## Trust.com
