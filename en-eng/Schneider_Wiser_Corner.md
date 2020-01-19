@@ -174,6 +174,62 @@ There is also a strange thing which is the IEEE has the same prefix as the LIVOL
 
 ## Wiser Actuator
 
+
+1. Device Announcement
+
+1. Active Endpoint Response
+1. Read Attribute 0x0000/0x0005
+   * Receive : EH-ZB-HACT
+1. Simple Descriptor Request
+   * Profile: 0x0104
+   * DeviceID: 0x0301
+   * Input Cluster
+     * 0x0000
+     * 0x0003
+     * 0x0009
+     * 0x0201
+     * 0x0702
+     * 0xfe02
+   * Output Cluster
+     * 0x0019
+     * 0x0402
+ 1. Bind Cluster 0x0019
+ 1. Bind Cluster 0x0000
+ 1. Bind Cluster 0x0009
+ 1. Bind Cluster 0x0003
+ 1. Bind Cluster 0x0201
+ 
+ 1. Configure Reporting 0x0201 Attr: 0x0012 Type: 0x29  Min: 600 Max: 600
+ 1. Configure Reporting 0x0702 Attr: 0x0000 Type: 0x25  Min: 600 Max: 600
+ 1. Configure Reporting 0x0702 Attr: 0x0400 Type: 0x2a  Min: 30 Max: 600
+
+1. Read Attribute 0x0000 / 0x0007
+1. Read Attribute 0x0000 / 0x0013
+1. Read Attribute 0x0000 / 0xe000  (Manufacturer Specific)
+1. Read Attribute 0x0000 / 0xe001  (Manufacturer Specific)
+1. Read Attribute 0x0000 / 0xe002  (Manufacturer Specific)
+1. Read Attribute 0x0201 / 0x0012
+1. Read Attribute 0x0201 / 0x0015
+1. Read Attribute 0x0201 / 0x0016
+
+1. Read Attribute 0x0201 / 0xe011 (Manufacturer Specific)
+
+
+1. Read Attribute 0x0702 / 0x0000
+1. Read Attribute 0x0702 / 0x0400
+1. Read Attribute 0x0702 / 0x0300
+1. Read Attribute 0x0702 / 0x0301
+1. Read Attribute 0x0702 / 0x0302
+
+1. Read Attribute 0x0702 / 0x5a20
+
+1. Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
+1. Write Attribute 0x0201 Attribute 0x0010 Type: 0x28 Value: 0 
+1. Write Attribute 0x0201 Attribute 0xe010 Type: 0x30 Value: 0x01
+1. Write Attribute 0x0201 Attribute 0xe011 Type: 0x18 Value: 0x00
+
+1. Write Attribute 0x0000 Attribute 0x5000 (Location Description) ( Data Type: String 0x42; Value: string )
+
 ### Device Informations
 
 ```
