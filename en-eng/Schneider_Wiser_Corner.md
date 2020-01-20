@@ -421,6 +421,79 @@ At that stage, someone set a target temperature on the Application managing the 
 ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 
 
+## Reporting Configuration 
+
+```
+# Simple Metering, current summation delivered.
+# Always report after 30 seconds / 10 minutes whatever the change.
+702_0_0_normal_interval_minimum=600
+702_0_0_normal_interval_maximum=600
+702_0_0_normal_reportable_change=281474976710655
+702_0_0_fast_interval_minimum=30
+702_0_0_fast_interval_maximum=30
+702_0_0_fast_reportable_change=281474976710655
+
+# Simple Metering, current max demand delivered.
+# Always report after 30 seconds / 10 minutes whatever the change.
+702_2_0_normal_interval_minimum=600
+702_2_0_normal_interval_maximum=600
+702_2_0_normal_reportable_change=16777215
+702_2_0_fast_interval_minimum=30
+702_2_0_fast_interval_maximum=30
+702_2_0_fast_reportable_change=16777215
+
+# Simple Metering, instantaneous demand.
+# Commented out, we want to use values from MeteringFeatureImpl
+#702_400_0_normal_interval_minimum=600
+#702_400_0_normal_interval_maximum=600
+#702_400_0_normal_reportable_change=16777215
+#702_400_0_fast_interval_minimum=30
+#702_400_0_fast_interval_maximum=30
+#702_400_0_fast_reportable_change=16777215
+
+# Temperature Measurement, current measured value, battery device
+# Report interval: [1 minute; 10 minutes], change: 1,00 C
+402_0_1_normal_interval_minimum=60
+402_0_1_normal_interval_maximum=600
+402_0_1_normal_reportable_change=100
+
+# On/Off
+# Report on-change and always after 10 minutes.
+6_0_0_normal_interval_minimum=0
+6_0_0_normal_interval_maximum=600
+6_0_0_normal_interval_change=1
+
+# Thermostat Set-Point, current measured value, battery device
+# Report interval: 10 minutes whatever the change.
+201_12_1_normal_interval_minimum=600
+201_12_1_normal_interval_maximum=600
+201_12_1_normal_reportable_change=32767
+
+# Thermostat Local Temperature, current measured value, battery device
+# Report interval: [1 minute; 10 minutes], change: 1,00 C
+201_0_1_normal_interval_minimum=60
+201_0_1_normal_interval_maximum=600
+201_0_1_normal_reportable_change=100
+
+# Thermostat Valve Position, current measured value, battery device
+# Report interval: [1 minute; 10 minutes]
+201_e030_1_normal_interval_minimum=60
+201_e030_1_normal_interval_maximum=600
+201_e030_1_normal_reportable_change=10
+
+# Thermostat Open Window Detection Status
+# Report on-change or otherwise never
+201_e012_0_normal_interval_minimum=10
+201_e012_0_normal_interval_maximum=600
+201_e012_0_normal_reportable_change=1
+
+# Thermostat Calibration Status, current calibration status, battery device
+# Report interval: [0 minute; 10 minutes]
+201_e031_1_normal_interval_minimum=10
+201_e031_1_normal_interval_maximum=600
+201_e031_1_normal_reportable_change=1
+```
+
 
 
   
