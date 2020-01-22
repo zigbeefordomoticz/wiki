@@ -253,6 +253,20 @@ Cluster Out 2: 0402 (Temperature Measurement)
 
 ```
 
+### Cluster
+
+0x0000/0xe011 Device Status
+0x0000/0xe010 Current Mode
+0x0000/0xe050 COMMISSIONING 
+0x0000/0x5011 ATTRIBUTE_BASIC_LANGUAGE
+
+
+0x0201/0xe010 ATTRIBUTE_THERMOSTAT_ZONE_MODE
+0x0201/0xe011 HACT Configuration
+
+0x0201/0xe020 Fil Pilot Mode
+
+
 
 ## Wiser Thermostat
 
