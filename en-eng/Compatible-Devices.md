@@ -185,6 +185,9 @@ So there is a risk of latency when using Remote or Group command between the com
 
 * https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN )
 
+This is a first integration of the Wiser products. Still some work to do, but already usable.
+More information [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Schneider_Wiser_Corner.md)
+
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | EER40020  Smart Plug  | Switch/Power/meter | Smart Plug | Op. | 4.6            |
