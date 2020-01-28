@@ -33,6 +33,9 @@
 |                           | <- | Read Attr Response       | 0x0003: 0xff, 0x0005: SAL6ET1 |
 
 Loop of communication between Thermostat and Hub
+
+| Hub                       | direction |      Devices             | Value     |
+| ------------------------- | --------- | ------------------------ | --------- |
 |                           | <- | Command 0x17             | Data: 34083408f40101 |
 |                           | <- | Command 0x8e             | Data: 0146d2ffffffffffffffffffffffff |
 |                           | <- | Command 0x31             | Data: 212e4a4a30303030202020213030303035273030342a312a312e31662a56342c202020202020202020202020202020202020202020202020314a4a30ff00000002004a21202020451300656520 |
