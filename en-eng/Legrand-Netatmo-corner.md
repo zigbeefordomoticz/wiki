@@ -151,6 +151,10 @@ When the led is red (not paired):
 
 1. Bind 0x000f
 1. Bind 0x0003
+1. Configure Report 0x0102
+
+Status return ( 0xff: Open, 0x00: Closed, 0x50: in between ) 
+Ad Hoc status can be obtain by a read Attribute
 
 ### Other findings and decoding
 
