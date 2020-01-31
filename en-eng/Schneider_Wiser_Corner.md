@@ -20,12 +20,9 @@ Work in progress, so only validated informations are written
   * 0x67344845040160d0 - All OK
   * 0x7996484504015e10 - Plug,Thermostat OK
   
-* Pour le Permit Join Request il faut utiliser le masl 0xFFFD et non pas le 0xFFFC recommendé par NXP. (cela est notamment necessaire pour le BMS)
-  
-  Did test some alternate EPID without success!
-  
-There is also a strange thing which is the IEEE has the same prefix as the LIVOLO switches !
-
+### Conclusion:
+  It seems that the rule for selecting Extended PANID is to have this format xxxx48450401xxxx , where x can be any hex digit.
+ 
 
 ## Wiser Smeter
 
