@@ -17,8 +17,13 @@ Work in progress, so only validated informations are written
 * Channel: 15, 11
 * Extended PANID: 
   * 0x6734484504015e10 
-  * 0x67344845040160d0 - All OK
-  * 0x7996484504015e10 - Plug,Thermostat OK
+  * 0x7996484504015e10
+  * 0x6734484504015e10
+  * 0x1234484504015e10
+  * 0x5678484504015e10
+  * 0xFefe484504015e10
+  
+In short your extended PANID must looks like : 0x----484504015e10, where the 1st 4 digits can be any hex digit
   
  
 
