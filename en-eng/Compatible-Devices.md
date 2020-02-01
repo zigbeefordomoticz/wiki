@@ -245,6 +245,7 @@ More information [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/m
 | Wall Double Switch QBKG12LM | Switch, Power meter | 2 switches with Power meter n each line | Fully operationnal | 3.1.0  |
 | Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
 | Smart Wireless Switch Key Built In Gyro Multi-Functional | Switch Selector | Selector Switch: Click, Double Click, Long Click, Release Click, Shake | Fully Op. | 4.2.1 |
+| Aqara mgl01 | Illuminance Measurement | Give a Lux Value | Fully Op. | 4.6.065 |
 
 ## Zemismart
 
