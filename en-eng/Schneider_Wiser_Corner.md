@@ -20,8 +20,6 @@ Work in progress, so only validated informations are written
   * 0x67344845040160d0 - All OK
   * 0x7996484504015e10 - Plug,Thermostat OK
   
-### Conclusion:
-  It seems that the rule for selecting Extended PANID is to have this format xxxx48450401xxxx , where x can be any hex digit.
  
 
 ## Wiser Smeter
