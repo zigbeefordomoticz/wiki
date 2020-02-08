@@ -65,6 +65,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | LED 1622G12 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operationnal | 2.3.5 |
 | remote control E1524 | Remote Control | Pair the device, then associate with Ikea devices using touchlink, finaly add Zigate to the group created | Fully Operationnal | 4.10 @ Firm 3.0f |
 | TRADFRI motion sensor |  | | Not supported | required Group/Scene |
+| TRADFRI Signal Repeater | Voltage as a placeholder | Zigbee router | Fully Op. | 2.4 |
 
 ## Innr
 
