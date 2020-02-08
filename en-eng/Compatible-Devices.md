@@ -222,7 +222,10 @@ More information [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/m
 
 
 
-## Xiaomi
+## Xiaomi / Aqara
+
+* https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623
+
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
