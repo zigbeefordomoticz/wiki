@@ -20,31 +20,38 @@ In case this is different, please use your own location
 1. Stop domoticz
 
 1. Move the Zigate plugin folder to your home directory
+
    ```mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi```
+   
 1. Install the fresh version of the plugin
+
    ```
    cd /home/pi/domoticz/plugins
    git clone https://github.com/pipiche38/Domoticz-Zigate.git
    ```
    
 1. Copy the Zigate plugin database to the new installation
+
    ```
    cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data
    ```
    
 1. Copy the Plugin configurations file
+
    ```
    cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf
    ```
    
 1. Copy the Plugin reports 
+
    ```
-      cp /home/pi/Domoticz-Zigate/Conf/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports/
+   cp /home/pi/Domoticz-Zigate/Conf/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports/
    ```
    
-At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigate and a new version ready to be launched in /home/pi/domoticz/plugins/Domoticz-Zigate
+   At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigate and a new version ready to be launched in ```/home/pi/domoticz/plugins/Domoticz-Zigate```
 
-1. By default you'll be on the 'stabl' branch, if you want to switch to 'beta' do
+1. By default you'll be on the 'stable' branch, if you want to switch to 'beta' do
+
    ```
    cd /home/pi/domoticz/plugins/Domoticz-Zigate/
    git pull
