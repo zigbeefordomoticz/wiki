@@ -11,6 +11,9 @@ To install:
 1. Integrated Domoticz and Plugin installation ** In case you start from green field (no Domoticz installed yet) **
    * Simply go to [Packaging Domoticz for Debian, Ubuntu, Raspbian and Fedora](https://danielpocock.com/domoticz-packaging-debian-ubuntu-raspbian-fedora/)
    
+1. If you run Fedora on an ARM and you want to use PiZiGate 
+   * https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate_on_Fedora.md
+   
 1. Installation from GitHub Repository
    
    1. If you are installing and be using the Plugin with a PiZigate you have some follow some pre-requisities
