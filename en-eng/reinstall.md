@@ -18,6 +18,7 @@ In case this is different, please use your own location
 ## Procedure
 
 1. Stop domoticz
+
 2. Move the Zigate plugin folder to your home directory
    ```mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi```
 3. Install the fresh version of the plugin
@@ -35,3 +36,5 @@ In case this is different, please use your own location
    ```
    
 At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigate and a new version ready to be launched in /home/pi/domoticz/plugins/Domoticz-Zigate
+
+6. You can now restart Domoticz
