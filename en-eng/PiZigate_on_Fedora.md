@@ -38,6 +38,19 @@ Platform: RPI3 B+
    * Install libgpiod and python3 RPi.GPIO
      * sudo dnf install python3-RPi.GPIO libgpiod-utils
      
+   * Kernel must run withthe iomem=relaxed option
+     * Edit /etc/exlinux.conf and add iomem=relaxed in the append statement
+     
+     Here is an exemple of what you should have
+     ```
+     label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
+	   kernel /vmlinuz-5.4.17-200.fc31.armv7hl
+	   append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
+	   fdtdir /dtb-5.4.17-200.fc31.armv7hl/
+	   initrd /initramfs-5.4.17-200.fc31.armv7hl.img
+     ```
+     
+     
    * You can use the pi-zigate-fedora.py tool provided under Tools/Fedora to switch the PiZigate 
    to RUN or FLASH mode. For now you must be root when executing this module
    
