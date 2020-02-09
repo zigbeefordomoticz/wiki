@@ -42,7 +42,7 @@ In case this is different, please use your own location
    cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf
    ```
    
-1. Copy the Plugin reports 
+1. Copy the Plugin reports (if you want to keep the old reports)
 
    ```
    cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports
