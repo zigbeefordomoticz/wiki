@@ -37,4 +37,11 @@ In case this is different, please use your own location
    
 At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigate and a new version ready to be launched in /home/pi/domoticz/plugins/Domoticz-Zigate
 
+6. By default you'll be on the 'stabl' branch, if you want to switch to 'beta' do
+   ```
+   cd /home/pi/domoticz/plugins/Domoticz-Zigate/
+   git pull
+   git checkout beta
+   ```
+
 6. You can now restart Domoticz
