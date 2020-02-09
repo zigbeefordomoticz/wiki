@@ -45,7 +45,7 @@ In case this is different, please use your own location
 1. Copy the Plugin reports 
 
    ```
-   cp /home/pi/Domoticz-Zigate/Conf/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports/
+   cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports
    ```
    
    At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigate and a new version ready to be launched in ```/home/pi/domoticz/plugins/Domoticz-Zigate```
