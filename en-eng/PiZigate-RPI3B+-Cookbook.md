@@ -103,7 +103,7 @@ sudo reboot
 1. Startup the Pizigate: 
 
 ```
-pi-zigate.sh run
+Tools/pi-zigate.sh run
 
 ```
 
