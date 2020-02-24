@@ -100,6 +100,8 @@ When the led is red (not paired):
 * From Master remote SW Home / Away
  * Away : GroupId 0xfff6, SceneId 0x01
  * Home : GroupId 0xfff7, SceneId 0x01
+ * Wakeup: GroupdId: 0xfff5, SceneId 0x01
+ * Going to Sleep: GroupId: 0xfff4, SceneId 0x01
  
 ### Groups when pairing a remote with a wired devices
 
@@ -153,8 +155,16 @@ When the led is red (not paired):
 1. Bind 0x0003
 1. Configure Report 0x0102
 
+##### Commands
+
+* Open: 0x05 value 0x64
+* Close: 0x05 value 0x00
+* (not open, not close): 0x05 value 0x02
+
 Status return ( 0xff: Open, 0x00: Closed, 0x50: in between ) 
 Ad Hoc status can be obtain by a read Attribute
+
+
 
 ### Other findings and decoding
 
