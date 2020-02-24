@@ -172,7 +172,15 @@ Ad Hoc status can be obtain by a read Attribute
 
 * Cluster 0x0000 / Attribute 0xf000 : Operating time in seconds
 
+#### Suite  à Device Annoucement after Power Off/On
 
+After a main Power Off, On, the device is sending a Device Annoucement , in response the Legrand HUB is sending a Wrte Attribute No Response in Broadcast
+  * Command: 0x05 ( Write Attribute No Response )
+  * Cluster: 0x0000
+  * Attribute: 0xf000
+  * Data Type: 0x23
+  * Data: 0x00000000
+  
 #### Cluster 0xfc01
 * With the help of @Thorgal789
 
