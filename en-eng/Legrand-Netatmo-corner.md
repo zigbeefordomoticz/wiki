@@ -219,12 +219,14 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 
 | Manuf Code | Image Type | Product | Size (B.) | App. Rel. | App Build | Stack Rel. | Stack Build |
 | ---------- | ---------- | ------- | ---- | --------- | --------- | ---------- | ----------- |
-| 0x1021     | 0x000e (14)| Switch w/o neural    | 229319  | 0  | 41 | 0 | 0 |
+| 0x1021     | 0x000e (14)| Switch w/o neural    | 229319  | 0  | 43 | 0 | 0 |
 | 0x1021     | 0x0010 (16)| Micromodule          | 221655  | 0  | 28 | 0 | 0 |
 | 0x1021     | 0x0011 (17)| Hub Plug             |         | 0  | 35 | 0 | 0 |
 | 0x1021     | 0x0012 (18)| Main Remote          |         | 0  | 32 | 0 | 0 |
-| 0x1021     | 0x0013 (19)| Shutter              |         | 0  | 29 | 0 | 0 |
+| 0x1021     | 0x0013 (19)| Shutter              |         | 0  | 32 | 0 | 0 |
 | 0x1021     | 0x0016 (22)| Double Remote Switch |         | 0  |  4 | 0 | 0 |
+| 0x1021     |            | Connected outlet     |         |    | 32 | 0 | 0 |
+| 0x1021     |            | Mobile outlet        |         |    | 35 | 0 | 0 |
 
 * App. Rel. is shown on the MyHome application as Software Release
 
