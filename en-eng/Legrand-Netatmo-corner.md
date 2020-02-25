@@ -225,7 +225,7 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 | 0x1021     | 0x0012 (18)| Main Remote          |         | 0  | 32 | 0 | 0 |
 | 0x1021     | 0x0013 (19)| Shutter              |         | 0  | 32 | 0 | 0 |
 | 0x1021     | 0x0016 (22)| Double Remote Switch |         | 0  |  4 | 0 | 0 |
-| 0x1021     |            | Connected outlet     |         |    | 32 | 0 | 0 |
+| 0x1021     |            | Connected outlet     |         |    | 35 | 0 | 0 |
 | 0x1021     |            | Mobile outlet        |         |    | 35 | 0 | 0 |
 
 * App. Rel. is shown on the MyHome application as Software Release
