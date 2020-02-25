@@ -20,6 +20,7 @@ Those parameters allow the activation or not of services at plugin start.
 | enablegroupmanagement | disable | manage the Groups |
 | enableReadAttributes | disable | manage the polling service |
 | enableWebServer |  |  manage the Web Admin page |
+| internetAccess | enable | Allow plugin to access Internet and check for latest version of Firmware and Plugin |
 | allowOTA | disable |  manage the Over-the-Air firmware upgrade |
 | pingDevices | enable |  ping every hour each main powered device (see pingDevicesFeq parameter) |
 
@@ -96,10 +97,9 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | parameter | default | description |
 | --------- | ------- | ----------- |
 | allowRemoveZigateDevice | disable | If enable when removing a device, a request will be done also to Zigate |
-| blueLedOnOff | enable | manage the Zigate blue led.
-| enableAPSFailureReporting | enable | Will manage the Zigbee communication issues |
+| blueLedOnOff | enable | manage the Zigate blue led. |
+| resetPermit2Join | enable | will disable permit to join at plugin start |
 | Ping | enable | will ping Zigate every 4' to insure the connectivity |
-| eraseZigatePDM | disable | if enable will allow a proper erase of Zigate PDM from the Web Admin |
 | Certification | CE | CE or FCC certifications |
 | channel | 0 | One of those 11, 15, 19, 20, 25 and 26 Zigate channel. 0 means Zigate will select the best one. Channing the channel will require a Soft Reset of Zigate and your already paired devices might need to be repaired |
 | TXpower_set | 0 | Power attenuation. 0: 0dBM, 1: -9 dBM, 2: -20dBM, 3: -32dBM |
@@ -154,6 +154,11 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | EnableDimmer | disable | enable dimmer |
 | LegrandFilPilote | enable | enable fil pilote |
 
+## Schneider Specific
+
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| enableSchneiderWiser | disable | Must be enable to pair Schneider Wiser devices |
 
 
 ## Others
