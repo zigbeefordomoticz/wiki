@@ -198,8 +198,8 @@ So there is a risk of latency when using Remote or Group command between the com
 
 * https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN )
 
-This is a first integration of the Wiser products. Still some work to do, but already usable.
-More information [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Schneider_Wiser_Corner.md)
+* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Wiser-Thermostat.md
+
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -207,6 +207,7 @@ More information [here](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/m
 | EER5100x Thermostat | Temperature | Work as a Temperature sensor (for now) | Work as Temp | 4.6 |
 | EER50000 Actionneur | Thermostat, Instant Power and Consumption Usage Fil Pilot, or conventional mode | Work | 4.6 |
 | EER3300x S Meter | 6 lines Power / Meter and Voltage of Battery| allow to get instant power as well as summation for each of the 6 lines | Work |  4.6 |
+| EER5300x Radiator Thermostat | Thermostat Mode, Setpoint, Local Temp | Full control of the radiator | Op. | 4.7 & 3.1c| 
 
 
 
