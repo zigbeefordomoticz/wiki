@@ -66,6 +66,18 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | remote control E1524 | Remote Control | Pair the device, then associate with Ikea devices using touchlink, finaly add Zigate to the group created | Fully Operationnal | 4.10 @ Firm 3.0f |
 | TRADFRI motion sensor |  | | Not supported | required Group/Scene |
 | TRADFRI Signal Repeater | Voltage as a placeholder | Zigbee router | Fully Op. | 2.4 |
+| TRADFRI bulb E12 WS opal 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E14 WS opal 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E26 WS clear 950lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E26 WS opal 980lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E27 WS clear 950lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E27 WS opal 1000lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E27 WS opal 950lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb E27 WS opal 980lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+| TRADFRI bulb GU10 WS 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
+
+
+
 
 ## Innr
 
