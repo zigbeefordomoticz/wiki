@@ -35,7 +35,7 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
 Profalux do not use attribut 0x0005 __Model Name__ of Basic cluster.
 Attribut 0x0010 of Basic Cluster should provide Type of device ( 'Store', 'BSO', Volet' )
 
-When using ZOE ( main remote command), it acts as a Zigbee controler with ShortID: 0x0000
+
 When you don't have any controler, one of the shutter act as a controler
 
 Interestingly, you can move the network from one Channel to an other one via the ZOE Admin menu
