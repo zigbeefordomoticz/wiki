@@ -217,16 +217,19 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 * Manfufacturer Code: 0x1021
 * Block size for transfer: 64 bytes
 
-| Manuf Code | Image Type | Product | Size (B.) | App. Rel. | App Build | Stack Rel. | Stack Build |
-| ---------- | ---------- | ------- | ---- | --------- | --------- | ---------- | ----------- |
-| 0x1021     | 0x000e (14)| Switch w/o neural    | 229319  | 0  | 43 | 0 | 0 |
-| 0x1021     | 0x0010 (16)| Micromodule          | 221655  | 0  | 32 | 0 | 0 |
-| 0x1021     | 0x0011 (17)| Hub Plug             |         | 0  | 35 | 0 | 0 |
-| 0x1021     | 0x0012 (18)| Main Remote          |         | 0  | 32 | 0 | 0 |
-| 0x1021     | 0x0013 (19)| Shutter              |         | 0  | 32 | 0 | 0 |
-| 0x1021     | 0x0016 (22)| Double Remote Switch |         | 0  |  4 | 0 | 0 |
-| 0x1021     |            | Connected outlet     |         |    | 35 | 0 | 0 |
-| 0x1021     |            | Mobile outlet        |         |    | 35 | 0 | 0 |
+| OTA Code | Manuf Code | Image Type | Product              | Size (B.) | App. Rel. | App Build | Stack Rel. | Stack Build |
+| -------- | ---------- | ---------- | -------------------- | ----      | --------- | --------- | ---------- | ----------- |
+|          | 0x1021     | 0x000e (14)| Switch w/o neural    | 229319    | 0         | 43        | 0          | 0           |
+|  NLM     | 0x1021     | 0x0010 (16)| Micromodule          | 221655    | 0         | 32        | 0          | 0           |
+|          | 0x1021     | 0x0011 (17)| Hub Plug             |           | 0         | 35        | 0          | 0           |
+|  NLT     | 0x1021     | 0x0012 (18)| Main Remote          |           | 0         | 33        | 0          | 0           |
+|          | 0x1021     | 0x0013 (19)| Shutter              |           | 0         | 32        | 0          | 0           |
+|  NLD     | 0x1021     | 0x0016 (22)| Double Remote Switch |           | 0         |  4, 6     | 0          | 0           |
+|          | 0x1021     |            | Remote Shutter       |           |           |           |            |             |
+|          | 0x1021     |            | Connected outlet     |           |           | 35        | 0          | 0           |
+|          | 0x1021     |            | Mobile outlet        |           |           | 35        | 0          | 0           |
+|          | 0x1021     |            | Cable outlet         |           |           |           |            |             |
+
 
 * App. Rel. is shown on the MyHome application as Software Release
 
