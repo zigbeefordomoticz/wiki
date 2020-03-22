@@ -232,6 +232,7 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 
 
 * App. Rel. is shown on the MyHome application as Software Release
+* Firmware are available : http://fw.netatmo.net/
 
 More informations/scripts .... can be found here: https://github.com/pipiche38/Capture-OTA-from-Wireshark
 
