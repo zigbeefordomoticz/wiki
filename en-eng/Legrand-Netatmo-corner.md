@@ -228,7 +228,7 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 |          | 0x1021     |            | Remote Shutter       |           |           |           |            |             |
 |          | 0x1021     |            | Connected outlet     |           |           | 35        | 0          | 0           |
 |          | 0x1021     |            | Mobile outlet        |           |           | 35        | 0          | 0           |
-|          | 0x1021     |            | Cable outlet         |           |           |           |            |             |
+|  NLC     | 0x1021     | 0x0015     | Cable outlet         |           |           | 6, 10     |            |             |
 
 
 * App. Rel. is shown on the MyHome application as Software Release
