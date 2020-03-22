@@ -222,13 +222,13 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 |  NLF     | 0x1021     | 0x000e (14)| Switch w/o neural    | 229319    | 0         | 43        | 0          | 0           |
 |  NLM     | 0x1021     | 0x0010 (16)| Micromodule          | 221655    | 0         | 32        | 0          | 0           |
 |  NLP     | 0x1021     | 0x0011 (17)| Hub Plug             |           | 0         | 35        | 0          | 0           |
+|  NLP     | 0x1021     | 0x0011 (17)| Mobile outlet        |           |           | 35        | 0          | 0           |
+|  NLP     | 0x1021     | 0x0011 (17)| Connected outlet     |           |           | 35        | 0          | 0           |
 |  NLT     | 0x1021     | 0x0012 (18)| Main Remote          |           | 0         | 33        | 0          | 0           |
 |  NLV     | 0x1021     | 0x0013 (19)| Shutter              |           | 0         | 43        | 0          | 0           |
 |  NLD     | 0x1021     | 0x0016 (22)| Double Remote Switch |           | 0         |  6        | 0          | 0           |
 |          | 0x1021     |            | Remote Shutter       |           |           | 18        |            |             |
-|          | 0x1021     |            | Connected outlet     |           |           | 35        | 0          | 0           |
-|  NLP     | 0x1021     | 0x0011     | Mobile outlet        |           |           | 35        | 0          | 0           |
-|  NLC     | 0x1021     | 0x0015     | Cable outlet         |           |           | 10        |            |             |
+|  NLC     | 0x1021     | 0x0015 (21)| Cable outlet         |           |           | 10        |            |             |
 
 
 * App. Rel. is shown on the MyHome application as Software Release
