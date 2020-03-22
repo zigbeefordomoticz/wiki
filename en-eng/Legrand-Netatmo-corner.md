@@ -225,7 +225,7 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 |  NLT     | 0x1021     | 0x0012 (18)| Main Remote          |           | 0         | 33        | 0          | 0           |
 |          | 0x1021     | 0x0013 (19)| Shutter              |           | 0         | 32        | 0          | 0           |
 |  NLD     | 0x1021     | 0x0016 (22)| Double Remote Switch |           | 0         |  4, 6     | 0          | 0           |
-|          | 0x1021     |            | Remote Shutter       |           |           |           |            |             |
+|          | 0x1021     |            | Remote Shutter       |           |           | 18        |            |             |
 |          | 0x1021     |            | Connected outlet     |           |           | 35        | 0          | 0           |
 |          | 0x1021     |            | Mobile outlet        |           |           | 35        | 0          | 0           |
 |  NLC     | 0x1021     | 0x0015     | Cable outlet         |           |           |  6, 10    |            |             |
