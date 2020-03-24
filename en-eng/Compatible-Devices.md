@@ -148,6 +148,7 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 ## OSRAM / LEDVANCE
 
 * I have noticed some auto-reset when devices are paired on a channel different than 11.
+* LEDVANCE firmware are available here https://update.ledvance.com/firmware-overview
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -167,6 +168,8 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 * Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
 So there is a risk of latency when using Remote or Group command between the command and geting the status reflected on Domoticz (as it is based on the polling frequency)
+
+* Philips firmware are available here: https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions#philips-hue
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
