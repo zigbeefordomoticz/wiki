@@ -33,7 +33,7 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
 * DeviceID: 0x0201 ( remote 
 
 Profalux do not use attribut 0x0005 __Model Name__ of Basic cluster.
-Attribut 0x0010 of Basic Cluster should provide Type of device ( 'Store', 'BSO', Volet' )
+Attribut 0x0010 of Basic Cluster should provide Type of device ( 'bso', volet' )
 
 
 When you don't have any controler, one of the shutter act as a controler
