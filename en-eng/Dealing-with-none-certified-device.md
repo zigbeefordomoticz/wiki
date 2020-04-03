@@ -1,38 +1,50 @@
 # Dealing with pairing issues
 
-The plugin is developped in a way that it is capable to handle devices which respect ZigBee specifications.
+The plugin is developped in a way that it is capable to handle devices which respects ZigBee specifications.
 For instance if the plugin see an unknown device type, it will try to create widgets based on the Device capabilities.
 
-## What type of issues
+## Introduction
+
+The pairing is done at 2 levels.
+
+1. At the Zigate level, where we have the fact that the device is joining the Zigbee network controled by Zigate.
+1. At the Plugin level, where the plugin will do a discovery of the devices capabilities like:
+   1. Is that main powered device
+   1. Is there a Switch ON/OFF
+   1. Is there a Dimmer
+   1. Is there a Color RGB, WW possibility
+   1. Is that Window convering device
+   ...
+   
+
+## What type of issues could you encounter after the pairing
 
 * At the end of the pairing process, I do not see any widget in Domoticz
-* The Widget created in Domoticz is not correct
+* The Widget created in Domoticz is not correct like:
+  * I got a Switch and Level control, but I don't get anything to change the color
+  
 
 ## What to do
 
-If you have a plugin version 4.4 or above
+Starting Plugin 4.7, there are some tools which allow to share all information collected during the pairing/discovery process.
 
-* During the pairing process, what every the pairing is successful or unsuccessfull, all important information captured during the pairing process will be save in the file `Reports/PairingInfos-xx-ieee.json` where xx is the Zigate plugin hardware Id (from Domoticz) and ieee is the IEEE address of the Device. You might also be able to identify the file with its date/time.
 
-  1. identify the corresponding PairingInfos file
-  1. Use the French or English Forum to create a post and describe the problem
-     1. attach the PairingInfos file
-     1. attach the domoticz log file at the time of the pairing ( not mandatory, but welcome )
-     1. Provide as much informations on the device. References, URL, 
-     1. Provide screenshoot of the Widget(s) created on Domoticz
-     1. Provide a description of what would be expected
-   
-If the plugin version you are running is below 4.4, we advice you to switch to the beta branch and redo the pairing process.
+![Export Device List raw (json)](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/ExportDevicesRaw.png)
 
- * to switch to beta branch
-   ```
-   git pull
-   git checkout beta
-   git pull
-   ```
+1. Got to the Tools Menu
+1. Select Plugin Raw Devices (json)
+1. Export
+
+This will create an export.json file that you can save.
    
-   
-   
+Finally you post this export.json (zipped) on one of the 2 forums with informations on the device you have paired and which is not fully working:
+
+* Product Name 
+* Brand
+* URL on a web site
+* What do you expect
+* The logs from the pairing process
+
 ## Forums to post the issue
 
 * [English forum](https://www.domoticz.com/forum/viewforum.php?f=68)
