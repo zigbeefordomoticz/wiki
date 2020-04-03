@@ -94,6 +94,7 @@ If you need to have the group '0000' created, you can enable it via the Settings
 ## 5.1 Troubleshooting
 
 If the plugin don’t have created any group widget and you are sure that you have a remote that create zigbee group and this remote is paired with the zigate and an other device that is also paired with the zigate try to:
+
     1. Remove the file  Data/GroupList-xx.pck
     1. Verify that the group management is enable 
     1. remove the file  Conf/ZigateGroupsConfig-xx.txt
