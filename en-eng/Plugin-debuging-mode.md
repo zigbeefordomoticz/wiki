@@ -32,6 +32,34 @@ The debugging options are available from the Web admin interface in the Menu Set
 | Command | Handling all actions from Domoticz, usally calling Output to perform ZiGate actions |
 
 
-## Basis
+## Use Cases
+
+### Case 1: I do not see a sensor updating widgets on Domoticz
+
+In that case you need to check if we have incoming messages, if they are correctly processed, if they are pushed to Domoticz for update.
+
+1. Enable debugInput, debugCluster and debugWidget
+1. set debugMatchId with the Short Address of this particular sensor, so you will limit the logs.
+1. You can disable the Use Domoticz Log and then restart the plugin to collect those logs into a specif file.
+
+1. Do what ever to be done to make the sensor sending messages, and collect the logs for analysis
 
 
+### Case 2: I have a new device paired, but it looks like it is not well recognized
+
+1. Enable debugInput, debugCluster, debugWidget, debugOutput and debugCommand
+1. set debugMatchId with the Short Address of this particular sensor, so you will limit the logs.
+1. You can disable the Use Domoticz Log and then restart the plugin to collect those logs into a specif file.
+
+1. Perform actions from Domoticz and check the logs ( debugCommand and debugOutput )
+1. Perform actions on the device to stimulate activities and check the logs ( deugInput, debugCluster, debugWidget)
+
+
+
+
+## Short Address and IEEE
+
+* You can get the Short Address and/or the IEEE of the Device:
+  * via Domoticz: Devices and the IEEE can be found in the ID column
+  * via the Plugin Web Interface in the Management -> Device Management menu
+  
