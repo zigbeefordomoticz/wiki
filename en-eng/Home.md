@@ -23,7 +23,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [Plugin Admin Web Interface - How to activate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterface.md) (_4.5_)
 * [Plugin admin widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Administration.md) (_4.1_)
 * [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management.md) (_4.1_)
-* [Plugin parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.txt.md)
+* [Plugin parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.json.md)
 * [Over-the-Air Firmware upgrade](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/OTA-Upgrade.md)
 * [On line debuging](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/debug-mode.md) (_4.5_)
 
