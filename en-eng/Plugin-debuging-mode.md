@@ -11,7 +11,7 @@ This would required a plugin version greater than 4.8
 
 The debugging options are available from the Web admin interface in the Menu Settings, and you have to enable Advanced
 
-[Debuging Options](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/debugingOptions.png)
+![Debuging Options](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/debugingOptions.png)
 
 | Option | Purpose |
 | ------- | -------- |
