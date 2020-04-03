@@ -8,6 +8,8 @@ In addition, the plugin is automatically "pinging" main powered devices to check
 
 You can also use the following dzVent code to monitor and trigger notification (thanks to @benp / https://easydomoticz.com/forum/viewtopic.php?f=28&t=8251&start=70#p69018 )
 
+The here after exemple monitor 'veilleuse' and 'Hue', so you will have to adapt to your own case
+
 
 ```
 return {
