@@ -32,6 +32,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 ## What to do if the device doesn't behave correctly
 
 * [Dealing with not certified devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Dealing-with-none-certified-device.md)
+* [Debug mode](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-debuging-mode.md)
 
 ## Devices specifics
 
