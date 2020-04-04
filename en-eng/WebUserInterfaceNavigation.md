@@ -8,6 +8,11 @@ You have a navigation tab in the header bar, from which you can move to
 - Settings
 - Admin tools
 
+ATTENTION/WARNING:
+
+DO NOT FORWARD THE 9440 port outside of your home, DO NOT expose this port to the internet as everybody would get access to it!
+For now we do not have any solution, as we are waiting for Domoticz to implement the SSSL for python plugins
+
 ## 1. Dashboard
 ![Zigate Web Admin Interface](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Dashboard.png)
 
