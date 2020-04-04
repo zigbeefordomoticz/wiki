@@ -32,6 +32,6 @@ And voila! Zigate should be on the right channel
 
 ![Zigate Infos](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Zigate_Infos.png)
 
-1. You'll find the Zigate Information, and the Channel.
+2. You'll find the Zigate Information, and the Channel.
 The Channel value is expressed here in Hexa, so 0x0b means 11 
 
