@@ -27,6 +27,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 
 ## How-to
 
+* [Pair and provision a new Device](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PairingDevice.md)
 * [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management.md)
 * [Plugin Parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.json.md)
 * [Energy Level Reports](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/EnergyLevels.md)
