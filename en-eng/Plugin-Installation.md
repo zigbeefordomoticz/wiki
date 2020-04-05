@@ -88,7 +88,7 @@ You have __critical__ files under the Domoticz-Zigate folder. In case of crash, 
     Data/*
     Reports/*
 
-Of course you must back thehe Domoticz Database domoticz.db (check to Domoticz) __at the same time__ in order to have consistency between the two.
+Of course you must backup the Domoticz Database `domoticz.db` (check to Domoticz) __at the same time__ in order to have consistency between the two.
 
 ## Plugin branches
 
