@@ -105,11 +105,6 @@ This is considered as a solid , reliable version.
 
 We can open the beta channel to provide early version and to stabilize the version priori to be move to the stable channel
 
-### dev
-
-This is where development are under go. This is not a reliable version and could be buggy and even not working depending on the stage of integration we are.
-This branch is only for users whom known exactly what they are doing.
-
 ## How to switch from one channel to the other
 
 `git pull`
