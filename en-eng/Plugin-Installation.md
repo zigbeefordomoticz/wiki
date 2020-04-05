@@ -82,11 +82,13 @@ The plugin is regularly updated. For bug fixing or enhancement. In order to keep
 
 ## Protect your data
 
-You have some critical files under the Domoticz-Zigate folder. In case of crash, you might want to have backup to restore. Here after are the files to backup
+You have __critical__ files under the Domoticz-Zigate folder. In case of crash, you might want to have backup to restore. Here after are the files to backup
 
-    DeviceList-xx.txt
-    PluginConf.txt
-    The Domoticz Database domoticz.db (check to Domoticz)
+    Conf/PluginConf-*.json
+    Data/*
+    Reports/*
+
+Of course you must back thehe Domoticz Database domoticz.db (check to Domoticz) __at the same time__ in order to have consistency between the two.
 
 ## Plugin branches
 
