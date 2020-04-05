@@ -2,6 +2,7 @@
 
 Python version 3.5 or higher required &amp; Domoticz version 3.87xx or greater.
 For more information on Python requirements we advice you to go to the [Domoticz Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
+Make sure that to have __python3-dev package__ installed
 
 To install:
 
