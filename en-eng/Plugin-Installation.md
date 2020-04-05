@@ -57,7 +57,12 @@ To install:
       * Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
       * Restart Domoticz.
 
-In the web UI, navigate to the Hardware page. In the hardware dropdown there will be an entry called &quot;Zigate plugin&quot;.
+In the Domoticz Web UI, navigate to [the Hardware page](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DzPluginMenu.md). 
+
+  * In the hardware dropdown there will be an entry called &quot;Zigate plugin&quot;.
+  * On the first use of the Zigate, you have also to set True the ErasePDM in order to reset the ZIgate and get it initialized with the plugin.
+
+
 
 ## Update
 
