@@ -31,6 +31,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [Change the Zigbee Channel](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Channel_Setting.md)
 * [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management.md)
 * [Upgrading device firmware](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Device-Firmware-Update.md)
+* [Upgrading Firmware of Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-flash-firmware.md)
 * [Plugin Parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.json.md)
 * [Energy Level Reports](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/EnergyLevels.md)
 
