@@ -37,7 +37,11 @@ Purpose is to explain the step process to pair a new device and get it into Domo
 
       ![Assisted Provisioning: Done](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Provisionning_3.png)
 
-
+   1. If after a while ( 2 minutes ) nothing happen
+   
+      1. Check Domoticz Log to se if there is no error
+      1. Restart the plugin and try the pairing once more time
+      
 1. Advanced provisioning
 
 Here we will more rely on the Logs to see that the Provisioning is happening. The Domoticz logs are available via the Domoticz User Interface. 
