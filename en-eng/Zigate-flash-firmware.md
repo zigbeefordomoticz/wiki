@@ -88,6 +88,8 @@ __ASSUMPTIONS__
    sudo ./JennicModuleProgrammer/Build/JennicModuleProgrammer -V 6 -P 115200 -f ../Zigate-Firmware/ZiGate_Coordinator_v3.1c.bin -s /dev/ttyUSB0
    ```
    
+   1. Finally unplug/plug the Zigate once more to switch back to normal mode
+   
 1. case: Zigate DIN
 
    1. Stop the plugin (or Domoticz)
