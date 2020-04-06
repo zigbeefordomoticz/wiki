@@ -29,10 +29,12 @@ Purpose is to explain the step process to pair a new device and get it into Domo
       1. Accept new Hardware in a permanent maner (same as section 2)
       1. Stop accepting new Hardware
    
-   1. Go for "Assisted Provisioning"
+   1. Go for "Assisted Provisioning" ( This will enable pairing for 4 minutes )
 
       ![Assisted Provisioning: Start](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Provisionning_2.png)
 
+   1. Check that the Zigate Led is flashing Blue
+   
    1. Reset your Device to trigger the pairing
 
       ![Assisted Provisioning: Done](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Provisionning_3.png)
