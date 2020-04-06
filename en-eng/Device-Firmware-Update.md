@@ -38,10 +38,11 @@ In each of the Manufacturer directory a README.md file is available and describe
 For the IKEA TRADFRI we are providing a script to retreive all Firmware from the IKEA web site.
 
 1. Go to the IKEA Firmware folder
-   ```cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI
-   ```
+
+   ```cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI ```
    
 1. Launch the script to retreive the firmware
+
    ```../../Tools/ikea-ota-download.py```
    
 1. Optionaly remove some unecessary firmware file
