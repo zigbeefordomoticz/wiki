@@ -12,6 +12,7 @@ The purpose of this document is to help you in the installation of the Zigate pl
 Attention:
   * You need git-server package
   * Domoticz with python
+  * USB drivers for zIgate can be found on [jadahl.com](http://www.jadahl.com/drivers_6.2/)
 
 ## Installation of the Plugin
 Start a Putty session and login
