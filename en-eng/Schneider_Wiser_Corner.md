@@ -433,6 +433,10 @@ At that stage, someone set a target temperature on the Application managing the 
 ## Decoding Cluster 0x0201 on Attribute 0xe011
 
 ATTRIBUTE_THERMOSTAT_HACT_CONFIG
+0x00 - Conventional (ON/OFF)
+0x02 - Setpoint (set temperature)
+0x03 - FIP - mode fil pilote 
+
 
 
 ## Reporting Configuration 
