@@ -40,7 +40,7 @@ DIN Zigate - Micromodule switch_Switch-00047400001f09a4-01
 We are going to bind the On/Off cluster ( 0x0006 ) between the Double gangs remote switch (Left or Right) with the Micromodule.
 For such , we are going to use the Web Admin page 
 
-[Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Binding.png)
+![Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Binding.png)
 
 
 ### What to bind
