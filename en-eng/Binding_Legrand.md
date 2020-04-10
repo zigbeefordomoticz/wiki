@@ -7,6 +7,7 @@ Purpose of this page is to document how to bind a "Double gangs remote switch_Le
 
 This will be applicable for most of the devices as soon as they support binding between 2 end devices
 
+ATTENTION: it will required to have the Zigate up and running to have the binding operationnal. Do not expect to have binding working while the Zigate is Off.
 
 ## Step 1 : Pairing
 
