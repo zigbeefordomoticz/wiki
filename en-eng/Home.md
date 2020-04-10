@@ -34,6 +34,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [Upgrading Firmware of Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-flash-firmware.md)
 * [Plugin Parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.json.md)
 * [Energy Level Reports](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/EnergyLevels.md)
+* [Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Binding_Legrand.md)
 
 ## What to do if the device doesn't behave correctly
 
