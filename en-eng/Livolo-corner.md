@@ -36,6 +36,8 @@ PS:
 * Even if you have a Single Bang Livolo switch, 2 switch widgets will be created. There is no way at that time to detect a Single gang to a Double gang,
 you can remove the Widget LivoloSWR which is not going to be used.
 
+* @Kiwic16 has found a way to get the Livolo switch remaining paired with the Zigate. Check with him if you need this information. http://kiwihc16.free.fr/Livolo.html
+
 
 ## Livolo on channel 11
 
@@ -49,6 +51,31 @@ The Livolo switch must already be paired on channel 26.
 After a while, the Livolo should be switching automatically to channel 11.
 
 Unfortunatly, if you get power outage, you'll have to delete the corresponding widgets from Domoticz and redo the pairing process on Channel 26.
+
+## One model name for 2 products
+
+* what ever you have a single or double gang switch, this will be seen as a __TI0001__ Model name, and from that the plugin is not able to find if it is a single or double gang. After the provisionning process in Domoticz in case you have a single gang, you will have to remove the __Right__ command widget.
+
+## On and OFF
+
+On and OFF are not based on the Cluster 0x0006, but rather on cluster 0x0008. Don't ask me why ... Livolo migh have a reason for that !
+
+On the Cluster 0x0008 (Level Control) Livolo are using those 2 parameters.
+1. Level which the level you want to move. This is used for the On or Off command
+1. Transition period which express the time to move from the current state to the new one. This is used for the Gang selection (Left or Righ)
+
+| Command | Level |
+| ------- | ----- |
+| On      | 0x6C (108) |
+| Off     | 0x01 (1) |
+
+| Gang selection | Transition |
+| -------------- | ---------- |
+| Left           | 0x0001 (1) |
+| Right          | 0x0002 (2) |
+
+For exemple if you want to Switch On Gang Right, you'll have to do Level 0x6C with Transition 0x0002
+
 
 ## Advanced 
 
