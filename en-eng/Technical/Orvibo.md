@@ -78,7 +78,9 @@
 
 ### In other terms
 
+
 | Action      | Button | Cluster | Command | Value  |
+| ----------- | ------ | ------- | ------- | -----  |
 | short Press | Up     | 0x0017  |  0x08   | 010000 |
 | Long Press  | Up     | 0x0017  |  0x08   | 010003 |
 | short Press | Middle     | 0x0017  |  0x08   | 020000 |
