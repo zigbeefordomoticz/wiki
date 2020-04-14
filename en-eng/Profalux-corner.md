@@ -72,13 +72,13 @@ Cluster Out 8: fc21
 
 ## Steering and other findings
 
-The Profalux shutter can be steer with cluster ONOFF (0x0006) or cluster LevelControl (0x0008). It is adviced to use only the LevelControl even for a full Open or Close.
+* The Profalux shutter can be steer with cluster ONOFF (0x0006) or cluster LevelControl (0x0008). It is __adviced__ to use __only__ the LevelControl even for a full Open or Close.
 
-Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
+* Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
 
-The remote is very basic and it is not adviced to try doing anything with it. During the pairing process, the Shutter and the Remote will announced themselve, just drop the remote.
+The remote is very basic and it is not adviced to try doing anything with it. During the pairing process, the Shutter and the Remote will announced themselve, just drop the remote, but keep it paired on Zigate as both VR and Remote must be part of the same network.
 
-If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... )
+* If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... ) Otherwise , Profalux informed me that depending on the Firmware version of Zoe, they must be pgraded before been paired with a non-Profalux controler. For that the best is to contact Profalux for getting the upgrade.
 
 
 
