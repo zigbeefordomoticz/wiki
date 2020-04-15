@@ -49,7 +49,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 ### E_SL_MSG_SAVE_PDM_RECORD = 0x0200
 
-* Source: Zigate
+* Source: __Zigate__
 
 * Description: ZiGate request host to save a Record on PDM. This record could be sent in blocks
 
@@ -71,7 +71,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 ### E_SL_MSG_SAVE_PDM_RECORD_RESPONSE = 0x8200
 
-* Source: Host
+* Source: __Host__
 
 * Description: Acknowledge the correct saving of the incoming recordId data
 
@@ -89,7 +89,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 ### E_SL_MSG_LOAD_PDM_RECORD_REQUEST = 0x0201
 
-* Source: ZiGate
+* Source: __ZiGate__
 
 * Description: Request a RecordID from the PDM on Host
 
@@ -106,7 +106,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 ### E_SL_MSG_LOAD_PDM_RECORD_RESPONSE = 0x8201
 
-* Source: Host
+* Source: __Host__
 
 * Description: Send a the Data related to the RecordID requested. Could be one block out of many.
 
@@ -120,7 +120,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
   | u16Size | uint16 | size of this particular block (number of bytes) |
   | sWriteData | bytes | bytes of this record|
   
-* Response: none
+* Response: __none__
 
 
 
