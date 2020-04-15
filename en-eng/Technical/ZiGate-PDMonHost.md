@@ -51,7 +51,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 * Source: __Zigate__
 
-* Description: ZiGate request host to save a Record on PDM. This record could be sent in blocks
+* Description: ZiGate request host to save a Record on PDM. This record could be sent in blocks (of max 255 bytes)
 
 * Data:
 
@@ -72,10 +72,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 ### E_SL_MSG_SAVE_PDM_RECORD_RESPONSE = 0x8200
 
 * Source: __Host__
-
 * Description: Acknowledge the correct saving of the incoming recordId data
-
-
 * Data:
 
   | data | Type | Value |
@@ -90,15 +87,12 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 ### E_SL_MSG_LOAD_PDM_RECORD_REQUEST = 0x0201
 
 * Source: __ZiGate__
-
 * Description: Request a RecordID from the PDM on Host
-
 * Data:
 
   | data | Type | Value |
   | ---- | ---- | ----- |
   | RecordId | uint16 | RecordId of the data sent| 
-
 
 * Response: __0x8201__
 
@@ -107,11 +101,11 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 ### E_SL_MSG_LOAD_PDM_RECORD_RESPONSE = 0x8201
 
 * Source: __Host__
-
 * Description: Send a the Data related to the RecordID requested. Could be one block out of many.
-
+  Tested with 128 bytes; Max block size is 256 Bytes
 * Data :
-
+  | data | Type | Value |
+  | ---- | ---- | ----- |
   | Status | uint8 | 0x00 No data found ; 0x02 Sending Data |
   | RecordId | uint16 | RecordId of the data sent| 
   | u16Datalength  | uint16 | total PDM record size in bytes |
@@ -126,114 +120,103 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 ### E_SL_MSG_GET_BITMAP_RECORD_REQUEST = 0x0206
 
-Source:
+* Source: __Zigate__
 
-Description:
+* Description:
 
-Input:
+* Data :
 
-Output:
+* Response:
 
 
 
 ### E_SL_MSG_GET_BITMAP_RECORD_RESPONSE = 0x8206
 
-Source:
+* Source: __Host__
 
-Description:
+* Description:
 
-Input:
+* Data :
 
-Output:
+* Response :
 
 
 
 ### E_SL_MSG_INCREMENT_BITMAP_RECORD_REQUEST = 0x0207
 
-Source:
+* Source: __Zigate__
 
-Description:
+* Description:
 
-Input:
+* Data:
 
-Output:
+* Response:
 
 
 
 ### E_SL_MSG_INCREMENT_BITMAP_RECORD_RESPONSE = 0x8207
 
-Source:
+* Source: __Host__
 
-Description:
+* Description:
 
-Input:
+* Data:
 
-Output:
+* Response:
 
 
 
 ### E_SL_MSG_PDM_EXISTENCE_REQUEST = 0x0208
 
-Source:
+* Source: __Zigate__
 
-Description:
+* Description:
 
-Input:
+* Data:
 
-Output:
+* Response:
 
 
 
 ### E_SL_MSG_PDM_EXISTENCE_RESPONSE = 0x8208
 
-Source:
+* Source: __Host__
 
-Description:
+* Description:
 
-Input:
+* Data:
 
-Output:
+* Response:
 
 
 
 ### E_SL_MSG_PDM_HOST_AVAILABLE = 0x0300
 
-Source: ZiGate
-
-Description: ZiGate indicated the need to initialise the PDM in memory.
-
-Data:
-
-Response:
-    0x8300
+* Source: __ZiGate__
+* Description: ZiGate indicated the need to initialise the PDM in memory.
+* Data: none
+* Response: __0x8300__
 
 
 ### E_SL_MSG_PDM_HOST_AVAILABLE_RESPONSE = 0x8300
 
-Source: host
+* Source: __Host__
+* Description: Indicates ready to load PDM
+* Data:
 
-Description: Indicates ready to load PDM
-
-Data:
 | data | Type | Value |
 | ---- | ---- | ----- |
 | status | uint8 | PDM_E_STATUS_OK |
 
+* Response: none
 
 ### E_SL_MSG_PDM_LOADED = 0x0302
 
-Source: ZiGate
+* Source: __ZiGate__
+* Description: ZiGate informs the correct load of the PDM into Memory. Zigate Ready
+* Data: none
+* Response: none
 
-Description: ZiGate informs the correct load of the PDM into Memory. Zigate Ready
 
 
-Data:
-
-none
-
-Response:
-
-none
-
-## Implementations
 
