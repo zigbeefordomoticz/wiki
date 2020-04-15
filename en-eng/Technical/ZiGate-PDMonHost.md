@@ -10,10 +10,11 @@ Instead the PDM storage will be delegated to the Host (the plugin).
 * bring the ZiGate HW limit from the EEPROM limit to the RAM limits
 
 
-### Expected issues
+### Potential traps.
 * As the PDM read/write will be done over the communication channel between ZiGate UART and plugin, we could expect some 
 latency.
 * The latency impacts are expected to be mainly around the time of pairing a new devices.
+* You need to have the Host __always__ up and running to get the Zigbee network alive. (with PDM on Zigate, the Zigate can remains active while Host like plugin can be down).
 
 
 ### References:
