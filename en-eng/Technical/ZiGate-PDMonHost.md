@@ -116,10 +116,10 @@ Could be one block out of many.
   | ---- | ---- | ----- |
   | Status | uint8 | 0x00 No data found ; 0x02 Sending Data |
   | RecordId | uint16 | RecordId of the data sent| 
-  | u16Datalength  | uint16 | total PDM record size in bytes |
-  | TotalBlocksToSend | uint16 | This number corresponds to the block id (starting 0) |
-  | u16BlocksSent | unint16 | total number of block expected |
-  | u16Size | uint16 | size of this particular block (number of bytes) |
+  | u16TotalRecordSize  | uint16 | total record size in bytes |
+  | u16TotalBlocks | unint16 | total number of expected blocks for this record |
+  | u16CurrentBlockId | uint16 | block number for this record |
+  | u16CurrentBlockSize | uint16 | size of this particular block (number of bytes) |
   | sWriteData | bytes | bytes of this record|
   
 * Response: __none__
