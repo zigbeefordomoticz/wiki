@@ -161,11 +161,13 @@ Could be one block out of many.
 
 * Data :
 
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | BitmapId | uint16 | Bitmap Counter | 
+  | startValue | uint24 | Start value for the bitmap counter |
+  
 * Response:
 
-PDM_E_STATUS_OK (success)
-PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
-PDM_E_STATUS_PDM_FULL (there is no space to store this bitmap)
 
 ### PDMDeleteBitmapRequest = 0x0205
 
@@ -175,10 +177,13 @@ PDM_E_STATUS_PDM_FULL (there is no space to store this bitmap)
 
 * Data :
 
-* Response:
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | BitmapId | uint16 | Bitmap Counter | 
+  
+* Response: 
 
-PDM_E_STATUS_OK (success)
-PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
+
 
 
 
@@ -205,22 +210,30 @@ PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
 
 * Data :
 
-* Response:
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | BitmapId | uint16 | Bitmap Counter | 
+  
+* Response: 0x8206
 
-PDM_E_STATUS_OK (success)
-PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
 
 
 ### E_SL_MSG_GET_BITMAP_RECORD_RESPONSE = 0x8206
 
 * Source: __Host__
 
-* Description:
+* Description: Response from Host to E_SL_MSG_GET_BITMAP_RECORD_REQUEST reqyest
 
 * Data :
 
 * Response :
 
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | status | uint8 |   |
+  | BitmapId | uint16 | Bitmap Counter | 
+  | value | uint24 | Value of result of the request |
+  
 
 
 ### E_SL_MSG_INCREMENT_BITMAP_RECORD_REQUEST = 0x0207
@@ -242,6 +255,10 @@ PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
 
 * Data:
 
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | BitmapId | uint16 | Bitmap Counter | 
+  
 * Response:
 
 PDM_E_STATUS_OK (success)
@@ -249,15 +266,22 @@ PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
 PDM_E_STATUS_PDM_FULL (no further EEPROM segments for the bitmap)
 PDM_E_STATUS_BITMAP_SATURATED_OK (increment made but segment now saturated)
 
+
+
 ### E_SL_MSG_INCREMENT_BITMAP_RECORD_RESPONSE = 0x8207
 
 * Source: __Host__
 
-* Description:
+* Description: Response from Host to the E_SL_MSG_INCREMENT_BITMAP_RECORD_REQUEST request
+    
 
 * Data:
 
-* Response:
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | BitmapId | uint16 | Bitmap Counter | 
+  
+* Response: none
 
 
 
@@ -267,9 +291,13 @@ PDM_E_STATUS_BITMAP_SATURATED_OK (increment made but segment now saturated)
 
 * Description: This function checks whether data associated with thd specified record ID exists in the EEPROM. If the data record exists, the function returns the data length, in bytes, in a location to which a pointer must be provided.
 
-* Data:
+* Data: 
 
-* Response:
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | RecordId | uint16 | RecordId | 
+  
+* Response: __0x8208__
 
 
 
@@ -277,11 +305,15 @@ PDM_E_STATUS_BITMAP_SATURATED_OK (increment made but segment now saturated)
 
 * Source: __Host__
 
-* Description:
+* Description: Response to E_SL_MSG_PDM_EXISTENCE_REQUEST from the Host.
 
 * Data:
-
-* Response:
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | RecordId | uint16 | RecordId | 
+  | status | uint8 | True (0x01) or False (0x00) |
+  
+* Response: none
 
 
 
