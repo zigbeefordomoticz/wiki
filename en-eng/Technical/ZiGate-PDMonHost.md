@@ -20,6 +20,7 @@ latency.
 ### References:
 * https://zigate.fr/documentation/deplacer-le-pdm-de-la-zigate/
 * https://zigate.fr/files/Pack_Dev_ZiGate_Host.zip
+* https://www.nxp.com/docs/en/user-guide/JN-UG-3116.pdf
 * https://github.com/fairecasoimeme/ZiGate/issues/280
 * https://github.com/fairecasoimeme/ZiGate/pull/281
 
@@ -52,7 +53,8 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 * Source: __Zigate__
 
-* Description: ZiGate request host to save a Record on PDM. This record could be sent in blocks (of max 255 bytes)
+* Description: This function saves the specified application data from RAM to the specified record in EEPROM. The record is identified by means of a 16-bit user-defined value.
+Could be broken in several blocks.
 
 * Data:
 
@@ -67,6 +69,10 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
     
     
 * Response: __0x8200__
+
+PDM_E_STATUS_OK (success)
+PDM_E_STATUS_INVLD_PARAM (specified record ID is invalid)
+PDM_E_STATUS_NOT_SAVED (save to EEPROM failed)
 
 
 
@@ -102,7 +108,8 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 ### E_SL_MSG_LOAD_PDM_RECORD_RESPONSE = 0x8201
 
 * Source: __Host__
-* Description: Send a the Data related to the RecordID requested. Could be one block out of many.
+* Description: This function reads the specified record of application data from the EEPROM and stores the read data in the supplied data buffer in RAM. The record is specified using its unique 16-bit identifier.
+Could be one block out of many.
   Tested with 128 bytes; Max block size is 256 Bytes
 * Data :
   | data | Type | Value |
@@ -118,17 +125,90 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 * Response: __none__
 
 
-
-### E_SL_MSG_GET_BITMAP_RECORD_REQUEST = 0x0206
+### E_SL_MSG_DELETE_ALL_PDM_RECORDS_REQUEST = 0x0202
 
 * Source: __Zigate__
 
-* Description:
+* Description: This function deletes all records in EEPROM, including both application data and stack context data, resulting in an empty PDM file system. The EEPROM segment Wear Count values are preserved (and incremented) throughout this function call.
+
+* Data : none
+
+* Response: none
+
+
+
+### E_SL_MSG_DELETE_PDM_RECORD_REQUEST = 0x0203
+
+* Source: __Zigate__
+
+* Description: This function deletes the specified record of application data in EEPROM.
+
+* Data :
+  | data | Type | Value |
+  | ---- | ---- | ----- |
+  | RecordId | uint16 | RecordId of the data sent| 
+  
+* Response: none
+
+
+
+### PDMCreateBitmap = 0x0204
+
+* Source: __Zigate__
+
+* Description:The function creates a bitmap structure for a counter in a segment of the EEPROM. A user-defined ID and a start value for the bitmap counter must be specified. The start value is stored in the counter’s header. A bitmap is created to store the incremental value of the counter (over the start value). This bitmap can subsequently be incremented (by one) by calling the function PDM_eIncrementBitmap(). The incremental value stored in the bitmap and the start value stored in the header can be read at any time using the function PDM_eGetBitmap().If the specified ID value has already been used or the specified start value is NULL, the function returns PDM_E_STATUS_INVLD_PARAM. If the EEPROM has no free segments, the function returns PDM_E_STATUS_USER_PDM_FULL. 
+    
 
 * Data :
 
 * Response:
 
+PDM_E_STATUS_OK (success)
+PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
+PDM_E_STATUS_PDM_FULL (there is no space to store this bitmap)
+
+### PDMDeleteBitmapRequest = 0x0205
+
+* Source: __Zigate__
+
+* Description: This function deletes the specified counter in the EEPROM. The counter must be identified using the user-defined ID value assigned when the bitmap was created using the function PDM_eCreateBitmap().The function can be used to formally delete a counter. It clears the current segment occupied by the counter and also all the older (expired) segments used for the counter. This deletion increments the Wear Counts for these segments and should be done only if absolutely necessary, as the expired segments can be re-used directly via the PDM without formal deletion.
+
+* Data :
+
+* Response:
+
+PDM_E_STATUS_OK (success)
+PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
+
+
+
+### E_SL_MSG_GET_BITMAP_RECORD_REQUEST = 0x0206
+
+* Source: __Zigate__
+
+* Description: The function reads the specified counter value from the EEPROM.
+    The counter must be identified using the user-defined ID value assigned when the counter was created using
+    the function PDM_eCreateBitmap().
+    The function returns the counter’s start value (from the counter’s header) and incremental value
+    (from the counter’s bitmap).
+    The counter value is calculated as:
+        Start Value + Incremental Value
+    or in terms of the function parameters:
+        *pu32InitialValue + *pu32BitmapValueNote
+    that the start value may be different from the one specified when the counter was created,
+    as the start value is updated each time the counter outgrows a segment and the bitmap is
+    reset to zero.
+    This function should be called when the device comes up from a cold start,
+    to check whether a bitmap counter is present in EEPROM.
+    If the specified ID value has already been used or a NULL pointer is provided for the received values,
+    the function returns PDM_E_STATUS_INVLD_PARAM.
+
+* Data :
+
+* Response:
+
+PDM_E_STATUS_OK (success)
+PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
 
 
 ### E_SL_MSG_GET_BITMAP_RECORD_RESPONSE = 0x8206
@@ -147,13 +227,27 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 * Source: __Zigate__
 
-* Description:
+* Description: The function increments the bitmap value of the specified counter in the EEPROM.
+    The counter must be identified using the user-defined ID value assigned when the counter
+    was created using the function PDM_eCreateBitmap().
+    The bitmap can be incremented within an EEPROM segment until its value saturates (contains all 1s).
+    At this point, the function returns the code PDM_E_STATUS_SATURATED_OK.
+    The next time that this function is called, the counter is automatically moved to a
+    new segment (provided that one is available), the start value in its header is increased appropriately and
+    the bitmap is reset to zero.
+    To avoid increasing the segment Wear Count, the old segment is not formally deleted before a new segment is started.
+    If the EEPROM has no free segments when the above overflow occurs,
+    the function returns the code PDM_E_STATUS_USER_PDM_FULL.
+    If the specified ID value has already been used, the function returns PDM_E_STATUS_INVLD_PARAM.
 
 * Data:
 
 * Response:
 
-
+PDM_E_STATUS_OK (success)
+PDM_E_STATUS_INVLD_PARAM (an invalid parameter value was supplied)
+PDM_E_STATUS_PDM_FULL (no further EEPROM segments for the bitmap)
+PDM_E_STATUS_BITMAP_SATURATED_OK (increment made but segment now saturated)
 
 ### E_SL_MSG_INCREMENT_BITMAP_RECORD_RESPONSE = 0x8207
 
@@ -171,7 +265,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 
 * Source: __Zigate__
 
-* Description:
+* Description: This function checks whether data associated with thd specified record ID exists in the EEPROM. If the data record exists, the function returns the data length, in bytes, in a location to which a pointer must be provided.
 
 * Data:
 
