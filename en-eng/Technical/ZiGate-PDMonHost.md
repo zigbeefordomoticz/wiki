@@ -54,7 +54,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 * Source: __Zigate__
 
 * Description: This function saves the specified application data from RAM to the specified record in EEPROM. The record is identified by means of a 16-bit user-defined value.
-Could be broken in several blocks.
+Could be broken in several blocks (of max 256bytes)
 
 * Data:
 
@@ -74,6 +74,8 @@ PDM_E_STATUS_OK (success)
 PDM_E_STATUS_INVLD_PARAM (specified record ID is invalid)
 PDM_E_STATUS_NOT_SAVED (save to EEPROM failed)
 
+* Return
+When the all data has been received 
 
 
 ### E_SL_MSG_SAVE_PDM_RECORD_RESPONSE = 0x8200
@@ -109,8 +111,8 @@ PDM_E_STATUS_NOT_SAVED (save to EEPROM failed)
 
 * Source: __Host__
 * Description: This function reads the specified record of application data from the EEPROM and stores the read data in the supplied data buffer in RAM. The record is specified using its unique 16-bit identifier.
-Could be one block out of many.
-  Tested with 128 bytes; Max block size is 256 Bytes
+If needed, the application data have to be splitted into blocks of maximum 256bytes.
+
 * Data :
   | data | Type | Value |
   | ---- | ---- | ----- |
@@ -119,7 +121,7 @@ Could be one block out of many.
   | u16TotalRecordSize  | uint16 | total record size in bytes |
   | u16TotalBlocks | unint16 | total number of expected blocks for this record |
   | u16CurrentBlockId | uint16 | block number for this record |
-  | u16CurrentBlockSize | uint16 | size of this particular block (number of bytes) |
+  | u16CurrentBlockSize | uint16 | size of this particular block (number of bytes, Maximum 256bytes) |
   | sWriteData | bytes | bytes of this record|
   
 * Response: __none__
@@ -131,7 +133,7 @@ Could be one block out of many.
 
 * Description: This function deletes all records in EEPROM, including both application data and stack context data, resulting in an empty PDM file system. The EEPROM segment Wear Count values are preserved (and incremented) throughout this function call.
 
-* Data : none
+* Data : __none__
 
 * Response: none
 
