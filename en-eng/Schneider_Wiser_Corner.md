@@ -512,6 +512,30 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 201_e031_1_normal_reportable_change=1
 ```
 
+# Attribut Thermostat
+| cluster | cluster name | Attribut | purpose | value | type|Read / Write |
+|---|---|---|---|---|---|---|
+|0x0000 | Basic | 0x0005 | Mode Identifier |EH-ZB-RTS |0x42| Read|
+|0x0000 | Basic | 0x0007 | Power source | 0x03 |0x30 (8bits enum)| Read|
+|0x0000 | Basic | 0x0020 | Location Description| Zigate zone |0x342| Write|
+|0x0000 | Basic | 0x0013 | Alarm Mask | 0x00 |0x18 (8bits bitmap)| Read|
+|0x0000 | Basic | 0xe000 | brickSWVersion | SNP.R.04.01.14 |0x42| Read|
+|0x0000 | Basic | 0xe001 | applSWVersion | RTS.R.04.01.00 |0x42| Read|
+|0x0000 | Basic | 0xe002 | version  | RTS.R.00.00.2 |0x42| Read|
+|0x0000 | Basic | 0xe050 | Commissioned  | 0x01 |0x10| Write|
+|0x0000 | Basic | 0x5011 | Language  | en,fr,... |0x42| Write|
+||||||||
+|0x0001 | Power Configuration | 0x0035 | Alarm Mask  | 0x01 |0x18 (8bits bitmap)| Read|
+|0x0001 | Power Configuration | 0x0036 | Battery Voltage Minimum Threshold  | voltage |0x20| Read|
+|0x0001 | Power Configuration | 0x0020 | Battery Voltage  | voltage |0x20| Read|
+||||||||
+|0x0201 | Thermostat | 0x0012 | Occuppied Heating Setpoint  | Temperature |0x29| Read to Coordinnator|
+|0x0201 | Thermostat | 0x0015 | Min Heating Setpoint  | Temperature |0x29| Read to Coordinnator|
+|0x0201 | Thermostat | 0x0016 | Max Heating Setpoint  | Temperature |0x29| Read to Coordinnator|
+|0x0201 | Thermostat | 0xe010 | Thermostat Mode  | 0x01 (Manual) |0x30| Read to Coordinnator|
+||||||||
+|0x0402 | Thermostat Measurement | 0x0000 | Measure Value  | Temperature |0x29| Read|
+
 
 
   
