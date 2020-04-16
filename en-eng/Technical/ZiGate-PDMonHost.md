@@ -36,6 +36,8 @@ mainly be managed in memory with a python3 dictionnary and then store on disk vi
 
 From the host side, you cannot figure out if the ZiGate state is the result of a cold restart (powered off) or hot restart (nothing change from last connection).
 
+Do consider that the communication will go through the serial line (for PiZigate, USB-Zigate), and there is a limitation in terms of packet size. When transfering block of data the max size is 256bytes, and you need for record larger than 256 bytes.
+
 ## Hot restart
 
 * ZiGate has been powered off via an unplug/plug
@@ -47,7 +49,7 @@ From the host side, you cannot figure out if the ZiGate state is the result of a
 * ZiGate is still alive.
 * ZiGate is ready.
 
-## ZiGate APIs for PDMonhost
+## ZiGate APIs for PDM on Host
 
 ### E_SL_MSG_SAVE_PDM_RECORD = 0x0200
 
