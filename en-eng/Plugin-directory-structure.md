@@ -9,4 +9,3 @@ Starting with release 4.1 the plugin directory structure is :
 | +    | Modules   | All python modules | read only for user running domoticz (except when updating ) |
 | +    | Conf      | Configuration file | Must be RW for user to update config file |
 | +    | Data      | Live data as plugin databases ( DeviceList and GroupList ) | must be RW for user running domoticz|
-| +    | Zdatas    | Live data where are store discovered devices (when enabled) | must be RW for user running domoticz|
