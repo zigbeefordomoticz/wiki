@@ -9,6 +9,8 @@ This will be applicable for most of the devices as soon as they support binding 
 
 ATTENTION: it will required to have the Zigate up and running to have the binding operationnal. Do not expect to have binding working while the Zigate is Off.
 
+While it is possible to use the Double bang remote switch to bind , the 'Remote Shutter' seems not to accept any bindings
+
 ## Step 1 : Pairing
 
 1. Put the Zigate in Pairing mode
