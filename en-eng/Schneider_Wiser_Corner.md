@@ -537,8 +537,13 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 |0x0402 | Thermostat Measurement | 0x0000 | Measure Value  | Temperature |0x29| Read|
 
 
+# thermostat commands
 
-  
+| cluster | cluster name | command | purpose | payload | 
+|---|---|---|---|---|
+|0x0201 | Thermostat | 0xe0 | setpoint | zone 0x01 + temperature in centi degree (uint16)  + end 0xff |
+|0x0201 | Thermostat | 0xe1 | set fip mode | zone 0x01 + fip mode  + prio  (0x01)  end 0xff |
+
   Sources of information:
   * https://studylibfr.com/doc/2872316/compteur-d-%C3%A9nergie-sans-fil-s%C3%A9rie-em4300
   * https://damrexelprod.blob.core.windows.net/medias/1951d12a-39f3-4317-86c8-f95b6fb13ac5
