@@ -255,16 +255,16 @@ Cluster Out 2: 0402 (Temperature Measurement)
 
 ### Cluster
 
-0x0000/0xe011 Device Status
-0x0000/0xe010 Current Mode
-0x0000/0xe050 COMMISSIONING 
-0x0000/0x5011 ATTRIBUTE_BASIC_LANGUAGE
+* 0x0000/0xe011 Device Status
+* 0x0000/0xe010 Current Mode
+* 0x0000/0xe050 COMMISSIONING 
+* 0x0000/0x5011 ATTRIBUTE_BASIC_LANGUAGE
 
 
-0x0201/0xe010 ATTRIBUTE_THERMOSTAT_ZONE_MODE
-0x0201/0xe011 HACT Configuration
+* 0x0201/0xe010 ATTRIBUTE_THERMOSTAT_ZONE_MODE
+* 0x0201/0xe011 HACT Configuration
 
-0x0201/0xe020 Fil Pilot Mode
+* 0x0201/0xe020 Fil Pilot Mode
 
 
 
@@ -433,9 +433,9 @@ At that stage, someone set a target temperature on the Application managing the 
 ## Decoding Cluster 0x0201 on Attribute 0xe011
 
 ATTRIBUTE_THERMOSTAT_HACT_CONFIG
-0x00 - Conventional (ON/OFF)
-0x02 - Setpoint (set temperature)
-0x03 - FIP - mode fil pilote 
+*  0x00 - Conventional (ON/OFF)
+* 0x02 - Setpoint (set temperature)
+* 0x03 - FIP - mode fil pilote 
 
 
 
