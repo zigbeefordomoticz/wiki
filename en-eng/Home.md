@@ -64,3 +64,5 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [How to Configure ZiGate in Zigbee Sniffer](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-Sniffer.md)
 * [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
 * [Coexistence between Wifi and Zigbee](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Co-existence-of-IEEE-802.15.4-at-2.4-GHz-and-Zigbee.md)
+* [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
+
