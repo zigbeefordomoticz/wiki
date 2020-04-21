@@ -2,6 +2,8 @@ Purpose is to document the list of Hardware devices **tested** with the Zigate U
 
 Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
 
+You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/zigate.html)
+
 ## BITRON HOME 
 https://www.conrad.com/o/bitron-home-2805047
 
