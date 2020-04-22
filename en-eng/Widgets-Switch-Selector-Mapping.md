@@ -20,36 +20,7 @@
 | Xiaomi    |  86sw1  | Select | No |  Off|Click|Double Click|Long Click                             
 | Aqara     | Xcube   | Select | Yes | Off|Shake|Alert|Free_Fall|Flip_90|Flip_180|Move|Tap|Clock_Wise|Anti_Clock_Wise |
 | Aqara     | Vibration | Select | No |   Off|Tilt|Vibrate|Free Fall |                             
-                               
-               
-
-               
-              if t == 'INNR_RC110_SCENE': # INNR Remote Control
-               self.ListOfDevices[NWKID]['Status'] = "inDB"
-               Options = {"LevelActions": "||||||||||||", "LevelNames": "Off|On|click_up|click_down|move_up|move_down|stop|scene1|scene2|scene3|scene4|scene5|scene6", \
-                          "LevelOffHidden": "false", "SelectorStyle": "1"}
-               unit = FreeUnit(self, Devices)
-               myDev = Domoticz.Device(DeviceID=str(DeviceID_IEEE), Name=deviceName( self, NWKID, 'SCENES', DeviceID_IEEE, Ep), 
-                               Unit=unit, Type=244, Subtype=62, Switchtype=18, Options=Options)
-               myDev.Create()            
-               
-              if t == 'INNR_RC110_LIGHT': # INNR Remote Control
-               self.ListOfDevices[NWKID]['Status'] = "inDB"
-               Options = {"LevelActions": "||||||", "LevelNames": "Off|On|click_up|click_down|move_up|move_down|stop", \
-                          "LevelOffHidden": "false", "SelectorStyle": "1"}
-               unit = FreeUnit(self, Devices)
-               myDev = Domoticz.Device(DeviceID=str(DeviceID_IEEE), Name=deviceName( self, NWKID, 'LIGHTS', DeviceID_IEEE, Ep),             
-               
-               
-            if t == "SwitchIKEA":
-               self.ListOfDevices[NWKID]['Status'] = "inDB"
-               Options = {"LevelActions": "||||", "LevelNames": "Off|On|Push Up|Push Down|Release", \
-                          "LevelOffHidden": "false", "SelectorStyle": "1"}              
-               
-               
-            if t == "Ikea_Round_5b": # IKEA Remote 5 buttons round one.
-               self.ListOfDevices[NWKID]['Status'] = "inDB"
-               Options = {"LevelActions": "|||||||||||||", "LevelNames": "Off|ToggleOnOff|Left_click|Right_click|Up_click|Up_push|Up_release|Down_click|Down_push|Down_release|Right_push|Right_release|Left
-                          "LevelOffHidden": "false", "SelectorStyle": "1"}
-               unit = FreeUnit(self, Devices)              
-                          
+| INNR      | RC 110 mode scene | Select | No | Off|On|click_up|click_down|move_up|move_down|stop|scene1|scene2|scene3|scene4|scene5|scene6 |
+| INNR      | RC 110 mode light | Select | No | Off|On|Off|On|click_up|click_down|move_up|move_down|stop| 
+| IKEA      | Switch | Select | No | Off|On|Push Up|Push Down|Release |
+| IKEA  | Round 5 but | Select | No | Off|ToggleOnOff|Left_click|Right_click|Up_click|Up_push|Up_release|Down_click|Down_push|Down_release|Right_push|Right_release|Left |
