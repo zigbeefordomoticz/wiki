@@ -4,7 +4,7 @@
 
 | Brand | Device | Style | Off Hidden | Selector 1 | Selector 2 | Selector 3 | Selector 4 | Selector 5 | Selector 6 | Selector 7 |  Selector 8 |  Selector 9 |  Selector 10 |  Selector 11 |  Selector 12 |  Selector 13 |
 | ------ | ----- | ----- | ----------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
-| Schneider | ThermoModeEHZBRTS | Button | No | Off | Manual | Schedule | Manual Energy Saver | Schedule Energy Saver | Holiday | Holiday Frost Protection |
+| Schneider | Mode RTS | Button | No | Off | Manual | Schedule | Manual Energy Saver | Schedule Energy Saver | Holiday | Holiday Frost Protection |
 |  | ThermoMode | Button | No | Off|Auto|Cool|Heat|Force Heat |
 | Schneider | HACT | Button | Yes | Off|Conventional|Set Point|Fil Pilote |
 |           | FIP  | Button | Yes | Off|Confort|Confort -1|Confort -2|Eco|Frost Protection|Off |
