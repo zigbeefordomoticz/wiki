@@ -236,7 +236,12 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
 
 More informations/scripts .... can be found here: https://github.com/pipiche38/Capture-OTA-from-Wireshark
 
+## Pairing Mecansism
 
+The HUB seems in addition of having Time Server, seems to store in the 0x0000/0xf000 the time since the HUB has been powered on. This attribute server as of time of operation.
+At Pairing, the HUB is broadcasting this value to other devices, and the up coming devices is requesting this attribute also from the oher already connected devices. The Operating time ( 0x0000/0xf000) is reset to 0 after Power Off/On
+
+ 
 
 ## Other matters
 
