@@ -29,6 +29,7 @@ The Config file name can be found : `Conf/Certified/Philips/SML001.json`
 | _version  | string | Option | a version related to this file |
 | Ep        | JSON | Mandatory | Device Endpoint list and attributes |
 | Type      | string | Mandatory |  not used any more |
+| ClusterToUnbind| List of strings | Option | List of Cluster to unbind from Zigate before |
 | ClusterToBind | list of strings | Mandatory | List of Cluster to bind to Zigate |
 | bindEp    | list of strings | Option |  Restricted List of device Endpoint to bind |
 | overwriteZigateEpBind | string | Zigate Endpoint is "01" , you might want to over write it |
