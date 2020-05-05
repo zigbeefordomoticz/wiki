@@ -68,6 +68,12 @@ When the led is red (not paired):
  
 ## Internals
 
+### How the Pairing works
+
+* At HUB reset (or OFF/ON), the HUB is sending a Write Attribute No Response and broadcast to Cluster 0x0000 , Attribute 0xf000 with a value of 0x00000000
+* During the pairing of a device, this device, will request in unicast mode via a Read Attribute each of the existing main powered devices (including the controler ) for Cluster 0x0000 Attrribute 0xf000 value
+* As described a little bit later 0x0000/0xf000 reflects the operation time since the latest reset or power on.
+
 ### Wireless devices
 
 * Not able to use the Tap-Tap for pairing the wireless with an equipment. 
