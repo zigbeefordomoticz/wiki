@@ -542,7 +542,7 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 | cluster | cluster name | command | purpose | payload | 
 |---|---|---|---|---|
 |0x0201 | Thermostat | 0xe0 | setpoint | zone 0x01 + temperature in centi degree (uint16)  + end 0xff |
-|0x0201 | Thermostat | 0xe1 | set fip mode | zone 0x01 + fip mode  + prio  (0x01)  end 0xff |
+|0x0201 | Thermostat | 0xe1 | set fip mode | zone 0x01 + fip mode (0-confort, 1-confort -1, 2 confort -2, 3-eco, 4-FrostP, 5-off) + prio  (0x01)  end 0xff |
 
   Sources of information:
   * https://studylibfr.com/doc/2872316/compteur-d-%C3%A9nergie-sans-fil-s%C3%A9rie-em4300
