@@ -9,10 +9,6 @@ you/we don't have any control to that.
 
 ## What to do
 
-1. identify what router you want to use for the pairing process . You need to get its Short Network Address (Short Id). 
-This is a 4 hex number, that you can find via the Device Management page
-
-
 1. Make sure the Zigate is not in pairing mode, if yes, Stop it
 
 1. From the Plugin Web User Interface
@@ -23,3 +19,6 @@ This is a 4 hex number, that you can find via the Device Management page
 1. In the _Accept new Hardware on router__ select from the List the router you want to use
 1. Enable the Pairing for 4 minutes
   
+__Attention__
+
+It may happen that after pairing a device the all routers switches to pairing mode. If you want to continue pairing only from that specific device, you need to redo the all cycle
