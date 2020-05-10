@@ -15,20 +15,11 @@ This is a 4 hex number, that you can find via the Device Management page
 
 1. Make sure the Zigate is not in pairing mode, if yes, Stop it
 
-1. For now we do not have any user interface yet, so you'll have to go via a Linux command
+1. From the Plugin Web User Interface
 
-  We assume the command will be executed from the Domoticz server itself.
-  
-  ```
-  wget --method=PUT --body-data='{"PermitToJoin": 120,"Router": "fd67"}' --header='Content-Type:application/json' http://127.0.0.1:9440/rest-zigate/1/permit-to-join
+![Pairing From a Router](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/PairingOnRouter.png)
 
-  ```
-  
-  Where :
-  * "PermitToJoin": __120__,"Router": "__fd67__" is the only piece you need to update
-  * __120__ stands for 120 secondes
-  * "__fd67__" is the ShortId of the router you have to identified
-  
-  __Attention__
-  * Do note that there is __no quotes__ for the PermitToJoin time duration
+1. Click on the __Provisionning__ menu
+1. In the _Accept new Hardware on router__ select from the List the router you want to use
+1. Enable the Pairing for 4 minutes
   
