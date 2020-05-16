@@ -11,7 +11,7 @@ It is given in an arbitrary units (didn't find any more information in the NXP Z
 * Failure (Transmission Failure) is the number of failed transmissions detected during the scan
 * Energy-Level measurement reports energy-level measurements (the value 255 indicates there is too much interferences on the channel).
 
-In short, higher the value is , indicates a high is the interferences, worst it is.
+In short, higher the value is , indicates a high interferences, worst it is. Better to select an other channel with lower level.
 
 ## Graphical presentation
 
