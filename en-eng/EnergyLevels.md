@@ -18,7 +18,7 @@ In short, higher the value is , indicates a high interferences, worst it is. Bet
 You can get access to the Graphical presentation via the Web Admin Page in the Network Tab and Select Energy Level
 
 
-![Export Device List raw (json)](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/InterferenceLevels.png)
+![Export Device List raw (json)](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/InterferenceLevels2.png)
 
 
 Sources:
