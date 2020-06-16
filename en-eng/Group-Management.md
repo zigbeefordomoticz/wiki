@@ -1,6 +1,9 @@
+
+
 ## 1. Purpose
 The purpose is to offer the possibility to use the Zigate (Zigbee) group functionality.
 Starting Plugon 4.7 and the Plugin Web Admin Interface, the group management is much user friendly, but still need further developement to reach a nice User Experience.
+With Plugin 4.9, we have made a great move by removing the "batch" mode and 
 
 ## 2. Pre-requisites
 
@@ -23,11 +26,11 @@ Enable the Group Management feature (which is disabled by default)
 ### 4.2 Check for any pre-existing groups
 
 Before creating any group, you must check if there are no existing group already on the network. 
-You need to restart the plugin in order to check that.
+To do so you can go to the Admin Group sub menu and then request a Full scan.
 
-Several minutes ( around 10' ) after plugin start the Group should be ready ( we are envioning to have a status reported in the Web Admin status bar
+![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/AdminGroupMenu.png)
 
-and you can access the Group User Interface 
+This will consist in quering each main powered devices for the group membership. As an outcome group could be created and available in the Group Management sub menu.
 
 ![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/GroupManagementMenu.png)
 
@@ -40,7 +43,7 @@ You can specify the Name of the group, and then you can select from the list the
 
 You have also the possibility to add Zigate to that group. This is required for instance if you want to retreive the status of an Ikea Remote.
 
-Save the work and then restart the plugin in order to have the group created
+Save the work and the group membership request will be sent to each device listed. This could takes few seconds, so in case you don't see it , just do a refresh of the page.
 
 ### 4.4 Updating a Group
 
@@ -52,7 +55,7 @@ Save the work and then restart the plugin in order to have the group updated
 
 You can either remove the group from Domoticz by removing the corresponding widget, or use the Group Management and remove the group you want to.
 
-Save the work and then restart the plugin in order to have the group removed
+Save the work, it will trigger to request group membership removal to the correspondingd devices.
 
 ## 5 Special cases ( IKEA REMOTES)
 
@@ -87,17 +90,5 @@ If you need to have the group '0000' created, you can enable it via the Settings
 ## 6 Warnings
 
 * In the current implementation of the Zigate and its plugin, when Zigate is sending a command to an object or a list of objects, there is no guaranty that the object receives the command. 
-* If you want to force a rescan of group membership (like if you have added a new device), you can simply remove the file `Data/GroupList-xx.pck` and restart the plugin
+* If you want to force a rescan of group membership (like if you have added a new device), you can go to the Admin Group menu and ether request a Full Scan or a selected scan where you will select the devices you want to query
 * I have seen a better way to work - and discover group membership - when the bulbs are on. I highly recommending when you are configuring your groups to have all existing groups on before , and get all bulbs you want to add to a group On as well.
-
-
-## 5.1 Troubleshooting
-
-If the plugin don’t have created any group widget and you are sure that you have a remote that create zigbee group and this remote is paired with the zigate and an other device that is also paired with the zigate try to:
-
-    1. Remove the file  Data/GroupList-xx.pck
-    1. Verify that the group management is enable 
-    1. remove the file  Conf/ZigateGroupsConfig-xx.txt
-    1. Allow new hardware  in Domoticz Configuration
-    1. Restart the zigate plugin
-
