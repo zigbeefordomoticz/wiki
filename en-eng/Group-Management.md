@@ -64,11 +64,8 @@ Save the work, it will trigger to request group membership removal to the corres
 In order to use an IKEA/Tradfri:
 1. Pair/Commission each single object to the Zigate (including the remote controller)
 1. Pair the Remote Control with each Bulb you want to be part of such group
-1. Re-Start the plugin 
-   1. During the startup of the Plugin it will check each single main powered device (which have cluster 0x0004 ) and will request the list of group membership.
-   1. With all groups discovered during the scan of each device, the plugin will create corresponding Device widget in Domoticz under the name of "`<hardware name> - Zigate Group <group id>`"
+1. Request a Scan from Admin -> Group and select the Bulb you have paired the remote with
 1. The group created will be then visible under the Group Management
-
 
 ### 5.2. Retrieving Remote command events
 
