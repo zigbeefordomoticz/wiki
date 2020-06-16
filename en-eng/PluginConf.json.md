@@ -33,6 +33,25 @@ Some of the Domoticz parameters like on which port Domoticz listen for getting a
 | port      | 8080    | on which port Domoticz listen to accept API requests |
 
 
+## Group Management
+
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| Group is On if one device is On (otherwise needs all devices On) | enable | If you disable it, you will have the same behaviour as on the Philips Hue hub. The group will be on only when ALL devices are On. |
+| reComputeGroupState | enable | The group state will be regularly computed based on the state of the devices attached to that group. |
+| forceGroupDeviceRefresh | enable | When doing a group action, like On/Off, a request will be made to each device part of the group for their current status |
+
+## Command transitions for Lights
+
+Those parameters enable smooth transitions from their current status to the desire one. This is applicable to all Bulbs and Groups.
+
+| parameter | default | description |
+| --------- | ------- | ----------- |
+| Transition for Hue           | instantaneous | |
+| Transition for Color Temp    | instantaneous | Transition time in 10th of seconds when changing White color |
+| Transition for RGB color     | instantaneous | Transition time in 10th of seconds when changing the Color |
+| Transition for Move to Level | instantaneous | Transition time in 10th of seconds when diming |
+
 ## Web Interface
 
 Those are parameters which will influence the behaviour of the plugin internal web server. We do recommend to not touch it.
@@ -53,6 +72,8 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | parameter | default | description |
 | --------- | ------- | ----------- |
 | pingDevicesFeq | 3600 | Ping device frequency every hour |
+| pollingPhilips | disable | For Philips you need to enable polling in order to get thei status. We recommend a value of 300 or above which correspond of number of seconds of polling |
+| pollingGledopto | disabled |For Gledopto you need to enable polling in order to get thei status. We recommend a value of 300 or above which correspond of number of seconds of polling |
 | polling0000 | 8600 | retreiving device basic info every day |
 | polling0001 | 86400 | retreving device power info every day |
 | pollingONOFF | 900 | retreving device On/off status every 15' |
@@ -105,19 +126,6 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | TXpower_set | 0 | Power attenuation. 0: 0dBM, 1: -9 dBM, 2: -20dBM, 3: -32dBM |
 | extendedPANID | 0 | You can force the Extended PAN Id, this would required a full Erase PDM |
 
-
-## CommandTransition
-
-* Not implemented
-
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| moveToHueSatu | 0 | define the tenth of second of transition betwen one level to the next level |
-| moveToColourTemp | 0 | define the tenth of second of transition betwen one level to the next level |
-| moveToColourRGB | 0 | define the tenth of second of transition betwen one level to the next level |
-| moveToLevel | 0 | define the tenth of second of transition betwen one level to the next level |
-
-
 ## Over The Air Upgrade
 
 * Works currently for LEDVANCE and TRADFRI products
@@ -127,7 +135,9 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | batteryOTA | disable | enable battery upgrade |
 | waitingOTA | 3600 | delay in second before starting the Over-the-Air upgrade |
 
-## Verbose
+## Verbose 
+
+Menu has been moved to the Tool Debug sub menu
 
 | parameter | default | description |
 | --------- | ------- | ----------- |
