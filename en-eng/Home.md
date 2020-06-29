@@ -19,7 +19,8 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 
 * [Plugin Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md)
 * [Plugin Installation on Synology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation-on-Synology-NAS.md)
-* [Installation with Docker](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Docker-Domoticz.md)
+* [Installation with Docker (thanks to zaraki673)](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Docker-Domoticz.md)
+* [Considering when installing on Windows]( https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-windows.md )
 * [PiZiGate installation on RPI3B+ (thanks to Pierre Gielen](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B%2B-Cookbook.md)
 * [PiZiGate installation on Fedora29 distribution](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate_on_Fedora.md)
 * [Pluging Administration](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md)
