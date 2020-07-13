@@ -52,6 +52,8 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | HS2WD-E     | Switch Selector Off/Alarm/Siren/Strobe | Siren and Strobe | Fully Op. | 4.4 with Firm 3.1a |
+| HS1SA-E     | Smoke Detector   | | Fully Op. | 4.10 with Firm 3.1c|
+| HS1CA-M     | CO Detector    | | Fully Op. | 4.10 with Firm 3.1c|
 
 
 ## IKEA Tradfri
