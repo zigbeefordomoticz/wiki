@@ -2,26 +2,28 @@
 
 ## Profalux behaviour
 
-Lorsque le volet sort du réseau, il cherche un autre réseau ouvert
+When the Shutter leave the network, it searches for an open network
 
-* S’il en trouve un :
-  1. Le moteur fait un 2ème aller-retour. L’aller-retour est un retour d’information pour dire que le moteur a trouvé un réseau ouvert et est rentré dedans (le 1er aller-retour se fait lors de la prise en compte de la séquence de touche : R + UP)
-  1. L’ensemble des volets fait un aller-retour
-  1. La LED de la TS clignote vert toutes les secondes pour dire qu’elle recherche un réseau
-Lorsque la TS rejoint le réseau et s’appaire avec le moteur celui-ci fait un 3ème aller-retour 
-  1. La LED de la TS s’arrête de clignoter (vert rapide puis plus rien)
 
-* S’il n’en trouve pas :
-  1. Il monte son propre réseau : double aller-retour
-  1. Il ouvre son réseau 
-  1. Il attend une TS
-  
-* Si la TS ne trouve pas le moteur : 
-  1. elle clignote rouge
-  1. Le moteur se reset après 3 min (le moteur fait un aller-retour)
-  1. Faire 5 x R sur la TS pour la reseter 
-  1. Attendre que la LED arrête de clignoter
-  1. Appuyer sur STOP pour chercher un réseau ouvert (celui du moteur reseté)
+* If an open network is found :
+  1. Shutter do a 2nd Up/Down. Up/Down is to inform that shutter found an Open Network and is in. The first Up/down is down when receiving R + UP.
+  1. All shutter will do an Up/Down
+  1. The Remote Led has a Green blink every second to indicate "network search"
+  1. When the remote joins the network and get paired with the shutter, the shutter will do a 3rd Up/Down
+  1. The Remote Led will stop blinking ( fast Green then stop)
+
+* If no network found :
+  1. The shutter will create it's own network and will notfiy by a double Up/Down
+  1. Open the new created Network
+  1. Get the remote to join
+
+* If the Remote doesn't find its associated shutter (factory) :
+  1. Led blink Red
+  1. Shutter will reset after 3 minutes ( one Up/Down )
+  1. Do a 5 time R on the remote to get it reset
+  1. Hold until the Led stop blinking
+  1. Press stop to look for a network (the one of the reseted shutter)
+
    
    
 ## Pairing Process
