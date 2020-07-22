@@ -5,7 +5,7 @@
 
 The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02/03/association-des-volets-profalux-a-la-zigate/ )
 
-1. Reset of Shutter and Remote command
+* Reset of Shutter and Remote command
 
    1. Check that Zigate is not in pairing mode.
    1. 5 times on R (back side of remote)
@@ -16,19 +16,22 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
    
    You can check that the remote command the shutter. In case not, please consult the Profalux documentation
    
-1. Pairing of Shutter
+* Pairing of Shutter
    1. Switch Zigate to pairing mode ( Permit to Join, or use the Provisionning function from Web Admin)
-   ___Any Shutter part of the network will do an Up/Down___
+      ___Any Shutter part of the network will do an Up/Down___
+      
    1. Press once on R (back side of remote)
       ___The remote Led should blink Once. (if the remote doesn't blink the request as not been taken)___
+      
    1. Press UP
    
-   The shutter should go up-down
-   ___The Shutter and the Remote will go out of the Zigbee network, and search for an open (pairing) network.___
-   ___All Shutter and the one you want to add are doing an Up/Down, which confirm the correct pairing___
+   1. The shutter should go up-down
+      ___The Shutter and the Remote will go out of the Zigbee network, and search for an open (pairing) network.___
+      
+   1. ___All Shutter and the one you want to add are doing an Up/Down, which confirm the correct pairing___
    
    1. When the remote Led do not flash anymore press STOP
-   ___This will close the network and complete the pairing of a new Shutter___
+      ___This will close the network and complete the pairing of a new Shutter___
    
 ## Findings
 
