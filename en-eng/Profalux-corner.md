@@ -1,6 +1,29 @@
 # Purpose is to document all findings around Profalux Zigbee blind/shutter
 
+## Profalux behaviour
 
+Lorsque le volet sort du réseau, il cherche un autre réseau ouvert
+
+* S’il en trouve un :
+  1. Le moteur fait un 2ème aller-retour. L’aller-retour est un retour d’information pour dire que le moteur a trouvé un réseau ouvert et est rentré dedans (le 1er aller-retour se fait lors de la prise en compte de la séquence de touche : R + UP)
+  1. L’ensemble des volets fait un aller-retour
+  1. La LED de la TS clignote vert toutes les secondes pour dire qu’elle recherche un réseau
+Lorsque la TS rejoint le réseau et s’appaire avec le moteur celui-ci fait un 3ème aller-retour 
+  1. La LED de la TS s’arrête de clignoter (vert rapide puis plus rien)
+
+* S’il n’en trouve pas :
+  1. Il monte son propre réseau : double aller-retour
+  1. Il ouvre son réseau 
+  1. Il attend une TS
+  
+* Si la TS ne trouve pas le moteur : 
+  1. elle clignote rouge
+  1. Le moteur se reset après 3 min (le moteur fait un aller-retour)
+  1. Faire 5 x R sur la TS pour la reseter 
+  1. Attendre que la LED arrête de clignoter
+  1. Appuyer sur STOP pour chercher un réseau ouvert (celui du moteur reseté)
+   
+   
 ## Pairing Process
 
 The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02/03/association-des-volets-profalux-a-la-zigate/ )
@@ -32,7 +55,8 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
    
    1. When the remote Led do not flash anymore press STOP
       ___This will close the network and complete the pairing of a new Shutter___
-   
+      
+
 ## Findings
 
 * Manufacturer Code: 0x1110
@@ -92,6 +116,7 @@ The remote is very basic and it is not adviced to try doing anything with it. Du
 
 ## References:
 
+* [Notices de références Profalux]( https://www.profalux-pro.com/telecommande/moteur-radio-profalux-zigbee-2/)
 * [Notice de dépanage](https://www.profalux-pro.com/notice/mon-volet-roulant-ne-fonctionne-plus-ndep005-2/)
 
 * [Profalux Notice for blind after 2016](http://www.profalux-pro.com/download/1.%20Notices,%20Plans,%20Technique/1.%20Volets%20roulants/3.%20Moteurs%20Commandes%20et%20Accessoires/1.%20Moteur/Moteur%20Profalux%20Zigbee/Notice%20SAV%20moteur%20et%20telecommande%20Profalux%20Zigbee.%20A%20partir%20de%20Juillet%202016-NSAV029.pdf)
