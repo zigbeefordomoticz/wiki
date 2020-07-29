@@ -14,7 +14,7 @@ local cdd_ReturnNotif = true --Notification on normal condition return
 local cdd_mail = nil -- your mail if notification by mail needed, nil if not
 
 local devicesToCheck = {
-	{ ['name'] = 'Device1', ['threshold'] = 60 },
+	{ ['name'] = 'Device1', ['threshold'] = 60 },  -- replace Device1 by your device name. The threshold is in minutes. You can add lines for more devices.
 	{ ['name'] = 'Device2', ['threshold'] = 60 },
 	{ ['name'] = 'Device3', ['threshold'] = 120 }
 }
