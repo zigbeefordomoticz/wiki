@@ -4,16 +4,17 @@
 -- instead of domoticz variable we use dzvents variable (data) to 'remember' state
 -- since these (data) variables are not remembered by domoticz, a domoticz restart will 'forget' the previous state.
 -- beware that dzvents variables have to be unique over all dzvents scripts since they are shared.
--- 3 notifications possible: log Error, mail (not tested: line 59) and notify (telegram, kodi, google cloud...)
+-- 3 notifications possible: log Error, mail and notify (telegram, kodi, google cloud...)
 
-local cdd_username = '' --base 64
+local cdd_username = '' --base 64 if local auth is needed (see Local Networks (no username/password) option, add 127.0.0.*)
 local cdd_password = '' --base 64
 local cdd_https = false -- true if only https supported
 local cdd_port = '8080' -- http or https port
 local cdd_ReturnNotif = true --Notification on normal condition return
+local cdd_mail = nil -- your mail if notification by mail needed, nil if not
 
 local devicesToCheck = {
-	{ ['name'] = 'Device1', ['threshold'] = 60 },
+	{ ['name'] = 'Device1', ['threshold'] = 60 },  -- replace Device1 by your device name. The threshold is in minutes. You can add lines for more devices.
 	{ ['name'] = 'Device2', ['threshold'] = 60 },
 	{ ['name'] = 'Device3', ['threshold'] = 120 }
 }
@@ -55,10 +56,12 @@ return {
 					dz.notify(fenetre, message, dz.PRIORITY_NORMAL)
 				else
 					dz.notify(fenetre, message, dz.PRIORITY_NORMAL, '', '', SubSystem)
-				end 
+				end
+				if cdd_mail ~= nil then
+					dz.email('Dead devices', message, cdd_mail)
+				end
 				dz.data.state = "On"
 				dz.data.messageSent = message
-				--dz.email('Dead devices', message, 'me@address.nl')
 			else
 				dz.log("Nothing to send, message not updated",dz.LOG_INFO)        
 			end
