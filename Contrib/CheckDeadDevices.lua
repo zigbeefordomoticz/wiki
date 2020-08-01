@@ -4,7 +4,7 @@
 -- instead of domoticz variable we use dzvents variable (data) to 'remember' state
 -- since these (data) variables are not remembered by domoticz, a domoticz restart will 'forget' the previous state.
 -- beware that dzvents variables have to be unique over all dzvents scripts since they are shared.
--- 3 notifications possible: log Error, mail and notify (telegram, kodi, google cloud...)
+-- 3 notifications possible: log Error, mail and notify (telegram, kodi, google cloud... update SubSystem)
 
 local cdd_username = '' --base 64 if local auth is needed (see Local Networks (no username/password) option, add 127.0.0.*)
 local cdd_password = '' --base 64
@@ -19,16 +19,6 @@ local devicesToCheck = {
 	{ ['name'] = 'Device3', ['threshold'] = 120 }
 }
 
-local SubSystem =   nil
-		    --[[ Notifications available :
-                    --    NSS_GOOGLE_CLOUD_MESSAGING NSS_HTTP NSS_KODI NSS_LOGITECH_MEDIASERVER NSS_NMA NSS_PROWL NSS_PUSHALOT NSS_PUSHBULLET NSS_PUSHOVER NSS_PUSHSAFER NSS_TELEGRAM
-                    --    If severals needed, use {}.
-                    --    Example :{domoticz.NSS_TELEGRAM, domoticz.NSS_HTTP}
-                    --]]
-
---
---Nothing to change under
---
 
 local callBackString = "getDevices"
 local message = ''
@@ -45,6 +35,14 @@ return {
 	execute = function(dz, trigger)
 		local Time = require('Time')
 		local conditionDeviceState = "Off"
+		
+		local SubSystem =   nil
+		    --[[ Notifications available :
+                    --    NSS_GOOGLE_CLOUD_MESSAGING NSS_HTTP NSS_KODI NSS_LOGITECH_MEDIASERVER NSS_NMA NSS_PROWL NSS_PUSHALOT NSS_PUSHBULLET NSS_PUSHOVER NSS_PUSHSAFER NSS_TELEGRAM
+                    --    If severals needed, use {}.
+                    --    Example :{domoticz.NSS_TELEGRAM, domoticz.NSS_HTTP}
+		    -- must be declared in function block (https://www.domoticz.com/forum/viewtopic.php?f=71&t=33539)
+                    --]]
 
 		-- FUNCTIONS
 		local function notification(fenetre, message)
