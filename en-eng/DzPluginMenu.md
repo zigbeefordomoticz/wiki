@@ -19,6 +19,6 @@ Explain all parameters and options which can be found on the Domoticz Hardware m
 | 4  | IP                | Only needed if you use the WifI model and in that case you put the IP address of the Wifi ZIgate |
 | 5  | Port              | Only needed if you use the Wifi model and in conjuction of the IP address, you will specify the Port number (9999 is default) |
 | 6  | Serial Port       | Used for USB, DIN and PiZigate, this is the Serial Port to access the Zigate |
-| 7  | Erase PDM         | Will Erase all pairing information on the Zigate, this is required for the first use of Zigate. In such case put it to True and restart the plugin |
+| 7  | Initialize ZiGate (Erase Memory) `Erase PDM` | Will initialize ZiGate with the plugin parameters. This is a __MUST__ when using ZiGate the first time (or after an Erase EEPROMO). __ATTENTION:__ Will Erase all pairing information on the Zigate. In such case put it to True and restart the plugin |
 | 8  | Port for Web Admin| Port number to reach the plugin Web Admin page (default 9440), you must change it of you run several instance of the plugin |
 | 9  | Update            | You will activate the new values of this page, and it will restart the plugin |
