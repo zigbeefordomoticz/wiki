@@ -61,7 +61,7 @@ To install:
 In the Domoticz Web UI, navigate to [the Hardware page](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DzPluginMenu.md). 
 
   * In the hardware dropdown there will be an entry called &quot;Zigate plugin&quot;.
-  * On the first use of the Zigate, you have also to set True the ErasePDM in order to reset the ZIgate and get it initialized with the plugin.
+  * On the first use of the Zigate, you have also to set True the `Initialize ZiGate (Erase Memory)` (previously name: ErasePDM in order to reset the ZIgate and get it initialized with the plugin.
 
 
 
