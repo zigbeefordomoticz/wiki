@@ -187,6 +187,21 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
   * Data Type: 0x23
   * Data: 0x00000000
   
+#### Cluster 0x0003
+* With the help of @cemonneau
+
+__ATTENTION WIP / UNDER INVESTIGATIONS __
+
+##### Command: 0x40
+
+* Hub -> Device
+* Format: FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x40, Value: 2 bytes
+* Value:
+  * 1 bytes is effectid: possible values are: 0x00 (blink 3 times), 0x01 (fixed for around 3 seconds), 0x02(blink in green), 0x03 (blink in blue)
+  * 1 bytes is effectvariant: /!\\ only works with effectid=0x00 or 0x01: 0x00(default color: blue), 0x01(red), 0x02(green), 0x03(blue), 0x04(light blue), 0x05(yellow), 0x06(pink), 0x07(white)
+  
+* Expect : LED effect on the device
+
 #### Cluster 0xfc01
 * With the help of @Thorgal789
 
