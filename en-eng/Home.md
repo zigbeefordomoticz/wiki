@@ -25,6 +25,8 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [PiZiGate installation on Fedora29 distribution](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate_on_Fedora.md)
 * [Pluging Administration](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md)
 * [Reinstallation without loosing crucials informations](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/reinstall.md)
+* [Expose the dashboard with basic authentication on a https link](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md)
+
 
 
 ## How-to
