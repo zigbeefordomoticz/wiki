@@ -1,4 +1,4 @@
-# Schneider WISER system ( big thanks to @hairv)
+# Schneider WISER system ( big thanks to @hairv and @badz)
 
 ## Purpose
 
