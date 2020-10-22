@@ -49,7 +49,7 @@ Save the work and the group membership request will be sent to each device liste
 
 Just use the Group Management and add or remove devices from that group. 
 
-Save the work and then restart the plugin in order to have the group updated
+Save the work , and the update will be triggered and will be visible after a while .
 
 ### 4.5 Remove a Group
 
