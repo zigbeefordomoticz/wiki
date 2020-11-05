@@ -56,6 +56,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 * [Eurotronics](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Eurotronics-corner.md)
 * [Livolo](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Livolo-corner.md)
 * [IKEA TRADFRI](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/IKEA-Tradfri-corner.md)
+* [BlitzWolf](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Blitzwolf-corner.md)
 
 
 ## In case of Trouble
