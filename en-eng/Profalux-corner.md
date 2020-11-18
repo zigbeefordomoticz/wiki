@@ -37,7 +37,7 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
    
    Remote will flash RED then GREEN
    
-   1. In the next minute press STOP
+   1. In the next minute press STOP ( and it will close the network , stop the pairing process )
    
    You can check that the remote command the shutter. In case not, please consult the Profalux documentation
    
