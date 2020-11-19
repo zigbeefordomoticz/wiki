@@ -1,0 +1,42 @@
+-- This dzvents script is intended to trigger an action in case of low battery device.
+
+local devicesToCheck = {
+    { ['name'] = 'Device_name_1', ['threshold'] = 15 },  -- add you device list here, and the battery level to trigger a warning.
+    { ['name'] = 'Device_name_2', ['threshold'] = 15 },
+    { ['name'] = 'Device_name_3', ['threshold'] = 15 },
+    { ['name'] = 'Device_name_4', ['threshold'] = 15 },
+    { ['name'] = 'Device_name_5', ['threshold'] = 15 },
+    { ['name'] = 'Device_name_6', ['threshold'] = 15 }
+}
+
+return {
+	active = true,
+	on = {
+		['timer'] = {
+			'at 12:15 on sun'		-- Choose how often you want to check device's battery level. I check it on sundays at 12:15
+		}
+	},
+	execute = function(domoticz)
+
+		local message = ""
+
+		for i, deviceToCheck in pairs(devicesToCheck) do
+			local name = deviceToCheck['name']
+			local threshold = deviceToCheck['threshold']
+			local bat_level = domoticz.devices(name).batteryLevel
+            print('Device: ' .. name .. ' Battery Level: ' ..bat_level)
+
+			if ( bat_level < threshold) then
+				message = message .. 'Device ' .. name .. ' is low  battery. Battery level is ' .. bat_level .. ' %. '
+			end
+		end
+
+		if (message ~= "") then    	-- Write here what you want to do if a device has a battery level below threshold.
+		    local urlmsg = ""		-- I send a SMS to my phone using free-mobile SMS notifications feature.
+		    urlmsg = 'https://smsapi.free-mobile.fr/sendmsg?user=XXXXXXXX&pass=xxxxxxxxxxxxxx&msg= ' .. message .. ' '
+			domoticz.log('Low battery devices found: ' .. message, domoticz.LOG_ERROR)
+			domoticz.openURL(urlmsg)
+		end
+	end
+}
+ 
