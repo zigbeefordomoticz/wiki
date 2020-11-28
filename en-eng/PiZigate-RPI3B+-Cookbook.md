@@ -1,10 +1,11 @@
 # Installation procedure of Pizigate on Domoticz running on RPi3B+
 ( from Pierre Gielen )
 
-1. Make sure you have all the latest software: 
+1. Make sure you have all the latest software and pyhon-dev is installed: 
 ```
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install python3-dev
 ```
 
 1. Test if wiringpi is installed: 
