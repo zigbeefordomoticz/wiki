@@ -26,6 +26,7 @@ To install:
          sudo apt-get update
          sudo apt-get upgrade
          sudo apt-get install wiringpi
+         sudo apt-get install python3-dev
          ```
      
       1. `hash -r`
