@@ -34,7 +34,7 @@
     gpio write 0 1
     ```
 
-Put these 5 lines just before the exit 0 line, save and exit
+    Put these 5 lines just before the exit 0 line, save and exit
 
 1. If you have a RPi3B+, shutdown bluetooth permanently by editing config.txt:
 
@@ -49,7 +49,7 @@ Put these 5 lines just before the exit 0 line, save and exit
 
     ```
 
-Save and exit.
+    Save and exit.
 
 1. Open the cmdline.txt:
 
