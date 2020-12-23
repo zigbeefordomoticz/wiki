@@ -2,7 +2,7 @@ Bienvenue sur le wiki du plugin Zigate pour DomoticZ !
 
 Le but de ce wiki est de fournir les plus d'informations possible sur l'utilisation du plugin.
 
-Nous dévelopons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche), ce qui permettra notamment l'achat d’équipements et de les tester/valider pour le plugin.
+Nous dévelopons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal, ce qui permettra notamment l'achat d’équipements et de les tester/valider pour le plugin. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 
 ## Introduction
