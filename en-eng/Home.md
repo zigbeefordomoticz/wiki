@@ -1,5 +1,7 @@
 ![zigate.fr](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/ZiGate.png)
 
+[Pour le Wifi en Francais clicker ici](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Home.md)
+
 Welcome to the Domoticz-Zigate wiki!
 
 We try through this wiki, to put as much information as possible. 
