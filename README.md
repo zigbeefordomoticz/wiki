@@ -7,11 +7,12 @@ If you would like to translate a part or the totality of the Wiki into an other 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism
 
 
-[Wiki Français](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Home.md)
+* [Wiki Français](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Home.md)
 
-[English Wiki](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Home.md)
+* [English Wiki](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Home.md)
 
-[Dutch Wiki](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/nl-dut/Start.md)
+* [Dutch Wiki](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/nl-dut/Start.md)
+
 
 The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Domoticz-Zigate
 
