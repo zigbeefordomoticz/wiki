@@ -9,7 +9,7 @@ ZiGate V1 is based on the JN5168 chip.
 * 4 kB EEPROM
 
 
-## Experimental test #1 - 23 Dec. 2020
+## Experimental test #1 - 23 Dec. 2020. ( 4.0a )
 
 Documentation used: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
 
