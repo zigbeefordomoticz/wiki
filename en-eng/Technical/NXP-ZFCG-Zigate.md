@@ -27,6 +27,37 @@ Target: 5 devices in total , with 2 max connected directly to the ZiGate
 | DeviceTableSize          | 5     | The size of the Trust Centre's device table.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ZNC\_MAX\_TCLK\_DEVICES  | 5     | The size of the Trust Centre's device table.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
+### Scenario 1
+
+ * pairing end devices only ( battery based devices). I'm only able to pair 3 devices. the 4th one cannot be paired 
+ 
+ #### learning
+ 
+ * behave as expected
+ 
+ 
+ ### Scenario 2
+ 
+* Pairing routers. Able to pair up to 5 devices. No way to pair a 6th one.
+
+#### learning
+
+* behave as expected
+
+
+### Scenario 3
+
+* Pairing 3 routers
+* then pairing 2 end devices
+
+#### learning
+
+* the end device automatically get paired via the routers.
+* behave as expected
+
+
+
+
 
 
 
