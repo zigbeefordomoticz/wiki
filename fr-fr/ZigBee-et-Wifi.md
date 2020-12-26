@@ -35,4 +35,11 @@ Il est recommandé d'avoir une distance de 8m entre votre émetteur wifi (box, r
 
 Le protocole ZigBee offre les avantages d'un réseau maillé autogéré dynamiquement : si un router dysfonctionne ou s'il y a une interférence, une autre route est automatique recalculée pour que les données soit transmises.
 
+## 4. Choses à savoir
+
+* Le Zigbee est un réseau à faible puissance contrairement au Wifi. 
+Il a été noté que les Caméras IP/Wifi étaient capable de perturber le Zigbee lorsqu'elles étaient en streaming, il faudra donc faire attentionn à l'emplacement des modules Zigbee par rapport aux Wifi et ce même si ils sont sur des cannaux bien séparés
+
+* Beaucoup de problématiques de perte de dispositifs (deconnexion du réseau) sont très souvent liés à un problème d'interferences ou de densité insufisante du réseau Zigbee et l'ajout de dispositifs de type routers est souvent très positif
+
 Plus d'explications : https://www.nxp.com/docs/en/application-note/JN-AN-1079.pdf
