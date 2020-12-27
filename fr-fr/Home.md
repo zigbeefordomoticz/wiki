@@ -15,6 +15,34 @@ Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre n
 Voici une liste non exhaustive des dispositifs compatibles. Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin. Il est possible qu'il y est d'autres dispositifs ZigBee qui fonctionnent (merci de nous remonter l'info afin que nous mettions la liste à jour)
 * [Liste des dispositifs compatibles](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices.md)
 
+## Instalation
+
+Il existe plusieurs façons d'installer le plugin Zigate pour Domoticz qui sont différentes en fonction du système d'exploitation.
+
+Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [Domoticz Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
+
+* Linux : Instalaltion manuelle 
+* Plugin Python Manager 
+* NAS Synology
+* Docker
+* Windows
+
+Configuration particulière pour la PiZiGate :
+
+* PiZiGate sur Raspberry avec Raspbian
+* PiZiGate sur ARM avec Fedora
+
+## Mise à jour
+
+* Mettre à jour le plugin
+* Les branches de mises à jour
+
+## Configuration
+
+* Interface d'administration du plugin
+* Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données
+* Mettre une authenficiation sur nterface d'administration du plugin
+
 ## Installation et configuration
 
 * [Plugin Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md) en anglais
