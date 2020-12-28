@@ -1,3 +1,5 @@
+![zigate.fr](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/ZiGate.png)
+
 Bienvenue sur le wiki du plugin Zigate pour DomoticZ !
 
 Le but de ce wiki est de fournir les plus d'informations possible sur l'utilisation du plugin.
