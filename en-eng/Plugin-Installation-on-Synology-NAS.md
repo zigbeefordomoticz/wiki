@@ -41,3 +41,16 @@ Click Add and check the log. When the USB TTL is in Permit Join mode the blue an
 
 When you are done adding devices set the permit join value to something lower than 255. 
 
+## Known issue
+
+There is a known issue on Syno which makes Domoticz to crash when starting the plugin. 
+You need to disable the feature to check for plugin and firmware update availability.
+
+You have to edit the file Domoticz-Zigate/Conf/PluginConf-xx.json
+and add the following line
+
+"internetAccess": 0,
+
+the best is to add it in the middle of the file, so you don't break the all file syntax
+
+
