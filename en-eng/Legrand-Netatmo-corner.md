@@ -226,10 +226,23 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 ##### Command: 0x03
 
 * Device -> Hub
-* Format: FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x03, Value: 1 byte
+* Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x03, Value: 1 byte
 * Value:
   * 1byte: 0xff
   
+##### Command: 0x05 (wireless switch)
+
+* Device -> Hub
+* Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x03, Value: 8 bytes
+* Value:
+  * 8byte: 0x4d17af0000740400
+    
+##### Command: 0x08 set group id (wireless switch)
+
+* Device -> Hub
+* Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x1d ), Manuf ( 0x1021), SQN, 0x03, Value: 2 bytes
+* Value:
+  * 2byte: group id
   
 ##### Commande: 0x09 (Checked)
 

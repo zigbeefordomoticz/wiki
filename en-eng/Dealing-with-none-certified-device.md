@@ -37,16 +37,11 @@ Starting Plugin 4.7, there are some tools which allow to share all information c
 
 This will create an export.json file that you can save.
    
-Finally you post this export.json (zipped) on one of the 2 forums with informations on the device you have paired and which is not fully working:
-
 * Product Name 
 * Brand
 * URL on a web site
 * What do you expect
 * The logs from the pairing process
 
-## Forums to post the issue
-
-* [English forum](https://www.domoticz.com/forum/viewforum.php?f=68)
-* [French forum](https://easydomoticz.com/forum/viewforum.php?f=28&sid=babfcfc5e2a5cd7b6e3cbbe24b02062c)
+Please create an issue here on GitHub: https://github.com/pipiche38/Domoticz-Zigate/issues/new?assignees=&labels=&template=Add_New_Hardware.md&title= with the here above informations
 

@@ -61,11 +61,11 @@
     Delete the text console = serial0,115200
     Save and exit
 
-1. Type the following commands:
+1. Type the following commands (if pi is the username you are log in):
 
     ```bash
     sudo systemctl disable hciuart
-    sudo usermod -ag gpio ft
+    sudo usermod -ag gpio pi
     sudo shutdown
 
     ```

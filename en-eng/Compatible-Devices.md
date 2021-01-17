@@ -1,8 +1,18 @@
+### English
 Purpose is to document the list of Hardware devices **tested** with the Zigate USB/WiFi and the Zigate plugin.
 
 Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
 
 You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/zigate.html)
+
+### Français
+Ce document est une liste des dispositfs "certfiés" qui fonctionnent avec une Zigate et le plugin Zigate.
+
+Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du developpeur qui rendu paramétrer le dispositif pour qu'il fonctionne.
+
+La liste des dispositifs comptatibles avec la Zigate est disponible sur le site [ZiGate Zigbee Compatibility](https://zigbee.blakadder.com/zigate.html)
+
+Le reste de la page est en anglais afin de ne faire vivre qu'une seule version.
 
 ## BITRON HOME 
 https://www.conrad.com/o/bitron-home-2805047
