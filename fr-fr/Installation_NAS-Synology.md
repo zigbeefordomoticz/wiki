@@ -19,13 +19,9 @@ Démarrer une session Putty
 
 Se loguer
 
-Aller jusqu'au dossier plugins de Domoticz :
+Aller jusqu'au dossier __plugins__ de Domoticz : <code>cd /volume1/@appstore/domoticz/var/plugins</code>
 
-cd /volume1/@appstore/domoticz/var/plugins
-
-Faire un clone du Git du plugin Zigate dans un nouveau dossier :
-
-sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate
+Faire un clone du Git du plugin Zigate dans un nouveau dossier : <code>sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate</code>
 
 Arréter et redémarer Domoticz depuis le gestionnaire de paquet.
 
