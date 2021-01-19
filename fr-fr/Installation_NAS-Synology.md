@@ -36,8 +36,6 @@ Conitnuer avec la configuration du plugin Zigate dans DomoticZ.
 Il y a des erreurs connues dans Synollogy qui font planté DomoticZ au lancement du plugin Zigate.
 Il faut désactiver le plugin Zigate et vérifier s'il y a une mise à jour du plugin ou du firmware.
 
-Editer le fichier Domoticz-Zigate/Conf/PluginConf-xx.json
+Editer le fichier __Domoticz-Zigate/Conf/PluginConf-xx.json__
 
-Et ajouter la ligne suivante (de préférence au milieu di fichier afin de ne pas perrtuber la syntaxe globale :
-
-"internetAccess": 0,
+Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtuber la syntaxe globale) : <code>"internetAccess": 0,</code>
