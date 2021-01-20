@@ -1,6 +1,13 @@
 Il existe différentes méthodes d'installation en focntion de votre système d'exploitation :
 
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
+# 2 - Installation manuelle sous Linux
+# 3 - Installation sur NAS Synology
+# 4 - Installation sur Docker
+# 5 - Installation sous windows 10
+
+------------
+# 1 - Installation du plugin via Python Plugin Manager sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux.
 
@@ -18,7 +25,7 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
-# 2. - Installation manuelle sous Linux
+# 2 - Installation manuelle sous Linux
 
 ### 2.A - Pre-requis
 
@@ -78,7 +85,7 @@ Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtub
 
 
 ------------
-# 4. - Installation sur Docker
+# 4 - Installation sur Docker
 
 ### 4.1 - Pre-requis
 
@@ -203,7 +210,7 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
-# 5. - Installation sous windows 10
+# 5 - Installation sous Windows 10
 
 ### 5.1 - Avant propos
 
