@@ -17,7 +17,7 @@ Le plugin Zigate doit apparaitre dans la liste des matériels.
 L'étape suivante : la configuration dans DomoticZ.
 
 
-
+--------------
 # 2. Installation manuelle sous Linux
 
 ### Pre-requis
@@ -37,7 +37,7 @@ Le plugin Zigate doit apparaitre dans la liste des matériels.
 L'étape suivante : la configuration dans DomoticZ.
 
 
-
+--------------
 # 3. Installation sur NAS Synology
 
 L'objectif de ce document est de présenter l'installation du plugin Zigate sur un NAS Synology
@@ -77,6 +77,7 @@ Editer le fichier __Domoticz-Zigate/Conf/PluginConf-xx.json__
 Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtuber la syntaxe globale) : `"internetAccess": 0,`
 
 
+--------------
 # 4. Installation sur Docker
 
 ### Pre-requis
@@ -201,6 +202,7 @@ Le plugin Zigate doit apparaitre dans la liste des matériels.
 L'étape suivante : la configuration dans DomoticZ.
 
 
+--------------
 # 5. Installation sous windows 10
 
 Installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réllement plug and play.
@@ -211,7 +213,7 @@ Après plusieurs tests et échecs, je vous fais part de mon expérience qui m’
 
 Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit dans Windows, éxécuter en tant qu’administrateur). Sinon, vous risquez d’installer partiellement un logiciel et ne pas vous en rendre compte sur le coup.
 
-## A.	Installation de Domoticz
+## 5.A	Installation de Domoticz
 
 Le premier conseil est d’installer Domoticz (version stable par exemple) dans un répertoire autre que le classique Programmes (x86) par défaut. Sinon, il faudra jouer avec les droits utilisateurs. Si tel est le cas, pour modifier les droits, ouvrez l’explorateur Windows, faire clic-droit sur le disque C :, puis propriétés, onglet sécurité :
 
@@ -227,7 +229,7 @@ Même en attribuant le maximum de droits autorisés (administrateur, utilisateur
 Pour éviter tout problème, j’ai finalement choisi d’installer Domoticz directement à la racine sous C:\Domoticz et depuis aucun problème.
 
 
-## B.	Installation de la Zigate
+## 5.B	Installation de la Zigate
 
 Il est recommandé d’installer la Zigate selon les instructions disponibles sur le site officiel :
 
@@ -242,11 +244,11 @@ L’application se situe dans un sous répertoire Tools et se nomme ZGWUI.exe
 
 Vérifier que la Zigate est correctement installée et fonctionnelle en effectuant les tests mentionnés sur le site de Zigate
 
-## C.	 Logiciels additionnels
+## 5.C	 Logiciels additionnels
 
 Pour la suite, deux logiciels sont nécessaires et utiles pour réaliser une installation propre sous windows:
 
-### C.1	Python
+### 5.C.1	Python
 
 Installer une version de Python prenant en charge Domoticz comme indiqué dans le Wiki:
 https://www.domoticz.com/wiki/Using_Pyt ... or_Windows
@@ -282,7 +284,8 @@ Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install libpython
 
 En fonction de la version x de Python installée, vous devez installer libpython3.x
 Attendre que l’installation du package soit terminé (vous devez être connecté à Internet)
-### 3.2	Git pour Windows
+
+### 5.C.2	Git pour Windows
 
 De nombreux packages de plugin sont disponibles sur GitHub pour Domoticz. C’est le cas notamment pour la Zigate.
 
@@ -290,7 +293,7 @@ Sous windows, le plus simple pour gérer ce type de packages est de télécharge
 
 https://gitforwindows.org/
 
-## D.	Installation du plugin ZIGATE
+## 5.D.	Installation du plugin ZIGATE
 
 La dernière étape consiste à installer le plugin de Pipiche pour gérer la Zigate dans Domoticz.
 
@@ -309,7 +312,7 @@ L’arborescence de la Zigate est installée :
 
 
 
-## F	Un PC Windows comme box domotique
+## 5.E	Un PC Windows comme box domotique
 
 Avec l’apparition des mini PC fanless sous windows 10 pour une centaine d’euros, il est tentant de se constituer sa box à l’aide du logiciel Domoticz et de la clé Zigate USB avec protocole Zigbee .
 
