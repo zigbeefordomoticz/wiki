@@ -1,14 +1,14 @@
 Il existe différentes méthodes d'installation en focntion de votre système d'exploitation :
 
-# 1. Installation du plugin via Python Plugin Manager sous Linux
+# 1 - Installation du plugin via Python Plugin Manager sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux.
 
-### 1.A Pre-requis
+### 1.A - Pre-requis
 
 * Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
 
-### 1.B Procédure
+### 1.B - Procédure
 
 * Aller dans le plugin __Python Plugin Manager__ (pp-manager)
 * Rechercher __Zigate Plugin__ et ajouter le.
@@ -18,13 +18,13 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
-# 2. Installation manuelle sous Linux
+# 2. - Installation manuelle sous Linux
 
-### 2.A Pre-requis
+### 2.A - Pre-requis
 
 * Le paquet Git doit être installé.
 
-### 2.B Procédure
+### 2.B - Procédure
 
 * Ouvrir le terminal
 * Aller dans le répertoire DomoticZ puis le répertoire __plugins__. Le chemin est normalement <code>domoticz/plugins</code>
@@ -38,12 +38,12 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
-# 3. Installation sur NAS Synology
+# 3 - Installation sur NAS Synology
 
 L'objectif de ce document est de présenter l'installation du plugin Zigate sur un NAS Synology
 
 
-### 3.APre-requis
+### 3.A - Pre-requis
 
 * Avant tout, Python doit ête installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder))
 * Le paquet Domoticz pour Synology a installé est la version 'avec Puthon'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v4.10717 avec Python 3.5.1. 
@@ -54,7 +54,7 @@ L'objectif de ce document est de présenter l'installation du plugin Zigate sur 
 * Si besoin, les drivers pour la Zigate sont disponible sur le site [jadahl.com](http://www.jadahl.com/drivers_6.2/)
 
 
-### 3.B Procédure
+### 3.B - Procédure
 
 * Démarrer une session __Putty__
 * Se loguer
@@ -67,7 +67,7 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 
-### 3.C Erreurs connues
+### 3.C - Erreurs connues
 
 Il y a des erreurs connues dans Synology qui font planté DomoticZ au lancement du plugin Zigate.
 Il faut désactiver le plugin Zigate et vérifier s'il y a une mise à jour du plugin ou du firmware.
@@ -78,23 +78,23 @@ Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtub
 
 
 ------------
-# 4. Installation sur Docker
+# 4. - Installation sur Docker
 
-### 4.1 Pre-requis
+### 4.1 - Pre-requis
 
 * Docker doit être installé (voir [Get Docker](https://docs.docker.com/get-docker/))
 
 
-### 4.2 Procédure
+### 4.2 - Procédure
 
-#### 4.2.A Récuperer Docker-Domoticz
+#### 4.2.A - Récuperer Docker-Domoticz
 
 Avant de pouvoir éxécuter le Docker DomoticZ, il faut le récupérer. Il y a deux possibilités :
 * Créer votre propre image Docker DomoticZ
 * Récupérer une image existante depuis le dépot Docker
 
 
-##### 4.2.A.1 Créer votre propre image Docker DomoticZ
+##### 4.2.A.1 - Créer votre propre image Docker DomoticZ
 
 * Dans un dossier, créer un fichier **dockerfile** avec le contenu suivant :
 ```
@@ -170,7 +170,7 @@ Comme pour instalaltion normale, vous pouvez ajouter des nouveaux paquets avec a
 * Ensuite, créer votre image Docker localement avec la commande : `docker build -t docker-domoticz .`
 
 
-##### 4.2.A.2 Récupérer une image existante depuis le dépot Docker
+##### 4.2.A.2 - Récupérer une image existante depuis le dépot Docker
 
 * Aller sur [docker hub](https://hub.docker.com/) 
 * Rechercher DomoticZ
@@ -178,7 +178,7 @@ Comme pour instalaltion normale, vous pouvez ajouter des nouveaux paquets avec a
 
 
 
-#### 4.2.B Exécuter l'image Docker domoticZ
+#### 4.2.B - Exécuter l'image Docker domoticZ
 
 Si vous avez des scripts, plugins ... mettez les dans un répertoire et définissez le chemin avant de lancer la commande.
 
@@ -188,12 +188,12 @@ Si vous avez des plugins qui ont besoin d'un accès réseau (comme la Zigate Wif
 
 '
 
-#### 4.2.C Récupérer les logs Docker
+#### 4.2.C - Récupérer les logs Docker
 
 Pour récupérer les logs complet depuis Docker, éxécuter : `docker logs Domoticz`
 
 
-#### 4.2.D Connexion au Docker actif
+#### 4.2.D - Connexion au Docker actif
 
 * Exécuter la commande `docker exec -it Domoticz bash`
 
@@ -203,9 +203,9 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
-# 5. Installation sous windows 10
+# 5. - Installation sous windows 10
 
-### 5.1 Avant propos
+### 5.1 - Avant propos
 
 Installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réllement plug and play.
 
@@ -215,9 +215,9 @@ Après plusieurs tests et échecs, je vous fais part de mon expérience qui m’
 
 Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit dans Windows, éxécuter en tant qu’administrateur). Sinon, vous risquez d’installer partiellement un logiciel et ne pas vous en rendre compte sur le coup.
 
-### 5.2 Procédure
+### 5.2 - Procédure
 
-#### 5.2.A	Installation de Domoticz
+#### 5.2.A - Installation de Domoticz
 
 Le premier conseil est d’installer Domoticz (version stable par exemple) dans un répertoire autre que le classique Programmes (x86) par défaut. Sinon, il faudra jouer avec les droits utilisateurs. Si tel est le cas, pour modifier les droits, ouvrez l’explorateur Windows, faire clic-droit sur le disque C :, puis propriétés, onglet sécurité :
 
@@ -232,7 +232,7 @@ Même en attribuant le maximum de droits autorisés (administrateur, utilisateur
 Pour éviter tout problème, j’ai finalement choisi d’installer Domoticz directement à la racine sous C:\Domoticz et depuis aucun problème.
 
 
-#### 5.2.B	Installation de la Zigate
+#### 5.2.B - Installation de la Zigate
 
 Il est recommandé d’installer la Zigate selon les instructions disponibles sur le site officiel : https://zigate.fr/documentation/tester-la-zigate-usb
 
@@ -245,11 +245,11 @@ L’application se situe dans un sous répertoire Tools et se nomme ZGWUI.exe
 
 Vérifier que la Zigate est correctement installée et fonctionnelle en effectuant les tests mentionnés sur le site de Zigate
 
-#### 5.2.C	 Logiciels additionnels
+#### 5.2.C - Logiciels additionnels
 
 Pour la suite, deux logiciels sont nécessaires et utiles pour réaliser une installation propre sous windows:
 
-##### 5.2.C.1	Python
+##### 5.2.C.1 - Python
 
 Installer une version de Python prenant en charge Domoticz comme indiqué dans le Wiki: https://www.domoticz.com/wiki/Using_Pyt ... or_Windows
 
@@ -282,13 +282,13 @@ Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install libpython
 En fonction de la version x de Python installée, vous devez installer libpython3.x
 Attendre que l’installation du package soit terminé (vous devez être connecté à Internet)
 
-##### 5.2.C.2	Git pour Windows
+##### 5.2.C.2 - Git pour Windows
 
 De nombreux packages de plugin sont disponibles sur GitHub pour Domoticz. C’est le cas notamment pour la Zigate.
 
 Sous windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : https://gitforwindows.org/
 
-#### 5.2.D.	Installation du plugin ZIGATE
+#### 5.2.D. - Installation du plugin ZIGATE
 
 La dernière étape consiste à installer le plugin de Pipiche pour gérer la Zigate dans Domoticz.
 
@@ -303,7 +303,7 @@ L’arborescence de la Zigate est installée :
 ![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic4.png)
 	
 
-## 5.3	Un PC Windows comme box domotique
+## 5.3 - Un PC Windows comme box domotique
 
 Avec l’apparition des mini PC fanless sous windows 10 pour une centaine d’euros, il est tentant de se constituer sa box à l’aide du logiciel Domoticz et de la clé Zigate USB avec protocole Zigbee .
 
