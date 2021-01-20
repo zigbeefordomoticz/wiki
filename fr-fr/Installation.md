@@ -38,7 +38,7 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 
-## 3. Installation sur NAS Synology
+# 3. Installation sur NAS Synology
 
 L'objectif de ce document est de présenter l'installation du plugin Zigate sur un NAS Synology
 
@@ -227,7 +227,7 @@ Même en attribuant le maximum de droits autorisés (administrateur, utilisateur
 Pour éviter tout problème, j’ai finalement choisi d’installer Domoticz directement à la racine sous C:\Domoticz et depuis aucun problème.
 
 
-## 2.	Installation de la Zigate
+## B.	Installation de la Zigate
 
 Il est recommandé d’installer la Zigate selon les instructions disponibles sur le site officiel :
 
@@ -242,11 +242,11 @@ L’application se situe dans un sous répertoire Tools et se nomme ZGWUI.exe
 
 Vérifier que la Zigate est correctement installée et fonctionnelle en effectuant les tests mentionnés sur le site de Zigate
 
-## 3.	 Logiciels additionnels
+## C.	 Logiciels additionnels
 
 Pour la suite, deux logiciels sont nécessaires et utiles pour réaliser une installation propre sous windows:
 
-### 3.1	Python
+### C.1	Python
 
 Installer une version de Python prenant en charge Domoticz comme indiqué dans le Wiki:
 https://www.domoticz.com/wiki/Using_Pyt ... or_Windows
@@ -290,7 +290,7 @@ Sous windows, le plus simple pour gérer ce type de packages est de télécharge
 
 https://gitforwindows.org/
 
-## 4.	Installation du plugin ZIGATE
+## D.	Installation du plugin ZIGATE
 
 La dernière étape consiste à installer le plugin de Pipiche pour gérer la Zigate dans Domoticz.
 
@@ -306,30 +306,10 @@ L’arborescence de la Zigate est installée :
 
 ![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic4.png)
 	
-## 5.	Tests des logiciels
-
-Vous pouvez maintenant lancer Domotics en cliquant sur l’icône de Domoticz, ce qui conduit à ouvrir une fenêtre dans votre navigateur à l’adresse locale 127.0.0.1 (port 8080) :
-
-127.0.0.1:8080
-
-Dans Domoticz, Vous devez installer la passerelle Zigate en ajoutant un nouveau matériel (donnez un nom et sélectionnez dans la rubrique Type le plugin « Zigate plugin » en fin de liste). Si tout se passe bien, en allant dans le rubrique Configuration/logs, vous devriez avoir un log de ce type  :
 
 
 
-
-Accéder également à l’interface du plugin de Pipiche en tapant dans votre navigateur:
-
-
-127.0.0.1:9440
-
-Cela permet d ‘accéder au dashboard suivant :
-
-
-Pour ma part, j’utilise grandemment cet outil, notamment pour intégrer des nouveaux modules dans la Zigate (fonction Join à valider en activant la fonctionnalité « Accepter de nouveaux dispositifs » en haut à droite) et pour me rendre compte de l’état des échanges entre la Zigate et les dispositifs.
-Puis je termine la mise en forme dans Domoticz (nom etc ...)
-
-
-## 6	Un PC Windows comme box domotique
+## F	Un PC Windows comme box domotique
 
 Avec l’apparition des mini PC fanless sous windows 10 pour une centaine d’euros, il est tentant de se constituer sa box à l’aide du logiciel Domoticz et de la clé Zigate USB avec protocole Zigbee .
 
