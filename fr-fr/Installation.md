@@ -1,10 +1,10 @@
 Il existe différentes méthodes d'installation en focntion de votre système d'exploitation :
 
-# 1 - Installation du plugin via Python Plugin Manager sous Linux
-# 2 - Installation manuelle sous Linux
-# 3 - Installation sur NAS Synology
-# 4 - Installation sur Docker
-# 5 - Installation sous windows 10
+* 1 - Installation du plugin via Python Plugin Manager sous Linux
+* 2 - Installation manuelle sous Linux
+* 3 - Installation sur NAS Synology
+* 4 - Installation sur Docker
+* 5 - Installation sous windows 10
 
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
