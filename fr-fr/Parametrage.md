@@ -2,7 +2,7 @@
 
 Cette étape est la deuxième du processus d'installation du plugin Zigate.
 
-Vous devez donc avoir suivi et terminé l'[étape 1 Instalaltion](Installation.md)
+Vous devez donc avoir suivi et terminé l'[étape 1 Instalaltion du plugin](Installation.md)
 
 
 ## Le paramétrage
@@ -38,4 +38,6 @@ La ligne avec le plugin Zigate est normalement apparue. Cliquer dessus.
 * Cliquer sur __Modifier__ pour relancer le plugin
 
 Vérifier les logs que le plugin Zigate s'initialise correctement.
+
+Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](Configuration.md)
 
