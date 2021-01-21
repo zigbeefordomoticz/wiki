@@ -25,7 +25,8 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 
 * Etape 1 [Installation du plugin](Installation.md)
-* Etape 2 [Paramétrage du plugin](Configuration_DomoticZ.md)
+* Etape 2 [Paramétrage du plugin](Parametrage.md)
+* Etape 3 [Configuration du plugin](Configuration.md)
 
 ## Mise à jour
 
