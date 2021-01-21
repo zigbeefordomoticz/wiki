@@ -340,7 +340,7 @@ Explications par Pierre Gielen
 * Vérifier que tous les paquets sont à jour
 * Avoir DomoticZ en version 2020.1 ou supérieur
 * Installer la dernière version de pyhon-dev
-    ```bash
+    ```
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get install python3-dev
@@ -348,16 +348,12 @@ Explications par Pierre Gielen
 
 * Tester si wiringpi est installé :
 
-    ```bash
+    ```
     gpio -v
     gpio readall
     ```
 
-Si non, installer wiringpi
-
-    ```bash
-    sudo apt-get install wiringpi
-    ```
+Si non, installer wiringpi : `sudo apt-get install wiringpi`
 
 ### 6.2 - Procédure
 
@@ -372,19 +368,13 @@ Mettre ces 5 lignes juste avant la ligne `exit 0`
     gpio write 0 1
     ```
 * Désactiver le bluetooth en permanence en éditant le fichier __config.txt__ : `sudo nano /boot/config.txt`
-Mettre cette ligne à la fin du fichier
-
-    ```bash
-    dtoverlay = pi3-disable-bt
-
-    ```
+Mettre cette ligne à la fin du fichier : `dtoverlay = pi3-disable-bt`
 
 * Modifier le fichier __cmdline.txt__ : `sudo nano /boot/cmdline.txt`
 Effacer le texte console e = serial0,115200
 
 * Exécuter les commandes (en remplacant pi par votre login)
-
-    ```bash
+    ``
     sudo systemctl disable hciuart
     sudo usermod -ag gpio pi
     sudo shutdown
