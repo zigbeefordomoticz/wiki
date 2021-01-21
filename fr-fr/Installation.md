@@ -17,6 +17,8 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 
 ### 1.A - Prérequis
 
+* DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+* Python version supérieur à 3.5 installé (voir [Domoticz Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
 
 ### 1.B - Procédure
@@ -35,7 +37,9 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 
 ### 2.A - Prérequis
 
-* Le paquet Git doit être installé.
+* DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+* Python version supérieur à 3.5 installé (voir [Domoticz Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Le paquet Git doit être installé (voir [Installation de Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git))
 
 ### 2.B - Procédure
 
@@ -59,7 +63,7 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 ### 3.A - Prérequis
 
 * Avant tout, Python doit ête installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder))
-* Le paquet Domoticz pour Synology a installé est la version 'avec Puthon'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v4.10717 avec Python 3.5.1. 
+* Le paquet Domoticz pour Synology a installé est la version 'avec Puthon'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v2020.1 avec Python 3.5.1. 
 * Le Module Python du Package manager doit être installé (voir [Python Module](https://www.synology.com/en-uk/dsm/packages/PythonModule))
 * Le paquet GitHub server pour Synology doit être installé. 
 * Installer le paquet Git Server via Diskstation. La partie Serveur du paquet Git Server n'est pas nécessaire, juste le 'git command' (pas de configurations spécifiques).
