@@ -23,19 +23,9 @@ Il existe plusieurs façons d'installer le plugin Zigate pour Domoticz qui sont 
 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [Domoticz Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
-* [Plugin Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md) en anglais
 
-
-* [Linux : Instalaltion manuelle](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Installation_Linux-manuelle.md)
-* [Plugin Python Manager](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Installation_Python-Plugin-Manager.md)
-* [NAS Synology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation-on-Synology-NAS.md) en anglais
-* [Docker](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Docker-Domoticz.md) en anglais
-* [Windows](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-windows.md) en anglais
-
-Configuration particulière pour la PiZiGate :
-
-* [PiZiGate sur Raspberry avec Raspbian](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B%2B-Cookbook.md) en anglais
-* [PiZiGate sur ARM avec Fedora](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate_on_Fedora.md) en anglais
+* Etape 1 [Installation du plugin](Installation.md)
+* Etape 2 [Paramétrage du plugin](Configuration_DomoticZ.md)
 
 ## Mise à jour
 
