@@ -1,2 +1,12 @@
 # Configuration du plugin
 
+Cette étape est la troisième étape du procéssus d'instalaltion du plugin Zigate.
+
+Vous devez donc avoir suivi et terminé l'[étape 1 Instalaltion](Installation.md) et l'[étape 2 Paramétrage](Parametrage.md)
+
+## Accéder à l'interface d'aministration
+
+Vous pouvez accéder à l'interface web d'aministration en allant à la page http://IP-serveur-domoticz:numéro-de-port-défini-dans-paramétrage.
+
+Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port par défaut, l'adresse de l'interface web est http://127.0.0.1:9440
+
