@@ -13,7 +13,7 @@ Pour cette première étape, ll existe différentes méthodes d'installation en 
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux.
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les (installations d'une PiZigate](Installation.md)).
 
 ### 1.A - Prérequis
 
@@ -30,6 +30,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 ------------
 # 2 - Installation manuelle sous Linux
+
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les (installations d'une PiZigate](Installation.md)).
 
 ### 2.A - Prérequis
 
@@ -51,7 +53,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 ------------
 # 3 - Installation sur NAS Synology
 
-L'objectif de ce document est de présenter l'installation du plugin Zigate sur un NAS Synology
+Cette méthode est uniquement valable pour les systèmes NAS Synology
 
 
 ### 3.A - Prérequis
@@ -90,6 +92,8 @@ Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtur
 
 ------------
 # 4 - Installation sur Docker
+
+Cette méthode est uniquement valable pour les systèmes Docker.
 
 ### 4.1 - Prérequis
 
@@ -216,6 +220,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 ------------
 # 5 - Installation sous Windows 10
 
+Cette méthode est uniquement valable pour les systèmes Windows 10.
+
 ### 5.1 - Avant-propos
 
 Installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réellement plug and play.
@@ -333,7 +339,7 @@ Pour cela, taper `netplwiz` dans l’invite de commande Windows et éxécuter la
 ------------
 # 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
 
-Explications par Pierre Gielen
+Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian par Pierre Gielen.
 
 ### 6.1 - Prérequis
 
@@ -412,6 +418,8 @@ Redémarrer le Pi après la mise à jour du firmware. La configuration par défa
 
 ------------
 # 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
+
+Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
 
 Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate est fonctionnelle.
 
