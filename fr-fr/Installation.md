@@ -10,8 +10,6 @@ Pour cette première étape, ll existe différentes méthodes d'installation en 
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
-Une fois DomoticZ installé, il faudra le paramétrer (voir [Etape 2 Paramétrage](Parametrage.md))
-
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
 
@@ -27,7 +25,7 @@ Cette méthode est uniquement valable pour les systèmes Linux.
 * Rechercher __Zigate Plugin__ et ajouter le.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-L'étape suivante : la configuration dans DomoticZ.
+Passer à l'[étape 2 Paramétrage](Parametrage.md))
 
 
 ------------
@@ -47,7 +45,7 @@ L'étape suivante : la configuration dans DomoticZ.
 * Redémarrer Domoticz.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-L'étape suivante : la configuration dans DomoticZ.
+Passer à l'[étape 2 Paramétrage](Parametrage.md))
 
 
 ------------
@@ -76,7 +74,7 @@ L'objectif de ce document est de présenter l'installation du plugin Zigate sur 
 * Arrêter et redémarrer Domoticz depuis le gestionnaire de paquet.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-L'étape suivante : la configuration dans DomoticZ.
+Passer à l'[étape 2 Paramétrage](Parametrage.md))
 
 
 
@@ -212,7 +210,7 @@ Pour récupérer les logs complets depuis Docker, éxécuter : `docker logs Domo
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-L'étape suivante : la configuration dans DomoticZ.
+Passer à l'[étape 2 Paramétrage](Parametrage.md))
 
 
 ------------
@@ -314,7 +312,10 @@ En éxécutant une invite de commande CMD en mode administrateur, positionnez vo
 L’arborescence de la Zigate est installée : 
 
 ![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic4.png)
-	
+
+
+Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Passer à l'[étape 2 Paramétrage](Parametrage.md))
 
 ## 5.3 - Un PC Windows comme box domotique
 
@@ -327,10 +328,6 @@ Malheureusement, l’invite de Windows 10 vous demande d’introduire votre mot 
 Pour éviter ce désagrément (surtout lorsqu’on est absent du domicile), il est possible d’éviter d’entrer le mot de passe du compte courant à l’invite de Windows (l’inconvénient est un PC accessible à tous, à vous de choisir).
 
 Pour cela, taper `netplwiz` dans l’invite de commande Windows et éxécuter la commande
-
-
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
-L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
@@ -480,4 +477,4 @@ Voici un exemple de ce que vous devez avoir :
    ```
    
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-L'étape suivante : la configuration dans DomoticZ.
+Passer à l'[étape 2 Paramétrage](Parametrage.md))
