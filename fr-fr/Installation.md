@@ -356,7 +356,7 @@ Si non, installer wiringpi
     sudo apt-get install wiringpi
     ```
 
-### 6.1 - Procédure
+### 6.2 - Procédure
 
 * Activer les port GPIO dans le fichier __rc.local__ pour qu'ils soient actif après chaque redémarrage : 
 Mettre ces 5 lignes juste avant la ligne `exit 0`
@@ -400,7 +400,7 @@ Le Pi va s'étteindre.
 * Démarrer la Pizigate: `Tools/pi-zigate.sh run `
 
 
-## 6.2 - Mise à jour
+## 6.3 - Mise à jour
 
 Avant de faire une mise à jour du firmware de la Pizigate en flash mode, il faut modifier les GPIO :
 
@@ -467,7 +467,7 @@ Voici un exemple de ce que vous devez avoir :
 
    * Un outil est disponible __Tools/Fedora__ pour tester la communication avec la PiZigate. Cet outil est basé sur l'outil PiZiGate_test et n'a pas d'autres fonctionnalités qu'un test de communication.
    
-   * Recompiler loutil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
+   * Recompiler l'outil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
    * Exccuter `./PiZiGate_test-fedora /dev/ttyS1` 
    
    ```
