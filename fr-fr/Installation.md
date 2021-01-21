@@ -343,17 +343,7 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian p
 
 ### 6.1 - Prérequis
 
-* Vérifier que tous les paquets sont à jour
-* Avoir DomoticZ en version 2020.1 ou supérieur
-* Installer la dernière version de pyhon-dev
-    ```
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install python3-dev
-    ```
-
 * Tester si wiringpi est installé :
-
     ```
     gpio -v
     gpio readall
@@ -404,8 +394,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 ## 6.3 - Mise à jour
 
 Avant de faire une mise à jour du firmware de la Pizigate en flash mode, il faut modifier les GPIO :
-
-```bash
+```
 0 gpio way out
 2 gpio way out
 gpio write 2 0 
