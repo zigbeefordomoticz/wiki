@@ -1,6 +1,6 @@
 # Paramétrage du plugin
 
-Cette étape est la deuxième du procéssus d'instalaltion du plugin Zigate.
+Cette étape est la deuxième du processus d'installation du plugin Zigate.
 
 Vous devez donc avoir suivi et terminé l'[étape 1 Instalaltion](Installation.md)
 
