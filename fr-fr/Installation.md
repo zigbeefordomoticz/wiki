@@ -1,4 +1,6 @@
-Il existe différentes méthodes d'installation en fonction de votre système d'exploitation :
+# Instalaltion du plugin Zigate
+
+Pour cette première étape, ll existe différentes méthodes d'installation en fonction de votre système d'exploitation :
 
 * 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
@@ -8,6 +10,7 @@ Il existe différentes méthodes d'installation en fonction de votre système d'
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
+Une fois DomoticZ installé, il faudra le paramétrer (voir [Etape 2 Paramétrage](Parametrage.md))
 
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
