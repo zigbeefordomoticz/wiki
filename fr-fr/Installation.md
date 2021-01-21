@@ -1,4 +1,4 @@
-Il existe différentes méthodes d'installation en focntion de votre système d'exploitation :
+Il existe différentes méthodes d'installation en fonction de votre système d'exploitation :
 
 * 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
@@ -14,7 +14,7 @@ Il existe différentes méthodes d'installation en focntion de votre système d'
 
 Cette méthode est uniquement valable pour les systèmes Linux.
 
-### 1.A - Pre-requis
+### 1.A - Prérequis
 
 * Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
 
@@ -30,7 +30,7 @@ L'étape suivante : la configuration dans DomoticZ.
 ------------
 # 2 - Installation manuelle sous Linux
 
-### 2.A - Pre-requis
+### 2.A - Prérequis
 
 * Le paquet Git doit être installé.
 
@@ -53,7 +53,7 @@ L'étape suivante : la configuration dans DomoticZ.
 L'objectif de ce document est de présenter l'installation du plugin Zigate sur un NAS Synology
 
 
-### 3.A - Pre-requis
+### 3.A - Prérequis
 
 * Avant tout, Python doit ête installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder))
 * Le paquet Domoticz pour Synology a installé est la version 'avec Puthon'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v4.10717 avec Python 3.5.1. 
@@ -61,7 +61,7 @@ L'objectif de ce document est de présenter l'installation du plugin Zigate sur 
 * Le paquet GitHub server pour Synology doit être installé. 
 * Installer le paquet Git Server via Diskstation. La partie Serveur du paquet Git Server n'est pas nécessaire, juste le 'git command' (pas de configurations spécifiques).
 * Vous devez avoir les accès root/admin avec la commande 'sudo'.
-* Si besoin, les drivers pour la Zigate sont disponible sur le site [jadahl.com](http://www.jadahl.com/drivers_6.2/)
+* Si besoin, les drivers pour la Zigate sont disponibles sur le site [jadahl.com](http://www.jadahl.com/drivers_6.2/)
 
 
 ### 3.B - Procédure
@@ -70,7 +70,7 @@ L'objectif de ce document est de présenter l'installation du plugin Zigate sur 
 * Se loguer
 * Aller jusqu'au dossier __plugins__ de Domoticz : `cd /volume1/@appstore/domoticz/var/plugins`
 * Faire un clone du Git du plugin Zigate dans un nouveau dossier : `sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate`
-* Arréter et redémarer Domoticz depuis le gestionnaire de paquet.
+* Arrêter et redémarrer Domoticz depuis le gestionnaire de paquet.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
 L'étape suivante : la configuration dans DomoticZ.
@@ -79,18 +79,18 @@ L'étape suivante : la configuration dans DomoticZ.
 
 ### 3.C - Erreurs connues
 
-Il y a des erreurs connues dans Synology qui font planté DomoticZ au lancement du plugin Zigate.
+Il y a des erreurs connues dans Synology qui font planter DomoticZ au lancement du plugin Zigate.
 Il faut désactiver le plugin Zigate et vérifier s'il y a une mise à jour du plugin ou du firmware.
 
 Editer le fichier __Domoticz-Zigate/Conf/PluginConf-xx.json__
 
-Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtuber la syntaxe globale) : `"internetAccess": 0,`
+Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrturber la syntaxe globale) : `"internetAccess": 0,`
 
 
 ------------
 # 4 - Installation sur Docker
 
-### 4.1 - Pre-requis
+### 4.1 - Prérequis
 
 * Docker doit être installé (voir [Get Docker](https://docs.docker.com/get-docker/))
 
@@ -99,9 +99,9 @@ Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrtub
 
 #### 4.2.A - Récuperer Docker-Domoticz
 
-Avant de pouvoir éxécuter le Docker DomoticZ, il faut le récupérer. Il y a deux possibilités :
+Avant de pouvoir exécuter le Docker DomoticZ, il faut le récupérer. Il y a deux possibilités :
 * Créer votre propre image Docker DomoticZ
-* Récupérer une image existante depuis le dépot Docker
+* Récupérer une image existante depuis le dépôt Docker
 
 
 ##### 4.2.A.1 - Créer votre propre image Docker DomoticZ
@@ -174,17 +174,17 @@ EXPOSE 8080 9440
 CMD ["/opt/domoticz/domoticz"]
 
 ```
-Comme pour instalaltion normale, vous pouvez ajouter des nouveaux paquets avec apt-get. Plus d''informations voir [Fichier Docker](https://docs.docker.com/engine/reference/builder/)
+Comme pour installation normale, vous pouvez ajouter des nouveaux paquets avec apt-get. Plus d''informations voir [Fichier Docker](https://docs.docker.com/engine/reference/builder/)
 
 
 * Ensuite, créer votre image Docker localement avec la commande : `docker build -t docker-domoticz .`
 
 
-##### 4.2.A.2 - Récupérer une image existante depuis le dépot Docker
+##### 4.2.A.2 - Récupérer une image existante depuis le dépôt Docker
 
 * Aller sur [docker hub](https://hub.docker.com/) 
 * Rechercher DomoticZ
-* Lancer la commande `docker pull image-name` en remplacant __image-name__ par l'image trouvée
+* Lancer la commande `docker pull image-name` en remplaçant __image-name__ par l'image trouvée
 
 
 
@@ -200,7 +200,7 @@ Si vous avez des plugins qui ont besoin d'un accès réseau (comme la Zigate Wif
 
 #### 4.2.C - Récupérer les logs Docker
 
-Pour récupérer les logs complet depuis Docker, éxécuter : `docker logs Domoticz`
+Pour récupérer les logs complets depuis Docker, éxécuter : `docker logs Domoticz`
 
 
 #### 4.2.D - Connexion au Docker actif
@@ -215,15 +215,15 @@ L'étape suivante : la configuration dans DomoticZ.
 ------------
 # 5 - Installation sous Windows 10
 
-### 5.1 - Avant propos
+### 5.1 - Avant-propos
 
-Installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réllement plug and play.
+Installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réellement plug and play.
 
-On on est très vite confronté à chercher des informations éparpillées sur le net, à lire des retours d’expérience dans de nombreux forums et tenter d’éviter les pièges sous Windows.
+On est très vite confronté à chercher des informations éparpillées sur le net, à lire des retours d’expérience dans de nombreux forums et tenter d’éviter les pièges sous Windows.
 
 Après plusieurs tests et échecs, je vous fais part de mon expérience qui m’a permis en partie de comprendre et de solutionner les problèmes d’installation avec un peu de rigueur.
 
-Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit dans Windows, éxécuter en tant qu’administrateur). Sinon, vous risquez d’installer partiellement un logiciel et ne pas vous en rendre compte sur le coup.
+Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit dans Windows, exécuter en tant qu’administrateur). Sinon, vous risquez d’installer partiellement un logiciel et ne pas vous en rendre compte sur le coup.
 
 ### 5.2 - Procédure
 
@@ -335,7 +335,7 @@ L'étape suivante : la configuration dans DomoticZ.
 
 Explications par Pierre Gielen
 
-### 6.1 - Pre-requis
+### 6.1 - Prérequis
 
 * Vérifier que tous les paquets sont à jour
 * Avoir DomoticZ en version 2020.1 ou supérieur
@@ -389,7 +389,7 @@ Effacer le texte console e = serial0,115200
     sudo usermod -ag gpio pi
     sudo shutdown
     ```
-Le Pi va s'étteindre.
+Le Pi va s'éteindre.
 
 * Brancher la Pizigate sur les ports GPIO
 * Redémarrer le Pi
@@ -415,7 +415,7 @@ gpio write 0 0
 gpio write 0 1
 ````
 
-Redémarer le Pi après la mise à jour du firmware. La configuration par défaut du rc.local sera appliquée.
+Redémarrer le Pi après la mise à jour du firmware. La configuration par défaut du rc.local sera appliquée.
 
 
 ------------
@@ -424,7 +424,7 @@ Redémarer le Pi après la mise à jour du firmware. La configuration par défau
 Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate est fonctionnelle.
 
 
-### 7.1 - Pre-requis
+### 7.1 - Prérequis
 
 * Activer UART 
 
@@ -442,7 +442,7 @@ Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plu
 
 * Vérifier les droits d'accès sur /dev/ttyS1 : `ls -l /dev/ttyS1`
    
-* Editer /etc/group et s'assurer que l'utilisateur exécutant DomoicZ apparrtient au groupe __tty__ : `sudo usermod -aG tty domoticz`
+* Editer /etc/group et s'assurer que l'utilisateur exécutant DomoicZ appartient au groupe __tty__ : `sudo usermod -aG tty domoticz`
      
 * S'assurer que __/dev/ttyS1__ est en lecture/écriture `sudo chmod 666 /dev/ttyS1`
 
