@@ -13,7 +13,7 @@ Pour cette première étape, ll existe différentes méthodes d'installation en 
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les (installations d'une PiZigate](Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
 
 ### 1.A - Prérequis
 
@@ -31,7 +31,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 ------------
 # 2 - Installation manuelle sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les (installations d'une PiZigate](Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
 
 ### 2.A - Prérequis
 
