@@ -1,0 +1,2 @@
+# Configuration du plugin
+
