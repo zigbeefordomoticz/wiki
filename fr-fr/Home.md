@@ -36,7 +36,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 ## Configuration
 
 * [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/reinstall.md) en anglais
+* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
 * [Mettre une authenficiation sur interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md) en anglais
 
 
