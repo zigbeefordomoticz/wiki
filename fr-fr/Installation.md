@@ -25,7 +25,7 @@ Cette méthode est uniquement valable pour les systèmes Linux.
 * Rechercher __Zigate Plugin__ et ajouter le.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 
 ------------
@@ -45,7 +45,7 @@ Passer à l'[étape 2 Paramétrage](Parametrage.md))
 * Redémarrer Domoticz.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 
 ------------
@@ -74,7 +74,7 @@ L'objectif de ce document est de présenter l'installation du plugin Zigate sur 
 * Arrêter et redémarrer Domoticz depuis le gestionnaire de paquet.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 
 
@@ -210,7 +210,7 @@ Pour récupérer les logs complets depuis Docker, éxécuter : `docker logs Domo
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 
 ------------
@@ -315,7 +315,7 @@ L’arborescence de la Zigate est installée :
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 ## 5.3 - Un PC Windows comme box domotique
 
@@ -392,6 +392,8 @@ Le Pi va s'éteindre.
 
 * Démarrer la Pizigate: `Tools/pi-zigate.sh run `
 
+Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 ## 6.3 - Mise à jour
 
@@ -477,4 +479,4 @@ Voici un exemple de ce que vous devez avoir :
    ```
    
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
