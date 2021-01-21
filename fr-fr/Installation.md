@@ -325,3 +325,161 @@ Pour cela, taper `netplwiz` dans l’invite de commande Windows et éxécuter la
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
 L'étape suivante : la configuration dans DomoticZ.
+
+
+------------
+# 6 - Installation sous Linux d'une PiZigate (sur RPi3B+ avec Raspbian)
+
+Explications par Pierre Gielen
+
+### 6.1 - Pre-requis
+
+* Vérifier que tous les paquets sont à jour
+* Avoir DomoticZ en version 2020.1 ou supérieur
+* Installer la dernière version de pyhon-dev
+    ```bash
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install python3-dev
+    ```
+
+* Tester si wiringpi est installé :
+
+    ```bash
+    gpio -v
+    gpio readall
+    ```
+
+Si non, installer wiringpi
+
+    ```bash
+    sudo apt-get install wiringpi
+    ```
+
+### 6.1 - Procédure
+
+* Activer les port GPIO dans le fichier __rc.local__ pour qu'ils soient actif après chaque redémarrage : 
+Mettre ces 5 lignes juste avant la ligne `exit 0`
+    ```bash
+    sudo nano /etc/rc.local
+    gpio mode 0 out
+    gpio mode 2 out
+    gpio write 2 1 
+    gpio write 0 0
+    gpio write 0 1
+    ```
+* Désactiver le bluetooth en permanence en éditant le fichier __config.txt__ : `sudo nano /boot/config.txt`
+Mettre cette ligne à la fin du fichier
+
+    ```bash
+    dtoverlay = pi3-disable-bt
+
+    ```
+
+* Modifier le fichier __cmdline.txt__ : `sudo nano /boot/cmdline.txt`
+Effacer le texte console e = serial0,115200
+
+* Exécuter les commandes (en remplacant pi par votre login)
+
+    ```bash
+    sudo systemctl disable hciuart
+    sudo usermod -ag gpio pi
+    sudo shutdown
+    ```
+Le Pi va s'étteindre.
+
+* Brancher la Pizigate sur les ports GPIO
+* Redémarrer le Pi
+
+* Mettre l'accessibilité du serail adapter à 'No' en utilisant raspi-config option P6 (Interfacing options / serial): `sudo raspi-config`
+
+* Installer le plugin Zigate comme pour une installation Linux (voir plus haut)
+
+* Redémarrer le Pi
+
+* Démarrer la Pizigate: `Tools/pi-zigate.sh run `
+
+
+## 6.2 - Mise à jour
+
+Avant de faire une mise à jour du firmware de la Pizigate en flash mode, il faut modifier les GPIO :
+
+```bash
+0 gpio way out
+2 gpio way out
+gpio write 2 0 
+gpio write 0 0
+gpio write 0 1
+````
+
+Redémarer le Pi après la mise à jour du firmware. La configuration par défaut du rc.local sera appliquée.
+
+
+------------
+# 7 - Installation sous Linux d'une PiZigate (RPi3B+ avec Fedora 29)
+
+Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate est fonctionnelle.
+
+
+### 7.1 - Pre-requis
+
+* Activer UART 
+
+   * Editer le fichier ` /boot/efi/config.txt`
+     * S'assurer que les lignes suivantes ne sont pas commentées.
+       * `enable_uart=1`
+       * `dtoverlay = pi3-disable-bt`
+       * reboot
+       
+   * Désactiver Getty on /dev/ttyS1
+     * `systemctl stop serial-getty@ttyS1.service1`
+     * `systemctl disable serial-getty@ttyS1.service`
+  
+* Vérifier qu'il n'y a plus de processus attaché à  /dev/ttyS1 : `lsof /dev/ttyS1` or `ps -ef | grep ttyS1`
+
+* Vérifier les droits d'accès sur /dev/ttyS1 : `ls -l /dev/ttyS1`
+   
+* Editer /etc/group et s'assurer que l'utilisateur exécutant DomoicZ apparrtient au groupe __tty__ : `sudo usermod -aG tty domoticz`
+     
+* S'assurer que __/dev/ttyS1__ est en lecture/écriture `sudo chmod 666 /dev/ttyS1`
+
+### 7.2 - Procédure
+
+* Activer les GPIO 
+
+   * Installer libgpiod et python3 RPi.GPIO : `sudo dnf install python3-RPi.GPIO libgpiod-utils`
+     
+   * Editer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
+     
+Voici un exemple de ce que vous devez avoir :
+     ```
+     label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
+	   kernel /vmlinuz-5.4.17-200.fc31.armv7hl
+	   append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
+	   fdtdir /dtb-5.4.17-200.fc31.armv7hl/
+	   initrd /initramfs-5.4.17-200.fc31.armv7hl.img
+     ```
+     
+   * Utiliser l'outil pi-zigate-fedora.py disponible dans __Tools/Fedora__ pour basculer sur la Pizigate : `sudo python3 Tools/Fedora/pi-zigate-fedora.py run`
+
+     
+* Vérification
+
+   * Un outil est disponible __Tools/Fedora__ pour tester la communication avec la PiZigate. Cet outil est basé sur l'outil PiZiGate_test et n'a pas d'autres fonctionnalités qu'un test de communication.
+   
+   * Recompiler loutil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
+   * Exccuter `./PiZiGate_test-fedora /dev/ttyS1` 
+   
+   ```
+   [domoticz@rasp Fedora]$ ./PiZiGate_test-fedora /dev/ttyS1
+   Opening : /dev/ttyS1 ...
+   + /dev/ttyS1 opened --> OK
+   + Packet 01 02 10 10 02 10 02 10 10 03 sent --> OK
+   + Packet received --> OK
+   size : 37
+   01 80 00 00 05 95 00 00 00 10 00 03
+   01 80 10 00 05 8f 00 03 03 1a 00 03
+   ```
+   
+Le plugin Zigate doit apparaitre dans la liste des matériels. 
+L'étape suivante : la configuration dans DomoticZ.
