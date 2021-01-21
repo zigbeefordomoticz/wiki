@@ -1,12 +1,12 @@
 Il existe différentes méthodes d'installation en focntion de votre système d'exploitation :
 
-* 1 - Installation du plugin via Python Plugin Manager sous Linux
-* 2 - Installation manuelle sous Linux
-* 3 - Installation sur NAS Synology
-* 4 - Installation sur Docker
-* 5 - Installation sous windows 10
-* 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
-* 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
+* 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
+* 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
+* 3 - [Installation sur NAS Synology](#3---installation-sur-nas-synology)
+* 4 - [Installation sur Docker](#4---installation-sur-docker)
+* 5 - [Installation sous windows 10](#5---installation-sous-windows-10)
+* 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
+* 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
 
 ------------
@@ -396,7 +396,7 @@ Le Pi va s'étteindre.
 
 * Mettre l'accessibilité du serail adapter à 'No' en utilisant raspi-config option P6 (Interfacing options / serial): `sudo raspi-config`
 
-* Installer le plugin Zigate comme pour une installation Linux (voir plus haut)
+* Installer le plugin Zigate comme pour une [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 
 * Redémarrer le Pi
 
@@ -463,6 +463,8 @@ Voici un exemple de ce que vous devez avoir :
 	   initrd /initramfs-5.4.17-200.fc31.armv7hl.img
      ```
      
+   * Installer le plugin Zigate comme pour une [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
+   
    * Utiliser l'outil pi-zigate-fedora.py disponible dans __Tools/Fedora__ pour basculer sur la Pizigate : `sudo python3 Tools/Fedora/pi-zigate-fedora.py run`
 
      
