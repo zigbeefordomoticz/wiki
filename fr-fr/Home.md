@@ -17,7 +17,7 @@ Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre n
 Voici une liste non exhaustive des dispositifs compatibles. Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin. Il est possible qu'il y est d'autres dispositifs ZigBee qui fonctionnent (merci de nous remonter l'info afin que nous mettions la liste à jour)
 * [Liste des dispositifs compatibles](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices.md)
 
-## Instalation
+## Installation
 
 Il existe plusieurs façons d'installer le plugin Zigate pour Domoticz qui sont différentes en fonction du système d'exploitation.
 
