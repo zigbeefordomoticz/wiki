@@ -5,6 +5,9 @@ Il existe différentes méthodes d'installation en focntion de votre système d'
 * 3 - Installation sur NAS Synology
 * 4 - Installation sur Docker
 * 5 - Installation sous windows 10
+* 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
+* 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
+
 
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
@@ -328,7 +331,7 @@ L'étape suivante : la configuration dans DomoticZ.
 
 
 ------------
-# 6 - Installation sous Linux d'une PiZigate (sur RPi3B+ avec Raspbian)
+# 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
 
 Explications par Pierre Gielen
 
@@ -416,7 +419,7 @@ Redémarer le Pi après la mise à jour du firmware. La configuration par défau
 
 
 ------------
-# 7 - Installation sous Linux d'une PiZigate (RPi3B+ avec Fedora 29)
+# 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
 
 Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate est fonctionnelle.
 
