@@ -30,8 +30,8 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Mise à jour
 
-* Mettre à jour le plugin
-* Les branches de mises à jour
+* [Mettre à jour le plugin](Mise-a-jour.md#mettre-à-jour-le-plugin)
+* [Les branches de mises à jour](Mise-a-jour.md#les-branches-de-mise-à-jour)
 
 ## Configuration
 
