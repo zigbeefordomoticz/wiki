@@ -7,28 +7,26 @@ La section __Management__ comporte les pages :
 * [Gestion des dispositifs](#gestion-des-dispositifs)
 * [Gestion des groupes](#gestion-des-groupes)
 
-## Gestion des dispositifs
+## Gestion des groupes
 
 Voici la page __Gestion des dispositifs__ de l'interface Web du plugin : 
 
 ![Device Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Device-Management.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
-### Composition
+### Utilisation
 
-#### Les 3 graphiques du haut
+Cette page permet de lister tous les dispositifs appairés avec le plugin. 
 
-Ils indiquent l'état du trafic :
-* En émission
-* En réception
-* Le type et la charge
+Elle permet :
 
-#### Les 3 graphiques du bas
-
-Ils indiquent l'état des dispositifs :
-* Le type 
-* La santé
-* Le niveau de batterie
+* D'assigner des surnoms aux dispositifs pour les identifier plus facilement dans l'interface web.
+* D'assigner des paramètres aux dispositifs indépendament les uns des autres.
+* De visualiser les informations suivantes :
+  * Le ShortId (adresse réseau) and IEEE (Mac Address) du dispositif
+  * Le Modèle du dispositif
+  * Le(s) nom(s) du(des) Widget(s) DomoticZ attaché(s) au dispositif
+  * La santé du dispositif
 
 
 
@@ -36,15 +34,12 @@ Ils indiquent l'état des dispositifs :
 
 Voici la page __Gestion des groupes__ de l'interface Web du plugin : 
 
-![Device Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Device-Management.png)
+![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Group-Management.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
-### Composition
+### Utilisation
 
-#### Les 3 graphiques du haut
-
-
-![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Group-Management.png)
+Cette page permet de lister les groupes de dispositifs gérés par le plugin.
 
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
