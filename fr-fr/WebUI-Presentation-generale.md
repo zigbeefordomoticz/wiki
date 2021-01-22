@@ -7,20 +7,20 @@ Voici la présentation générale de l'interface Web du plugin :
 ![Zigate Web Admin Interface](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Dashboard.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
-## Composition
+### Composition
 
-### L'entête 
+#### L'entête 
 
 Elle contient de gauche à droite :
 * les différents liens vers les pages
 * le bouton pour passer la Zigate en mode Appairage permanent
 * le bouton de choix de la langue
 
-### Le corps de la page
+#### Le corps de la page
 
 Les différentes page du plugin s'afficheront ici.
 
-### Le pied de page
+#### Le pied de page
 
 Il contient de gauche à droite :
 * La date et l'heure du démarrage du plugin Zigate
