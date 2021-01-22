@@ -4,8 +4,8 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 
 La section __Management__ comporte les pages :
 
-* Gestion des dispositifs
-* Gestion des groupes
+* [Gestion des dispositifs](#gestion-des-dispositifs)
+* [Gestion des groupes](#gestion-des-groupes)
 
 ## Gestion des dispositifs
 
