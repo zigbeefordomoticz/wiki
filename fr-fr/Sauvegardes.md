@@ -25,7 +25,9 @@ Modifier les chemins en fonction de votre configuration.
 * Le dossier  Reports/*
 
 Pour information, la commande pour copier tout le répertoire du pluggin Zigate vers votre bureau 
-```mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi```
+```
+mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
+```
 
 1. Sauvegarder __en même temps__ la base de données de DomoticZ `domoticz.db`. 
 
