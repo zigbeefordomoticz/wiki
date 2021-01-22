@@ -18,7 +18,7 @@ Modifier les chemins en fonction de votre configuration.
 
 1. Arrêter DomoticZ
 
-1. Sauvegarder à minima les éléments suviant :
+2. Sauvegarder à minima les éléments suviant :
 
 * Le fichier  Conf/PluginConf-*.json 
 * Le dossier  Data/*
@@ -29,7 +29,7 @@ Pour information, la commande pour copier tout le répertoire du pluggin Zigate 
 mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
 ```
 
-1. Sauvegarder __en même temps__ la base de données de DomoticZ `domoticz.db`. 
+3. Sauvegarder __en même temps__ la base de données de DomoticZ `domoticz.db`. 
 
 
 ## Fin de la procédure de sauvegarde
@@ -45,14 +45,14 @@ Pour information, la commande pour copier le dossier depuis le bureau vers le r�
 cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data
 ```
    
-1. Backup de la configuration : copier le répertoire __Conf/PluginCon__ vers le répertoire de la nouvelle installation :
+2. Backup de la configuration : copier le répertoire __Conf/PluginCon__ vers le répertoire de la nouvelle installation :
 
   Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
  ```
  cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf
  ```
    
-1. Backup des rapport (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
+3. Backup des rapport (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
 
 Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
 ```
@@ -61,4 +61,4 @@ cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/
   
  La nouvelle installation est prête à être lancée. Elle sera sur la branche __Stable__.
 
-1. Redémarrer Domoticz
+4. Redémarrer Domoticz
