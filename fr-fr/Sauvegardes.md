@@ -41,17 +41,23 @@ mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
 1. Backup de la base de donnée du plugin : copier le répertoire __Data/__ vers le répertoire de la nouvelle installation :
 
 Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
-`cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data`
+```
+cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data
+```
    
 1. Backup de la configuration : copier le répertoire __Conf/PluginCon__ vers le répertoire de la nouvelle installation :
 
   Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
-  `cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf`
+ ```
+ cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf
+ ```
    
 1. Backup des rapport (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
 
 Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
-`cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports`
+```
+cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports
+```
   
  La nouvelle installation est prête à être lancée. Elle sera sur la branche __Stable__.
 
