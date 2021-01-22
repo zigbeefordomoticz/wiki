@@ -12,7 +12,7 @@ Le plugin est régulièrement mis à jour que ce soit pour de la correction de b
 Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessous :
 
 ![Mise à jour](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Git-Pull.png)
-![Mise à jour](././Images/Git-Pull.png)
+![Mise à jour](Images/Git-Pull.png)
 
 * Exécuter ensuite : `sudo chmod +x plugin.py`
 * Redémarer Domoticz
