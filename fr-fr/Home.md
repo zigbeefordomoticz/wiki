@@ -33,7 +33,17 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre à jour le plugin](Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Mise-a-jour.md#les-branches-de-mise-à-jour)
 
-## Configuration
+## L'interface Web du plugin
+
+* Présentation génarale
+* L'onglet Tableau de bord
+* L'onglet Management
+* L'onglet Réseau
+* L'onglet Admin
+* L'onglet Réglages
+* L'onglet Outils
+* L'onglet A propos
+
 
 * [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
 * [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
