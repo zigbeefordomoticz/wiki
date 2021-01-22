@@ -36,13 +36,13 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 ## L'interface Web du plugin
 
 * Présentation génarale
-* L'onglet Tableau de bord
-* L'onglet Management
-* L'onglet Réseau
-* L'onglet Admin
-* L'onglet Réglages
-* L'onglet Outils
-* L'onglet A propos
+* La page Tableau de bord
+* La page Management
+* La page Réseau
+* La page Admin
+* La page Réglages
+* La page Outils
+* La page A propos
 
 
 * [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
