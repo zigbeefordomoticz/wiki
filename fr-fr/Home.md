@@ -36,13 +36,13 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 ## L'interface Web du plugin
 
 * [Présentation génarale](WebUI-Presentation-generale.md)
-* La page [Tableau de bord](WebUI-Tableau-de-bord.md)
-* La page [Management](WebUI-Management.md)
-* La page [Réseau](WebUI-Reseau.md)
-* La page [Admin](WebUI-Admin.md)
-* La page [Réglages](WebUI-Réglages.md)
-* La page [Outils](WebUI-Outils.md)
-* La page [A propos](WebUI-A-propos.md)
+* La section [Tableau de bord](WebUI-Tableau-de-bord.md)
+* La section [Management](WebUI-Management.md)
+* La section [Réseau](WebUI-Reseau.md)
+* La section [Admin](WebUI-Admin.md)
+* La section [Réglages](WebUI-Réglages.md)
+* La section [Outils](WebUI-Outils.md)
+* La section [A propos](WebUI-A-propos.md)
 
 
 * [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
