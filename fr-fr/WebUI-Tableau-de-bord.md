@@ -2,7 +2,7 @@
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Configuration.md).
 
-Voici la page Tableau de bord de l'interface Web du plugin : 
+Voici la page __Tableau de bord__ de l'interface Web du plugin : 
 
 ![Zigate Web Admin Interface](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Dashboard.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
