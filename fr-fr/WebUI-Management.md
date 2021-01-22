@@ -7,7 +7,7 @@ La section __Management__ comporte les pages :
 * [Gestion des dispositifs](#gestion-des-dispositifs)
 * [Gestion des groupes](#gestion-des-groupes)
 
-## Gestion des groupes
+## Gestion des dispositifs
 
 Voici la page __Gestion des dispositifs__ de l'interface Web du plugin : 
 
