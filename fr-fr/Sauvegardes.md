@@ -45,7 +45,7 @@ Pour information, la commande pour copier le dossier depuis le bureau vers le r�
 cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data
 ```
    
-2. Backup de la configuration : copier le répertoire __Conf/PluginCon__ vers le répertoire de la nouvelle installation :
+2. Backup de la configuration : copier le répertoire __Conf/PluginConf__ vers le répertoire de la nouvelle installation :
 
   Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
  ```
