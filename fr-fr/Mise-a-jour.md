@@ -52,7 +52,7 @@ Si vous êtes sur la branche __Béta__ (suite à l'ajout d'un nouveau matériel 
 * Lancer la commande `git status`
 
 
-## Passer d'une branche à l'autre
+### Passer d'une branche à l'autre
 
 Il est recommandé des faire une [sauvegarde](Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
 
