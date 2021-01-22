@@ -54,13 +54,11 @@ Si vous êtes sur la branche __Béta__ (suite à l'ajout d'un nouveau matériel 
 
 ## Passer d'une branche à l'autre
 
+Il est recommandé des faire une [sauvegarde](Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
+
 * Ouvrir un terminal et aller jusqu'au répertoire du pligin Zigate (génralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 * Lancer la commande `git pull`
 
-* Lancer la commande `git checkout stable`  // will move you to the stable channel
-
-`git pull`
-
-`git checkout stable  // will move you to the stable channel`
-
-`git checkout beta    // will move you to the beta channel`
+* Lancer la commande `git checkout stable` pour aller sur le canal stable
+* Lancer la commande `git checkout stable-fix` pour aller sur le canal stable-fix
+* Lancer la commande `git checkout beta` pour aller sur le canal beta
