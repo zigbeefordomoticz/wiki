@@ -9,6 +9,18 @@ Voici la page Tableau de bord de l'interface Web du plugin :
 
 ## Composition
 
+### Les 3 graphiques du haut
 
+Ils indiquent l'état du trafic :
+* En émission
+* En réception
+* Le type et la charge
+
+### Les 3 graphiques du bas
+
+Ils indiquent l'état des dispositifs :
+* Le type 
+* La santé
+* Le niveau de batterie
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
