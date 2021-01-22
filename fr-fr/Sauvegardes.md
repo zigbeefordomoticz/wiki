@@ -24,7 +24,8 @@ Modifier les chemins en fonction de votre configuration.
 * Le dossier  Data/*
 * Le dossier  Reports/*
 
-Pour information, la commande pour copier tout le répertoire du pluggin Zigate vers votre bureau `mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi`
+Pour information, la commande pour copier tout le répertoire du pluggin Zigate vers votre bureau 
+`mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi`
 
 1. Sauvegarder __en même temps__ la base de données de DomoticZ `domoticz.db`. 
 
@@ -37,15 +38,18 @@ Pour information, la commande pour copier tout le répertoire du pluggin Zigate 
 
 1. Backup de la base de donnée du plugin : copier le répertoire __Data/__ vers le répertoire de la nouvelle installation :
 
-Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : `cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data`
+Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
+`cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data`
    
 1. Backup de la configuration : copier le répertoire __Conf/PluginCon__ vers le répertoire de la nouvelle installation :
 
-  Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : ` cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf`
+  Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
+  `cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf`
    
 1. Backup des rapport (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
 
-Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : `cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports`
+Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
+`cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports`
   
  La nouvelle installation est prête à être lancée. Elle sera sur la branche __Stable__.
 
