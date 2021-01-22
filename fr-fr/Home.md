@@ -17,25 +17,16 @@ Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre n
 Voici une liste non exhaustive des dispositifs compatibles. Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin. Il est possible qu'il y est d'autres dispositifs ZigBee qui fonctionnent (merci de nous remonter l'info afin que nous mettions la liste à jour)
 * [Liste des dispositifs compatibles](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices.md)
 
-## Instalation
+## Installation
 
 Il existe plusieurs façons d'installer le plugin Zigate pour Domoticz qui sont différentes en fonction du système d'exploitation.
 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [Domoticz Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
-* [Plugin Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md) en anglais
 
-
-* [Linux : Instalaltion manuelle](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Installation_Linux-manuelle.md)
-* [Plugin Python Manager](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Installation_Python-Plugin-Manager.md)
-* [NAS Synology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation-on-Synology-NAS.md) en anglais
-* [Docker](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Docker-Domoticz.md) en anglais
-* [Windows](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-windows.md) en anglais
-
-Configuration particulière pour la PiZiGate :
-
-* [PiZiGate sur Raspberry avec Raspbian](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B%2B-Cookbook.md) en anglais
-* [PiZiGate sur ARM avec Fedora](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate_on_Fedora.md) en anglais
+* Etape 1 [Installation du plugin](Installation.md)
+* Etape 2 [Paramétrage du plugin](Parametrage.md)
+* Etape 3 [Configuration du plugin](Configuration.md)
 
 ## Mise à jour
 
@@ -45,7 +36,7 @@ Configuration particulière pour la PiZiGate :
 ## Configuration
 
 * [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/reinstall.md) en anglais
+* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
 * [Mettre une authenficiation sur interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md) en anglais
 
 
