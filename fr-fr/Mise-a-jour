@@ -1,0 +1,28 @@
+# Les mise à jour et les branches
+
+## Mettre à jour le plugin
+
+Le plugin est régulièrement mis à jour que ce soit pour de la correction de bug ou l'ajout de nouvelle fonctionnalités.
+
+### Procédure
+
+* Ouvrir un terminal et aller jusqu'au répertoire du pligin Zigate (génralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Lancer la commande `git pull`
+
+Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessous :
+
+
+
+* Exécuter ensuite : `sudo chmod +x plugin.py`
+* Redémarer Domoticz
+
+
+
+### En cas d'erreurs
+
+Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire les commandes suviantes :
+```
+  git reset –-hard
+  git pull --force
+  ```
+  
