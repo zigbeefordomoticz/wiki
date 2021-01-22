@@ -18,6 +18,8 @@ Elle contient de gauche à droite :
 
 ### Le corps de la page
 
+Les différentes page du plugin s'afficheront ici.
+
 ### Le pied de page
 
 Il contient de gauche à droite :
@@ -31,4 +33,4 @@ Le bandeau est vert si le plugin fonctionne normalement.
 Le bandeau rouge indique un problème de connexion avec la Zigate. 
 Le bandeau jaune indique l'appairage d'un device ou que la Zigate est chargée. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
-Voir les autres onglets de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
