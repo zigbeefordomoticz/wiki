@@ -13,6 +13,7 @@ La section __Réglage__ comporte les modules :
 | [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#reglages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#reglages-ikea-tradfri) |
 | [Réglages de l'interface web](#reglages-de-linterface-web) | [Autres réglages](#autres-reglages) | [Réglages Enki Lexman](#reglages-enki-lexman) |
 |[Interrogation des dispositifs](#interrogation-des-dispositifs)  |  | [Réglages Schneider Wiser](#reglages-schneider-wiser) |
+
 *La disposition dans ce tableau ne correspond pas forcément à la disposition sur la page du plugin.*
 
 Un bouton __Paramètres avancés__ situé en haut à droite permet d'afficher des paramètres avancés.
