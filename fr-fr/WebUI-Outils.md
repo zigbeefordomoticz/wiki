@@ -10,6 +10,8 @@ La section __Outils__ comporte les pages :
 * [Debug](#debug)
 * [Erreur](#erreur)
 
+
+------------------------------------------------
 ## Outils
 
 Voici la page __Outils__ de l'interface Web du plugin : 
@@ -34,7 +36,7 @@ Elle permet :
   * L'info LQI : cette valeur indique la qualité de la transmission (0 pas de transmission, 255 transmission d'excélente qualité)
 
 
-
+------------------------------------------------
 ## Commande
 
 Voici la page __Commande__ de l'interface Web du plugin : 
@@ -47,6 +49,7 @@ Voici la page __Commande__ de l'interface Web du plugin :
 Cette page permet d'exécuter des commandes sur les dispositifs sans passer par DomoticZ.
 
 
+------------------------------------------------
 ## Couplage
 
 Voici la page __Couplage__ de l'interface Web du plugin : 
@@ -59,6 +62,7 @@ Voici la page __Couplage__ de l'interface Web du plugin :
 Cette page permet d'exécuter de coupler des dispositifs.
 
 
+------------------------------------------------
 ## Debug
 
 Voici la page __Debug__ de l'interface Web du plugin : 
@@ -71,6 +75,7 @@ Voici la page __Debug__ de l'interface Web du plugin :
 Cette page permet d'accéder aux paramètre de débogage et de journalisation.
 
 
+------------------------------------------------
 ## Erreur
 
 Voici la page __Erreur__ de l'interface Web du plugin : 
@@ -83,4 +88,5 @@ Voici la page __Erreur__ de l'interface Web du plugin :
 Cette page permet de visaliser les erreurs du plugin.
 
 
+------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
