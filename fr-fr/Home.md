@@ -33,6 +33,10 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre à jour le plugin](Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Mise-a-jour.md#les-branches-de-mise-à-jour)
 
+## Sauvegardes
+
+* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
+
 ## L'interface Web du plugin
 
 * [Présentation génarale](WebUI-Presentation-generale.md)
@@ -43,11 +47,6 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * La section [Réglages](WebUI-Reglages.md)
 * La section [Outils](WebUI-Outils.md)
 * La section [A propos](WebUI-A-propos.md)
-
-
-* [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
-* [Mettre une authenficiation sur interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md) en anglais
 
 
 ## Tutoriels
@@ -65,7 +64,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Binding_Legrand.md) en anglais
 * [Network status](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Status.md) (_4.1_ beta) en anglais
 * [Network Topology - Mesh](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Topology---LQI-report.md) (4.1_ beta) en anglais
-
+* [Mettre une authenficiation sur interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md) en anglais
 
 ## Que faire si un dispositif ne fonctionne pas correctement ?
 
