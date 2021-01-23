@@ -23,6 +23,7 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 ![FR_WebIU-Reglages]()
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
+------------------------------------------------
 ## Liste des services
 
 ![FR_WebIU-Reglages-Liste-des-services]()
@@ -41,6 +42,8 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 
 Pas de paramètres avancés dans ce module.
 
+
+------------------------------------------------
 ## Réglages des groupes
 
 ![FR_WebIU-Reglages-des-groupes]()
@@ -59,6 +62,8 @@ Pas de paramètres avancés dans ce module.
 
 Pas de paramètres avancés dans ce module.
 
+
+------------------------------------------------
 ## DomoticZ URL
 
 ![FR_WebIU-Reglages-DomoticZ-URL]()
@@ -73,7 +78,7 @@ Pas de paramètres avancés dans ce module.
 Pas de paramètres avancés dans ce module.
 
 
-
+------------------------------------------------
 ## Réglages de l'interface Web
 
 ![FR_WebIU-Reglages-de-linterface-web]()
@@ -94,7 +99,7 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 * __enableCache :__ Active la mise en cache (Activé par défaut)
 
 
-
+------------------------------------------------
 ## Interrogation des dispositifs
 
 * La fonction [Activer interrogation des dispositifs]() doit être activée. 
@@ -127,6 +132,7 @@ Pas de paramètres simple dans ce module.
 * __polling0b05 :__ ??? (990 par défaut)
 
 
+------------------------------------------------
 ## Réglages de la gestion des dispositifs
 
 ![FR_WebIU-Reglages-de-la-gestion-des-dispositifs]()
@@ -150,6 +156,7 @@ Pas de paramètres simple dans ce module.
 * __allowReBindingClusters :__ Autorise la reconnexion du cluster si le dispositif est de retour (Activé par défaut)
 
 
+------------------------------------------------
 ## Réglages de la Zigate
 
 ![FR_WebIU-Reglages-de-la-Zigate]()
@@ -172,6 +179,8 @@ Pas de paramètres simple dans ce module.
 * __extendedPANID :__ Force le Extended PAN Id. Necessite un Erase PDM complet!! (0 par défaut)
 * __showTimeOutMsg :__ Affiche un message de délai dépassé (Désactivé par défaut)
 
+
+------------------------------------------------
 ## Réglages de l'environnement du plugin
 
 ![FR_WebIU-Reglages-de-lenvironnement-du-plugin]()
@@ -191,7 +200,7 @@ Pas de paramètres simple dans ce module.
 * __pluginLogs :__ Répertoire contenant les log du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/Logs/` par défaut sur Raspbian)
 
 
-
+------------------------------------------------
 ## Autres réglages
 
 ![FR_WebIU-Reglages-Autre]()
@@ -211,6 +220,8 @@ Pas de paramètres simple dans ce module.
 
 * __AqaraOppleBulbMode :__ ??? (Désactivé par défaut)
 
+
+------------------------------------------------
 ## Réglages Legrand Netatmo
 
 Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
@@ -233,6 +244,8 @@ Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
 
 Pas de paramètres avancés dans ce module.
 
+
+------------------------------------------------
 ## Réglages Legrand Philips
 
 Permet d'activer des modes spécifiques aux equipements Philips
@@ -248,6 +261,8 @@ Permet d'activer des modes spécifiques aux equipements Philips
 
 Pas de paramètres avancés dans ce module.
 
+
+------------------------------------------------
 ## Réglages Legrand Ikea Tradfri
 
 Permet d'activer des modes spécifiques aux equipements Ikea Tradfri
@@ -263,6 +278,8 @@ Permet d'activer des modes spécifiques aux equipements Ikea Tradfri
 
 Pas de paramètres avancés dans ce module.
 
+
+------------------------------------------------
 ## Réglages Enki Lexman
 
 Permet d'activer des modes spécifiques aux equipements Enki Lexman
@@ -279,6 +296,7 @@ Permet d'activer des modes spécifiques aux equipements Enki Lexman
 Pas de paramètres avancés dans ce module.
 
 
+------------------------------------------------
 ## Réglages Schneider Wiser
 
 Permet d'activer des modes spécifiques aux equipements Schneider Wiser
@@ -296,6 +314,7 @@ Permet d'activer des modes spécifiques aux equipements Schneider Wiser
 * __forceWiserRegistration :__ ??? (Désactivé par défaut)
 
 
+------------------------------------------------
 ## Réglages Command transitions for Lights
 
 Permet d'activer des transitions graduelles entre l'état actuel et l'état demandé. Applicable pour les lumières et les groupes.
@@ -316,4 +335,5 @@ Pas de paramètres simple dans ce module.
 
 
 
+------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
