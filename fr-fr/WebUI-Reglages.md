@@ -30,11 +30,11 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 
 ### Les paramètres
 
-* __Activer les Groupes :__ Permet d'activer l'utilisation des groupes dans le plugin Zigate (Désactivé par défaut)
-* __Activer interrogation des dispositifs :__ ??? (Désactivé par défaut)
+* __Activer les Groupes :__ Active l'utilisation des groupes dans le plugin Zigate (Désactivé par défaut)
+* __Activer interrogation des dispositifs :__ Active la fonction Pooling (Désactivé par défaut)
 * __Autoriser accès Internet :__ Autorise le plugin à ce connecter au web pour récupérer les informations de mise à jour (Activé par défaut)
 * __Active l'interface Web :__ Active l'interface Web (Activé par défaut) *La désactivation bloquera l'accès à cette page !!!*
-* __pingDevices :__ ??? (Activé par défaut)
+* __pingDevices :__ Active le fonction ping sur tous les dispositifs  (Activé par défaut)
 
 
 ### Les paramètres avancés
@@ -48,9 +48,9 @@ Pas de paramètres avancés dans ce module.
 
 ### Les paramètres
 
-* __Groupe est Allumé si un equipement Allumé :__ (Sinon, tous les équipements doivent etre Allumés) (Activé par défaut)
-* __forceGroupDeviceRefresh :__ ??? (Activé par défaut)
-* __reComputeGroupState :__ ??? (Activé par défaut)
+* __Groupe est Allumé si un equipement Allumé :__ Désactivé, le groupe sera à ON si tous les dispositifs sont allumés.(Activé par défaut)
+* __forceGroupDeviceRefresh :__ Rafraichi tous les device d'un groupe après une commande envoyée au groupe (Activé par défaut)
+* __reComputeGroupState :__ Rafraichi les états des groupes régulièremement en fonction des états des dispositifs du groupe (Activé par défaut)
 * __Active l'interface Web :__ Active l'interface Web (Activé par défaut) *La désactivation bloquera l'accès à cette page !!!*
 * __pingDevices :__ ??? (Activé par défaut)
 
@@ -66,11 +66,13 @@ Pas de paramètres avancés dans ce module.
 
 ### Les paramètres
 
-* __Port :__ Port de l'interface web de DomoticZ (8080 par défaut)
+* __Port :__ Port de DomoticZ pour l'envoi de requêtes API (8080 par défaut)
 
 ### Les paramètres avancés
 
 Pas de paramètres avancés dans ce module.
+
+
 
 ## Réglages de l'interface Web
 
@@ -83,14 +85,22 @@ Pas de paramètres avancés dans ce module.
 
 ### Les paramètres avancés
 
-* __enableGzip :__ ??? (Activé par défaut)
-* __enableDeflate:__ ??? (Activé par défaut)
-* __enableChunk :__ ??? (Activé par défaut)
-* __enableKeepalive :__ ??? (Activé par défaut)
-* __enableCache :__ ??? (Activé par défaut)
+Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est recommandé de ne pas les modifier__.
+
+* __enableGzip :__ Active la compression gzip (Activé par défaut)
+* __enableDeflate:__ Active la comrpession Deflate (Activé par défaut)
+* __enableChunk :__ Active les gros fichiers (Activé par défaut)
+* __enableKeepalive :__ Active le maintien de la  session active (Activé par défaut)
+* __enableCache :__ Active la mise en cache (Activé par défaut)
+
 
 
 ## Interrogation des dispositifs
+
+* La fonction [Activer interrogation des dispositifs]() doit être activée. 
+
+Il n'est pas recommandé d'activer cette fonction d'interrogation (pooling en anglais) car elle va augmenter la charge sur la Zigate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai vaaugmenter la fréquence d'interrogation pouvant entrainer un ralentissement du réseau jusqu'à la perte de commandes.
+
 
 ![FR_WebIU-Reglages-Interrogation-dispositifs]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -101,19 +111,19 @@ Pas de paramètres simple dans ce module.
 
 ### Les paramètres avancés
 
-* __pingDevicesFeq :__ ??? (360 par défaut)
-* __pollingPhilips :__ ??? (0 par défaut)
-* __pollingGledopto :__ ??? (0é par défaut)
-* __pollingSchneider :__ ??? (0 par défaut)
-* __pollingBlitzwolfPower :__ ??? (0 par défaut)
-* __pollingCasaiaAC201 :__ ??? (0 par défaut)
-* __pollingONOFF :__ ??? (990 par défaut)
-* __pollingLvlControl :__ ??? (990 par défaut)
-* __polling0102 :__ ??? (990 par défaut)
-* __polling0201 :__ ??? (990 par défaut)
+* __pingDevicesFeq :__ Fréquence d'interrogation de tous les dispositifs (3600  par défaut en secondes)
+* __pollingPhilips :__ Les équipements Philips ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (0 par défaut, 300 ou au-dessus recommandé en secondes)
+* __pollingGledopto :__ Les équipements Gledopto ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (0 par défaut, 300 ou au-dessus recommandé en secondes)
+* __pollingSchneider :__ Les équipements Schneider ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (0 par défaut, 300 recommandé en secondes)
+* __pollingBlitzwolfPower :__ Les équipements BlitzWolfo ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (0 par défaut, 300 recommandé en secondes)
+* __pollingCasaiaAC201 :__ ??? (0 par défaut en secondes)
+* __pollingONOFF :__ Récupération de l'état On/Off toutes les 15 minutes (990 par défaut)
+* __pollingLvlControl :__ Récupération du niveau toutes les 15 minutes (990 par défaut)
+* __polling0102 :__ Récupération de l'état des volets roulants (990 par défaut)
+* __polling0201 :__ Thermostat (990 par défaut)
 * __polling0202 :__ ??? (990 par défaut)
 * __polling0702 :__ ??? (990 par défaut)
-* __polling0b04 :__ ??? (990 par défaut)
+* __polling0b04 :__ Récupération de l'état des mesures électrique (990 par défaut)
 * __polling0b05 :__ ??? (990 par défaut)
 
 
@@ -124,20 +134,20 @@ Pas de paramètres simple dans ce module.
 
 ### Les paramètres
 
-* __resetMotiondelay :__ ??? (30 par défaut)
+* __resetMotiondelay :__ Délai avant de remettre à Off l'état de déplacement. Il est possible d'utiliser celui du Widget DomoticZ (30 par défaut en secondes)
 * __Nombre de sec avant de basculer le Selecteur Off :__ ??? (0 par défaut)
 * __Workaround Domoticz issue #4143 :__ ??? (Désactivé par défaut)
 
 ### Les paramètres avancés
 
-* __Interogation du statut du device après un ordre :__ ??? (Activé par défaut)
-* __forcePassiveWidget :__ ??? (Désactivé par défaut)
-* __resetConfigureReporting :__ ??? (Désactivé par défaut)
+* __Interogation du statut du device après un ordre :__ Active une mise à jour de l'état après l'envoi une commande (Activé par défaut)
+* __forcePassiveWidget :__ Autorise DomoticZ à envoyer une commande malgrè que le dispositif terminal ne puisse pas recevoir de commande. Par exemple : les dispositifs Xiaomi sur batterie (Désactivé par défaut)
+* __resetConfigureReporting :__ Active un reset de l'information de configuration de suivi (Désactivé par défaut)
 * __reenforceConfigureReporting :__ ??? (Désactivé par défaut)
-* __resetReadAttributes :__ ??? (Désactivé par défaut)
-* __allowGroupMembership :__ ??? (Activé par défaut)
-* __doUnbindBind :__ ??? (Désactivé par défaut)
-* __allowReBindingClusters :__ ??? (Activé par défaut)
+* __resetReadAttributes :__ Active un reset des informations de polling (Désactivé par défaut)
+* __allowGroupMembership :__ Autorise le plugin à créer automatiquement un groupe si le dispositif est reconnu. Par exemple Legrand (Activé par défaut)
+* __doUnbindBind :__ Active une déconnexion avant la connexion d'un cluster (Désactivé par défaut)
+* __allowReBindingClusters :__ Autorise la reconnexion du cluster si le dispositif est de retour (Activé par défaut)
 
 
 ## Réglages de la Zigate
@@ -154,13 +164,13 @@ Pas de paramètres simple dans ce module.
 ### Les paramètres avancés
 
 * __Creation du Group 0000 :__ ??? (Désactivé par défaut)
-* __Suppression dans la ZiGate :__ ??? (Désactivé par défaut)
-* __Reset permit to join at startup :__ ??? (Désactivé par défaut)
-* __Activer le Ping :__ ??? (Activé par défaut)
+* __Suppression dans la ZiGate :__ Supprime le dispositif dans la Zigate en même temps que la suppression dans DomoticZ (Désactivé par défaut)
+* __Reset permit to join at startup :__ Active un appairage au démarrage du plugin  (Activé par défaut)
+* __Activer le Ping :__ Active un ping de la Zigate toute les 4 minutes afin de vérifier la connexion (Activé par défaut)
 * __breakConfigureReporting :__ ??? (Désactivé par défaut)
-* __TXpower_set :__ ??? (0dbM par défaut)
-* __extendedPANID :__ ??? (0 par défaut)
-* __showTimeOutMsg :__ ??? (Désactivé par défaut)
+* __TXpower_set :__ Attenuation de la puissance (0dbM par défaut, 1: -9 dBM, 2: -20dBM, 3: -32dBM)
+* __extendedPANID :__ Force le Extended PAN Id. Necessite un Erase PDM complet!! (0 par défaut)
+* __showTimeOutMsg :__ Affiche un message de délai dépassé (Désactivé par défaut)
 
 ## Réglages de l'environnement du plugin
 
@@ -191,7 +201,7 @@ Pas de paramètres simple dans ce module.
 
 * __Livolo :__ ??? (Désactivé par défaut)
 * __profaluxOrientBSO :__ ??? (45 par défaut)
-* __alarmDuration :__ ??? (1 par défaut)
+* __alarmDuration :__ Durée de l'alarme (1 par défaut en seconde)
 * __numTopologyReports :__ ??? (4 par défaut)
 * __numEnergyReports :__ ??? (4 par défaut)
 * __TradfriKelvinStep :__ ??? (51 par défaut)
@@ -288,7 +298,7 @@ Permet d'activer des modes spécifiques aux equipements Schneider Wiser
 
 ## Réglages Command transitions for Lights
 
-Permet d'activer des modes spécifiques aux lumières
+Permet d'activer des transitions graduelles entre l'état actuel et l'état demandé. Applicable pour les lumières et les groupes.
 
 ![FR_WebIU-Reglages-Transition-lumieres]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -299,9 +309,9 @@ Pas de paramètres simple dans ce module.
 
 ### Les paramètres avancés
 
-* __Transition pour Hue :__ ??? (0 par défaut)
-* __Transition pour Température :__ ??? (0 par défaut)
-* __Transition pour Couleur RVB :__ ??? (0 par défaut)
-* __Transition pour variateur :__ ??? (0 par défaut)
+* __Transition pour Hue :__ Transition   (0 par défaut en dixième de seconde)
+* __Transition pour Température :__ Transition pour un changement de température de couleur (0 par défaut en dixième de seconde)
+* __Transition pour Couleur RVB :__ Transition pour un changement de couleur (0 par défaut en dixième de seconde)
+* __Transition pour variateur :__ Transistion pour un changement d'intensité (0 par défaut en dixième de seconde)
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
