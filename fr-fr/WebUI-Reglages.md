@@ -4,22 +4,32 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 
 La section __Réglage__ comporte les modules :
 
-* [Appairage](#appairage)
-* [Groupe](#groupe)
-* [Zigate](#zigate)
-* [Plugin](#plugin)
-* [Firmware](#firmware)
+* [Liste des services](#liste-des-services)
+* [Réglages des groupes](#reglages-des-groupes)
+* [DomoticZ URL](#domoticz-url)
+* [Réglages de l'interface web](#reglages-de-linterface-web)
+* [Réglages de la gestion des dispositifs](#reglages-de-la-gestion-des-dispositifs)
+* [Réglages de la Zigate](#reglages-de-la-zigate)
+* [Réglages de l'environnement du plugin](#reglages-de-lenvironnement-du-plugin)
+* [Réglages Legrand Netatmo](#reglages-legrand)
+* [Réglages Philips](#reglages-philips)
+* [Réglages Ikea Tradfri](#reglages-ikea-tradfri)
+* [Réglages Enki Lexman](#reglages-enki-lexman)
+* [Réglages Schneider Wiser](#reglages-schneider-wiser)
+* [Autres réglages](#autres-reglages)
 
-## Appairage
+## Liste des services
 
-Voici la page __Appairage__ de l'interface Web du plugin : 
+Voici le module __Liste des services__ de l'interface Web du plugin : 
 
-![FR_WebIU-Appairage]()
+![FR_WebIU-Liste des services]()
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
-Cette page permet d'appairer les dispositifs avec la Zigate et DomoticZ. 
+(En cours de rédaction)
+
+Ce module permet d'appairer les dispositifs avec la Zigate et DomoticZ. 
 
 Elle permet :
 
