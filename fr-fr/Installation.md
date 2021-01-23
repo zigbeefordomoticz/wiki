@@ -1,4 +1,4 @@
-# Instalaltion du plugin Zigate
+# Installation du plugin Zigate
 
 Pour cette première étape, ll existe différentes méthodes d'installation en fonction de votre système d'exploitation :
 
