@@ -14,7 +14,7 @@ La section __Admin__ comporte les pages :
 
 Voici la page __Appairage__ de l'interface Web du plugin : 
 
-![FR_WebIU-Appairage]()
+![FR_WebUI-Admin-Dispositif.png](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Dispositif.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -33,7 +33,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 
 Voici la page __Groupe__ de l'interface Web du plugin : 
 
-![FR_WebIU-Groupe]()
+![FR_WebUI-Admin-Groupe](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Groupe.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -52,7 +52,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 
 Voici la page __Zigate__ de l'interface Web du plugin : 
 
-![FR_WebIU-Zigate]()
+![FR_WebUI-Admin-Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Zigate.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -70,7 +70,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 
 Voici la page __Plugin__ de l'interface Web du plugin : 
 
-![FR_WebIU-Plugin]()
+![FR_WebUI-Admin-Plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Plugin.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -88,7 +88,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 
 Voici la page __Firmware__ de l'interface Web du plugin : 
 
-![FR_WebIU-Firmware]()
+![FR_WebUI-Admin-Firmware](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Firmware.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
