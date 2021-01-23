@@ -12,7 +12,7 @@ La section __Réglage__ comporte les modules :
 | [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la Zigate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-legrand-philips) |
 | [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#r%C3%A9glages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#r%C3%A9glages-legrand-ikea-tradfri) |
 | [Réglages de l'interface web](#r%C3%A9glages-de-linterface-web) | [Autres réglages](#autres-r%C3%A9glages) | [Réglages Enki Lexman](#r%C3%A9glages-enki-lexman) |
-|[Interrogation des dispositifs](#interrogation-des-dispositifs)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#reglages-schneider-wiser) |
+|[Interrogation des dispositifs](#interrogation-des-dispositifs)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#r%C3%A9glages-schneider-wiser) |
 
 *La disposition dans ce tableau ne correspond pas forcément à la disposition sur la page du plugin.*
 
