@@ -5,7 +5,7 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 La section __Réseau__ comporte les pages :
 
 * [Topologie](#topologie)
-* [Niveau d'interférences](#niveaux-dinterferences)
+* [Niveau d'interférences](#niveau-dinterf%C3%A9rences)
 
 ## Topologie
 
@@ -30,7 +30,7 @@ Le rapport de topologie réseau est constitué de deux graphiques présentant le
 #### Le graphique du maillage
 
 L'illustration de votre maillage montre tout les liens entre 2 dispositifs. 
-Si vous déplacez le curseur sur un lien vous verrez la liaison ainsi que la qualité de la liaison : échelle de 0 (très mauvaise)  à 255 (la meilleure).
+Si vous déplacez le curseur sur un lien vous verrez la liaison ainsi que la qualité de la liaison : échelle de 0 (très mauvaise) à 255 (la meilleure).
 
 Un bouton en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
@@ -61,7 +61,12 @@ Elle permet :
 
 ### Description d'un rapport de niveau d'interférence
 
-L'illustration 
+Voir les [explications](ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
+
+Le niveaux d'interférence est calculé avec la communication entre la Zigate et un router. C'est un petit peu le même principe que lors d'un ping sur le réseau ethernet où vous avez le nombre de paquets perdus.  
+Si vous ne disposez pas de router, vous ne pouvez pas faire d'analyse du niveau d'interférence.
+
+Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque router, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune interférence) à 255 (beaucoupo d'interférence). 
 
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
