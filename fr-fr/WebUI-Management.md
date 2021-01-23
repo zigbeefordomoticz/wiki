@@ -7,6 +7,8 @@ La section __Management__ comporte les pages :
 * [Gestion des dispositifs](#gestion-des-dispositifs)
 * [Gestion des groupes](#gestion-des-groupes)
 
+
+------------------------------------------------
 ## Gestion des dispositifs
 
 Voici la page __Gestion des dispositifs__ de l'interface Web du plugin : 
@@ -31,7 +33,7 @@ Elle permet :
   * L'info LQI : cette valeur indique la qualité de la transmission (0 pas de transmission, 255 transmission d'excélente qualité)
 
 
-
+------------------------------------------------
 ## Gestion des groupes
 
 Voici la page __Gestion des groupes__ de l'interface Web du plugin : 
@@ -44,4 +46,5 @@ Voici la page __Gestion des groupes__ de l'interface Web du plugin :
 Cette page permet de lister les groupes de dispositifs gérés par le plugin.
 
 
+------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
