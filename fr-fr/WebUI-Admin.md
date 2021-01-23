@@ -10,6 +10,8 @@ La section __Admin__ comporte les pages :
 * [Plugin](#plugin)
 * [Firmware](#firmware)
 
+
+------------------------------------------------
 ## Appairage
 
 Voici la page __Appairage__ de l'interface Web du plugin : 
@@ -29,6 +31,8 @@ Elle permet :
 
 Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
+
+------------------------------------------------
 ## Groupe
 
 Voici la page __Groupe__ de l'interface Web du plugin : 
@@ -48,6 +52,7 @@ Elle permet :
 Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
+------------------------------------------------
 ## Zigate
 
 Voici la page __Zigate__ de l'interface Web du plugin : 
@@ -66,6 +71,7 @@ Elle permet :
 Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
+------------------------------------------------
 ## Plugin
 
 Voici la page __Plugin__ de l'interface Web du plugin : 
@@ -83,7 +89,7 @@ Elle permet :
 
 Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
-
+------------------------------------------------
 ## Firmware
 
 Voici la page __Firmware__ de l'interface Web du plugin : 
@@ -102,5 +108,5 @@ Elle permet :
 Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
-
+------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
