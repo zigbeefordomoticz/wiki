@@ -202,10 +202,10 @@ Pas de paramètres simple dans ce module.
 * __Livolo :__ ??? (Désactivé par défaut)
 * __profaluxOrientBSO :__ ??? (45 par défaut)
 * __alarmDuration :__ Durée de l'alarme (1 par défaut en seconde)
-* __numTopologyReports :__ ??? (4 par défaut)
-* __numEnergyReports :__ ??? (4 par défaut)
+* __numTopologyReports :__ Nombre de rapport de topologie à conserver (4 par défaut)
+* __numEnergyReports :__ Nombre de rapport d'interférences à conserver (4 par défaut)
 * __TradfriKelvinStep :__ ??? (51 par défaut)
-* __vibrationAqarasensitivity :__ ??? (medium par défaut)
+* __vibrationAqarasensitivity :__ Sensibilité du capteur de vibration Aqara (medium par défaut, low, high)
 
 ### Les paramètres avancés
 
@@ -220,11 +220,11 @@ Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
 
 ### Les paramètres
 
-* __EnableLedIfOn :__ ??? (Activé par défaut)
-* __EnableLedInDark :__ ??? (Désactivé par défaut)
+* __EnableLedIfOn :__ Allume la LED si le dispositif est allumé (Activé par défaut)
+* __EnableLedInDark :__ Allume la LED dans le noir (Désactivé par défaut)
 * __EnableLedShutter :__ ??? (Désactivé par défaut)
-* __EnableDimmer :__ ??? (Désactivé par défaut)
-* __InvertShutter :__ ??? (Activé par défaut)
+* __EnableDimmer :__ Active le variateur (Désactivé par défaut)
+* __InvertShutter :__ Inverse le sens des volets (Activé par défaut)
 * __EnableReleaseButton :__ ??? (Désactivé par défaut)
 * __LegrandPowerOnAfterOffOn :__ ??? (On par défaut)
 
@@ -288,7 +288,7 @@ Permet d'activer des modes spécifiques aux equipements Schneider Wiser
 
 ### Les paramètres
 
-* __enableSchneiderWiser :__ Permet d'activer les fonctionnalités (Désactivé par défaut)
+* __enableSchneiderWiser :__ Active l'appairage de dispositifs Schneider Wiser (Désactivé par défaut)
 
 ### Les paramètres avancés
 
@@ -313,5 +313,7 @@ Pas de paramètres simple dans ce module.
 * __Transition pour Température :__ Transition pour un changement de température de couleur (0 par défaut en dixième de seconde)
 * __Transition pour Couleur RVB :__ Transition pour un changement de couleur (0 par défaut en dixième de seconde)
 * __Transition pour variateur :__ Transistion pour un changement d'intensité (0 par défaut en dixième de seconde)
+
+
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
