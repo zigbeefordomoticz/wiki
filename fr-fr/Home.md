@@ -40,7 +40,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * La section [Management](WebUI-Management.md)
 * La section [Réseau](WebUI-Reseau.md)
 * La section [Admin](WebUI-Admin.md)
-* La section [Réglages](WebUI-Réglages.md)
+* La section [Réglages](WebUI-Reglages.md)
 * La section [Outils](WebUI-Outils.md)
 * La section [A propos](WebUI-A-propos.md)
 
