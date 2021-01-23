@@ -7,6 +7,8 @@ La section __Réseau__ comporte les pages :
 * [Topologie](#topologie)
 * [Niveau d'interférences](#niveau-dinterf%C3%A9rences)
 
+
+------------------------------------------------
 ## Topologie
 
 Voici la page __Topologie__ de l'interface Web du plugin : 
@@ -42,6 +44,7 @@ Vous pouvez visualiser sur quel router est accroché votre dispositif terminal.
 Un bouton en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
 
+------------------------------------------------
 ## Niveau d'interférences
 
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin : 
@@ -69,4 +72,5 @@ Si vous ne disposez pas de router, vous ne pouvez pas faire d'analyse du niveau 
 Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque router, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
 
 
+------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
