@@ -9,7 +9,7 @@ La section __Réglage__ comporte les modules :
 | Modules  | Modules  | Modules  |
 | :------------: |:---------------:|:-----:|
 | [Liste des services](#liste-des-services)      | [Réglages de la gestion des dispositifs](#r%C3%A9glages-de-la-gestion-des-dispositifs) | [Réglages Legrand Netatmo](#r%C3%A9glages-legrand-netatmo) |
-| [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la Zigate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-philips) |
+| [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la Zigate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-legrand-philips) |
 | [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#r%C3%A9glages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#r%C3%A9glages-legrand-ikea-tradfri) |
 | [Réglages de l'interface web](#r%C3%A9glages-de-linterface-web) | [Autres réglages](#autres-r%C3%A9glages) | [Réglages Enki Lexman](#r%C3%A9glages-enki-lexman) |
 |[Interrogation des dispositifs](#interrogation-des-dispositifs)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#reglages-schneider-wiser) |
@@ -225,7 +225,7 @@ Pas de paramètres avancés dans ce module.
 
 ## Réglages Legrand Philips
 
-Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+Permet d'activer des modes spécifiques aux equipements Philips
 
 ![FR_WebIU-Reglages-Philips]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -240,7 +240,7 @@ Pas de paramètres avancés dans ce module.
 
 ## Réglages Legrand Ikea Tradfri
 
-Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+Permet d'activer des modes spécifiques aux equipements Ikea Tradfri
 
 ![FR_WebIU-Reglages-Ikea-Tradfri]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -255,7 +255,7 @@ Pas de paramètres avancés dans ce module.
 
 ## Réglages Enki Lexman
 
-Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+Permet d'activer des modes spécifiques aux equipements Enki Lexman
 
 ![FR_WebIU-Reglages-Enki-Lexman]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -269,10 +269,26 @@ Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
 Pas de paramètres avancés dans ce module.
 
 
+## Réglages Schneider Wiser
+
+Permet d'activer des modes spécifiques aux equipements Schneider Wiser
+
+![FR_WebIU-Reglages-Schneider-Wiser]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __enableSchneiderWiser :__ Permet d'activer les fonctionnalités (Désactivé par défaut)
+
+### Les paramètres avancés
+
+* __reenforcementWiser :__ ??? (300 par défaut)
+* __forceWiserRegistration :__ ??? (Désactivé par défaut)
+
+
 ## Réglages Command transitions for Lights
 
-
-Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+Permet d'activer des modes spécifiques aux lumières
 
 ![FR_WebIU-Reglages-Transition-lumieres]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
