@@ -27,7 +27,7 @@ Elle permet :
 * D'activer le mode appairage de la Zigate (permanent ou 4 minutes)
 * D'ajouter un dispositif via un router particulier
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels] pour plus d'informations. 
+Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 ## Groupe
 
@@ -45,7 +45,7 @@ Elle permet :
 * De faire une analyse complète des groupes
 * De faire une analyse sélective des groupes
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels] pour plus d'informations. 
+Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ## Zigate
@@ -63,7 +63,7 @@ Elle permet :
 
 * De faire un redémarrage logiciel de la Zigate
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels] pour plus d'informations. 
+Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ## Plugin
@@ -81,7 +81,7 @@ Elle permet :
 
 * De faire un redémarrage du plugin de la Zigate
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels] pour plus d'informations. 
+Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ## Firmware
@@ -99,7 +99,7 @@ Elle permet :
 
 * De faire une mettre à jour le firmware des dispositif
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels] pour plus d'informations. 
+Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 
