@@ -63,10 +63,10 @@ Elle permet :
 
 Voir les [explications](ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
 
-Le niveaux d'interférence est calculé avec la communication entre la Zigate et un router. C'est un petit peu le même principe que lors d'un ping sur le réseau ethernet où vous avez le nombre de paquets perdus.  
+Le niveaux d'interférence est calculé avec la communication entre la Zigate et un router. 
 Si vous ne disposez pas de router, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
-Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque router, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune interférence) à 255 (beaucoupo d'interférence). 
+Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque router, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
 
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
