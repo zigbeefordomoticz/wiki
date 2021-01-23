@@ -8,11 +8,11 @@ La section __Réglage__ comporte les modules :
 
 | Modules  | Modules  | Modules  |
 | :------------: |:---------------:|:-----:|
-| [Liste des services](#liste-des-services)      | [Réglages de la gestion des dispositifs](#reglages-de-la-gestion-des-dispositifs) | [Réglages Legrand Netatmo](#reglages-legrand) |
-| [Réglages des groupes](#reglages-des-groupes)     | [Réglages de la Zigate](#reglages-de-la-zigate)       |   [Réglages Philips](#reglages-philips) |
-| [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#reglages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#reglages-ikea-tradfri) |
-| [Réglages de l'interface web](#reglages-de-linterface-web) | [Autres réglages](#autres-reglages) | [Réglages Enki Lexman](#reglages-enki-lexman) |
-|[Interrogation des dispositifs](#interrogation-des-dispositifs)  |  | [Réglages Schneider Wiser](#reglages-schneider-wiser) |
+| [Liste des services](#liste-des-services)      | [Réglages de la gestion des dispositifs](#r%C3%A9glages-de-la-gestion-des-dispositifs) | [Réglages Legrand Netatmo](#reglages-legrand) |
+| [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la Zigate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-philips) |
+| [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#r%C3%A9glages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#reglages-ikea-tradfri) |
+| [Réglages de l'interface web](#r%C3%A9glages-de-linterface-web) | [Autres réglages](#autres-reglages) | [Réglages Enki Lexman](#r%C3%A9glages-enki-lexman) |
+|[Interrogation des dispositifs](#interrogation-des-dispositifs)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#reglages-schneider-wiser) |
 
 *La disposition dans ce tableau ne correspond pas forcément à la disposition sur la page du plugin.*
 
