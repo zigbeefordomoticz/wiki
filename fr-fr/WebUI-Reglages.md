@@ -162,7 +162,130 @@ Pas de paramètres simple dans ce module.
 * __extendedPANID :__ ??? (0 par défaut)
 * __showTimeOutMsg :__ ??? (Désactivé par défaut)
 
+## Réglage de l'environnement du plugin
+
+![FR_WebIU-Reglages-de-lenvironnement-du-plugin]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __Nombre d'historique du fichier DeviceList :__ ??? (12 par défaut)
+
+### Les paramètres avancés
+
+* __pluginData :__ Répertoire contenant les données du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/Data/` par défaut sur Raspbian)
+* __pluginConfig :__ Répertoire contenant la configuration du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/Conf/` par défaut sur Raspbian)
+* __pluginOTAFirmware :__ Répertoire contenant les rapports du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/OTAFirmware/` par défaut sur Raspbian)
+* __pluginReports :__ Répertoire contenant les données du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/Reports/` par défaut sur Raspbian)
+* __pluginWWW :__ Répertoire contenant l'interface web du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/www/` par défaut sur Raspbian)
+* __pluginLogs :__ Répertoire contenant les log du plugin (`/home/pi/domoticz/plugins/Domoticz-Zigate/Logs/` par défaut sur Raspbian)
 
 
+
+## Autres réglages
+
+![FR_WebIU-Reglages-Autre]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __Livolo :__ ??? (Désactivé par défaut)
+* __profaluxOrientBSO :__ ??? (45 par défaut)
+* __alarmDuration :__ ??? (1 par défaut)
+* __numTopologyReports :__ ??? (4 par défaut)
+* __numEnergyReports :__ ??? (4 par défaut)
+* __TradfriKelvinStep :__ ??? (51 par défaut)
+* __vibrationAqarasensitivity :__ ??? (medium par défaut)
+
+### Les paramètres avancés
+
+* __AqaraOppleBulbMode :__ ??? (Désactivé par défaut)
+
+## Réglages Legrand Netatmo
+
+Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+
+![FR_WebIU-Reglages-Legrand-Netatmo]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __EnableLedIfOn :__ ??? (Activé par défaut)
+* __EnableLedInDark :__ ??? (Désactivé par défaut)
+* __EnableLedShutter :__ ??? (Désactivé par défaut)
+* __EnableDimmer :__ ??? (Désactivé par défaut)
+* __InvertShutter :__ ??? (Activé par défaut)
+* __EnableReleaseButton :__ ??? (Désactivé par défaut)
+* __LegrandPowerOnAfterOffOn :__ ??? (On par défaut)
+
+
+### Les paramètres avancés
+
+Pas de paramètres avancés dans ce module.
+
+## Réglages Legrand Philips
+
+Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+
+![FR_WebIU-Reglages-Philips]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __PhilipsPowerOnAfterOffOn :__ ??? (On par défaut)
+
+### Les paramètres avancés
+
+Pas de paramètres avancés dans ce module.
+
+## Réglages Legrand Ikea Tradfri
+
+Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+
+![FR_WebIU-Reglages-Ikea-Tradfri]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __IkeaPowerOnAfterOffOn :__ ??? (On par défaut)
+
+### Les paramètres avancés
+
+Pas de paramètres avancés dans ce module.
+
+## Réglages Enki Lexman
+
+Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+
+![FR_WebIU-Reglages-Enki-Lexman]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+* __EnkiPowerOnAfterOffOn :__ ??? (On par défaut)
+
+### Les paramètres avancés
+
+Pas de paramètres avancés dans ce module.
+
+
+## Réglages Command transitions for Lights
+
+
+Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+
+![FR_WebIU-Reglages-Transition-lumieres]()
+*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+### Les paramètres
+
+Pas de paramètres simple dans ce module.
+
+### Les paramètres avancés
+
+* __Transition pour Hue :__ ??? (0 par défaut)
+* __Transition pour Température :__ ??? (0 par défaut)
+* __Transition pour Couleur RVB :__ ??? (0 par défaut)
+* __Transition pour variateur :__ ??? (0 par défaut)
 
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
