@@ -20,14 +20,11 @@ Un bouton __Paramètres avancés__ situé en haut à droite permet d'afficher de
 
 Voici la page __Réglages__ de l'interface Web du plugin : 
 
-![FR_WebIU-Reglages]()
+![FR_WebIU-Reglages](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Reglages.png)
 *Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ------------------------------------------------
 ## Liste des services
-
-![FR_WebIU-Reglages-Liste-des-services]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Les paramètres
 
@@ -48,9 +45,6 @@ Pas de paramètres avancés dans ce module.
 ------------------------------------------------
 ## Réglages des groupes
 
-![FR_WebIU-Reglages-des-groupes]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -70,9 +64,6 @@ Pas de paramètres avancés dans ce module.
 ------------------------------------------------
 ## DomoticZ URL
 
-![FR_WebIU-Reglages-DomoticZ-URL]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -86,9 +77,6 @@ Pas de paramètres avancés dans ce module.
 
 ------------------------------------------------
 ## Réglages de l'interface Web
-
-![FR_WebIU-Reglages-de-linterface-web]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Les paramètres
 
@@ -115,10 +103,6 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 * La fonction [Activer interrogation des dispositifs]() doit être activée. 
 
 Il n'est pas recommandé d'activer cette fonction d'interrogation (pooling en anglais) car elle va augmenter la charge sur la Zigate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai vaaugmenter la fréquence d'interrogation pouvant entrainer un ralentissement du réseau jusqu'à la perte de commandes.
-
-
-![FR_WebIU-Reglages-Interrogation-dispositifs]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Les paramètres
 
@@ -147,9 +131,6 @@ Pas de paramètres simple dans ce module.
 ------------------------------------------------
 ## Réglages de la gestion des dispositifs
 
-![FR_WebIU-Reglages-de-la-gestion-des-dispositifs]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -174,9 +155,6 @@ Pas de paramètres simple dans ce module.
 
 ------------------------------------------------
 ## Réglages de la Zigate
-
-![FR_WebIU-Reglages-de-la-Zigate]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Les paramètres
 
@@ -203,9 +181,6 @@ Pas de paramètres simple dans ce module.
 ------------------------------------------------
 ## Réglages de l'environnement du plugin
 
-![FR_WebIU-Reglages-de-lenvironnement-du-plugin]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -225,10 +200,26 @@ Pas de paramètres simple dans ce module.
 
 
 ------------------------------------------------
-## Autres réglages
+## Réglages Command transitions for Lights
 
-![FR_WebIU-Reglages-Autre]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+Permet d'activer des transitions graduelles entre l'état actuel et l'état demandé. Applicable pour les lumières et les groupes.
+
+### Les paramètres
+
+Pas de paramètres simple dans ce module.
+
+### Les paramètres avancés
+
+| Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
+| --------- | ----- | ----------------- | ----------------- | ----------- |
+| Transition pour Hue | dixième de seconde | 0 | | Transition  |
+| Transition pour Température | dixième de seconde | 0 | | Transition pour un changement de température de couleur |
+| Transition pour Couleur RVB | dixième de seconde | 0 | | Transition pour un changement de couleur |
+| Transition pour variateur | dixième de seconde | 0 | | Transistion pour un changement d'intensité |
+
+
+------------------------------------------------
+## Autres réglages
 
 ### Les paramètres
 
@@ -254,9 +245,6 @@ Pas de paramètres simple dans ce module.
 
 Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
 
-![FR_WebIU-Reglages-Legrand-Netatmo]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -280,9 +268,6 @@ Pas de paramètres avancés dans ce module.
 
 Permet d'activer des modes spécifiques aux equipements Philips
 
-![FR_WebIU-Reglages-Philips]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -298,9 +283,6 @@ Pas de paramètres avancés dans ce module.
 ## Réglages Legrand Ikea Tradfri
 
 Permet d'activer des modes spécifiques aux equipements Ikea Tradfri
-
-![FR_WebIU-Reglages-Ikea-Tradfri]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Les paramètres
 
@@ -318,9 +300,6 @@ Pas de paramètres avancés dans ce module.
 
 Permet d'activer des modes spécifiques aux equipements Enki Lexman
 
-![FR_WebIU-Reglages-Enki-Lexman]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -337,9 +316,6 @@ Pas de paramètres avancés dans ce module.
 
 Permet d'activer des modes spécifiques aux equipements Schneider Wiser
 
-![FR_WebIU-Reglages-Schneider-Wiser]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
@@ -352,27 +328,6 @@ Permet d'activer des modes spécifiques aux equipements Schneider Wiser
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | reenforcementWiser | | 300 | | ??? |
 | forceWiserRegistration | | Désactivé | | ??? |
-
-------------------------------------------------
-## Réglages Command transitions for Lights
-
-Permet d'activer des transitions graduelles entre l'état actuel et l'état demandé. Applicable pour les lumières et les groupes.
-
-![FR_WebIU-Reglages-Transition-lumieres]()
-*Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
-
-### Les paramètres
-
-Pas de paramètres simple dans ce module.
-
-### Les paramètres avancés
-
-| Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
-| --------- | ----- | ----------------- | ----------------- | ----------- |
-| Transition pour Hue | dixième de seconde | 0 | | Transition  |
-| Transition pour Température | dixième de seconde | 0 | | Transition pour un changement de température de couleur |
-| Transition pour Couleur RVB | dixième de seconde | 0 | | Transition pour un changement de couleur |
-| Transition pour variateur | dixième de seconde | 0 | | Transistion pour un changement d'intensité |
 
 
 
