@@ -72,7 +72,7 @@ Pas de paramètres avancés dans ce module.
 
 Pas de paramètres avancés dans ce module.
 
-## Réglage de l'interface Web
+## Réglages de l'interface Web
 
 ![FR_WebIU-Reglages-de-linterface-web]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -117,7 +117,7 @@ Pas de paramètres simple dans ce module.
 * __polling0b05 :__ ??? (990 par défaut)
 
 
-## Réglage de la gestion des dispositifs
+## Réglages de la gestion des dispositifs
 
 ![FR_WebIU-Reglages-de-la-gestion-des-dispositifs]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -140,7 +140,7 @@ Pas de paramètres simple dans ce module.
 * __allowReBindingClusters :__ ??? (Activé par défaut)
 
 
-## Réglage de la Zigate
+## Réglages de la Zigate
 
 ![FR_WebIU-Reglages-de-la-Zigate]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
@@ -162,7 +162,7 @@ Pas de paramètres simple dans ce module.
 * __extendedPANID :__ ??? (0 par défaut)
 * __showTimeOutMsg :__ ??? (Désactivé par défaut)
 
-## Réglage de l'environnement du plugin
+## Réglages de l'environnement du plugin
 
 ![FR_WebIU-Reglages-de-lenvironnement-du-plugin]()
 *Ce module est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
