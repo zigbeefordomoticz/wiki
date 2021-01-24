@@ -28,16 +28,19 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * Etape 2 [Paramétrage du plugin](Parametrage.md)
 * Etape 3 [Configuration du plugin](Configuration.md)
 
+
 ## Mise à jour
 
 * [Mettre à jour le plugin](Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Mise-a-jour.md#les-branches-de-mise-à-jour)
+
 
 ## Sauvegardes
 
 * [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
 
 ## L'interface Web du plugin
+
 
 * [Présentation générale](WebUI-Presentation-generale.md)
 * La section [Tableau de bord](WebUI-Tableau-de-bord.md)
