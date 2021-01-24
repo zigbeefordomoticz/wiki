@@ -15,7 +15,7 @@ Les réglages possibles sont :
 
 La figure suivante présente la répartition des canaux Wifi US (premier graphique), Wifi Européen (deuxième graphique) et les canaux ZigBee IEEE 802.15.4 (troisième graphique)
 
-![Channel overlap](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Channel-Allocations.png)
+![Channel overlap](../Images/Channel-Allocations.png)
 
 Note : on retrouve bien les canaux 11 à 26 qui sont paramétrables.
 

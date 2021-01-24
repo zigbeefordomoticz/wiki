@@ -48,7 +48,7 @@ Vérifier les logs que le plugin Zigate s'initialise correctement.
 
 A l'installation, le plugin créé 2 widgets dans l'onglet __Mesures__ de DomoticZ. 
 
-![Administration Widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Widgets_Admin.png)
+![Administration Widgets](../Images/Widgets_Admin.png)
 
 ### Widget Statut
 
@@ -79,7 +79,7 @@ Liste non-exhaustive des notifications :
 
 Un exemple de l'historique des notifications (en anglais)
 
-![Notification Widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Widget_Notifications.png)
+![Notification Widgets](../Images/Widget_Notifications.png)
 
 
 Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](Configuration.md)

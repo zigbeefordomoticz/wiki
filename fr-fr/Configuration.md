@@ -12,5 +12,5 @@ Vous pouvez accéder à l'interface web d'administration en allant à la page ht
 Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port par défaut, l'adresse de l'interface web est http://127.0.0.1:9440
 
 
-![Zigate Web Admin Interface](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Dashboard.png)
+![Zigate Web Admin Interface](../Images/Dashboard.png)
 

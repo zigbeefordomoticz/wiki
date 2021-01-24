@@ -252,12 +252,12 @@ Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit d
 
 Le premier conseil est d’installer Domoticz (version stable par exemple) dans un répertoire autre que le classique Programmes (x86) par défaut. Sinon, il faudra jouer avec les droits utilisateurs. Si tel est le cas, pour modifier les droits, ouvrez l’explorateur Windows, faire clic-droit sur le disque C :, puis propriétés, onglet sécurité :
 
-![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic1png.png)
+![Win10 Installation](../Images/Win10Pic1png.png)
 
 
 Attention, Domoticz et Zigate ont besoin d’écrire des fichiers dans des sous répertoires et un droit d’accès manquant pourra faire apparaître dans l’onglet  « Configuration/log » de  Domoticz ce type de message :
 
-![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic2.png)
+![Win10 Installation](../Images/Win10Pic2.png)
 
 Même en attribuant le maximum de droits autorisés (administrateur, utilisateur avec droits en écriture ...), il m’est arrivé d’obtenir ce message (peut être un oubli…).
 Pour éviter tout problème, j’ai finalement choisi d’installer Domoticz directement à la racine sous C:\Domoticz et depuis aucun problème.
@@ -288,7 +288,7 @@ Installer une version 32 bits pour Windows à partir du site Python.org (par exe
 
 Si la version est compatible avec Domoticz, un message de status dans l’onglet « Configuration/Log » de Domoticz  l’indiquera au démarrage: 
 
-![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic3.png)
+![Win10 Installation](../Images/Win10Pic3.png)
 
 Autrement, un message du type Python Failed apparaitra
 
@@ -331,7 +331,7 @@ En éxécutant une invite de commande CMD en mode administrateur, positionnez vo
 
 L’arborescence de la Zigate est installée : 
 
-![Win10 Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Win10Pic4.png)
+![Win10 Installation](../Images/Win10Pic4.png)
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 

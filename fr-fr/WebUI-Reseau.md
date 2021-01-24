@@ -13,7 +13,7 @@ La section __Réseau__ comporte les pages :
 
 Voici la page __Topologie__ de l'interface Web du plugin : 
 
-![Network_Topology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network_Topology.png)
+![Network_Topology](../Images/Network_Topology.png)
 *Cette page est sucseptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation

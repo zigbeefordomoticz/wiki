@@ -13,7 +13,7 @@ La section __Management__ comporte les pages :
 
 Voici la page __Gestion des dispositifs__ de l'interface Web du plugin : 
 
-![Device Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Device-Management.png)
+![Device Management](../Images/Device-Management.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -38,7 +38,7 @@ Elle permet :
 
 Voici la page __Gestion des groupes__ de l'interface Web du plugin : 
 
-![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Group-Management.png)
+![Group Management](../Images/Group-Management.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation

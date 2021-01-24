@@ -16,7 +16,7 @@ La section __Admin__ comporte les pages :
 
 Voici la page __Appairage__ de l'interface Web du plugin : 
 
-![FR_WebUI-Admin-Dispositif.png](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Dispositif.png)
+![FR_WebUI-Admin-Dispositif.png](../Images/FR_WebUI-Admin-Dispositif.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -37,7 +37,7 @@ Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'information
 
 Voici la page __Groupe__ de l'interface Web du plugin : 
 
-![FR_WebUI-Admin-Groupe](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Groupe.png)
+![FR_WebUI-Admin-Groupe](../Images/FR_WebUI-Admin-Groupe.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -57,7 +57,7 @@ Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'information
 
 Voici la page __Zigate__ de l'interface Web du plugin : 
 
-![FR_WebUI-Admin-Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Zigate.png)
+![FR_WebUI-Admin-Zigate](../Images/FR_WebUI-Admin-Zigate.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -76,7 +76,7 @@ Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'information
 
 Voici la page __Plugin__ de l'interface Web du plugin : 
 
-![FR_WebUI-Admin-Plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Plugin.png)
+![FR_WebUI-Admin-Plugin](../Images/FR_WebUI-Admin-Plugin.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -94,7 +94,7 @@ Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'information
 
 Voici la page __Firmware__ de l'interface Web du plugin : 
 
-![FR_WebUI-Admin-Firmware](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Firmware.png)
+![FR_WebUI-Admin-Firmware](../Images/FR_WebUI-Admin-Firmware.png)
 *Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
