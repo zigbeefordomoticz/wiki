@@ -14,7 +14,7 @@ La section __Réseau__ comporte les pages :
 Voici la page __Topologie__ de l'interface Web du plugin : 
 
 ![Network_Topology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network_Topology.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est sucseptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -31,7 +31,7 @@ Le rapport de topologie réseau est constitué de deux graphiques présentant le
 
 #### Le graphique du maillage
 
-L'illustration de votre maillage montre tout les liens entre 2 dispositifs. 
+L'illustration de votre maillage montre tous les liens entre 2 dispositifs. 
 Si vous déplacez le curseur sur un lien vous verrez la liaison ainsi que la qualité de la liaison : échelle de 0 (très mauvaise) à 255 (la meilleure).
 
 Un bouton en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
@@ -50,7 +50,7 @@ Un bouton en haut à droite du graphique permet de l'afficher en plein écran, d
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin : 
 
 ![InterferenceLevels](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/InterferenceLevels.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
