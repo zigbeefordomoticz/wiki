@@ -19,9 +19,7 @@ Seems to be the foundation of a number of Tuya devices.
 |                   | fvq6avy    | eTRV        |
 | _TYST11_zivfvd7h  | ivfvd7h    | eTRV        |
 
-
 00 03 67 02 0004 00000032
-
 
 ### Payload for 0x01 - Query and report product information, 0x02 - Device Status Query / Report
 
@@ -102,14 +100,13 @@ Seems to be the foundation of a number of Tuya devices.
 | 0x65       |  0x01     | Mode 0x00 Off, 0x01 On |
 | 0x66       |           | Temperature |
 | 0x67       |  0x02     | SetPoint |
-| 0x6a       |  0x01     | LH ???? | 
+| 0x6a       |  0x01     | LH ???? |
 | 0x6c       |           | Program Mode |
 | 0x6d       |           | Valve Position ??? |
 | 0x6e       | 0x00      | ????? |
 | 0x73       | 0x00      | ????? |
 | 0x77       | 0x00      | ????? |
 | 0x82       | 0x01      | Water scale proof |
-
 
 ## Payload for 0x24 - Time Synchronisation
 
@@ -121,18 +118,18 @@ The synopsis is like :
 1. Device send a Time synchronisation request with a uint16 as payload
 1. Host will respond with a payload equal to
 
-| Serial Number |       |       |         | TimeStamp |
+| Serial Number | 0x60  |       |         | TimeStamp |
 | ------        | ----- | ----- | ------  | --------- |
 | uint16        | uint8 | uint8 | uint16  | uint32    |
 | 0008          |  60   | 0d    | 8029    | 600d8e39 |
 | 0000          |  60   | 09    | cdd0    | 6009dbe0 |
 | 000b          |  60   | 09    | cdd3    | 6009dbe3 |
+| 000d          |  60   | 0d    | 8e5e    | 600d9c6e |
 | 000e          |  60   | 0d    | 9c92    | 600daaa2 |
 | 0018          |  60   | 0d    | aac6    | 600db8d6 |
+  0007             60     0d      8029      27a085a9
 
 Timestamp is the total number of seconds from 00: 00: 00 on January 01, 1970, GMT
-
-
 
 * <https://developer.tuya.com/en/docs/iot/device-development/embedded-software-development/mcu-development-access/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty>
 
