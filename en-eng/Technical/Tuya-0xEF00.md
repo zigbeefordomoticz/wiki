@@ -90,6 +90,7 @@ Seems to be the foundation of a number of Tuya devices.
 
 * Manufacturer Name:
 * Model Name: TS0601
+* Pairing: (<https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Technical/Tuya-TS061-eTRV.md>)
 
 | Data Point | Data Type | Description |
 | ---------- | --------- | ----------- |
