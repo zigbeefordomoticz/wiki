@@ -5,7 +5,7 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 Voici la présentation générale de l'interface Web du plugin : 
 
 ![Zigate Web Admin Interface](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Dashboard.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Composition
 
@@ -18,7 +18,7 @@ Elle contient de gauche à droite :
 
 #### Le corps de la page
 
-Les différentes page du plugin s'afficheront ici.
+Les différentes pages du plugin s'afficheront ici.
 
 #### Le pied de page
 
@@ -31,6 +31,6 @@ Il contient de gauche à droite :
 
 Le bandeau est vert si le plugin fonctionne normalement. 
 Le bandeau rouge indique un problème de connexion avec la Zigate. 
-Le bandeau jaune indique l'appairage d'un device ou que la Zigate est chargée. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
+Le bandeau jaune indique l'appairage d'un dispositif ou que la Zigate est chargée. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
 Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
