@@ -2,7 +2,7 @@
 
 Cette page présente les éléments à sauvegarder en prévision d'une réinstallation afin de ne pas perdre de données.
 
-Le dossier du plugin Zigate contient des fichiers __critiques__ qu'il faut sauvegarder en plus de la base de donnée de DomoticZ `domoticz.db`.
+Le dossier du plugin Zigate contient des fichiers __critiques__ qu'il faut sauvegarder en plus de la base de données de DomoticZ `domoticz.db`.
 
 ## Avant-propos
 
@@ -18,7 +18,7 @@ Modifier les chemins en fonction de votre configuration.
 
 1. Arrêter DomoticZ
 
-2. Sauvegarder à minima les éléments suviant :
+2. Sauvegarder à minima les éléments suivant :
 
 * Le fichier  Conf/PluginConf-*.json 
 * Le dossier  Data/*
@@ -45,14 +45,14 @@ Pour information, la commande pour copier le dossier depuis le bureau vers le r�
 cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data
 ```
    
-2. Backup de la configuration : copier le répertoire __Conf/PluginCon__ vers le répertoire de la nouvelle installation :
+2. Backup de la configuration : copier le fichier __Conf/PluginConfXX__ vers le répertoire de la nouvelle installation (XX correspond à deux chiffres) :
 
   Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
  ```
  cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf
  ```
    
-3. Backup des rapport (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
+3. Backup des rapports (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
 
 Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
 ```
@@ -61,4 +61,4 @@ cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/
   
  La nouvelle installation est prête à être lancée. Elle sera sur la branche __Stable__.
 
-4. Redémarrer Domoticz
+4. Redémarrer DomoticZ
