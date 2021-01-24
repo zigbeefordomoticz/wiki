@@ -4,9 +4,9 @@ Bienvenue sur le wiki du plugin Zigate pour DomoticZ !
 
 Le but de ce wiki est de fournir les plus d'informations possible sur l'utilisation du plugin.
 
-Nous dévelopons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal, ce qui permettra notamment l'achat d’équipements et de les tester/valider pour le plugin. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
+Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal, ce qui permettra notamment l'achat d’équipements et de les tester/valider pour le plugin. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
-**Ce wiki en français est en cours de rédaction :** Les pages traduites ont un lien en français. Les autres liens renvoyants vers le wiki EN ont l'indication "en anglais". 
+**Ce wiki en français est en cours de rédaction :** Les pages traduites ont un lien en français. Les autres liens renvoyant vers le wiki EN ont l'indication "en anglais". 
 
 ## Introduction
 
@@ -14,30 +14,42 @@ L'objectif de ce plugin est de réaliser une passerelle entre une [Zigate](https
 
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la Zigate.
 
-Voici une liste non exhaustive des dispositifs compatibles. Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin. Il est possible qu'il y est d'autres dispositifs ZigBee qui fonctionnent (merci de nous remonter l'info afin que nous mettions la liste à jour)
+Voici une liste non exhaustive des dispositifs compatibles. Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin. Il est possible qu'il y ait d'autres dispositifs ZigBee qui fonctionnent (merci de nous remonter l'info afin que nous mettions la liste à jour)
 * [Liste des dispositifs compatibles](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices.md)
 
 ## Installation
 
-Il existe plusieurs façons d'installer le plugin Zigate pour Domoticz qui sont différentes en fonction du système d'exploitation.
+Il existe plusieurs façons d'installer le plugin Zigate pour DomoticZ qui sont différentes en fonction du système d'exploitation.
 
-Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [Domoticz Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
+Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 
 * Etape 1 [Installation du plugin](Installation.md)
 * Etape 2 [Paramétrage du plugin](Parametrage.md)
 * Etape 3 [Configuration du plugin](Configuration.md)
 
+
 ## Mise à jour
 
-* Mettre à jour le plugin
-* Les branches de mises à jour
+* [Mettre à jour le plugin](Mise-a-jour.md#mettre-à-jour-le-plugin)
+* [Les branches de mises à jour](Mise-a-jour.md#les-branches-de-mise-à-jour)
 
-## Configuration
 
-* [Interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md) en anglais
+## Sauvegardes
+
 * [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
-* [Mettre une authenficiation sur interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md) en anglais
+
+## L'interface Web du plugin
+
+
+* [Présentation générale](WebUI-Presentation-generale.md)
+* La section [Tableau de bord](WebUI-Tableau-de-bord.md)
+* La section [Management](WebUI-Management.md)
+* La section [Réseau](WebUI-Reseau.md)
+* La section [Admin](WebUI-Admin.md)
+* La section [Réglages](WebUI-Reglages.md)
+* La section [Outils](WebUI-Outils.md)
+* La section [A propos](WebUI-A-propos.md)
 
 
 ## Tutoriels
@@ -55,7 +67,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Binding_Legrand.md) en anglais
 * [Network status](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Status.md) (_4.1_ beta) en anglais
 * [Network Topology - Mesh](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Network-Topology---LQI-report.md) (4.1_ beta) en anglais
-
+* [Mettre une authenficiation sur interface d'administration du plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md) en anglais
 
 ## Que faire si un dispositif ne fonctionne pas correctement ?
 

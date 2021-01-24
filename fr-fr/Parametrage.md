@@ -2,7 +2,9 @@
 
 Cette étape est la deuxième du processus d'installation du plugin Zigate.
 
-Vous devez donc avoir suivi et terminé l'[étape 1 Instalaltion du plugin](Installation.md)
+
+Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Installation.md)
+
 
 
 ## Le paramétrage
@@ -12,12 +14,15 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Instalaltion du plugin](Inst
 
 ![Domoticz Hardware Menu for Plugin](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/DzMenu.png)
 
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+
+
 
 | Id | Short Description    | Full Description |
 | -- | -------------------- | ---------------- |
 | 1  | Nom                  | Le nom donné à la Zigate. Si vous utiliser plusieurs Zigate, vous aurez besoin de plusieurs instances du matériel Zigate et le nom permettra de les identifiées.
 | 2  | Type                 | `Zigate plugin` à sélectionner dans la liste déroulante |
-| 3  | Zigate Model         | Choisir entre les différents modèles de Zigate ( USB, DIN, PI, Wifi) |
+| 3  | Zigate Model         | Choisir entre les différents modèles de Zigate (USB, DIN, PI, Wifi) |
 | 4  | IP                   | IP de la Zigate pour le modèle Wifi uniquement. Laisser 0.0.0.0 pour les autres modèles |
 | 5  | Port                 | Port de la Zigate pour le modèle Wifi uniquement (défaut 9999). Laisser 9999 pour les autres modèles |
 | 6  | Serial Port          | Serial Port sur lequel est branché la Zigate |
