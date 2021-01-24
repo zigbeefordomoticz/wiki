@@ -1,19 +1,19 @@
 # Installation du plugin Zigate
 
-Pour cette première étape, ll existe différentes méthodes d'installation en fonction de votre système d'exploitation :
+Pour cette première étape, il existe différentes méthodes d'installation en fonction de votre système d'exploitation :
 
 * 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 * 3 - [Installation sur NAS Synology](#3---installation-sur-nas-synology)
 * 4 - [Installation sur Docker](#4---installation-sur-docker)
-* 5 - [Installation sous windows 10](#5---installation-sous-windows-10)
+* 5 - [Installation sous Windows 10](#5---installation-sous-windows-10)
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
 ------------
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
 
 ### 1.A - Prérequis
 
@@ -33,7 +33,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 ------------
 # 2 - Installation manuelle sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour un installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
 
 ### 2.A - Prérequis
 
@@ -48,7 +48,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Exécuter la commande : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
 * Le répertoire __Domoticz-Zigate__ sera créé dans le dossier plugin
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `chmod +x Domoticz-Zigate/plugin.py`
-* Redémarrer Domoticz.
+* Redémarrer DomoticZ.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
@@ -62,8 +62,8 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 
 ### 3.A - Prérequis
 
-* Avant tout, Python doit ête installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder))
-* Le paquet Domoticz pour Synology a installé est la version 'avec Puthon'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v2020.1 avec Python 3.5.1. 
+* Avant tout, Python doit être installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder))
+* Le paquet DomoticZ pour Synology a installé est la version 'avec Puthon'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v2020.1 avec Python 3.5.1. 
 * Le Module Python du Package manager doit être installé (voir [Python Module](https://www.synology.com/en-uk/dsm/packages/PythonModule))
 * Le paquet GitHub server pour Synology doit être installé. 
 * Installer le paquet Git Server via Diskstation. La partie Serveur du paquet Git Server n'est pas nécessaire, juste le 'git command' (pas de configurations spécifiques).
@@ -75,9 +75,9 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 
 * Démarrer une session __Putty__
 * Se loguer
-* Aller jusqu'au dossier __plugins__ de Domoticz : `cd /volume1/@appstore/domoticz/var/plugins`
+* Aller jusqu'au dossier __plugins__ de DomoticZ : `cd /volume1/@appstore/domoticz/var/plugins`
 * Faire un clone du Git du plugin Zigate dans un nouveau dossier : `sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate`
-* Arrêter et redémarrer Domoticz depuis le gestionnaire de paquet.
+* Arrêter et redémarrer DomoticZ depuis le gestionnaire de paquet.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
@@ -209,7 +209,7 @@ Si vous avez des plugins qui ont besoin d'un accès réseau (comme la Zigate Wif
 
 #### 4.2.C - Récupérer les logs Docker
 
-Pour récupérer les logs complets depuis Docker, éxécuter : `docker logs Domoticz`
+Pour récupérer les logs complets depuis Docker, exécuter : `docker logs Domoticz`
 
 
 #### 4.2.D - Connexion au Docker actif
