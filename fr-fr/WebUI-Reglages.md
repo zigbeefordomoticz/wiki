@@ -21,7 +21,7 @@ Un bouton __Paramètres avancés__ situé en haut à droite permet d'afficher de
 Voici la page __Réglages__ de l'interface Web du plugin : 
 
 ![FR_WebIU-Reglages](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Reglages.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ------------------------------------------------
 ## Liste des services
@@ -31,8 +31,8 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin Zigate |
-| Activer interrogation des dispositifs | | Désactivé | | Active la fonction Pooling |
-| Autoriser accès Internet | | Activé | | Autorise le plugin à ce connecter au web pour récupérer les informations de mise à jour|
+| Activer interrogation des dispositifs | | Désactivé | | Active la fonction Polling |
+| Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour|
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!|
 | pingDevices | | Activé | | Active le fonction ping sur tous les dispositifs |
 
@@ -50,8 +50,8 @@ Pas de paramètres avancés dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Groupe est Allumé si un equipement Allumé | | Activé | | Désactivé, le groupe sera à ON si tous les dispositifs sont allumés |
-| forceGroupDeviceRefresh | | Activé | | Rafraichi tous les device d'un groupe après une commande envoyée au groupe |
-| reComputeGroupState | | Activé | | Rafraichi les états des groupes régulièremement en fonction des états des dispositifs du groupe |
+| forceGroupDeviceRefresh | | Activé | | Rafraichi tous les dispositifs d'un groupe après une commande envoyée au groupe |
+| reComputeGroupState | | Activé | | Rafraichi les états des groupes régulièrement en fonction des états des dispositifs du groupe |
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!* |
 | pingDevices | | Activé | | ??? |
 
@@ -91,7 +91,7 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | enableGzip | | Activé | | Active la compression gzip |
-| enableDeflate | | Activé | | Active la comrpession Deflate |
+| enableDeflate | | Activé | | Active la compression Deflate |
 | enableChunk | | Activé | | Active les gros fichiers |
 | enableKeepalive | | Activé | | Active le maintien de la  session active (|
 | enableCache | | Activé | | Active la mise en cache |
@@ -102,21 +102,21 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 
 * La fonction [Activer interrogation des dispositifs]() doit être activée. 
 
-Il n'est pas recommandé d'activer cette fonction d'interrogation (pooling en anglais) car elle va augmenter la charge sur la Zigate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai vaaugmenter la fréquence d'interrogation pouvant entrainer un ralentissement du réseau jusqu'à la perte de commandes.
+Il n'est pas recommandé d'activer cette fonction d'interrogation (polling en anglais) car elle va augmenter la charge sur la Zigate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai va augmenter la fréquence d'interrogation pouvant entrainer un ralentissement du réseau jusqu'à la perte de commandes.
 
 ### Les paramètres
 
-Pas de paramètres simple dans ce module.
+Pas de paramètre simple dans ce module.
 
 ### Les paramètres avancés
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | pingDevicesFeq | seconde | 3600 | | Fréquence d'interrogation de tous les dispositifs |
-| pollingPhilips | seconde | 0 | | Les équipements Philips ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingGledopto | seconde | 0 | | Les équipements Gledopto ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingSchneider | seconde | 0 | | Les équipements Schneider ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingBlitzwolfPower | seconde | 0 | | Les équipements BlitzWolfo ne renvoient pas automatiquement leur status. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingPhilips | seconde | 0 | | Les équipements Philips ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingGledopto | seconde | 0 | | Les équipements Gledopto ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingSchneider | seconde | 0 | | Les équipements Schneider ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingBlitzwolfPower | seconde | 0 | | Les équipements BlitzWolf ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingCasaiaAC201 | seconde | 0 | | ??? |
 | pollingONOFF | seconde | 990 | | Récupération de l'état On/Off toutes les 15 minutes |
 | pollingLvlControl | seconde | 990 | | Récupération du niveau toutes les 15 minutes |
@@ -144,7 +144,7 @@ Pas de paramètres simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Interogation du statut du device après un ordre | | Activé | | Active une mise à jour de l'état après l'envoi une commande |
-| forcePassiveWidget | | Désactivé | | Autorise DomoticZ à envoyer une commande malgrè que le dispositif terminal ne puisse pas recevoir de commande. Par exemple : les dispositifs Xiaomi sur batterie |
+| forcePassiveWidget | | Désactivé | | Autorise DomoticZ à envoyer une commande malgré que le dispositif terminal ne puisse pas recevoir de commande. Par exemple : les dispositifs Xiaomi sur batterie |
 | resetConfigureReporting | | Désactivé | | Active un reset de l'information de configuration de suivi |
 | reenforceConfigureReporting | | Désactivé | | ??? |
 | resetReadAttributes | | Désactivé | | Active un reset des informations de polling |
@@ -174,7 +174,7 @@ Pas de paramètres simple dans ce module.
 | Activer le Ping | | Activé | | Active un ping de la Zigate toute les 4 minutes afin de vérifier la connexion |
 | breakConfigureReporting | | Désactivé | | ??? |
 | TXpower_set | dbM| 0 | 0, -9, -20, -32| Attenuation de la puissance |
-| extendedPANID | | 0 | | Force le Extended PAN Id. Necessite un Erase PDM complet!! |
+| extendedPANID | | 0 | | Force le Extended PAN Id. Nécessite un Erase PDM complet!! |
 | showTimeOutMsg | | Désactivé | | Affiche un message de délai dépassé |
 
 
@@ -206,7 +206,7 @@ Permet d'activer des transitions graduelles entre l'état actuel et l'état dema
 
 ### Les paramètres
 
-Pas de paramètres simple dans ce module.
+Pas de paramètre simple dans ce module.
 
 ### Les paramètres avancés
 
@@ -215,7 +215,7 @@ Pas de paramètres simple dans ce module.
 | Transition pour Hue | dixième de seconde | 0 | | Transition  |
 | Transition pour Température | dixième de seconde | 0 | | Transition pour un changement de température de couleur |
 | Transition pour Couleur RVB | dixième de seconde | 0 | | Transition pour un changement de couleur |
-| Transition pour variateur | dixième de seconde | 0 | | Transistion pour un changement d'intensité |
+| Transition pour variateur | dixième de seconde | 0 | | Transition pour un changement d'intensité |
 
 
 ------------------------------------------------
@@ -243,7 +243,7 @@ Pas de paramètres simple dans ce module.
 ------------------------------------------------
 ## Réglages Legrand Netatmo
 
-Permet d'activer des modes spécifiques aux equipements Legrand Netatmo
+Permet d'activer des modes spécifiques aux équipements Legrand Netatmo
 
 ### Les paramètres
 
@@ -266,7 +266,7 @@ Pas de paramètres avancés dans ce module.
 ------------------------------------------------
 ## Réglages Legrand Philips
 
-Permet d'activer des modes spécifiques aux equipements Philips
+Permet d'activer des modes spécifiques aux équipements Philips
 
 ### Les paramètres
 
@@ -282,7 +282,7 @@ Pas de paramètres avancés dans ce module.
 ------------------------------------------------
 ## Réglages Legrand Ikea Tradfri
 
-Permet d'activer des modes spécifiques aux equipements Ikea Tradfri
+Permet d'activer des modes spécifiques aux équipements Ikea Tradfri
 
 ### Les paramètres
 
@@ -298,7 +298,7 @@ Pas de paramètres avancés dans ce module.
 ------------------------------------------------
 ## Réglages Enki Lexman
 
-Permet d'activer des modes spécifiques aux equipements Enki Lexman
+Permet d'activer des modes spécifiques aux équipements Enki Lexman
 
 ### Les paramètres
 
@@ -314,7 +314,7 @@ Pas de paramètres avancés dans ce module.
 ------------------------------------------------
 ## Réglages Schneider Wiser
 
-Permet d'activer des modes spécifiques aux equipements Schneider Wiser
+Permet d'activer des modes spécifiques aux équipements Schneider Wiser
 
 ### Les paramètres
 
