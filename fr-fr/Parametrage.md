@@ -25,7 +25,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Inst
 | 4  | IP                   | IP de la Zigate pour le modèle Wifi uniquement. Laisser 0.0.0.0 pour les autres modèles |
 | 5  | Port                 | Port de la Zigate pour le modèle Wifi uniquement (défaut 9999). Laisser 9999 pour les autres modèles |
 | 6  | Serial Port          | Serial Port sur lequel est branché la Zigate |
-| 7  | Initialize ZiGate (Erase Memory) `Erase PDM` | Pour initialiser la Zigate avec les paramètres du plugin. A __activer obligatoirement__ lors de la configuration initiale (ou après (or after an Erase EEPROMO). __ATTENTION:__ L'activation va effacer toutes des informations d'appairage de la Zigate. Will Erase all pairing information on the Zigate. Pour activer, passer à True et redémarrer le plugin |
+| 7  | Initialize ZiGate (Erase Memory) `Erase PDM` | Pour initialiser la Zigate avec les paramètres du plugin. A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROMO). __ATTENTION:__ L'activation va effacer toutes des informations d'appairage de la Zigate. Pour activer, passer à True et redémarrer le plugin |
 | 8  | Port for Web Admin| Port pour accéder à l'administration web du plugin (défaut 9440). A modifier en cas d'utilisation de plusieurs instances du plugin. |
 | 9  | Verbors and Debuging | Sélection du niveau du log du plugin (Aucun par défaut) |
 
