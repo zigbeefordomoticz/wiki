@@ -2,7 +2,6 @@
 
 Cette étape est la deuxième du processus d'installation du plugin Zigate.
 
-
 Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Installation.md)
 
 
@@ -44,5 +43,43 @@ La ligne avec le plugin Zigate est normalement apparue. Cliquer dessus.
 
 Vérifier les logs que le plugin Zigate s'initialise correctement.
 
-Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](Configuration.md)
 
+## Les widgets du plugin
+
+A l'installation, le plugin créé 2 widgets dans l'onglet __Mesures__ de DomoticZ. 
+
+![Administration Widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Widgets_Admin.png)
+
+### Widget Statut
+
+Le widget s'appelle 'Zigate Status XX' avec XX correspondant au numéro de matériel du plugin Zigate. Il indiquera l'état du plugin. Le Log du widget permettra d'avoir l'historique des états du plugins.
+
+Les différents états possibles sont :
+
+| État | Couleur | Description |
+| ---- | ------- | ----------- |
+| Off | Rouge | Le plugin s'éteint ou il y a un problème de communication |
+| Démarrage | Gris | Le plugin démarre |
+| Prêt | Vert | Le plugin est en fonctionnement normal |
+| Appairage | Ambre | Le plugin est en mode appairage |
+| Saturation | Ambre | Le plugin sature : il peut y avoir des délais de transmissions rallongés |
+
+
+### Widget Text
+
+Liste non-exhaustive des notifications :
+
+* Succès d'appairage
+* Échec d'appairage
+* Exclusion d'un dispositif
+* Rapport de topologie réseau disponible
+* Rapport d'interférences réseau disponible
+* Problème réseau 
+* Canal ZigBee
+
+Un exemple de l'historique des notifications (en anglais)
+
+![Notification Widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Widget_Notifications.png)
+
+
+Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](Configuration.md)
