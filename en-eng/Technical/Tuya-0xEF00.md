@@ -41,6 +41,9 @@ The interaction with the cluster 0xef00 are following the folling structutre com
 
 ### Identified Data Points: Smart Dimmer
 
+Manufacturer Name: \_TZE200_dfxkcots
+Model Name: TS0601
+
 | Data Point | Data Type | Manufacturer Name | Model Name | Object | Description |
 | ---------- | --------- | ----------------- | ---------- | ------ | ----------- |
 | 0x01       |  0x01     |                   | TS0601     | Smart Dimmer | Switch On 0x01, Off 0x00 |
@@ -50,6 +53,9 @@ The interaction with the cluster 0xef00 are following the folling structutre com
 
 ### Identified Data Points: Smart TRV ( eTRV )
 
+Manufacturer Name: \_TYST11_zivfvd7h
+Model Name: fvq6avy, ivfvd7h
+
 | Data Point | Data Type | Manufacturer Name | Model Name | Object | Description |
 | ---------- | --------- | ----------------- | ---------- | ------ | ----------- |
 | 0x02       |  0x03     |                   | fvq6avy, ivfvd7h | eTRV | SetPoint |
@@ -57,6 +63,10 @@ The interaction with the cluster 0xef00 are following the folling structutre com
 | 0x04       |  0x04     |                   | fvq6avy, ivfvd7h | eTRV | Thermostat Mode 0x00 Off, 0x01 Auto, 0x02 Manual|
 | 0x07       |           |                   | fvq6avy, ivfvd7h | eTRV | Child Lock ? |
 | 0x15       |           |                   | fvq6avy, ivfvd7h | eTRV | Battery ? |
+
+
+Manufacturer Name: 
+Model Name: TS0601
 
 | Data Point | Data Type | Manufacturer Name | Model Name | Object | Description |
 | ---------- | --------- | ----------------- | ---------- | ------ | ----------- |
