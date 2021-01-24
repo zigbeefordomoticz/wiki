@@ -31,8 +31,8 @@ The interaction with the cluster 0xef00 are following the folling structutre com
 
 ### Identified Data Points: Curtain Motor
 
-Manufacturer Name: \_TZE200_rddyvrci', \_TZE200_5zbp6j0u, \_TZE200_nkoabg8w, \_TZE200_xuzcvlku, \_TZE200_4vobcgd3, \_TZE200_nogaemzt, \_TZE200_pk0sfzvr, \_TZE200_fdtjuw7u,\_TZE200_zpzndjez
-Model Name: TS0601
+* Manufacturer Name: \_TZE200_rddyvrci', \_TZE200_5zbp6j0u, \_TZE200_nkoabg8w, \_TZE200_xuzcvlku, \_TZE200_4vobcgd3, \_TZE200_nogaemzt, \_TZE200_pk0sfzvr, \_TZE200_fdtjuw7u,* \_TZE200_zpzndjez
+* Model Name: TS0601
 
 | Data Point | Data Type |  Description |
 | ---------- | --------- |  ----------- |
@@ -46,8 +46,8 @@ Model Name: TS0601
 
 ### Identified Data Points: Smart Dimmer
 
-Manufacturer Name: \_TZE200_dfxkcots
-Model Name: TS0601
+* Manufacturer Name: \_TZE200_dfxkcots
+* Model Name: TS0601
 
 | Data Point | Data Type |  Description |
 | ---------- | --------- |  ----------- |
@@ -56,8 +56,8 @@ Model Name: TS0601
 
 ### Identified Data Points: Siren
 
-Manufacturer Name: \_TZE200_d0yu2xgi
-Model Name: TS0601
+* Manufacturer Name: \_TZE200_d0yu2xgi
+* Model Name: TS0601
 
 | Data Point | Data Type |  Description |
 | ---------- | --------- |  ----------- |
@@ -79,8 +79,8 @@ Model Name: TS0601
 
 ### Identified Data Points: Smart TRV ( eTRV )
 
-Manufacturer Name: \_TYST11_zivfvd7h
-Model Name: fvq6avy, ivfvd7h
+* Manufacturer Name: \_TYST11_zivfvd7h
+* Model Name: fvq6avy, ivfvd7h
 
 | Data Point | Data Type |  Description |
 | ---------- | --------- |  ----------- |
@@ -90,8 +90,8 @@ Model Name: fvq6avy, ivfvd7h
 | 0x07       |           | Child Lock ? |
 | 0x15       |           | Battery ? |
 
-Manufacturer Name:
-Model Name: TS0601
+* Manufacturer Name:
+* Model Name: TS0601
 
 | Data Point | Data Type | Description |
 | ---------- | --------- | ----------- |
