@@ -1,7 +1,7 @@
 
 # Installation du plugin Zigate
 
-Pour cette première étape, il existe différentes méthodes d'installation en fonction de votre système d'exploitation :
+Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
 
 * 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
