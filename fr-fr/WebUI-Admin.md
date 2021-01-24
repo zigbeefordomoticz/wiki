@@ -17,7 +17,7 @@ La section __Admin__ comporte les pages :
 Voici la page __Appairage__ de l'interface Web du plugin : 
 
 ![FR_WebUI-Admin-Dispositif.png](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Dispositif.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -29,7 +29,7 @@ Elle permet :
 * D'activer le mode appairage de la Zigate (permanent ou 4 minutes)
 * D'ajouter un dispositif via un router particulier
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
+Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ------------------------------------------------
@@ -38,7 +38,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 Voici la page __Groupe__ de l'interface Web du plugin : 
 
 ![FR_WebUI-Admin-Groupe](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Groupe.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -49,7 +49,7 @@ Elle permet :
 * De faire une analyse complète des groupes
 * De faire une analyse sélective des groupes
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
+Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ------------------------------------------------
@@ -58,7 +58,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 Voici la page __Zigate__ de l'interface Web du plugin : 
 
 ![FR_WebUI-Admin-Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Zigate.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -68,7 +68,7 @@ Elle permet :
 
 * De faire un redémarrage logiciel de la Zigate
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
+Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ------------------------------------------------
@@ -77,7 +77,7 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 Voici la page __Plugin__ de l'interface Web du plugin : 
 
 ![FR_WebUI-Admin-Plugin](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Plugin.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -87,7 +87,7 @@ Elle permet :
 
 * De faire un redémarrage du plugin de la Zigate
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
+Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 ------------------------------------------------
 ## Firmware
@@ -95,17 +95,17 @@ Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informatio
 Voici la page __Firmware__ de l'interface Web du plugin : 
 
 ![FR_WebUI-Admin-Firmware](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/FR_WebUI-Admin-Firmware.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
-Cette page permet de mettre à jour le firmware des dispositif ZigBee.
+Cette page permet de mettre à jour le firmware des dispositifs ZigBee.
 
 Elle permet :
 
-* De faire une mettre à jour le firmware des dispositif
+* De faire une mettre à jour le firmware des dispositifs
 
-Se repporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
+Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
 
 ------------------------------------------------
