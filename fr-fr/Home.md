@@ -27,7 +27,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * Etape 1 [Installation du plugin](Installation.md)
 * Etape 2 [Paramétrage du plugin](Parametrage.md)
 * Etape 3 [Configuration du plugin](Configuration.md)
-
+* [Plugin admin widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Administration.md) (_4.1_) en anglais
 
 ## Mise à jour
 
@@ -54,8 +54,6 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Tutoriels
 
-* [Plugin admin widgets](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Administration.md) (_4.1_) en anglais
-* [Plugin Parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.json.md) en anglais
 * [Pair and provision a new Device](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PairingDevice.md) en anglais
 * [Pairing and provisioning from a specific router](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PairingFromRouter.md) en anglais
 * [Remove a Device from ZiGate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/RemoteDevice.md) en anglais
