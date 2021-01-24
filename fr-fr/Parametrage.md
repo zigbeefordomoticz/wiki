@@ -19,7 +19,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Inst
 
 | Id | Short Description    | Full Description |
 | -- | -------------------- | ---------------- |
-| 1  | Nom                  | Le nom donné à la Zigate. Si vous utiliser plusieurs Zigate, vous aurez besoin de plusieurs instances du matériel Zigate et le nom permettra de les identifiées.
+| 1  | Nom                  | Le nom donné à la Zigate. Si vous utiliser plusieurs Zigate, vous aurez besoin de plusieurs instances du matériel Zigate et le nom permettra de les identifier.
 | 2  | Type                 | `Zigate plugin` à sélectionner dans la liste déroulante |
 | 3  | Zigate Model         | Choisir entre les différents modèles de Zigate (USB, DIN, PI, Wifi) |
 | 4  | IP                   | IP de la Zigate pour le modèle Wifi uniquement. Laisser 0.0.0.0 pour les autres modèles |
