@@ -238,7 +238,9 @@ Cette méthode est uniquement valable pour les systèmes Windows 10.
 
 ### 5.1 - Avant-propos
 
-Installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réellement plug and play.
+La majeure partie du développement du plugin est realisée sous Linux (Rasbian, Fedora) en s'appuyant sur du code Python pour permettre l'execution sur plateforme Windows.
+
+Nénamoins, installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réellement plug and play.
 
 On est très vite confronté à chercher des informations éparpillées sur le net, à lire des retours d’expérience dans de nombreux forums et tenter d’éviter les pièges sous Windows.
 
@@ -325,7 +327,7 @@ La dernière étape consiste à installer le plugin de Pipiche pour gérer la Zi
 
 Cependant, le répertoire ou sont installés les plugins n’existe pas lors de l’installation de Domoticz. Il faut donc le créer manuellement.
 
-Pour cela, ouvrez l’explorateur Windows et allez dans le répertoire ou est installé Domoticz (pour mon cas,  C:\Domoticz)
+Pour cela, ouvrez l’explorateur Windows et allez dans le répertoire où est installé Domoticz (pour mon cas,  C:\Domoticz)
 Clic droit sur Domoticz, puis Nouveau Dossier que vous nommerez plugins
 En éxécutant une invite de commande CMD en mode administrateur, positionnez vous dans le répertoire plugins puis taper la ligne d’instruction : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
 
@@ -343,7 +345,7 @@ Avec l’apparition des mini PC fanless sous windows 10 pour une centaine d’eu
 
 Mais en cas de coupure de courant, une box domotique doit être en état de repartir. Domoticz étant dans le groupe de démarrage, l’application se relance automatiquement.
 
-Malheureusement, l’invite de Windows 10 vous demande d’introduire votre mot de passe et interrompre ce processus.
+Malheureusement, l’invite de Windows 10, en vous demandant d’introduire votre mot de passe, interrompt ce processus de lancement automatique.
 
 Pour éviter ce désagrément (surtout lorsqu’on est absent du domicile), il est possible d’éviter d’entrer le mot de passe du compte courant à l’invite de Windows (l’inconvénient est un PC accessible à tous, à vous de choisir).
 
@@ -357,7 +359,14 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian p
 
 ### 6.1 - Prérequis
 
-* Tester si wiringpi est installé :
+* Assurez-vous d'avoir installé les dernieres versions de Rasbian ainsi que python-dev
+   ```
+   sudo apt-get update
+   sudo apt-get upgrade
+   sudo apt-get install python3-dev
+   ```
+
+* Testez l'installation de wiringpi :
     ```
     gpio -v
     gpio readall
@@ -367,7 +376,7 @@ Si non, installer wiringpi : `sudo apt-get install wiringpi`
 
 ### 6.2 - Procédure
 
-* Activer les port GPIO dans le fichier __rc.local__ pour qu'ils soient actif après chaque redémarrage : 
+* Activer les port GPIO dans le fichier __rc.local__ pour qu'ils soient actifs après chaque redémarrage : 
 Mettre ces 5 lignes juste avant la ligne `exit 0`
     ```bash
     sudo nano /etc/rc.local
@@ -381,20 +390,21 @@ Mettre ces 5 lignes juste avant la ligne `exit 0`
 Mettre cette ligne à la fin du fichier : `dtoverlay = pi3-disable-bt`
 
 * Modifier le fichier __cmdline.txt__ : `sudo nano /boot/cmdline.txt`
-Effacer le texte console e = serial0,115200
+Effacer le texte : console = serial0,115200
+Sortez en sauvegardant les modifications
 
-* Exécuter les commandes (en remplacant pi par votre login)
+* Exécuter les commandes (en remplacant <pi> par votre login)
     ``
     sudo systemctl disable hciuart
-    sudo usermod -ag gpio pi
+    sudo usermod -ag gpio <pi>
     sudo shutdown
     ```
-Le Pi va s'éteindre.
+Arreter le Raspberry Pi : `sudo halt`
 
 * Brancher la Pizigate sur les ports GPIO
 * Redémarrer le Pi
 
-* Mettre l'accessibilité du serail adapter à 'No' en utilisant raspi-config option P6 (Interfacing options / serial): `sudo raspi-config`
+* Mettre l'accessibilité de l'adaptateur série (serial adapter) à 'No' en utilisant raspi-config option P6 (Interfacing options / serial): `sudo raspi-config`
 
 * Installer le plugin Zigate comme pour une [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 
@@ -424,7 +434,7 @@ Redémarrer le Pi après la mise à jour du firmware. La configuration par défa
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
 
-Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate est fonctionnelle.
+Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate et Domoticz sont completement opérationnels sous Fedora 29.
 
 
 ### 7.1 - Prérequis
@@ -445,7 +455,7 @@ Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plu
 
 * Vérifier les droits d'accès sur /dev/ttyS1 : `ls -l /dev/ttyS1`
    
-* Editer /etc/group et s'assurer que l'utilisateur exécutant DomoicZ appartient au groupe __tty__ : `sudo usermod -aG tty domoticz`
+* Editer /etc/group et s'assurer que l'utilisateur exécutant DomoticZ appartient au groupe __tty__ : `sudo usermod -aG tty domoticz`
      
 * S'assurer que __/dev/ttyS1__ est en lecture/écriture `sudo chmod 666 /dev/ttyS1`
 
@@ -457,7 +467,7 @@ Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plu
      
    * Editer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
      
-Voici un exemple de ce que vous devez avoir :
+Voici un exemple de ce que vous devriez avoir :
      ```
      label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
 	   kernel /vmlinuz-5.4.17-200.fc31.armv7hl
