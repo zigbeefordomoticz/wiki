@@ -1,4 +1,4 @@
-Allez à l'[accueil du WIKI Français](Home.md).
+Allez à l'[accueil du WIKI Français](Home.md) (Home.md).
 
 Traduction par @jp-keros
 
