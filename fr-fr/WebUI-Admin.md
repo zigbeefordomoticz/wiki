@@ -67,11 +67,11 @@ Voici la page __Zigate__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet de gérer le fonctionnement du hardware de la Zigate.
+Cette page permet de gérer le fonctionnement du hardware de la ZiGate.
 
 Elle permet :
 
-* De faire un redémarrage logiciel de la Zigate
+* De faire un redémarrage logiciel de la Zigate : Cette action n'entraine **aucune perte des dispositifs appairés**
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
@@ -108,7 +108,7 @@ Cette page permet de mettre à jour le firmware des dispositifs ZigBee.
 
 Elle permet :
 
-* De faire une mettre à jour le firmware des dispositifs
+* De faire une mettre à jour le firmware des dispositifs appairés
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
