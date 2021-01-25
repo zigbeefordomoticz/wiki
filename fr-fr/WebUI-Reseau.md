@@ -23,7 +23,19 @@ Cette page permet de visualiser le réseau ZigBee.
 Elle permet :
 
 * De visualiser et gérer les différents rapports d'analyse du réseau
-* De lancer une analyse du réseau
+* De lancer une analyse du réseau basée sur le LQI (puissance du signal détecté)
+  * A noter que le filtrage des packets implémenté dans la ZiGate s'appuie sur la LQI. Un coût supérieur à 5 implique une perte potentielle de paquets
+
+| LQI interval | Cost |
+| ---------| -----|
+| >= 51 | 1 |
+| 46 - 50 | 2 |
+| 41 - 45 | 3 |
+| 39 - 40 | 4 |
+| 36 - 38 | 5 |
+
+**Attention :** Le temps de sortie d'un rapport de topologie est très dépendant de la taille du reseau ZigBee à analyser; plus le nombre de routeurs est important et plus le temps d'analyse sera long.
+*A Noter :* Le rapport est egalement diffusé (format texte) dans les logs de DomoticZ
 
 ### Description d'un rapport de topologie réseau
 
@@ -31,18 +43,21 @@ Le rapport de topologie réseau est constitué de deux graphiques présentant le
 
 #### Le graphique du maillage
 
-L'illustration de votre maillage montre tous les liens entre 2 dispositifs. 
-Si vous déplacez le curseur sur un lien vous verrez la liaison ainsi que la qualité de la liaison : échelle de 0 (très mauvaise) à 255 (la meilleure).
+L'illustration de votre maillage montre tous les liens entre dispositifs et ZiGate. 
+En déplaçant votre souris sur un lien un pop-up vous indique les composants participant à ce lien ainsi que la qualité de la liaison (LQI) : échelle de 0 (très mauvaise) à 255 (la meilleure).
 
-Un bouton en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
+Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
 #### Le graphique du réseau
 
 L'illustration de votre maillage montre l'architecture du réseau ZigBee (les connexions entre les différents dispositifs). 
 Vous pouvez visualiser sur quel router est accroché votre dispositif terminal.
 
-Un bouton en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
+Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
+#### La liste des dispositifs liés à la ZiGate
+
+Vous retrouvez sous cet item un tableau fournissant des informations relatives aux dispositifs liées à la ZiGate et remontées dans les widgets DomoticZ
 
 ------------------------------------------------
 ## Niveau d'interférences
