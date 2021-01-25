@@ -10,7 +10,7 @@ Ce tutoriel explique comment ajouter un nouveau dispositif ZigBee dans DomoticZ.
 
    1. Aller dans la section [Admin > Appairage](WebUI-Admin.md#appairage)
 
-      ![Domoticz Accept New Hardware](../Images/Provisionning_1.png)
+![Domoticz Accept New Hardware](../Images/Provisionning_1.png)
 
 
 Il existe plusieurs méthodes :
@@ -25,7 +25,7 @@ Il existe plusieurs méthodes :
 
 * Aller dans le module __Ajout de dispositif__ et cliquer sur __GO__ (le mode appairage sera actif pendant 4 minutes)
 
-      ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
+![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
  La LED bleu de la Zigate doit clignoter
 
@@ -33,7 +33,7 @@ Il existe plusieurs méthodes :
 
  Lorsque l'appairage est effectué, les inforamtions du dispositif apparaissent dans la fenêtre
 
-      ![Assisted Provisioning: Done](../Images/Provisionning_3.png)
+![Assisted Provisioning: Done](../Images/Provisionning_3.png)
 
 Si rien ne se produit :
 
