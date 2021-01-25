@@ -40,6 +40,9 @@ Voici la page __Groupe__ de l'interface Web du plugin :
 ![FR_WebUI-Admin-Groupe](../Images/FR_WebUI-Admin-Groupe.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
+Le groupe que vous pourrez créer via ce plugin est vu dans Domoticz comme un unique widget de type Switch et ce indépendament du nombre de dispositifs composant le groupe.
+L'action sur le switch (Domoticz) sera alors repercutée simultanement sur tous les dispositifs du groupe.
+
 ### Utilisation
 
 Cette page permet de gérer les groupes de dispositifs dans la Zigate.
@@ -48,6 +51,8 @@ Elle permet :
 
 * De faire une analyse complète des groupes
 * De faire une analyse sélective des groupes
+
+Préallablement à la gestion des groupes, il est nécessaire d'activer la service de groupe (desactivé par défaut) du plugin : Se reporter à la section [Réglages](WebUI-Reglages.md) pour activer les services
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
