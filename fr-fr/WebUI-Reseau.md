@@ -36,7 +36,7 @@ Elle permet :
 
 **Attention :** Le temps de sortie d'un rapport de topologie est très dépendant de la taille du reseau ZigBee à analyser; plus le nombre de routeurs est important et plus le temps d'analyse sera long.
 
-**A Noter :** Le rapport est egalement diffusé (format texte) dans les logs de DomoticZ
+**A Noter :** Le rapport est également diffusé (format texte) dans les logs de DomoticZ
 
 ### Description d'un rapport de topologie réseau
 
