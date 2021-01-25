@@ -23,3 +23,8 @@
 |                                | Command 0x24                      | Data: 0008 |
 |                                | Command 0x01                      | Data: 00 19 82 01 0001 01 |
 | Response Command 0x24          |                                   | Data: 0008 60 0d 80 29 600d8e39 |
+
+## Findings
+
+It is a __must__ to have _Default Response Sent_ for any message received from the device.
+Otherwise, the device is looping sending the command 0x65 !
