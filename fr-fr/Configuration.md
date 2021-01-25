@@ -27,8 +27,10 @@ En haut de page, vous avez acces aux differents onglets decrits ci dessus. Vous 
 
 Sur le bas de la page, bandeau vert, vous disposez des informations suivantes (de gauche vers droite) :
 - Date et heure de démarrage du plugin
-- La bande passante 
-- Le MaxLoad (c'est quoi ?)
+- Le nombre de messages envoyés/recus par seconde par la ZiGate
+- Le MaxLoad (indication du nombre de messages en attente d'envoi par la ZiGate)
+  - Une valeur de MaxLoad supérieure à 5 peut etre indicative d'un engorgement et donc d'un dysfonctionnement.
+  - Une fréquence trop élevée d'interrogation des dispositifs peut etre la cause d'un MaxLoad élevé (>5).
 - L'état du plugin (Busy, Ready, etc..)
 - La version du plugin
 - La version du firmware de le ZiGate
