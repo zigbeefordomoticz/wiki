@@ -8,7 +8,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation](Installation.m
 ## Accéder à l'interface d'aministration
 
 L'interface d'administration vous donne acceder aux éléments suivants :
-- Un tableau de bord synthetique
+- Un tableau de bord synthétique
 - La gestion des dispositifs et des groupes
 - La visualisation de la topologie et la qualité du reseau ZigBee
 - Un jeu de commandes permettant d'administrer la ZiGate, le plugin et les dispositifs
