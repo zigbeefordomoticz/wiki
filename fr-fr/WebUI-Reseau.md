@@ -60,6 +60,8 @@ Un bouton (Chart context menu) en haut à droite du graphique permet de l'affich
 
 Vous retrouvez sous cet item un tableau fournissant des informations relatives aux dispositifs liées à la ZiGate et remontées dans les widgets DomoticZ
 
+![Network_Topology](../Images/FR_WebUI-Reseau-ListDispositifs.png)
+
 ------------------------------------------------
 ## Niveau d'interférences
 
