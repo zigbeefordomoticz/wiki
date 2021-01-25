@@ -13,7 +13,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Inst
 
 ![Domoticz Hardware Menu for Plugin](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/DzMenu.png)
 
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 
 

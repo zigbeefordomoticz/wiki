@@ -14,7 +14,7 @@ La section __Réseau__ comporte les pages :
 Voici la page __Topologie__ de l'interface Web du plugin : 
 
 ![Network_Topology](../Images/Network_Topology.png)
-*Cette page est sucseptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est sucseptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -50,7 +50,7 @@ Un bouton en haut à droite du graphique permet de l'afficher en plein écran, d
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin : 
 
 ![InterferenceLevels](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/InterferenceLevels.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 

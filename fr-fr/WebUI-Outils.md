@@ -17,7 +17,7 @@ La section __Outils__ comporte les pages :
 Voici la page __Outils__ de l'interface Web du plugin : 
 
 ![Device Management](../Images/FR_WebUI-Outils-Outils.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -42,7 +42,7 @@ Elle permet :
 Voici la page __Commande__ de l'interface Web du plugin : 
 
 ![Group Management](../Images/FR_WebUI-Outils-Commande.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -55,7 +55,7 @@ Cette page permet d'exécuter des commandes sur les dispositifs sans passer par 
 Voici la page __Couplage__ de l'interface Web du plugin : 
 
 ![Group Management](../Images/FR_WebUI-Outils-Couplage.png)
-*Cette page est suceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est suceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -68,7 +68,7 @@ Cette page permet d'exécuter de coupler des dispositifs.
 Voici la page __Debug__ de l'interface Web du plugin : 
 
 ![Group Management](../Images/FR_WebUI-Outils-Debug.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -81,7 +81,7 @@ Cette page permet d'accéder aux paramètres de débogage et de journalisation.
 Voici la page __Erreur__ de l'interface Web du plugin : 
 
 ![Group Management](../Images/FR_WebUI-Outils-Erreur.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
