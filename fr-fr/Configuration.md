@@ -21,5 +21,17 @@ Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port p
 
 **ATTENTION :** Pour des raisons de sécurité, **ne pas présenter le port 9440 sur votre réseau externe** sous peine d'ouvrir à tous la gestion de votre domotique.
 
+Ce tableau de bord vous propose un apercu rapide, en un coup d'oeil, du fonctionnement de votre environnement ZiGate/ZigBee.
+Chaque section de ce table de bord est commentée pour permettre une lecture simple des informations remontés.
+En haut de page, vous avez acces aux differents onglets decrits ci dessus. Vous trouvez egalement un switch (haut/droite) permettant de basculer la ZiGate et le plugin en mode appairage (dans le cas où la ZiGate est dejà en mode appairage, le swictch est automatiquement activé).
+
+Sur le bas de la page, bandeau vert, vous disposez des informations suivantes (de gauche vers droite) :
+- Date et heure de démarrage du plugin
+- La bande passante 
+- Le MaxLoad (c'est quoi ?)
+- L'état du plugin (Busy, Ready, etc..)
+- La version du plugin
+- La version du firmware de le ZiGate
+
 ![Zigate Web Admin Interface](../Images/Dashboard.png)
 
