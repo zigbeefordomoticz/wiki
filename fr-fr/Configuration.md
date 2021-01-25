@@ -19,7 +19,7 @@ Vous pouvez accéder à l'interface web d'administration en allant à la page ht
 
 Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port par défaut, l'adresse de l'interface web est http://127.0.0.1:9440
 
-Pour des raisons de sécurité, **ne pas présenter le port 9440 sur votre réseau externe** sous peine d'ouvrir à tous la gestion de votre domotique.
+**ATTENTION :** Pour des raisons de sécurité, **ne pas présenter le port 9440 sur votre réseau externe** sous peine d'ouvrir à tous la gestion de votre domotique.
 
 ![Zigate Web Admin Interface](../Images/Dashboard.png)
 
