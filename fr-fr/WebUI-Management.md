@@ -14,7 +14,7 @@ La section __Management__ comporte les pages :
 Voici la page __Gestion des dispositifs__ de l'interface Web du plugin : 
 
 ![Device Management](../Images/Device-Management.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -24,14 +24,15 @@ Elle permet :
 
 * D'assigner des surnoms aux dispositifs pour les identifier plus facilement dans l'interface web.
 * D'assigner des paramètres aux dispositifs indépendamment les uns des autres.
-* De visualiser les informations suivantes :
-  * Le ShortId (adresse réseau) and IEEE (Mac Address) du dispositif
-  * Le Modèle du dispositif
+* De visualiser les informations suivantes pour chaque dispositif :
+  * Le ShortId (l'adresse IP du réseau ZigBee) et l'IEEE (l'adesse Mac Address du ZigBee)
+  * Le Modèle du dispositif (c'est le type de composant remonté par le dispositif lors de son appairage)
   * Le(s) nom(s) du(des) Widget(s) DomoticZ attaché(s) au dispositif
-  * La santé du dispositif
-  * Le status : inDB (dispositif dans la Zigate et au moins un widget dans DomoticZ)
+  * Le surnom donné au sein de cette interface (**Astuce** : donner un surnom identique au nom du widget Domoticz)
+  * Les fonctionnalités sur le réseau offertes par le dispositif et son mode d'alimentation : 
   * L'info LQI : cette valeur indique la qualité de la transmission (0 pas de transmission, 255 transmission d'excellente qualité)
-
+  * Le status : inDB (dispositif connu dans la Zigate **et au moins** un widget dans DomoticZ)
+  * La Santé du dispositif (present sur le réseau ZigBee ou pas)
 
 ------------------------------------------------
 ## Gestion des groupes
@@ -39,7 +40,7 @@ Elle permet :
 Voici la page __Gestion des groupes__ de l'interface Web du plugin : 
 
 ![Group Management](../Images/Group-Management.png)
-*Cette page est susceptible d'avoir évoluer depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
