@@ -116,7 +116,7 @@ Pas de paramètre simple dans ce module.
 | pollingPhilips | seconde | 0 | | Les équipements Philips ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingGledopto | seconde | 0 | | Les équipements Gledopto ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingSchneider | seconde | 0 | | Les équipements Schneider ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingBlitzwolfPower | seconde | 0 | | Les équipements BlitzWolf ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingBlitzwolfPower | seconde | 0 | | Les équipements BlitzWolf ne renvoient pas automatiquement la consommation d'énergie. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingCasaiaAC201 | seconde | 0 | | ??? |
 | pollingONOFF | seconde | 990 | | Récupération de l'état On/Off toutes les 15 minutes |
 | pollingLvlControl | seconde | 990 | | Récupération du niveau toutes les 15 minutes |
