@@ -17,12 +17,12 @@ Ce dispositif apparaitra une fois appairé sous le nom générique de TS0121.
 Pour l'appairage du dispositif, tenir le bouton power enfoncé durant 5s, la lumière bleue flashera jusqu'à la fin complète du processus d'appairage.
 Quatre dispositifs sont alors créés et remontés vers DomoticZ :
 
-| Type de widget dans DomoticZ | Description  |
+| Type de widget dans DomoticZ | Description |
+| ---------------------------- | ----------- |
 | Switch On/Off | La prise commandée |
 | Mesure | Tension délivrée par la prise / Voltage |
 | Mesure P1Meter | Consommation instantanée en Watt |
 | Mesure General KWh| Consommation cumulée |  
-
 
 Vous pouvez supprimer l'un des dispositifs de mesure de puissance que vous n'utilisez pas. La consommation cumulée est mise à jour tous les 0.01 kWh.
 ** Attention : ** La remontée des informations de consommation nécessite l'activation du polling associé (pollingBlitzwolfPower) voir [section Parametres avancés](WebUI_Reglages.md#les-param%C3%A8tres-avanc%C3%A9s-4)
