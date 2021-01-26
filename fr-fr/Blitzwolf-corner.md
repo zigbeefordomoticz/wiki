@@ -1,14 +1,14 @@
-# Blitzwolf corner
+# Dispositifs Blitzwolf
 
 ## Dispositifs Blitzwolf connus
-* [Capteur de contact (BW-IS2)](https://zigbee.blakadder.com/BlitzWolf_BW-IS2.html) - (Eng)
+* [Capteur de contact (BW-IS2)](https://zigbee.blakadder.com/BlitzWolf_BW-IS2.html)
 * [Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)](https://zigbee.blakadder.com/BlitzWolf_BW-SHP13.html)
 * [Détecteur de mouvement PIR (Passive InfraRed) (BW-IS3)](https://zigbee.blakadder.com/BlitzWolf_BW-IS3.html)
 * [Capteur Température & Humidité avec écran (BW-IS4)](https://zigbee.blakadder.com/BlitzWolf_BW-IS4.html)
 * [Capteur d'innondation (BW-IS5)](https://zigbee.blakadder.com/BlitzWolf_BW-IS5.html)
 
-Pour le moment seule la prise connectée a été testée, cependant tous les produits Blitzwolf sont basés sur Tuya et devraient avoir un fonctionnement similaire.
-Le capteur de température & humidité (BW-IS4) s'appuie sur un modèle au nom générique de Tuya TS0201 (https://zigbee.blakadder.com/Tuya_TS0201.html).
+Pour le moment seule la prise connectée a été testée, cependant tous les produits Blitzwolf étant basés sur Tuya, ils devraient avoir un fonctionnement similaire.
+Le [capteur de température & humidité (BW-IS4)](https://zigbee.blakadder.com/Tuya_TS0201.html) s'appuie sur un modèle au nom générique de Tuya TS0201 .
 
 ## Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)
 
