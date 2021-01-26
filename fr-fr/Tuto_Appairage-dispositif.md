@@ -8,7 +8,7 @@ Ce tutoriel explique comment ajouter un nouveau dispositif ZigBee dans DomoticZ.
 
 ## Méthodes
 
-   1. Aller dans la section [Admin > Appairage](WebUI-Admin.md#appairage)
+   1. Aller dans la section [Admin > Appairage](WebUI_Admin.md#appairage)
 
 ![Domoticz Accept New Hardware](../Images/Provisionning_1.png)
 

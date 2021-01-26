@@ -44,14 +44,14 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## L'interface Web du plugin
 
-* [Présentation générale](WebUI-Presentation-generale.md)
-* La section [Tableau de bord](WebUI-Tableau-de-bord.md)
-* La section [Management](WebUI-Management.md)
-* La section [Réseau](WebUI-Reseau.md)
-* La section [Admin](WebUI-Admin.md)
-* La section [Réglages](WebUI-Reglages.md)
-* La section [Outils](WebUI-Outils.md)
-* La section [A propos](WebUI-A-propos.md)
+* [Présentation générale](WebUI_Presentation-generale.md)
+* La section [Tableau de bord](WebUI_Tableau-de-bord.md)
+* La section [Management](WebUI_Management.md)
+* La section [Réseau](WebUI_Reseau.md)
+* La section [Admin](WebUI_Admin.md)
+* La section [Réglages](WebUI_Reglages.md)
+* La section [Outils](WebUI_Outils.md)
+* La section [A propos](WebUI_A-propos.md)
 
 
 ## Tutoriels
@@ -100,7 +100,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Divers
 
-* [Interférences entre Wifi et ZigBee : explications](Info_ZigBee-et-Wifi.mdd)
+* [Interférences entre Wifi et ZigBee : explications](Info_ZigBee-et-Wifi.md)
 
 * [How to Configure ZiGate in Zigbee Sniffer](../en-eng/Zigate-Sniffer.md)  en anglais
 * [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters) en anglais

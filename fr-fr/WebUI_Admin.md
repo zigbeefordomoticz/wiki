@@ -52,7 +52,7 @@ Elle permet :
 * De faire une analyse complète des groupes
 * De faire une analyse sélective des groupes
 
-Préallablement à la gestion des groupes, il est nécessaire d'activer la service de groupe (desactivé par défaut) du plugin : Se reporter à la section [Réglages](WebUI-Reglages.md) pour activer les services
+Préallablement à la gestion des groupes, il est nécessaire d'activer la service de groupe (desactivé par défaut) du plugin : Se reporter à la section [Réglages](WebUI_Reglages.md) pour activer les services
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 
