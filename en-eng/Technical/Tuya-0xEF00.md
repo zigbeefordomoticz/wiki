@@ -14,12 +14,8 @@ Seems to be the foundation of a number of Tuya devices.
 
 ## Devices using this clusters
 
-| Manufacturer Name | Model Name | Description |
-| ----------------- | ---------- | ----------- |
-|                   | fvq6avy    | eTRV        |
-| _TYST11_zivfvd7h  | ivfvd7h    | eTRV        |
+![Tuya devices List](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Tuya-devices-List)
 
-00 03 67 02 0004 00000032
 
 ### Payload for 0x01 - Query and report product information, 0x02 - Device Status Query / Report
 
@@ -38,7 +34,7 @@ Seems to be the foundation of a number of Tuya devices.
 | 0x02       |  0x02     |  Command: Curtain Percentage |
 | 0x03       |           |   |
 | 0x07       |           |  Curtain Percentage |
-| 0x05       |           |  Direction ???? |
+| 0x05       |           |  Direction - allow to change the direction |
 | 0x67       |           |  Curtain Percentage |
 | 0x69       |           |  Curtain Percentage |
 
@@ -119,16 +115,16 @@ The synopsis is like :
 1. Device send a Time synchronisation request with a uint16 as payload
 1. Host will respond with a payload equal to
 
-| Serial Number | 0x60  |       |         | TimeStamp |
-| ------        | ----- | ----- | ------  | --------- |
-| uint16        | uint8 | uint8 | uint16  | uint32    |
-| 0008          |  60   | 0d    | 8029    | 600d8e39 |
-| 0000          |  60   | 09    | cdd0    | 6009dbe0 |
-| 000b          |  60   | 09    | cdd3    | 6009dbe3 |
-| 000d          |  60   | 0d    | 8e5e    | 600d9c6e |
-| 000e          |  60   | 0d    | 9c92    | 600daaa2 |
-| 0018          |  60   | 0d    | aac6    | 600db8d6 |
-  0007             60     0d      8029      27a085a9
+| Serial Number | UTC Time    | Local Time |
+| ------        | -----       | --------- |
+| uint16        |  uint32     | uint32     |
+| 0008          |  600d8029   | 600d8e39  |
+| 0000          |  6009cdd0   | 6009dbe0  |
+| 000b          |  6009cdd3   | 6009dbe3  |
+| 000d          |  600d8e5e   | 600d9c6e  |
+| 000e          |  600d9c92   | 600daaa2  |
+| 0018          |  600daac6   | 600db8d6  |
+
 
 Timestamp is the total number of seconds from 00: 00: 00 on January 01, 1970, GMT
 
