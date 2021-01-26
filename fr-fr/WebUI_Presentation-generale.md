@@ -1,6 +1,6 @@
 # L'interface Web - Présentation générale
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Configuration.md).
+Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](3_Configuration.md).
 
 Voici la présentation générale de l'interface Web du plugin : 
 

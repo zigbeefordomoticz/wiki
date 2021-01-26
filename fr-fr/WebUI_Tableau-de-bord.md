@@ -1,6 +1,6 @@
 # L'interface Web - La page Tableau de bord
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Configuration.md).
+Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](3_Configuration.md).
 
 Voici la page __Tableau de bord__ de l'interface Web du plugin : 
 

@@ -1,4 +1,3 @@
-
 # Installation du plugin Zigate
 
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
@@ -16,7 +15,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
 
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](1_Installation.md)).
 
 ### 1.A - Prérequis
 
@@ -30,14 +29,14 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Rechercher __Zigate Plugin__ et ajouter le.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
 
 
 ------------
 # 2 - Installation manuelle sous Linux
 
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](1_Installation.md)).
 
 
 ### 2.A - Prérequis
@@ -58,7 +57,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
 
 
 ------------
@@ -89,7 +88,7 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 * Arrêter et redémarrer DomoticZ depuis le gestionnaire de paquet.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
 
 
 
@@ -214,7 +213,7 @@ Si vous avez des scripts, plugins ... mettez les dans un répertoire et définis
 
 Si vous avez des plugins qui ont besoin d'un accès réseau (comme la Zigate Wifi), il faut ajouter `--network host` à la commande au-dessus.
 
-'
+
 
 #### 4.2.C - Récupérer les logs Docker
 
@@ -228,7 +227,7 @@ Pour récupérer les logs complets depuis Docker, exécuter : `docker logs Domot
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
 
 
 ------------
@@ -337,7 +336,7 @@ L’arborescence de la Zigate est installée :
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
 
 ## 5.3 - Un PC Windows comme box domotique
 
@@ -360,17 +359,17 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian p
 ### 6.1 - Prérequis
 
 * Assurez-vous d'avoir installé les dernieres versions de Rasbian ainsi que python-dev
-   ```
+```
    sudo apt-get update
    sudo apt-get upgrade
    sudo apt-get install python3-dev
-   ```
+```
 
 * Testez l'installation de wiringpi :
-    ```
+```
     gpio -v
     gpio readall
-    ```
+```
 
 Si non, installer wiringpi : `sudo apt-get install wiringpi`
 
@@ -378,14 +377,15 @@ Si non, installer wiringpi : `sudo apt-get install wiringpi`
 
 * Activer les port GPIO dans le fichier __rc.local__ pour qu'ils soient actifs après chaque redémarrage : 
 Mettre ces 5 lignes juste avant la ligne `exit 0`
-    ```bash
+```
     sudo nano /etc/rc.local
     gpio mode 0 out
     gpio mode 2 out
     gpio write 2 1 
     gpio write 0 0
     gpio write 0 1
-    ```
+```
+
 * Désactiver le bluetooth en permanence en éditant le fichier __config.txt__ : `sudo nano /boot/config.txt`
 Mettre cette ligne à la fin du fichier : `dtoverlay = pi3-disable-bt`
 
@@ -394,11 +394,11 @@ Effacer le texte : console = serial0,115200
 Sortez en sauvegardant les modifications
 
 * Exécuter les commandes (en remplacant <pi> par votre login)
-    ``
+```
     sudo systemctl disable hciuart
     sudo usermod -ag gpio <pi>
     sudo shutdown
-    ```
+```
 Arreter le Raspberry Pi : `sudo halt`
 
 * Brancher la Pizigate sur les ports GPIO
@@ -410,7 +410,7 @@ Arreter le Raspberry Pi : `sudo halt`
 
 * Redémarrer le Pi
 
-* Démarrer la Pizigate: `Tools/pi-zigate.sh run `
+* Démarrer la Pizigate: `Tools/pi-zigate.sh run`
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
@@ -424,7 +424,7 @@ Avant de faire une mise à jour du firmware de la Pizigate en flash mode, il fau
 gpio write 2 0 
 gpio write 0 0
 gpio write 0 1
-````
+```
 
 Redémarrer le Pi après la mise à jour du firmware. La configuration par défaut du rc.local sera appliquée.
 
@@ -468,13 +468,13 @@ Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plu
    * Editer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
      
 Voici un exemple de ce que vous devriez avoir :
-     ```
+```
      label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
 	   kernel /vmlinuz-5.4.17-200.fc31.armv7hl
 	   append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
 	   fdtdir /dtb-5.4.17-200.fc31.armv7hl/
 	   initrd /initramfs-5.4.17-200.fc31.armv7hl.img
-     ```
+```
      
    * Installer le plugin Zigate comme pour une [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
    
@@ -488,7 +488,7 @@ Voici un exemple de ce que vous devriez avoir :
    * Recompiler l'outil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
    * Exccuter `./PiZiGate_test-fedora /dev/ttyS1` 
    
-   ```
+```
    [domoticz@rasp Fedora]$ ./PiZiGate_test-fedora /dev/ttyS1
    Opening : /dev/ttyS1 ...
    + /dev/ttyS1 opened --> OK
@@ -497,7 +497,7 @@ Voici un exemple de ce que vous devriez avoir :
    size : 37
    01 80 00 00 05 95 00 00 00 10 00 03
    01 80 10 00 05 8f 00 03 03 1a 00 03
-   ```
+```
    
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))

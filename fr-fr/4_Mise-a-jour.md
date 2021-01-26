@@ -1,4 +1,3 @@
-
 # Les mises à jour et les branches
 
 ## Mettre à jour le plugin
@@ -21,8 +20,6 @@ Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessou
 * Redémarrer DomoticZ
 
 
-
-
 ### En cas d'erreurs
 
 
@@ -31,7 +28,7 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
 ```
   git reset –-hard
   git pull --force
-  ```
+ ```
   
 ## Les branches de mise à jour
 
@@ -45,8 +42,8 @@ Les différentes branches sont :
 
 C'est la version la plus "solide". C'est la version par défaut.
 
-#### stable-fix
 
+#### stable-fix
 
 La branche stable-fix est l'anti-chambre de la branche stable. En gros les bug-fix sont réalisées sur celle-ci avant d'être envoyer sur la branche stable. Il n'y a pas de gestion de version sur cette branche!
 
@@ -66,7 +63,7 @@ Si vous êtes sur la branche __Béta__ (suite à l'ajout d'un nouveau matériel 
 
 ### Passer d'une branche à l'autre
 
-Il est recommandé des faire une [sauvegarde](Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
+Il est recommandé des faire une [sauvegarde](5_Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
 
 * Ouvrir un terminal et aller jusqu'au répertoire du pligin Zigate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 

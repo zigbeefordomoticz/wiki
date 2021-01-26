@@ -8,6 +8,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 **Ce wiki en français est en cours de rédaction :** Les pages traduites ont un lien en français. Les autres liens renvoyant vers le wiki EN ont l'indication "en anglais". 
 
+
 ## Introduction
 
 L'objectif de ce plugin est de réaliser une passerelle entre une [Zigate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer tous les dispositifs ZigBee utilisés par DomoticZ.
@@ -17,6 +18,7 @@ Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre n
 Voici une liste non exhaustive des dispositifs compatibles. Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin. Il est possible qu'il y ait d'autres dispositifs ZigBee qui fonctionnent (merci de nous remonter l'info afin que nous mettions la liste à jour)
 * [Liste des dispositifs compatibles](../en-eng/Compatible-Devices.md)
 
+
 ## Installation
 
 Il existe plusieurs façons d'installer le plugin Zigate pour DomoticZ qui sont différentes en fonction du système d'exploitation.
@@ -24,22 +26,23 @@ Il existe plusieurs façons d'installer le plugin Zigate pour DomoticZ qui sont 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 
-* Etape 1 [Installation du plugin](Installation.md)
-* Etape 2 [Paramétrage du plugin](Parametrage.md)
-* Etape 3 [Configuration du plugin](Configuration.md)
+* Etape 1 [Installation du plugin](1_Installation.md)
+* Etape 2 [Paramétrage du plugin](2_Parametrage.md)
+* Etape 3 [Configuration du plugin](3_Configuration.md)
+
 
 ## Mise à jour
 
-* [Mettre à jour le plugin](Mise-a-jour.md#mettre-à-jour-le-plugin)
-* [Les branches de mises à jour](Mise-a-jour.md#les-branches-de-mise-à-jour)
+* [Mettre à jour le plugin](4_Mise-a-jour.md#mettre-à-jour-le-plugin)
+* [Les branches de mises à jour](4_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
 
 ## Sauvegardes
 
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Sauvegardes.md)
+* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](5_Sauvegardes.md)
+
 
 ## L'interface Web du plugin
-
 
 * [Présentation générale](WebUI-Presentation-generale.md)
 * La section [Tableau de bord](WebUI-Tableau-de-bord.md)
@@ -53,8 +56,8 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Tutoriels
 
-* [Pair and provision a new Device](../en-eng/PairingDevice.md) en anglais
-* [Pairing and provisioning from a specific router](../en-eng/PairingFromRouter.md) en anglais
+* [Ajouter un nouveau dispositif](Tuto_Appairage-dispositif.md)
+
 * [Remove a Device from ZiGate](../en-eng/RemoteDevice.md) en anglais
 * [Change the Zigbee Channel](../en-eng/Channel_Setting.md) en anglais
 * [Group Management](../en-eng/Group-Management.md) en anglais
@@ -65,6 +68,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Network status](../en-eng/Network-Status.md) (_4.1_ beta) en anglais
 * [Network Topology - Mesh](../en-eng/Network-Topology---LQI-report.md) (4.1_ beta) en anglais
 * [Mettre une authenficiation sur interface d'administration du plugin](../en-eng/DashboardAccessBasicAuth.md) en anglais
+
 
 ## Que faire si un dispositif ne fonctionne pas correctement ?
 
@@ -96,9 +100,10 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Divers
 
+* [Interférences entre Wifi et ZigBee : explications](Info_ZigBee-et-Wifi.mdd)
+
 * [How to Configure ZiGate in Zigbee Sniffer](../en-eng/Zigate-Sniffer.md)  en anglais
 * [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters) en anglais
-* [Interférences entre Wifi et ZigBee : explications](../fr-fr/ZigBee-et-Wifi.mdd)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623) en anglais
 * [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623) en anglais 
 

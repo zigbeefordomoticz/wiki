@@ -2,7 +2,7 @@
 
 Cette étape est la deuxième du processus d'installation du plugin Zigate.
 
-Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Installation.md)
+Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](1_Installation.md)
 
 
 
@@ -11,7 +11,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Inst
 * Ouvrir __DomoticZ__ dans votre navigateur
 * Aller dans le menu __Configuration__ puis __Matériel__
 
-![Domoticz Hardware Menu for Plugin](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/DzMenu.png)
+![Domoticz Hardware Menu for Plugin](../Images/DzMenu.png)
 
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
@@ -82,4 +82,4 @@ Un exemple de l'historique des notifications (en anglais)
 ![Notification Widgets](../Images/Widget_Notifications.png)
 
 
-Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](Configuration.md)
+Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](3_Configuration.md)

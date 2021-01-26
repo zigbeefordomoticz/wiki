@@ -1,6 +1,6 @@
 # L'interface Web - La section Réseau
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Configuration.md).
+Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](3_Configuration.md).
 
 La section __Réseau__ comporte les pages :
 
@@ -60,14 +60,14 @@ Un bouton (Chart context menu) en haut à droite du graphique permet de l'affich
 
 Vous retrouvez sous cet item un tableau fournissant des informations relatives aux dispositifs liées à la ZiGate et remontées dans les widgets DomoticZ
 
-![Network_Topology](../Images/FR_WebUI-Reseau-ListDispositifs.png)
+![Network_Topology](Images/FR_WebUI-Reseau-ListDispositifs.png)
 
 ------------------------------------------------
 ## Niveau d'interférences
 
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin : 
 
-![InterferenceLevels](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/InterferenceLevels.png)
+![InterferenceLevels](../Images/InterferenceLevels.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -82,7 +82,7 @@ Elle permet :
 
 ### Description d'un rapport de niveau d'interférence
 
-Voir les [explications](ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
+Voir les [explications](Info_ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
 
 Le niveaux d'interférence est calculé avec la communication entre la Zigate et un router. 
 Si vous ne disposez pas de router, vous ne pouvez pas faire d'analyse du niveau d'interférence.

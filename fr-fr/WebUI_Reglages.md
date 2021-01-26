@@ -1,6 +1,6 @@
 # L'interface Web - La section Réglages
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Configuration.md).
+Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](3_Configuration.md).
 
 __La modification des paramètres peut entrainer des disfonctionnements au niveau de la Zigate. Pensez à faire une sauvegarde avant toute modification.__
 
@@ -20,7 +20,7 @@ Un bouton __Paramètres avancés__ situé en haut à droite permet d'afficher de
 
 Voici la page __Réglages__ de l'interface Web du plugin : 
 
-![FR_WebIU-Reglages](../Images/FR_WebUI-Reglage.png)
+![FR_WebIU-Reglages](Images/FR_WebUI-Reglage.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ------------------------------------------------
@@ -33,7 +33,7 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 | Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin Zigate |
 | Activer interrogation des dispositifs | | Désactivé | | Active la fonction Polling |
 | Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour|
-| Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!|
+| Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!*|
 | pingDevices | | Activé | | Active le fonction ping sur tous les dispositifs |
 
 
@@ -100,7 +100,7 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 ------------------------------------------------
 ## Interrogation des dispositifs
 
-* La fonction [Activer interrogation des dispositifs]() doit être activée. 
+* La fonction [Activer interrogation des dispositifs](Tuto_Appairage-dispositif.md) doit être activée. 
 
 Il n'est pas recommandé d'activer cette fonction d'interrogation (polling en anglais) car elle va augmenter la charge sur la Zigate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai va augmenter la fréquence d'interrogation pouvant entrainer un ralentissement du réseau jusqu'à la perte de commandes.
 

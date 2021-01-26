@@ -3,7 +3,7 @@
 
 Cette étape est la troisième étape du procsssus d'installation du plugin Zigate.
 
-Vous devez donc avoir suivi et terminé l'[étape 1 Installation](Installation.md) et l'[étape 2 Paramétrage](Parametrage.md)
+Vous devez donc avoir suivi et terminé l'[étape 1 Installation](1_Installation.md) et l'[étape 2 Paramétrage](2_Parametrage.md)
 
 ## Accéder à l'interface d'aministration
 
