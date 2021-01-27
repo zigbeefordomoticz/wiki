@@ -1,5 +1,7 @@
 # Les dispositifs de la marque IKEA
 
+Voir la liste des [dispositifs compatibles](../en-eng/Compatible-Devices.md)
+
 Ces dispositifs connus sous l'appélation TRADFRI, on y retrouve des ampoules (TRADFRI bulb), des prises commandées (TRADFRI control outlet), 
 
 ## L'appairage des dispositifs
