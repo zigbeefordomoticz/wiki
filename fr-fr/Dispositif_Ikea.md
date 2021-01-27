@@ -4,7 +4,7 @@ Voir la liste des [dispositifs compatibles](https://zigbee.blakadder.com/zigate.
 
 Ces dispositifs sont connus sous l'appélation TRADFRI, on y retrouve des ampoules (TRADFRI bulb), des prises commandées (TRADFRI control outlet), des capteurs de mouvements (Tradfri Motion Sensor).
 
-**Attention :** Ces dispositifs utilisent le groupe 0000 par défaut, il est donc nécessaire de l'activer preallablement à l'appairage. Pour cela se rapporter à la section [Reglages](mettre lien)
+**Attention :** Dans le cas où les appairages en mode classique decrits ci dessous ne fonctionnent pas, ces dispositifs utilisant le groupe 0x0000, il est possible que vous soyez amené à l'activer preallablement à l'appairage. Pour cela se rapporter à la section [Reglages](mettre lien)
 
 ## L'appairage des dispositifs
 
