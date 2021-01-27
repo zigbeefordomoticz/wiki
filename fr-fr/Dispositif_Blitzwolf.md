@@ -7,6 +7,8 @@
 * [Capteur Température & Humidité avec écran (BW-IS4)](https://zigbee.blakadder.com/BlitzWolf_BW-IS4.html)
 * [Capteur d'innondation (BW-IS5)](https://zigbee.blakadder.com/BlitzWolf_BW-IS5.html)
 
+Voir la liste des [dispositifs compatibles](../en-eng/Compatible-Devices.md)
+
 Pour le moment seule la prise connectée a été testée, cependant tous les produits Blitzwolf étant basés sur Tuya, ils devraient avoir un fonctionnement similaire.
 Le [capteur de température & humidité (BW-IS4)](https://zigbee.blakadder.com/Tuya_TS0201.html) s'appuie sur un modèle au nom générique de Tuya TS0201 .
 
