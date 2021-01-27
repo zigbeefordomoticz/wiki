@@ -12,8 +12,6 @@ Ce dispositif est donc connu par :
 A la fin de ce tutoriel, il faudra s'assurer que le dispositif a été retiré de ces 3 emplacements.
 
 
-
-
 ### Prérequis
 
 Par défaut, le plugin est configuré pour __ne pas envoyer__ de suppression à la Zigate. Pour activer cette fonction, il faut activer 'Suppression de la Zigate' dans [Réglage / Réglages de la Zigate](WebUI_Reglages.md#réglages-de-la-zigate)
@@ -34,7 +32,7 @@ Il existe plusieurs méthodes en fonction du type de dispositif :
 * [Les routers](#supprimer-les-routers) (sur secteur)
 
 
-### [Supprimer les dispositifs terminaux]
+### Supprimer les dispositifs terminaux
 
 Il n'y a pas de suppression automatique : il faut le faire manuellement
 
