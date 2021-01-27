@@ -32,7 +32,7 @@ L'appairage avec le capteur de mouvement suit le même processus. Ouvrir la face
 
 ### Les capteurs de mouvement
 
-Les capteurs de mouvement peuvent etre appairés en unitaire. Pour cela, mettre la Zigate en mode appairage puis activer 6 fois dans les 5 secondes, le bouton d'apparaige du capteur.
+Les capteurs de mouvement peuvent etre appairés en unitaire. Pour cela, mettre la Zigate en mode appairage puis activer 4 fois dans les 5 secondes, le bouton d'apparaige du capteur.
 
 **Attention :** La manipulation en soit n'est pas compliquee mais hasardeuse, il est donc fort probable qu'il faille redoubler de tentatives.....
 
