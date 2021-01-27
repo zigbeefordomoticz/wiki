@@ -17,7 +17,7 @@ Il existe plusieurs méthodes :
 
 * Appairage avec l'assistant
 * Appairage sur une durée
-* Appairage sur un router spécifique
+* Appairage sur un routeur spécifique
 
 
 ------------------------------------------------
@@ -59,11 +59,11 @@ Cette méthode permettra de passer la Zigate pendant une durée. Les information
 
 
 ------------------------------------------------      
-### 3. Appairage sur un router spécifique
+### 3. Appairage sur un routeur spécifique
 
-Par défaut, la Zigate va déterminer le meilleur chemin pour communiquer avec le dispositif. Il est cependant possible de spécifier un router sur lequel doit s'appairer le nouveau dispositif.
+Par défaut, la Zigate va déterminer le meilleur chemin pour communiquer avec le dispositif. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouveau dispositif.
 
-* Sélectionner le router désiré dans la liste
+* Sélectionner le routeur désiré dans la liste
 
 * Cliquer sur le bouton __4 minutes__ pour lancer le mode d'appairage
 

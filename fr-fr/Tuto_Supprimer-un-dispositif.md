@@ -29,7 +29,7 @@ __Toutes suppression entraînera la pertes de toutes les données du dispositif.
 Il existe plusieurs méthodes en fonction du type de dispositif :
 
 * [Les dispositifs terminaux](#supprimer-les-dispositifs-terminaux) (sur batterie)
-* [Les routers](#supprimer-les-routers) (sur secteur)
+* [Les routeurs](#supprimer-les-routeurs) (sur secteur)
 
 
 ### Supprimer les dispositifs terminaux
@@ -47,7 +47,7 @@ Un message similaire à celui-ci devrait apparaitre dans les logs de DomoticZ :
 
 
 
-### Supprimer les routers
+### Supprimer les routeurs
 
 * S'assurer que le réglage 'Suppression de la Zigate' (voir [Réglage / Réglages de la Zigate](WebUI_Reglages.md#réglages-de-la-zigate)) est activé
 * Supprimer tous les widgets du dispositif dans DomoticZ

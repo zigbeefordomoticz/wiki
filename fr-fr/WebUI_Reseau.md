@@ -52,7 +52,7 @@ Un bouton (Chart context menu) en haut à droite du graphique permet de l'affich
 #### Le graphique du réseau
 
 L'illustration de votre maillage montre l'architecture du réseau ZigBee (les connexions entre les différents dispositifs). 
-Vous pouvez visualiser sur quel router est accroché votre dispositif terminal.
+Vous pouvez visualiser sur quel routeur est accroché votre dispositif terminal.
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
@@ -85,8 +85,8 @@ Elle permet :
 
 Voir les [explications](Info_ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
 
-Le niveaux d'interférence est calculé avec la communication entre la Zigate et un router. 
-Si vous ne disposez pas de router, vous ne pouvez pas faire d'analyse du niveau d'interférence.
+Le niveaux d'interférence est calculé avec la communication entre la Zigate et un routeur. 
+Si vous ne disposez pas de routeur, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
 Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
 

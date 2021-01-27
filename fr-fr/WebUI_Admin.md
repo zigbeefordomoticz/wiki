@@ -27,7 +27,7 @@ Elle permet :
 
 * D'ajouter un dispositif avec un retour d'info
 * D'activer le mode appairage de la Zigate (permanent ou 4 minutes)
-* D'ajouter un dispositif via un router particulier
+* D'ajouter un dispositif via un routeur particulier
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations. 
 

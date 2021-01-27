@@ -29,17 +29,17 @@ Pour le canal 6, la bande est centrée autour de 2437 MHz et s'étend de 2426 à
 Une configuration simple : régler le canal ZigBee sur 11 et le canal wifi sur 11 également. Les bandes de fréquences ZigBee et Wifi étant décalées, il ne devrait pas y avoir d'interférences.
 
 ## 2. Séparation physique
-Il est recommandé d'avoir une distance de 8m entre votre émetteur wifi (box, router, borne, etc...) et le récepteur ZigBee afin de ne pas dégrader les performances.
+Il est recommandé d'avoir une distance de 8m entre votre émetteur wifi (box, routeur, borne, etc...) et le récepteur ZigBee afin de ne pas dégrader les performances.
 
 ## 3. Un réseau maillé
 
-Le protocole ZigBee offre les avantages d'un réseau maillé autogéré dynamiquement : si un router dysfonctionne ou s'il y a une interférence, une autre route est automatique recalculée pour que les données soit transmises.
+Le protocole ZigBee offre les avantages d'un réseau maillé autogéré dynamiquement : si un routeur dysfonctionne ou s'il y a une interférence, une autre route est automatique recalculée pour que les données soit transmises.
 
 ## 4. Choses à savoir
 
 * Le Zigbee est un réseau à faible puissance contrairement au Wifi. 
 Il a été noté que les Caméras IP/Wifi étaient capable de perturber le Zigbee lorsqu'elles étaient en streaming, il faudra donc faire attentionn à l'emplacement des modules Zigbee par rapport aux Wifi et ce même si ils sont sur des cannaux bien séparés
 
-* Beaucoup de problématiques de perte de dispositifs (deconnexion du réseau) sont très souvent liés à un problème d'interferences ou de densité insufisante du réseau Zigbee et l'ajout de dispositifs de type routers est souvent très positif
+* Beaucoup de problématiques de perte de dispositifs (deconnexion du réseau) sont très souvent liés à un problème d'interferences ou de densité insufisante du réseau Zigbee et l'ajout de dispositifs de type routeurs est souvent très positif
 
 Plus d'explications : https://www.nxp.com/docs/en/application-note/JN-AN-1079.pdf
