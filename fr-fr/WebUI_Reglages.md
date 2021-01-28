@@ -1,6 +1,6 @@
 # L'interface Web - La section Réglages
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](3_Configuration.md).
+Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
 __La modification des paramètres peut entrainer des disfonctionnements au niveau de la Zigate. Pensez à faire une sauvegarde avant toute modification.__
 

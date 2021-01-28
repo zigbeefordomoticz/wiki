@@ -16,7 +16,7 @@ A la fin de ce tutoriel, il faudra s'assurer que le dispositif a été retiré d
 
 Par défaut, le plugin est configuré pour __ne pas envoyer__ de suppression à la Zigate. Pour activer cette fonction, il faut activer 'Suppression de la Zigate' dans [Réglage / Réglages de la Zigate](WebUI_Reglages.md#réglages-de-la-zigate)
 
-![Removal On Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/EraseDeviceOnZigate.png)
+![Removal On Zigate](../Images/EraseDeviceOnZigate.png)
 
 
 ### Avertissement

@@ -15,7 +15,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 # 1 - Installation du plugin via Python Plugin Manager sous Linux
 
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](1_Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
 ### 1.A - Prérequis
 
@@ -29,14 +29,14 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Rechercher __Zigate Plugin__ et ajouter le.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
 ------------
 # 2 - Installation manuelle sous Linux
 
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](1_Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
 
 ### 2.A - Prérequis
@@ -57,7 +57,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
 ------------
@@ -88,7 +88,7 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 * Arrêter et redémarrer DomoticZ depuis le gestionnaire de paquet.
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
 
@@ -227,7 +227,7 @@ Pour récupérer les logs complets depuis Docker, exécuter : `docker logs Domot
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
 ------------
@@ -336,7 +336,7 @@ L’arborescence de la Zigate est installée :
 
 
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 ## 5.3 - Un PC Windows comme box domotique
 
@@ -500,4 +500,4 @@ Voici un exemple de ce que vous devriez avoir :
 ```
    
 Le plugin Zigate doit apparaitre dans la liste des matériels. 
-Passer à l'[étape 2 Paramétrage du plugin](2_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))

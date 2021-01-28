@@ -27,7 +27,7 @@ Le groupe sera gérer directement par les widgets de DomoticZ via les interrupte
 * Aller dans la section [Réglages > Paramètres](WebUI_Reglages.md#les-param%C3%A8tres)
 * Activer __Activer les Groupes__
 
-![Settings for Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/SettingsGroup.png)
+![Settings for Group Management](../Images/SettingsGroup.png)
 
 
 #### Vérifier l'existance de groupe
@@ -39,20 +39,20 @@ Before creating any group, you must check if there are no existing group already
 * Aller dans la section [Admin > Groupe](WebUI_Admin.md#groupe)
 * Lancer une __Analyse complète__
 
-![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/AdminGroupMenu.png)
+![Group Management](../Images/AdminGroupMenu.png)
 
 Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
 
 This will consist in quering each main powered devices for the group membership. As an outcome group could be created and available in the Group Management sub menu.
 
-![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/GroupManagementMenu.png)
+![Group Management](../Images/GroupManagementMenu.png)
 
 
 #### Créer un groupe
 
 * Aller dans la section [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes)
 
-![Adding Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/AddingGroup.png)
+![Adding Group Management](../Images/AddingGroup.png)
 
 * Cliquer sur __Ajouter un groupe__
 * Indiquer le nom du groupe
@@ -133,7 +133,7 @@ For that you need to edit the Group and add the  Tradfri 5 buttons to that group
 If you need to have the group '0000' created, you can enable it via the Settings Advanced
 
 
-![Adding Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/SettingsGroup0000.png)
+![Adding Group Management](../Images/SettingsGroup0000.png)
 
 ## Avertissements
 

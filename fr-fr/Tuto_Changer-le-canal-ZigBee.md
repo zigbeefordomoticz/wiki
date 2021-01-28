@@ -22,14 +22,14 @@ Il est cependant possible de fixer le canal pour :
 * Activer les paramètres avancés
 * Indiquer le canal souhaité
 
-![Settings channel](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Channel_setting.png)
+![Settings channel](../Images/Channel_setting.png)
 
 #### Redémarer la Zigate pour appliquer les changements
 
 * Allez dans la section [Admin > Zigate](WebUI_Admin.md#zigate)
 * Cliquer sur __Redémarrage logiciel__
 
-![Restart Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Restart_Zigate.png)
+![Restart Zigate](../Images/Restart_Zigate.png)
 
 
 #### Vérifier le canal de la Zigate
@@ -37,6 +37,6 @@ Il est cependant possible de fixer le canal pour :
 * Aller dans [Outils > Outils](WebUI_Outils.md#outils)
 * Cliquer sur le bouton __Infos zigate (json)__
 
-![Zigate Infos](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Zigate_Infos.png)
+![Zigate Infos](../Images/Zigate_Infos.png)
 
 Le canal ZigBee est indiqué en Héxadécimal : 0x0b = 11

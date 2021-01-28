@@ -26,20 +26,20 @@ Il existe plusieurs façons d'installer le plugin Zigate pour DomoticZ qui sont 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 
-* Etape 1 [Installation du plugin](1_Installation.md)
-* Etape 2 [Paramétrage du plugin](2_Parametrage.md)
-* Etape 3 [Configuration du plugin](3_Configuration.md)
+* Etape 1 [Installation du plugin](Plugin_Installation.md)
+* Etape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
+* Etape 3 [Configuration du plugin](Plugin_Configuration.md)
 
 
 ## Mise à jour
 
-* [Mettre à jour le plugin](4_Mise-a-jour.md#mettre-à-jour-le-plugin)
-* [Les branches de mises à jour](4_Mise-a-jour.md#les-branches-de-mise-à-jour)
+* [Mettre à jour le plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
+* [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
 
 ## Sauvegardes
 
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](5_Sauvegardes.md)
+* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Plugin_Sauvegardes.md)
 
 
 ## L'interface Web du plugin
@@ -62,11 +62,8 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Gérer les groupes](Tuto_Gerer-les-groupes.md)
 * [Mettre à jour le firmware d'un dispositif](Tuto_Maj-firmware-dispositif.md)
 * [Mettre à jour le firmware de la Zigate](Tuto_Maj-firmware-zigate.md)
+* [Coupler deux dispositifs entre eux](Tuto_Coupler-deux-dispositifs.md)
 
-* [Upgrading device firmware](../en-eng/Device-Firmware-Update.md) en anglais
-* [Upgrading Firmware of Zigate](../en-eng/Zigate-flash-firmware.md) en anglais
-* [Energy Level Reports](../en-eng/EnergyLevels.md) en anglais
-* [Bindings](../en-eng/Binding_Legrand.md) en anglais
 * [Network status](../en-eng/Network-Status.md) (_4.1_ beta) en anglais
 * [Network Topology - Mesh](../en-eng/Network-Topology---LQI-report.md) (4.1_ beta) en anglais
 * [Mettre une authenficiation sur interface d'administration du plugin](../en-eng/DashboardAccessBasicAuth.md) en anglais
@@ -91,7 +88,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 
 ## En cas de problèmes
-/home/jp/Documents/GitHub/Domoticz-Zigate-Wiki/fr-fr/Tuto_Maj-firmware-dispositif.md
+
 1. Vérifiez les logs de DomoticZ, il devrait y avoir des informations si quelque chose ne fonctionne pas correctement.
 2. Venez en discuter sur les forums :
 

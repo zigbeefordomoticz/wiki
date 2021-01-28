@@ -2,7 +2,7 @@
 
 Cette étape est la deuxième du processus d'installation du plugin Zigate.
 
-Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](1_Installation.md)
+Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plugin_Installation.md)
 
 
 
@@ -82,4 +82,4 @@ Un exemple de l'historique des notifications (en anglais)
 ![Notification Widgets](../Images/Widget_Notifications.png)
 
 
-Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](3_Configuration.md)
+Si tout semble fonctionner normalement, passer à l'[étape 3 Configuration du plugin](Plugin_Configuration.md)

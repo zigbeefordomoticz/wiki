@@ -34,7 +34,7 @@ Un script est disponible pour télécharger tous les firmwares depuis le site we
    
 * Lancer le script pour télécharger le firmwares : `../../Tools/ikea-ota-download.py`
    
-* Ne conserver les firmwares que des dispositifs à mettre à jour (supprimer les autres)
+* Ne conserver que les firmwares que des dispositifs à mettre à jour (supprimer les autres)
 
 * 
 
@@ -42,7 +42,7 @@ Un script est disponible pour télécharger tous les firmwares depuis le site we
  
    This is done via the Web admin menu in Settings
    
-   ![Enable OTA](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/OTA.png)
+   ![Enable OTA](../Images/OTA.png)
    
  
  When the enable OTA is activated (save) restart the plugin, and the plugin will verify each of the devices and if needed the firmware will be updated.

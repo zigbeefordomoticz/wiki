@@ -1,6 +1,6 @@
 # L'interface Web - La section Réseau
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](3_Configuration.md).
+Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
 La section __Réseau__ comporte les pages :
 
@@ -89,6 +89,10 @@ Le niveaux d'interférence est calculé avec la communication entre la Zigate et
 Si vous ne disposez pas de routeur, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
 Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
+
+Sources:
+* https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)
+* https://en.wikipedia.org/wiki/Received_signal_strength_indication ( RSSI - Received Signal Strength Indication)
 
 
 ------------------------------------------------

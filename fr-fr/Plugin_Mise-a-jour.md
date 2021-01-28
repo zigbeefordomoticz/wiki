@@ -4,8 +4,8 @@
 
 Le plugin est régulièrement mis à jour que ce soit pour de la correction de bug ou l'ajout de nouvelle fonctionnalités.
 
-### Procédure
 
+### Procédure
 
 * Ouvrir un terminal et aller jusqu'au répertoire du pligin Zigate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 
