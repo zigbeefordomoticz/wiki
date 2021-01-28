@@ -19,30 +19,25 @@ _La mise a jour du firmaware d'un dispositif n'est donc pas possibile sur tous l
 | LEGRAND | Domoticz-Zigate/OTAFirmware/LEGRAND |
 | Philips Hue | Domoticz-Zigate/OTAFirmware/PHILIPS |
 
+Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver le firmaware.
 
-## Retreive Firmware
 
-In each of the Manufacturer directory a README.md file is available and describe where to find the firmware.
+## Méthodes
 
-### For IKEA TRADFRI
+### Récupérer les firmawares
 
-For the IKEA TRADFRI we are providing a script to retreive all Firmware from the IKEA web site.
+### Ikea Tradfri
 
-1. Go to the IKEA Firmware folder
+Un script est disponible pour télécharger tous les firmwares depuis le site web d'Ikea.
 
-   ```cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI ```
+* Aller dans le dossier du firmware d'Ikea : `cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI `
    
-1. Launch the script to retreive the firmware
-
-   ```../../Tools/ikea-ota-download.py```
+* Lancer le script pour télécharger le firmwaress : `../../Tools/ikea-ota-download.py`
    
-1. Optionaly remove some unecessary firmware file
+* Ne conserver les firmawes que des dispositifs à mettre à jour (supprimer les autres)
 
-   If you are for instance looking to upgrade only your Signal Repeater, or the Ikea Tradfri outlet, remove all files but keep
-   
-   * the file which contains `TRADFRI-control-outlet`for the Control Outlet
-   * the file which contains `TRADFRI-signal-repeater`for the Signal Repeater
- 
+* 
+
  1. Enable Over-the-Air upgrade in the plugin
  
    This is done via the Web admin menu in Settings
