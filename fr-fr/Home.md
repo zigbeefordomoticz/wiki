@@ -60,6 +60,8 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Supprimer un dispositif appairé](Tuto_Supprimer-un-dispositif.md)
 * [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Gérer les groupes](Tuto_Gerer-les-groupes.md)
+* [Mettre à jour le firmware d'un dispositif](Tuto_Maj-firmware-dispositif.md)
+* [Mettre à jour le firmware de la Zigate](Tuto_Maj-firmware-zigate.md)
 
 * [Upgrading device firmware](../en-eng/Device-Firmware-Update.md) en anglais
 * [Upgrading Firmware of Zigate](../en-eng/Zigate-flash-firmware.md) en anglais
@@ -89,7 +91,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 
 ## En cas de problèmes
-
+/home/jp/Documents/GitHub/Domoticz-Zigate-Wiki/fr-fr/Tuto_Maj-firmware-dispositif.md
 1. Vérifiez les logs de DomoticZ, il devrait y avoir des informations si quelque chose ne fonctionne pas correctement.
 2. Venez en discuter sur les forums :
 
