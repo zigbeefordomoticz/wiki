@@ -6,7 +6,7 @@ Document all findings around the Tuya cluster 0xef00 which seems to be a kind of
 
 Model name ( Basic attribute 0x0005 ) seems to act as a set of functionality, while Manufacturer Name ( Basic Attribute 0x0004 ) seems to identify the real device.
 
-The manufacture name is always composed by `_<hardware name>_<a letter><model id>`.
+The manufacture name is always composed by `_<hardware cart>_<a letter><model id>`.
 
 I'm providing this information to the community. it is based on what I have collected on the web but also my findings while sniffing the Tuya gateway with some devices. I you feel this information usefull, please feel free to add/enhance via PR.
 
