@@ -13,10 +13,14 @@ I'm providing this information to the community. it is based on what I have coll
 ## Cluster 0xEF00
 
 Seems to be the foundation of a number of Tuya devices.
+The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from there MCUs to there cloud MQTT servers.
+
+[Status of tuya TRVs implanted on ZHA](https://github.com/zigpy/zigpy/discussions/653)
 
 ## Devices using this clusters
 
 ![Tuya devices List](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Tuya-devices-List)
+![Compatibility list of Zigbee Thermostats and HVACs units compatible with ZHA](https://github.com/zigpy/zha-device-handlers/issues/357)
 
 
 ### Payload for 0x01 - Query and report product information, 0x02 - Device Status Query / Report
