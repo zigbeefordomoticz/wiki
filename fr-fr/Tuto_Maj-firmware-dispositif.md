@@ -1,16 +1,16 @@
-# Tutoriel - Mettre à jour le firmaware d'un dispositif
+# Tutoriel - Mettre à jour le firmware d'un dispositif
 
 Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'un dispositif ZigBee avec la Zigate.
 
 ## Avant propos
 
-Le plugin est capable d'envoyer une mise à jour de firmware d'un dispositif à condition que celui-ci rescpect le protocole Zigbee Over-The-Air (OTA).
+Le plugin est capable d'envoyer une mise à jour de firmware d'un dispositif à condition que celui-ci respect le protocole Zigbee Over-The-Air (OTA).
 In addition you need to be able to pull the brand firmware for your devices.
 Certain fabricant donne un accès libre à firmware de leur dispositif, d'autre ne le font pas.
 
-_La mise a jour du firmaware d'un dispositif n'est donc pas possibile sur tous les dispositifs.__
+_La mise a jour du firmware d'un dispositif n'est donc pas possible sur tous les dispositifs.__
 
-## Liste de fabricant patagant leur firmwares
+## Liste de fabricant partagant leur firmwares
 
 | Fabricant | Dossier contenant les firmwares |
 | --------- | ------------ |
@@ -24,17 +24,17 @@ Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver
 
 ## Méthodes
 
-### Récupérer les firmawares
+### Récupérer les firmwares
 
 ### Ikea Tradfri
 
 Un script est disponible pour télécharger tous les firmwares depuis le site web d'Ikea.
 
-* Aller dans le dossier du firmware d'Ikea : `cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI `
+* Aller dans le dossier du firmware d'Ikea : `cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI`
    
-* Lancer le script pour télécharger le firmwaress : `../../Tools/ikea-ota-download.py`
+* Lancer le script pour télécharger le firmwares : `../../Tools/ikea-ota-download.py`
    
-* Ne conserver les firmawes que des dispositifs à mettre à jour (supprimer les autres)
+* Ne conserver les firmwares que des dispositifs à mettre à jour (supprimer les autres)
 
 * 
 
@@ -52,6 +52,4 @@ Un script est disponible pour télécharger tous les firmwares depuis le site we
  
 ## Références 
  * https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions
- 
- 
  
