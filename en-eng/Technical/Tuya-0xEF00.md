@@ -23,6 +23,18 @@ Seems to be the foundation of a number of Tuya devices.
 | ------ | -------------- | ---------- | --------- | -------- | ----- | ---- |
 | uint8  | uint8          | uint8      | uint8     | uint8    | uint8 | len * uint8 |
 
+### Identified Data Type
+
+| Data Point | Data Type |  Description |
+| ---------- | --------- |  ----------- |
+| 0x00 	| RAW 	| |
+| 0x01 	| BOOL 	| 1 byte |
+| 0x02 	| VALUE 	| 4 byte unsigned integer |
+| 0x03 	| STRING 	| variable length string |
+| 0x04 	| ENUM 	| 1 byte enu m|
+| 0x05 	| FAULT	| 1 byte bitmap |
+
+
 ### Identified Data Points: Curtain Motor
 
 * Manufacturer Name: \_TZE200_rddyvrci, \_TZE200_5zbp6j0u, \_TZE200_nkoabg8w, \_TZE200_xuzcvlku, \_TZE200_4vobcgd3, \_TZE200_nogaemzt, \_TZE200_pk0sfzvr, \_TZE200_fdtjuw7u, \_TZE200_zpzndjez
@@ -105,17 +117,34 @@ Seems to be the foundation of a number of Tuya devices.
 | 0x77       | 0x00      | ????? |
 | 0x82       | 0x01      | Water scale proof |
 
+## List of tuya command (not verified)
+
+| Cmd ID  | Description |
+| ------- | ----------- |
+| 0x01 |       Product Information Inquiry / Reporting |
+| 0x02 |       Device Status Query / Report |
+| 0x03 |       Zigbee Device Reset |
+| 0x04 |       Order Issuance |
+| 0x05 |       Status Report |
+| 0x06 |       Status Search |
+| 0x07 |       reserved |
+| 0x08 |       Zigbee Device Functional Test |
+| 0x09 |       Query key information (only scene switch devices are valid) |
+| 0x0A |       Scene wakeup command (only scene switch device is valid) |
+| 0x0A-0x23 |  reserved |
+| 0x24 |       Time synchronization |
+
 ## Payload for 0x24 - Time Synchronisation
 
 * Device -> Host 0xef00 Command 0x24  Payload 0x0008
-* Host -> Device 0xef00 Command 0x24  Payload 0x0008600d8029600d8e39
+* Host -> Device 0xef00 Command 0x24  Payload 0x0008 600d8029 600d8e39
 
 The synopsis is like :
 
 1. Device send a Time synchronisation request with a uint16 as payload
-1. Host will respond with a payload equal to
+1. Host will respond with a payload equal to the same unint16 followed by the UTC time and the local time, for exemple
 
-| Serial Number | UTC Time    | Local Time |
+| payload       | UTC Time    | Local Time |
 | ------        | -----       | --------- |
 | uint16        |  uint32     | uint32     |
 | 0008          |  600d8029   | 600d8e39  |
