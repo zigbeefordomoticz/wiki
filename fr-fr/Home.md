@@ -63,16 +63,13 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre à jour le firmware d'un dispositif](Tuto_Maj-firmware-dispositif.md)
 * [Mettre à jour le firmware de la Zigate](Tuto_Maj-firmware-zigate.md)
 * [Coupler deux dispositifs entre eux](Tuto_Coupler-deux-dispositifs.md)
-* [Mettre une authenficiation sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
-
-* [Network status](../en-eng/Network-Status.md) (_4.1_ beta) en anglais
-* [Network Topology - Mesh](../en-eng/Network-Topology---LQI-report.md) (4.1_ beta) en anglais
+* [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
 ## Que faire si un dispositif ne fonctionne pas correctement ?
 
-* [Dealing with not certified devices](../en-eng/Dealing-with-none-certified-device.md) en anglais
-* [Debug mode](../en-eng/Plugin-debuging-mode.md) en anglais
+* [Problèmes d'appairage](Probleme_Appairage.md)
+* [Aide au débogage](Probleme_Aide-Debogage.md)
 
 
 ## Particularités de certains dispositifs
