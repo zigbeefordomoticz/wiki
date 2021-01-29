@@ -96,13 +96,15 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
    * [Le forum anglais](https://www.domoticz.com/forum/viewforum.php?f=68)
 
 
+## Explications
+
+* [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
+* [Topologie du réseau](Info_Topoplogie-reseau.md)
+
 
 ## Divers
-
-* Explications : [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 
 * [How to Configure ZiGate in Zigbee Sniffer](../en-eng/Zigate-Sniffer.md)  en anglais
 * [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters) en anglais
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623) en anglais
 * [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623) en anglais 
-
