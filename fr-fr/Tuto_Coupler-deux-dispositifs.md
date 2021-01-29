@@ -40,7 +40,7 @@ Il est possible de lier plusieurs clusters : il faut alors faire plusieurs liens
 
 Certains dispositifs peuvent avoir plusieurs commandes et par conséquent plusieurs widgets créés dans DomoticZ. Les widgets sont différenciés par le -01,-02, etc à la fin de leur nom : il s'agit des EndPoints (EP).
 
-Par exemple un double interrupteur legrand : 
+Par exemple un double interrupteur Legrand : 
 ```
 DIN Zigate - Double gangs remote switch_LegrandSelector-000474000082702a-01
 DIN Zigate - Double gangs remote switch_LegrandSelector-000474000082702a-02
