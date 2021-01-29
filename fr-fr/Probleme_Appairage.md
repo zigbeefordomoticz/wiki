@@ -1,4 +1,4 @@
-# Les problèmes d'appairage
+# Problèmes - L'appairage
 
 Le plugin est developpé pour pouvoir communiquer avec les dispositifs respectant les spécifications ZigBee. Par exemple, si le plugin essaye d'appairer un dispositif inconnu, il va essayer de créer des Widgets dans DomoticZ en se basant sur les fonctionnalités du dispositif.
 
