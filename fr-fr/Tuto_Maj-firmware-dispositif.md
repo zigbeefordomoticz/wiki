@@ -28,6 +28,8 @@ Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver
 
 ### Ikea Tradfri
 
+???
+
 Un script est disponible pour télécharger tous les firmwares depuis le site web d'Ikea.
 
 * Aller dans le dossier du firmware d'Ikea : `cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI`

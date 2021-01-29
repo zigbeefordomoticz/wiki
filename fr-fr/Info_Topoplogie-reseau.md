@@ -16,7 +16,7 @@ Source: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
 
 Le coût de 5 est utilisé comme filtrage maximal, au-dela, les niveaux des paquets peut être rejater.
 
-A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded
+A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded ???
 
 
 
@@ -28,7 +28,7 @@ La création du rapport va prendre un certain temps en fonction de la taille du 
 Lorsque le rapport est généré, le message suivant apparait dans les logs de DomoticZ : 'A raw format is also provided and is analysed via the Web UI.'
 
 ** Rapport graphique
-![Network Toplogy](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network_Topology.png)
+![Network Toplogy](../Images/Network_Topology.png)
 
 ** Rapport numérique 
 

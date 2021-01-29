@@ -120,6 +120,8 @@ In order to use an IKEA/Tradfri:
 * Ajouter la Zigate au groupe
 * Ajouter la Tradfri 5 buttons au groupe
 
+???
+
 ![cxvc](https://user-images.githubusercontent.com/4406440/54182600-3ec50200-44a2-11e9-8be7-c2e6b15b4deb.png)
 
 From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate. 
