@@ -4,7 +4,7 @@ Certains dispositifs de la marque Ikea ont besoin d'une configuration particuli√
 
 ** Cette page n'est pas une liste des dispositifs compatibles.** 
 
-La liste des dipositifs compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html)
+La liste des dispositifs compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html)
 
 
 ## Sommaire
