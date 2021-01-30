@@ -26,9 +26,9 @@ Il existe plusieurs façons d'installer le plugin Zigate pour DomoticZ qui sont 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 
-* Etape 1 [Installation du plugin](Plugin_Installation.md)
-* Etape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
-* Etape 3 [Configuration du plugin](Plugin_Configuration.md)
+* Étape 1 [Installation du plugin](Plugin_Installation.md)
+* Étape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
+* Étape 3 [Configuration du plugin](Plugin_Configuration.md)
 
 
 ## Mises à jour du plugin
@@ -74,14 +74,17 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Particularités de certains dispositifs
 
+* [BlitzWolf](Dispositif_Blitzwolf.md)
+* [Ikea Tradfri](Dispositif_Ikea.md)
+
+
 * [Legrand Netatmo](../en-eng/Legrand-Netatmo-corner.md) en anglais
 * [Profalux](../en-eng/Profalux-corner.md) en anglais
 * [Schneider Wiser](../en-eng/Schneider_Wiser_Corner.md) en anglais
 * [Schneider Wiser: How to Setup](../en-eng/Wiser-Setup.md) en anglais
 * [Eurotronics](../en-eng/Eurotronics-corner.md) en anglais
 * [Livolo](../en-eng/Livolo-corner.md) en anglais
-* [IKEA TRADFRI](../en-eng/IKEA-Tradfri-corner.md) en anglais
-* [BlitzWolf](../en-eng/Blitzwolf-corner.md) en anglais
+
 
 
 ## En cas de problèmes

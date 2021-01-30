@@ -20,7 +20,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 ### 1.A - Prérequis
 
 * DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version supérieur à 3.5 installé (voir [Domoticz Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Python version supérieur à 3.5 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
 
 ### 1.B - Procédure
@@ -28,7 +28,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Aller dans le plugin __Python Plugin Manager__ (pp-manager)
 * Rechercher __Zigate Plugin__ et ajouter le.
 
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
@@ -42,7 +42,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 ### 2.A - Prérequis
 
 * DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version supérieur à 3.5 installé (voir [Domoticz Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Python version supérieur à 3.5 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le paquet Git doit être installé (voir [Installation de Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git))
 
 ### 2.B - Procédure
@@ -56,7 +56,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Redémarrer DomoticZ.
 
 
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
@@ -87,7 +87,7 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 * Faire un clone du Git du plugin Zigate dans un nouveau dossier : `sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate`
 * Arrêter et redémarrer DomoticZ depuis le gestionnaire de paquet.
 
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
@@ -97,9 +97,9 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 Il y a des erreurs connues dans Synology qui font planter DomoticZ au lancement du plugin Zigate.
 Il faut désactiver le plugin Zigate et vérifier s'il y a une mise à jour du plugin ou du firmware.
 
-Editer le fichier __Domoticz-Zigate/Conf/PluginConf-xx.json__
+Éditer le fichier __Domoticz-Zigate/Conf/PluginConf-xx.json__
 
-Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perrturber la syntaxe globale) : `"internetAccess": 0,`
+Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perturber la syntaxe globale) : `"internetAccess": 0,`
 
 
 ------------
@@ -114,7 +114,7 @@ Cette méthode est uniquement valable pour les systèmes Docker.
 
 ### 4.2 - Procédure
 
-#### 4.2.A - Récuperer Docker-Domoticz
+#### 4.2.A - Récupérer Docker-DomoticZ
 
 Avant de pouvoir exécuter le Docker DomoticZ, il faut le récupérer. Il y a deux possibilités :
 * Créer votre propre image Docker DomoticZ
@@ -205,7 +205,7 @@ Comme pour installation normale, vous pouvez ajouter des nouveaux paquets avec a
 
 
 
-#### 4.2.B - Exécuter l'image Docker domoticZ
+#### 4.2.B - Exécuter l'image Docker DomoticZ
 
 Si vous avez des scripts, plugins ... mettez les dans un répertoire et définissez le chemin avant de lancer la commande.
 
@@ -226,7 +226,7 @@ Pour récupérer les logs complets depuis Docker, exécuter : `docker logs Domot
 * Exécuter la commande `docker exec -it Domoticz bash`
 
 
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
@@ -237,9 +237,9 @@ Cette méthode est uniquement valable pour les systèmes Windows 10.
 
 ### 5.1 - Avant-propos
 
-La majeure partie du développement du plugin est realisée sous Linux (Rasbian, Fedora) en s'appuyant sur du code Python pour permettre l'execution sur plateforme Windows.
+La majeure partie du développement du plugin est réalisée sous Linux (Raspbian, Fedora) en s'appuyant sur du code Python pour permettre l'exécution sur plateforme Windows.
 
-Nénamoins, installer l’ensemble Domoticz et Zigate sous Windows 10 n’est pas réellement plug and play.
+Néanmoins, installer l’ensemble DomoticZ et Zigate sous Windows 10 n’est pas réellement plug and play.
 
 On est très vite confronté à chercher des informations éparpillées sur le net, à lire des retours d’expérience dans de nombreux forums et tenter d’éviter les pièges sous Windows.
 
@@ -251,17 +251,17 @@ Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit d
 
 #### 5.2.A - Installation de Domoticz
 
-Le premier conseil est d’installer Domoticz (version stable par exemple) dans un répertoire autre que le classique Programmes (x86) par défaut. Sinon, il faudra jouer avec les droits utilisateurs. Si tel est le cas, pour modifier les droits, ouvrez l’explorateur Windows, faire clic-droit sur le disque C :, puis propriétés, onglet sécurité :
+Le premier conseil est d’installer DomoticZ (version stable par exemple) dans un répertoire autre que le classique Programmes (x86) par défaut. Sinon, il faudra jouer avec les droits utilisateurs. Si tel est le cas, pour modifier les droits, ouvrez l’explorateur Windows, faire clic-droit sur le disque C :, puis propriétés, onglet sécurité :
 
 ![Win10 Installation](../Images/Win10Pic1png.png)
 
 
-Attention, Domoticz et Zigate ont besoin d’écrire des fichiers dans des sous répertoires et un droit d’accès manquant pourra faire apparaître dans l’onglet  « Configuration/log » de  Domoticz ce type de message :
+Attention, DomoticZ et Zigate ont besoin d’écrire des fichiers dans des sous répertoires et un droit d’accès manquant pourra faire apparaître dans l’onglet  « Configuration/log » de  DomoticZ ce type de message :
 
 ![Win10 Installation](../Images/Win10Pic2.png)
 
 Même en attribuant le maximum de droits autorisés (administrateur, utilisateur avec droits en écriture ...), il m’est arrivé d’obtenir ce message (peut être un oubli…).
-Pour éviter tout problème, j’ai finalement choisi d’installer Domoticz directement à la racine sous C:\Domoticz et depuis aucun problème.
+Pour éviter tout problème, j’ai finalement choisi d’installer DomoticZ directement à la racine sous C:\Domoticz et depuis aucun problème.
 
 
 #### 5.2.B - Installation de la Zigate
@@ -279,27 +279,27 @@ Vérifier que la Zigate est correctement installée et fonctionnelle en effectua
 
 #### 5.2.C - Logiciels additionnels
 
-Pour la suite, deux logiciels sont nécessaires et utiles pour réaliser une installation propre sous windows:
+Pour la suite, deux logiciels sont nécessaires et utiles pour réaliser une installation propre sous Windows.
 
 ##### 5.2.C.1 - Python
 
-Installer une version de Python prenant en charge Domoticz comme indiqué dans le Wiki: https://www.domoticz.com/wiki/Using_Pyt ... or_Windows
+Installer une version de Python prenant en charge Domoticz comme indiqué dans le Wiki: [Using Python plugins in DomoticZ](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 
-Installer une version 32 bits pour Windows à partir du site Python.org (par exemple, 3.5.2 et 32 bits) : https://www.python.org/downloads/windows/
+Installer une version 32 bits pour Windows à partir du site Python.org (par exemple, 3.5.2 et 32 bits) : https://www.python.org/downloads/windows
 
-Si la version est compatible avec Domoticz, un message de status dans l’onglet « Configuration/Log » de Domoticz  l’indiquera au démarrage: 
+Si la version est compatible avec DomoticZ, un message de statut dans l’onglet « Configuration/Log » de DomoticZ l’indiquera au démarrage: 
 
 ![Win10 Installation](../Images/Win10Pic3.png)
 
-Autrement, un message du type Python Failed apparaitra
+Autrement, un message du type Python Failed apparaîtra
 
-Pour avoir testé plusieurs versions avec échec et succès, j’ai finalement opté pour conserver la version 3.5.2 (mentionnée dans le wiki Domoticz)  qui a fonctionné correctement et j’ai supprimé toutes les autres .
+Pour avoir testé plusieurs versions avec échec et succès, j’ai finalement opté pour conserver la version 3.5.2 (mentionnée dans le wiki DomoticZ)  qui a fonctionné correctement et j’ai supprimé toutes les autres .
  
-Il est possible cependant d’installer et de conserver plusieurs versions de python sur son ordinateur. Pour connaître la version active en cours, cliquer sur l’icône Démarrer Windows, puis entrer CMD dans la barre de recherche afin de lancer l’invite de commande (clic droit, éxécuter en tant qu’administrateur). Enfin taper : python --version
+Il est possible cependant d’installer et de conserver plusieurs versions de python sur son ordinateur. Pour connaître la version active en cours, cliquer sur l’icône Démarrer Windows, puis entrer CMD dans la barre de recherche afin de lancer l’invite de commande (clic droit, exécuter en tant qu’administrateur). Enfin taper : `python --version`
 
-Gérer plusieurs version python avec py sous windows n’est pas forcément simple mais des explications sont disponibles à la fin du Wiki consacré à Python et Domoticz : https://www.domoticz.com/wiki/Using_Pyt ... or_Windows
+Gérer plusieurs version python avec py sous Windows n’est pas forcément simple mais des explications sont disponibles à la fin du Wiki consacré à Python et DomoticZ [Using Python plugins in DomoticZ](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 
-Lors de l’installation de Python, des librairies sont manquantes côté Python comme le package ZIGATE pour Python.
+Lors de l’installation de Python, des librairies sont manquantes côté Python comme le package Zigate pour Python.
 
 Lancer une invite de commande en tant qu'administrateur et se placer dans le répertoire de python en tapant : `cd \Program Files (x86)\Python35-32>`
 
@@ -308,7 +308,7 @@ Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install zigate
 
 Attendre que l’installation du package soit terminé (vous devez être connecté à Internet)
 
-Il est fort possible que la librairie libpython utile à Domoticz ne soit pas installée (vérifiez si un fichier du type libpython3.x existe dans le sous répertoire « libs » de python). S’il n’existe pas, effectuez la même opération avec la commande :  `py -m pip install libpython3.5`
+Il est fort possible que la librairie libpython utile à DomoticZ ne soit pas installée (vérifiez si un fichier du type libpython3.x existe dans le sous répertoire « libs » de python). S’il n’existe pas, effectuez la même opération avec la commande :  `py -m pip install libpython3.5`
 Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install libpython3.5
 
 En fonction de la version x de Python installée, vous devez installer libpython3.x
@@ -316,39 +316,39 @@ Attendre que l’installation du package soit terminé (vous devez être connect
 
 ##### 5.2.C.2 - Git pour Windows
 
-De nombreux packages de plugin sont disponibles sur GitHub pour Domoticz. C’est le cas notamment pour la Zigate.
+De nombreux packages de plugin sont disponibles sur GitHub pour DomoticZ. C’est le cas notamment pour la Zigate.
 
-Sous windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : https://gitforwindows.org/
+Sous Windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : https://gitforwindows.org/
 
-#### 5.2.D. - Installation du plugin ZIGATE
+#### 5.2.D. - Installation du plugin Zigate
 
-La dernière étape consiste à installer le plugin de Pipiche pour gérer la Zigate dans Domoticz.
+La dernière étape consiste à installer le plugin de Pipiche pour gérer la Zigate dans DomoticZ.
 
-Cependant, le répertoire ou sont installés les plugins n’existe pas lors de l’installation de Domoticz. Il faut donc le créer manuellement.
+Cependant, le répertoire ou sont installés les plugins n’existe pas lors de l’installation de DomoticZ. Il faut donc le créer manuellement.
 
-Pour cela, ouvrez l’explorateur Windows et allez dans le répertoire où est installé Domoticz (pour mon cas,  C:\Domoticz)
-Clic droit sur Domoticz, puis Nouveau Dossier que vous nommerez plugins
-En éxécutant une invite de commande CMD en mode administrateur, positionnez vous dans le répertoire plugins puis taper la ligne d’instruction : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
+Pour cela, ouvrez l’explorateur Windows et allez dans le répertoire où est installé DomoticZ (pour mon cas,  C:\DomoticZ)
+Clic droit sur DomoticZ, puis Nouveau Dossier que vous nommerez plugins
+En exécutant une invite de commande CMD en mode administrateur, positionnez vous dans le répertoire plugins puis taper la ligne d’instruction : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
 
 L’arborescence de la Zigate est installée : 
 
 ![Win10 Installation](../Images/Win10Pic4.png)
 
 
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 ## 5.3 - Un PC Windows comme box domotique
 
-Avec l’apparition des mini PC fanless sous windows 10 pour une centaine d’euros, il est tentant de se constituer sa box à l’aide du logiciel Domoticz et de la clé Zigate USB avec protocole Zigbee .
+Avec l’apparition des mini PC fanless sous Windows 10 pour une centaine d’euros, il est tentant de se constituer sa box à l’aide du logiciel DomoticZ et de la clé Zigate USB avec protocole ZigBee .
 
-Mais en cas de coupure de courant, une box domotique doit être en état de repartir. Domoticz étant dans le groupe de démarrage, l’application se relance automatiquement.
+Mais en cas de coupure de courant, une box domotique doit être en état de repartir. DomoticZ étant dans le groupe de démarrage, l’application se relance automatiquement.
 
 Malheureusement, l’invite de Windows 10, en vous demandant d’introduire votre mot de passe, interrompt ce processus de lancement automatique.
 
 Pour éviter ce désagrément (surtout lorsqu’on est absent du domicile), il est possible d’éviter d’entrer le mot de passe du compte courant à l’invite de Windows (l’inconvénient est un PC accessible à tous, à vous de choisir).
 
-Pour cela, taper `netplwiz` dans l’invite de commande Windows et éxécuter la commande
+Pour cela, taper `netplwiz` dans l’invite de commande Windows et exécuter la commande
 
 
 ------------
@@ -358,7 +358,7 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian p
 
 ### 6.1 - Prérequis
 
-* Assurez-vous d'avoir installé les dernieres versions de Rasbian ainsi que python-dev
+* Assurez-vous d'avoir installé les dernières versions de Raspbian ainsi que python-dev
 ```
    sudo apt-get update
    sudo apt-get upgrade
@@ -386,22 +386,22 @@ Mettre ces 5 lignes juste avant la ligne `exit 0`
     gpio write 0 1
 ```
 
-* Désactiver le bluetooth en permanence en éditant le fichier __config.txt__ : `sudo nano /boot/config.txt`
+* Désactiver le Bluetooth en permanence en éditant le fichier __config.txt__ : `sudo nano /boot/config.txt`
 Mettre cette ligne à la fin du fichier : `dtoverlay = pi3-disable-bt`
 
 * Modifier le fichier __cmdline.txt__ : `sudo nano /boot/cmdline.txt`
 Effacer le texte : console = serial0,115200
 Sortez en sauvegardant les modifications
 
-* Exécuter les commandes (en remplacant <pi> par votre login)
+* Exécuter les commandes (en remplaçant <pi> par votre login)
 ```
     sudo systemctl disable hciuart
     sudo usermod -ag gpio <pi>
     sudo shutdown
 ```
-Arreter le Raspberry Pi : `sudo halt`
+Arrêter le Raspberry Pi : `sudo halt`
 
-* Brancher la Pizigate sur les ports GPIO
+* Brancher la PiZigate sur les ports GPIO
 * Redémarrer le Pi
 
 * Mettre l'accessibilité de l'adaptateur série (serial adapter) à 'No' en utilisant raspi-config option P6 (Interfacing options / serial): `sudo raspi-config`
@@ -410,14 +410,14 @@ Arreter le Raspberry Pi : `sudo halt`
 
 * Redémarrer le Pi
 
-* Démarrer la Pizigate: `Tools/pi-zigate.sh run`
+* Démarrer la PiZigate: `Tools/pi-zigate.sh run`
 
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
 ## 6.3 - Mise à jour
 
-Avant de faire une mise à jour du firmware de la Pizigate en flash mode, il faut modifier les GPIO :
+Avant de faire une mise à jour du firmware de la PiZigate en flash mode, il faut modifier les GPIO :
 ```
 0 gpio way out
 2 gpio way out
@@ -434,14 +434,14 @@ Redémarrer le Pi après la mise à jour du firmware. La configuration par défa
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
 
-Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate et Domoticz sont completement opérationnels sous Fedora 29.
+Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate et DomoticZ sont complètement opérationnels sous Fedora 29.
 
 
 ### 7.1 - Prérequis
 
 * Activer UART 
 
-   * Editer le fichier ` /boot/efi/config.txt`
+   * Éditer le fichier ` /boot/efi/config.txt`
      * S'assurer que les lignes suivantes ne sont pas commentées.
        * `enable_uart=1`
        * `dtoverlay = pi3-disable-bt`
@@ -455,7 +455,7 @@ Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plu
 
 * Vérifier les droits d'accès sur /dev/ttyS1 : `ls -l /dev/ttyS1`
    
-* Editer /etc/group et s'assurer que l'utilisateur exécutant DomoticZ appartient au groupe __tty__ : `sudo usermod -aG tty domoticz`
+* Éditer /etc/group et s'assurer que l'utilisateur exécutant DomoticZ appartient au groupe __tty__ : `sudo usermod -aG tty domoticz`
      
 * S'assurer que __/dev/ttyS1__ est en lecture/écriture `sudo chmod 666 /dev/ttyS1`
 
@@ -465,7 +465,7 @@ Au départ, la Pizigate n'était fonctionnelle que sur Raspbian. Mais après plu
 
    * Installer libgpiod et python3 RPi.GPIO : `sudo dnf install python3-RPi.GPIO libgpiod-utils`
      
-   * Editer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
+   * Éditer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
      
 Voici un exemple de ce que vous devriez avoir :
 ```
@@ -499,5 +499,5 @@ Voici un exemple de ce que vous devriez avoir :
    01 80 10 00 05 8f 00 03 03 1a 00 03
 ```
    
-Le plugin Zigate doit apparaitre dans la liste des matériels. 
+Le plugin Zigate doit apparaître dans la liste des matériels. 
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))

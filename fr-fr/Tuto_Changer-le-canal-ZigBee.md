@@ -8,7 +8,7 @@ Ce tutoriel explique comment changer le canal ZigBee du réseau de la Zigate.
 Lors de son initialisation, la Zigate va par défaut rechercher le meilleur canal possible en calculant les niveaux d'interférences.
 
 Il est cependant possible de fixer le canal pour :
-* Eviter des interférences avec les réseaux Wifi (voir [Interférences entre Wifi et ZigBee : explications](Info_ZigBee-et-Wifi.md)
+* Éviter des interférences avec les réseaux Wifi (voir [Interférences entre Wifi et ZigBee : explications](Info_ZigBee-et-Wifi.md)
 * Utiliser des dispositifs qui utilisent un canal spécifique :
   * Konke utilise le canal 15
   * Livolo utilise le canal 26
@@ -24,7 +24,7 @@ Il est cependant possible de fixer le canal pour :
 
 ![Settings channel](../Images/Channel_setting.png)
 
-#### Redémarer la Zigate pour appliquer les changements
+#### Redémarrer la Zigate pour appliquer les changements
 
 * Allez dans la section [Admin > Zigate](WebUI_Admin.md#zigate)
 * Cliquer sur __Redémarrage logiciel__

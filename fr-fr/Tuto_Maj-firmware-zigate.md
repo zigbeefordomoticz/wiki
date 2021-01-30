@@ -1,4 +1,4 @@
-# Tutoriel - Mettre à jour le firmaware de la Zigate
+# Tutoriel - Mettre à jour le firmware de la Zigate
 
 Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) de la Zigate.
 

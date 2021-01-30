@@ -1,18 +1,28 @@
-# Les dispositifs de la marque IKEA
+# Les dispositifs de la marque Ikea
 
-Voir la liste des [dispositifs compatibles](https://zigbee.blakadder.com/zigate.html)
+Certains dispositifs de la marque Ikea ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-Ces dispositifs sont connus sous l'appélation TRADFRI, on y retrouve des ampoules (TRADFRI bulb), des prises commandées (TRADFRI control outlet), des capteurs de mouvements (Tradfri Motion Sensor).
+** Cette page n'est pas une liste des dispositifs compatibles.** 
 
-**Attention :** Dans le cas où les appairages en mode classique decrits ci dessous ne fonctionnent pas, ces dispositifs utilisant le groupe 0x0000, il est possible que vous soyez amené à l'activer preallablement à l'appairage. Pour cela se rapporter à la section [Reglages](mettre lien)
+La liste des dipositifs compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html)
 
-## L'appairage des dispositifs
 
-### Les Ampoules connectées
+## Sommaire
 
-Allumer/Eteindre six fois de suite votre ampoule (hors telecommande Ikea); L'ampoule envoie alors une annonce à la zigate qui repondra en demandant plus d'informations comme le modele avant de l'inclure ensuite dans Domoticz. Dans le cas où le modèle n'est pas connu dans le fichier DeviceConf.txt, le processus prendra un peu plus de temps mais s'effectuera completement dès que la Zigate disposera des informations nécessaires. 
+Les dispositifs nécessitant une configuration particulière :
 
-Dès l'appairage, de 1 à 3 dispositifs sont présentés à Domoticz
+* [Les ampoules connectées](#les-ampoules-connectéees)
+* [Les prises connectées](#les-prises-connectees)
+* [Les capteurs de mouvement](#les-capteurs-de-mouvement)
+
+
+**Attention :** Dans le cas où les appairages en mode classique décrits ci dessous ne fonctionnent pas, ces dispositifs utilisant le groupe 0x0000, il est possible que vous soyez amené à l'activer préalablement à l'appairage. Pour cela se rapporter à la section [Reglages > Réglage de la Zigate](WebUI_Reglages.md#r%C3%A9glages-de-la-zigate)
+
+### Les ampoules connectées
+
+Allumer/Eteindre six fois de suite votre ampoule (hors télécommande Ikea); l'ampoule envoie alors une annonce à la Zigate qui répondra en demandant plus d'informations comme le modèle avant de l'inclure ensuite dans DomoticZ. Dans le cas où le modèle n'est pas connu dans le fichier DeviceConf.txt, le processus prendra un peu plus de temps mais s'effectuera complètement dès que la Zigate disposera des informations nécessaires. 
+
+Dès l'appairage, de 1 à 3 dispositifs sont présentés à DomoticZ
 
 | Type | Fonction |
 | ---- | -------- |
@@ -22,23 +32,17 @@ Dès l'appairage, de 1 à 3 dispositifs sont présentés à Domoticz
 
 ### Les prises connectées
 
-Après avoir mis la zigate en mode appairage voir section [Appairage](mettre lien), l'appairage, sans telecommande ikea, s'effectue en activant 6 fois dans les 5 secondes sur le bouton d'appairage accessible avec un extracteur de carte SIM placé sous la prise.
+Après avoir mis la Zigate en mode appairage voir le tutoriel [Appairer un dispositif](Tuto_Appairage-dispositif.md), l'appairage, sans télécommande Ikea, s'effectue en activant 6 fois dans les 5 secondes sur le bouton d'appairage accessible avec un extracteur de carte SIM placé sous la prise.
 
-**Attention :** La manipulation en soit n'est pas compliquee mais hasardeuse, il est donc fort probable qu'il faille redoubler de tentatives.....
+**Attention :** La manipulation en soit n'est pas compliquée mais hasardeuse, il est donc fort probable qu'il faille redoubler de tentatives.....
 
-L'appairage avec telecommande ikea s'effectue en plaçant la telecommande à moins de 5 cm de la prise, appuyer plus d'une dizaine de seconde sur le bouton d'apparaige que vous trouverez en face arriere interieure de la telecommande.
+L'appairage avec télécommande Ikea s'effectue en plaçant la télécommande à moins de 5 cm de la prise, appuyer plus d'une dizaine de seconde sur le bouton d’appairage que vous trouverez en face arrière intérieure de la télécommande.
 
-L'appairage avec le capteur de mouvement suit le même processus. Ouvrir la face arriere du capteur de mouvement, appuyer durant plus de 10s sur le bouton d'appairage à moins de 5cm de la prise.
+L'appairage avec le capteur de mouvement suit le même processus. Ouvrir la face arrière du capteur de mouvement, appuyer durant plus de 10s sur le bouton d'appairage à moins de 5cm de la prise.
 
 ### Les capteurs de mouvement
 
-Les capteurs de mouvement peuvent etre appairés en unitaire. Pour cela, mettre la Zigate en mode appairage puis activer 4 fois dans les 5 secondes, le bouton d'apparaige du capteur.
+Les capteurs de mouvement peuvent être appairés en unitaire. Pour cela, mettre la Zigate en mode appairage puis activer 4 fois dans les 5 secondes, le bouton d'appairage du capteur.
 
 **Attention :** La manipulation en soit n'est pas compliquee mais hasardeuse, il est donc fort probable qu'il faille redoubler de tentatives.....
-
-## Les Firmware des dispositifs
-
-| Modele - Produit                | Image type  | Version(s) FW | Nom du fichier                                           |
-| ------------------------------- | ----------- | ------------- | -------------------------------------------------------- |
-| TRADFRI bulb E27 WS clear 950lm | 0x2202      | 2.3.050       | 159695-2.1-TRADFRI-bulb-ws-1000lm-2.3.050.ota.ota.signed |
 

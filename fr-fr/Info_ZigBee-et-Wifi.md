@@ -37,9 +37,9 @@ Le protocole ZigBee offre les avantages d'un réseau maillé autogéré dynamiqu
 
 ## 4. Choses à savoir
 
-* Le Zigbee est un réseau à faible puissance contrairement au Wifi. 
-Il a été noté que les Caméras IP/Wifi étaient capable de perturber le Zigbee lorsqu'elles étaient en streaming, il faudra donc faire attentionn à l'emplacement des modules Zigbee par rapport aux Wifi et ce même si ils sont sur des cannaux bien séparés
+* Le ZigBee est un réseau à faible puissance contrairement au Wifi. 
+Il a été noté que les Caméras IP/Wifi étaient capable de perturber le ZigBee lorsqu'elles étaient en streaming, il faudra donc faire attention à l'emplacement des modules ZigBee par rapport aux Wifi et ce même si ils sont sur des canaux bien séparés
 
-* Beaucoup de problématiques de perte de dispositifs (deconnexion du réseau) sont très souvent liés à un problème d'interferences ou de densité insufisante du réseau Zigbee et l'ajout de dispositifs de type routeurs est souvent très positif
+* Beaucoup de problématiques de perte de dispositifs (déconnexion du réseau) sont très souvent liés à un problème d'interférences ou de densité insuffisante du réseau ZigBee et l'ajout de dispositifs de type routeurs est souvent très positif
 
 Plus d'explications : https://www.nxp.com/docs/en/application-note/JN-AN-1079.pdf

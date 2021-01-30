@@ -37,9 +37,9 @@ mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
 
 1. Installer une nouvelle version du plugin (voir [Installation](Installation.md))
 
-## Procédure de backup
+## Procédure de récupération
 
-1. Backup de la base de donnée du plugin : copier le répertoire __Data/__ vers le répertoire de la nouvelle installation :
+1. Récupération de la base de donnée du plugin : copier le répertoire __Data/__ vers le répertoire de la nouvelle installation :
 
 Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
 ```
@@ -47,7 +47,7 @@ cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Dat
 ```
    
 
-2. Backup de la configuration : copier le fichier __Conf/PluginConfXX__ vers le répertoire de la nouvelle installation (XX correspond à deux chiffres) :
+2. Récupération de la configuration : copier le fichier __Conf/PluginConfXX__ vers le répertoire de la nouvelle installation (XX correspond à deux chiffres) :
 
   Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 
  ```
@@ -55,7 +55,7 @@ cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Dat
  ```
    
 
-3. Backup des rapports (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
+3. Récupération des rapports (pour conserver les anciens rapports) : copier le répertoire __Reports/__ vers le répertoire de la nouvelle installation :
 
 
 Pour information, la commande pour copier le dossier depuis le bureau vers le répertoire du plugin : 

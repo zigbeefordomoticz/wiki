@@ -1,6 +1,6 @@
 # Problèmes - L'appairage
 
-Le plugin est developpé pour pouvoir communiquer avec les dispositifs respectant les spécifications ZigBee. Par exemple, si le plugin essaye d'appairer un dispositif inconnu, il va essayer de créer des Widgets dans DomoticZ en se basant sur les fonctionnalités du dispositif.
+Le plugin est développé pour pouvoir communiquer avec les dispositifs respectant les spécifications ZigBee. Par exemple, si le plugin essaye d'appairer un dispositif inconnu, il va essayer de créer des Widgets dans DomoticZ en se basant sur les fonctionnalités du dispositif.
 
 ## Introduction
 
@@ -40,6 +40,6 @@ Un fichier export.json sera générer.
   * Lien permettant de le commander
   * Branche du plugin, Version du plugin
   * Description du fonctionnement attendu, versus comportement observé
-  * Le fichier export.json obtenu précédement.
+  * Le fichier export.json obtenu précédemment.
   * Logs lors de l'appairage et lors des manips de tests. L'idéal est d'utiliser la procédure [Un fichier de log pour DomoticZ](https://easydomoticz.com/un-fichier-log-pour-domoticz/). Vous pourrez ensuite attacher le fichier de log avec votre post.
-  * Log correspondant au démarrage de Domoticz (avec le démarrage du plugin Zigate) et les différents essais d'appairage que vous pouvez faire.
+  * Log correspondant au démarrage de DomoticZ (avec le démarrage du plugin Zigate) et les différents essais d'appairage que vous pouvez faire.

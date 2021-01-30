@@ -1,20 +1,22 @@
-# Dispositifs Blitzwolf
+# Les dispositifs de la marque BlitzWolf
 
-## Dispositifs Blitzwolf connus
-* [Capteur de contact (BW-IS2)](https://zigbee.blakadder.com/BlitzWolf_BW-IS2.html)
-* [Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)](https://zigbee.blakadder.com/BlitzWolf_BW-SHP13.html)
-* [Détecteur de mouvement PIR (Passive InfraRed) (BW-IS3)](https://zigbee.blakadder.com/BlitzWolf_BW-IS3.html)
-* [Capteur Température & Humidité avec écran (BW-IS4)](https://zigbee.blakadder.com/BlitzWolf_BW-IS4.html)
-* [Capteur d'innondation (BW-IS5)](https://zigbee.blakadder.com/BlitzWolf_BW-IS5.html)
+Certains dispositifs de la marque BlitzWolf ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-Voir la liste des [dispositifs compatibles](../en-eng/Compatible-Devices.md)
+** Cette page n'est pas une liste des dispositifs compatibles.** 
 
-Pour le moment seule la prise connectée a été testée, cependant tous les produits Blitzwolf étant basés sur Tuya, ils devraient avoir un fonctionnement similaire.
-Le [capteur de température & humidité (BW-IS4)](https://zigbee.blakadder.com/Tuya_TS0201.html) s'appuie sur un modèle au nom générique de Tuya TS0201 .
+La liste des dipositifs compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html)
 
-## Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)
 
-Ce dispositif apparaitra une fois appairé sous le nom générique de TS0121.
+## Sommaire
+
+Les dispositifs nécessitant une configuration particulière :
+
+* [Prise BW-SHP13](Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13))
+
+
+### Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)
+
+Ce dispositif apparaîtra une fois appairé sous le nom générique de TS0121.
 
 Pour l'appairage du dispositif, tenir le bouton power enfoncé durant 5s, la lumière bleue flashera jusqu'à la fin complète du processus d'appairage.
 Quatre dispositifs sont alors créés et remontés vers DomoticZ :
@@ -24,10 +26,11 @@ Quatre dispositifs sont alors créés et remontés vers DomoticZ :
 | Switch On/Off | La prise commandée |
 | Mesure | Tension délivrée par la prise / Voltage |
 | Mesure P1Meter | Consommation instantanée en Watt |
-| Mesure General KWh| Consommation cumulée |  
+| Mesure General KWh| Consommation cumulée |
+| Ampere | Intensité instantanée |
 
 Vous pouvez supprimer l'un des dispositifs de mesure de puissance que vous n'utilisez pas. La consommation cumulée est mise à jour tous les 0.01 kWh.
 
-**Attention :** La remontée des informations de consommation nécessite l'activation du polling associé (pollingBlitzwolfPower) voir [section Parametres avancés](WebUI_Reglages.md#les-param%C3%A8tres-avanc%C3%A9s-4)
+**Attention :** La remontée des informations de consommation nécessite l'activation du polling associé (pollingBlitzwolfPower) voir la section [Réglages > Interrogation des dispositifs](WebUI_Reglages.md#interrogation-des-dispositifs)
 
-**Information :** Pour un lave-linge, une fréquence de 60s est suffisante pour controler la fin du cycle.
+**Information :** Pour un lave-linge, une fréquence de 60s est suffisante pour contrôler la fin du cycle.

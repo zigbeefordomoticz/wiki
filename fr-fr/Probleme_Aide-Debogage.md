@@ -1,6 +1,6 @@
 # Problème - Aide au débogage
 
-Ce document présente les possibilités pour réaliser un débogage mais également les informmtions nécessaires pour remonter des soucis.
+Ce document présente les possibilités pour réaliser un débogage mais également les informations nécessaires pour remonter des soucis.
 
 
 ## Les options de débogage
@@ -21,7 +21,7 @@ Ce document présente les possibilités pour réaliser un débogage mais égalem
 | Input  | Tous les messages entrant de la Zigate |
 | Output | Tous les messages sortant vers la Zigate |
 | Cluster | decoding incoming messages. This is where we extract information from the messages payload ??? |
-| Heartbeat | Exécution toutes les 5 secondes pour réaliser des actions récurcives |
+| Heartbeat | Exécution toutes les 5 secondes pour réaliser des actions récursives |
 | Widget | Forcer la mise à jour des Widgets de DomoticZ par rapport à la Zigate |
 | Plugin | Le programme du plugin |
 | Database | Gérer la base de données du plugin |
@@ -33,14 +33,14 @@ Ce document présente les possibilités pour réaliser un débogage mais égalem
 ### Case 1: Je ne vois pas le capteur mettre à jour les Widgets de DomoticZ
 
 
-Il faut vérifier qu'il y a des messages entrants, s'ils sont correctements traités et s'ils sont envoyés à DomoticZ pour mise à jour.
+Il faut vérifier qu'il y a des messages entrants, s'ils sont correctement traités et s'ils sont envoyés à DomoticZ pour mise à jour.
 
 
 1. Activer debugInput, debugCluster and debugWidget
 1. Indiquer l'adresse courte de ce capteur dans __debugMatchId__ afin de limiter les logs.
 1. Désactiver l'utilisation des logs de DomoticZ pour avoir les logs dans un fichier spécifique (redémarrage nécessaire)
 
-1. Essayer de faire envoyer des données par le capteur afin de collecter les logs pour nalayse.
+1. Essayer de faire envoyer des données par le capteur afin de collecter les logs pour anlayse.
 
 
 ### Case 2: J'ai un nouveau dispositif appairé, mais il semble qu'il n'est pas bien reconnu
@@ -58,5 +58,5 @@ Il faut vérifier qu'il y a des messages entrants, s'ils sont correctements trai
 ## Adresse courte et  IEEE
 
 Pour trouver l'adresse courte ou l'IEEE d'un dispositif :
-  * via Domoticz: dans la colonne ID
+  * via DomoticZ: dans la colonne ID
   * via le Plugin : dans la section Management de dispositifs

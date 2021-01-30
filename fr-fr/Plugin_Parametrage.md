@@ -65,7 +65,7 @@ Les différents états possibles sont :
 | Saturation | Ambre | Le plugin sature : il peut y avoir des délais de transmissions rallongés |
 
 
-### Widget Text
+### Widget Texte
 
 Liste non-exhaustive des notifications :
 

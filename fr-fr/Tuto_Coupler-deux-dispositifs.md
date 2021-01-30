@@ -8,11 +8,13 @@ Par exemple un interrupteur avec un micro module ou encore le capteur de mouveme
 
 __Note :__ Les dispositifs ne sont pas tous compatibles avec cette fonction de lien direct.
 
+
 ## Prérequis
 
 * Avoir appairer deux dispositifs compatibles.
 
-Il est recommandé de donnner un surnom au dispositif dans l'interface web du plugin afin de les retrouver plus facilement (voir la section [Management > Gestion des dispositifs](WebUI_Management.md#gestion-des-dispositifs).
+Il est recommandé de donner un surnom au dispositif dans l'interface web du plugin afin de les retrouver plus facilement (voir la section [Management > Gestion des dispositifs](WebUI_Management.md#gestion-des-dispositifs).
+
 
 ## Méthode
 
@@ -24,7 +26,7 @@ Il est recommandé de donnner un surnom au dispositif dans l'interface web du pl
 Le cluster est le type de commande qui sera lié. Les clusters possibles sont :
    * __0006 ON/Off__ pour la fonction allumer/éteindre
    * __0008 Dimmer__ pour la fonction variateur
-   * __0402 Temparature__ pour la fontion ???
+   * __0402 Temparature__ pour la fonction ???
    
 * Sélectionner ensuite le dispositif source (généralement la télécommande, l'interrupteur, etc...)
 * Sélectionner enfin le dispositif cible (celui qui est commandé)

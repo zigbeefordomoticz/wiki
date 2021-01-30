@@ -39,7 +39,7 @@ Il n'y a pas de suppression automatique : il faut le faire manuellement
 * S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-dispositif.md) : le bouton "Accepter de nouveaux dispositifs" doit être éteint, la LED bleue de la Zigate ne doit pas clignoter.
 * Faire un reset sur le dispositif (comme pour l'appairer)
 
-Un message similaire à celui-ci devrait apparaitre dans les logs de DomoticZ :
+Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
 `Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 
@@ -54,7 +54,7 @@ Un message similaire à celui-ci devrait apparaitre dans les logs de DomoticZ :
 
 Généralement lorsque le dernier Widget est supprimé, le Plugin va automatiquement envoyé une demande de Reset au dispositif.
 
-Un message similaire à celui-ci devrait apparaitre dans les logs de DomoticZ :
+Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
 `Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 

@@ -1,10 +1,10 @@
-# Info - Tolopolgie du réseau
+# Info - Topolgie du réseau
 
-Le plugin permet de générer un rapport sur la topologi du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
+Le plugin permet de générer un rapport sur la topologie du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
 __Important :__ Le filtrage des paquets implémenté utilise la valeur LQI
 
 
-| LQI range | Coùutt |
+| LQI range | Coût |
 | ---------| -----|
 | >= 51 | 1 |
 | 46 - 50 | 2 |
@@ -14,7 +14,7 @@ __Important :__ Le filtrage des paquets implémenté utilise la valeur LQI
 
 Source: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
 
-Le coût de 5 est utilisé comme filtrage maximal, au-dela, les niveaux des paquets peut être rejater.
+Le coût de 5 est utilisé comme filtrage maximal, au-delà, les niveaux des paquets peut être rejeter.
 
 A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded ???
 
@@ -24,8 +24,8 @@ A cost of 5 is used as the packet filtering threshold, which means that above th
 
 ## Exemple de rapport
 
-La création du rapport va prendre un certain temps en fonction de la taille du réseau (sutout du nombre de routeurs). 
-Lorsque le rapport est généré, le message suivant apparait dans les logs de DomoticZ : 'A raw format is also provided and is analysed via the Web UI.'
+La création du rapport va prendre un certain temps en fonction de la taille du réseau (surtout du nombre de routeurs). 
+Lorsque le rapport est généré, le message suivant apparaît dans les logs de DomoticZ : 'A raw format is also provided and is analysed via the Web UI.'
 
 ** Rapport graphique
 ![Network Toplogy](../Images/Network_Topology.png)

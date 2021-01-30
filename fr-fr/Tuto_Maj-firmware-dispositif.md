@@ -4,13 +4,13 @@ Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'
 
 ## Avant propos
 
-Le plugin est capable d'envoyer une mise à jour de firmware d'un dispositif à condition que celui-ci respect le protocole Zigbee Over-The-Air (OTA).
+Le plugin est capable d'envoyer une mise à jour de firmware d'un dispositif à condition que celui-ci respect le protocole Zigbee Over-The-Air (OTA). ???
 In addition you need to be able to pull the brand firmware for your devices.
 Certain fabricant donne un accès libre à firmware de leur dispositif, d'autre ne le font pas.
 
 _La mise a jour du firmware d'un dispositif n'est donc pas possible sur tous les dispositifs.__
 
-## Liste de fabricant partagant leur firmwares
+## Liste de fabricant partageant leur firmwares
 
 | Fabricant | Dossier contenant les firmwares |
 | --------- | ------------ |
@@ -19,7 +19,7 @@ _La mise a jour du firmware d'un dispositif n'est donc pas possible sur tous les
 | LEGRAND | Domoticz-Zigate/OTAFirmware/LEGRAND |
 | Philips Hue | Domoticz-Zigate/OTAFirmware/PHILIPS |
 
-Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver le firmaware.
+Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver le firmware.
 
 
 ## Méthodes

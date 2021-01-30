@@ -1,4 +1,4 @@
-# Tutoriel - Appairer un dispositif Zigbee avec la Zigate
+# Tutoriel - Appairer un dispositif ZigBee avec la Zigate
 
 
 ## Introduction

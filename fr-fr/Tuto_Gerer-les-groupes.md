@@ -5,7 +5,7 @@
 
 Ce tutoriel explique comment gérer les groupes de dispositifs ZigBee directement depuis le plugin de la Zigate.
 
-Depuis la mise en place de l'interface Web avec la version 4.7 du plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavent principalament en ligne de commande.
+Depuis la mise en place de l'interface Web avec la version 4.7 du plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
 Des améliorations ont été apportées avec la version 4.9 pour rendre la gestion des groupes plus facile mais il reste encore du travail pour améliorer l'expérience utilisateur.
 
 
@@ -17,7 +17,7 @@ Des améliorations ont été apportées avec la version 4.9 pour rendre la gesti
 
 ## Avant-propos
 
-Le groupe sera gérer directement par les widgets de DomoticZ via les interrupteurs mais pas via les groupes de DomoticZ). Concrètement, pour chaque groupe Zigate, il y aura un interrupteur dans domoticZ. 
+Le groupe sera gérer directement par les widgets de DomoticZ via les interrupteurs mais pas via les groupes de DomoticZ). Concrètement, pour chaque groupe Zigate, il y aura un interrupteur dans DomoticZ. 
 
 
 ## Méthode
@@ -30,7 +30,7 @@ Le groupe sera gérer directement par les widgets de DomoticZ via les interrupte
 ![Settings for Group Management](../Images/SettingsGroup.png)
 
 
-#### Vérifier l'existance de groupe
+#### Vérifier l'existence de groupe
 
 Avant la création d'un groupe, il faut absolument vérifier qu'il n'y a pas déjà des groupes existants dans la Zigate.
 
@@ -58,12 +58,12 @@ This will consist in quering each main powered devices for the group membership.
 * Indiquer le nom du groupe
 * Sélectionner les dispositifs appartenant au groupe en les cliquant un par un. En cas d'erreur, utiliser la petit croix pour retirer un dispositif de la liste.
 
-Il est possible d'ajouter la Zigate dans le groupe. Ceci est nécessaire spour récupérer d'une télécommande Ikea.
+Il est possible d'ajouter la Zigate dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea.
 
 * Cliquer sur le bouton __Valider__
 
 La demande sera envoyée à chaque dispositif listé. Cela peut prendre quelques secondes.
-Si le groupe n'appairait pas, faire rafraichir la page web.
+Si le groupe n'appairait pas, faire rafraîchir la page web.
 
 
 #### Mettre à jour un groupe
@@ -139,10 +139,10 @@ If you need to have the group '0000' created, you can enable it via the Settings
 
 ## Avertissements
 
-* Acutellement, quand le Zigate envoi une commande à un dispositifs ou une liste de dispositifs, il n'y a aucune garantie que les dispositifs ont reçu la commande.
+* Actuellement, quand la Zigate envoi une commande à un dispositifs ou une liste de dispositifs, il n'y a aucune garantie que les dispositifs ont reçu la commande.
 * Il est plus facile de configurer les groupes s'ils sont tous sur On.
 * Il est également plus facile d'ajouter des ampoules à un groupe lorsqu'elles sont allumées.
 
-
+???
 * If you want to force a rescan of group membership (like if you have added a new device), you can go to the Admin Group menu and ether request a Full Scan or a selected scan where you will select the devices you want to query
 
