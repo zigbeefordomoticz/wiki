@@ -77,12 +77,11 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [BlitzWolf](Dispositif_Blitzwolf.md)
 * [Ikea Tradfri](Dispositif_Ikea.md)
 * [Eurotronic](Dispositif_Eurotronic.md.md)
+* [Profalux](Dispositif_Profalux.md)
 
 * [Legrand Netatmo](../en-eng/Legrand-Netatmo-corner.md) en anglais
-* [Profalux](../en-eng/Profalux-corner.md) en anglais
 * [Schneider Wiser](../en-eng/Schneider_Wiser_Corner.md) en anglais
 * [Schneider Wiser: How to Setup](../en-eng/Wiser-Setup.md) en anglais
-
 * [Livolo](../en-eng/Livolo-corner.md) en anglais
 
 
