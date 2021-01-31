@@ -120,17 +120,17 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
     | Data Point | Data Type | Description |
     | ---------- | --------- | ----------- |
     | 0x08       |            | windowdetection_status |
-    | 0x0a       |            | unknow |
+    | 0x0a       |  0x01          | unknow |
     | 0x12       |            | windowdetection |
     | 0x1b       |            | calibration |
     | 0x28       |            | childlock |
     | 0x65       |            | Switch On/Off |
     | 0x66       |            | temperature |
     | 0x67       |            | setpoint |
-    | 0x69       |            | unknow |
+    | 0x69       |  0x05          | unknow |
     | 0x6a       |            | temporary away
     | 0x6c       |            | Auto 0x01, Manual 0x02 |
-    | 0x6e       |            | unknown ? |
+    | 0x6e       |  0x00          | unknown ? |
     | 0x70       |  0x00      | schedule Workday|
     | 0x71       |  0x00      | schedule Holiday|
     | 0x72       |  0x00      | unknow ? |
