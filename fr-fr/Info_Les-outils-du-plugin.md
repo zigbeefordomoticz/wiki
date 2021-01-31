@@ -2,6 +2,8 @@
 
 La page [Outils > Outils](WebUI_Outils.md#outils) contient différents outils permettant d'avoir des informations sur le fonctionnement du plugin.
 
+![Device Management](Images/FR_WebUI-Outils-Outils.png)
+
 ## Liste des outils
 
 * [Plugin infos (json)](#plugin-infos-json)
