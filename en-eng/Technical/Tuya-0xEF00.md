@@ -22,7 +22,6 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
 ![Tuya devices List](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Tuya-devices-List)
 ![Compatibility list of Zigbee Thermostats and HVACs units compatible with ZHA](https://github.com/zigpy/zha-device-handlers/issues/357)
 
-
 ### Payload for 0x01 - Query and report product information, 0x02 - Device Status Query / Report
 
 | status | transaction Id | Data Point | Data Type | Function | Len   | Data |
@@ -33,13 +32,12 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
 
 | Data Point | Data Type |  Description |
 | ---------- | --------- |  ----------- |
-| 0x00 	| RAW 	| |
-| 0x01 	| BOOL 	| 1 byte |
-| 0x02 	| VALUE 	| 4 byte unsigned integer |
-| 0x03 	| STRING 	| variable length string |
-| 0x04 	| ENUM 	| 1 byte enu m|
-| 0x05 	| FAULT	| 1 byte bitmap |
-
+| 0x00  | RAW  | |
+| 0x01  | BOOL  | 1 byte |
+| 0x02  | VALUE  | 4 byte unsigned integer |
+| 0x03  | STRING  | variable length string |
+| 0x04  | ENUM  | 1 byte enu m|
+| 0x05  | FAULT | 1 byte bitmap |
 
 ### Identified Data Points: Curtain Motor
 
@@ -91,54 +89,103 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
 
 ### Identified Data Points: Smart TRV ( eTRV )
 
-* Manufacturer Name: \_TYST11_zivfvd7h
-* Model Name: fvq6avy, ivfvd7h
+* VERSION 1 : '\_TYST11_zivfvd7h', '\_TZE200_zivfvd7h', '\_TYST11_kfvq6avy', '\_TZE200_kfvq6avy', '\_TYST11_jeaxp72v'
 
-| Data Point | Data Type |  Description |
-| ---------- | --------- |  ----------- |
-| 0x02       |  0x03     | SetPoint |
-| 0x03       |           | Local Temperature |
-| 0x04       |  0x04     | Thermostat Mode 0x00 Off, 0x01 Auto, 0x02 Manual|
-| 0x07       |           | Child Lock ? |
-| 0x15       |           | Battery ? |
+    | Data Point | Data Type |  Description |
+    | ---------- | --------- |  ----------- |
+    | 0x02       |  0x03     | SetPoint |
+    | 0x03       |           | Local Temperature |
+    | 0x04       |  0x04     | Thermostat Mode 0x00 Off, 0x01 Auto, 0x02 Manual|
+    | 0x07       |           | Child Lock ? |
+    | 0x15       |           | Battery ? |
 
-* Manufacturer Name:
-* Model Name: TS0601
+* VERSION 2: '\_TZE200_ckud7u2l', '\_TYST11_ckud7u2l'
+
+    | Data Point | Data Type | Description |
+    | ---------- | --------- | ----------- |
+    | 0x02       |           | setpoint |
+    | 0x03       |           | temperature |
+    | 0x04       |           | Mode 0x01 Auto ,0x02 Off | |
+    | 0x07       |           | childlock |
+    | 0x12       |           | windowdetection |
+    | 0x15       |           | battery |  
+    | 0x14       |           | valvestate |
+    | 0x6d       |           | valveposition |
+    | 0x6e       |           | lowbattery |
+
+* VERSION 3: '\_TZE200_c88teujp', '\_TYST11_KGbxAXL2', '\_TYST11_zuhszj9s'
+
 * Pairing: (<https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Technical/Tuya-TS061-eTRV.md>)
 
-| Data Point | Data Type | Description |
-| ---------- | --------- | ----------- |
-| 0x08       |  0x01     | Window Detection status |
-| 0x0a       |  0x01     | Antifreeze status |
-| 0x1b       |  0x02     | Calibration |
-| 0x28       |  0x01     | Child Lock status |
-| 0x65       |  0x01     | Mode 0x00 Off, 0x01 On |
-| 0x66       |           | Temperature |
-| 0x67       |  0x02     | SetPoint |
-| 0x6a       |  0x01     | LH ???? |
-| 0x6c       |           | Program Mode |
-| 0x6d       |           | Valve Position ??? |
-| 0x6e       | 0x00      | ????? |
-| 0x73       | 0x00      | ????? |
-| 0x77       | 0x00      | ????? |
-| 0x82       | 0x01      | Water scale proof |
+    | Data Point | Data Type | Description |
+    | ---------- | --------- | ----------- |
+    | 0x08       |            | windowdetection_status |
+    | 0x0a       |            | unknow |
+    | 0x12       |            | windowdetection |
+    | 0x1b       |            | calibration |
+    | 0x28       |            | childlock |
+    | 0x65       |            | Switch On/Off |
+    | 0x66       |            | temperature |
+    | 0x67       |            | setpoint |
+    | 0x69       |            | unknow |
+    | 0x6a       |            | temporary away
+    | 0x6c       |            | Auto 0x01, Manual 0x02 |
+    | 0x6e       |            | unknown ? |
+    | 0x70       |  0x00      | schedule Workday|
+    | 0x71       |  0x00      | schedule Holiday|
+    | 0x72       |  0x00      | unknow ? |
+    | 0x73       |  0x00      | unknow ? |
+    | 0x77       |  0x00      | unknow ? |
+    | 0x74       |  0x00      | unknow ? |
+    | 0x75       |  0x00      | unknow ? |
+    | 0x78       |  0x00      | unknow ? |
+    | 0x79       |  0x00      | unknow ? |
+    | 0x7a       |  0x00      | unknow ? |
+    | 0x7b       |  0x00      | schedule Sun|
+    | 0x7c       |  0x00      | schedule Mon|
+    | 0x7d       |  0x00      | schedule Tue|
+    | 0x7e       |  0x00      | schedule Wed|
+    | 0x7f       |  0x00      | schedule Thu|
+    | 0x80       |  0x00      | schedule Fri|
+    | 0x81       |  0x00      | schedule Sat|
+    | 0x82       |            | Anti scale |
+
+### Identified Data Points: Smart Thermostat  ( Thermostat )
+
+* Manufacturer: '\_TZE200_aoclfnxz', '\_TYST11_zuhszj9s', '\_TYST11_jeaxp72v'
+
+    | Data Point | Data Type | Description |
+    | ---------- | --------- | ----------- |
+    | 0x01       |           | onoff |
+    | 0x02       |           | preset |
+    | 0x03       |           | schedule_mode |
+    | 0x10       |           | setpoint |
+    | 0x12       |           | unknow |
+    | 0x13       |           | unknow |
+    | 0x14       |           | unknow |
+    | Ox1b       |           | unknow |
+    | 0x18       |           | temperature |
+    | 0x2b       |           | unknow |
+    | 0x24       |           | heating_state |
+    | 0x28       |           | childlock |
+    | 0x65       | 0x00      | unknow |
 
 ## List of tuya command (not verified)
 
-| Cmd ID  | Description |
-| ------- | ----------- |
-| 0x01 |       Product Information Inquiry / Reporting |
-| 0x02 |       Device Status Query / Report |
-| 0x03 |       Zigbee Device Reset |
-| 0x04 |       Order Issuance |
-| 0x05 |       Status Report |
-| 0x06 |       Status Search |
-| 0x07 |       reserved |
-| 0x08 |       Zigbee Device Functional Test |
-| 0x09 |       Query key information (only scene switch devices are valid) |
-| 0x0A |       Scene wakeup command (only scene switch device is valid) |
-| 0x0A-0x23 |  reserved |
-| 0x24 |       Time synchronization |
+    | Cmd ID  | Description |
+    | ------- | ----------- |
+    | 0x01 |       Product Information Inquiry / Reporting |
+    | 0x02 |       Device Status Query / Report |
+    | 0x03 |       Zigbee Device Reset |
+    | 0x04 |       Order Issuance |
+    | 0x05 |       Status Report |
+    | 0x06 |       Status Search |
+    | 0x07 |       reserved |
+    | 0x08 |       Zigbee Device Functional Test |
+    | 0x09 |       Query key information (only scene switch devices are valid) |
+    | 0x0A |       Scene wakeup command (only scene switch device is valid) |
+    | 0x0A-0x23 |  reserved |
+    | 0x24 |       Time synchronization |
 
 ## Payload for 0x24 - Time Synchronisation
 
@@ -159,7 +206,6 @@ The synopsis is like :
 | 000d          |  600d8e5e   | 600d9c6e  |
 | 000e          |  600d9c92   | 600daaa2  |
 | 0018          |  600daac6   | 600db8d6  |
-
 
 Timestamp is the total number of seconds from 00: 00: 00 on January 01, 1970, GMT
 
