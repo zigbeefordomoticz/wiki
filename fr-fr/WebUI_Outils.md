@@ -113,6 +113,7 @@ Voici la page __Couplage__ de l'interface Web du plugin :
 
 Cette page permet d'exécuter de coupler des dispositifs.
 
+Voir le tutoriel [Coupler deux dispositifs entre eux](Tuto_Coupler-deux-dispositifs.md)
 
 ------------------------------------------------
 ## Debug
@@ -125,6 +126,8 @@ Voici la page __Debug__ de l'interface Web du plugin :
 ### Utilisation
 
 Cette page permet d'accéder aux paramètres de débogage et de journalisation.
+
+Voir la page d'[aide au débogage](Probleme_Aide-Debogage.md)
 
 
 ------------------------------------------------
