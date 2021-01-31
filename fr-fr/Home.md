@@ -92,6 +92,14 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
    * [Le forum anglais](https://www.domoticz.com/forum/viewforum.php?f=68)
 
 
+## Scripts
+
+* [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
+* [Vérifier la perte de dispositifs](../Contrib/CheckDeadDevices.lua) en Lua
+* [Vérifier la perte de dispositifs](../Contrib/CheckLastSeen.dzVents) en DzVents
+
+[D'autres exemples](../Contrib/)
+
 ## Informations
 
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
