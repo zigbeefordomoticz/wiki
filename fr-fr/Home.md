@@ -61,7 +61,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Gérer les groupes](Tuto_Gerer-les-groupes.md)
 * [Mettre à jour le firmware d'un dispositif](Tuto_Maj-firmware-dispositif.md)
-* [Mettre à jour le firmware de la Zigate](Tuto_Maj-firmware-zigate.md)
+* [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Coupler deux dispositifs entre eux](Tuto_Coupler-deux-dispositifs.md)
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
@@ -100,10 +100,11 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 [D'autres exemples](../Contrib/)
 
+
 ## Informations
 
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
-* [Topologie du réseau](Info_Topoplogie-reseau.md)
+* [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
 
 
