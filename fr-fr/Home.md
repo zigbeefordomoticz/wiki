@@ -76,13 +76,11 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 * [BlitzWolf](Dispositif_Blitzwolf.md)
 * [Ikea Tradfri](Dispositif_Ikea.md)
-* [Eurotronic](Dispositif_Eurotronic.md.md)
+* [Eurotronic](Dispositif_Eurotronic.md)
 * [Profalux](Dispositif_Profalux.md)
-* [Legrand Netatmo](../en-eng/Legrand-Netatmo-corner.md) en anglais
-* [Schneider Wiser](../en-eng/Schneider_Wiser_Corner.md) en anglais
-* [Schneider Wiser: How to Setup](../en-eng/Wiser-Setup.md) en anglais
-* [Livolo](../en-eng/Livolo-corner.md) en anglais
-
+* [Legrand Netatmo](Dispositif_Legrand.md)
+* [Schneider Wiser](Dispositif_Schneider.md)
+* [Livolo](Dispositif_Livolo.md)
 
 
 ## En cas de problèmes
@@ -98,7 +96,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topoplogie-reseau.md)
-* [How to Configure ZiGate in ZigBee Sniffer](../en-eng/Zigate-Sniffer.md)  en anglais
+* [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
 
 
 ## Liens utiles
