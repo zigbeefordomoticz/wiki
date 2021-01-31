@@ -103,6 +103,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Informations
 
+* [Les outils du plugin](Info_Les-outils-du-plugin.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais

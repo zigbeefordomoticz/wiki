@@ -21,19 +21,9 @@ Voici la page __Outils__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet de lister tous les outils intégrés au plugin.
+Cette page permet d'exécuter les différents outils disponibles dans le plugin.
 
-Elle permet :
-
-* D'assigner des surnoms aux dispositifs pour les identifier plus facilement dans l'interface web.
-* D'assigner des paramètres aux dispositifs indépendamment les uns des autres.
-* De visualiser les informations suivantes :
-  * Le ShortId (adresse réseau) and IEEE (Mac Address) du dispositif
-  * Le Modèle du dispositif
-  * Le(s) nom(s) du(des) Widget(s) DomoticZ attaché(s) au dispositif
-  * La santé du dispositif
-  * Le status : inDB (dispositif dans la ZiGate et au moins un widget dans DomoticZ)
-  * L'info LQI : cette valeur indique la qualité de la transmission (0 pas de transmission, 255 transmission d'excellente qualité)
+Voir la page [Les outils du plugin](Info_Les-outils-du-plugin.md)
 
 
 ------------------------------------------------
