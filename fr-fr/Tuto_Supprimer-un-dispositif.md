@@ -1,11 +1,11 @@
-# Tutoriel - Supprimer un dispositif appairé avec la Zigate
+# Tutoriel - Supprimer un dispositif appairé avec la ZiGate
 
 
 ## Introduction
 
-Ce tutoriel explique comment supprimer un dispositif appairé. 
+Ce tutoriel explique comment supprimer un dispositif appairé.
 Ce dispositif est donc connu par :
-* La Zigate
+* La ZiGate
 * Le plugin
 * DomoticZ (avec un ou plusieurs widgets associés au dispositif)
 
@@ -14,7 +14,7 @@ A la fin de ce tutoriel, il faudra s'assurer que le dispositif a été retiré d
 
 ### Prérequis
 
-Par défaut, le plugin est configuré pour __ne pas envoyer__ de suppression à la Zigate. Pour activer cette fonction, il faut activer 'Suppression de la Zigate' dans [Réglage / Réglages de la Zigate](WebUI_Reglages.md#réglages-de-la-zigate)
+Par défaut, le plugin est configuré pour __ne pas envoyer__ de suppression à la ZiGate. Pour activer cette fonction, il faut activer 'Suppression de la ZiGate' dans [Réglage / Réglages de la ZiGate](WebUI_Reglages.md#réglages-de-la-zigate)
 
 ![Removal On Zigate](../Images/EraseDeviceOnZigate.png)
 
@@ -36,7 +36,7 @@ Il existe plusieurs méthodes en fonction du type de dispositif :
 
 Il n'y a pas de suppression automatique : il faut le faire manuellement
 
-* S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-dispositif.md) : le bouton "Accepter de nouveaux dispositifs" doit être éteint, la LED bleue de la Zigate ne doit pas clignoter.
+* S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-dispositif.md) : le bouton "Accepter de nouveaux dispositifs" doit être éteint, la LED bleue de la ZiGate ne doit pas clignoter.
 * Faire un reset sur le dispositif (comme pour l'appairer)
 
 Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
@@ -49,7 +49,7 @@ Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
 ### Supprimer les routeurs
 
-* S'assurer que le réglage 'Suppression de la Zigate' (voir [Réglage / Réglages de la Zigate](WebUI_Reglages.md#réglages-de-la-zigate)) est activé
+* S'assurer que le réglage 'Suppression de la ZiGate' (voir [Réglage / Réglages de la ZiGate](WebUI_Reglages.md#réglages-de-la-zigate)) est activé
 * Supprimer tous les widgets du dispositif dans DomoticZ
 
 Généralement lorsque le dernier Widget est supprimé, le Plugin va automatiquement envoyé une demande de Reset au dispositif.

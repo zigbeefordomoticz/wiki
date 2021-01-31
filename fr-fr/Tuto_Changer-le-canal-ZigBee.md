@@ -1,11 +1,11 @@
-# Tutoriel - Changer le canal ZigBee de la Zigate
+# Tutoriel - Changer le canal ZigBee de la ZiGate
 
 
 ## Introduction
 
-Ce tutoriel explique comment changer le canal ZigBee du réseau de la Zigate.
+Ce tutoriel explique comment changer le canal ZigBee du réseau de la ZiGate.
 
-Lors de son initialisation, la Zigate va par défaut rechercher le meilleur canal possible en calculant les niveaux d'interférences.
+Lors de son initialisation, la ZiGate va par défaut rechercher le meilleur canal possible en calculant les niveaux d'interférences.
 
 Il est cependant possible de fixer le canal pour :
 * Éviter des interférences avec les réseaux Wifi (voir [Interférences entre Wifi et ZigBee : explications](Info_ZigBee-et-Wifi.md)
@@ -24,7 +24,7 @@ Il est cependant possible de fixer le canal pour :
 
 ![Settings channel](../Images/Channel_setting.png)
 
-#### Redémarrer la Zigate pour appliquer les changements
+#### Redémarrer la ZiGate pour appliquer les changements
 
 * Allez dans la section [Admin > Zigate](WebUI_Admin.md#zigate)
 * Cliquer sur __Redémarrage logiciel__
@@ -32,7 +32,7 @@ Il est cependant possible de fixer le canal pour :
 ![Restart Zigate](../Images/Restart_Zigate.png)
 
 
-#### Vérifier le canal de la Zigate
+#### Vérifier le canal de la ZiGate
 
 * Aller dans [Outils > Outils](WebUI_Outils.md#outils)
 * Cliquer sur le bouton __Infos zigate (json)__

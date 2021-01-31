@@ -7,7 +7,7 @@ Le plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 ### Procédure
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin Zigate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 
 * Lancer la commande `git pull`
 
@@ -29,13 +29,13 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
   git reset –-hard
   git pull --force
  ```
-  
+
 ## Les branches de mise à jour
 
 
 Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux dispositifs. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différentes canaux de mise à jour.
 
-Les différentes branches sont : 
+Les différentes branches sont :
 
 
 #### stable
@@ -57,7 +57,7 @@ Si vous êtes sur la branche __Beta__ (suite à l'ajout d'un nouveau matériel p
 ### Connaître sa branche
 
 
-* Ouvrir un terminal et aller jusqu'au répertoire du pligin Zigate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 * Lancer la commande `git status`
 
 
@@ -65,7 +65,7 @@ Si vous êtes sur la branche __Beta__ (suite à l'ajout d'un nouveau matériel p
 
 Il est recommandé des faire une [sauvegarde](5_Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
 
-* Ouvrir un terminal et aller jusqu'au répertoire du pligin Zigate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 
 * Lancer la commande `git pull`
 

@@ -11,14 +11,14 @@ La section __Réseau__ comporte les pages :
 ------------------------------------------------
 ## Topologie
 
-Voici la page __Topologie__ de l'interface Web du plugin : 
+Voici la page __Topologie__ de l'interface Web du plugin :
 
 ![Network_Topology](../Images/Network_Topology.png)
 *Cette page est sucseptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
-Cette page permet de visualiser le réseau ZigBee. 
+Cette page permet de visualiser le réseau ZigBee.
 
 Elle permet :
 
@@ -34,7 +34,7 @@ Elle permet :
 | 39 - 40 | 4 |
 | 36 - 38 | 5 |
 
-**Attention :** Le temps de sortie d'un rapport de topologie est très dépendant de la taille du reseau ZigBee à analyser; plus le nombre de routeurs est important et plus le temps d'analyse sera long.
+**Attention :** Le temps de sortie d'un rapport de topologie est très dépendant de la taille du réseau ZigBee à analyser; plus le nombre de routeurs est important et plus le temps d'analyse sera long.
 
 **A Noter :** Le rapport est également diffusé (format texte) dans les logs de DomoticZ
 
@@ -44,14 +44,14 @@ Le rapport de topologie réseau est constitué de deux graphiques présentant le
 
 #### Le graphique du maillage
 
-L'illustration de votre maillage montre tous les liens entre dispositifs et ZiGate. 
+L'illustration de votre maillage montre tous les liens entre dispositifs et ZiGate.
 En déplaçant votre souris sur un lien un pop-up vous indique les composants participant à ce lien ainsi que la qualité de la liaison (LQI) : échelle de 0 (très mauvaise) à 255 (la meilleure).
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
 #### Le graphique du réseau
 
-L'illustration de votre maillage montre l'architecture du réseau ZigBee (les connexions entre les différents dispositifs). 
+L'illustration de votre maillage montre l'architecture du réseau ZigBee (les connexions entre les différents dispositifs).
 Vous pouvez visualiser sur quel routeur est accroché votre dispositif terminal.
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
@@ -66,7 +66,7 @@ Vous retrouvez sous cet item un tableau fournissant des informations relatives a
 ------------------------------------------------
 ## Niveau d'interférences
 
-Voici la page __Niveau d'interférences__ de l'interface Web du plugin : 
+Voici la page __Niveau d'interférences__ de l'interface Web du plugin :
 
 ![InterferenceLevels](../Images/InterferenceLevels.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
@@ -85,10 +85,10 @@ Elle permet :
 
 Voir les [explications](Info_ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
 
-Le niveaux d'interférence est calculé avec la communication entre la Zigate et un routeur. 
+Le niveaux d'interférence est calculé avec la communication entre la ZiGate et un routeur.
 Si vous ne disposez pas de routeur, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
-Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la Zigate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
+Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la ZiGate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
 
 Sources:
 * https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)

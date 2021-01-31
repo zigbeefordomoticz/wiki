@@ -2,14 +2,14 @@
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
-__La modification des paramètres peut entrainer des disfonctionnements au niveau de la Zigate. Pensez à faire une sauvegarde avant toute modification.__
+__La modification des paramètres peut entraîner des dysfonctionnements au niveau de la ZiGate. Pensez à faire une sauvegarde avant toute modification.__
 
 La section __Réglage__ comporte les modules :
 
 | Modules  | Modules  | Modules  |
 | :------------: |:---------------:|:-----:|
 | [Liste des services](#liste-des-services)      | [Réglages de la gestion des dispositifs](#r%C3%A9glages-de-la-gestion-des-dispositifs) | [Réglages Legrand Netatmo](#r%C3%A9glages-legrand-netatmo) |
-| [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la Zigate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-legrand-philips) |
+| [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la ZiGate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-legrand-philips) |
 | [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#r%C3%A9glages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#r%C3%A9glages-legrand-ikea-tradfri) |
 | [Réglages de l'interface web](#r%C3%A9glages-de-linterface-web) | [Autres réglages](#autres-r%C3%A9glages) | [Réglages Enki Lexman](#r%C3%A9glages-enki-lexman) |
 |[Interrogation des dispositifs](#interrogation-des-dispositifs)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#r%C3%A9glages-schneider-wiser) |
@@ -18,7 +18,7 @@ La section __Réglage__ comporte les modules :
 
 Un bouton __Paramètres avancés__ situé en haut à droite permet d'afficher des paramètres avancés.
 
-Voici la page __Réglages__ de l'interface Web du plugin : 
+Voici la page __Réglages__ de l'interface Web du plugin :
 
 ![FR_WebIU-Reglages](Images/FR_WebUI-Reglage.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
@@ -30,7 +30,7 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin Zigate |
+| Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZiGate |
 | Activer interrogation des dispositifs | | Désactivé | | Active la fonction Polling |
 | Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour|
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!*|
@@ -49,9 +49,9 @@ Pas de paramètres avancés dans ce module.
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Groupe est Allumé si un equipement Allumé | | Activé | | Désactivé, le groupe sera à ON si tous les dispositifs sont allumés |
-| forceGroupDeviceRefresh | | Activé | | Rafraichi tous les dispositifs d'un groupe après une commande envoyée au groupe |
-| reComputeGroupState | | Activé | | Rafraichi les états des groupes régulièrement en fonction des états des dispositifs du groupe |
+| Groupe est Allumé si un équipement Allumé | | Activé | | Désactivé, le groupe sera à ON si tous les dispositifs sont allumés |
+| forceGroupDeviceRefresh | | Activé | | Rafraîchi tous les dispositifs d'un groupe après une commande envoyée au groupe |
+| reComputeGroupState | | Activé | | Rafraîchi les états des groupes régulièrement en fonction des états des dispositifs du groupe |
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!* |
 | pingDevices | | Activé | | ??? |
 
@@ -100,9 +100,9 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 ------------------------------------------------
 ## Interrogation des dispositifs
 
-* La fonction [Activer interrogation des dispositifs](Tuto_Appairage-dispositif.md) doit être activée. 
+* La fonction [Activer interrogation des dispositifs](Tuto_Appairage-dispositif.md) doit être activée.
 
-Il n'est pas recommandé d'activer cette fonction d'interrogation (polling en anglais) car elle va augmenter la charge sur la Zigate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai va augmenter la fréquence d'interrogation pouvant entrainer un ralentissement du réseau jusqu'à la perte de commandes.
+Il n'est pas recommandé d'activer cette fonction d'interrogation (polling en anglais) car elle va augmenter la charge sur la ZiGate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai va augmenter la fréquence d'interrogation pouvant entraîner un ralentissement du réseau jusqu'à la perte de commandes.
 
 ### Les paramètres
 
@@ -136,7 +136,7 @@ Pas de paramètre simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | resetMotiondelay | seconde | 30 | | Délai avant de remettre à Off l'état de déplacement. Il est possible d'utiliser celui du Widget DomoticZ |
-| Nombre de sec avant de basculer le Selecteur Off | | 0 | | ??? |
+| Nombre de sec avant de basculer le Sélecteur Off | | 0 | | ??? |
 | Workaround Domoticz issue #4143 | | Désactivé | | ??? |
 
 ### Les paramètres avancés
@@ -154,13 +154,13 @@ Pas de paramètre simple dans ce module.
 
 
 ------------------------------------------------
-## Réglages de la Zigate
+## Réglages de la ZiGate
 
 ### Les paramètres
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Active ou désactive la Led Bleu | | Activé | | Gestion de la LED sur la Zigate |
+| Active ou désactive la Led Bleu | | Activé | | Gestion de la LED sur la ZiGate |
 | Certification | | CE regulation | CE regulation, FCC regulation | ???  |
 | Channel | | Désactivé | | Choix du canal ZigBee |
 
@@ -169,11 +169,11 @@ Pas de paramètre simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Creation du Group 0000 | | Désactivé | | ??? |
-| Suppression dans la ZiGate | | Désactivé | | Supprime le dispositif dans la Zigate en même temps que la suppression dans DomoticZ |
+| Suppression dans la ZiGate | | Désactivé | | Supprime le dispositif dans la ZiGate en même temps que la suppression dans DomoticZ |
 | Reset permit to join at startup | | Activé | | Active un appairage au démarrage du plugin  |
-| Activer le Ping | | Activé | | Active un ping de la Zigate toute les 4 minutes afin de vérifier la connexion |
+| Activer le Ping | | Activé | | Active un ping de la ZiGate toute les 4 minutes afin de vérifier la connexion |
 | breakConfigureReporting | | Désactivé | | ??? |
-| TXpower_set | dbM| 0 | 0, -9, -20, -32| Attenuation de la puissance |
+| TXpower_set | dbM| 0 | 0, -9, -20, -32| Atténuation de la puissance |
 | extendedPANID | | 0 | | Force le Extended PAN Id. Nécessite un Erase PDM complet!! |
 | showTimeOutMsg | | Désactivé | | Affiche un message de délai dépassé |
 

@@ -1,4 +1,4 @@
-# Tutoriel - Appairer un dispositif ZigBee avec la Zigate
+# Tutoriel - Appairer un dispositif ZigBee avec la ZiGate
 
 
 ## Introduction
@@ -27,11 +27,11 @@ Il existe plusieurs méthodes :
 
 ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
- La LED bleu de la Zigate doit clignoter
+ La LED bleu de la ZiGate doit clignoter
 
 * Faire un reset du dispositif pour le passer en mode appairage
 
- Lorsque l'appairage est effectué, les inforamtions du dispositif apparaissent dans la fenêtre
+ Lorsque l'appairage est effectué, les informations du dispositif apparaissent dans la fenêtre
 
 ![Assisted Provisioning: Done](../Images/Provisionning_3.png)
 
@@ -44,14 +44,14 @@ Si rien ne se produit :
 ------------------------------------------------      
 ### 2. Appairage sur une durée
 
-Cette méthode permettra de passer la Zigate pendant une durée. Les informations d'appairage seront affichées dans la logs de DomoticZ.
-*Conseil :* Filtre les logs afin de ne garder que les lignes concernant la Zigate
+Cette méthode permettra de passer la ZiGate pendant une durée. Les informations d'appairage seront affichées dans la logs de DomoticZ.
+*Conseil :* Filtre les logs afin de ne garder que les lignes concernant la ZiGate
 
 * Aller dans le module __Ajout de dispositif__
 
 * Cliquer le bouton __4 minutes__ ou __permanent__ pour choir la durée du mode appairage souhaitée
 
- La LED bleu de la Zigate doit clignoter
+ La LED bleu de la ZiGate doit clignoter
 
  * Cliquer le bouton Stop pour arrêter le mode appairage
 
@@ -61,10 +61,10 @@ Cette méthode permettra de passer la Zigate pendant une durée. Les information
 ------------------------------------------------      
 ### 3. Appairage sur un routeur spécifique
 
-Par défaut, la Zigate va déterminer le meilleur chemin pour communiquer avec le dispositif. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouveau dispositif.
+Par défaut, la ZiGate va déterminer le meilleur chemin pour communiquer avec le dispositif. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouveau dispositif.
 
 * Sélectionner le routeur désiré dans la liste
 
 * Cliquer sur le bouton __4 minutes__ pour lancer le mode d'appairage
 
-Le fonctionnement est identique au paragraphe précédent hormis que la Zigate cherchera à appairer le nouveau dispositif sur le routeur choisi.
+Le fonctionnement est identique au paragraphe précédent hormis que la ZiGate cherchera à appairer le nouveau dispositif sur le routeur choisi.

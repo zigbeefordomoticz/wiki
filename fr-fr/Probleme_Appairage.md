@@ -6,7 +6,7 @@ Le plugin est développé pour pouvoir communiquer avec les dispositifs respecta
 
 L'appairage se réalise à deux niveaux :
 
-1. Au niveau de la Zigate, où le dispositif rejoint le réseau ZigBee de la Zigate
+1. Au niveau de la ZiGate, où le dispositif rejoint le réseau ZigBee de la ZiGate
 2. Au niveau du Plugin, qui va essayer de trouver les fonctionnalités du dispositif comme :
   * Est-ce un routeur (alimenté sur secteur)
   * Est-ce un interrupteur
@@ -42,4 +42,4 @@ Un fichier export.json sera générer.
   * Description du fonctionnement attendu, versus comportement observé
   * Le fichier export.json obtenu précédemment.
   * Logs lors de l'appairage et lors des manips de tests. L'idéal est d'utiliser la procédure [Un fichier de log pour DomoticZ](https://easydomoticz.com/un-fichier-log-pour-domoticz/). Vous pourrez ensuite attacher le fichier de log avec votre post.
-  * Log correspondant au démarrage de DomoticZ (avec le démarrage du plugin Zigate) et les différents essais d'appairage que vous pouvez faire.
+  * Log correspondant au démarrage de DomoticZ (avec le démarrage du plugin ZiGate) et les différents essais d'appairage que vous pouvez faire.

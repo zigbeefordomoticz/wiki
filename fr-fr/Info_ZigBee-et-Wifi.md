@@ -8,7 +8,7 @@ Les réglages possibles sont :
 - Défaut : le plugin choisira un canal entre le 11 et le 26. Il peut varier en fonction des performances
 - 11 ou 12 ou ... ou 26 : permet de définir un canal fixe
 
-**Pour enregistrer un changement de canal, la Zigate nécessite un redémarrage logiciel**
+**Pour enregistrer un changement de canal, la ZiGate nécessite un redémarrage logiciel**
 
 
 ## 1. Sélection des canaux ZigBee et Wifi
@@ -37,7 +37,7 @@ Le protocole ZigBee offre les avantages d'un réseau maillé autogéré dynamiqu
 
 ## 4. Choses à savoir
 
-* Le ZigBee est un réseau à faible puissance contrairement au Wifi. 
+* Le ZigBee est un réseau à faible puissance contrairement au Wifi.
 Il a été noté que les Caméras IP/Wifi étaient capable de perturber le ZigBee lorsqu'elles étaient en streaming, il faudra donc faire attention à l'emplacement des modules ZigBee par rapport aux Wifi et ce même si ils sont sur des canaux bien séparés
 
 * Beaucoup de problématiques de perte de dispositifs (déconnexion du réseau) sont très souvent liés à un problème d'interférences ou de densité insuffisante du réseau ZigBee et l'ajout de dispositifs de type routeurs est souvent très positif
