@@ -34,7 +34,7 @@ Cet outil liste tous les Widgets dans DomoticZ qui sont liés au plugin ZiGate.
 
 Cet outil liste tous les équipements appairés à la ZiGate et indique leurs paramètres.
 
-### Liste des groupes (json)
+### Liste des groupes (json)
 
 Cet outil liste les groupes créé dans le plugin ZiGate.
 
