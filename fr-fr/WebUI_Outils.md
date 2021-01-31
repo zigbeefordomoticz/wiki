@@ -38,7 +38,7 @@ Cet outil donne toutes les informations sur le plugin.
 
 #### ZiGate infos (json)
 
-Cet outil donne toutes les informations sur la ZiGate
+Cet outil donne toutes les informations sur la ZiGate.
 
 #### Liste des Widgets DomoticZ (json)
 
@@ -66,7 +66,7 @@ Cet outil liste les routeurs du réseau de la ZiGate.
 
 #### Paramètres (json)
 
-Cet outil ???
+Cet outil. ???
 
 #### Trafic (json)
 
