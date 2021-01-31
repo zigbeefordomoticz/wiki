@@ -9,13 +9,14 @@ La page [Outils > Outils](WebUI_Outils.md#outils) contient différents outils pe
 * [Liste des Widgets DomoticZ (json)](#liste-des-widgets-domoticz-json)
 * [Liste des équipements (json)](#liste-des-%C3%A9quipements-json)
 * [Liste des groupes (json)](#liste-des-groupes-json)
-* [Liste des équipements raw (json)](#liste-des-equipements-raw-json)
+* [Liste des équipements raw (json)](#liste-des-%C3%A9quipements-raw-json)
 * [Santé plugin (json)](#sant%C3%A9-plugin-json)
 * [zGroup-1st-devices (json)](#zgroup-1st-devices-json)
 * [Paramètres (json)](#param%C3%A8tres-json)
 * [Trafic (json)](#trafic-json)
 * [Liste des dispositifs (json)](#liste-des-dispositifs-json)
 * [Paramètres DomoticZ (json)](#param%C3%A8tres-domoticz-json)
+
 
 ### Plugin infos (json)
 
