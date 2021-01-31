@@ -5,7 +5,7 @@ La page [Outils > Outils](WebUI_Outils.md#outils) contient différents outils pe
 ## Liste des outils
 
 * [Plugin infos (json)](#plugin-infos-json)
-* [ZiGate infos (json)](#zigate-infos -json)
+* [ZiGate infos (json)](#zigate-infos-json)
 * [Liste des Widgets DomoticZ (json)](#liste-des-widgets-domoticz-json)
 * [Liste des équipements (json)](#liste-des-equipements-json)
 * [Liste des groupes (json)](#liste-des-groupes-json)
