@@ -107,11 +107,27 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
     | 0x03       |           | temperature |
     | 0x04       |           | Mode 0x01 Auto ,0x02 Off | |
     | 0x07       |           | childlock |
+    | 0x0d       | 0x05      | unknow |
     | 0x12       |           | windowdetection |
     | 0x15       |           | battery |  
     | 0x14       |           | valvestate |
+    | 0x2c       | 0x02      | unknow |
+    | 0x66       | 0x02      | unknow |
+    | 0x67       | 0x02      | unknow |
+    | 0x68       | 0x00      | unknow |
+    | 0x69       | 0x02      | unknow |
+    | 0x6a       | 0x04      | unknow |
+    | 0x6b       | 0x02      | unknow |
+    | 0x6c       | 0x02      | unknow |
     | 0x6d       |           | valveposition |
     | 0x6e       |           | lowbattery |
+    | 0x6f       | 0x04      | unknow |
+    | 0x70       | 0x00      | unknow |
+    | 0x71       | 0x00      | unknow |
+    | 0x72       | 0x02      | unknow |
+    | 0x73       | 0x01      | unknow |
+    | 0x74       | 0x01      | unknow |
+    | 0x75       | 0x02      | unknow |
 
 * VERSION 3: '\_TZE200_c88teujp', '\_TYST11_KGbxAXL2', '\_TYST11_zuhszj9s'
 
@@ -120,17 +136,17 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
     | Data Point | Data Type | Description |
     | ---------- | --------- | ----------- |
     | 0x08       |            | windowdetection_status |
-    | 0x0a       |  0x01          | unknow |
+    | 0x0a       |  0x01      | unknow |
     | 0x12       |            | windowdetection |
     | 0x1b       |            | calibration |
     | 0x28       |            | childlock |
     | 0x65       |            | Switch On/Off |
     | 0x66       |            | temperature |
     | 0x67       |            | setpoint |
-    | 0x69       |  0x05          | unknow |
-    | 0x6a       |            | temporary away
+    | 0x69       |  0x05      | unknow |
+    | 0x6a       |            | temporary away |
     | 0x6c       |            | Auto 0x01, Manual 0x02 |
-    | 0x6e       |  0x00          | unknown ? |
+    | 0x6e       |  0x00      | unknown ? |
     | 0x70       |  0x00      | schedule Workday|
     | 0x71       |  0x00      | schedule Holiday|
     | 0x72       |  0x00      | unknow ? |
