@@ -11,7 +11,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Introduction
 
-L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer tous les dispositifs ZigBee utilisés par DomoticZ.
+L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer les dispositifs ZigBee utilisés par DomoticZ.
 
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
 
