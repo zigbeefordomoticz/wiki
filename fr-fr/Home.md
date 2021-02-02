@@ -6,7 +6,7 @@ Le but de ce wiki est de fournir les plus d'informations possible sur l'utilisat
 
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le plugin ZiGate. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
-**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** si des choses ne sont pas claires ou approximées, ne pas hésiter à faire un retour.
+**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** si des choses ne sont pas claires ou approximées, ne pas hésiter à nous faire un retour.
 
 
 ## Introduction
