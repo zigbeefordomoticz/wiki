@@ -23,14 +23,17 @@ The group will be managed through domoticz Device widgets (not in the group sect
 
 Enable the Group Management feature (which is disabled by default)
 
-### 4.2 Check for any pre-existing groups
+You need to restart the plugin after enabling Group Management.
 
-Before creating any group, you must check if there are no existing group already on the network. 
+### 4.2 Group Initialisation
+
+After the first activation of Group Management, it is import to query each device for group membership.
 To do so you can go to the Admin Group sub menu and then request a Full scan.
 
 ![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/AdminGroupMenu.png)
 
-This will consist in quering each main powered devices for the group membership. As an outcome group could be created and available in the Group Management sub menu.
+This will consist in quering each main powered devices for the group membership. 
+
 
 ![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/GroupManagementMenu.png)
 
