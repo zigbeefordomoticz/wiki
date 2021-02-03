@@ -63,6 +63,7 @@ Here after is a non-exhaustive list of compatible devices. What is listed here i
 
 ## In case of Trouble
 
+1. [Zigate limitations](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-Limitations.md)
 1. Watch the log, you should fine some information if something is going wrong.
 1. Use one of the forum channels
    * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
