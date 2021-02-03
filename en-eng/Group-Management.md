@@ -87,8 +87,8 @@ If you need to have the group '0000' created, you can enable it via the Settings
 
 ![Adding Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/SettingsGroup0000.png)
 
-## 6 Warnings
+## 6 Warning
 
-* In the current implementation of the Zigate and its plugin, when Zigate is sending a command to an object or a list of objects, there is no guaranty that the object receives the command. 
-* If you want to force a rescan of group membership (like if you have added a new device), you can go to the Admin Group menu and ether request a Full Scan or a selected scan where you will select the devices you want to query
-* I have seen a better way to work - and discover group membership - when the bulbs are on. I highly recommending when you are configuring your groups to have all existing groups on before , and get all bulbs you want to add to a group On as well.
+* Make sure that all devices which belongs to the group are up and running
+
+
