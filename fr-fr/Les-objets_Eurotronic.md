@@ -1,4 +1,4 @@
-# Les dispositifs de la marque Eurotronic
+# Les objets de la marque Eurotronic
 
 Certains dispositifs de la marque Eurotronic ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 

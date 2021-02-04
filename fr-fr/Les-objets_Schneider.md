@@ -1,4 +1,4 @@
-# Les dispositifs de la marque Schneider Wiser
+# Les objets de la marque Schneider Wiser
 
 Certains dispositifs de la marque Schneider ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 

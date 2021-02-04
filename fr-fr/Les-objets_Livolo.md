@@ -1,4 +1,4 @@
-# Les dispositifs de la marque Livolo
+# Les objets de la marque Livolo
 
 Certains dispositifs de la marque Livolo ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 

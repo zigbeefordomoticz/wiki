@@ -1,4 +1,4 @@
-# Les dispositifs de la marque Legrand Netatmo
+# Les objets de la marque Legrand Netatmo
 
 Certains dispositifs de la marque Legrand ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 

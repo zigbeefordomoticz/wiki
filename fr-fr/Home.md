@@ -74,13 +74,13 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Particularités de certains dispositifs
 
-* [BlitzWolf](Dispositif_Blitzwolf.md)
-* [Ikea Tradfri](Dispositif_Ikea.md)
-* [Eurotronic](Dispositif_Eurotronic.md)
-* [Profalux](Dispositif_Profalux.md)
-* [Legrand Netatmo](Dispositif_Legrand.md)
-* [Schneider Wiser](Dispositif_Schneider.md)
-* [Livolo](Dispositif_Livolo.md)
+* [BlitzWolf](Les-objets_Blitzwolf.md)
+* [Ikea Tradfri](Les-objets_Ikea.md)
+* [Eurotronic](Les-objets_Eurotronic.md)
+* [Profalux](Les-objets_Profalux.md)
+* [Legrand Netatmo](Les-objets_Legrand.md)
+* [Schneider Wiser](Les-objets_Schneider.md)
+* [Livolo](Les-objets_Livolo.md)
 
 
 ## En cas de problèmes

@@ -1,4 +1,4 @@
-# Les dispositifs de la marque BlitzWolf
+# Les objets de la marque BlitzWolf
 
 Certains dispositifs de la marque BlitzWolf ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
