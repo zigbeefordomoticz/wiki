@@ -26,7 +26,7 @@ Explication des termes utilisés sur ce Wiki :
 | Terme | Signification |
 | ----- | ------------- |
 | Objet | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
-| Routeur | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... |
+| Routeur | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle dans le maillage du réseau ZigBee |
 | Objet terminal | Un objet généralement sur batterie qui envoi des informations : une sonde, un bouton |
 | Dispositif | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
 | Widget | Tuile dans le tableau de bord de DomoticZ correspondant à un dispositif |
