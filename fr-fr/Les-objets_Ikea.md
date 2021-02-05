@@ -50,48 +50,28 @@ Les capteurs de mouvement peuvent être appairés en unitaire. Pour cela, mettre
 
 ### La télécommande 5 boutons
 
+La télécommande 5 bouton ne peut commander qu'un seul groupe.
+Pour pouvoir appairer et utiliser la télécommande avec la ZiGate, il sera nécessaire d'avoir une ampoule Ikea au moment de l’installation.
 
-!!! La télécommande ne commande qu'un groupe!!!
+#### Méthode pour appairer la télécommande
 
-Appairer une ampoule Ikea avec la ZiGate > Ampoule fonctionnel
-Appairer la télécommande avec la ZiGate (bouton appairage appuyer 4 fois pour faire un reset) > création d'un widget sélecteur 5 boutons qui ne fonctionne pas pour le moment.
+* Appairer une ampoule Ikea ou avoir une ampoule déjà appairée. *Elle doit être fonctionnelle.*
+* Appairer la télécommande : appuyer 4 fois sur le bouton appairage de la télécommande pour lancer le reset. *L'appairage réussi créera un dispositif et un widget sélecteur 5 boutons dans DomoticZ.* __Ceux-ci ne fonctionneront pas pour le moment.__
 
-Liéer la remote avec une ampoule > utiliser le bouton d'appairage de la remote avec un appui long (8 à 10 secondes) . Avoir l'ampoule à 5 cm de la remote. L'ampoule va varié de luminosité pour faire un flash (voir documentation Ikea)
+* Lier la télécommande avec l'ampoule Ikea : faire un appui long sur le bouton d'appairage de la télécommande (8 à 10 secondes) et mettre l'ampoule à 5 cm de la télécommande. *L'ampoule va varier de luminosité puis fera un flash (voir la documentation Ikea).*
 
-a ce niveau le réglage d'intensité fonctionne mais pas les boutons de variation de couleur.
+A ce niveau, le réglage d'intensité de la télécommande fonctionne mais pas les boutons de variation de couleur (pour le moment ...)
 
-Aller dans le plugin et faire un scan device de l'ampoule qui vient d'être lié. pour récupérer le groupe créer par le lien. Ajouter ensuite la Zigate.
-Les actions sont enfin visible dans le widget de la remote dans DomoticZ.
+* Aller dans la section [Admin > Groupes](WebUI_Admin.md#groupe)
+* Lancer une analyse sélective sur l'ampoule Ikea utilisée précédemment. *Le groupe créé par le lien sera récupérer.*
+* Ajouter la ZiGate dans le groupe crée par le lien.
 
-Ajouter la ZiGate (pour recevoir les évènements de la télécommande) et le télécommande de le groupe.
+Maintenant, toutes les évènements de la télécommandes seront visible sur le Widget dans DomoticZ.
 
-Supprimer l'ampoule du groupe. Le groupe n'aura que la ZiGate et la télécommande.
 
-* Create group 00 !!!
-* Appairer tous les dispositifs séparément dans la ZiGate
-* Appairer la télécommande avec chaque ampoule qui fera partie du groupe
-* Lancer un scan de groupe
-  * Aller dans la section [Admin > Groupe](WebUI_Admin.md#groupe)
-  * Lancer une __Analyse complète__
-Le groupe sera créer et visible dans [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes).
+#### Utiliser la télécommande pour d'autres choses que des ampoules Ikea
 
-In order to use an IKEA/Tradfri:
-1. Pair/Commission each single object to the Zigate (including the remote controller)
-1. Pair the Remote Control with each Bulb you want to be part of such group
-1. Request a Scan from Admin -> Group and select the Bulb you have paired the remote with
-1. The group created will be then visible under the Group Management
+* Faire la méthode précédente pour appairer la télécommande
+* Supprimer l'ampoule utilisée pour le lien du groupe. *Il ne doit rester que la télécommande et la ZiGate dans ce groupe.*
 
-##### Récupérer les évènements du groupe
-
-* Ajouter la ZiGate au groupe
-* Ajouter la Tradfri 5 buttons au groupe
-
-???
-
-![cxvc](https://user-images.githubusercontent.com/4406440/54182600-3ec50200-44a2-11e9-8be7-c2e6b15b4deb.png)
-
-From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate.
-
-Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller.
-
-For that you need to edit the Group and add the  Tradfri 5 buttons to that group
+__Une ampoule Ikea est obligatoire pour appairer la télécommande avec la ZiGate.__ Cela oblige l'achat d'une ampoule en plus de la télécommande, mais ceci est la seule méthode trouvée pour pouvoir réutiliser la télécommande.
