@@ -8,16 +8,22 @@ Ce tutoriel explique comment gérer les groupes de dispositifs ZigBee directemen
 Depuis la mise en place de l'interface Web avec la version 4.7 du plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
 Des améliorations ont été apportées avec la version 4.9 pour rendre la gestion des groupes plus facile mais il reste encore du travail pour améliorer l'expérience utilisateur.
 
+## Présentation
+
+Un groupe ZiGate permet de regrouper plusieurs objets connectés sur secteur (routeur) sous un seul dispositif dans DomoticZ. Une action sur un Widget sera transmis à tous les objets appartenant au groupe.
+
+Dans le détail, ce n'est pas la ZiGate qui tient la liste des objets de chaque groupe ; ce sont les objets qui conservent en mémoire dans quels groupes ils appartiennent.
+Concrètement la ZiGate envoie la commande à tout le réseau en indiquant que c'est pour le groupe 1001 (par exemple) : tous les objets vont recevoir la demande et si un objet reconnaît le groupe auquel il appartient, il va appliquer la commande.
+
+Pour appliquer une commande pour un groupe, un objet doit écouter le réseau. Les objets terminaux (sur batterie) n'ont pas cette fonction d'écoute, c'est la raison pour laquelle les objets terminaux ne peuvent pas être ajouter dans un groupe ; seuls les routeurs peuvent l'être.
+
+__Ce fonctionnement est complètement indépendant des groupes dans DomoticZ.__
 
 ## Pré-requis
 
 * Version du firmware de la ZiGate supérieur à 3.0f
 * Version du Plugin supérieur à 4.
 * Version de DomoticZ supérieur à 2020.1 (avec l'interface web du plugin activé)
-
-## Avant-propos
-
-Le groupe sera gérer directement par les widgets de DomoticZ via les interrupteurs mais pas via les groupes de DomoticZ). Concrètement, pour chaque groupe ZiGate, il y aura un interrupteur dans DomoticZ.
 
 
 ## Méthode
@@ -29,21 +35,21 @@ Le groupe sera gérer directement par les widgets de DomoticZ via les interrupte
 
 ![Settings for Group Management](../Images/SettingsGroup.png)
 
+* Redémarrer le plugin
+* Initialiser les groupes (voir ci-dessous)
 
-#### Vérifier l'existence de groupe
 
-Avant la création d'un groupe, il faut absolument vérifier qu'il n'y a pas déjà des groupes existants dans la ZiGate.
+#### Initialiser les groupes
 
-Before creating any group, you must check if there are no existing group already on the network.
+Comme expliquer dans la présentation, les informations concernant les groupes sont stockées dans les objets. Il est donc nécessaire de scanner le réseau pour interroger tous les objets afin de lister tous les groupes paramétrés.
 
+* S'assurer que tous les objets sont connectés au réseau ZigBee
 * Aller dans la section [Admin > Groupe](WebUI_Admin.md#groupe)
 * Lancer une __Analyse complète__
 
 ![Group Management](../Images/AdminGroupMenu.png)
 
 Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
-
-This will consist in quering each main powered devices for the group membership. As an outcome group could be created and available in the Group Management sub menu.
 
 ![Group Management](../Images/GroupManagementMenu.png)
 
@@ -58,16 +64,19 @@ This will consist in quering each main powered devices for the group membership.
 * Indiquer le nom du groupe
 * Sélectionner les dispositifs appartenant au groupe en les cliquant un par un. En cas d'erreur, utiliser la petit croix pour retirer un dispositif de la liste.
 
-Il est possible d'ajouter la ZiGate dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea.
+Il est possible d'ajouter la ZiGate dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea (voir [la page des objets Ikea](Les-objets_Ikea.md)).
+__La ZiGate peut appartenir à un nombre limité de groupes :__ voir les [caractéristiques des ZiGates](Caracteristiques-des-ZiGates.md#nombre-de-groupe-limit%C3%A9).
 
 * Cliquer sur le bouton __Valider__
 
 La demande sera envoyée à chaque dispositif listé. Cela peut prendre quelques secondes.
-Si le groupe n'appairait pas, faire rafraîchir la page web.
+Si le groupe n'appairait pas, rafraîchir la page web.
 
 
 #### Mettre à jour un groupe
 
+
+* S'assurer que tous les objets sont connectés au réseau ZigBee
 * Aller dans la section [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes)
 * Cliquer sur le groupe à modifier
 * Ajouter ou supprimer des dispositifs
@@ -94,54 +103,15 @@ Il y a deux possibilités :
 Idem que pour la création d'un groupe, patientez le temps de l'envoi des infos aux dispositifs.
 
 
-## Cas particuliers
-
-> Suite en cours de traduction
-
-### Télécommande Ikea
-
-#### Utilisation de la télécommande (appairage)
-
-* Appairer tous les dispositifs séparément dans la ZiGate
-* Appairer la télécommande avec chaque ampoule qui fera partie du groupe
-* Lancer un scan de groupe
-  * Aller dans la section [Admin > Groupe](WebUI_Admin.md#groupe)
-  * Lancer une __Analyse complète__
-Le groupe sera créer et visible dans [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes).
-
-In order to use an IKEA/Tradfri:
-1. Pair/Commission each single object to the Zigate (including the remote controller)
-1. Pair the Remote Control with each Bulb you want to be part of such group
-1. Request a Scan from Admin -> Group and select the Bulb you have paired the remote with
-1. The group created will be then visible under the Group Management
-
-##### Récupérer les évènements du groupe
-
-* Ajouter la ZiGate au groupe
-* Ajouter la Tradfri 5 buttons au groupe
-
-???
-
-![cxvc](https://user-images.githubusercontent.com/4406440/54182600-3ec50200-44a2-11e9-8be7-c2e6b15b4deb.png)
-
-From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate.
-
-Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller.
-
-For that you need to edit the Group and add the  Tradfri 5 buttons to that group
-
 #### Création du groupe 0000
 
-If you need to have the group '0000' created, you can enable it via the Settings Advanced
-
+Pour des raisons de facilité, une option est disponible dans le menu [Réglages > Réglages de la ZiGate](#r%C3%A9glages-de-la-zigate) qui permet d'activer rapidement le groupe 0000.
+L'activation du groupe 0000 créera le dispositif et le widget correspondant dans DomoticZ.
 
 ![Adding Group Management](../Images/SettingsGroup0000.png)
 
+
 ## Avertissements
 
-* Actuellement, quand la ZiGate envoi une commande à un dispositifs ou une liste de dispositifs, il n'y a aucune garantie que les dispositifs ont reçu la commande.
-* Il est plus facile de configurer les groupes s'ils sont tous sur On.
-* Il est également plus facile d'ajouter des ampoules à un groupe lorsqu'elles sont allumées.
-
-???
-* If you want to force a rescan of group membership (like if you have added a new device), you can go to the Admin Group menu and ether request a Full Scan or a selected scan where you will select the devices you want to query
+Le plugin a un TimeOut de 7 secondes lors d'une analyse du réseau. C'est à dire que si un objet ne répond pas, il attend 7 secondes avant de passer à la commande suivante.
+Lors d'une analyse, si des objets ne sont pas connectés sur le réseau ZigBee, le plugin va attendre 7 secondes avant de passer à l'objet suivant. Si vous essayez d'envoyer une autre commande pendant ce temps là, elle va être mise en attente.
