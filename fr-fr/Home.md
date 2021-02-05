@@ -19,6 +19,21 @@ Voici une liste non exhaustive des dispositifs compatibles : [https://zigbee.bla
 Il est possible qu'il y ait d'autres dispositifs ZigBee qui fonctionnent (merci de remonter l'info afin que la liste soit mise à jour).
 
 
+## Lexique
+
+Explication des termes utilisés sur ce Wiki :
+
+| Terme | Signification |
+| ----- | ------------- |
+| Objet | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
+| Routeur | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... |
+| Objet terminal | Un objet généralement sur batterie qui envoi des informations : une sonde, un bouton |
+| Dispositif | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
+| Widget | Tuile dans le tableau de bord de DomoticZ correspondant à un dispositif |
+
+
+
+
 ## Installation
 
 Il existe plusieurs façons d'installer le plugin ZiGate pour DomoticZ qui sont différentes en fonction du système d'exploitation.
@@ -103,6 +118,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## Informations
 
+* [Les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
