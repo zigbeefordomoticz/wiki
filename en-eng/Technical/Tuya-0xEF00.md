@@ -173,8 +173,8 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
     | Data Point | Data Type | Description |
     | ---------- | --------- | ----------- |
     | 0x01       |           | onoff |
-    | 0x02       |           | preset |
-    | 0x03       |           | schedule_mode |
+    | 0x02       |           | Manual Mode: 0x01 disbale 0x00 enable |
+    | 0x03       |           | Auto Mode: 0x01 disable 0x00 enable |
     | 0x10       |           | setpoint |
     | 0x12       |           | unknow |
     | 0x13       |           | unknow |
