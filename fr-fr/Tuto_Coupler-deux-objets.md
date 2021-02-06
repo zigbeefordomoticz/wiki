@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Ce tutoriel explique comment lier deux dispositifs entre eux afin qu'ils puissent communiquer ensemble directement sans passer par la ZiGate. 
+Ce tutoriel explique comment lier deux dispositifs entre eux afin qu'ils puissent communiquer ensemble directement sans passer par la ZiGate.
 Par exemple un interrupteur avec un micro module ou encore le capteur de mouvement et l'ampoule.
 
 __Note :__ Les dispositifs ne sont pas tous compatibles avec cette fonction de lien direct.
@@ -26,7 +26,7 @@ Il est recommandé de donner un surnom au dispositif dans l'interface web du plu
 Le cluster est le type de commande qui sera lié. Les clusters possibles sont :
    * __0006 ON/Off__ pour la fonction allumer/éteindre
    * __0008 Dimmer__ pour la fonction variateur
-   * __0402 Temparature__ pour la fonction ???
+   * __0402 Temprature__ pour la fonction température
 
 * Sélectionner ensuite le dispositif source (généralement la télécommande, l'interrupteur, etc...)
 * Sélectionner enfin le dispositif cible (celui qui est commandé)
