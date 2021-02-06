@@ -1,17 +1,17 @@
 # Les objets de la marque Livolo
 
-Certains dispositifs de la marque Livolo ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque Livolo ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-** Cette page n'est pas une liste des dispositifs compatibles.**
+** Cette page n'est pas une liste des objets compatibles.**
 
-La liste des dispositifs compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html)
+La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
 
 
 ## Avertissement
 
 Livolo semble __ne pas suivre__ les standard ZigBee. Il en résulte :
 * la stabilité peut-être un problème : l'interrupteur se déconnecte de temps en temps et il n'est pas évident de le faire revenir. Une fois, il a été nécessaire de faire une Erase PDM pour refaire un appairage complet (avec tous les autres dispositifs)
-* l'extensibilité (la capacité d'avoir beaucoup de dispositif) peut-être un problème et __peut impacter négativement les autres dispositifs__.  
+* l'extensibilité (la capacité d'avoir beaucoup d'objets) peut-être un problème et __peut impacter négativement les autres objets__.  
 
 
 ## Prérequis
@@ -25,7 +25,7 @@ Livolo semble __ne pas suivre__ les standard ZigBee. Il en résulte :
 ## L'appairage
 
 * Mettre la ZiGate sur le canal 26 (voir le tutoriel [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md))
-* Mettre la ZiGate en mode appairage (voir le tutoriel [Ajouter un nouveau dispositif](Tuto_Appairage-dispositif.md))
+* Mettre la ZiGate en mode appairage (voir le tutoriel [Ajouter un nouveau dispositif](Tuto_Appairage-objet.md))
 * Lancer le processus d'appairage sur l'interrupteur en appuyant sur un bouton pendant 6 secondes. Un bip se fera entendre.
 
 Après un moment, l'interrupteur devrait être appairer et deux Widgets seront créer dans DomoticZ.

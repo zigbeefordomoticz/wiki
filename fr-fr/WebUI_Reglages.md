@@ -32,9 +32,11 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZiGate |
 | Activer interrogation des dispositifs | | Désactivé | | Active la fonction Polling |
-| Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour|
+| Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour. Cette vérification se fait toutes les 6 heures. __A ne pas activer sur Synology__|
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!*|
 | pingDevices | | Activé | | Active le fonction ping sur tous les dispositifs |
+
+
 
 
 ### Les paramètres avancés
@@ -49,8 +51,8 @@ Pas de paramètres avancés dans ce module.
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Groupe est Allumé si un équipement Allumé | | Activé | | Désactivé, le groupe sera à ON si tous les dispositifs sont allumés |
-| forceGroupDeviceRefresh | | Activé | | Rafraîchi tous les dispositifs d'un groupe après une commande envoyée au groupe |
+| Groupe est Allumé si un équipement Allumé | | Activé | | Désactivé, le groupe sera à ON si tous les objets sont allumés |
+| forceGroupDeviceRefresh | | Activé | | Rafraîchi tous les objets d'un groupe après une commande envoyée au groupe |
 | reComputeGroupState | | Activé | | Rafraîchi les états des groupes régulièrement en fonction des états des dispositifs du groupe |
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!* |
 | pingDevices | | Activé | | ??? |
@@ -100,7 +102,7 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 ------------------------------------------------
 ## Interrogation des dispositifs
 
-* La fonction [Activer interrogation des dispositifs](Tuto_Appairage-dispositif.md) doit être activée.
+* La fonction [Activer interrogation des dispositifs](Tuto_Appairage-objet.md) doit être activée.
 
 Il n'est pas recommandé d'activer cette fonction d'interrogation (polling en anglais) car elle va augmenter la charge sur la ZiGate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai va augmenter la fréquence d'interrogation pouvant entraîner un ralentissement du réseau jusqu'à la perte de commandes.
 
@@ -113,10 +115,10 @@ Pas de paramètre simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | pingDevicesFeq | seconde | 3600 | | Fréquence d'interrogation de tous les dispositifs |
-| pollingPhilips | seconde | 0 | | Les équipements Philips ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingGledopto | seconde | 0 | | Les équipements Gledopto ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingSchneider | seconde | 0 | | Les équipements Schneider ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
-| pollingBlitzwolfPower | seconde | 0 | | Les équipements BlitzWolf ne renvoient pas automatiquement la consommation d'énergie. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingPhilips | seconde | 0 | | Les objets Philips ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingGledopto | seconde | 0 | | Les objets Gledopto ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingSchneider | seconde | 0 | | Les objets Schneider ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
+| pollingBlitzwolfPower | seconde | 0 | | Les objets BlitzWolf ne renvoient pas automatiquement la consommation d'énergie. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingCasaiaAC201 | seconde | 0 | | ??? |
 | pollingONOFF | seconde | 990 | | Récupération de l'état On/Off toutes les 15 minutes |
 | pollingLvlControl | seconde | 990 | | Récupération du niveau toutes les 15 minutes |
@@ -144,13 +146,13 @@ Pas de paramètre simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Interogation du statut du device après un ordre | | Activé | | Active une mise à jour de l'état après l'envoi une commande |
-| forcePassiveWidget | | Désactivé | | Autorise DomoticZ à envoyer une commande malgré que le dispositif terminal ne puisse pas recevoir de commande. Par exemple : les dispositifs Xiaomi sur batterie |
-| resetConfigureReporting | | Désactivé | | Active un reset de l'information de configuration de suivi |
+| forcePassiveWidget | | Désactivé | | Autorise DomoticZ à envoyer une commande malgré que l'objet terminal ne puisse pas recevoir de commande. Par exemple : les objets Xiaomi sur batterie |
+| resetConfigureReporting | | Désactivé | | Active un Reset de l'information de configuration de suivi |
 | reenforceConfigureReporting | | Désactivé | | ??? |
-| resetReadAttributes | | Désactivé | | Active un reset des informations de polling |
-| allowGroupMembership | | Activé | | Autorise le plugin à créer automatiquement un groupe si le dispositif est reconnu. Par exemple Legrand |
+| resetReadAttributes | | Désactivé | | Active un Reset des informations de polling |
+| allowGroupMembership | | Activé | | Autorise le plugin à créer automatiquement un groupe si l'objet est reconnu. Par exemple Legrand |
 | doUnbindBind | | Désactivé | | Active une déconnexion avant la connexion d'un cluster (Désactivé par défaut)
-| allowReBindingClusters | | Activé | | Autorise la reconnexion du cluster si le dispositif est de retour |
+| allowReBindingClusters | | Activé | | Autorise la reconnexion du cluster si l'objet est de retour |
 
 
 ------------------------------------------------
@@ -249,7 +251,7 @@ Permet d'activer des modes spécifiques aux équipements Legrand Netatmo
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| EnableLedIfOn | | Activé | | Allume la LED si le dispositif est allumé |
+| EnableLedIfOn | | Activé | | Allume la LED si l'objet est allumé |
 | EnableLedInDark | | Désactivé | | Allume la LED dans le noir |
 | EnableLedShutter | | Désactivé | | ??? |
 | EnableDimmer | | Désactivé | | Active le variateur |
@@ -332,4 +334,4 @@ Permet d'activer des modes spécifiques aux équipements Schneider Wiser
 
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

@@ -42,11 +42,11 @@ Cet outil donne toutes les informations sur la ZiGate.
 
 #### Liste des Widgets DomoticZ (json)
 
-Cet outil liste tous les Widgets dans DomoticZ qui sont liés au plugin ZiGate.
+Cet outil liste tous les dispositifss dans DomoticZ qui sont liés au plugin ZiGate.
 
 #### Liste des équipements (json)
 
-Cet outil liste tous les équipements appairés à la ZiGate et indique leurs paramètres.
+Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres.
 
 #### Liste des groupes (json)
 
@@ -54,7 +54,7 @@ Cet outil liste les groupes créé dans le plugin ZiGate.
 
 #### Liste des équipements raw (json)
 
-Cet outil liste tous les équipements appairés à la ZiGate et indique leurs paramètres. ???
+Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres. ???
 
 #### Santé plugin (json)
 
@@ -74,7 +74,7 @@ Cet outil donne toutes les informations sur le trafic réseau au niveau de la Zi
 
 #### Liste des dispositifs (json)
 
-Cet outil liste tous les dispositifs. ???
+Cet outil liste tous les objets. ???
 
 #### Paramètres DomoticZ (json)
 
@@ -91,7 +91,7 @@ Voici la page __Commande__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet d'exécuter des commandes sur les dispositifs sans passer par DomoticZ.
+Cette page permet d'exécuter des commandes sur les objets sans passer par DomoticZ.
 
 
 ------------------------------------------------
@@ -104,7 +104,7 @@ Voici la page __Couplage__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet d'exécuter de coupler des dispositifs.
+Cette page permet d'exécuter de coupler des objets.
 
 Voir le tutoriel [Coupler deux dispositifs entre eux](Tuto_Coupler-deux-dispositifs.md)
 
@@ -137,4 +137,4 @@ Cette page permet de visualiser les erreurs du plugin.
 
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

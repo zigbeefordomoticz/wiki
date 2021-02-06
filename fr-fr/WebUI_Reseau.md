@@ -24,7 +24,7 @@ Elle permet :
 
 * De visualiser et gérer les différents rapports d'analyse du réseau
 * De lancer une analyse du réseau basée sur le LQI (puissance du signal détecté)
-  * A noter que le filtrage des packets implémenté dans la ZiGate s'appuie sur la LQI. Un coût supérieur à 5 implique une perte potentielle de paquets
+  * A noter que le filtrage des paquets implémenté dans la ZiGate s'appuie sur la LQI. Un coût supérieur à 5 implique une perte potentielle de paquets
 
 | LQI interval | Cost |
 | ---------| -----|
@@ -36,7 +36,7 @@ Elle permet :
 
 **Attention :** Le temps de sortie d'un rapport de topologie est très dépendant de la taille du réseau ZigBee à analyser; plus le nombre de routeurs est important et plus le temps d'analyse sera long.
 
-**A Noter :** Le rapport est également diffusé (format texte) dans les logs de DomoticZ
+**A Noter :** Le rapport est également diffusé (format texte) dans les logs de DomoticZ.
 
 ### Description d'un rapport de topologie réseau
 
@@ -58,7 +58,7 @@ Un bouton (Chart context menu) en haut à droite du graphique permet de l'affich
 
 #### La liste des dispositifs liés à la ZiGate
 
-Vous retrouvez sous cet item un tableau fournissant des informations relatives aux dispositifs liées à la ZiGate et remontées dans les widgets DomoticZ
+Vous retrouvez sous cet item un tableau fournissant des informations relatives aux dispositifs liées à la ZiGate et remontées dans les widgets DomoticZ.
 
 ![Network_Topology](Images/FR_WebUI-Reseau-ListDispositifs.png)
 
@@ -88,7 +88,7 @@ Voir les [explications](Info_ZigBee-et-Wifi.md) sur les interférences entre le 
 Le niveaux d'interférence est calculé avec la communication entre la ZiGate et un routeur.
 Si vous ne disposez pas de routeur, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
-Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la ZiGate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible). 
+Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la ZiGate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible).
 
 Sources:
 * https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)
@@ -96,4 +96,4 @@ Sources:
 
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

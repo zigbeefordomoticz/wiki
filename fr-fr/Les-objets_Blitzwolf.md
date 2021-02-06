@@ -1,24 +1,24 @@
 # Les objets de la marque BlitzWolf
 
-Certains dispositifs de la marque BlitzWolf ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque BlitzWolf ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-** Cette page n'est pas une liste des dispositifs compatibles.** 
+** Cette page n'est pas une liste des objets compatibles.**
 
-La liste des dispositifs compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html)
+La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
 
 
 ## Sommaire
 
-Les dispositifs nécessitant une configuration particulière :
+Les objets nécessitant une configuration particulière :
 
 * [Prise BW-SHP13](Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13))
 
 
 ### Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)
 
-Ce dispositif apparaîtra une fois appairé sous le nom générique de TS0121.
+Cet objet apparaîtra une fois appairé sous le nom générique de TS0121.
 
-Pour l'appairage du dispositif, tenir le bouton power enfoncé durant 5s, la lumière bleue flashera jusqu'à la fin complète du processus d'appairage.
+Pour l'appairage de la prise, tenir le bouton power enfoncé durant 5s, la lumière bleue flashera jusqu'à la fin complète du processus d'appairage.
 Quatre dispositifs sont alors créés et remontés vers DomoticZ :
 
 | Type de widget dans DomoticZ | Description |

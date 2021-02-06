@@ -25,7 +25,7 @@ A cost of 5 is used as the packet filtering threshold, which means that above th
 ## Exemple de rapport
 
 La création du rapport va prendre un certain temps en fonction de la taille du réseau (surtout du nombre de routeurs).
-Lorsque le rapport est généré, le message suivant apparaît dans les logs de DomoticZ : 'A raw format is also provided and is analysed via the Web UI.'
+Lorsque le rapport est généré, le message suivant apparaît dans les logs de DomoticZ : `A raw format is also provided and is analysed via the Web UI.`
 
 ** Rapport graphique
 ![Network Toplogy](../Images/Network_Topology.png)
@@ -89,10 +89,10 @@ Lorsque le rapport est généré, le message suivant apparaît dans les logs de 
 |  2c7f | 2657 |    None |      Router | 15 |  57 |  Rx-On |
 
 
-* Noeud : Le point de départ
-  * 0000 c'est la ZiGate
-* LQI : c'est la valeur estimative de la qualité de la transmission avec le noeud voisin
-* Rebond : C'est le nombre de niveau entre le noeud voisin et la ZiGate (rebond 0)
+* Noeud : Le point de départ.
+  * 0000 c'est la ZiGate.
+* LQI : c'est la valeur estimative de la qualité de la transmission avec le noeud voisin.
+* Rebond : C'est le nombre de niveau entre le noeud voisin et la ZiGate (rebond 0).
 * Relation: c'est une valeur en 3 Bit représentant la relation avec les noeuds voisins :
   * 0 Parent : le voisin est un parent
   * 1 = Child : le voisin est un enfant

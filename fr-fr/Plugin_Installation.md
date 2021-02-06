@@ -101,6 +101,8 @@ Il faut désactiver le plugin ZiGate et vérifier s'il y a une mise à jour du p
 
 Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perturber la syntaxe globale) : `"internetAccess": 0,`
 
+!!! Désactivé la fonction internet access
+
 
 ------------
 # 4 - Installation sur Docker
@@ -499,5 +501,5 @@ Voici un exemple de ce que vous devriez avoir :
    01 80 10 00 05 8f 00 03 03 1a 00 03
 ```
 
-Le plugin ZiGate doit apparaître dans la liste des matériels. 
+Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))

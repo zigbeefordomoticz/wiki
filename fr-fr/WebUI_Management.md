@@ -22,17 +22,17 @@ Cette page permet de lister tous les dispositifs appairés avec le plugin.
 
 Elle permet :
 
-* D'assigner des surnoms aux dispositifs pour les identifier plus facilement dans l'interface web.
-* D'assigner des paramètres aux dispositifs indépendamment les uns des autres.
-* De visualiser les informations suivantes pour chaque dispositif :
-  * Le ShortId (l'adresse IP du réseau ZigBee) et l'IEEE (l'adresse Mac Address du ZigBee)
-  * Le Modèle du dispositif (c'est le type de composant remonté par le dispositif lors de son appairage)
-  * Le(s) nom(s) du(des) Widget(s) DomoticZ attaché(s) au dispositif
-  * Le surnom donné au sein de cette interface (**Astuce** : donner un surnom identique au nom du widget DomoticZ)
-  * Les fonctionnalités sur le réseau offertes par le dispositif et son mode d'alimentation :
-  * L'info LQI : cette valeur indique la qualité de la transmission (0 pas de transmission, 255 transmission d'excellente qualité)
-  * Le status : inDB (dispositif connu dans la ZiGate **et au moins** un widget dans DomoticZ)
-  * La Santé du dispositif (présent sur le réseau ZigBee ou pas)
+* D'assigner des surnoms aux objets pour les identifier plus facilement dans l'interface web.
+* D'assigner des paramètres aux objets indépendamment les uns des autres.
+* De visualiser les informations suivantes pour chaque objet :
+  * Le ShortId (l'adresse IP du réseau ZigBee) et l'IEEE (l'adresse Mac Address du ZigBee).
+  * Le Modèle de l'objet (c'est le type de composant remonté par le dispositif lors de son appairage).
+  * Le(s) nom(s) du(des) dispositif(s) DomoticZ attaché(s) à l'objet.
+  * Le surnom donné au sein de cette interface (**Astuce** : donner un surnom identique au nom du dispositif DomoticZ).
+  * Les fonctionnalités sur le réseau offertes par l'objet et son mode d'alimentation.
+  * L'info LQI : cette valeur indique la qualité de la transmission (0 pas de transmission, 255 transmission d'excellente qualité).
+  * Le status : inDB (objet connu dans la ZiGate **et au moins** un dispositif dans DomoticZ).
+  * La Santé de l'objet (présent sur le réseau ZigBee ou pas).
 
 ------------------------------------------------
 ## Gestion des groupes
@@ -42,12 +42,12 @@ Voici la page __Gestion des groupes__ de l'interface Web du plugin :
 ![Group Management](../Images/Group-Management.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
-Le groupe est vu dans DomoticZ comme un unique widget de type Switch et ce indépendamment du nombre de dispositifs composant le groupe. L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous les dispositifs du groupe.
+Le groupe est vu dans DomoticZ comme un unique widget de type Switch et ce indépendamment du nombre de d'objet composant le groupe. L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous des objets du groupe.
 
 ### Utilisation
 
-Cette page permet de lister les groupes de dispositifs gérés par le plugin.
+Cette page permet de lister les groupes de d'objets gérés par le plugin.
 
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

@@ -25,11 +25,11 @@ Cette page permet d'appairer les dispositifs avec la ZiGate et DomoticZ.
 
 Elle permet :
 
-* D'ajouter un dispositif avec un retour d'info
+* D'ajouter un objet avec un retour d'info
 * D'activer le mode appairage de la ZiGate (permanent ou 4 minutes)
-* D'ajouter un dispositif via un routeur particulier
+* D'ajouter un objet via un routeur particulier
 
-Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
+Se reporter au tutoriel [Ajouter un nouvel objet](Tuto_Appairage-objet.md) pour plus d'informations.
 
 
 ------------------------------------------------
@@ -40,8 +40,8 @@ Voici la page __Groupe__ de l'interface Web du plugin :
 ![FR_WebUI-Admin-Groupe](Images/FR_WebUI-Admin-Groupe.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
-Le groupe que vous pourrez créer via ce plugin est vu dans DomoticZ comme un unique widget de type Switch et ce indépendamment du nombre de dispositifs composant le groupe.
-L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous les dispositifs du groupe.
+Le groupe que vous pourrez créer via ce plugin est vu dans DomoticZ comme un unique dispositif de type Switch et ce indépendamment du nombre d'objets composant le groupe.
+L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous les objets du groupe.
 
 ### Utilisation
 
@@ -54,7 +54,7 @@ Elle permet :
 
 Préalablement à la gestion des groupes, il est nécessaire d'activer la service de groupe (désactivé par défaut) du plugin : Se reporter à la section [Réglages](WebUI_Reglages.md) pour activer les services
 
-Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
+Se reporter au tutoriel [Gérer les groupes](Tuto_Gerer-les-groupes.md) pour plus d'informations.
 
 
 ------------------------------------------------
@@ -104,14 +104,14 @@ Voici la page __Firmware__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet de mettre à jour le firmware des dispositifs ZigBee.
+Cette page permet de mettre à jour le firmware des objets ZigBee.
 
 Elle permet :
 
-* De faire une mettre à jour le firmware des dispositifs appairés
+* De faire une mettre à jour le firmware des objets appairés
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
 
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

@@ -4,16 +4,16 @@
 ## Introduction
 
 Ce tutoriel explique comment mettre en place une authentification pour accéder à l'interface web du plugin.
-La méthode utilise [Nginx](https://www.nginx.com) et un certicicat [Let's Encrypt](https://letsencrypt.org/). Elle sera expliquée sur Raspbian (Rapsberry) mais elle peut-être appliquée sur d'autres distributions Linux.
+La méthode utilise [Nginx](https://www.nginx.com) et un certificat [Let's Encrypt](https://letsencrypt.org/). Elle sera expliquée sur Raspbian (Raspberry) mais elle peut-être appliquée sur d'autres distributions Linux.
 
-** Il est recommandé d'utiliser un VPN ou une autre méthode sécurisée (VPS...) pour se connecter depuis l'extérieur au réseau local afin de ne pas exposer la page web sur internet.**
+**Il est recommandé d'utiliser un VPN ou une autre méthode sécurisée (VPS...) pour se connecter depuis l'extérieur au réseau local afin de ne pas exposer la page web sur internet.**
 
 L'utilisation de [Fail2ban](http://www.fail2ban.org) (voir plus bas) limite les risques d'une attaque massive mais vous pouvez toujours avoir une vulnérabilité sur votre système.
 
 
 ## Prérequis
 
-* Avoir un nom de domaine pour pouvoir générer et utiliser un certificat SSL. Un sous-domaine est nécessaire si le domaine principal est utilisé. 
+* Avoir un nom de domaine pour pouvoir générer et utiliser un certificat SSL. Un sous-domaine est nécessaire si le domaine principal est utilisé.
 
 L'exemple sera pris pour un domaine nommé __dashboard__.
 
@@ -23,18 +23,18 @@ L'exemple sera pris pour un domaine nommé __dashboard__.
 ## Méthode
 
 La restriction d'accès sera implantée en utilisant une authentification par utilisateur/mot de passe.
-Les utilisateurs/mot de passe seront créer à partir de apache2-utils (un outil de création de fichier de mot de passe).
+Les utilisateurs/mot de passe seront créer à partir de __apache2-utils__ (un outil de création de fichier de mot de passe).
 
 #### Installation des paquets nécessaire
 
-* Ouvrir un terminal
+* Ouvrir un terminal.
 * Exécuter la commande : `sudo apt-get install nginx apache2-utils certbot python-certbot-nginx`
 
 
 #### Création du certificat SSL pour Nginx
 
 * S'assurer que le port 80 est ouvert.
-* Suivre les [instructions du certbot](https://certbot.eff.org/lets-encrypt/debianbuster-nginx):
+* Suivre les [instructions du certbot](https://certbot.eff.org/lets-encrypt/debianbuster-nginx).
 
 
 #### Choisir comment exécuter Certbot
@@ -47,7 +47,7 @@ La commande va récupérer le certificat et Certbot va éditer la configuration 
 
 ##### Ou manuellement
 
-Cette commande est réservée aux personnes souhaitant changer leur configuration Ngix à la main.
+Cette commande est réservée aux personnes souhaitant changer leur configuration Nginx à la main.
 
 * Exécuter la commande : `sudo certbot certonly --nginx`
 
@@ -56,7 +56,7 @@ Cette commande est réservée aux personnes souhaitant changer leur configuratio
 
 Le certificat est valide pour une période de 90 jours.
 
-Lors de l'installation de Certbot sur le système, celui-ci paramètre une cron-job pour renouveler automatiquement le certificat avant qu'il n'expire. Il ne sera pas nécessaire d'exécuter le Certbot à nouveau. 
+Lors de l'installation de Certbot sur le système, celui-ci paramètre une cron-job pour renouveler automatiquement le certificat avant qu'il n'expire. Il ne sera pas nécessaire d'exécuter le Certbot à nouveau.
 
 * Tester le renouvellement automatique du certificat en exécutant la commande : `sudo certbot renew --dry-run` (l'ouverture du port 80 est nécessaire).
 
@@ -71,8 +71,9 @@ Il est possible d'utiliser le générateur en ligne ou l'outil du système.
 * Indiquer le nom d'utilisateur
 * Indiquer le mot de passe
 
-* Vérifier que la commande `cat /etc/nginx/.htpasswd renvoie bien des informations (le mot de passe est haché)
-```shell
+* Vérifier que la commande `cat /etc/nginx/.htpasswd` renvoie bien des informations (le mot de passe est haché).
+
+```
 $ cat /etc/nginx/.htpasswd
 zigate:$apr1$/woC1jnP$KAh0SsVn5qeSMjTtn0E9Q0
 ```
@@ -116,17 +117,17 @@ server {
         }
 }
 ```
-Dans le cas d'une configuration manuelle, 
+Dans le cas d'une configuration manuelle,
 
    * Modifier le nom du serveur (server_name)
    * Modifier le chemin complet vers le certificat ($domain)
 
-   Ces informations sont pré-remplies avec la configuration automatique
-   
+   Ces informations sont pré-remplies avec la configuration automatique.
+
 * Vérifier la configuration : `sudo nginx -t`
 * Si ok, redémarrer Nginx : `sudo service nginx restart`
 
-Le tableau de bord devrait être accessible https://dashboard.mydomain.com/
+Le tableau de bord devrait être accessible https://dashboard.mydomain.com.
 
 ### Option 1 - Ajouter une protection avec fail2ban
 
@@ -152,9 +153,9 @@ ignoreip = 127.0.0.1 192.168.1.0/24
 
 # OPTION 2 - Utiliser le certificat de DomoticZ
 
-Il est possible d'utiliser le certificat de DomoticZ en exécutant (replace \<your domain>):
+Il est possible d'utiliser le certificat de DomoticZ en exécutant (replacer <your domain>):
 
-```shell
+```
 sudo mv ~/domoticz/server_cert.pem ~/domoticz/server_cert.pem.org
 sudo cat /etc/letsencrypt/live/<your domain>/privkey.pem >> ~/domoticz/server_cert.pem
 sudo cat /etc/letsencrypt/live/<your domain>/fullchain.pem >> ~/domoticz/server_cert.pem

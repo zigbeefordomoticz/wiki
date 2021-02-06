@@ -33,4 +33,4 @@ Le bandeau est vert si le plugin fonctionne normalement.
 Le bandeau rouge indique un problème de connexion avec la ZiGate.
 Le bandeau jaune indique l'appairage d'un dispositif ou que la ZiGate est chargée. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
-Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
+Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

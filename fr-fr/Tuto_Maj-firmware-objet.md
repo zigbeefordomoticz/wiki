@@ -1,6 +1,6 @@
-# Tutoriel - Mettre à jour le firmware d'un dispositif
+# Tutoriel - Mettre à jour le firmware d'un objet
 
-Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'un dispositif ZigBee avec la ZiGate.
+Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'un objet ZigBee avec la ZiGate.
 
 ## Avant propos
 
