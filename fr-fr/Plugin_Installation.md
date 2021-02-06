@@ -101,7 +101,8 @@ Il faut désactiver le plugin ZiGate et vérifier s'il y a une mise à jour du p
 
 Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perturber la syntaxe globale) : `"internetAccess": 0,`
 
-!!! Désactivé la fonction internet access
+
+Ou aller dans la section [Réglages > Liste des services](#liste-des-services) et désactiver la fonction __internet access__.
 
 
 ------------
