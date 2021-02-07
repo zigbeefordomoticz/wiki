@@ -21,7 +21,7 @@ Voici la page __Outils__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet d'exécuter les différents outils disponibles dans le plugin.
+Cette page permet d'exécuter les différents outils disponibles dans le plugin à utiliser pour des fins de débogage ou de développement.
 
 ### Liste des outils
 
@@ -34,43 +34,73 @@ Cette page permet d'exécuter les différents outils disponibles dans le plugin.
 
 #### Plugin infos (json)
 
-Cet outil donne toutes les informations sur le plugin.
+Cet outil donne toutes les informations sur les paramètres DomoticZ du plugin.
+
+Usage : Développement
+API REST : plugin
 
 #### ZiGate infos (json)
 
 Cet outil donne toutes les informations sur la ZiGate.
 
-#### Liste des Widgets DomoticZ (json)
+Usage : Débogage
+API REST : zigate
 
-Cet outil liste tous les dispositifss dans DomoticZ qui sont liés au plugin ZiGate.
+#### Liste des dispositifs DomoticZ (json)
 
-#### Liste des équipements (json)
+Cet outil liste tous les dispositifs dans DomoticZ qui sont liés au plugin ZiGate.
+
+Usage : Développement
+API REST : device
+
+#### Liste des objets (json)
 
 Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres.
+
+Usage : Développement
+API REST : zdevice
 
 #### Liste des groupes (json)
 
 Cet outil liste les groupes créé dans le plugin ZiGate.
 
-#### Liste des équipements raw (json)
+Usage : Débogage
+API REST : zgroup
 
-Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres. ???
+#### Liste des objets raw (json)
+
+Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres en mémoire
+
+Usage : Débogage
+API REST : zdevice-raw
 
 #### Santé plugin (json)
 
 Cet outil donne les informations sur le fonctionnement du plugin.
 
+Usage : Débogage
+API REST : plugin-health
+
 #### zGroup-1st-devices (json)
 
-Cet outil liste les routeurs du réseau de la ZiGate.
+Cet outil liste les objets pouvant être intégrer dans un groupe (généralement les routeurs).
+
+Usage : Développement
+API REST : zgroup-list-available-device
 
 #### Paramètres (json)
 
-Cet outil. ???
+Cet outil liste touts les paramètres du plugin avec leurs valeurs.
+
+Usage : Développement
+API REST : settings
 
 #### Trafic (json)
 
-Cet outil donne toutes les informations sur le trafic réseau au niveau de la ZiGate.
+Cet outil donne toutes les statistiques de la ZiGate.
+
+Usage : Débogage
+API REST : plugin-stat
 
 #### Liste des dispositifs (json)
 
@@ -78,8 +108,19 @@ Cet outil liste tous les objets. ???
 
 #### Paramètres DomoticZ (json)
 
-Cet outil affiche les paramètres de DomoticZ. ???
+Cet outil affiche les paramètres pour accéder à l'API de DomoticZ.
 
+Usage : Développement
+API REST : domoticz-env
+
+
+### L'API REST
+
+Il est possible d'accéder aux données de ces outils sans passer par l'interface d'administration du plugin.
+
+* Ouvrir dans votre navigateur *IP_DomoticZ:Port_Plugin-ZiGate/rest-zigate/1/__API REST__* en remplaçant API REST par celui voulu.
+
+Exemple : http://127.0.0.1:9440/rest-zigate/1/plugin
 
 ------------------------------------------------
 ## Commande
