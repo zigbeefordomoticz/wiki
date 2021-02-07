@@ -17,7 +17,7 @@ Les objets nécessitant une configuration particulière :
 * [La télécommande 5 boutons](#la-telecommande-5-outons)
 
 
-**Attention :** Dans le cas où les appairages en mode classique décrits ci dessous ne fonctionnent pas, ces objets utilisant le groupe 0x0000, il est possible que vous soyez amené à l'activer préalablement à l'appairage. Pour cela se rapporter à la section [Reglages > Réglage de la Zigate](WebUI_Reglages.md#r%C3%A9glages-de-la-zigate)
+**Attention :** Dans le cas où les appairages en mode classique décrits ci dessous ne fonctionnent pas, ces objets utilisant le groupe 0x0000, il est possible que vous soyez amenés à l'activer préalablement à l'appairage. Pour cela se rapporter à la section [Reglages > Réglage de la Zigate](WebUI_Reglages.md#r%C3%A9glages-de-la-zigate)
 
 ### Les ampoules connectées
 
@@ -25,11 +25,11 @@ Allumer/Eteindre six fois de suite votre ampoule (hors télécommande Ikea); l'a
 
 Dès l'appairage, de 1 à 3 dispositifs sont présentés à DomoticZ
 
-| Type | Fonction |
-| ---- | -------- |
-| Switch | Permet l'allumage/extinction de l'ampoule |
-| Level Control (LvlControl) | Controle le niveau de luminosité de l'ampoule |
-| Color Control (ColorControl) | Controle la coulour d'éclairage |
+| Type                         | Fonction                                      |
+| ---------------------------- | --------------------------------------------- |
+| Switch                       | Permet l'allumage/extinction de l'ampoule     |
+| Level Control (LvlControl)   | Controle le niveau de luminosité de l'ampoule |
+| Color Control (ColorControl) | Controle la coulour d'éclairage               |
 
 ### Les prises connectées
 
