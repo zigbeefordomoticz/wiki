@@ -68,7 +68,7 @@ A ce niveau, le réglage d'intensité de la télécommande fonctionne mais pas l
 * Lancer une analyse sélective sur l'ampoule Ikea utilisée précédemment afin d'identifier le groupe utilisé par l'ampoule et la télécommande *Le groupe créé par le lien sera récupérer.*
 * Ajouter la ZiGate dans le groupe crée par le lien.
 
-Maintenant, toutes les évènements de la télécommandes seront visibles sur le Widget dans DomoticZ.
+Maintenant, toutes les évènements de la télécommandes seront visibles sur le dispositif et le widget dans DomoticZ.
 
 
 #### Utiliser la télécommande pour d'autres choses que des ampoules Ikea
