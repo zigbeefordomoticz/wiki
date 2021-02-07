@@ -27,7 +27,7 @@ Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver
 
 ### Ikea Tradfri
 
-Le répertoire d'outillage du plugion contient un script permettant le téléchargement, depuis le site web d'Ikea, de tous les firmwares.
+Le répertoire d'outillage du plugin contient un script permettant le téléchargement, depuis le site web d'Ikea, de tous les firmwares.
 
 * Aller dans le dossier du firmware d'Ikea : `cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI`
 
@@ -39,7 +39,7 @@ Le répertoire d'outillage du plugion contient un script permettant le télécha
 
 A faire pour les versions de plugin inferieure à 4.11.015. En version 4.11.015 ou superieure l'upgrade OTA est actif.
 
-Dans le menu Reglages de la Web Admin, Activer l'option OTA upgrade
+Dans le menu Reglages de la Web Admin, Activer l'option **Enable OTA**
 
    ![Enable OTA](../Images/OTA.png)
 
