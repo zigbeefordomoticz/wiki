@@ -37,6 +37,8 @@ Après avoir mis la ZiGate en mode appairage voir le tutoriel [Appairer un dispo
 
 **Attention :** La manipulation en soit n'est pas compliquée mais hasardeuse, il est donc fort probable qu'il faille redoubler de tentatives.....
 
+**A Noter :** La prise Ikea ne présente que l'objet Switch On/Off; elle ne permet pas de suivre la consommation électrique. En revanche, comme tout objet alimenté sur le secteur, elle offre la fonction de routeur.
+
 L'appairage avec télécommande Ikea s'effectue en plaçant la télécommande à moins de 5 cm de la prise, appuyer plus d'une dizaine de seconde sur le bouton d’appairage que vous trouverez en face arrière intérieure de la télécommande.
 
 L'appairage avec le capteur de mouvement suit le même processus. Ouvrir la face arrière du capteur de mouvement, appuyer durant plus de 10s sur le bouton d'appairage à moins de 5cm de la prise.
@@ -63,15 +65,15 @@ Pour pouvoir appairer et utiliser la télécommande avec la ZiGate, il sera néc
 A ce niveau, le réglage d'intensité de la télécommande fonctionne mais pas les boutons de variation de couleur (pour le moment ...)
 
 * Aller dans la section [Admin > Groupes](WebUI_Admin.md#groupe).
-* Lancer une analyse sélective sur l'ampoule Ikea utilisée précédemment. *Le groupe créé par le lien sera récupérer.*
+* Lancer une analyse sélective sur l'ampoule Ikea utilisée précédemment afin d'identifier le groupe utilisé par l'ampoule et la télécommande *Le groupe créé par le lien sera récupérer.*
 * Ajouter la ZiGate dans le groupe crée par le lien.
 
-Maintenant, toutes les évènements de la télécommandes seront visible sur le Widget dans DomoticZ.
+Maintenant, toutes les évènements de la télécommandes seront visibles sur le Widget dans DomoticZ.
 
 
 #### Utiliser la télécommande pour d'autres choses que des ampoules Ikea
 
-* Faire la méthode précédente pour appairer la télécommande.
-* Supprimer l'ampoule utilisée pour le lien du groupe. *Il ne doit rester que la télécommande et la ZiGate dans ce groupe.*
+* Procéder à l'appairage de la télécommande en suivant la méthode précédamment décrite.
+* Supprimer ensuite l'ampoule utilisée dans le groupe créé lors de l'apparaige de la telecommande avac l'ampoule : *Une fois l'opération terminée, seules la ZiGate et la télécommande doivent rester dans ce groupe.*
 
 __Une ampoule Ikea est obligatoire pour appairer la télécommande avec la ZiGate.__ Cela oblige l'achat d'une ampoule en plus de la télécommande, mais ceci est la seule méthode trouvée pour pouvoir réutiliser la télécommande.
