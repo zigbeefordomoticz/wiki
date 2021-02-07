@@ -7,11 +7,12 @@ Ce réseau maillé permet aux objets ZigBee de communiquer entre eux et avec la 
 En automatisant trop précipitamment, vous risquez, notamment, d'être confronté à des pertes de objets.
 
 Même si votre ZiGate supporte jusqu'à 40 objets connectés directement, un ou plusieurs routeurs contribueront à maintenir une bonne communication entre les objets et la ZiGate. Bien entendu, votre environnement, la distance entre la ZiGate et l'objet le plus éloigné, le nombre d'objets routeurs intégrés dans votre réseau va déterminer le nombre maximum d'objets que pourra contenir votre réseau ZigBee sous réserve d'avoir suffisamment d'objets routeur correctement répartis en distance avec la ZiGate mais également entre eux afin d'avoir un bon maillage.
-Un routeur ZigBee est un objet alimenté sur le secteur, généralement des prises (plug) ou interrupteurs (wall switches). Par conséquent les objets ZigBee alimentés sur batterie ne permettent pas de répéter le signal ZigBee, ils sont désignés en tant que objets terminaux (end devices) à contrario des routeurs qui eux répètent le signal ZigBee.
+Un routeur ZigBee est un objet alimenté sur le secteur, généralement des prises (plug) ou interrupteurs (wall switches).
+Les objets ZigBee alimentés sur batterie ne permettent pas de répéter le signal ZigBee, ils sont désignés en tant qu'objets terminaux (end devices) à contrario des routeurs qui eux répètent le signal ZigBee.
 
-La ZiGate supporte jusqu'à 40 objets en connexion directe. Vous pouvez étendre cette limitation en utilisant des objets avec la fonction routeur disposant de la fonction répéteur/routeur.
+La ZiGate supporte jusqu'à 40 objets en connexion directe. Vous pouvez étendre cette limitation en utilisant des objets avec la fonction routeur disposant de la fonction répéteur/routeur qui permettent de supporter jusqu'à 30 objets.
 Les objets connectés alimentés sur batterie n'écoutent pas le réseau ZigBee et de ce fait ne peuvent exercer une fonction de routeur; on appelle aussi ces objets des objets terminaux.
-Les objets terminaux ne communiquent qu'avec un parent qui peut être soit la ZiGate elle même ou bien un objet routeur. Les objets routeurs, quant à eux, communiquent avec la ZiGate et les objets terminaux.
+Les objets terminaux ne communiquent qu'avec un parent qui peut être soit la ZiGate elle même soit un objet routeur. Les objets routeurs, quant à eux, communiquent avec la ZiGate et les objets terminaux.
 
 
 ## Comment fonctionnent les routeurs ZigBee ?
@@ -35,7 +36,7 @@ Les routeurs ont la possibilité de communiquer, non seulement avec les objets t
 Les objets alimentés sur batterie doivent toujours avoir un parent avec lequel communiquer : c'est soit la ZiGate, soit un objet routeur/répéteur. Lorsqu'un objet rejoint pour la première fois le réseau ZigBee, il choisira le parent qui offre la meilleure qualité de signal. Une fois le parent choisi, il reste attaché à ce parent jusqu'à ce qu'il n'y ait plus aucune communication possible : la relation entre le parent et l'objet est exclusive, même si un autre parent nouvellement introduit dans le réseau offre un meilleur signal. C'est seulement lorsque la communication entre l'objet et le parent est rompue sur une longue période que l'objet va sélectionner un nouveau parent. Cependant, si l'objet arrive à communiquer, même occasionnellement avec la ZiGate, il ne sélectionnera pas un nouveau parent.
 Ceci est un remarque d'ordre générale mais il est possible que certain objets (les Xiaomi) ne recherchent pas de nouveau chemin si leur parent ne répond plus.
 
-Comme nous l'avons vus, les objets ZigBee attendent que la communication soit complètement perdue avec leur parent pour en rechercher un nouveau. Vous pouvez, cependant, accélérer ce processus en arrêtant la ZiGate durant 20 minutes puis la redémarrer. Quand la ZiGate redémarre les objets routeurs et les objets terminaux établiront la communication entre eux en choisissant le chemin réseau optimum. Selon la complexité de votre configuration, comptez jusqu'à 24h pour que ce processus soit terminé.
+Comme nous l'avons vu, les objets ZigBee attendent que la communication soit complètement perdue avec leur parent pour en rechercher un nouveau. Vous pouvez, cependant, accélérer ce processus en arrêtant la ZiGate durant 20 minutes puis la redémarrer. Quand la ZiGate redémarre les objets routeurs et les objets terminaux établiront la communication entre eux en choisissant le chemin réseau optimum. Selon la complexité de votre configuration, comptez jusqu'à 24h pour que ce processus soit terminé.
 
 
 ## Astuces pour créer un réseau maillé ZigBee
@@ -47,11 +48,11 @@ Bien que le maillage ZigBee établira le chemin optimal pour une communication s
 ### Astuce 1 : Positionner votre ZiGate à un emplacement central dans votre logement.
 
 Ceci permettra à votre ZiGate de rayonner sur tout le logement en limitant les interférences avec l'ensemble des objets (routeurs ou terminaux). Éviter les coins extrémité du logement, la cave, le garage ou les endroits avec beaucoup de grosses pièces métalliques (plaques, tuyaux, ...) qui vont générer des interférences.
-Si votre routeur se situe à une extrémité de votre logement, essayer de positionner votre ZiGate sur un emplacement central au travers de câble Ethernet ou CPL.
+Si votre routeur se situe à une extrémité de votre logement, essayer de positionner votre ZiGate sur un emplacement central en utilsant du câble ethernet ou du CPL.
 
 ### Astuce 2 : Appairer vos objets depuis leur emplacement final.
 
-En ajoutant les objets à proximité de votre ZiGate (routeur principal), puis en le déplaçant à l'emplacement final conduit souvent à une perte du objet au sein du réseau. Il est donc recommandé de toujours appairer vos objets depuis leur emplacement final.
+En ajoutant les objets à proximité de votre ZiGate (routeur principal), puis en le déplaçant à l'emplacement final vous risquez souvent une perte de l'objet au sein du réseau. Il est donc recommandé de toujours appairer vos objets depuis leur emplacement final.
 
 ### Astuce 3 : Limiter les distances
 
@@ -65,11 +66,11 @@ Une fois les objets routeurs installés vous pouvez terminer en connectant les o
 
 ### Astuce 5 : Appairer les objets les uns après les autres.
 
-Il est recommandé de stabiliser le réseau entre chaque appairage. Attendre la fin de l'appairage de l' objet pour tenter l'appairage du suivant. Voir les instructions d'appairage propres à votre matériel pour plus de détail.
+Il est recommandé de stabiliser le réseau entre chaque appairage. Attendre la fin de l'appairage de l'objet pour tenter l'appairage du suivant. Voir les instructions d'appairage propres à votre matériel pour plus de détail.
 
 ### Astuce 6 : Mettre les ampoules sur un réseau spécifique
 
-Éviter d'ajouter les ampoules dans votre réseau ZigBee en parallèle des autres objets; les ampoules vont vouloir se comporter comme des routeurs mais malheureusement, cette fonction n'est opérationnelle qu'avec d'autre ampoules. Vous avez toujours la possibilité de créer un second réseau ZigBee contenant uniquement les ampoules en déployant une seconde ZiGate; les ampoules ainsi concentrées sur ce second réseau éviteront d'agir comme des routeurs vis à vis des autres objets connectés.
+Éviter d'ajouter les ampoules dans votre réseau ZigBee en parallèle des autres objets; les ampoules vont vouloir se comporter comme des routeurs mais malheureusement, cette fonction n'est opérationnelle qu'entre ampoules. Vous avez toujours la possibilité de créer un second réseau ZigBee contenant uniquement les ampoules en déployant une seconde ZiGate; les ampoules ainsi concentrées sur ce second réseau éviteront d'agir comme des routeurs vis à vis des autres objets connectés.
 
 ### Astuce 7 : Écarter la ZiGate des routeurs Wifi ou box internet
 
