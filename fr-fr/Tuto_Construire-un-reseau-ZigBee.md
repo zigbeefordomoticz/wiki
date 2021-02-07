@@ -22,15 +22,15 @@ ZigBee et Z-Wave sont deux protocoles de communication sans fil très différent
 
 Des objets trop éloignés de la ZiGate ou gênés par des interférences génèrent des pertes de connexion liées à un signal ZigBee trop faible.
 
-![](Images/ZiGateDirectLink.png)
+![](./Images/ZiGateDirectLink.png)
 
 Quand un router/répéteur est positionné entre un objet terminal et la ZiGate, l'objet terminal communique avec le routeur/répéteur et celui-ci communique avec la ZiGate améliorant ainsi très significativement les performance et la fiabilité du signal.
 
-![](Images/ZiGateMeshNetwork.png)
+![](./Images/ZiGateMeshNetwork.png)
 
 Les routeurs ont la possibilité de communiquer, non seulement avec les objets terminaux mais également entre eux afin de constituer un puissant et stable réseau maillé ZigBee.
 
-![](Images/ZiGateMeshNwk_MultiRouteur.png)
+![](./Images/ZiGateMeshNwk_MultiRouteur.png)
 
 Les objets alimentés sur batterie doivent toujours avoir un parent avec lequel communiquer : c'est soit la ZiGate, soit un objet routeur/répéteur. Lorsqu'un objet rejoint pour la première fois le réseau ZigBee, il choisira le parent qui offre la meilleure qualité de signal. Une fois le parent choisi, il reste attaché à ce parent jusqu'à ce qu'il n'y ait plus aucune communication possible : la relation entre le parent et l'objet est exclusive, même si un autre parent nouvellement introduit dans le réseau offre un meilleur signal. C'est seulement lorsque la communication entre l'objet et le parent est rompue sur une longue période que l'objet va sélectionner un nouveau parent. Cependant, si l'objet arrive à communiquer, même occasionnellement avec la ZiGate, il ne sélectionnera pas un nouveau parent.
 Ceci est un remarque d'ordre générale mais il est possible que certain objets (les Xiaomi) ne recherchent pas de nouveau chemin si leur parent ne répond plus.
