@@ -18,7 +18,6 @@ Les objets nécessitant une configuration particulière :
 * [Les capteurs de mouvement](#les-capteurs-de-mouvement)
 
 
-
 ### Fonctionnement
 
 Lorsque le volet quitte un réseau, il cherche automatiquement un nouveau réseau ouvert.
@@ -34,7 +33,7 @@ Lorsque le volet quitte un réseau, il cherche automatiquement un nouveau résea
 
 #### Si aucun réseau n'est trouvé
 
-* Le volet va créer sont propre réseau et va réaliser 2 montées/descentes. ???
+* Le volet va créer sont propre réseau et va réaliser 2 montées/descentes.
 * Appairer la télécommande
 
 
@@ -76,9 +75,6 @@ Le volet et la télécommande vont alors sortir de leur réseau et rechercher un
 * Le volet Profalux peut être gérer par le cluster ONOFF (0x0006) ou le cluster LevelControl (0x0008). __Il est conseillé d'utiliser uniquement le LevelControl__, même pour une ouverture ou une fermeture complète.
 
 * Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
-
-La télécommande est très basique et il n'est pas conseillé d'essayer de faire quelque chose avec. Durant l'appairage, le volet et la télécommande
-The remote is very basic and it is not adviced to try doing anything with it. During the pairing process, the Shutter and the Remote will announced themselve, just drop the remote, but keep it paired on Zigate as both VR and Remote must be part of the same network. ???
 
 * Si vous avez une télécommande centrale ZOE, vous pouvez créer des groupes. Ils auront les numéros 0x8000 - 0x8.... Profalux indique que cela dépend de la version du firmware de la ZOE. Il faudra réaliser une mise à jour avant d'être appairer avec une télécommande non Profalux. Contactez directement Profalux pour obtenir les mises à jours.
 

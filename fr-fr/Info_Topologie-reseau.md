@@ -14,13 +14,6 @@ __Important :__ Le filtrage des paquets implémenté utilise la valeur LQI
 
 Source: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
 
-Le coût de 5 est utilisé comme filtrage maximal, au-delà, les niveaux des paquets peut être rejeter.
-
-A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded ???
-
-
-
-## Activer le rapport
 
 ## Exemple de rapport
 

@@ -5,8 +5,7 @@ Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'
 ## Avant propos
 
 Le plugin est capable d'envoyer une mise à jour de firmware d'un dispositif à condition que celui-ci respect le protocole Zigbee Over-The-Air (OTA). ???
-In addition you need to be able to pull the brand firmware for your devices.
-Certain fabricant donne un accès libre à firmware de leur dispositif, d'autre ne le font pas.
+Certain fabricant donne un accès libre à firmware de leur dispositif, d'autre ne le font pas. Le plugin ne fournit pas les firmware : c'est à vous de les récupérer auprès des fabricants.
 
 _La mise a jour du firmware d'un dispositif n'est donc pas possible sur tous les dispositifs.__
 

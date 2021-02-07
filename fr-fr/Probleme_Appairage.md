@@ -23,25 +23,6 @@ L'appairage se réalise à deux niveaux :
 
 ## Que faire ?  
 
-A partir de la version 4.7 du plugin, il y a des outils permettant de partager les informations collectées pendant les processus d'appairage.
+Venez nous rejoindre sur le forum français de DomoticZ https://easydomoticz.com/forum. Nous y avons une section dédiée au plugin ZiGate dans laquelle vous pourrez créer un sujet et nous faire remonter vos questions ou difficultés.
 
-![Export Device List raw (json)](../Images/ExportDevicesRaw.png)
-
-* Aller dans la section [Outils > Outils](WebUI_Outils.md#outils).
-* Cliquer sur le bouton __Liste des équipemenst Raw (json)__.
-* Cliquer sur le bouton __Exporter__.
-
-Un fichier export.json sera générer.
-
-* Créer une [Issue sur Github](https://github.com/pipiche38/Domoticz-Zigate/issues/new?assignees=&labels=&template=Add_New_Hardware.md&title=) en indiquant les informations suivantes :
-
-  * Marque de l’objet
-  * Modèle de l’objet
-  * Lien permettant de le commander
-  * Branche du plugin, Version du plugin
-  * Description du fonctionnement attendu, versus comportement observé
-  * Le fichier export.json obtenu précédemment.
-  * Logs lors de l'appairage et lors des manips de tests. L'idéal est d'utiliser la procédure [Un fichier de log pour DomoticZ](https://easydomoticz.com/un-fichier-log-pour-domoticz/). Vous pourrez ensuite attacher le fichier de log avec votre post.
-  * Log correspondant au démarrage de DomoticZ (avec le démarrage du plugin ZiGate) et les différents essais d'appairage que vous pouvez faire.
-
-??? garder lien vers github ou mettre celui vers le forum FR
+Merci de suivre ce guide [[A lire avant de poster] Guide pour bien formuler une demande](https://easydomoticz.com/forum/viewtopic.php?f=28&t=10886) afin que nous ayons un maximum d'informations dés le départ.

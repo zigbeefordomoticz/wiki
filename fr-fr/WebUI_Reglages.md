@@ -206,6 +206,8 @@ Pas de paramètre simple dans ce module.
 
 Permet d'activer des transitions graduelles entre l'état actuel et l'état demandé. Applicable pour les lumières et les groupes.
 
+ For example how many 10th of second it will take to move from the current Color to the Color I requested via Domoticz. Color temp is used for White Color" !!!
+
 ### Les paramètres
 
 Pas de paramètre simple dans ce module.
