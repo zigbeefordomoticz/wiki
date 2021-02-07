@@ -73,7 +73,7 @@ Maintenant, toutes les évènements de la télécommandes seront visibles sur le
 
 #### Utiliser la télécommande pour d'autres choses que des ampoules Ikea
 
-* Procéder à l'appairage de la télécommande en suivant la méthode précédamment décrite.
-* Supprimer ensuite l'ampoule utilisée dans le groupe créé lors de l'apparaige de la telecommande avac l'ampoule : *Une fois l'opération terminée, seules la ZiGate et la télécommande doivent rester dans ce groupe.*
+* Procéder à l'appairage de la télécommande en suivant la méthode précédemment décrite.
+* Supprimer ensuite l'ampoule utilisée dans le groupe créé lors de l’appairage de la télécommande avec l'ampoule : *Une fois l'opération terminée, seules la ZiGate et la télécommande doivent rester dans ce groupe.*
 
 __Une ampoule Ikea est obligatoire pour appairer la télécommande avec la ZiGate.__ Cela oblige l'achat d'une ampoule en plus de la télécommande, mais ceci est la seule méthode trouvée pour pouvoir réutiliser la télécommande.
