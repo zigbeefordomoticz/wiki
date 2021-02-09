@@ -21,11 +21,11 @@ Voici la page __Appairage__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet d'appairer les dispositifs avec la ZiGate et DomoticZ.
+Cette page permet d'appairer les objets avec la ZiGate et DomoticZ.
 
 Elle permet :
 
-* D'ajouter un objet avec un retour d'info
+* D'ajouter un objet avec l'assistant
 * D'activer le mode appairage de la ZiGate (permanent ou 4 minutes)
 * D'ajouter un objet via un routeur particulier
 
@@ -45,7 +45,7 @@ L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tou
 
 ### Utilisation
 
-Cette page permet de gérer les groupes de dispositifs dans la ZiGate.
+Cette page permet de gérer les groupes d'objets dans la ZiGate.
 
 Elle permet :
 
@@ -71,7 +71,7 @@ Cette page permet de gérer le fonctionnement du hardware de la ZiGate.
 
 Elle permet :
 
-* De faire un redémarrage logiciel de la ZiGate : Cette action n’entraîne **aucune perte des dispositifs appairés**
+* De faire un redémarrage logiciel de la ZiGate : Cette action n’entraîne **aucune perte des objets appairés**
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
 

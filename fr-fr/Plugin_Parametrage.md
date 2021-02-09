@@ -71,7 +71,7 @@ Liste non-exhaustive des notifications :
 
 * Succès d'appairage
 * Échec d'appairage
-* Exclusion d'un dispositif
+* Exclusion d'un objet
 * Rapport de topologie réseau disponible
 * Rapport d'interférences réseau disponible
 * Problème réseau

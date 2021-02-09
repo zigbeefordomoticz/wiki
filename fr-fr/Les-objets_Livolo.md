@@ -10,7 +10,7 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 ## Avertissement
 
 Livolo semble __ne pas suivre__ les standard ZigBee. Il en résulte :
-* la stabilité peut-être un problème : l'interrupteur se déconnecte de temps en temps et il n'est pas évident de le faire revenir. Une fois, il a été nécessaire de faire une Erase PDM pour refaire un appairage complet (avec tous les autres dispositifs)
+* la stabilité peut-être un problème : l'interrupteur se déconnecte de temps en temps et il n'est pas évident de le faire revenir. Une fois, il a été nécessaire de faire une Erase PDM pour refaire un appairage complet (avec tous les autres objets)
 * l'extensibilité (la capacité d'avoir beaucoup d'objets) peut-être un problème et __peut impacter négativement les autres objets__.  
 
 
@@ -25,7 +25,7 @@ Livolo semble __ne pas suivre__ les standard ZigBee. Il en résulte :
 ## L'appairage
 
 * Mettre la ZiGate sur le canal 26 (voir le tutoriel [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md))
-* Mettre la ZiGate en mode appairage (voir le tutoriel [Ajouter un nouveau dispositif](Tuto_Appairage-objet.md))
+* Mettre la ZiGate en mode appairage (voir le tutoriel [Ajouter un nouveau objet](Tuto_Appairage-objet.md))
 * Lancer le processus d'appairage sur l'interrupteur en appuyant sur un bouton pendant 6 secondes. Un bip se fera entendre.
 
 Après un moment, l'interrupteur devrait être appairer et deux Widgets seront créer dans DomoticZ.
@@ -36,13 +36,13 @@ Que l'interrupteur soit à simple ou à double commande, il sera identifier comm
 
 ## Forcer le canal 11
 
-Il est possible de basculer un dispositif Livolo appairé sur le canal 11 (et seulement le 11).
+Il est possible de basculer un objet Livolo appairé sur le canal 11 (et seulement le 11).
 
 L'interrupteur doit être appairé sur le canal 26.
 
 * Mettre la ZiGate sur le canal 11 (voir le tutoriel [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md))
 
-Après un moment, le dispositif Livolo devrait basculer automatiquement sur le canal 11.
+Après un moment, l'objet Livolo devrait basculer automatiquement sur le canal 11.
 
 Malheureusement, __en cas de pane de courant__, il faudra supprimer les Widgets dans DomoticZ et refaire le processus d'appairage sur le canal 26.
 

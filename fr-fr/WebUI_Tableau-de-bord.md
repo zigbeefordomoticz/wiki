@@ -18,7 +18,7 @@ Ils indiquent l'état du trafic :
 
 #### Les 3 graphiques du bas
 
-Ils indiquent l'état des dispositifs :
+Ils indiquent l'état des objets :
 * Le type
 * La santé
 * Le niveau de batterie

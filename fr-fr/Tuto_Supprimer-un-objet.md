@@ -36,7 +36,7 @@ Il existe plusieurs méthodes en fonction du type d'objet :
 
 Il n'y a pas de suppression automatique : il faut le faire manuellement.
 
-* S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-objet.md) : le bouton "Accepter de nouveaux dispositifs" doit être éteint, la LED bleue de la ZiGate ne doit pas clignoter.
+* S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-objet.md) : le bouton "Accepter de nouveaux objets" doit être éteint, la LED bleue de la ZiGate ne doit pas clignoter.
 * Faire un __Reset__ sur l'objet' (comme pour l'appairer).
 
 Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
@@ -58,7 +58,7 @@ Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
 `Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 
-Si vous ne voyez pas de message similaire, il faut appliquer la procédure pour [Supprimer les dispositifs terminaux](#supprimer-les-dispositifs-terminaux).
+Si vous ne voyez pas de message similaire, il faut appliquer la procédure pour [Supprimer les objets terminaux](#supprimer-les-objets-terminaux).
 
 
 ## Information

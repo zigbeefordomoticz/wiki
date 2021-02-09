@@ -9,11 +9,11 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation](Plugin_Install
 
 L'interface d'administration vous donne accéder aux éléments suivants :
 - Un tableau de bord synthétique
-- La gestion des dispositifs et des groupes
+- La gestion des objets et des groupes
 - La visualisation de la topologie et la qualité du réseau ZigBee
-- Un jeu de commandes permettant d'administrer la ZiGate, le plugin et les dispositifs
+- Un jeu de commandes permettant d'administrer la ZiGate, le plugin et les objets
 - La configuration du plugin
-- Un jeu d'outils permettant le debug, la gestion des erreurs et l'interaction directe avec les dispositifs.
+- Un jeu d'outils permettant le debug, la gestion des erreurs et l'interaction directe avec les objets.
 
 Vous pouvez accéder à l'interface web d'administration en allant à la page http://IP-serveur-domoticz:numéro-de-port-défini-dans-paramétrage.
 
@@ -30,7 +30,7 @@ Sur le bas de la page, bandeau vert, vous disposez des informations suivantes (d
 - Le nombre de messages envoyés/reçus par seconde par la ZiGate
 - Le MaxLoad (indication du nombre de messages en attente d'envoi par la ZiGate)
   - Une valeur de MaxLoad supérieure à 5 peut être indicative d'un engorgement et donc d'un dysfonctionnement.
-  - Une fréquence trop élevée d'interrogation des dispositifs peut être la cause d'un MaxLoad élevé (>5).
+  - Une fréquence trop élevée d'interrogation des objets peut être la cause d'un MaxLoad élevé (>5).
 - L'état du plugin (Busy, Ready, etc..)
 - La version du plugin
 - La version du firmware de la ZiGate

@@ -27,9 +27,9 @@ Cette page permet d'exécuter les différents outils disponibles dans le plugin 
 
 | Outils  | Outils   | Outils   | Outils   |
 | :-----: |:-------:|:-------:|:-------:|
-| [Plugin infos (json)](#plugin-infos-json) | [ZiGate infos (json)](#zigate-infos-json) | [Liste des Widgets DomoticZ (json)](#liste-des-widgets-domoticz-json) | [Liste des équipements (json)](#liste-des-%C3%A9quipements-json) |
-| [Liste des groupes (json)](#liste-des-groupes-json) | [Liste des équipements raw (json)](#liste-des-%C3%A9quipements-raw-json) | [Santé plugin (json)](#sant%C3%A9-plugin-json) | [zGroup-1st-devices (json)](#zgroup-1st-devices-json) |
-| [Paramètres (json)](#param%C3%A8tres-json) | [Trafic (json)](#trafic-json) | [Liste des dispositifs (json)](#liste-des-dispositifs-json) | [Paramètres DomoticZ (json)](#param%C3%A8tres-domoticz-json) |
+| [Plugin infos (json)](#plugin-infos-json) | [ZiGate infos (json)](#zigate-infos-json) | [Liste des dispositifs DomoticZ (json)](#liste-des-dispositifs-domoticz-json) | [Liste des objets (json)](#liste-des-%objets-json) |
+| [Liste des groupes (json)](#liste-des-groupes-json) | [Liste des objets raw (json)](#liste-des-objets-raw-json) | [Santé plugin (json)](#sant%C3%A9-plugin-json) | [zGroup-1st-devices (json)](#zgroup-1st-devices-json) |
+| [Paramètres (json)](#param%C3%A8tres-json) | [Trafic (json)](#trafic-json) | [Liste des objets (json)](#liste-des-objets-json) | [Paramètres DomoticZ (json)](#param%C3%A8tres-domoticz-json) |
 
 
 #### Plugin infos (json)
@@ -102,7 +102,7 @@ Cet outil donne toutes les statistiques de la ZiGate.
 Usage : Débogage
 API REST : plugin-stat
 
-#### Liste des dispositifs (json)
+#### Liste des objets (json)
 
 Cet outil liste tous les objets. ???
 
@@ -147,7 +147,7 @@ Voici la page __Couplage__ de l'interface Web du plugin :
 
 Cette page permet d'exécuter de coupler des objets.
 
-Voir le tutoriel [Coupler deux dispositifs entre eux](Tuto_Coupler-deux-dispositifs.md)
+Voir le tutoriel [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md)
 
 ------------------------------------------------
 ## Debug

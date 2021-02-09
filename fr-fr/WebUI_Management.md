@@ -4,21 +4,21 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 
 La section __Management__ comporte les pages :
 
-* [Gestion des dispositifs](#gestion-des-dispositifs)
+* [Gestion des objets](#gestion-des-objets)
 * [Gestion des groupes](#gestion-des-groupes)
 
 
 ------------------------------------------------
-## Gestion des dispositifs
+## Gestion des objetss
 
-Voici la page __Gestion des dispositifs__ de l'interface Web du plugin :
+Voici la page __Gestion des objets__ de l'interface Web du plugin :
 
 ![Device Management](../Images/Device-Management.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
-Cette page permet de lister tous les dispositifs appairés avec le plugin.
+Cette page permet de lister tous les objets appairés avec le plugin.
 
 Elle permet :
 
@@ -26,7 +26,7 @@ Elle permet :
 * D'assigner des paramètres aux objets indépendamment les uns des autres.
 * De visualiser les informations suivantes pour chaque objet :
   * Le ShortId (l'adresse IP du réseau ZigBee) et l'IEEE (l'adresse Mac Address du ZigBee).
-  * Le Modèle de l'objet (c'est le type de composant remonté par le dispositif lors de son appairage).
+  * Le Modèle de l'objet (c'est le type de composant remonté par l'objet lors de son appairage).
   * Le(s) nom(s) du(des) dispositif(s) DomoticZ attaché(s) à l'objet.
   * Le surnom donné au sein de cette interface (**Astuce** : donner un surnom identique au nom du dispositif DomoticZ).
   * Les fonctionnalités sur le réseau offertes par l'objet et son mode d'alimentation.

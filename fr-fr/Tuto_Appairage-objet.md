@@ -48,17 +48,17 @@ Il existe plusieurs méthodes :
 * Appairage sur un routeur spécifique
 
 ------------------------------------------------
-### 1. Appairage avec l'assistant
+### 1. Appairage avec le suivi
 
-* Aller dans le module __Ajout de dispositifs__ et cliquer sur __GO__ (le mode appairage sera actif pendant 4 minutes)
+* Aller dans le module __Appairer un objet avec l'assistant__ et cliquer sur __Appairer__ (le mode appairage sera actif pendant 4 minutes)
 
 ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
  La LED bleu de la ZiGate doit clignoter
 
-* Faire un Reset de l'objet pour le passer en mode appairage
+* Faire un Reset de l'objet pour le passer en mode appairage. *Se référer à la documentation de l'objet si nécessaire.*
 
- Lorsque l'appairage est effectué, les informations de l'objet apparaissent dans la fenêtre
+ Lorsque l'appairage est effectué, les informations de l'objet apparaissent dans la fenêtre de l'assistant.
 
 ![Assisted Provisioning: Done](../Images/Provisionning_3.png)
 
@@ -74,7 +74,7 @@ Si rien ne se produit :
 Cette méthode permettra de passer la ZiGate en mode appairage pendant une durée. Les informations d'appairage seront affichées dans la logs de DomoticZ.
 *Conseil :* Filtre les logs afin de ne garder que les lignes concernant la ZiGate
 
-* Aller dans le module __Ajout de dispositifs__
+* Aller dans le module __Appairage sur une durée__
 
 * Cliquer le bouton __4 minutes__ ou __permanent__ pour choir la durée du mode appairage souhaitée
 
@@ -89,6 +89,8 @@ Cette méthode permettra de passer la ZiGate en mode appairage pendant une duré
 ### 3. Appairage sur un routeur spécifique
 
 Par défaut, la ZiGate va déterminer le meilleur chemin pour communiquer avec les objets. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouvel objet.
+
+* Aller dans le module __Appairage sur un routeur spécifique__
 
 * Sélectionner le routeur désiré dans la liste
 

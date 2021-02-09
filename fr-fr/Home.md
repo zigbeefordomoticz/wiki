@@ -11,12 +11,12 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Introduction
 
-L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer les dispositifs ZigBee utilisés par DomoticZ.
+L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer les objets ZigBee utilisés par DomoticZ.
 
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
 
-Voici une liste non exhaustive des dispositifs compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin.
-Il est possible qu'il y ait d'autres dispositifs ZigBee qui fonctionnent (merci de remonter l'info afin que la liste soit mise à jour).
+Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin.
+Il est possible qu'il y ait d'autres objets ZigBee qui fonctionnent (merci de remonter l'info afin que la liste soit mise à jour).
 
 
 ## Lexique
@@ -82,13 +82,13 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
-## Que faire si un dispositif ne fonctionne pas correctement ?
+## Que faire si un objet ne fonctionne pas correctement ?
 
 * [Problèmes d'appairage](Probleme_Appairage.md)
 * [Aide au débogage](Probleme_Aide-Debogage.md)
 
 
-## Particularités de certains dispositifs
+## Particularités de certains objets
 
 * [BlitzWolf](Les-objets_Blitzwolf.md)
 * [Ikea Tradfri](Les-objets_Ikea.md)
@@ -111,8 +111,8 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 ## Scripts
 
 * [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
-* [Vérifier la perte de dispositifs](../Contrib/CheckDeadDevices.lua) en Lua
-* [Vérifier la perte de dispositifs](../Contrib/CheckLastSeen.dzVents) en DzVents
+* [Vérifier la perte d'objets](../Contrib/CheckDeadDevices.lua) en Lua
+* [Vérifier la perte d'objets](../Contrib/CheckLastSeen.dzVents) en DzVents
 
 [D'autres exemples](../Contrib/)
 

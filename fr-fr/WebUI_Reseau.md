@@ -44,21 +44,21 @@ Le rapport de topologie réseau est constitué de deux graphiques présentant le
 
 #### Le graphique du maillage
 
-L'illustration de votre maillage montre tous les liens entre dispositifs et ZiGate.
+L'illustration de votre maillage montre tous les liens entre les objets et ZiGate.
 En déplaçant votre souris sur un lien un pop-up vous indique les composants participant à ce lien ainsi que la qualité de la liaison (LQI) : échelle de 0 (très mauvaise) à 255 (la meilleure).
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
 #### Le graphique du réseau
 
-L'illustration de votre maillage montre l'architecture du réseau ZigBee (les connexions entre les différents dispositifs).
-Vous pouvez visualiser sur quel routeur est accroché votre dispositif terminal.
+L'illustration de votre maillage montre l'architecture du réseau ZigBee (les connexions entre les différents objets).
+Vous pouvez visualiser sur quel routeur est accroché votre objet terminal.
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
 
-#### La liste des dispositifs liés à la ZiGate
+#### La liste des objets liés à la ZiGate
 
-Vous retrouvez sous cet item un tableau fournissant des informations relatives aux dispositifs liées à la ZiGate et remontées dans les widgets DomoticZ.
+Vous retrouvez sous cet item un tableau fournissant des informations relatives aux objets liées à la ZiGate et remontées dans les widgets DomoticZ.
 
 ![Network_Topology](Images/FR_WebUI-Reseau-ListDispositifs.png)
 

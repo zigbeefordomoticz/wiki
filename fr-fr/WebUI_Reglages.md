@@ -8,11 +8,11 @@ La section __Réglage__ comporte les modules :
 
 | Modules  | Modules  | Modules  |
 | :------------: |:---------------:|:-----:|
-| [Liste des services](#liste-des-services)      | [Réglages de la gestion des dispositifs](#r%C3%A9glages-de-la-gestion-des-dispositifs) | [Réglages Legrand Netatmo](#r%C3%A9glages-legrand-netatmo) |
+| [Liste des services](#liste-des-services)      | [Réglages de la gestion des objets](#r%C3%A9glages-de-la-gestion-des-objets) | [Réglages Legrand Netatmo](#r%C3%A9glages-legrand-netatmo) |
 | [Réglages des groupes](#r%C3%A9glages-des-groupes)     | [Réglages de la ZiGate](#r%C3%A9glages-de-la-zigate)       |   [Réglages Philips](#r%C3%A9glages-legrand-philips) |
 | [DomoticZ URL](#domoticz-url) | [Réglages de l'environnement du plugin](#r%C3%A9glages-de-lenvironnement-du-plugin)        |    [Réglages Ikea Tradfri](#r%C3%A9glages-legrand-ikea-tradfri) |
 | [Réglages de l'interface web](#r%C3%A9glages-de-linterface-web) | [Autres réglages](#autres-r%C3%A9glages) | [Réglages Enki Lexman](#r%C3%A9glages-enki-lexman) |
-|[Interrogation des dispositifs](#interrogation-des-dispositifs)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#r%C3%A9glages-schneider-wiser) |
+|[Interrogation des objets](#interrogation-des-objets)  | [Transition lumières](#r%C3%A9glages-command-transitions-for-lights) | [Réglages Schneider Wiser](#r%C3%A9glages-schneider-wiser) |
 
 *La disposition dans ce tableau ne correspond pas forcément à la disposition sur la page du plugin.*
 
@@ -31,10 +31,10 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZiGate |
-| Activer interrogation des dispositifs | | Désactivé | | Active la fonction Polling |
+| Activer interrogation des objets | | Désactivé | | Active la fonction Polling |
 | Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour. Cette vérification se fait toutes les 6 heures. __A ne pas activer sur Synology__|
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!*|
-| pingDevices | | Activé | | Active le fonction ping sur tous les dispositifs |
+| pingDevices | | Activé | | Active le fonction ping sur tous les objets |
 
 
 
@@ -53,7 +53,7 @@ Pas de paramètres avancés dans ce module.
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Groupe est Allumé si un équipement Allumé | | Activé | | Désactivé, le groupe sera à ON si tous les objets sont allumés |
 | forceGroupDeviceRefresh | | Activé | | Rafraîchi tous les objets d'un groupe après une commande envoyée au groupe |
-| reComputeGroupState | | Activé | | Rafraîchi les états des groupes régulièrement en fonction des états des dispositifs du groupe |
+| reComputeGroupState | | Activé | | Rafraîchi les états des groupes régulièrement en fonction des états des objets du groupe |
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!* |
 | pingDevices | | Activé | | ??? |
 
@@ -100,9 +100,9 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 
 
 ------------------------------------------------
-## Interrogation des dispositifs
+## Interrogation des objets
 
-* La fonction [Activer interrogation des dispositifs](Tuto_Appairage-objet.md) doit être activée.
+* La fonction [Activer interrogation des objets](Tuto_Appairage-objet.md) doit être activée.
 
 Il n'est pas recommandé d'activer cette fonction d'interrogation (polling en anglais) car elle va augmenter la charge sur la ZiGate et sur le réseau. Les valeurs sont indiquées en secondes. Réduire le délai va augmenter la fréquence d'interrogation pouvant entraîner un ralentissement du réseau jusqu'à la perte de commandes.
 
@@ -114,7 +114,7 @@ Pas de paramètre simple dans ce module.
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| pingDevicesFeq | seconde | 3600 | | Fréquence d'interrogation de tous les dispositifs |
+| pingDevicesFeq | seconde | 3600 | | Fréquence d'interrogation de tous les objets |
 | pollingPhilips | seconde | 0 | | Les objets Philips ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingGledopto | seconde | 0 | | Les objets Gledopto ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
 | pollingSchneider | seconde | 0 | | Les objets Schneider ne renvoient pas automatiquement leur statuts. Il faut donc activer le polling afin d'avoir un retour d'état. (300 ou au-dessus recommandé) |
@@ -131,7 +131,7 @@ Pas de paramètre simple dans ce module.
 
 
 ------------------------------------------------
-## Réglages de la gestion des dispositifs
+## Réglages de la gestion des objets
 
 ### Les paramètres
 
@@ -171,7 +171,7 @@ Pas de paramètre simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Creation du Group 0000 | | Désactivé | | ??? |
-| Suppression dans la ZiGate | | Désactivé | | Supprime le dispositif dans la ZiGate en même temps que la suppression dans DomoticZ |
+| Suppression dans la ZiGate | | Désactivé | | Supprime l'objet dans la ZiGate en même temps que la suppression dans DomoticZ |
 | Reset permit to join at startup | | Activé | | Active un appairage au démarrage du plugin  |
 | Activer le Ping | | Activé | | Active un ping de la ZiGate toute les 4 minutes afin de vérifier la connexion |
 | breakConfigureReporting | | Désactivé | | ??? |
@@ -324,7 +324,7 @@ Permet d'activer des modes spécifiques aux équipements Schneider Wiser
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| enableSchneiderWiser | | Désactivé | | Active l'appairage de dispositifs Schneider Wiser |
+| enableSchneiderWiser | | Désactivé | | Active l'appairage des objets Schneider Wiser |
 
 ### Les paramètres avancés
 

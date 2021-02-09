@@ -23,7 +23,7 @@ Les objets nécessitant une configuration particulière :
 
 Allumer/Éteindre six fois de suite votre ampoule (hors télécommande Ikea); l'ampoule envoie alors une annonce à la ZiGate qui répondra en demandant plus d'informations comme le modèle avant de l'inclure ensuite dans DomoticZ. Dans le cas où le modèle n'est pas connu dans le fichier DeviceConf.txt, le processus prendra un peu plus de temps mais s'effectuera complètement dès que la ZiGate disposera des informations nécessaires.
 
-Dès l'appairage, de 1 à 3 dispositifs sont présentés à DomoticZ
+Dès l'appairage, de 1 à 3 dispositifs sont présentés à DomoticZ :
 
 | Type                         | Fonction                                      |
 | ---------------------------- | --------------------------------------------- |
@@ -33,7 +33,7 @@ Dès l'appairage, de 1 à 3 dispositifs sont présentés à DomoticZ
 
 ### Les prises connectées
 
-Après avoir mis la ZiGate en mode appairage voir le tutoriel [Appairer un dispositif](Tuto_Appairage-objet.md), l'appairage, sans télécommande Ikea, s'effectue en activant 6 fois dans les 5 secondes sur le bouton d'appairage accessible avec un extracteur de carte SIM placé sous la prise.
+Après avoir mis la ZiGate en mode appairage voir le tutoriel [Appairer un objet](Tuto_Appairage-objet.md), l'appairage, sans télécommande Ikea, s'effectue en activant 6 fois dans les 5 secondes sur le bouton d'appairage accessible avec un extracteur de carte SIM placé sous la prise.
 
 **Attention :** La manipulation en soit n'est pas compliquée mais hasardeuse, il est donc fort probable qu'il faille redoubler de tentatives.....
 

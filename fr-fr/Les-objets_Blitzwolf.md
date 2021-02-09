@@ -31,6 +31,6 @@ Quatre dispositifs sont alors créés et remontés vers DomoticZ :
 
 Vous pouvez supprimer l'un des dispositifs de mesure de puissance que vous n'utilisez pas. La consommation cumulée est mise à jour tous les 0.01 kWh.
 
-**Attention :** La remontée des informations de consommation nécessite l'activation du polling associé (pollingBlitzwolfPower) voir la section [Réglages > Interrogation des dispositifs](WebUI_Reglages.md#interrogation-des-dispositifs)
+**Attention :** La remontée des informations de consommation nécessite l'activation du polling associé (pollingBlitzwolfPower) voir la section [Réglages > Interrogation des objets](WebUI_Reglages.md#interrogation-des-objets)
 
 **Information :** Pour un lave-linge, une fréquence de 60s est suffisante pour contrôler la fin du cycle.
