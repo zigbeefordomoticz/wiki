@@ -73,4 +73,4 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 * Lancer la commande `git checkout stable-fix` pour aller sur le canal stable-fix
 * Lancer la commande `git checkout beta` pour aller sur le canal beta
 
-[Poursuivre sur la mise à jour du plugin](./Home.md#mises-%C3%A0-jour-du-plugin)
+[Poursuivre sur la mise à jour du plugin](Home.md#mises-%C3%A0-jour-du-plugin)
