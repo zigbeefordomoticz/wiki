@@ -33,7 +33,7 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
 ## Les branches de mise à jour
 
 
-Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différentes canaux de mise à jour.
+Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différents canaux de mise à jour.
 
 Les différentes branches sont :
 
