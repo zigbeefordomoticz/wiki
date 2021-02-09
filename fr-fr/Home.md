@@ -2,11 +2,11 @@
 
 Bienvenue sur le wiki du plugin ZiGate pour DomoticZ !
 
-Le but de ce wiki est de fournir les plus d'informations possible sur l'utilisation du plugin.
+Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisation du plugin.
 
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le plugin ZiGate. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
-**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** si des choses ne sont pas claires ou approximées, ne pas hésiter à nous faire un retour.
+**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** si des choses ne sont pas claires ou approximatives, ne pas hésiter à nous faire un retour.
 
 
 ## Introduction
@@ -23,20 +23,20 @@ Il est possible qu'il y ait d'autres dispositifs ZigBee qui fonctionnent (merci 
 
 Explication des termes utilisés sur ce Wiki :
 
-| Terme | Signification |
-| ----- | ------------- |
-| Objet | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
-| Routeur | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle dans le maillage du réseau ZigBee |
+| Terme          | Signification |
+| -------------- | ------------- |
+| Objet          | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
+| Routeur        | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle dans le maillage du réseau ZigBee |
 | Objet terminal | Un objet généralement sur batterie qui envoi des informations : une sonde, un bouton |
-| Dispositif | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
-| Widget | Tuile dans le tableau de bord de DomoticZ correspondante à un dispositif |
+| Dispositif     | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
+| Widget         | Tuile dans le tableau de bord de DomoticZ correspondante à un dispositif |
 
 
 
 
 ## Installation
 
-Il existe plusieurs façons d'installer le plugin ZiGate pour DomoticZ qui sont différentes en fonction du système d'exploitation.
+Il existe plusieurs façons d'installer le plugin ZiGate pour DomoticZ qui sont différentes selon le système d'exploitation.
 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
@@ -101,7 +101,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## En cas de problèmes
 
-1. Vérifiez les logs de DomoticZ, il devrait y avoir des informations si quelque chose ne fonctionne pas correctement.
+1. Vérifiez les logs de DomoticZ, ils contiennent de nombreuses informations utiles à la compréhension du(es) disfonctionnements.
 2. Venez en discuter sur les forums :
 
    * [Le forum français](https://easydomoticz.com/forum/viewforum.php?f=28)
