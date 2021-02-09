@@ -63,7 +63,7 @@ Si vous êtes sur la branche __Beta__ (suite à l'ajout d'un nouveau matériel p
 
 ### Passer d'une branche à l'autre
 
-Il est recommandé des faire une [sauvegarde](5_Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
+Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
 
 * Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 
@@ -72,3 +72,5 @@ Il est recommandé des faire une [sauvegarde](5_Sauvegardes.md) avant de faire d
 * Lancer la commande `git checkout stable` pour aller sur le canal stable
 * Lancer la commande `git checkout stable-fix` pour aller sur le canal stable-fix
 * Lancer la commande `git checkout beta` pour aller sur le canal beta
+
+[Poursuivre sur la mise à jour du plugin](./Home.md#mises-%C3%A0-jour-du-plugin)
