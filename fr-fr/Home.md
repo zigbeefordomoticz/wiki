@@ -15,12 +15,8 @@ L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https
 
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
 
-<<<<<<< HEAD
-Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin lorsque l’étiquette ZiGate est présente.
-=======
+
 Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin lorsque l’étiquette ZIGATE est présente.
->>>>>>> c7440305ab4196703900eb740c7636c75b42ab75
-Il est possible qu'il y ait d'autres objets ZigBee qui fonctionnent (merci de remonter l'info afin que la liste soit mise à jour).
 
 
 ## Lexique
