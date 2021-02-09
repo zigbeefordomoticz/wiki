@@ -6,7 +6,7 @@ Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisati
 
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le plugin ZiGate. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
-**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** si des choses ne sont pas claires ou approximatives, ne pas hésiter à nous faire un retour.
+**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** nous avons essayé de faire de notre mieux, mais si des choses ne sont pas claires ou approximatives, ne pas hésiter à nous faire un retour. Merci d'avance.
 
 
 ## Introduction
@@ -14,7 +14,6 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer les objets ZigBee utilisés par DomoticZ.
 
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
-
 
 Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin lorsque l’étiquette ZIGATE est présente.
 
@@ -102,7 +101,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 ## En cas de problèmes
 
-1. Vérifiez les logs de DomoticZ, ils contiennent de nombreuses informations utiles à la compréhension du(es) disfonctionnements.
+1. Vérifiez les logs de DomoticZ, ils contiennent de nombreuses informations utiles à la compréhension du(es) dysfonctionnements.
 2. Venez en discuter sur les forums :
 
    * [Le forum français](https://easydomoticz.com/forum/viewforum.php?f=28)
@@ -112,7 +111,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 ## Scripts
 
 * [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
-* [Vérifier la perte d'objets](../Contrib/CheckDeadDevices.lua) en Lua
+* [Vérifier la perte d'objets](../Contrib/CheckDeadDevices.lua) en LUA
 * [Vérifier la perte d'objets](../Contrib/CheckLastSeen.dzVents) en DzVents
 
 [D'autres exemples](../Contrib/)
