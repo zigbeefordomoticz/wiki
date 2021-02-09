@@ -38,4 +38,4 @@ Sur le bas de la page, bandeau vert, vous disposez des informations suivantes (d
 ![Zigate Web Admin Interface](../Images/Dashboard.png)
 
 ## Présentation de l'interface d'administration
-[L'interface web du plugin](./Home.md#linterface-web-du-plugin)
+[L'interface web du plugin](Home.md#linterface-web-du-plugin)
