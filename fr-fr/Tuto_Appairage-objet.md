@@ -76,7 +76,7 @@ Cette méthode permettra de passer la ZiGate en mode appairage pendant une duré
 
 * Aller dans le module __Appairage sur une durée__
 
-* Cliquer le bouton __4 minutes__ ou __permanent__ pour choir la durée du mode appairage souhaitée
+* Cliquer le bouton __4 minutes__ ou __permanent__ pour chosir la durée du mode appairage souhaitée
 
  La LED bleu de la ZiGate doit clignoter.
 
