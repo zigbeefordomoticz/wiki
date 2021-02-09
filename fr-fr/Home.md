@@ -75,11 +75,11 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Ajouter un nouvel objet](Tuto_Appairage-objet.md)
 * [Supprimer un objet appairé](Tuto_Supprimer-un-objet.md)
 * [Paramétrer les objets](Tuto_Parametrer-les-objets.md)
-* [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Gérer les groupes](Tuto_Gerer-les-groupes.md)
+* [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md)
+* [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objetf.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
-* [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md)
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
