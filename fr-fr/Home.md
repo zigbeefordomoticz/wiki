@@ -74,6 +74,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
 * [Ajouter un nouvel objet](Tuto_Appairage-objet.md)
 * [Supprimer un objet appairé](Tuto_Supprimer-un-objet.md)
+* [Paramétrer les objets](Tuto_Parametrer-les-objets.md)
 * [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Gérer les groupes](Tuto_Gerer-les-groupes.md)
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objetf.md)

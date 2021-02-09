@@ -1,4 +1,4 @@
-# Tutoriel - Paramétrer des objets
+# Tutoriel - Paramétrer les objets
 
 Ce tutoriel explique comment paramétrer spécifiquement certains objets.
 
