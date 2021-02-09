@@ -63,5 +63,5 @@ Si vous ne voyez pas de message similaire, il faut appliquer la procédure pour 
 
 ## Information
 
-Si vous supprimer tous les dispositifs d'un objet terminal, le plugin enverra une demande de __Reset__ mais comme un objet terminal ne fait qu'envoyer des informations, il n'écoute pas le réseau : il ne recevra donc jamais la demande Reset envoyée pour lui par le plugin.
+Si vous supprimez tous les dispositifs d'un objet terminal, le plugin enverra une demande de __Reset__ mais comme un objet terminal ne fait qu'envoyer des informations, il n'écoute pas le réseau : il ne recevra donc jamais la demande Reset envoyée pour lui par le plugin.
 C'est la raison pour laquelle, il faut faire le Reset manuellement sur l'objet.
