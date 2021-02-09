@@ -66,3 +66,5 @@ cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/
 
 
 4. Redémarrer DomoticZ
+
+Poursuivre vers la presentation de l'[interface Web du plugin](./Home.md#linterface-web-du-plugin)
