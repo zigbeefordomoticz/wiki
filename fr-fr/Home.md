@@ -15,8 +15,8 @@ L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https
 
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
 
-Voici une liste non exhaustive des dispositifs compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin.
-Il est possible qu'il y ait d'autres dispositifs ZigBee qui fonctionnent (merci de remonter l'info afin que la liste soit mise à jour).
+Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin lorsque l'étiqette ZIGATE est présente.
+Il est possible qu'il y ait d'autres objets ZigBee qui fonctionnent (merci de remonter l'info afin que la liste soit mise à jour).
 
 
 ## Lexique
@@ -26,7 +26,7 @@ Explication des termes utilisés sur ce Wiki :
 | Terme          | Signification |
 | -------------- | ------------- |
 | Objet          | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
-| Routeur        | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle dans le maillage du réseau ZigBee |
+| Routeur        | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle de routeur/répéteur dans le maillage du réseau ZigBee |
 | Objet terminal | Un objet généralement sur batterie qui envoi des informations : une sonde, un bouton |
 | Dispositif     | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
 | Widget         | Tuile dans le tableau de bord de DomoticZ correspondante à un dispositif |
