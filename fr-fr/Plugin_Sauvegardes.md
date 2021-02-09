@@ -18,8 +18,7 @@ Modifier les chemins en fonction de votre configuration.
 ## Procédure de sauvegarde
 
 1. Arrêter DomoticZ
-2. Sauvegarder à minima les éléments suivant :
-
+2. Sauvegarder à minima les éléments suivant localisés sous le répertoire d'installation du plugin ZiGate :
 
 * Le fichier  Conf/PluginConf-*.json
 * Le dossier  Data/*
