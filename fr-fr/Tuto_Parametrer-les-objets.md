@@ -20,17 +20,17 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 
 ## Liste des paramètres
 
-| Nom du paramètre | Description | Valeur / Unité | Objet concerné |
+| Nom du paramètre | Description | Valeur / Unité | Objet concerné / Paramètre parent |
 | ---------------- | ----------- | -------------- | -------------- |
 | Calibration    | Permet de définir une valeur de calibration | °C | Tuya eTRV, Eurotronics SPZB0001 |
-| Alarm1         | Configuration de Alarm1 avec les informations Durée, Volume et Mélodie | | Tuya Siren TS0601 |
-| Alarm2         | Configuration de Alarm2 avec les informations Durée, Volume et Mélodie | | Tuya Siren TS0601 |
-| Alarm3         | Configuration de Alarm3 avec les informations Durée, Volume et Mélodie | | Tuya Siren TS0601 |
-| Alarm4         | Configuration de Alarm4 avec les informations Durée, Volume et Mélodie | | Tuya Siren TS0601 |
-| Alarm5         | Configuration de Alarm5 avec les informations Durée, Volume et Mélodie | | Tuya Siren TS0601 |
-| Duration       | Valable seulement  Applicable only inside the Alarm definition, it will configure the duration of alarm in | Seconde | Tuya Siren TS0601 |
-| Volume         | Applicable only inside the Alarm definition, it will configure the Volume of alarm | 0=Fort, 1=Moyen, 2=Faible | Tuya Siren TS0601 |
-| Melody         | Applicable only inside the Alarm definition, it will configure the Melody | de 1 à 15  | Tuya Siren TS0601 |
+| Alarm1         | Configuration de Alarm1 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm2         | Configuration de Alarm2 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm3         | Configuration de Alarm3 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm4         | Configuration de Alarm4 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm5         | Configuration de Alarm5 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Duration       | Durée des Alarm_ | Seconde | Paramètre X pour Alarm1, Alarm2, Alarm3, Alarm4 et Alarm5 |
+| Volume         | Volume des Alarm_ | 0=Fort, 1=Moyen, 2=Faible | Paramètre Y pour Alarm1, Alarm2, Alarm3, Alarm4 et Alarm5 |
+| Melody         | Mélodie des Alarm_ | de 1 à 15  | Paramètre Z pour Alarm1, Alarm2, Alarm3, Alarm4 et Alarm5 |
 | HumidityMinAlarm    | Niveau minimum d'humidité pour déclenchement alarme | % | Tuya Siren TS0601 |
 | HumidityMaxAlarm    | Niveau maximum d'humidité pour déclenchement alarme | % | Tuya Siren TS0601 |
 | TemperatureMinAlarm | Température minimale pour déclenchement alarme | °C | Tuya Siren TS0601 |
@@ -41,5 +41,22 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | moveToColourTemp | Durée de transition pour changer la température de couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToColourRGB  | Durée de transition pour changer la couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToLevel      | Durée de transition pour faire varier l'intensité lumineuse | Dixième de seconde (10=1s) | Toutes les Led variables |
+
+## Exemple
+
+### Exemple de paramètres pour une sirène Tuya TS0601
+
+{
+  "Alarm1": { "Duration": 5, "Volume": 2, "Melody": 1},
+  "Alarm2": { "Duration": 5, "Volume": 2, "Melody": 2},
+  "Alarm3": { "Duration": 5, "Volume": 2, "Melody": 3},
+  "Alarm4": { "Duration": 5, "Volume": 2, "Melody": 4},
+  "Alarm5": { "Duration": 5, "Volume": 2, "Melody": 5},
+  "HumidityMinAlarm": 25,
+  "HumidityMaxAlarm": 75,
+  "TemperatureMinAlarm": 3,
+  "TemperatureMaxAlarm": 27
+}
+
 
 *Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/device-parameters.md) en anglais.*
