@@ -18,3 +18,8 @@ Le nombre de groupes auxquels une ZiGate peut appartenir est limité :
 
 Modèle V1 : 5 Groupes
 Modèle V2 : En attente d'information ???
+
+Le nombre de groupes auxquels un objet peut appartenir est limité :
+
+Modèle V1 : 5 Groupes
+Modèle V2 : En attente d'information ???
