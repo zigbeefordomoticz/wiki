@@ -1,4 +1,4 @@
-![zigate.fr](../Images/ZiGate.png) 
+![zigate.fr](../Images/ZiGate.png)
 
 Bienvenue sur le wiki du plugin ZiGate pour DomoticZ !
 
@@ -60,7 +60,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 * [Présentation générale](WebUI_Presentation-generale.md)
 * La section [Tableau de bord](WebUI_Tableau-de-bord.md)
-* La section [Management](WebUI_Management.md)
+* La section [Gestion](WebUI_Gestion.md)
 * La section [Réseau](WebUI_Reseau.md)
 * La section [Admin](WebUI_Admin.md)
 * La section [Réglages](WebUI_Reglages.md)

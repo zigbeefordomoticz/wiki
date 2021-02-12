@@ -33,7 +33,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 * [Présentation générale](WebUI_Presentation-generale.md)
 * La section [Tableau de bord](WebUI_Tableau-de-bord.md)
-* La section [Management](WebUI_Management.md)
+* La section [Gestion](WebUI_Gestion.md)
 * La section [Réseau](WebUI_Reseau.md)
 * La section [Admin](WebUI_Admin.md)
 * La section [Réglages](WebUI_Reglages.md)
