@@ -13,7 +13,8 @@ La section __Gestion__ comporte les pages :
 
 Voici la page __Gestion des objets__ de l'interface Web du plugin :
 
-![Device Management](../Images/Device-Management-fr.png)
+![Device Management](../Images/Device-management-fr.png)
+
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
