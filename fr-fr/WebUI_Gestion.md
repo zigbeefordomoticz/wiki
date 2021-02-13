@@ -13,7 +13,8 @@ La section __Gestion__ comporte les pages :
 
 Voici la page __Gestion des objets__ de l'interface Web du plugin :
 
-![Device Management](../Images/Device-Management.png)
+![Device Management](../Images/Device-management-fr.png)
+
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -39,7 +40,7 @@ Elle permet :
 
 Voici la page __Gestion des groupes__ de l'interface Web du plugin :
 
-![Group Management](../Images/Group-Management.png)
+![Group Management](../Images/Group-Management-fr.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 Le groupe est vu dans DomoticZ comme un unique widget de type Switch et ce indépendamment du nombre de d'objet composant le groupe. L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous des objets du groupe.
