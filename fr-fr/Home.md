@@ -1,4 +1,4 @@
-# Wiki du Plugin Domoyticz-ZiGate
+# Wiki du Plugin Domoticz-ZiGate
 
 ![zigate.fr](../Images/ZiGate.png)
 
