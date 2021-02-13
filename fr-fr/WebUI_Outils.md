@@ -16,7 +16,7 @@ La section __Outils__ comporte les pages :
 
 Voici la page __Outils__ de l'interface Web du plugin :
 
-![Device Management](Images/FR_WebUI-Outils-Outils.png)
+![Outils](Images/FR_WebUI-Outils-Outils.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -128,7 +128,7 @@ Exemple : http://127.0.0.1:9440/rest-zigate/1/plugin
 
 Voici la page __Commande__ de l'interface Web du plugin :
 
-![Group Management](Images/FR_WebUI-Outils-Commande.png)
+![Commandes](Images/FR_WebUI-Outils-Commande.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -141,7 +141,7 @@ Cette page permet d'exécuter des commandes sur les objets sans passer par Domot
 
 Voici la page __Couplage__ de l'interface Web du plugin :
 
-![Group Management](Images/FR_WebUI-Outils-Couplage.png)
+![Couplage](Images/FR_WebUI-Outils-Couplage.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -156,7 +156,7 @@ Voir le tutoriel [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md).
 
 Voici la page __Debogage__ de l'interface Web du plugin :
 
-![Group Management](Images/FR_WebUI-Outils-Debug.png)
+![Debogage](Images/FR_WebUI-Outils-Debug.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -171,7 +171,7 @@ Voir la page d'[aide au débogage](Probleme_Aide-Debogage.md).
 
 Voici la page __Erreur__ de l'interface Web du plugin :
 
-![Group Management](Images/FR_WebUI-Outils-Erreur.png)
+![Erreur](Images/FR_WebUI-Outils-Erreur.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
