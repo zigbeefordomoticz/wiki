@@ -4,7 +4,7 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 
 Voici la présentation générale de l'interface Web du plugin :
 
-![Zigate Web Admin Interface](../Images/Dashboard.png)
+![Tableau de bord du plugin](Images/FR_WebUI-Tableau-de-bord.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Composition
