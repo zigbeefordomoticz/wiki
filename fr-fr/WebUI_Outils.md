@@ -30,7 +30,7 @@ Voir le tutoriel [Utiliser les outils](Tuto_Utiliser-les-outils.md).
 
 Voici la page __Commande__ de l'interface Web du plugin :
 
-![Commandes](Images/FR_WebUI-Outils-Commande.png)
+![Commandes](Images/FR_WebUI-Outils-Commandes.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -58,7 +58,7 @@ Voir le tutoriel [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md).
 
 Voici la page __Debogage__ de l'interface Web du plugin :
 
-![Debogage](Images/FR_WebUI-Outils-Debug.png)
+![Debogage](Images/FR_WebUI-Outils-Debogage.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -73,7 +73,7 @@ Voir la page d'[aide au débogage](Probleme_Aide-Debogage.md).
 
 Voici la page __Erreur__ de l'interface Web du plugin :
 
-![Erreur](Images/FR_WebUI-Outils-Erreur.png)
+![Erreur](Images/FR_WebUI-Outils-Erreurs.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation

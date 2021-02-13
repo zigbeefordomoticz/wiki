@@ -13,7 +13,7 @@ La section __Réseau__ comporte les pages :
 
 Voici la page __Topologie__ de l'interface Web du plugin :
 
-![Network_Topology](../Images/Network_Topology.png)
+![Network_Topology](Images/FR_WebUI-Reseau-Topologie.png)
 *Cette page est sucseptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
