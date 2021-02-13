@@ -1,4 +1,7 @@
-# Introduction
+# Protection Plugin Web Admin via Basic Authentication
+
+## Introduction
+
 The aim of this page is to allow you to acces to the plugin admin page through a basic authentication page.
 This method uses nginx and a let's encrypt certificate on rpi with raspbian but the nginx configuration works on other systems.
 
@@ -6,8 +9,8 @@ This method uses nginx and a let's encrypt certificate on rpi with raspbian but 
 
 Adding fail2ban (see below) limits the risk of authentication flood attack but you can still have a vulnerability on your system.
 
+## Prerequisite
 
-# Prerequisite
 First of all, you'll need a domain name to generate and use your ssl certificate. A sub domain is necessary if you're using your main domain. I'll use dashboard.
 
 The port 80 need to be open during the certificate generation process.
@@ -19,36 +22,42 @@ You'll need the following tools:
 sudo apt-get install nginx apache2-utils certbot python-certbot-nginx
 ```
 
+## SSL Certificate for nginx
 
-
-# SSL Certificate for nginx
 Be sure that the port 80 is opened.
 
 By following the certbot [instructions](https://certbot.eff.org/lets-encrypt/debianbuster-nginx):
 
 ### Choose how you'd like to run Certbot
+
 * Either get and install your certificates...
-Run this command to get a certificate and have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step.
-```shell
-sudo certbot --nginx
-```
+    Run this command to get a certificate and have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step.
+
+    ```shell
+    sudo certbot --nginx
+    ```
+
 * Or, just get a certificate.
-If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, run this command.
-```shell
-sudo certbot certonly --nginx
-```
+    If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, run this command.
+
+    ```shell
+    sudo certbot certonly --nginx
+    ```
 
 ### Renew certificate
+
 The certificate is valid for 90 days.
 
 The Certbot packages on your system come with a cron job or systemd timer that will renew your certificates automatically before they expire. You will not need to run Certbot again, unless you change your configuration. You can test automatic renewal for your certificates by running this command:
+
 ```shell
 sudo certbot renew --dry-run
 ```
 
 If, like me, you always close the port 80, you'll have to run the renew command manualy after opening it.
 
-# Add a Restricting Access with HTTP Basic Authentication
+## Add a Restricting Access with HTTP Basic Authentication
+
 You can use online generator or the local tool.
 
 Create a password file and a first user. Run the htpasswd utility with the -c flag (to create a new file), the file pathname as the first argument, and the username as the second argument:
@@ -56,16 +65,18 @@ Create a password file and a first user. Run the htpasswd utility with the -c fl
 ```shell
 sudo htpasswd -c /etc/nginx/.htpasswd zigate
 ```
+
 Press Enter and type the password for zigate at the prompts.
 
 You can confirm that the file contains paired usernames and encrypted passwords:
+
 ```shell
 $ cat /etc/nginx/.htpasswd
 zigate:$apr1$/woC1jnP$KAh0SsVn5qeSMjTtn0E9Q0
 ```
 
+## Reverse Proxy with HTTP Basic Authentication
 
-# Reverse Proxy with HTTP Basic Authentication
 Now, we need to configure nginx.
 
 ```shell
@@ -74,7 +85,7 @@ sudo nano /etc/nginx/sites-enabled/default
 
 Add or replace:
 
-```
+```script
 server {
         listen 443 ssl;
         listen [::]:443 ssl;
@@ -105,33 +116,42 @@ server {
         }
 }
 ```
+
 You'll have to fill the server name (server_name) and complete the path name for the certificates ($domain) if you choose the manual option with certbot, otherwise, it's already filled.
 
 When finished, check your configuration:
+
 ```shell
 sudo nginx -t
 ```
+
 and if it's ok, restart nginx:
+
 ```shell
 sudo service nginx restart
 ```
 
-Your dashboard is now accessible: https://dashboard.mydomain.com/
+Your dashboard is now accessible: <https://dashboard.mydomain.com/>
 
-# OPTION 1 - Add jail with fail2ban
+## OPTION 1 - Add jail with fail2ban
+
 This measure can help to protect your system by checking repeatedly fail on authenticate.
 Fail2ban can issue a temporary bans on the offending IP address.
 Install fail2ban:
+
 ```shell
 sudo apt-get install fail2ban
 ```
 
 Add the jail configuration by opening the jail file:
+
 ```shell
 sudo nano /etc/fail2ban/jail.local
 ```
+
 and paste:
-```
+
+```config
 [nginx-http-auth]
 
 enabled  = true
@@ -150,11 +170,13 @@ sudo service fail2ban restart
 ```
 
 You can check what is going on:
+
 ```shell
 sudo fail2ban-client status
 ```
 
-# OPTION 2 - Use the certificate with Domoticz
+## OPTION 2 - Use the certificate with Domoticz
+
 You can use the certificate with domoticz by running (replace \<your domain>):
 
 ```shell

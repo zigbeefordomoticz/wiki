@@ -3,12 +3,12 @@
 This page give access to a set of REST API to query directly the plugin memory. This page is mainly for developers and for debugging purposes.
 The REST API are mainly developped to be used by the plugin Web Admin interface.
 
-For troubleshooting purposes you might be asked to do an export.json of the __Plugin Raw devices (json)__ 
+For troubleshooting purposes you might be asked to do an export.json of the __Plugin Raw devices (json)__
 
 | Tools                       | REST API        | Usage | Description |
 | -----                       | --------------- | ----- | ----------- |
 | Infos plugin (json)         |  /plugin        | dev   | Domoticz plugin parameters |
-| Plugin Raw devices (json)    |  /zdevice-raw   | debug | Plugin database in memory |
+| Plugin Raw devices (json)   |  /zdevice-raw   | debug | Plugin database in memory |
 | zDevice-name (json)         |  /zdevice-name  | dev   |
 | Infos zigate (json)         |  /zigate        | debug | Provide ZiGate related information as Channel, Firmware version ... |
 | Plugin health (json)        |  /plugin-health | debug | Provide health status |
@@ -24,4 +24,4 @@ For troubleshooting purposes you might be asked to do an export.json of the __Pl
 
 If you want to call /plugin-health in order to check the plugin health
 
-wget <http://127.0.0.1:9440/rest-zigate/1/plugin-stat>
+`wget <http://127.0.0.1:9440/rest-zigate/1/plugin-stat>`
