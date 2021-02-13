@@ -6,15 +6,15 @@ Either the information is coming from one of the plugin user (through direct com
 You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/zigate.html)
 
 ### Français
-Ce document est une liste des dispositfs "certfiés" qui fonctionnent avec une Zigate et le plugin Zigate.
+Ce document est une liste des objets "certfiés" qui fonctionnent avec une ZiGate et le plugin ZiGate.
 
-Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du developpeur qui rendu paramétrer le dispositif pour qu'il fonctionne.
+Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du développeur qui rendu paramétrer l'objet pour qu'il fonctionne.
 
-La liste des dispositifs comptatibles avec la Zigate est disponible sur le site [ZiGate Zigbee Compatibility](https://zigbee.blakadder.com/zigate.html)
+La liste des objets compatibles avec la ZiGate est disponible sur le site [ZiGate ZigGee Compatibility](https://zigbee.blakadder.com/zigate.html)
 
 Le reste de la page est en anglais afin de ne faire vivre qu'une seule version.
 
-## BITRON HOME 
+## BITRON HOME
 https://www.conrad.com/o/bitron-home-2805047
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
@@ -24,7 +24,7 @@ https://www.conrad.com/o/bitron-home-2805047
 | Motion Sensor (902010/22A) | Motion | Motion | Full Op. | 4.6 |
 
 
-## Centralite Micro 
+## Centralite Micro
 https://centralite.com/
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
@@ -132,16 +132,16 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 ### Attention:
 
 * https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md
-   
+
 Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
 
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switchn Power and Meter widget | Op. | 2.4.0 |
-| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, LvlControl | Op. (Dimmer has be enabled via Settings)| Op. | 4.6 & Firmware 3.1b | 
+| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, LvlControl | Op. (Dimmer has be enabled via Settings)| Op. | 4.6 & Firmware 3.1b |
 | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
-| Micro Module | Switch  | Micromodule | Op. | 4.6 | 
+| Micro Module | Switch  | Micromodule | Op. | 4.6 |
 | Legrand Double gang wireless switch | 2 x Switchs | Switch Selector Off/On/Move Up/Move Down/Stop | Op. | 4.6 |
 
 ## LIVOLO
@@ -203,7 +203,7 @@ So there is a risk of latency when using Remote or Group command between the com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| shutter | Blind percentage inverted switch | can command the shutter from the domoticz switch, but also you can pull shutter status and update the Domoticz device. | Fully operationnal | 2.3.5 | 
+| shutter | Blind percentage inverted switch | can command the shutter from the domoticz switch, but also you can pull shutter status and update the Domoticz device. | Fully operationnal | 2.3.5 |
 
 ## Salus
 
@@ -224,7 +224,7 @@ So there is a risk of latency when using Remote or Group command between the com
 | EER5100x Thermostat | Temperature | Work as a Temperature sensor (for now) | Work as Temp | 4.6 |
 | EER50000 Actionneur | Thermostat, Instant Power and Consumption Usage Fil Pilot, or conventional mode | Work | 4.6 |
 | EER3300x S Meter | 6 lines Power / Meter and Voltage of Battery| allow to get instant power as well as summation for each of the 6 lines | Work |  4.6 |
-| EER5300x Radiator Thermostat | Thermostat Mode, Setpoint, Local Temp | Full control of the radiator | Op. | 4.7 & 3.1c| 
+| EER5300x Radiator Thermostat | Thermostat Mode, Setpoint, Local Temp | Full control of the radiator | Op. | 4.7 & 3.1c|
 
 
 
