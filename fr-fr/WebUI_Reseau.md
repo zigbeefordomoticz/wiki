@@ -13,7 +13,7 @@ La section __Réseau__ comporte les pages :
 
 Voici la page __Topologie__ de l'interface Web du plugin :
 
-![Network_Topology](Images/FR_WebUI-Reseau-Topologie.png)
+![Topologie réseau](Images/FR_WebUI-Reseau-Topologie.png)
 *Cette page est sucseptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -68,7 +68,7 @@ Vous retrouvez sous cet item un tableau fournissant des informations relatives a
 
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin :
 
-![InterferenceLevels](../Images/InterferenceLevels.png)
+![Niveau d'interférences](Images/FR_WebUI-Reseau-Interferences.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
@@ -88,7 +88,13 @@ Voir les [explications](Info_ZigBee-et-Wifi.md) sur les interférences entre le 
 Le niveaux d'interférence est calculé avec la communication entre la ZiGate et un routeur.
 Si vous ne disposez pas de routeur, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
-Le graphique montre pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la ZiGate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible).
+Les graphiques montrent pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la ZiGate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible).
+
+![Niveau d'interférences-1](Images/FR_WebUI-Reseau-Interferences-1.png)
+
+Sur le graphique circulaire, les faibles interférences sont proches du centre.
+
+![Niveau d'interférences-2](Images/FR_WebUI-Reseau-Interferences-2.png)
 
 Sources:
 * https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)
