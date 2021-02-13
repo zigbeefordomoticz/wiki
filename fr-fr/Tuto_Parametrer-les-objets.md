@@ -1,0 +1,62 @@
+# Tutoriel - Paramétrer les objets
+
+Ce tutoriel explique comment paramétrer spécifiquement certains objets.
+
+## Avant propos
+
+Le plugin dispose de paramètres permettant de personnaliser le fonctionnement des objets ou le fonctionnement du plugin.
+Par défaut, un objet certifié est initialisé avec les paramètres par défaut. Il est ensuite possible de personnaliser ces paramètres.
+
+## Méthode
+
+* Aller dans la section [Management > Gestion des objets](WebUI_Management.md#gestion-des-objets).
+* Filtrer si nécessaire pour trouver l'objet souhaité.
+* Renseigner le champ __Paramètres__.
+
+Il est possible d'éditer le champ paramètres en ajoutant, supprimant ou en mettant à jour les attributs.
+
+Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'parametre2': valeur .... }
+
+
+## Liste des paramètres
+
+| Nom du paramètre | Description | Valeur / Unité | Objet concerné / Paramètre parent |
+| ---------------- | ----------- | -------------- | -------------- |
+| Calibration    | Permet de définir une valeur de calibration | °C | Tuya eTRV, Eurotronics SPZB0001 |
+| Alarm1         | Configuration de Alarm1 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm2         | Configuration de Alarm2 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm3         | Configuration de Alarm3 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm4         | Configuration de Alarm4 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Alarm5         | Configuration de Alarm5 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
+| Duration       | Durée des Alarm_ | Seconde | Paramètre X pour Alarm1, Alarm2, Alarm3, Alarm4 et Alarm5 |
+| Volume         | Volume des Alarm_ | 0=Fort, 1=Moyen, 2=Faible | Paramètre Y pour Alarm1, Alarm2, Alarm3, Alarm4 et Alarm5 |
+| Melody         | Mélodie des Alarm_ | de 1 à 15  | Paramètre Z pour Alarm1, Alarm2, Alarm3, Alarm4 et Alarm5 |
+| HumidityMinAlarm    | Niveau minimum d'humidité pour déclenchement alarme | % | Tuya Siren TS0601 |
+| HumidityMaxAlarm    | Niveau maximum d'humidité pour déclenchement alarme | % | Tuya Siren TS0601 |
+| TemperatureMinAlarm | Température minimale pour déclenchement alarme | °C | Tuya Siren TS0601 |
+| TemperatureMaxAlarm | Température maximale pour déclenchement alarme | °C | Tuya Siren TS0601 |
+| PowerOnAfterOffOn   | Si l'objet est compatible, il se mettra dans l'état défini après une coupure d'alimentation | 0=restera à Off, 1=passera à On, 255=se remettra dans l'état précédent | Ikea, ENki, BlitzWolf plug, Legrand, Philips (une maj des firmware peut être nécessaire) |
+| fadingOff     | Durée de transition pour l'extinction . Augmentera de 20% puis s'éteindra | Seconde | Toutes les Led variables |
+| moveToHueSatu    | Durée de transition pour changer la température de saturation | Dixième de seconde (10=1s) | Toutes les Led variables |
+| moveToColourTemp | Durée de transition pour changer la température de couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
+| moveToColourRGB  | Durée de transition pour changer la couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
+| moveToLevel      | Durée de transition pour faire varier l'intensité lumineuse | Dixième de seconde (10=1s) | Toutes les Led variables |
+
+## Exemple
+
+### Exemple de paramètres pour une sirène Tuya TS0601
+
+{
+  "Alarm1": { "Duration": 5, "Volume": 2, "Melody": 1},
+  "Alarm2": { "Duration": 5, "Volume": 2, "Melody": 2},
+  "Alarm3": { "Duration": 5, "Volume": 2, "Melody": 3},
+  "Alarm4": { "Duration": 5, "Volume": 2, "Melody": 4},
+  "Alarm5": { "Duration": 5, "Volume": 2, "Melody": 5},
+  "HumidityMinAlarm": 25,
+  "HumidityMaxAlarm": 75,
+  "TemperatureMinAlarm": 3,
+  "TemperatureMaxAlarm": 27
+}
+
+
+*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/device-parameters.md) en anglais.*
