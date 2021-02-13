@@ -7,7 +7,7 @@ La section __Outils__ comporte les pages :
 * [Outils](#outils)
 * [Commande](#commande)
 * [Couplage](#couplage)
-* [Debug](#debug)
+* [Debogage](#debogage)
 * [Erreur](#erreur)
 
 
@@ -122,6 +122,7 @@ Il est possible d'accéder aux données de ces outils sans passer par l'interfac
 
 Exemple : http://127.0.0.1:9440/rest-zigate/1/plugin
 
+
 ------------------------------------------------
 ## Commande
 
@@ -147,12 +148,13 @@ Voici la page __Couplage__ de l'interface Web du plugin :
 
 Cette page permet d'exécuter de coupler des objets.
 
-Voir le tutoriel [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md)
+Voir le tutoriel [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md).
+
 
 ------------------------------------------------
-## Debug
+## Debogage
 
-Voici la page __Debug__ de l'interface Web du plugin :
+Voici la page __Debogage__ de l'interface Web du plugin :
 
 ![Group Management](Images/FR_WebUI-Outils-Debug.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
@@ -161,7 +163,7 @@ Voici la page __Debug__ de l'interface Web du plugin :
 
 Cette page permet d'accéder aux paramètres de débogage et de journalisation.
 
-Voir la page d'[aide au débogage](Probleme_Aide-Debogage.md)
+Voir la page d'[aide au débogage](Probleme_Aide-Debogage.md).
 
 
 ------------------------------------------------
@@ -175,6 +177,8 @@ Voici la page __Erreur__ de l'interface Web du plugin :
 ### Utilisation
 
 Cette page permet de visualiser les erreurs du plugin.
+
+Voir la page pour [gérer les erreurs du plugin](Tuto_Gerer-erreurs-plugin.md).
 
 
 ------------------------------------------------
