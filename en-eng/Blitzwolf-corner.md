@@ -15,10 +15,11 @@ The Temperature & Humidity Sensor share the same model name as [generic one](htt
 It's generic name is TS0121.
 
 To pair the device, press the power butto for 5s, a blue light will flash till the pairing process is complete.
-Fours devices are created:
+Five devices are created:
 * Plug (On/Off)
 * Voltage 
 * Power (General kWh and a P1Meter)
+* Ampere
 
 You can remove one on the unsued power device. The cumulated consumption is updated each 0.01 kWh.
 
@@ -29,4 +30,9 @@ On the dashboard, in the settings menu, activate advanced settings and choose th
 ![](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Settings_polling_bltzwolf.PNG)
 
 
-I choose 60s for a washer, it's enough to know when the machine starts and finishes.
+I choose 120s for a washer, it's enough to know when the machine starts and finishes.
+
+## Bonus
+Cluster On/Off (0x0006) contains two specific Attributes:
+* 0x8001: It's an Enum type (0x30), Mode 1 (0x01) turns off the red light on the button, Mode 2 (0x02) turns it on.
+* 0x8002: Unknown

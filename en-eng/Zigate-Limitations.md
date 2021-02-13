@@ -1,6 +1,6 @@
 ## Zigate Limitations
 
-Purpose is to document known Zigate and Plugin Limitations
+Purpose is to document known ZiGate and Plugin Limitations
 
 
 ## Zigate
@@ -10,7 +10,3 @@ Purpose is to document known Zigate and Plugin Limitations
   * 30 more if you have some router devices. 
 * A device can only be a member to 5 different groups.
 * Zigate itself can only be part of 5 groups
-
-## Plugin
-
-
