@@ -1,3 +1,5 @@
+# Wiki du Plugin Domoticz-ZiGate
+
 ![zigate.fr](../Images/ZiGate.png)
 
 Bienvenue sur le wiki du plugin ZiGate pour DomoticZ !
@@ -8,7 +10,6 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 **Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** nous avons essayé de faire de notre mieux, mais si des choses ne sont pas claires ou approximatives, ne pas hésiter à nous faire un retour. Merci d'avance.
 
-
 ## Introduction
 
 L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer les objets ZigBee utilisés par DomoticZ.
@@ -16,7 +17,6 @@ L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https
 Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
 
 Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin lorsque l’étiquette ZIGATE est présente.
-
 
 ## Lexique
 
@@ -30,31 +30,24 @@ Explication des termes utilisés sur ce Wiki :
 | Dispositif     | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
 | Widget         | Tuile dans le tableau de bord de DomoticZ correspondante à un dispositif |
 
-
-
-
 ## Installation
 
 Il existe plusieurs façons d'installer le plugin ZiGate pour DomoticZ qui sont différentes selon le système d'exploitation.
 
 Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
-
 * Étape 1 [Installation du plugin](Plugin_Installation.md)
 * Étape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
 * Étape 3 [Configuration du plugin](Plugin_Configuration.md)
-
 
 ## Mises à jour du plugin
 
 * [Mettre à jour le plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
-
 ## Sauvegardes
 
 * [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Plugin_Sauvegardes.md)
-
 
 ## L'interface Web du plugin
 
@@ -66,7 +59,6 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * La section [Réglages](WebUI_Reglages.md)
 * La section [Outils](WebUI_Outils.md)
 * La section [A propos](WebUI_A-propos.md)
-
 
 ## Tutoriels
 
@@ -81,12 +73,10 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
-
 ## Que faire si un objet ne fonctionne pas correctement ?
 
 * [Problèmes d'appairage](Probleme_Appairage.md)
 * [Aide au débogage](Probleme_Aide-Debogage.md)
-
 
 ## Particularités de certains objets
 
@@ -98,7 +88,6 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Schneider Wiser](Les-objets_Schneider.md)
 * [Livolo](Les-objets_Livolo.md)
 
-
 ## En cas de problèmes
 
 1. Vérifiez les logs de DomoticZ, ils contiennent de nombreuses informations utiles à la compréhension du(es) dysfonctionnements.
@@ -106,7 +95,6 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
    * [Le forum français](https://easydomoticz.com/forum/viewforum.php?f=28)
    * [Le forum anglais](https://www.domoticz.com/forum/viewforum.php?f=68)
-
 
 ## Scripts
 
@@ -116,14 +104,12 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 
 [D'autres exemples](../Contrib/)
 
-
 ## Informations
 
 * [Les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
-
 
 ## Liens utiles
 

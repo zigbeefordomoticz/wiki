@@ -2,7 +2,6 @@
 
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
-
 * 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 * 3 - [Installation sur NAS Synology](#3---installation-sur-nas-synology)
@@ -12,8 +11,8 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
 ------------
-# 1 - Installation du plugin via Python Plugin Manager sous Linux
 
+## 1 - Installation du plugin via Python Plugin Manager sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
@@ -31,13 +30,11 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
-
 ------------
-# 2 - Installation manuelle sous Linux
 
+## 2 - Installation manuelle sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
-
 
 ### 2.A - Prérequis
 
@@ -55,13 +52,12 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 
 * Redémarrer DomoticZ.
 
-
 Le plugin Zigate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
 ------------
-# 3 - Installation sur NAS Synology
+## 3 - Installation sur NAS Synology
 
 Cette méthode est uniquement valable pour les systèmes NAS Synology
 
@@ -106,7 +102,7 @@ Ou aller dans la section [Réglages > Liste des services](#liste-des-services) e
 
 
 ------------
-# 4 - Installation sur Docker
+## 4 - Installation sur Docker
 
 Cette méthode est uniquement valable pour les systèmes Docker.
 
@@ -234,7 +230,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
 
 ------------
-# 5 - Installation sous Windows 10
+## 5 - Installation sous Windows 10
 
 Cette méthode est uniquement valable pour les systèmes Windows 10.
 
@@ -273,7 +269,7 @@ Il est recommandé d’installer la ZiGate selon les instructions disponibles su
 
 Installer les pilotes (pour le convertisseur USB rouge, allez sur le site de siliconlabs et télécharger CP210x Universal Windows Driver )
 
-Tester l’application TestGUI (vous pouvez télécharger le fichier zip en allant dans la rubrique code sur le site https://github.com/fairecasoimeme/ZiGate puis le dézipper dans un répertoire dédié).
+Tester l’application TestGUI (vous pouvez télécharger le fichier zip en allant dans la rubrique code sur le site <https://github.com/fairecasoimeme/ZiGate> puis le dézipper dans un répertoire dédié).
 Vous pouvez également utiliser un client Git pour Windows (voir 3.2 ci après)
 
 L’application se situe dans un sous répertoire Tools et se nomme ZGWUI.exe
@@ -321,7 +317,7 @@ Attendre que l’installation du package soit terminé (vous devez être connect
 
 De nombreux packages de plugin sont disponibles sur GitHub pour DomoticZ. C’est le cas notamment pour la ZiGate.
 
-Sous Windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : https://gitforwindows.org/
+Sous Windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : <https://gitforwindows.org/>
 
 #### 5.2.D. - Installation du plugin ZiGate
 
@@ -337,11 +333,10 @@ L’arborescence de la ZiGate est installée :
 
 ![Win10 Installation](../Images/Win10Pic4.png)
 
-
 Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
 
-## 5.3 - Un PC Windows comme box domotique
+### 5.3 - Un PC Windows comme box domotique
 
 Avec l’apparition des mini PC fanless sous Windows 10 pour une centaine d’euros, il est tentant de se constituer sa box à l’aide du logiciel DomoticZ et de la clé ZiGate USB avec protocole ZigBee .
 
@@ -353,15 +348,16 @@ Pour éviter ce désagrément (surtout lorsqu’on est absent du domicile), il e
 
 Pour cela, taper `netplwiz` dans l’invite de commande Windows et exécuter la commande
 
-
 ------------
-# 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
+
+## 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian par Pierre Gielen.
 
 ### 6.1 - Prérequis
 
 * Assurez-vous d'avoir installé les dernières versions de Raspbian ainsi que python-dev
+
 ```
    sudo apt-get update
    sudo apt-get upgrade
@@ -369,6 +365,7 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian p
 ```
 
 * Testez l'installation de wiringpi :
+
 ```
     gpio -v
     gpio readall
@@ -380,6 +377,7 @@ Si non, installer wiringpi : `sudo apt-get install wiringpi`
 
 * Activer les port GPIO dans le fichier __rc.local__ pour qu'ils soient actifs après chaque redémarrage :
 Mettre ces 5 lignes juste avant la ligne `exit 0`
+
 ```
     sudo nano /etc/rc.local
     gpio mode 0 out
@@ -397,6 +395,7 @@ Effacer le texte : console = serial0,115200
 Sortez en sauvegardant les modifications
 
 * Exécuter les commandes (en remplaçant <pi> par votre login)
+
 ```
     sudo systemctl disable hciuart
     sudo usermod -ag gpio <pi>
@@ -418,7 +417,7 @@ Arrêter le Raspberry Pi : `sudo halt`
 Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
 
-## 6.3 - Mise à jour
+### 6.3 - Mise à jour
 
 Avant de faire une mise à jour du firmware de la PiZigate en flash mode, il faut modifier les GPIO :
 ```
@@ -433,7 +432,7 @@ Redémarrer le Pi après la mise à jour du firmware. La configuration par défa
 
 
 ------------
-# 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
+## 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
 
@@ -444,13 +443,13 @@ Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plu
 
 * Activer UART
 
-   * Éditer le fichier ` /boot/efi/config.txt`
-     * S'assurer que les lignes suivantes ne sont pas commentées.
-       * `enable_uart=1`
-       * `dtoverlay = pi3-disable-bt`
-       * reboot
+  * Éditer le fichier `/boot/efi/config.txt`
+    * S'assurer que les lignes suivantes ne sont pas commentées.
+      * `enable_uart=1`
+      * `dtoverlay = pi3-disable-bt`
+      * reboot
 
-   * Désactiver Getty on /dev/ttyS1
+  * Désactiver Getty on /dev/ttyS1
      * `systemctl stop serial-getty@ttyS1.service1`
      * `systemctl disable serial-getty@ttyS1.service`
 
@@ -466,30 +465,29 @@ Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plu
 
 * Activer les GPIO
 
-   * Installer libgpiod et python3 RPi.GPIO : `sudo dnf install python3-RPi.GPIO libgpiod-utils`
+  * Installer libgpiod et python3 RPi.GPIO : `sudo dnf install python3-RPi.GPIO libgpiod-utils`
 
-   * Éditer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
+  * Éditer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
 
 Voici un exemple de ce que vous devriez avoir :
 ```
      label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
-	   kernel /vmlinuz-5.4.17-200.fc31.armv7hl
-	   append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
-	   fdtdir /dtb-5.4.17-200.fc31.armv7hl/
-	   initrd /initramfs-5.4.17-200.fc31.armv7hl.img
+    kernel /vmlinuz-5.4.17-200.fc31.armv7hl
+    append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
+    fdtdir /dtb-5.4.17-200.fc31.armv7hl/
+    initrd /initramfs-5.4.17-200.fc31.armv7hl.img
 ```
 
-   * Installer le plugin ZiGate comme pour une [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
+* Installer le plugin ZiGate comme pour une [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 
-   * Utiliser l'outil pi-zigate-fedora.py disponible dans __Tools/Fedora__ pour basculer sur la PiZigate : `sudo python3 Tools/Fedora/pi-zigate-fedora.py run`
-
+* Utiliser l'outil pi-zigate-fedora.py disponible dans __Tools/Fedora__ pour basculer sur la PiZigate : `sudo python3 Tools/Fedora/pi-zigate-fedora.py run`
 
 * Vérification
 
-   * Un outil est disponible __Tools/Fedora__ pour tester la communication avec la PiZigate. Cet outil est basé sur l'outil PiZiGate_test et n'a pas d'autres fonctionnalités qu'un test de communication.
+  * Un outil est disponible __Tools/Fedora__ pour tester la communication avec la PiZigate. Cet outil est basé sur l'outil PiZiGate_test et n'a pas d'autres fonctionnalités qu'un test de communication.
 
-   * Recompiler l'outil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
-   * Exccuter `./PiZiGate_test-fedora /dev/ttyS1`
+  * Recompiler l'outil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
+  * Exccuter `./PiZiGate_test-fedora /dev/ttyS1`
 
 ```
    [domoticz@rasp Fedora]$ ./PiZiGate_test-fedora /dev/ttyS1
