@@ -9,8 +9,6 @@ Ce tutoriel explique comment utiliser les outils du plugin.
 
 Le plugin dispose d'une section regroupant les outils du plugin :  [Outils > Outils](WebUI_Outils.md#outils)
 
-![Outils](Images/FR_WebUI-Outils-Outils.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ## Liste des outils
 
