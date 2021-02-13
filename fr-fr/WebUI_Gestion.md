@@ -1,8 +1,8 @@
-# L'interface Web - La section Management
+# L'interface Web - La section Gestion
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
-La section __Management__ comporte les pages :
+La section __Gestion__ comporte les pages :
 
 * [Gestion des objets](#gestion-des-objets)
 * [Gestion des groupes](#gestion-des-groupes)
