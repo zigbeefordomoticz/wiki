@@ -25,7 +25,7 @@ Modifier les chemins en fonction de votre configuration.
 Pour information, la commande pour copier tout le répertoire du plugin ZiGate vers votre bureau
 
 ```
-mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
+cp /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
 ```
 
 3. Sauvegarder __en même temps__ la base de données de DomoticZ `domoticz.db`.
