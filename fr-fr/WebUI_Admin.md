@@ -16,7 +16,7 @@ La section __Admin__ comporte les pages :
 
 Voici la page __Appairage__ de l'interface Web du plugin :
 
-![FR_WebUI-Admin-Dispositif.png](Images/FR_WebUI-Admin-Dispositif.png)
+![FR_WebUI-Admin-Dispositif.png](Images/FR_WebUI-Admin-Appairage.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation

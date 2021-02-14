@@ -20,7 +20,7 @@ Un bouton __Paramètres avancés__ situé en haut à droite permet d'afficher de
 
 Voici la page __Réglages__ de l'interface Web du plugin :
 
-![FR_WebIU-Reglages](Images/FR_WebUI-Reglage.png)
+![FR_WebIU-Reglages](Images/FR_WebUI-Reglages.png)
 *Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ------------------------------------------------
