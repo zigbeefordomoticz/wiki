@@ -74,6 +74,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
+* [Sauvegarder / Restaurer La ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
 
 ## Que faire si un objet ne fonctionne pas correctement ?
 
