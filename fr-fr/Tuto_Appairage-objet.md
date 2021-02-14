@@ -38,7 +38,8 @@ Il est recommandé de commencer par appairer les objets de type routeurs afin de
 
 * Aller dans la section [Admin > Appairage](WebUI_Admin.md#appairage)
 
-![Domoticz Accept New Hardware](../Images/Provisionning_1.png)
+![FR_WebUI-Admin-Dispositif.png](Images/FR_WebUI-Admin-Appairage.png)
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 
 Il existe plusieurs méthodes :
@@ -47,6 +48,8 @@ Il existe plusieurs méthodes :
 * Appairage sur une durée
 * Appairage sur un routeur spécifique
 
+**Note :** Vérifier qu'il n'y a pas de particularités pour l'appairage de votre objet. Voir la liste des [Objets avec des particularités](Home.md#particularit%C3%A9s-de-certains-objets).
+
 ------------------------------------------------
 ### 1. Appairage avec le suivi
 
@@ -54,7 +57,7 @@ Il existe plusieurs méthodes :
 
 ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
- La LED bleu de la ZiGate doit clignoter
+ La LED bleu de la ZiGate doit clignoter.
 
 * Faire un Reset de l'objet pour le passer en mode appairage. *Se référer à la documentation de l'objet si nécessaire.*
 
@@ -64,23 +67,23 @@ Il existe plusieurs méthodes :
 
 Si rien ne se produit :
 
-* Vérifier les logs de DomoticZ pour voir s'il n'y a pas d'erreurs
-* Redémarrer le plugin et réessayer l'appairage
+* Vérifier les logs de DomoticZ pour voir s'il n'y a pas d'erreurs.
+* Redémarrer le plugin et réessayer l'appairage.
 
 
 ------------------------------------------------      
 ### 2. Appairage sur une durée
 
 Cette méthode permettra de passer la ZiGate en mode appairage pendant une durée. Les informations d'appairage seront affichées dans la logs de DomoticZ.
-*Conseil :* Filtre les logs afin de ne garder que les lignes concernant la ZiGate
+*Conseil :* Filtrer les logs afin de ne garder que les lignes concernant la ZiGate.
 
-* Aller dans le module __Appairage sur une durée__
+* Aller dans le module __Appairage sur une durée__.
 
-* Cliquer le bouton __4 minutes__ ou __permanent__ pour chosir la durée du mode appairage souhaitée
+* Cliquer le bouton __4 minutes__ ou __permanent__ pour choisir la durée du mode appairage souhaitée.
 
  La LED bleu de la ZiGate doit clignoter.
 
- * Cliquer le bouton __Stop__ pour arrêter le mode appairage
+ * Cliquer le bouton __Stop__ pour arrêter le mode appairage.
 
  Les résultats d'appairage ne seront visible que dans DomoticZ avec l'ajout de nouveaux dispositifs et les lignes de logs.
 
@@ -90,10 +93,10 @@ Cette méthode permettra de passer la ZiGate en mode appairage pendant une duré
 
 Par défaut, la ZiGate va déterminer le meilleur chemin pour communiquer avec les objets. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouvel objet.
 
-* Aller dans le module __Appairage sur un routeur spécifique__
+* Aller dans le module __Appairage sur un routeur spécifique__.
 
-* Sélectionner le routeur désiré dans la liste
+* Sélectionner le routeur désiré dans la liste.
 
-* Cliquer sur le bouton __4 minutes__ pour lancer le mode d'appairage
+* Cliquer sur le bouton __4 minutes__ pour lancer le mode d'appairage.
 
 Le fonctionnement est identique au paragraphe précédent hormis que la ZiGate cherchera à appairer le nouvel objet sur le routeur choisi.

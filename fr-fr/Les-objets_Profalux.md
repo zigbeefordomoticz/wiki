@@ -52,7 +52,7 @@ Le procédé d'appairage est documenté sur le site [Zigate.fr]( https://zigate.
 
 #### Faire un reset du volet et de la télécommande
 
-* Vérifier que la Zigate n'est pas en mode appairage
+* Vérifier que la ZiGate n'est pas en mode appairage
 * Appuyer 5 fois sur le bouton R (au dos de la télécommande) : la led va clignoter rouge puis vert
 * Dans la minute, appuyer sur le bouton STOP : cela va fermer le réseau et arrêter le processus d'appairage
 * Vérifier que la télécommande contrôle le volet. en cas de problèmes, consulter la documentation Profalux.
@@ -60,7 +60,7 @@ Le procédé d'appairage est documenté sur le site [Zigate.fr]( https://zigate.
 
 #### Appairer le volet
 
-* Mettre la Zigate en mode appairage : Tous les volets du réseau vont réaliser une montée descente.
+* Mettre la ZiGate en mode appairage : Tous les volets du réseau vont réaliser une montée descente.
 
 * Appuyer 1 fois sur le bouton R (au dos de la télécommande) : la télécommande va clignoter une fois.
 * Appuyer sur le bouton UP : le volet doit faire une montée/descente
@@ -81,7 +81,7 @@ Le volet et la télécommande vont alors sortir de leur réseau et rechercher un
 
 ## Références:
 
+* [Tutoriel sur zigate.fr](https://zigate.fr/documentation/association-des-volets-profalux-a-la-zigate)
 * [Notices de références Profalux]( https://www.profalux-pro.com/telecommande/moteur-radio-profalux-zigbee-2/)
 * [Notice de dépanage](https://www.profalux-pro.com/notice/mon-volet-roulant-ne-fonctionne-plus-ndep005-2/)
-
 * [Profalux Notice for blind after 2016](http://www.profalux-pro.com/download/1.%20Notices,%20Plans,%20Technique/1.%20Volets%20roulants/3.%20Moteurs%20Commandes%20et%20Accessoires/1.%20Moteur/Moteur%20Profalux%20Zigbee/Notice%20SAV%20moteur%20et%20telecommande%20Profalux%20Zigbee.%20A%20partir%20de%20Juillet%202016-NSAV029.pdf)

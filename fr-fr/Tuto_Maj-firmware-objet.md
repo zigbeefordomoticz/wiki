@@ -4,7 +4,7 @@ Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'
 
 ## Avant propos
 
-Le plugin est capable d'envoyer une mise à jour de firmware d'un objet à condition que celui-ci respecte le protocole ZigBee Over-The-Air (OTA). ???
+Le plugin est capable d'envoyer une mise à jour de firmware d'un objet à condition que celui-ci respecte le protocole ZigBee Over-The-Air (OTA).
 Certains fabricants autorisent l’accès au firmware de leurs objets autorisant ainsi la mise à jour du firmware, d'autres ne le font pas.
 Le plugin ne fournit pas les firmware : Il est donc de votre responsabilité de les récupérer auprès des fabricants.
 
