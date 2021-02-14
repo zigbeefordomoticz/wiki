@@ -19,7 +19,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 
 | Id | Short Description    | Full Description |
 | -- | -------------------- | ---------------- |
-| 1  | Nom                  | Le nom donné à la ZiGate. Si vous utiliser plusieurs ZiGate, vous aurez besoin de plusieurs instances du matériel ZiGate et le nom permettra de les identifier.
+| 1  | Nom                  | Le nom donné à la ZiGate. Si vous utiliser plusieurs ZiGate, vous aurez besoin de plusieurs instances du matériel ZiGate et le nom permettra de les identifier. |
 | 2  | Type                 | `ZiGate plugin` à sélectionner dans la liste déroulante |
 | 3  | ZiGate Model         | Choisir entre les différents modèles de ZiGate (USB, DIN, PI, Wifi) |
 | 4  | IP                   | IP de la ZiGate pour le modèle Wifi uniquement. Laisser 0.0.0.0 pour les autres modèles |
@@ -28,6 +28,8 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 | 7  | Initialize ZiGate (Erase Memory) `Erase PDM` | Pour initialiser la ZiGate avec les paramètres du plugin. A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM). __ATTENTION:__ L'activation va effacer toutes des informations d'appairage de la ZiGate. Pour activer, passer à True et redémarrer le plugin |
 | 8  | Port for Web Admin| Port pour accéder à l'administration web du plugin (défaut 9440). A modifier en cas d'utilisation de plusieurs instances du plugin. |
 | 9  | Verbors and Debuging | Sélection du niveau du log du plugin (Aucun par défaut) |
+
+Note sur le Nom : Il est conseillé de ne pas mettre d'espace ou de caractère spécial dans le nom du plugin. Ce nom peut être utiliser dans une URL et un espace ou des caractères spéciaux peuvent générer des problèmes. 
 
 * Coché __Activé__ pour activer le plugin
 * Cliquer sur __Ajouter__
