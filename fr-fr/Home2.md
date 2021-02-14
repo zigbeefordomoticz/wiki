@@ -57,6 +57,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
+* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
 
 
 ## Que faire si un objet ne fonctionne pas correctement ?
