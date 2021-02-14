@@ -76,10 +76,17 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
+## Tutoriels ZiGate
+
+* [Sauvegarder / Restaurer La ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
+* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate).
+
+
 ## Que faire si un objet ne fonctionne pas correctement ?
 
 * [Problèmes d'appairage](Probleme_Appairage.md)
 * [Aide au débogage](Probleme_Aide-Debogage.md)
+
 
 ## Particularités de certains objets
 
@@ -90,6 +97,7 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 * [Legrand Netatmo](Les-objets_Legrand.md)
 * [Schneider Wiser](Les-objets_Schneider.md)
 * [Livolo](Les-objets_Livolo.md)
+
 
 ## En cas de problèmes
 
@@ -110,7 +118,6 @@ Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et 
 ## Informations
 
 * [Les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md)
-* [Sauvegarder / Restaurer La ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
