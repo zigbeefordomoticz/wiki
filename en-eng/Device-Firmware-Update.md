@@ -16,6 +16,9 @@ So brand/manufacturer are giving a free access to their firmware, some not.
 * Ikea Tradfri
 * LEDVANCE
 * Philips
+* Legrand
+* Salus
+* Schneider Wiser
 
 ### Where to store the Firmware
 
@@ -24,14 +27,17 @@ The plugin host a directory tree to store the firmware for each Manufacturer
 | Directory | Manufacturer |
 | --------- | ------------ |
 | Domoticz-Zigate/OTAFirmware/IKEA-TRADFRI/ | IKEA TRADFRI Firmwares |
-| Domoticz-Zigate/OTAFirmware/LEDVANCE | LEDVANCE Firmwares |
-| Domoticz-Zigate/OTAFirmware/LEGRAND | LEGRAND Firmwares |
-| Domoticz-Zigate/OTAFirmware/PHILIPS | Philips Hue Firmware |
+| Domoticz-Zigate/OTAFirmware/LEDVANCE      | LEDVANCE Firmwares |
+| Domoticz-Zigate/OTAFirmware/LEGRAND       | LEGRAND Firmwares |
+| Domoticz-Zigate/OTAFirmware/PHILIPS       | Philips Hue Firmware |
+| Domoticz-Zigate/OTAFirmware/SALUS         | Salus Firmware |
 
 
 ## Retreive Firmware
 
 In each of the Manufacturer directory a README.md file is available and describe where to find the firmware.
+
+There is a good list available [here](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions)
 
 ### For IKEA TRADFRI
 
@@ -52,16 +58,22 @@ For the IKEA TRADFRI we are providing a script to retreive all Firmware from the
    * the file which contains `TRADFRI-control-outlet`for the Control Outlet
    * the file which contains `TRADFRI-signal-repeater`for the Signal Repeater
  
- 1. Enable Over-the-Air upgrade in the plugin
+1. Enable Over-the-Air upgrade in the plugin
  
    This is done via the Web admin menu in Settings
    
    ![Enable OTA](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/OTA.png)
    
+   When the enable OTA is activated (save) restart the plugin.
  
- When the enable OTA is activated (save) restart the plugin, and the plugin will verify each of the devices and if needed the firmware will be updated.
- 
- PS/ There is a tempo of 1H (default) before starting the process.
+1. Then you can go to the "Admin Firmware" Menu
+
+   ![Firmware Update](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Firmware_Update.png)
+
+   And use the Selection to select 
+    * Brand
+    * Firmware Image you want to use
+    * The list of device you want to push the firmware image to
  
  
 ## References:
