@@ -4,50 +4,32 @@
 
 Bienvenue sur le wiki du plugin ZiGate pour DomoticZ !
 
-Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisation du plugin.
-
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le plugin ZiGate. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
-**Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** nous avons essayé de faire de notre mieux, mais si des choses ne sont pas claires ou approximatives, ne pas hésiter à nous faire un retour. Merci d'avance.
 
 ## Introduction
 
-L'objectif de ce plugin est de réaliser une passerelle entre une [ZiGate](https://zigate.fr), un récepteur ZigBee et le logiciel de domotique [DomoticZ](https://www.domoticz.com). Ce plugin permettra de gérer les objets ZigBee utilisés par DomoticZ.
+* [Présentation](Info_Accueil.md) à lire pour les nouveaux utilisateurs
+* [Lexique](Info_Accueil.md#lexique) pour comprendre le termes utilisés
 
-Le plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le plugin et régler le fonctionnement de la ZiGate.
-
-Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le plugin lorsque l’étiquette ZIGATE est présente.
-
-## Lexique
-
-Explication des termes utilisés sur ce Wiki :
-
-| Terme          | Signification |
-| -------------- | ------------- |
-| Objet          | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
-| Routeur        | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle de routeur/répéteur dans le maillage du réseau ZigBee |
-| Objet terminal | Un objet généralement sur batterie qui envoi des informations : une sonde, un bouton |
-| Dispositif     | Fonction d'un objet qui se trouve dans Menu Configuration / Dispositifs de DomoticZ |
-| Widget         | Tuile dans le tableau de bord de DomoticZ correspondante à un dispositif |
 
 ## Installation
-
-Il existe plusieurs façons d'installer le plugin ZiGate pour DomoticZ qui sont différentes selon le système d'exploitation.
-
-Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 * Étape 1 [Installation du plugin](Plugin_Installation.md)
 * Étape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
 * Étape 3 [Configuration du plugin](Plugin_Configuration.md)
+
 
 ## Mises à jour du plugin
 
 * [Mettre à jour le plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
+
 ## Sauvegardes
 
 * [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Plugin_Sauvegardes.md)
+
 
 ## L'interface Web du plugin
 
