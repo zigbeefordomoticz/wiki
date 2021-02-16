@@ -10,7 +10,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## Introduction
 
 * [Présentation](Info_Accueil.md) à lire pour les nouveaux utilisateurs
-* [Lexique](Info_Accueil.md#lexique) pour comprendre le termes utilisés
+* [Lexique](Info_Accueil.md#lexique)
 
 
 ## Installation
