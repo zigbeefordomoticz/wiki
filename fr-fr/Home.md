@@ -1,4 +1,4 @@
-# Wiki du Plugin DomoticZ-ZiGate
+# Bienvenue sur le wiki du plugin ZiGate pour DomoticZ !
 
 ![zigate.fr](../Images/ZiGate.png)
 
