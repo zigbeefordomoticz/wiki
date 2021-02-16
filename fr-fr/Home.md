@@ -97,6 +97,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Informations
 
+* [Les objets compatibles](Info_Accueil.md#presentation)
 * [Les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
