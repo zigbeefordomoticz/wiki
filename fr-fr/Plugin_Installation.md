@@ -1,5 +1,10 @@
 # Installation du plugin ZiGate
 
+
+
+Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
+
+
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
 * 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
