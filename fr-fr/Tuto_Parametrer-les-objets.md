@@ -22,7 +22,7 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 
 | Nom du paramètre | Description | Valeur / Unité | Objet concerné / Paramètre parent |
 | ---------------- | ----------- | -------------- | -------------- |
-| Calibration    | Permet de définir une valeur de calibration | °C | Tuya eTRV, Eurotronics SPZB0001,Schneider VACT, Danfoss eTRV |
+| Calibration    | Permet de définir une valeur de calibration | °C | Tuya eTRV, Eurotronics SPZB0001, Schneider VACT, Danfoss eTRV |
 | Alarm1         | Configuration de Alarm1 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
 | Alarm2         | Configuration de Alarm2 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
 | Alarm3         | Configuration de Alarm3 avec les informations Durée, Volume et Mélodie | { "Duration": X, "Volume": Y, "Melody": Z} | Tuya Siren TS0601 |
