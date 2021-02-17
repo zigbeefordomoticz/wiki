@@ -4,6 +4,8 @@ Cette page présente les éléments à sauvegarder en prévision d'une réinstal
 
 Le dossier du plugin ZiGate contient des fichiers __critiques__ qu'il faut sauvegarder en plus de la base de données de DomoticZ `domoticz.db`.
 
+En plus de sauvegarder le plugin, pensez à sauvegarder votre ZiGate. Voir le guide sur : [https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
+
 ## Avant-propos
 
 Les explications suivantes seront données pour :
@@ -63,5 +65,3 @@ cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/
  La nouvelle installation est prête à être lancée. Elle sera sur la branche __Stable__.
 
 4. Redémarrer DomoticZ
-
-Poursuivre vers la presentation de l'[interface Web du plugin](Home.md#linterface-web-du-plugin)
