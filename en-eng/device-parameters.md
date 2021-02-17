@@ -12,7 +12,7 @@ You can edit this field, by adding, removing or updating attributes. Please make
 
 | Parameter Name | Description | Working Device |
 | -------------- | ----------- | -------------- |
-| Calibration    | Allow to define a calibration value in °C | Tuya eTRV, Eurotronics SPZB0001 |
+| Calibration    | Allow to define a calibration value in °C | Tuya eTRV, Eurotronics SPZB0001, Schneider VACT, Danfoss eTRV |
 | Alarm1         | Configuration of Alarm1. you have to specify Duration Volume, Melody | Tuya Siren TS0601 |
 | Alarm2         | Configuration of Alarm2. you have to specify Duration Volume, Melody | Tuya Siren TS0601 |
 | Alarm3         | Configuration of Alarm3. you have to specify Duration Volume, Melody | Tuya Siren TS0601 |
