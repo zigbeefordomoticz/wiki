@@ -15,7 +15,6 @@ Les objets nécessitant une configuration particulière :
 * [Appairages](#appairages)
 * [Autres informations](#autres-informations)
 * [Références](#r%C3%A9f%C3%A9rences)
-* [Les capteurs de mouvement](#les-capteurs-de-mouvement)
 
 
 ### Fonctionnement
