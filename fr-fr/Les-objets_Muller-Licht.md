@@ -11,7 +11,7 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Les objets nécessitant une configuration particulière :
 
-* [Télécommande Tint](Télécommande Tint (404022))
+* [Télécommande Tint](#t%C3%A9l%C3%A9commande-tint-404022)
 
 
 ### Télécommande Tint (404022)
