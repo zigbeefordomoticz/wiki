@@ -35,7 +35,7 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | HumidityMaxAlarm    | Niveau maximum d'humidité pour déclenchement alarme | % | Tuya Siren TS0601 |
 | TemperatureMinAlarm | Température minimale pour déclenchement alarme | °C | Tuya Siren TS0601 |
 | TemperatureMaxAlarm | Température maximale pour déclenchement alarme | °C | Tuya Siren TS0601 |
-| PowerOnAfterOffOn   | Si l'objet est compatible, il se mettra dans l'état défini après une coupure d'alimentation | 0=restera à Off, 1=passera à On, 255=se remettra dans l'état précédent | Ikea, ENki, BlitzWolf plug, Legrand, Philips (une maj des firmware peut être nécessaire) |
+| PowerOnAfterOffOn   | Si l'objet est compatible, il se mettra dans l'état défini après une coupure d'alimentation | 0=restera à Off, 1=passera à On, 255=se remettra dans l'état précédent (pour les objets de marques Tuya ou BlitzWolf il faut utiliser 2 au lieu de 255)| Ikea, ENki, BlitzWolf plug, Legrand, Philips (une maj des firmware peut être nécessaire) |
 | fadingOff     | Durée de transition pour l'extinction . Augmentera de 20% puis s'éteindra | Seconde | Toutes les Led variables |
 | moveToHueSatu    | Durée de transition pour changer la température de saturation | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToColourTemp | Durée de transition pour changer la température de couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
