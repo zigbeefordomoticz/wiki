@@ -23,6 +23,10 @@ When pairing the tint remote control device, the plugin will create :
 
 Then it will be up to the user to associate White color diming bulb to the 4 groups created by using the Group Management menu.
 
+### Tips
+
+In case the 4 groups doesn't exist, or have been removed, you can simply enable via the plugin Settings the parameter `zigatePartOfGroupTint`and restart the plugin. It will automatically re-create the groups
+
 ### Important
 
 * a ZiGate can only belongs to a maximum of 5 groups. The Tint remote will require 4 if you want to get the remote event reported to Domoticz Zidget
