@@ -13,8 +13,8 @@ Les objets nécessitant une configuration particulière :
 
 * [Fonctionnement](#Fonctionnement)
 * [Appairages](#appairages)
-* [Résultats](#r%C3%A9sultats)
-* [Télécommande](#t%C3%A9l%C3%A9commande)
+* [Autres informations](#autres-informations)
+* [Références](#r%C3%A9f%C3%A9rences)
 * [Les capteurs de mouvement](#les-capteurs-de-mouvement)
 
 
@@ -79,7 +79,7 @@ Le volet et la télécommande vont alors sortir de leur réseau et rechercher un
 * Si vous avez une télécommande centrale ZOE, vous pouvez créer des groupes. Ils auront les numéros 0x8000 - 0x8.... Profalux indique que cela dépend de la version du firmware de la ZOE. Il faudra réaliser une mise à jour avant d'être appairer avec une télécommande non Profalux. Contactez directement Profalux pour obtenir les mises à jours.
 
 
-## Références:
+## Références
 
 * [Tutoriel sur zigate.fr](https://zigate.fr/documentation/association-des-volets-profalux-a-la-zigate)
 * [Notices de références Profalux]( https://www.profalux-pro.com/telecommande/moteur-radio-profalux-zigbee-2/)
