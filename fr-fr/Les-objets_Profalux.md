@@ -13,8 +13,8 @@ Les objets nécessitant une configuration particulière :
 
 * [Fonctionnement](#Fonctionnement)
 * [Appairages](#appairages)
-* [Résultats](#resultats)
-* [Télécommande](#telecommande)
+* [Résultats](#r%C3%A9sultats)
+* [Télécommande](#t%C3%A9l%C3%A9commande)
 * [Les capteurs de mouvement](#les-capteurs-de-mouvement)
 
 
