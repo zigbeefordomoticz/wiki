@@ -47,4 +47,4 @@ __Le sélecteur à 18 valeurs n'a aucune action sur la télécommande. Il s'agit
 
 #### Note
 
-Si les 4 groupes n'existent plus (ou on été supprimés), il est possible d'activer le paramètre `zigatePartOfGroupTint` et redémarrer le plugin. Les groupes seront automatiquement recréés.
+Si les 4 groupes n'existent plus (ou on été supprimés), il est possible d'activer le paramètre __zigatePartOfGroupTint__ et redémarrer le plugin. Les groupes seront automatiquement recréés.
