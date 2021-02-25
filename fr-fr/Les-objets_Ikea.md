@@ -11,7 +11,7 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Les objets nécessitant une configuration particulière :
 
-* [Les ampoules connectées](#les-ampoules-connectéees#les-ampoules-connect%C3%A9es)
+* [Les ampoules connectées](#les-ampoules-connect%C3%A9es)
 * [Les prises connectées](#les-prises-connect%C3%A9es)
 * [Les capteurs de mouvement](#les-capteurs-de-mouvement)
 * [La télécommande 5 boutons](#la-t%C3%A9l%C3%A9commande-5-boutons)
