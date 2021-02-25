@@ -11,7 +11,7 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Les objets nécessitant une configuration particulière :
 
-* [Prise BW-SHP13](Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13))
+* [Prise BW-SHP13](#prise-command%C3%A9e-avec-mesures-%C3%A9lectriques-16a-eu-plug-bw-shp13)
 
 
 ### Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)
