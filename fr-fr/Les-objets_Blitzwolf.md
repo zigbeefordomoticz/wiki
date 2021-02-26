@@ -2,7 +2,7 @@
 
 Certains objets de la marque BlitzWolf ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-** Cette page n'est pas une liste des objets compatibles.**
+**Cette page n'est pas une liste des objets compatibles.**
 
 La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
 
@@ -11,7 +11,7 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Les objets nécessitant une configuration particulière :
 
-* [Prise BW-SHP13](Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13))
+* [Prise BW-SHP13](#prise-command%C3%A9e-avec-mesures-%C3%A9lectriques-16a-eu-plug-bw-shp13)
 
 
 ### Prise commandée avec mesures électriques 16A EU Plug (BW-SHP13)

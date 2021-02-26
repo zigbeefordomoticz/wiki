@@ -2,7 +2,7 @@
 
 Certains objets de la marque Profalux ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-** Cette page n'est pas une liste des objets compatibles.**
+**Cette page n'est pas une liste des objets compatibles.**
 
 La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
 
@@ -13,9 +13,8 @@ Les objets nécessitant une configuration particulière :
 
 * [Fonctionnement](#Fonctionnement)
 * [Appairages](#appairages)
-* [Résultats](#resultats)
-* [Télécommande](#telecommande)
-* [Les capteurs de mouvement](#les-capteurs-de-mouvement)
+* [Autres informations](#autres-informations)
+* [Références](#r%C3%A9f%C3%A9rences)
 
 
 ### Fonctionnement
@@ -79,7 +78,7 @@ Le volet et la télécommande vont alors sortir de leur réseau et rechercher un
 * Si vous avez une télécommande centrale ZOE, vous pouvez créer des groupes. Ils auront les numéros 0x8000 - 0x8.... Profalux indique que cela dépend de la version du firmware de la ZOE. Il faudra réaliser une mise à jour avant d'être appairer avec une télécommande non Profalux. Contactez directement Profalux pour obtenir les mises à jours.
 
 
-## Références:
+## Références
 
 * [Tutoriel sur zigate.fr](https://zigate.fr/documentation/association-des-volets-profalux-a-la-zigate)
 * [Notices de références Profalux]( https://www.profalux-pro.com/telecommande/moteur-radio-profalux-zigbee-2/)

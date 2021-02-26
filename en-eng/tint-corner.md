@@ -2,7 +2,7 @@
 
 ## Overview
 
-purpose is to give tips and hints on the Tint devices confirmed working with the plugin
+The purpose is to give tips and hints on the Tint devices confirmed working with the plugin
 
 ## Remote Control White ( 404022)
 
@@ -25,9 +25,9 @@ Then it will be up to the user to associate White color diming bulb to the 4 gro
 
 ### Tips
 
-In case the 4 groups doesn't exist, or have been removed, you can simply enable via the plugin Settings the parameter `zigatePartOfGroupTint`and restart the plugin. It will automatically re-create the groups
+In case the 4 groups doesn't exist, or have been removed, you can simply enable via the plugin Settings the parameter `zigatePartOfGroupTint`and restart the plugin. It will automatically re-create the groups.
 
 ### Important
 
-* a ZiGate can only belongs to a maximum of 5 groups. The Tint remote will require 4 if you want to get the remote event reported to Domoticz Zidget
-* If you don't plan to use the Domoticz Widget , we recommend you to remove the ZiGate membership of those 4 groups, it will not impact the remote functionnality to command the 4 groups. ( in case there is no device - bulb - attached to the group and you remove the ZiGate membership, the group will autoamtically be removed )
+* a ZiGate can only belongs to a maximum of 5 groups. The Tint remote will require 4 if you want to get the remote event reported to Domoticz Widget
+* If you don't plan to use the Domoticz Widget , we recommend you to remove the ZiGate membership of those 4 groups, it will not impact the remote functionnality to command the 4 groups. ( in case there is no device - bulb - attached to the group and you remove the ZiGate membership, the group will autoamtically be removed ).

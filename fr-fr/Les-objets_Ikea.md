@@ -2,7 +2,7 @@
 
 Certains objets de la marque Ikea ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
-** Cette page n'est pas une liste des objets compatibles.**
+**Cette page n'est pas une liste des objets compatibles.**
 
 La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
 
@@ -11,10 +11,10 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Les objets nécessitant une configuration particulière :
 
-* [Les ampoules connectées](#les-ampoules-connectéees)
-* [Les prises connectées](#les-prises-connectees)
+* [Les ampoules connectées](#les-ampoules-connect%C3%A9es)
+* [Les prises connectées](#les-prises-connect%C3%A9es)
 * [Les capteurs de mouvement](#les-capteurs-de-mouvement)
-* [La télécommande 5 boutons](#la-telecommande-5-outons)
+* [La télécommande 5 boutons](#la-t%C3%A9l%C3%A9commande-5-boutons)
 
 
 **Attention :** Dans le cas où les appairages en mode classique décrits ci dessous ne fonctionnent pas, ces objets utilisant le groupe 0x0000, il est possible que vous soyez amenés à l'activer préalablement à l'appairage. Pour cela se rapporter à la section [Réglages > Réglage de la ZiGate](WebUI_Reglages.md#r%C3%A9glages-de-la-zigate)
