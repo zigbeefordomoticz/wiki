@@ -41,6 +41,8 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | moveToColourTemp | Durée de transition pour changer la température de couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToColourRGB  | Durée de transition pour changer la couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToLevel      | Durée de transition pour faire varier l'intensité lumineuse | Dixième de seconde (10=1s) | Toutes les Led variables |
+| occupancySensibility | Sensibilité de la detection pour les detecteurs Philips Hue Motion. 0 Defaut, 1 Haute, 2 Maxium | Philips Hue SML001, SML002 |
+| PIROccupiedToUnoccupiedDelay | Le PIROccupiedToUnoccupiedDelay définie le délai, en seconde,avant que le detecteur change son status à non occupé après la dernière detection de mouvement. | Tested with Philips SML001 |
 
 ## Exemple
 
