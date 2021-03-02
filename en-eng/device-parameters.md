@@ -34,4 +34,5 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | occupancySensibility | Sensitivity level of the Philips Hue Motion Sensor 0 default, 1, High, 2 Max | Philips Hue SML001, SML002 |
 | PIROccupiedToUnoccupiedDelay | The PIROccupiedToUnoccupiedDelay attribute specifies the time delay, in seconds,before the PIR sensor changes to its unoccupied state after the last detection of movement in the sensed area. | Tested with Philips SML001 |
 | profaluxOrientBSO | default Tilt for Profalux BSO Orientation | Profalux BSO |
+| alarmDuration | Define the number of second the alarm will last | Heiman IAS Siren |
 
