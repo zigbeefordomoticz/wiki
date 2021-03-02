@@ -11,7 +11,7 @@ This would required a plugin version greater than 4.8
 
 The debugging options are available from the Web admin interface in the Menu Settings, and you have to enable Advanced
 
-![Debuging Options](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/debugingOptions.png)
+![Debuging Options](../Images/debugingOptions.png)
 
 | Option | Purpose |
 | ------- | -------- |
@@ -62,4 +62,3 @@ In that case you need to check if we have incoming messages, if they are correct
 * You can get the Short Address and/or the IEEE of the Device:
   * via Domoticz: Devices and the IEEE can be found in the ID column
   * via the Plugin Web Interface in the Management -> Device Management menu
-  

@@ -52,7 +52,7 @@ Elle permet :
 * De faire une analyse complète des groupes
 * De faire une analyse sélective des groupes
 
-Préalablement à la gestion des groupes, il est nécessaire d'activer la service de groupe (désactivé par défaut) du plugin : Se reporter à la section [Réglages](WebUI_Reglages.md) pour activer les services
+Préalablement à la gestion des groupes, il est nécessaire d'activer la service de groupe (désactivé par défaut) du plugin : se reporter à la section [Réglages](WebUI_Reglages.md) pour activer les services.
 
 Se reporter au tutoriel [Gérer les groupes](Tuto_Gerer-les-groupes.md) pour plus d'informations.
 
@@ -71,7 +71,7 @@ Cette page permet de gérer le fonctionnement du hardware de la ZiGate.
 
 Elle permet :
 
-* De faire un redémarrage logiciel de la ZiGate : Cette action n’entraîne **aucune perte des objets appairés**
+* De faire un redémarrage logiciel de la ZiGate : Cette action n’entraîne **aucune perte des objets appairés**.
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
 

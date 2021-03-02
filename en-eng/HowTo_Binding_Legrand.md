@@ -22,7 +22,7 @@ At that stage you should have :
 1. One widget for the Micromodule
 1. 2 widgets for the Double Gange Remote ( one widget for the left gang and one widget for the right gang)
 
-You can easily check which widget is the left and the right, 
+You can easily check which widget is the left and the right,
 
 Here after is an exemple of the 2 widgets created. Notices the '-01' and '-02'
 
@@ -31,7 +31,7 @@ DIN Zigate - Double gangs remote switch_LegrandSelector-000474000082702a-01
 DIN Zigate - Double gangs remote switch_LegrandSelector-000474000082702a-02
 ```
 
-Here after is an example of the widget created. 
+Here after is an example of the widget created.
 
 ```
 DIN Zigate - Micromodule switch_Switch-00047400001f09a4-01
@@ -44,9 +44,9 @@ We advice you to give a Friendly name to each of your device , in order to smoot
 For that you have to go the Device Management section and give a Friendly Name to each devices
 
 We are going to bind the On/Off cluster ( 0x0006 ) between the Double gangs remote switch (Left or Right) with the Micromodule.
-For such , we are going to use the Web Admin page 
+For such , we are going to use the Web Admin page
 
-![Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Binding.png)
+![Bindings](../Images/Binding.png)
 
 
 ### What to bind
@@ -65,6 +65,3 @@ In case like the Double Bang remote Legrand where you have 2 actioners, you have
 #### Target
 
 This is the device you want to action. Most likely it will be a main powered device.
-
-
-

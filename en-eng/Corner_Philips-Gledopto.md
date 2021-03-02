@@ -11,9 +11,9 @@ From the plugin Web Admin page, go to the settings
 
 1. Select Advanced Settings
 1. Make sure to disable the general polling
-1. Enable the Philips polling. By default it is disable __0__, if you put a value this is the polling frequency in second. 
+1. Enable the Philips polling. By default it is disable __0__, if you put a value this is the polling frequency in second.
 we recommend not go below 45 secondes in order to not overload the Zigate. In fact it will really depends on how-many devices
 of this type Zigate will have to managed
 
 
-![Philips Poling](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Philips_Polling.png)
+![Philips Poling](../Images/Philips_Polling.png)

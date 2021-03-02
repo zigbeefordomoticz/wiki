@@ -131,7 +131,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 ### Attention:
 
-* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md
+* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Corner_Legrand-.md
 
 Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
 
@@ -150,7 +150,7 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 ### Attention
 
-* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Livolo-corner.md
+* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Corner_Livolo.md
 * Be aware that Livolo switches seems not to act as a router. In such they won't participate in the mesh and will not help in extending the network.
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
@@ -215,7 +215,7 @@ So there is a risk of latency when using Remote or Group command between the com
 
 * https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN )
 
-* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Wiser-Thermostat.md
+* https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Corner_Wiser-Setup.md
 
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |

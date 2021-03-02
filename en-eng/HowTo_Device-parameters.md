@@ -1,7 +1,3 @@
-# Device Parameters
-
-## Overview
-
 A number of parameters are available inside the plugin to customize the behaaviour of the plugin or the behaviour of the device.
 
 By default a Certified device get default parameters already initiatialized. If you want to customize you have to go to the plugin Web Admin page,
@@ -35,4 +31,3 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | PIROccupiedToUnoccupiedDelay | The PIROccupiedToUnoccupiedDelay attribute specifies the time delay, in seconds,before the PIR sensor changes to its unoccupied state after the last detection of movement in the sensed area. | Tested with Philips SML001 |
 | profaluxOrientBSO | default Tilt for Profalux BSO Orientation | Profalux BSO |
 | alarmDuration | Define the number of second the alarm will last | Heiman IAS Siren |
-

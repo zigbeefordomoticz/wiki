@@ -7,7 +7,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation](Plugin_Install
 
 ## Accéder à l'interface d'administration
 
-L'interface d'administration vous donne accéder aux éléments suivants :
+L'interface d'administration vous donne accès aux éléments suivants :
 - Un tableau de bord synthétique
 - La gestion des objets et des groupes
 - La visualisation de la topologie et la qualité du réseau ZigBee

@@ -5,7 +5,7 @@
 
 When a device is paired this imply that the device is known in several locations:
 
-1. known by the ZiGate 
+1. known by the ZiGate
 1. known by the plugin ( one entry by device )
 1. known by Domoticz ( one or multiple widgets are related to the same device)
 
@@ -15,9 +15,9 @@ In order to get a device fully removed , you need to make sure that device is re
 
 By default, the plugin is configured to not request the device removal from Zigate. If you want to activate this feature, you have to enable the flag "Removal on ZiGate" from the Web UI Admin.
 
-![Removal On Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/EraseDeviceOnZigate.png)
+![Removal On Zigate](../Images/EraseDeviceOnZigate.png)
 
-## Removing End devices ( battery ) 
+## Removing End devices ( battery )
 
 There is no automatic way to get most of the end devices removed from the Zigate.  To make sure you get the device removed from ZiGate, here is a step approach to follow.
 
@@ -41,4 +41,3 @@ Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will b
 ```
 
 If you don't get such message, you just need to apply the same procedure as the one presented for the End Devices
-

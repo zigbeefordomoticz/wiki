@@ -1,4 +1,14 @@
-# PluginConf
+# The Web interface - Settings page
+
+Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
+
+Here is the __Seetings__ page of the plugin Web interface :
+
+![Seetings](../Images/EN_WebUI-Settings.png)
+
+*This page may have have changed since this documentation was written.*
+
+## Contents
 
 This file is used to customized some behaviour of the plugin at run time
 
@@ -111,10 +121,10 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | doUnbindBind | disable | will force an unbind before binding a cluster |
 | allowReBindingClusters | enable | will rebind clusters if the device is coming back |
 
- 
+
 
  # Zigate Configuration
- 
+
 | parameter | default | description |
 | --------- | ------- | ----------- |
 | allowRemoveZigateDevice | disable | If enable when removing a device, a request will be done also to Zigate |
@@ -135,7 +145,7 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | batteryOTA | disable | enable battery upgrade |
 | waitingOTA | 3600 | delay in second before starting the Over-the-Air upgrade |
 
-## Verbose 
+## Verbose
 
 Menu has been moved to the Tool Debug sub menu
 
@@ -179,10 +189,6 @@ Menu has been moved to the Tool Debug sub menu
 | enableSchneiderWiser | disable | mainly allow to make the difference between Livolo and Schneider IEEE |
 | numTopologyReports | number of Topology reports you want to keep |
 | numEnergyReports | number of Energy reports you want to keep |
-| PowerOn_OnOff | 
+| PowerOn_OnOff |
 | TradfriKelvinStep | 51 | when binding the Ikea Remote with plugin and Zigate you can control
 | vibrationAqarasensitivity | medium | low, medium, high for Aqara vibration sensitivity |
-
-
-
-

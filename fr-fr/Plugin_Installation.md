@@ -1,13 +1,11 @@
 # Installation du plugin ZiGate
 
-
-
-Dans tous les cas, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
+Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
-* 1 - [Installation du plugin via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
+* 1 - [Installation via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 * 3 - [Installation sur NAS Synology](#3---installation-sur-nas-synology)
 * 4 - [Installation sur Docker](#4---installation-sur-docker)
@@ -54,7 +52,6 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Exécuter la commande : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
 * Le répertoire __Domoticz-Zigate__ sera créé dans le dossier plugin
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `chmod +x Domoticz-Zigate/plugin.py`
-
 * Redémarrer DomoticZ.
 
 Le plugin Zigate doit apparaître dans la liste des matériels.
