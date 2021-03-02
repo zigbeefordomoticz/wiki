@@ -67,14 +67,16 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Devices specifics
 
+* [BlitzWolf](Corner_Blitzwolf.md)
+* [Eurotronics](Corner_Eurotronics.md)
+* [Ikea Tradfri](Corner_IKEA-Tradfri.md)
 * [Legrand Netatmo](Corner_Legrand-Netatmo.md)
+* [Livolo](Corner_Livolo.md)
+* [Muller Licht](Corner_Tint.md)
 * [Profalux](Corner_Profalux-corner.md)
 * [Schneider Wiser](Corner_Schneider_Wiser.md)
 * [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
-* [Eurotronics](Corner_Eurotronics.md)
-* [Livolo](Corner_Livolo.md)
-* [Ikea Tradfri](Corner_IKEA-Tradfri.md)
-* [BlitzWolf](Corner_Blitzwolf.md)
+
 
 ## In case of Trouble
 
