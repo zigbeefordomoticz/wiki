@@ -36,11 +36,15 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | TemperatureMinAlarm | Température minimale pour déclenchement alarme | °C | Tuya Siren TS0601 |
 | TemperatureMaxAlarm | Température maximale pour déclenchement alarme | °C | Tuya Siren TS0601 |
 | PowerOnAfterOffOn   | Si l'objet est compatible, il se mettra dans l'état défini après une coupure d'alimentation | 0=restera à Off, 1=passera à On, 255=se remettra dans l'état précédent (pour les objets de marques Tuya ou BlitzWolf il faut utiliser 2 au lieu de 255)| Ikea, ENki, BlitzWolf plug, Legrand, Philips (une maj des firmware peut être nécessaire) |
-| fadingOff     | Durée de transition pour l'extinction . Augmentera de 20% puis s'éteindra | Seconde | Toutes les Led variables |
+| fadingOff     | Durée de transition pour l'extinction . [0] le défaut, transition de 0.8 secondes pour l'extinction, [1] réduction de 50% et attente de 12s avant exctinction, [2], 20% de hausse en 0.5 second, puis extinction en 1 seconde, [255] exctinction immédiate | Seconde | Toutes les Led variables |
 | moveToHueSatu    | Durée de transition pour changer la température de saturation | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToColourTemp | Durée de transition pour changer la température de couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToColourRGB  | Durée de transition pour changer la couleur | Dixième de seconde (10=1s) | Toutes les Led variables |
 | moveToLevel      | Durée de transition pour faire varier l'intensité lumineuse | Dixième de seconde (10=1s) | Toutes les Led variables |
+| occupancySensibility | Sensibilité de la detection pour les detecteurs Philips Hue Motion. 0 Defaut, 1 Haute, 2 Maxium | Philips Hue SML001, SML002 |
+| PIROccupiedToUnoccupiedDelay | Le PIROccupiedToUnoccupiedDelay définie le délai, en seconde,avant que le detecteur change son status à non occupé après la dernière detection de mouvement. | Tested with Philips SML001 |
+| profaluxOrientBSO | Orientation par defaut des BSO profalux | Profalux BSO |
+| alarmDuration | durée de sonnerie de l'alarme  | Bitron Siren |
 
 ## Exemple
 
