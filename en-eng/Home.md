@@ -70,7 +70,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Legrand Netatmo](Corner_Legrand-Netatmo.md)
 * [Profalux](Corner_Profalux-corner.md)
 * [Schneider Wiser](Corner_Schneider_Wiser.md)
-* [Schneider Wiser: How to Setup](Corner_Wiser-Setup)
+* [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
 * [Eurotronics](Corner_Eurotronics.md)
 * [Livolo](Corner_Livolo.md)
 * [Ikea Tradfri](Corner_IKEA-Tradfri.md)
