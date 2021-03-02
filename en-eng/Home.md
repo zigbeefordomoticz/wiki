@@ -20,8 +20,8 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Plugin updates
 
-* [Plugin updates](Plugin_Updates.md#plugin-update)
-* [Plugin branches](Plugin_Updates.md#plugin-branches)
+* [Plugin updates](Plugin_Update.md#plugin-update)
+* [Plugin branches](Plugin_Update.md#plugin-branches)
 
 ## Backups
 
