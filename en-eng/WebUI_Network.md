@@ -1,5 +1,62 @@
-The plugin allow to generate a Network Topology report based on the LQI ( Detected signal strength ). 
-It is important to know that the Packet filtering implemented is using the LQI value 
+# The Web interface - Network section
+
+Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
+
+The section __Network__ contents the pages :
+
+* [Topology](#topology)
+* [Interference levels](#interference-level)
+
+------------------------------------------------
+## Topology
+
+Here is the __Topology__ page of the plugin Web interface :
+
+![Network Topology](../Images/Network_Topology.png)
+
+At plugin start a report is triggered. It could take up to 15' to get the report extracted.
+You can after that manually trigger a scan
+
+All available reports are available in the upper-left list, sorted by date. From the list you can either:
+* delete a report
+* display the report
+
+There are 2 graphical representations of the report.
+
+#### Left: Topology weel
+
+Here are shown on a weel, all links between 2 devices. If you leave the mouse on a link, you'll see the direction and a number which correspond to the Link Quality ( the worst is 0, the best is 255).
+
+#### Right: Topology graph
+
+Here you can see more the hierarchical structure of your Zigbee network.
+
+------------------------------------------------
+## Interference level
+
+Here is the __Interference level__ page of the plugin Web interface :
+
+![Network Energy ](../Images/InterferenceLevels.png)
+
+
+Starting Plugin Version: > 4.4, the plugin queries Zigate to get informations on the Energy level per channel.
+
+In the 10 first minutes after plugin start, a Network Energy Level scan will be executed.
+
+The Energy-Level measurement is a value from 0 to 255 given for all Zigate supported channels ( 11, 15, 19, 20, 25 and 26).
+It is given in an arbitrary units (didn't find any more information in the NXP Zigbee documentation).
+
+
+
+### Graphical presentation
+
+You can get access to the Graphical presentation via the Web Admin Page in the Network Tab and Select Energy Level
+
+
+![Export Device List raw (json)](../Images/InterferenceLevels2.png)
+
+The plugin allow to generate a Network Topology report based on the LQI ( Detected signal strength ).
+It is important to know that the Packet filtering implemented is using the LQI value
 
 | LQI range | Cost |
 | ---------| -----|
@@ -13,15 +70,15 @@ Source: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
 
 A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded
 
-## 1. Enable the report
+### 1. Enable the report
 
-## 2. Example of report
+### 2. Example of report
 
 The report will take a certain time based on the size of the network ( number of devices and especially number of routers). The output will be put in the domoticz log in the here after format.
 A raw format is also provided and is analysed via the Web UI.
 
 ** Graphical using the Web User Interface
-![Network Toplogy](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Network_Topology.png)
+![Network Toplogy](../Images/Network_Topology.png)
 
 **(Zigate) LQI Results:**
 
@@ -91,4 +148,10 @@ A raw format is also provided and is analysed via the Web UI.
   * 2: Neighbour is a sibling (has same parent)
 
 
+Sources:
+* https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)
+* https://en.wikipedia.org/wiki/Received_signal_strength_indication ( RSSI - Received Signal Strength Indication)
 
+
+------------------------------------------------
+Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).

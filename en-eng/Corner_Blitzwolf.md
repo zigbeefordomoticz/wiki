@@ -17,7 +17,7 @@ It's generic name is TS0121.
 To pair the device, press the power butto for 5s, a blue light will flash till the pairing process is complete.
 Five devices are created:
 * Plug (On/Off)
-* Voltage 
+* Voltage
 * Power (General kWh and a P1Meter)
 * Ampere
 
@@ -27,7 +27,7 @@ The power device can also indicate the actual power consuption but you have to a
 On the dashboard, in the settings menu, activate advanced settings and choose the refresh frequency:
 
 
-![](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Settings_polling_bltzwolf.PNG)
+![](../Images/Settings_polling_bltzwolf.PNG)
 
 
 I choose 120s for a washer, it's enough to know when the machine starts and finishes.

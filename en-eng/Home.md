@@ -1,79 +1,104 @@
-![zigate.fr](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/ZiGate.png)
+# Welcome to the Domoticz-Zigate wiki!
 
-[Pour le Wifi en Francais clicker ici](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/fr-fr/Home.md)
+![zigate.fr](../Images/ZiGate.png)
 
-Welcome to the Domoticz-Zigate wiki!
+[Lien vers le Wiki en français](../fr-fr/Home.md)
 
-We try through this wiki, to put as much information as possible. 
 
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.
 [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 ## Introduction
-The aim of the plugin is to bridge Zigate hardware to the Domoticz UI. This will allow you to manage all your devices through widgets created on the Domoticz side.
 
-On top we have build a specific User Interface which is accessible over your browser to help you in the configuration of the plugin and to customize some behaviour of the Zigate Hardware
+* [Start](Info_Home.md) for beginners
 
-Here after is a non-exhaustive list of compatible devices. What is listed here is all devices which have been 'certified', we know that it operates with the plugin. It might happen that you have some other ZigBee compliant devices which can work.
-* [List of certified devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Compatible-Devices.md)
+## Installation
 
-## Installation and Configuration
+* Step 1 [Plugin installation](Plugin_Installation.md)
+* Step 2 [Plugin settings](Plugin_Settings.md)
+* Step 3 [Plugin configuration](Plugin_Configuration.md)
 
-* [Plugin Installation](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation.md)
-* [Plugin Installation on Synology](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-Installation-on-Synology-NAS.md)
-* [Installation with Docker (thanks to zaraki673)](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Docker-Domoticz.md)
-* [Considering when installing on Windows]( https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-windows.md )
-* [PiZiGate installation on RPI3B+ (thanks to Pierre Gielen](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate-RPI3B%2B-Cookbook.md)
-* [PiZiGate installation on Fedora29 distribution](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PiZigate_on_Fedora.md)
-* [Pluging Administration](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/WebUserInterfaceNavigation.md)
-* [Reinstallation without loosing crucials informations](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/reinstall.md)
-* [Expose the dashboard with basic authentication on a https link](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/DashboardAccessBasicAuth.md)
+## Plugin updates
 
+* [Plugin updates](Plugin_Update.md#plugin-update)
+* [Plugin branches](Plugin_Update.md#plugin-branches)
 
+## Backups
+
+* [Backups to do to be able to restore without loosing crucials informations](Plugin_Backup.md)
+
+## Plugin's web Interface
+
+* [General presentation](WebUI_General-presentation.md)
+* Section [Dashboard](WebUI_Dashboard.md)
+* Section [Management](WebUI_Management.md)
+* Section [Network](WebUI_Network.md)
+* Section [Admin](WebUI_Admin.md)
+* Section [Settings](WebUI_Settings.md)
+* Section [Tools](WebUI_Tools.md)
+* Section [About](WebUI_About.md)
 
 ## How-to
 
-* [Pair and provision a new Device](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PairingDevice.md)
-* [Pairing and provisioning from a specific router](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PairingFromRouter.md)
-* [Remove a Device from ZiGate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/RemoteDevice.md)
-* [Change the Zigbee Channel](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Channel_Setting.md)
-* [Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Group-Management.md)
-* [Upgrading device firmware](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Device-Firmware-Update.md)
-* [Upgrading Firmware of Zigate](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-flash-firmware.md)
-* [Plugin Parameters](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/PluginConf.json.md)
-* [Energy Level Reports](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/EnergyLevels.md)
-* [Bindings](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Binding_Legrand.md)
+* [Add a new devices](HowTo_Pairing-device.md)
+* [Remove a Device](HowTo_Remove-device.md)
+* [Device parameters](HowTo_Device-parameters.md)
+* [Use the plugin tools](HowTo_Using-tools.md)
+* [Group Management](HowTo_Group-management.md)
+* [Bindings](HowTo_Binding_Legrand.md)
+* [Deal with erros](HowTo_Dealing-pluging-error.md)
+* [Change the Zigbee Channel](HowTo_Change-ZigBee-channel.md)
+* [Upgrading device firmware](HowTo_Update-device-firmware.md)
+* [Upgrading Firmware of Zigate](HowTo_Update-ZiGate-firmware.md)
+* [Expose the dashboard with basic authentication on a https link](HowTo_Dashboard-Access-Basic-Auth.md)
+
+## ZiGate How-to
+
+* [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
+* [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french
 
 ## What to do if the device doesn't behave correctly
 
-* [Dealing with not certified devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Dealing-with-none-certified-device.md)
-* [Debug mode](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Plugin-debuging-mode.md)
+* [Dealing with not certified devices](Problem_Dealing-with-none-certified-device.md)
+* [Debug mode](Problem_Debuging-mode.md)
+* [FAQ ZiGate](FAQ_ZiGate.md)
+* [FAQ ZiGate plugin](FAQ_ZiGate-Plugin.md)
+
 
 ## Devices specifics
 
-* [Legrand Netatmo](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-Netatmo-corner.md)
-* [Profalux](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Profalux-corner.md)
-* [Schneider Wiser](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Schneider_Wiser_Corner.md)
-* [Schneider Wiser: How to Setup](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Wiser-Setup.md)
-* [Eurotronics](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Eurotronics-corner.md)
-* [Livolo](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Livolo-corner.md)
-* [IKEA TRADFRI](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/IKEA-Tradfri-corner.md)
-* [BlitzWolf](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Blitzwolf-corner.md)
+* [BlitzWolf](Corner_Blitzwolf.md)
+* [Eurotronics](Corner_Eurotronics.md)
+* [Ikea Tradfri](Corner_IKEA-Tradfri.md)
+* [Legrand Netatmo](Corner_Legrand-Netatmo.md)
+* [Livolo](Corner_Livolo.md)
+* [Muller Licht](Corner_Tint.md)
+* [Profalux](Corner_Profalux-corner.md)
+* [Schneider Wiser](Corner_Schneider_Wiser.md)
+* [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
 
 
 ## In case of Trouble
 
-1. [Zigate limitations](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-Limitations.md)
+1. [ZiGate limitations](Info_ZiGate-Limitations.md)
 1. Watch the log, you should fine some information if something is going wrong.
 1. Use one of the forum channels
-   * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
+   * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
 
-## More 
+## Scripts
 
-* [How to Configure ZiGate in Zigbee Sniffer](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Zigate-Sniffer.md)
+* [How-to check battery levels](../Contrib/CheckBatteryLevel.dzVents) in DzVents
+* [How-to check lost devices](../Contrib/CheckDeadDevices.lua) in LUA
+* [How-to check lost devices](../Contrib/CheckLastSeen.dzVents) in DzVents
+
+## InformationsS
+
+* [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
+* [How-to Configure ZiGate in ZiBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
+
+## More
+
 * [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
-* [Coexistence between Wifi and Zigbee](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Co-existence-of-IEEE-802.15.4-at-2.4-GHz-and-Zigbee.md)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
 * [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
-

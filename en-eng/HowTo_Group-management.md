@@ -3,7 +3,7 @@
 ## 1. Purpose
 The purpose is to offer the possibility to use the Zigate (Zigbee) group functionality.
 Starting Plugon 4.7 and the Plugin Web Admin Interface, the group management is much user friendly, but still need further developement to reach a nice User Experience.
-With Plugin 4.9, we have made a great move by removing the "batch" mode and 
+With Plugin 4.9, we have made a great move by removing the "batch" mode and
 
 ## 2. Pre-requisites
 
@@ -19,7 +19,7 @@ The group will be managed through domoticz Device widgets (not in the group sect
 
 ### 4.1. How to enable it
 
-![Settings for Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/SettingsGroup.png)
+![Settings for Group Management](../Images/SettingsGroup.png)
 
 Enable the Group Management feature (which is disabled by default)
 
@@ -30,17 +30,17 @@ You need to restart the plugin after enabling Group Management.
 After the first activation of Group Management, it is import to query each device for group membership.
 To do so you can go to the Admin Group sub menu and then request a Full scan.
 
-![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/AdminGroupMenu.png)
+![Group Management](../Images/AdminGroupMenu.png)
 
-This will consist in quering each main powered devices for the group membership. 
+This will consist in quering each main powered devices for the group membership.
 
 
-![Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/GroupManagementMenu.png)
+![Group Management](../Images/GroupManagementMenu.png)
 
 
 ### 4.3 Creating a Group
 
-![Adding Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/AddingGroup.png)
+![Adding Group Management](../Images/AddingGroup.png)
 
 You can specify the Name of the group, and then you can select from the list the devices you want to get into that group
 
@@ -50,7 +50,7 @@ Save the work and the group membership request will be sent to each device liste
 
 ### 4.4 Updating a Group
 
-Just use the Group Management and add or remove devices from that group. 
+Just use the Group Management and add or remove devices from that group.
 
 Save the work , and the update will be triggered and will be visible after a while .
 
@@ -72,9 +72,9 @@ In order to use an IKEA/Tradfri:
 
 ### 5.2. Retrieving Remote command events
 
-From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate. 
+From that stage, you can eventually add Zigate to this group. It will make each remote controller event seen in Zigate.
 
-Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller. 
+Additionaly, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller.
 ![](https://user-images.githubusercontent.com/4406440/54182600-3ec50200-44a2-11e9-8be7-c2e6b15b4deb.png)
 
 For that you need to edit the Group and add the  Tradfri 5 buttons to that group
@@ -85,10 +85,8 @@ For that you need to edit the Group and add the  Tradfri 5 buttons to that group
 If you need to have the group '0000' created, you can enable it via the Settings Advanced
 
 
-![Adding Group Management](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/SettingsGroup0000.png)
+![Adding Group Management](../Images/SettingsGroup0000.png)
 
 ## 6 Warning
 
 * Make sure that all devices which belongs to the group are up and running
-
-

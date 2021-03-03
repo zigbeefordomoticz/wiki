@@ -58,8 +58,8 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Tutoriels ZiGate
 
-* [Sauvegarder / Restaurer La ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
-* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate).
+* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
+* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
 
 
 ## Que faire si un objet ne fonctionne pas correctement ?
@@ -71,13 +71,13 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## Particularités de certains objets
 
 * [BlitzWolf](Les-objets_Blitzwolf.md)
-* [Ikea Tradfri](Les-objets_Ikea.md)
 * [Eurotronic](Les-objets_Eurotronic.md)
-* [Profalux](Les-objets_Profalux.md)
+* [Ikea Tradfri](Les-objets_Ikea.md)
 * [Legrand Netatmo](Les-objets_Legrand.md)
-* [Schneider Wiser](Les-objets_Schneider.md)
 * [Livolo](Les-objets_Livolo.md)
 * [Muller Licht](Les-objets_Muller-Licht.md)
+* [Profalux](Les-objets_Profalux.md)
+* [Schneider Wiser](Les-objets_Schneider.md)
 
 
 ## En cas de problèmes

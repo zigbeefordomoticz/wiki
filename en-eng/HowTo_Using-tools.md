@@ -1,3 +1,4 @@
+
 # Web Admin: Tools page
 
 This page give access to a set of REST API to query directly the plugin memory. This page is mainly for developers and for debugging purposes.
@@ -20,8 +21,9 @@ For troubleshooting purposes you might be asked to do an export.json of the __Pl
 | Plugin Groups (json)        |  /zgroup        | debug | Provide the group plugin database |
 | Traffic (json)              |  /plugin-stat   | debug | dump all plugin statistics |
 
+
 ## How to use the REST API
 
-If you want to call /plugin-health in order to check the plugin health
+  If you want to call /plugin-health in order to check the plugin health
 
-`wget <http://127.0.0.1:9440/rest-zigate/1/plugin-stat>`
+  `wget <http://127.0.0.1:9440/rest-zigate/1/plugin-stat>`
