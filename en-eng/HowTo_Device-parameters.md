@@ -31,3 +31,6 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | PIROccupiedToUnoccupiedDelay | The PIROccupiedToUnoccupiedDelay attribute specifies the time delay, in seconds,before the PIR sensor changes to its unoccupied state after the last detection of movement in the sensed area. | Tested with Philips SML001 |
 | profaluxOrientBSO | default Tilt for Profalux BSO Orientation | Profalux BSO |
 | alarmDuration | Define the number of second the alarm will last | Heiman IAS Siren |
+| OnOffPollingFreq | Polling frequency for On/Off and Level status | Gledopto LED, Philips Led |
+| PowerPollingFreq | Polling frequency for instant power | BlitzWolf and Lumi plug maeu01 Plug |
+| AC201Polling | Polling of AC201 and CAC201 status | Only for OWON AC201 and Casia CAC201 |
