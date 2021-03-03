@@ -44,7 +44,7 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | occupancySensibility | Sensibilité de la detection pour les detecteurs Philips Hue Motion. 0 Defaut, 1 Haute, 2 Maxium | Philips Hue SML001, SML002 |
 | PIROccupiedToUnoccupiedDelay | Le PIROccupiedToUnoccupiedDelay définie le délai, en seconde,avant que le detecteur change son status à non occupé après la dernière detection de mouvement. | Tested with Philips SML001 |
 | profaluxOrientBSO | Orientation par defaut des BSO profalux | Profalux BSO |
-| alarmDuration | durée de sonnerie de l'alarme  | Bitron Siren |
+| alarmDuration | Durée de sonnerie de l'alarme  | Bitron Siren |
 | OnOffPollingFreq |	Frequence (en nb de secondes) de rafraichissement du status On/Off ainsi que le niveau d'intensité. 0 pour désactiver |	Ampoules Gledopto et Philips|
 | PowerPollingFreq |	Fréquence (en nb de secondes) de rafraichissement de la puissance instantanée consommée. 0 pour désactiver |	PriBlitzWolf et prise Lumi maeu01 |
 | AC201Polling |	Polling of AC201 and CAC201 status |	Only for OWON AC201 and Casia CAC201 |
