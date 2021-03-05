@@ -21,13 +21,13 @@ The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Dom
 
 <table width="200" border="0" cellpadding="2">
 <tr>
-<td valign="middle" ><img src="Images/flag_uk.png" width="40" height="40">[Click here to access English Wiki](en-eng/Home.md) </td>
+<td valign="middle" ><img src="Images/flag_uk.png" width="40" height="40"> </td>
 <td valign="baseline">92</td>
 <td valign="baseline">A+</td>
 <td valign="baseline">Excellent</td>
 </tr>
 <tr>
-<td valign="baseline">S002</td>
+<td valign="middle">[Click here to access English Wiki](en-eng/Home.md)</td>
 <td valign="baseline">76</td>
 <td valign="baseline">B+</td>
 <td valign="baseline">Good</td>
