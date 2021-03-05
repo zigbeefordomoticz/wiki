@@ -10,7 +10,7 @@ https://github.com/dresden-elektronik/deconz-rest-plugin/issues/883#issuecomment
 ## Pre-requisites
 
 * You own a Netatmo-Legrand Gateway
-* You need to setup a system able to play the role of Access Point and DHCP server 
+* You need to setup a system able to play the role of Access Point and DHCP server
 
 
 ## Overview
@@ -33,15 +33,15 @@ This is based on a RPI3B+ which provides 2 network interfaces ( wired rj45 and w
 The full URL will be like:
 
     * `http://fw.netatmo.net/getfirmware/000474230eec/1584836191/zwG-s1Xxva2b0Ujdb_u-ky_m-oHCozEx3gOHWoULEqM/NLD-6.fw`
-    
-    Where 
+
+    Where
     * `http://fw.netatmo.net/getfirmware/`is the base URL to access firmware on netatmo cloud
     * `000474230eec`is the mac address of your Gateway (visible on the Home + App)
     * `123836123/zwG-s1Xxva2b0Uklm_f-ey_o-oHCozEx3gOHWoULEqM/`is something changing over the time. It is valid for a period of time.
     * `NLD-6.fw` Fimrware for Remote Switch
-    
-    From that, you can retreive any firmware you want by using the same URL and changing the last part 
-    
+
+    From that, you can retreive any firmware you want by using the same URL and changing the last part
+
     * NLC -> Cable outlet
     * NLD -> Remote Switch
     * NLF -> Dimer w/o neutral
@@ -49,10 +49,9 @@ The full URL will be like:
     * NLP -> Hub Plug / Mobile Plug / Connected Plug
     * NLT -> telecommande
     * NLV -> Shutter
-   
+
 ## References
 
 * https://danielmiessler.com/study/tcpdump/
 * https://www.shellvoide.com/wifi/setup-wireless-access-point-hostapd-dnsmasq-linux/
 * https://doc.ubuntu-fr.org/hostapd (in French )
-   

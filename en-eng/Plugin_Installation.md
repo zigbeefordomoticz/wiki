@@ -5,13 +5,13 @@ Make sure that you have __python3-dev package__ installed. More informations on 
 
 In this first step, there are severals installation methodes depending on your Operating System :
 
-* 1 - [Python Plugin Manager installation running on Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
-* 2 - [Manual Installation running on Linux](#2---installation-manuelle-sous-linux)
-* 3 - [Installation running on Synology NAS](#3---installation-sur-nas-synology)
-* 4 - [Installation running on Docker](#4---installation-sur-docker)
-* 5 - [Installation running on Windows 10](#5---installation-sous-windows-10)
-* 6 - [PiZigate Installation on RPi3B+ running on Raspbian (Linux)](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
-* 7 - [PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
+* 1 - [Python Plugin Manager installation running on Linux](#1---python-plugin-manager-installation-running-on-linux)
+* 2 - [Manual Installation running on Linux](#2---manual-installation-running-on-linux)
+* 3 - [Installation running on Synology NAS](#3---installation-running-on-synology-nas)
+* 4 - [Installation running on Docker](4---installation-running-on-docker)
+* 5 - [Installation running on Windows 10](#5---installation-running-on-windows-10)
+* 6 - [PiZigate Installation on RPi3B+ running on Raspbian (Linux)](#6---pizigate-installation-on-rpi3b-running-on-raspbian-linux)
+* 7 - [PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)](#7---pizigate-installation-on-rpi3b-running-on-fedora-29-linux)
 
 ------------
 
@@ -225,6 +225,8 @@ docker exec -it Domoticz bash
 ------------
 
 ## 5 - Installation running on Windows 10
+
+[Refer to french page](../fr-fr/Plugin_Installation.md#5---installation-sous-windows-10)
 
 
 ------------

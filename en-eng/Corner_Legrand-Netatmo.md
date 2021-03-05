@@ -1,5 +1,7 @@
 # Legrand corner & faq
 
+[Update Legrand firmware](Corner_Retreiving-Legrand-Firmware.md)
+
 ## Overview
 
 Purpose is to present the finding around pairing Legrand/Netatmo devices (Celiane, Mosaic, dooxie to Zigate and Domoticz
@@ -9,7 +11,7 @@ Quiet a lot of work have been done throught sniffing of the Zigbee traffic betwe
 
 ## Preamble
 
-By default some of the Legrand/Netamoi devices come with a basic firmware, which do not provide all features. 
+By default some of the Legrand/Netamoi devices come with a basic firmware, which do not provide all features.
 In that context, I still feel that having the Legrand Hub is a good investement for upgrading your device, and then switching to Zigate to avoid Legrand cloud.
 
 ## WARNING
@@ -28,7 +30,7 @@ If you have the starter pack, do not reset it. It is factory preset with the cor
 
 ## Not Validated
 * The Home/Away remote which is provided with the Legrand Hub and which in addition of Home/Away scene allow to switch the Legrand Hub in pairing mode, do not show any Zigbee traffic .
-* For the other Scenes related devices, they can be connected to the Zigate, but the only send Group+Scene commands in broadcast mode. 
+* For the other Scenes related devices, they can be connected to the Zigate, but the only send Group+Scene commands in broadcast mode.
 
 ## Prerequisites
 
@@ -37,7 +39,7 @@ If you have the starter pack, do not reset it. It is factory preset with the cor
 
 ## Add on
 
-Some specific Legrand settings are accessible via the Web GUI settings page. 
+Some specific Legrand settings are accessible via the Web GUI settings page.
 
 * __EnableLedIfOn__ By enabling this setting, the device Led will be on ( blue ) when the device is On
 * __EnableLedInDark__ By enabling this setting, the device Led will be on ( blue ) when the device is Off
@@ -59,13 +61,13 @@ Some specific Legrand settings are accessible via the Web GUI settings page.
    * after around 8 seconds it should be flashing __red__ (the pairing process should be starting)
    * click immediatly on the factory reset once more
    * when turning the led is __green__ the pairing process is completed.
-   
+
 Alternative is :
 
 When the led is red (not paired):
 * press the reset button until it flash green 3 times
 * when the led comes back to red, click once on the reset button
- 
+
 ## Internals
 
 ### How the Pairing works
@@ -76,7 +78,7 @@ When the led is red (not paired):
 
 ### Wireless devices
 
-* Not able to use the Tap-Tap for pairing the wireless with an equipment. 
+* Not able to use the Tap-Tap for pairing the wireless with an equipment.
 * Wireless devices are using a proprieatory Cluster 0xfc01 to send some commands. I suspect that Managemet of Pairing.
 * Requires bindings of 0x0001, 0x000f and 0x0003 (in that order) - @Thorgal789 mentioned that 0x000f bind is not required.
 * Use the Present Value ( cluster 0x000f / 0x0055 ) to get On/Off or Shutter Up and Down
@@ -88,7 +90,7 @@ When the led is red (not paired):
 
 * Model ( 0x0000/0x0005) : Double gangs remote switch
 * Manufacturer: ( 0x0000/0x0004 ): Legrand 1021
-* Manufacturer Code: 
+* Manufacturer Code:
 * ProfileID: 0104
 * DeviceID 0104
 * Application Version 0001
@@ -108,7 +110,7 @@ When the led is red (not paired):
  * Home : GroupId 0xfff7, SceneId 0x01
  * Wakeup: GroupdId: 0xfff5, SceneId 0x01
  * Going to Sleep: GroupId: 0xfff4, SceneId 0x01
- 
+
 ### Groups when pairing a remote with a wired devices
 
 * Looks that group numbering is started at 0xfeff and going down to 0xfe00  ( 255 Wireless Gang )
@@ -167,7 +169,7 @@ When the led is red (not paired):
 * Close: 0x05 value 0x00
 * (not open, not close): 0x05 value 0x02
 
-Status return ( 0xff: Open, 0x00: Closed, 0x50: in between ) 
+Status return ( 0xff: Open, 0x00: Closed, 0x50: in between )
 Ad Hoc status can be obtain by a read Attribute
 
 
@@ -186,7 +188,7 @@ After a main Power Off, On, the device is sending a Device Annoucement , in resp
   * Attribute: 0xf000
   * Data Type: 0x23
   * Data: 0x00000000
-  
+
 #### Cluster 0x0003
 * With the help of @cemonneau
 
@@ -199,14 +201,14 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 * Value:
   * 1 bytes is effectid: possible values are: 0x00 (blink 3 times), 0x01 (fixed for around 3 seconds), 0x02(blink in green), 0x03 (blink in blue)
   * 1 bytes is effectvariant: /!\\ only works with effectid=0x00 or 0x01: 0x00(default color: blue), 0x01(red), 0x02(green), 0x03(blue), 0x04(light blue), 0x05(yellow), 0x06(pink), 0x07(white)
-  
+
 * Expect : LED effect on the device
 
 #### Cluster 0xfc01
 * With the help of @Thorgal789
 
-| Device | Attribute | Values | Data Type | 
-| ------ | --------- | ------ | --------- | 
+| Device | Attribute | Values | Data Type |
+| ------ | --------- | ------ | --------- |
 | Dimmer switch w/o neutral | 0x0000 | 0x0101/0x0000 enable/disbale Dimmer mode ( cluster 0x0008 should be binded) | 0x09 (16bit data) |
 | Dimmer switch w/o neutral | 0x0001 | 0x01/0x00 enable/disbale Led in Dark | 0x10 ( Bool )|
 | Dimmer switch w/o neutral | 0x0002 | 0x01/0x00 enable/disable Led if On | 0x10 |
@@ -222,28 +224,28 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 * Format: FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x02, Value: 1 byte
 * Value:
   * 1byte: 0x00
-  
+
 ##### Command: 0x03
 
 * Device -> Hub
 * Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x03, Value: 1 byte
 * Value:
   * 1byte: 0xff
-  
+
 ##### Command: 0x05 (wireless switch)
 
 * Device -> Hub
 * Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x15 ), Manuf ( 0x1021), SQN, 0x03, Value: 8 bytes
 * Value:
   * 8byte: 0x4d17af0000740400
-    
+
 ##### Command: 0x08 set group id (wireless switch)
 
 * Device -> Hub
 * Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x1d ), Manuf ( 0x1021), SQN, 0x03, Value: 2 bytes
 * Value:
   * 2byte: group id
-  
+
 ##### Commande: 0x09 (Checked)
 
 * Device -> Hub
@@ -251,7 +253,7 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 * Value:
   * 8 bytes are the MacAddress of the Source Device
   * 1 bytes seems to be a counter
-  
+
 * Expect : Command 0x0c from the Hub to Device
 
 
@@ -261,9 +263,9 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 * Format: FCF ( 0x15 ),  Manuf ( 0x1021 ), SQN, 0x0a, Value: 12 bytes
 * Value: eg. fefe a4091f0000740400 0101
   * 2 bytes: Most likely Group Membership
-  * 8 bytes: IEEE ( Target address ??? ): 
+  * 8 bytes: IEEE ( Target address ??? ):
   * 2 bytes: ( 0x0101 )
-  
+
 * Expect: Command 0x10 fromHub to Device
 
 ##### Commande: 0x0c
@@ -273,16 +275,16 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 * Value:
   * 2 bytes: Most Likely Group Membership ( 0xfefe, 0xfdfe, 0xf6fe, 0xf4fe, 0xfffe )
   * 1 byte: seems to correspond to counter from 0x09
-  
+
 ##### Command: 0x0d
 
 * Device -> Hub
 * Format: FCF ( 0x1d ),  Manuf ( 0x1021 ), SQN, 0x0a, Value: 24 bytes
 * Value: eg. ffffffffffffffffffffffffffffffffffffffffffffffff
 
-  
+
 * Expect: Command 0x10 fromHub to Device  
-  
+
 ##### Command: 0x10
 
 * Hub -> Device
@@ -291,8 +293,8 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
   * 1 byte: status
   * 2 bytes: last 2 bytes from 0x0a command
   * 8 bytes: IEEE 00 0101 a4 09 1f 00 00 74 04 00
-  
-  
+
+
 
 #### Cluster 0xfc40
 * Contirbution from @Thorgal789
@@ -313,7 +315,7 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 | 0xfc01  | 0x02    | 1 byte    | 0x00       |             |
 
 
-## OTA 
+## OTA
 
 * Manfufacturer Code: 0x1021
 * Block size for transfer: 64 bytes
@@ -342,7 +344,7 @@ More informations/scripts .... can be found here: https://github.com/pipiche38/C
 The HUB seems in addition of having Time Server, seems to store in the 0x0000/0xf000 the time since the HUB has been powered on. This attribute server as of time of operation.
 At Pairing, the HUB is broadcasting this value to other devices, and the up coming devices is requesting this attribute also from the oher already connected devices. The Operating time ( 0x0000/0xf000) is reset to 0 after Power Off/On
 
- 
+
 
 ## Other matters
 
@@ -354,4 +356,3 @@ At Pairing, the HUB is broadcasting this value to other devices, and the up comi
 * https://www.legrand.fr/catalogue/maison-connectee/prise-connectee
 * https://www.legrand.fr/catalogue/maison-connectee/interrupteur-connecte
 * https://github.com/Koenkk/zigbee2mqtt/issues/2399
-

@@ -58,6 +58,9 @@ In case you want to use the swicth for something else, you will have to remove a
    * Don't use the the Remote switch pairing button to pair devices, otherwise you'll loose the connectivity with Zigate and the events capture in Domoticz.
    * You have to add the list of IEEE devices to group 0000 in ZigateGrouspConfig
 
+
+[More info](Corner_Ikea-Remote.md)
+
 ## How to use the Tradfri Motion sensor
 
 1. Paired with Zigate
@@ -79,3 +82,5 @@ In case you want to use the swicth for something else, you will have to remove a
 From that , every time the motion sensor will turn on the light, you'll get as well the motion widget to On.
 
 You might want to align the Time setting of the Motion sensor with the Reset Time of the Motion widget in Domoticz
+
+[More info](Corner_Ikea-Tradfri-Motion.md)
