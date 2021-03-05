@@ -7,11 +7,11 @@
 <td valign="middle"><a href=en-eng/Home.md">Click here to access English Wiki</a></td>
 </tr>
 <tr>
-<td valign="middle"><a href=fr-fr/Home.md"><img src="Images/flag_france.png" width="40" height="40"</a>></td>
+<td valign="middle"><a href=fr-fr/Home.md"><img src="Images/flag_france.png" width="40" height="40"</a></td>
 <td valign="middle"><a href=fr-fr/Home.md">Cliquer ici pour accéder au wiki en français</a></td>
 </tr>
 <tr>
-<td valign="middle"><img src="Images/flag_netherlands.png" width="40" height="40"></td>
+<td valign="middle"><a href="nl-dut/Start.md"><img src="Images/flag_netherlands.png" width="40" height="40"></a><</td>
 <td valign="middle"><a href="nl-dut/Start.md">Klik hier om Nederland Wiki te opene</a></td>
 </tr>
 </table>
