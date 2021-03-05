@@ -21,13 +21,13 @@ The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Dom
 
 <table width="200" border="1" cellpadding="2">
 <tr>
-<th valign="middle" >Student Code </th>
+<th valign="middle" ><img src="Images/flag_uk.png" width="40" height="40" vertical-align=middle> </th>
 <th valign="middle">Percentage of marks</th>
 <th valign="middle">Grade</th>
 <th valign="middle">Remarks</th>
 </tr>
 <tr>
-<td valign="baseline">S001</td>
+<td valign="middle">S001</td>
 <td valign="baseline">92</td>
 <td valign="baseline">A+</td>
 <td valign="baseline">Excellent</td>
