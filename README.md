@@ -16,7 +16,7 @@
 </tr>
 </table>
 
-------------
+# About
 
 This repository aim to centralize all Domoticz-Zigate documentation.
 
