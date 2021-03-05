@@ -2,6 +2,7 @@
 
 ![zigate.fr](../Images/ZiGate.png)
 
+![zigate.fr](../Images/flag_france.png)
 <a href=fr-fr/Home.md><img src="../Images/flag_france.png" width="10" height="10"</a> [Lien vers le Wiki en français](../fr-fr/Home.md) [Link naar de Wiki in het Nederlands](nl-dut/Start.md)
 
 
