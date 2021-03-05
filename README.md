@@ -1,12 +1,20 @@
 # DomoticZ ZiGate plugin
 
 
-<img src="Images/flag_uk.png" width="40" height="40"> [Click here to access English Wiki](en-eng/Home.md)
-
-<img src="Images/flag_france.png" width="40" height="40"> [Cliquer ici pour accéder au wiki en français](fr-fr/Home.md)
-
-<img src="Images/flag_netherlands.png" width="40" height="40"> [Klik hier om Nederland Wiki te openen](nl-dut/Start.md)
-
+<table width="200" border="0" cellpadding="2">
+<tr>
+<td valign="middle" ><a href==en-eng/Home.md"><img src="Images/flag_uk.png" width="40" height="40"></a></td>
+<td valign="middle"><a href=en-eng/Home.md">Click here to access English Wiki</a></td>
+</tr>
+<tr>
+<td valign="middle"><a href=fr-fr/Home.md"><img src="Images/flag_france.png" width="40" height="40"</a>></td>
+<td valign="middle"><a href=fr-fr/Home.md">Cliquer ici pour accéder au wiki en français</a></td>
+</tr>
+<tr>
+<td valign="middle"><img src="Images/flag_netherlands.png" width="40" height="40"></td>
+<td valign="middle"><a href="nl-dut/Start.md">Klik hier om Nederland Wiki te opene</a></td>
+</tr>
+</table>
 
 
 This repository aim to centralize all Domoticz-Zigate documentation.
@@ -18,18 +26,3 @@ If you would like to translate a part or the totality of the Wiki into an other 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism.
 
 The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Domoticz-Zigate
-
-<table width="200" border="0" cellpadding="2">
-<tr>
-<td valign="middle" ><img src="Images/flag_uk.png" width="40" height="40"> </td>
-<td valign="middle">[Click here to access English Wiki](en-eng/Home.md)</td>
-</tr>
-<tr>
-<td valign="middle"><img src="Images/flag_france.png" width="40" height="40"></td>
-<td valign="middle">[Cliquer ici pour accéder au wiki en français](fr-fr/Home.md)</td>
-</tr>
-<tr>
-<td valign="middle"><img src="Images/flag_netherlands.png" width="40" height="40"></td>
-<td valign="middle"><a href="nl-dut/Start.md)">Klik hier om Nederland Wiki te opene</a> </td>
-</tr>
-</table>
