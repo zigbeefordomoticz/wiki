@@ -1,4 +1,4 @@
-# DomoticZ ZiGate plugin
+# DomoticZ ZiGate plugin Wiki
 
 
 <table width="200" border="0" cellpadding="2">
