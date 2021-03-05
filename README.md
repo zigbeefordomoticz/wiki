@@ -2,11 +2,11 @@
 
 # DomoticZ ZiGate plugin
 
-![English Wiki](../Images/flag_uk.png)
+![English Wiki](Images/flag_uk.png)
 
-![Wiki Français](../Images/flag_france.png)
+![Wiki Français](Images/flag_france.png)
 
-![Nederlandse Wiki](../Images/flag_netherlands.png)
+![Nederlandse Wiki](Images/flag_netherlands.png)
 
 This repository aim to centralize all Domoticz-Zigate documentation.
 
