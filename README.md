@@ -2,13 +2,12 @@
 
 # DomoticZ ZiGate plugin
 
-![English Wiki](Images/flag_uk.png){:height="36px" width="36px"}
 
-<img src="Images/flag_uk.png" width="50" height="50"> [Click here to access English Wiki](en-eng/Home.md)
+<img src="Images/flag_uk.png" width="40" height="40"> [Click here to access English Wiki](en-eng/Home.md)
 
-<img src="Images/flag_france.png" width="50" height="50"> [Cliquer ici pour accéder au wiki en français](fr-fr/Home.md)
+<img src="Images/flag_france.png" width="40" height="40"> [Cliquer ici pour accéder au wiki en français](fr-fr/Home.md)
 
-<img src="Images/flag_netherlands.png" width="50" height="50"> [Klik hier om Nederland Wiki te openen](nl-dut/Start.md)
+<img src="Images/flag_netherlands.png" width="40" height="40"> [Klik hier om Nederland Wiki te openen](nl-dut/Start.md)
 
 
 This repository aim to centralize all Domoticz-Zigate documentation.
