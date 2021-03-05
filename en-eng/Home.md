@@ -76,7 +76,6 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Muller Licht](Corner_Tint.md)
 * [Profalux](Corner_Profalux-corner.md)
 * [Schneider Wiser](Corner_Schneider_Wiser.md)
-* [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
 
 ## Information about releases
 
