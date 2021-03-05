@@ -1,5 +1,7 @@
 # Schneider WISER system ( big thanks to @hairv and @badz)
 
+* [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
+
 ## Purpose
 
 Purpose of this page is to share all findings regarding the WISER Zigbee product familly.
@@ -15,17 +17,17 @@ Work in progress, so only validated informations are written
 ## Pairing
 
 * Channel: 15, 11
-* Extended PANID: 
-  * 0x6734484504015e10 
+* Extended PANID:
+  * 0x6734484504015e10
   * 0x7996484504015e10
   * 0x6734484504015e10
   * 0x1234484504015e10
   * 0x5678484504015e10
   * 0xFefe484504015e10
-  
+
 In short your extended PANID must looks like : 0x----484504015e10, where the 1st 4 digits can be any hex digit
-  
- 
+
+
 
 ## Wiser Smeter
 
@@ -45,13 +47,13 @@ In short your extended PANID must looks like : 0x----484504015e10, where the 1st
       * Cluster Out
         * 0x0019
    1. Bind 0x0019, 0x0000, 0x0001, 0x0000, 0x0003, 0x0702
-   
+
 1. For each EndPoint
-   * Configure Reporting Cluster 0x0702 
+   * Configure Reporting Cluster 0x0702
      * Attribute 0x0000 DataType: 0x25 Uint48 0x0000ffffffffffff , Min: 30, Max: 30
      * Attribute 0x0400 DataType: 0x2a Int24: 400, Min: 30, Max: 30
      * Attribute 0x0002 DataType: 0x25 Uint48 0x0000ffffffffffff, Min: 30, Max: 30
-     
+
 1. Read Attribute Cluster 0x0000 Attribute 0x0007
 1. Read Attribute Cluster 0x0000 Attribute 0x0013
 1. Read Attribute Cluster 0x0000 Attribute 0xe000
@@ -82,7 +84,7 @@ In short your extended PANID must looks like : 0x----484504015e10, where the 1st
   1. Read Attribute Cluster 0x0001 Attribute 0x0035
   1. Read Attribute Cluster 0x0001 Attribute 0x0036
   1. Read Attribute Cluster 0x0001 Attribute 0x0020
-  
+
 1. Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
 
 1. Command Specific: Cluster 0x0009 cmd: 0x50 payload 0x10 0x01 0x00
@@ -121,56 +123,56 @@ In short your extended PANID must looks like : 0x----484504015e10, where the 1st
 
 ### Metering Attributes
 
-| DEC | HEX	| VALUE | 
+| DEC | HEX	| VALUE |
 | --- | --- | ----- |
-| 0	| 0	| currentSummationDelivered| 
-| 256	| 100	| currentTier1SummationDelivered| 
-| 258	| 102	| currentTier2SummationDelivered| 
-| 260	| 104	| currentTier3SummationDelivered| 
-| 262	| 106	| currentTier4SummationDelivered| 
-| 264	| 108	| currentTier5SummationDelivered| 
-| 266	| 10A	| currentTier6SummationDelivered| 
-| 2	| 2	| currentMaxDemandDelivered| 
-| 6	| 6	| powerFactor| 
-| 768	| 300	| unitOfMeasure| 
-| 769	| 301	| multiplier| 
-| 770	| 302	| divisor| 
-| 512	| 200	| meterStatus| 
-| 771	| 303	| summationFormatting| 
-| 772	| 304	| demandFormatting| 
-| 774	| 306	| meterType| 
-| 1024	| 400	| instantaneousDemand| 
-| 2049	| 801	| Electricity Alarm Mask| 
-| 20480	| 5000	| electricCurrentMultiplier| 
-| 20481	| 5001	| electricCurrentDivisor| 
-| 20737	| 5101	| RMSElectricCurrentPhase1| 
-| 20753	| 5111	| maxElectricCurrentPhase1| 
-| 20769	| 5121	| RMSElectricCurrentPhase1MaxThreshold| 
-| 21760	| 5500	| voltageMultiplier| 
-| 21761	| 5501	| voltageDivisor| 
-| 22017	| 5601	| RMSVoltagePhase1| 
-| 22049	| 5621	| RMSVoltagePhase1MinThreshold| 
-| 22050	| 5622	| RMSVoltagePhase1MaxThreshold| 
-| 23072	| 5A20	| activePowerAlarmMask| 
-| 23073	| 5A21	| activePowerMinThreshold| 
-| 23074	| 5A22	| activePowerMaxThreshold| 
-| 23296	| 5B00	| apparentPower| 
-| 23345	| 5B31	| apparentPowerMultiplier| 
-| 23346	| 5B32	| apparentPowerDivisor| 
-| 24576	| 6000	| loadConnectedLabel| 
-| 28674	| 7002	| numberOfPhases| 
-| 28675	| 7003	| supplierContractName| 
-| 28688	| 7010	| numberOfTiers| 
-| 28690	| 7012	| tiersAlarmMask| 
-| 28752	| 7050	| referencePowerFactor| 
-| 28753	| 7051	| referenceRMSElectricCurrent| 
-| 28758	| 7056	| referenceRMSVoltage| 
-| 28766	| 705E	| referenceFrequency| 
-| 57600	| E100	| MMSSensorType| 
-| 57632	| E120	| MMSAlarmsMask| 
-| 57856	| E200	| ctStatusRegister| 
-| 57857	| E201	| ctPowerConfiguration| 
-| 57858	| E202	| ctCalibrationMultiplier| 
+| 0	| 0	| currentSummationDelivered|
+| 256	| 100	| currentTier1SummationDelivered|
+| 258	| 102	| currentTier2SummationDelivered|
+| 260	| 104	| currentTier3SummationDelivered|
+| 262	| 106	| currentTier4SummationDelivered|
+| 264	| 108	| currentTier5SummationDelivered|
+| 266	| 10A	| currentTier6SummationDelivered|
+| 2	| 2	| currentMaxDemandDelivered|
+| 6	| 6	| powerFactor|
+| 768	| 300	| unitOfMeasure|
+| 769	| 301	| multiplier|
+| 770	| 302	| divisor|
+| 512	| 200	| meterStatus|
+| 771	| 303	| summationFormatting|
+| 772	| 304	| demandFormatting|
+| 774	| 306	| meterType|
+| 1024	| 400	| instantaneousDemand|
+| 2049	| 801	| Electricity Alarm Mask|
+| 20480	| 5000	| electricCurrentMultiplier|
+| 20481	| 5001	| electricCurrentDivisor|
+| 20737	| 5101	| RMSElectricCurrentPhase1|
+| 20753	| 5111	| maxElectricCurrentPhase1|
+| 20769	| 5121	| RMSElectricCurrentPhase1MaxThreshold|
+| 21760	| 5500	| voltageMultiplier|
+| 21761	| 5501	| voltageDivisor|
+| 22017	| 5601	| RMSVoltagePhase1|
+| 22049	| 5621	| RMSVoltagePhase1MinThreshold|
+| 22050	| 5622	| RMSVoltagePhase1MaxThreshold|
+| 23072	| 5A20	| activePowerAlarmMask|
+| 23073	| 5A21	| activePowerMinThreshold|
+| 23074	| 5A22	| activePowerMaxThreshold|
+| 23296	| 5B00	| apparentPower|
+| 23345	| 5B31	| apparentPowerMultiplier|
+| 23346	| 5B32	| apparentPowerDivisor|
+| 24576	| 6000	| loadConnectedLabel|
+| 28674	| 7002	| numberOfPhases|
+| 28675	| 7003	| supplierContractName|
+| 28688	| 7010	| numberOfTiers|
+| 28690	| 7012	| tiersAlarmMask|
+| 28752	| 7050	| referencePowerFactor|
+| 28753	| 7051	| referenceRMSElectricCurrent|
+| 28758	| 7056	| referenceRMSVoltage|
+| 28766	| 705E	| referenceFrequency|
+| 57600	| E100	| MMSSensorType|
+| 57632	| E120	| MMSAlarmsMask|
+| 57856	| E200	| ctStatusRegister|
+| 57857	| E201	| ctPowerConfiguration|
+| 57858	| E202	| ctCalibrationMultiplier|
 
 ## Wiser Actuator
 
@@ -198,7 +200,7 @@ In short your extended PANID must looks like : 0x----484504015e10, where the 1st
  1. Bind Cluster 0x0009
  1. Bind Cluster 0x0003
  1. Bind Cluster 0x0201
- 
+
  1. Configure Reporting 0x0201 Attr: 0x0012 Type: 0x29  Min: 600 Max: 600
  1. Configure Reporting 0x0702 Attr: 0x0000 Type: 0x25  Min: 600 Max: 600
  1. Configure Reporting 0x0702 Attr: 0x0400 Type: 0x2a  Min: 30 Max: 600
@@ -224,7 +226,7 @@ In short your extended PANID must looks like : 0x----484504015e10, where the 1st
 1. Read Attribute 0x0702 / 0x5a20
 
 1. Write Attribute 0x0000 Attribute 0xe050 ( Data Type: Bool 0x10; Value: True 0x01 )
-1. Write Attribute 0x0201 Attribute 0x0010 Type: 0x28 Value: 0 
+1. Write Attribute 0x0201 Attribute 0x0010 Type: 0x28 Value: 0
 1. Write Attribute 0x0201 Attribute 0xe010 Type: 0x30 Value: 0x01
 1. Write Attribute 0x0201 Attribute 0xe011 Type: 0x18 Value: 0x00
 
@@ -257,7 +259,7 @@ Cluster Out 2: 0402 (Temperature Measurement)
 
 * 0x0000/0xe011 Device Status
 * 0x0000/0xe010 Current Mode
-* 0x0000/0xe050 COMMISSIONING 
+* 0x0000/0xe050 COMMISSIONING
 * 0x0000/0x5011 ATTRIBUTE_BASIC_LANGUAGE
 
 
@@ -285,7 +287,7 @@ Cluster Out 2: 0402 (Temperature Measurement)
   * Cluster Out
     * 0x0019
     * 0x0201
-    
+
 1. Read Attribute 0x0000 / 0x0005 ( Model Name )
   * EH-ZB-RTS
 1. Read Attribute 0x0000 / 0xe000
@@ -314,7 +316,7 @@ Cluster Out 2: 0402 (Temperature Measurement)
 1. Write Attribute Cluster 0x0000 on attribute 0x5011 DataType: 0x42 Value 'en'
 
 1. Read Attribute Cluster 0x0001 on attribute 0x0020
-1. Write Attribute Cluster 0x0000 on attribute 0x0010 DataType: 0x42 Value is a string which give the name of the Zone 
+1. Write Attribute Cluster 0x0000 on attribute 0x0010 DataType: 0x42 Value is a string which give the name of the Zone
 
 At a point of time the device is quering the controler
 
@@ -359,28 +361,28 @@ Cluster Out 2: 0201 (Thermostat)
 1. Thermostat sending local Temperature to:
    1. Hub by Report Attribute Cluster 0x0402 Attribute 0x0000
    1. actuators by Report Attribute Cluster 0x0402 Attribute 0x0000
-   
+
 1. Thermostat requesting Attribute from the Hub
    1. OccupedHeatingSetPoint by Read Attribute Cluster 0x0201 on Attribute 0x0012
    1. 0xe010 by Read Attribute Cluster 0x0201 on Attribute 0xe010 ( Hub returning Getting 8-Bit enum value: 0x01 )
    1. MaxHeatSetpointLimit by Read Attribute Cluster 0x0201 on Attribute 0x0016 ( Hub returning response 3500 )
-   1. MinHeatSetpointLimit by Read Attribute Cluster 0x0201 on Attribute 0x0015 ( Hub returning response 50 ) 
+   1. MinHeatSetpointLimit by Read Attribute Cluster 0x0201 on Attribute 0x0015 ( Hub returning response 50 )
 
 1. each Actuators sending Instantaneous Demand to:
    1. Hub by Report Attribute Cluster 0x0702 Attribute 0x0400
-   
+
 At that stage, someone set a target temperature on the Application managing the HUB
 
 1. Thermostat sending SetPoint to:
    1. HUB by using the command 0xe0 on Cluster 0x0201
    1. Actuators by using the command 0xe0 on Cluster 0x0201
-   
+
 1. HUB sending SetPoint to:
    1. Actuators by using the command 0xe0 on Cluster 0x0201
-   
+
 1. each Actuators sending Instantaneous Demand to
    1. Hub by Report Attribute Cluster 0x0702 Attribute 0x0400
-   
+
 
 ### Binding Thermostat with Actuator
 
@@ -393,7 +395,7 @@ At that stage, someone set a target temperature on the Application managing the 
    * Source Thermostat
    * Target Actuator
    * Cluster 0x0402
-   
+
 #### comments
 
 * The HUB is acting as a Zigbee controler but not only as it is responding to cluster 0x0201 (Thermostat)
@@ -406,17 +408,17 @@ At that stage, someone set a target temperature on the Application managing the 
 
 ### Decoding Cluster 0x0201 Command Specific 0xe0
 
-* This command seems to be used to set Setpoint 
+* This command seems to be used to set Setpoint
   ```
-  ZigBee Cluster Lib Frame: 0x11 
+  ZigBee Cluster Lib Frame: 0x11
   Sequence number         : 0xc1
-  Command                 : 0xe0 
+  Command                 : 0xe0
                           : 0x00
   Length                  : 0x01
   Value                   : 0x34 0x08 (Setpoint with LBHB , don't forgett the Endian ;-)
                           : 0xff
   ```   
-  
+
 
 ### Decoding Cluster 0x0201 on Attribute 0xe010
 
@@ -435,11 +437,11 @@ At that stage, someone set a target temperature on the Application managing the 
 ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 *  0x00 - Conventional (ON/OFF)
 * 0x02 - Setpoint (set temperature)
-* 0x03 - FIP - mode fil pilote 
+* 0x03 - FIP - mode fil pilote
 
 
 
-## Reporting Configuration 
+## Reporting Configuration
 
 ```
 # Simple Metering, current summation delivered.
@@ -539,7 +541,7 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 
 # thermostat commands
 
-| cluster | cluster name | command | purpose | payload | 
+| cluster | cluster name | command | purpose | payload |
 |---|---|---|---|---|
 |0x0201 | Thermostat | 0xe0 | setpoint | zone 0x01 + temperature in centi degree (uint16)  + end 0xff |
 |0x0201 | Thermostat | 0xe1 | set fip mode | zone 0x01 + fip mode (0-confort, 1-confort -1, 2 confort -2, 3-eco, 4-FrostP, 5-off) + prio  (0x01)  end 0xff |
@@ -548,5 +550,3 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
   * https://studylibfr.com/doc/2872316/compteur-d-%C3%A9nergie-sans-fil-s%C3%A9rie-em4300
   * https://damrexelprod.blob.core.windows.net/medias/1951d12a-39f3-4317-86c8-f95b6fb13ac5
   * http://www.kele.com/Catalog/22%20Thermostats_Controllers/PDFs/SE8000%20Series%20Zigbee%20Pro%20Integration%20Manual-2014.pdf
-  
-                        

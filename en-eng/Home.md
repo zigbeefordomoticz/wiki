@@ -1,4 +1,4 @@
-# Welcome to the Domoticz-Zigate wiki!
+# Welcome to the Domoticz-Zigate wiki !
 
 ![zigate.fr](../Images/ZiGate.png)
 
@@ -67,6 +67,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Devices specifics
 
+* [Aqara Opple Switchs](Corner_AqaraOppleSwitchs.md)
 * [BlitzWolf](Corner_Blitzwolf.md)
 * [Eurotronics](Corner_Eurotronics.md)
 * [Ikea Tradfri](Corner_IKEA-Tradfri.md)
@@ -75,12 +76,13 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Muller Licht](Corner_Tint.md)
 * [Profalux](Corner_Profalux-corner.md)
 * [Schneider Wiser](Corner_Schneider_Wiser.md)
-* [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
 
+## Information about releases
+
+* [Release 4.1](Release_4.1.md)
 
 ## In case of Trouble
 
-1. [ZiGate limitations](Info_ZiGate-Limitations.md)
 1. Watch the log, you should fine some information if something is going wrong.
 1. Use one of the forum channels
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
@@ -92,8 +94,9 @@ We are contributing to this project on our spare time. If you do consider that i
 * [How-to check lost devices](../Contrib/CheckDeadDevices.lua) in LUA
 * [How-to check lost devices](../Contrib/CheckLastSeen.dzVents) in DzVents
 
-## InformationsS
+## Informations
 
+* [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
 * [How-to Configure ZiGate in ZiBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
 

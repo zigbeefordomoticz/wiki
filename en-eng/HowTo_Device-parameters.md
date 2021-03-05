@@ -40,4 +40,3 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | netatmoEnableDimmer | Enable Dimming mode | Legrand-Netatmo Switch w/o neutral |
 | netatmoInvertShutter | Invert the Shutter switch | Legrand-Netatmo Shutter|
 | netatmoReleaseButton | special for François | Remote Legrand-Netatmo |
-
