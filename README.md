@@ -28,7 +28,8 @@ The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Dom
 <td valign="middle"><img src="Images/flag_france.png" width="40" height="40"></td>
 <td valign="middle">[Cliquer ici pour accéder au wiki en français](fr-fr/Home.md)</td>
 </tr>
+<tr>
+<td valign="middle"><img src="Images/flag_netherlands.png" width="40" height="40"></td>
+<td valign="middle"><a href="nl-dut/Start.md)">Klik hier om Nederland Wiki te opene</a> </td>
+</tr>
 </table>
-
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
