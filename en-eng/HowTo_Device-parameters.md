@@ -31,9 +31,12 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | PIROccupiedToUnoccupiedDelay | The PIROccupiedToUnoccupiedDelay attribute specifies the time delay, in seconds,before the PIR sensor changes to its unoccupied state after the last detection of movement in the sensed area. | Tested with Philips SML001 |
 | profaluxOrientBSO | default Tilt for Profalux BSO Orientation | Profalux BSO |
 | alarmDuration | Define the number of second the alarm will last | Heiman IAS Siren |
-<<<<<<< HEAD:en-eng/HowTo_Device-parameters.md
-=======
 | OnOffPollingFreq | Polling frequency for On/Off and Level status | Gledopto LED, Philips Led |
 | PowerPollingFreq | Polling frequency for instant power | BlitzWolf and Lumi plug maeu01 Plug |
 | AC201Polling | Polling of AC201 and CAC201 status | Only for OWON AC201 and Casia CAC201 |
->>>>>>> 6b768953c046a4eb3bedcc866a896ad1b72853a2:en-eng/device-parameters.md
+| netatmoLedIfOn | Enable the Led if On | Legrand-Netatmo Plug, Switch |
+| netatmoLedInDark | Enable Led if Off (allow to be visible in dark | Legrand-Netatmo Plug, Switch |
+| netatmoLedShutter | Enable Led on Shutter switch | Legrand-Netatmo Shutter |
+| netatmoEnableDimmer | Enable Dimming mode | Legrand-Netatmo Switch w/o neutral |
+| netatmoInvertShutter | Invert the Shutter switch | Legrand-Netatmo Shutter|
+| netatmoReleaseButton | special for François | Remote Legrand-Netatmo |
