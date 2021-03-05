@@ -1,6 +1,6 @@
-Welkom op de wiki van de Domoticz-Zigate !
+# Welkom op de wiki van de Domoticz-Zigate !
 
-<a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md) 
+<a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md)
 
 Op deze wiki is alle informatie te vinden omtrent de plugin van de Domoticz plugin.
 
