@@ -4,6 +4,8 @@
 
 ![English Wiki](Images/flag_uk.png){:height="36px" width="36px"}
 
+<img src="Images/flag_uk.png" width="36" height="36">
+
 ![Wiki Français](Images/flag_france.png){:height="36px" width="36px"}
 
 ![Nederlandse Wiki](Images/flag_netherlands.png){:height="36px" width="36px"}
