@@ -1,4 +1,4 @@
-# Welcome to the Domoticz-Zigate wiki!
+# Welcome to the Domoticz-Zigate wiki !
 
 ![zigate.fr](../Images/ZiGate.png)
 
@@ -83,7 +83,6 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## In case of Trouble
 
-1. [ZiGate limitations](Info_ZiGate-Limitations.md)
 1. Watch the log, you should fine some information if something is going wrong.
 1. Use one of the forum channels
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
@@ -97,6 +96,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Informations
 
+* [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
 * [How-to Configure ZiGate in ZiBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
 
