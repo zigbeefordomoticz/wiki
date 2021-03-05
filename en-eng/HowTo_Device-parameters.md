@@ -34,3 +34,10 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | OnOffPollingFreq | Polling frequency for On/Off and Level status | Gledopto LED, Philips Led |
 | PowerPollingFreq | Polling frequency for instant power | BlitzWolf and Lumi plug maeu01 Plug |
 | AC201Polling | Polling of AC201 and CAC201 status | Only for OWON AC201 and Casia CAC201 |
+| netatmoLedIfOn | Enable the Led if On | Legrand-Netatmo Plug, Switch |
+| netatmoLedInDark | Enable Led if Off (allow to be visible in dark | Legrand-Netatmo Plug, Switch |
+| netatmoLedShutter | Enable Led on Shutter switch | Legrand-Netatmo Shutter |
+| netatmoEnableDimmer | Enable Dimming mode | Legrand-Netatmo Switch w/o neutral |
+| netatmoInvertShutter | Invert the Shutter switch | Legrand-Netatmo Shutter|
+| netatmoReleaseButton | special for François | Remote Legrand-Netatmo |
+
