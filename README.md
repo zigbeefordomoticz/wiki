@@ -1,7 +1,7 @@
 # DomoticZ ZiGate plugin
 
 
-<img src="Images/flag_uk.png" width="40" height="40" vertical-align=middle> [Click here to access English Wiki](en-eng/Home.md)
+<img src="Images/flag_uk.png" width="40" height="40"> [Click here to access English Wiki](en-eng/Home.md)
 
 <img src="Images/flag_france.png" width="40" height="40"> [Cliquer ici pour accéder au wiki en français](fr-fr/Home.md)
 
@@ -19,15 +19,9 @@ If you find some issues, mistakes ... feel free to submit a change via the GitHu
 
 The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Domoticz-Zigate
 
-<table width="200" border="1" cellpadding="2">
+<table width="200" border="0" cellpadding="2">
 <tr>
-<th valign="middle" ><img src="Images/flag_uk.png" width="40" height="40" vertical-align=middle> </th>
-<th valign="middle">Percentage of marks</th>
-<th valign="middle">Grade</th>
-<th valign="middle">Remarks</th>
-</tr>
-<tr>
-<td valign="middle">S001</td>
+<td valign="middle" ><img src="Images/flag_uk.png" width="40" height="40"></td>
 <td valign="baseline">92</td>
 <td valign="baseline">A+</td>
 <td valign="baseline">Excellent</td>
@@ -39,3 +33,6 @@ The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Dom
 <td valign="baseline">Good</td>
 </tr>
 </table>
+
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
