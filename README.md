@@ -18,3 +18,24 @@ If you would like to translate a part or the totality of the Wiki into an other 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism.
 
 The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Domoticz-Zigate
+
+<table width="200" border="1" cellpadding="2">
+<tr>
+<th valign="middle" >Student Code </th>
+<th valign="middle">Percentage of marks</th>
+<th valign="middle">Grade</th>
+<th valign="middle">Remarks</th>
+</tr>
+<tr>
+<td valign="baseline">S001</td>
+<td valign="baseline">92</td>
+<td valign="baseline">A+</td>
+<td valign="baseline">Excellent</td>
+</tr>
+<tr>
+<td valign="baseline">S002</td>
+<td valign="baseline">76</td>
+<td valign="baseline">B+</td>
+<td valign="baseline">Good</td>
+</tr>
+</table>
