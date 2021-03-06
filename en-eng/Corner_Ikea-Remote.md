@@ -20,7 +20,7 @@ We assume here the Bulb nor the Remote have been paired with the Zigate. In case
 
 ### Phase 1: bring everyone on the Zigate network
 
-1. Put the Zigate in pairing mode. I suggest that you put 255 for the Permit to Join parameter. 
+1. Put the Zigate in pairing mode. I suggest that you put 255 for the Permit to Join parameter.
 Make sure that you have also enabled 'accept New Hardware' in Domoticz settings.
 1. Enable 'group management' :
    * You must have the following entry in Domoticz-Zigate plugin file Conf/PluginConf.txt 'enablegroupmanagement':'1',
@@ -41,9 +41,9 @@ logFORMAT':'0'
 
 1. Pair your bulb(s) with Zigate. For that you have to reset the bulb by doing, from a power on state, 6 times power-off power-on ( in a short time ). At the end of that process, you should have a new Widget in Domoticz which will command the Bulb.
    * You can at that stage note the Bulb IEEE, by looking after the List of Devices (in Domoticz) and the IEEE is the 3rd columns named ID.
-   
-![List of Devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Images/Domoticz-ListOfDevices.png])
-   
+
+![List of Devices](../Images/Domoticz-ListOfDevices.png])
+
 1. Pair the Tradfri remote command with Zigate. For that you have to reset the remote command, by pressing 4 times, the small setup button. At the end of that process, you should have a new widget in Domoticz representing the Remote Command. At that stage the widget do not get any event from the remote - this is normal -. The widget is passive.
 1. Pair the Remote Command with the Tradfri Bulbs you want to have in the group. For that, you need to bring the remote command close to each bulb and press the setup button. The light of the bulb will fluctuate, and when you have a peak of intensity, the pairing should have been done. Release the setup button. Check that you can switch off/off the bulb from the remote. If not retry the pairing and make sure that you stay up to the end of this pairing process.
 
@@ -61,7 +61,7 @@ At that stage, you have:
    * A Group will be created in Domoticz. This group will command the Bulb, so you can cross check that is the right one. Do note the address of that group 'xxxx'
 1. Edit (or create if not existing ) the file Conf/ZigateGroupsConfig-xx.txt (where xx is the ID of your Zigate Hardware in Domoticz). And add a new line
 	xxxx, Group Remote Command, Zigate IEEE, Bulb IEEE
-	
+
 ZigateGroupsConfig-35.txt
 ```
 # Zigate -> 00158d0001ededde
@@ -97,7 +97,7 @@ ZigateGroupsConfig-35.txt
 
 If you want to use the Remote only for remote command, and don't have the bulb involved at all, you simply have to remove the Bulb IEEE from the group definition.
 
-1. Edit the file Conf/ZigateGroupsConfig-xx.txt 
+1. Edit the file Conf/ZigateGroupsConfig-xx.txt
    Remote Bulb IEEE, and leave only the Zigate IEEE in that line
 	xxxx, Group Name, Zigate IEEE
 
@@ -116,6 +116,4 @@ If you want to use the Remote only for remote command, and don't have the bulb i
 
 * List of Devices in Domoticz
 
-![List of Devices](https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Images/Domoticz-ListOfDevices.png)
-
-
+![List of Devices](../Images/Domoticz-ListOfDevices.png)
