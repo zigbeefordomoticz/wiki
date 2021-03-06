@@ -6,7 +6,7 @@ Voici la page __A propos__ de l'interface Web du plugin :
 
 ![About](Images/FR_WebUI-A-propos.png)
 
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Composition
 

@@ -39,7 +39,7 @@ Il est recommandé de commencer par appairer les objets de type routeurs afin de
 * Aller dans la section [Admin > Appairage](WebUI_Admin.md#appairage)
 
 ![FR_WebUI-Admin-Dispositif.png](Images/FR_WebUI-Admin-Appairage.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 
 Il existe plusieurs méthodes :

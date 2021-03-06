@@ -1,7 +1,10 @@
 A number of parameters are available inside the plugin to customize the behaaviour of the plugin or the behaviour of the device.
 
 By default a Certified device get default parameters already initiatialized. If you want to customize you have to go to the plugin Web Admin page,
-then go to Management -> Device Management and you will find for each device a Parameters field ( right column )
+then go to Management -> Device Management and you will find for each device a Parameters icon ( right column ) > a popup will open :
+
+![EN_WebUI-Device-management-parametres.png](../Images/EN_WebUI-Device-management-parametres.png)
+
 You can edit this field, by adding, removing or updating attributes. Please make sure to follow the syntax:
 
 { 'parameter1': value, 'parameter2': value .... }

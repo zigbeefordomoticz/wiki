@@ -69,7 +69,7 @@ Vous retrouvez sous cet item un tableau fournissant des informations relatives a
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin :
 
 ![Niveau d'interférences](Images/FR_WebUI-Reseau-Interferences.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 

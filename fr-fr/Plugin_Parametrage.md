@@ -13,7 +13,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 
 ![Domoticz Hardware Menu for Plugin](../Images/DzMenu.png)
 
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 
 
