@@ -59,7 +59,7 @@ Anyone willing to improve , translate in other languages are more than welcome
 ## CONTRIBUTIONS
 
 We would like also to encourage sharing and if you wouldn't to share with the other users some scripts, dzVents, LUA ... please
-feel free to get an account on GitHub and push to the plugin [Contrib](https://github.com/pipiche38/Domoticz-Zigate-Wiki/tree/master/Contrib)
+feel free to get an account on GitHub and push to the plugin [Contrib](../Contrib)
 
 More details can be found in the Release Notes.
 
