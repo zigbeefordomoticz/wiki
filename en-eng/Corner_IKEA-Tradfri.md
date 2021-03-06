@@ -26,7 +26,7 @@ With Zigate firmware 3.0f you can get the remote control event in domoticz (via 
   * Let's the plugin do the work and identify the Group created by the Ikea Bulb/Control association
   * You then need to associate the Zigate to this group (see in the Group Management on how to do that )
 
-* A step-by-step approach is presented here: ../en-eng/Ikea-Remote.md
+* A step-by-step approach is presented here: [Ikea remote](Corner_Ikea-Remote.md)
 
 ## How to use the tiny Remote switch On/off (squared usally sold with plug )
 
@@ -77,7 +77,7 @@ In case you want to use the swicth for something else, you will have to remove a
    * Let's the plugin do the work and identify the Group created by the Ikea Bulb/Control association
    * You then need to associate the Zigate to this group (see in the Group Management on how to do that )
 
-   * A [step-by-step approach](../en-eng/Ikea-Remote.md) is presented here for the Ikea Remote ( Phase1, Phase 2 and Phase3 Testing ), Option1 and Option2 are Remote Controller specific
+   * A [step-by-step approach](Corner_Ikea-Remote.md) is presented here for the Ikea Remote ( Phase1, Phase 2 and Phase3 Testing ), Option1 and Option2 are Remote Controller specific
 
 From that , every time the motion sensor will turn on the light, you'll get as well the motion widget to On.
 

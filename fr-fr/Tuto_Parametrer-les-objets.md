@@ -71,4 +71,4 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 }
 
 
-*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/device-parameters.md) en anglais.*
+*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/HowTo_Device-parameters.md) en anglais.*
