@@ -17,7 +17,7 @@ La section __Admin__ comporte les pages :
 Voici la page __Appairage__ de l'interface Web du plugin :
 
 ![FR_WebUI-Admin-Dispositif.png](Images/FR_WebUI-Admin-Appairage.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -38,7 +38,7 @@ Se reporter au tutoriel [Ajouter un nouvel objet](Tuto_Appairage-objet.md) pour 
 Voici la page __Groupe__ de l'interface Web du plugin :
 
 ![FR_WebUI-Admin-Groupe](Images/FR_WebUI-Admin-Groupe.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 Le groupe que vous pourrez créer via ce plugin est vu dans DomoticZ comme un unique dispositif de type Switch et ce indépendamment du nombre d'objets composant le groupe.
 L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous les objets du groupe.
@@ -63,7 +63,7 @@ Se reporter au tutoriel [Gérer les groupes](Tuto_Gerer-les-groupes.md) pour plu
 Voici la page __ZiGate__ de l'interface Web du plugin :
 
 ![FR_WebUI-Admin-Zigate](Images/FR_WebUI-Admin-Zigate.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -82,7 +82,7 @@ Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'information
 Voici la page __Plugin__ de l'interface Web du plugin :
 
 ![FR_WebUI-Admin-Plugin](Images/FR_WebUI-Admin-Plugin.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -100,7 +100,7 @@ Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'information
 Voici la page __Firmware__ de l'interface Web du plugin :
 
 ![FR_WebUI-Admin-Firmware](Images/FR_WebUI-Admin-Firmware.png)
-*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 

@@ -11,7 +11,11 @@ Par défaut, un objet certifié est initialisé avec les paramètres par défaut
 
 * Aller dans la section [Management > Gestion des objets](WebUI_Management.md#gestion-des-objets).
 * Filtrer si nécessaire pour trouver l'objet souhaité.
-* Renseigner le champ __Paramètres__.
+* Cliquer sur la petite icône dans le champ __Paramètres__.
+* La fenêtre d'édition de paramètres va s'ouvrir.
+
+![FR_WebUI-Gestion-des-objets-parametres.png](Images/FR_WebUI-Gestion-des-objets-parametres.png)
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 Il est possible d'éditer le champ paramètres en ajoutant, supprimant ou en mettant à jour les attributs.
 
