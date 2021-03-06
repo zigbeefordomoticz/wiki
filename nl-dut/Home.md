@@ -1,4 +1,8 @@
-Welkom op de wiki van de Domoticz-Zigate !
+# Welkom op de wiki van de Domoticz-Zigate !
+
+![zigate.fr](../Images/ZiGate.png)
+
+<a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md)
 
 Op deze wiki is alle informatie te vinden omtrent de plugin van de Domoticz plugin.
 
@@ -9,7 +13,7 @@ Dit open-source project wordt onderhouden door vrijwilligers, dit betekent dus d
 ## Introductie
 Het doel van de plugin is om een koppeling te maken tussen de Zigate (hardware) en de Domoticz GUI. Dit zorgt ervoor dat je alle Zigbee producten kan bedienen via Domoticz. De plugin is volledig geschreven in python en dient los geïnstalleerd te worden.
 
-Hieronder is een lijst met de verschillende apparaten welke compatible zijn met de plugin, deze producten zijn daadwerkelijk door het team getest en zijn dus “gecertificeerd”. Het is mogelijk dat een ander Zigbee product ook functioneert met de plugin, echter is dit niet uitvoerig getest door het team. 
+Hieronder is een lijst met de verschillende apparaten welke compatible zijn met de plugin, deze producten zijn daadwerkelijk door het team getest en zijn dus “gecertificeerd”. Het is mogelijk dat een ander Zigbee product ook functioneert met de plugin, echter is dit niet uitvoerig getest door het team.
 * [Lijst met certificeerde apparaten] https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Compatible-Devices)
 
 ## Om te beginnen:
@@ -32,7 +36,7 @@ Hieronder is een lijst met de verschillende apparaten welke compatible zijn met 
    * [Engels Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
 
 
-## 
+##
 ## Veel gestelde vragen:
 * [Vragen over: IKEA Tradfri](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/IKEA-Tradfri-corner)
 * [Vragen over: Xiaomi/Aqara corner](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Xiaomi-Corner)
