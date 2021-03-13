@@ -12,7 +12,7 @@ The section __Network__ contents the pages :
 
 Here is the __Topology__ page of the plugin Web interface :
 
-![Network Topology](EN_WebUI-Network-Topology.png)
+![Network Topology](Images/EN_WebUI-Network-Topology.png)
 
 *This picture may have have changed since this documentation was written.*
 
@@ -38,7 +38,7 @@ Here you can see more the hierarchical structure of your Zigbee network.
 
 Here is the __Interference level__ page of the plugin Web interface :
 
-![Network Energy ](EN_WebUI-Network-Interference-level.png)
+![Network Energy ](Images/EN_WebUI-Network-Interference-level.png)
 
 *This picture may have have changed since this documentation was written.*
 
