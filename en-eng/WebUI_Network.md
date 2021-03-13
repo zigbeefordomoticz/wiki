@@ -14,6 +14,8 @@ Here is the __Topology__ page of the plugin Web interface :
 
 ![Network Topology](EN_WebUI-Network-Topology.png)
 
+*This picture may have have changed since this documentation was written.*
+
 At plugin start a report is triggered. It could take up to 15' to get the report extracted.
 You can after that manually trigger a scan
 
@@ -38,6 +40,7 @@ Here is the __Interference level__ page of the plugin Web interface :
 
 ![Network Energy ](EN_WebUI-Network-Interference-level.png)
 
+*This picture may have have changed since this documentation was written.*
 
 Starting Plugin Version: > 4.4, the plugin queries Zigate to get informations on the Energy level per channel.
 

@@ -15,6 +15,8 @@ Here is the __Device management__ page of the plugin Web interface :
 
 ![Device Management](Images/EN_WebUI-Management-Device.png)
 
+*This picture may have have changed since this documentation was written.*
+
 ### How to use
 
 Use this page to manage your devices.
@@ -32,6 +34,8 @@ You can :
 Here is the __Group management__ page of the plugin Web interface :
 
 ![Device Management](EN_WebUI-Management-Group.png)
+
+*This picture may have have changed since this documentation was written.*
 
 ### How to use
 

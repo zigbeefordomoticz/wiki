@@ -6,7 +6,7 @@ Here is the __Dashboard__ page of the plugin Web interface :
 
 ![Dashboard](Images/EN_WebUI-Dashboard.png)
 
-*This page may have have changed since this documentation was written.*
+*This picture may have have changed since this documentation was written.*
 
 ### Contents
 
