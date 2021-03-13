@@ -13,7 +13,7 @@ The section __Management__ contents the pages :
 
 Here is the __Device management__ page of the plugin Web interface :
 
-![Device Management](../Images/Device-Management.png)
+![Device Management](Images/EN_WebUI-Management-Device.png)
 
 ### How to use
 
@@ -31,7 +31,7 @@ You can :
 
 Here is the __Group management__ page of the plugin Web interface :
 
-![Device Management](../Images/Group-Management.png)
+![Device Management](EN_WebUI-Management-Group.png)
 
 ### How to use
 

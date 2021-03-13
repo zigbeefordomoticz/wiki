@@ -4,7 +4,7 @@ Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get ac
 
 Here is the __Dashboard__ page of the plugin Web interface :
 
-![Dashboard](../Images/EN_WebUI-Dashboard.png)
+![Dashboard](Images/EN_WebUI-Dashboard.png)
 
 *This page may have have changed since this documentation was written.*
 
