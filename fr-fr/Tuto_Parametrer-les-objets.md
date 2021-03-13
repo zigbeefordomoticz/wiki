@@ -14,7 +14,7 @@ Par défaut, un objet certifié est initialisé avec les paramètres par défaut
 * Cliquer sur la petite icône dans le champ __Paramètres__.
 * La fenêtre d'édition de paramètres va s'ouvrir.
 
-![FR_WebUI-Gestion-des-objets-parametres.png](Images/FR_WebUI-Gestion-des-objets-parametres.png)<br>
+![FR_WebUI-Gestion-des-objets-parametres.png](Images/FR_WebUI-Gestion-des-objets-parametres.png)
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 Il est possible d'éditer le champ paramètres en ajoutant, supprimant ou en mettant à jour les attributs.
