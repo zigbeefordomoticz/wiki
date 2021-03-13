@@ -31,7 +31,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [General presentation](WebUI_General-presentation.md)
 * Section [Dashboard](WebUI_Dashboard.md)
-* Section [Management](WebUI_Gestion.md)
+* Section [Management](WebUI_Management.md)
 * Section [Network](WebUI_Network.md)
 * Section [Admin](WebUI_Admin.md)
 * Section [Settings](WebUI_Settings.md)
