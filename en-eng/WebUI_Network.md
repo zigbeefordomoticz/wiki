@@ -12,7 +12,9 @@ The section __Network__ contents the pages :
 
 Here is the __Topology__ page of the plugin Web interface :
 
-![Network Topology](../Images/Network_Topology.png)
+![Network Topology](Images/EN_WebUI-Network-Topology.png)
+
+*This picture may have have changed since this documentation was written.*
 
 At plugin start a report is triggered. It could take up to 15' to get the report extracted.
 You can after that manually trigger a scan
@@ -36,8 +38,9 @@ Here you can see more the hierarchical structure of your Zigbee network.
 
 Here is the __Interference level__ page of the plugin Web interface :
 
-![Network Energy ](../Images/InterferenceLevels.png)
+![Network Energy ](Images/EN_WebUI-Network-Interference-level.png)
 
+*This picture may have have changed since this documentation was written.*
 
 Starting Plugin Version: > 4.4, the plugin queries Zigate to get informations on the Energy level per channel.
 

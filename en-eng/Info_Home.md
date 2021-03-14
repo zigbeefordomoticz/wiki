@@ -10,4 +10,4 @@ On top we have build a specific User Interface which is accessible over your bro
 
 Here after is a non-exhaustive list of compatible devices. What is listed here is all devices which have been 'certified', we know that it operates with the plugin. It might happen that you have some other ZigBee compliant devices which can work.
 * [https://zigbee.blakadder.com](https://zigbee.blakadder.com)
-* [List of certified devices](Info_Compatible-Devices.md)
+* [List of certified devices](Info_Compatible-devices.md)

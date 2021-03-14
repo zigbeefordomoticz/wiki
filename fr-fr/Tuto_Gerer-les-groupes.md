@@ -58,7 +58,7 @@ Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
 
 #### Créer un groupe
 
-* Aller dans la section [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes).
+* Aller dans la section [Management > Gestion des groupes](WebUI_Gestion.md#gestion-des-groupes).
 
 ![Adding Group Management](../Images/AddingGroup.png)
 
@@ -77,7 +77,7 @@ La demande sera envoyée à chaque objet listé. Cela peut prendre quelques seco
 #### Mettre à jour un groupe
 
 * S'assurer que tous les objets sont connectés au réseau ZigBee.
-* Aller dans la section [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes).
+* Aller dans la section [Management > Gestion des groupes](WebUI_Gestion.md#gestion-des-groupes).
 * Cliquer sur le groupe à modifier.
 * Ajouter ou supprimer des objets.
 * Cliquer sur le bouton __Valider__.
@@ -95,7 +95,7 @@ Il y a deux possibilités :
 
 ##### Depuis L'interface web du plugin
 
-* Aller dans la section [Management > Gestion des groupes](WebUI_Management.md#gestion-des-groupes).
+* Aller dans la section [Management > Gestion des groupes](WebUI_Gestion.md#gestion-des-groupes).
 * Sélectionner le groupe à supprimer.
 * Cliquer sur la petit icône poubelle à gauche.
 * Cliquer sur le bouton __Valider__.

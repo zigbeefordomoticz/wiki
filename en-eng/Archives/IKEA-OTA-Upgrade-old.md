@@ -43,7 +43,7 @@ The plugin is pushing information via the admin Zigate Widget
 
 Here after is a screenshot of the Notification Text widget showing the starting time of the OTA process and its completion.
 
-![Admin Widget showing OTA](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/OTAu.png)
+![Admin Widget showing OTA](../Images/OTAu.png)
 
 ## Upgrade of Battery powered devices
 

@@ -1,4 +1,4 @@
-# Tutoriel - Paramétrer les objets
+# Tutoriel - Paramétrer les objets 
 
 Ce tutoriel explique comment paramétrer spécifiquement certains objets.
 
@@ -9,7 +9,7 @@ Par défaut, un objet certifié est initialisé avec les paramètres par défaut
 
 ## Méthode
 
-* Aller dans la section [Management > Gestion des objets](WebUI_Management.md#gestion-des-objets).
+* Aller dans la section [Management > Gestion des objets](WebUI_Gestion.md#gestion-des-objets).
 * Filtrer si nécessaire pour trouver l'objet souhaité.
 * Cliquer sur la petite icône dans le champ __Paramètres__.
 * La fenêtre d'édition de paramètres va s'ouvrir.
@@ -71,4 +71,4 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 }
 
 
-*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/device-parameters.md) en anglais.*
+*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/HowTo_Device-parameters.md) en anglais.*

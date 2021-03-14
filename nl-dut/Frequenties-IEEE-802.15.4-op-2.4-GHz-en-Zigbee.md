@@ -21,15 +21,12 @@ Om te compenseren voor een kanaal middenfrequentie is een bandbreedte van 7Mhz a
 
 Niet overlappende kanalen zijn(1,6 en 11 voor de Verenigde staten & 1, 7 en 13 voor Europa) deze kanalen kunnen dus ook gebruikt worden om geen interferentie te hebben met Wi-FI.
 
-![Kanaal overlap](https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Images/Channel-Allocations.png?raw=true)
+![Kanaal overlap](../Images/Channel-Allocations.png?raw=true)
 
 ## 2. Fysieke scheiding
 Om de zorgen dat er geen interferentie is op het product wordt het aangeraden om een fysieke scheiding van ongeveer 8m tussen het product en het WI-FI (AP) te hebben. Er kan dan gezorgd worden voor een stabiele verbinding op de IEEE 802.15.4 bandbreedte.
 
-## 3. Mesh Netwerken 
+## 3. Mesh Netwerken
 Het ZigBee protocol biedt voordelen zoals een zelf organiserend & zelf helend mesh netwerk. Dit zorgt ervoor dat als een route naar een apparaat wordt gekozen en deze niet te bereiken is, er dan een andere route wordt gekozen.
 
 Bron: https://www.nxp.com/docs/en/application-note/JN-AN-1079.pdf
-
-
-

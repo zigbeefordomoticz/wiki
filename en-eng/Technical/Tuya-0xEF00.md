@@ -131,7 +131,7 @@ The tuya Cluster 0xEF00 is more or less one tunnel for tuyas MQTT commands from 
 
 * VERSION 3: '\_TZE200_c88teujp', '\_TYST11_KGbxAXL2', '\_TYST11_zuhszj9s'
 
-* Pairing: (<https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Technical/Tuya-TS061-eTRV.md>)
+* Pairing: [Tuya-TS061-eTRV.md](Tuya-TS061-eTRV.md)
 
     | Data Point | Data Type | Description |
     | ---------- | --------- | ----------- |
@@ -225,6 +225,6 @@ The synopsis is like :
 
 Timestamp is the total number of seconds from 00: 00: 00 on January 01, 1970, GMT
 
-* <https://developer.tuya.com/en/docs/iot/device-development/embedded-software-development/mcu-development-access/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty>
+* https://developer.tuya.com/en/docs/iot/device-development/embedded-software-development/mcu-development-access/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty
 
-* <https://medium.com/@dzegarra/zigbee2mqtt-how-to-add-support-for-a-new-tuya-based-device-part-2-5492707e882d>
+* https://medium.com/@dzegarra/zigbee2mqtt-how-to-add-support-for-a-new-tuya-based-device-part-2-5492707e882d

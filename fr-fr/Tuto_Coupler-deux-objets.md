@@ -13,7 +13,7 @@ __Note :__ Les objets ne sont pas tous compatibles avec cette fonction de lien d
 
 * Avoir appairer deux objets compatibles.
 
-Il est recommandé de donner un surnom a l'objet dans l'interface web du plugin afin de les retrouver plus facilement (voir la section [Management > Gestion des objets](WebUI_Management.md#gestion-des-objets).
+Il est recommandé de donner un surnom a l'objet dans l'interface web du plugin afin de les retrouver plus facilement (voir la section [Management > Gestion des objets](WebUI_Gestion.md#gestion-des-objets).
 
 
 ## Méthode
