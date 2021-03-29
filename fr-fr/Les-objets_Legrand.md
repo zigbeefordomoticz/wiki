@@ -10,4 +10,4 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Pour éviter tous risques de mauvaise traduction, nous avons préféré ne pas traduire la page originale en anglais.
 
-Voir la page [Legrand Netatmo](../en-eng/Legrand-Netatmo-corner.md) en anglais.
+Voir la page [Legrand Netatmo](../en-eng/Corner_Legrand-Netatmo.md) en anglais.

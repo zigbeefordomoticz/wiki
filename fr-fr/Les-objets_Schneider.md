@@ -10,4 +10,4 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zi
 
 Pour éviter tous risques de mauvaise traduction, nous avons préféré ne pas traduire la page originale en anglais.
 
-Voir la page [Schneider Wiser](../en-eng/Schneider_Wiser_Corner.md) en anglais et [Schneider Wiser: How to Setup](../en-eng/Wiser-Setup.md) en anglais.
+Voir la page [Schneider Wiser](../en-eng/Corner_Schneider_Wiser) en anglais et [Schneider Wiser: How to Setup](../en-eng/Corner_Wiser-Setup.md) en anglais.
