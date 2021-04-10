@@ -93,8 +93,8 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## Scripts
 
 * [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
-* [Vérifier la perte d'objets](../Contrib/CheckDeadDevices.lua) en LUA
-* [Vérifier la perte d'objets](../Contrib/CheckLastSeen.dzVents) en DzVents
+* [Vérifier la perte d'objets (version 1)](../Contrib/CheckLastSeen.dzVents) en DzVents
+* [Vérifier la perte d'objets (version 2)](../Contrib/CheckDeadDevices.lua) en DzVents
 
 [D'autres exemples](../Contrib/)
 
