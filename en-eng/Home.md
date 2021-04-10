@@ -91,8 +91,8 @@ We are contributing to this project on our spare time. If you do consider that i
 ## Scripts
 
 * [How-to check battery levels](../Contrib/CheckBatteryLevel.dzVents) in DzVents
-* [How-to check lost devices](../Contrib/CheckDeadDevices.lua) in LUA
-* [How-to check lost devices](../Contrib/CheckLastSeen.dzVents) in DzVents
+* [How-to check lost devices (version 1)](../Contrib/CheckLastSeen.dzVents) in DzVents
+* [How-to check lost devices (version 2)](../Contrib/CheckDeadDevices.lua) in DzVents
 
 ## Informations
 
