@@ -239,7 +239,7 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 * Value:
   * 8byte: 0x4d17af0000740400
 
-##### Command: 0x08 set group id (wireless switch)
+##### Command: 0x08 set group id (wireless single remote)
 
 * Device -> Hub
 * Format: APS fcf (0x40 ack=true), ZCL FCF ( 0x1d ), Manuf ( 0x1021), SQN, 0x03, Value: 2 bytes
@@ -267,14 +267,14 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
   * 2 bytes: ( 0x0101 )
 
 * Expect: Command 0x10 fromHub to Device
-
-##### Commande: 0x0c
+ 
+##### Commande: 0x0c set group id (wireless double remote)
 
 * Hub -> Device
 * Format: FCF ( 0x1d ), Manuf ( 0x1021 ), SQN, 0x0c, Value: 3 bytes
 * Value:
   * 2 bytes: Most Likely Group Membership ( 0xfefe, 0xfdfe, 0xf6fe, 0xf4fe, 0xfffe )
-  * 1 byte: seems to correspond to counter from 0x09
+  * 1 byte: seems to correspond to Left remote and Right remote ( 01/02 )
 
 ##### Command: 0x0d
 
