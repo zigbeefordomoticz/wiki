@@ -32,6 +32,13 @@ Dans ce cas, le nombre de capteur de température maxi en passant les prises Ike
 Un réseau ZigBee est un réseau crypté qui permet de sécuriser les communications. Pour appairer un objet, on ouvre le réseau afin d'échanger avec le nouvel entrant et lui transmettre les informations de cryptage afin de pouvoir communiquer une fois le réseau refermé.
 
 
+## Fonctionnement avec DomoticZ
+
+Le plugin est autonome pour autoriser un appairage et créer les dispositifs dans DomoticZ. Il n'y a pas d'action à faire du coté de DomoticZ.
+
+Il est possible de créer les widgets automatiquement en même temps que les dispositifs : il faut activer __Accepter de nouveau dispositifs pendant 5 minutes__ dans les paramètres Système de DomoticZ puis suivre une des méthodes d'appairage ci-dessous.
+
+
 ## Méthodes
 
 Il est recommandé de commencer par appairer les objets de type routeurs afin de créer un réseau maillé avant d'associer les objets terminaux.
