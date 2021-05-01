@@ -72,6 +72,8 @@ Il existe plusieurs méthodes :
 
 ![Assisted Provisioning: Done](../Images/Provisionning_3.png)
 
+**Note :** Lors d'un ré-appairage d'un objet qui était déjà présent dans le réseau, l'assistant n'indique pas sa nouvelle inclusion. Il faut regarder les logs de DomoticZ pour voir que l'objet est revenu dans le réseau.
+
 Si rien ne se produit :
 
 * Vérifier les logs de DomoticZ pour voir s'il n'y a pas d'erreurs.
