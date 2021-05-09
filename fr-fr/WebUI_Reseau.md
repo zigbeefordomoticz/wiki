@@ -14,7 +14,7 @@ La section __Réseau__ comporte les pages :
 Voici la page __Topologie__ de l'interface Web du plugin :
 
 ![Topologie réseau](Images/FR_WebUI-Reseau-Topologie.png)
-*Cette page est sucseptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette page est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
@@ -55,6 +55,29 @@ L'illustration de votre maillage montre l'architecture du réseau ZigBee (les co
 Vous pouvez visualiser sur quel routeur est accroché votre objet terminal.
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
+
+##### L'affichage sans Sibling
+
+Le Sibling correspond aux objets frères qui peuvent communiquer entre eux sans passer par un parent.
+
+Par défaut, le plugin affiche les liens directs entre les objets mais n'affiche pas les liens Sibling.
+
+Un exemple de topologie Sans Sibling : on voit que les routeurs (les noeuds) n'ont pas d'inter-comnunication entre eux.
+
+![Topologie réseau sans sibling](Images/FR_WebUI-Reseau-Topologie-sans-sibling.png)
+
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.* 
+
+##### L'affichage avec Sibling
+
+Il est possible dans [Réglages > Réglages de l'interface Web](WebUI_Reglages.md#r%C3%A9glages-de-linterface-web) d'activer l'option **displaySibling** pour afficher les liens de même niveau sur les graphiques de topologie réseau.
+
+Le même exemple de topologie Avec Sibling : on voit que les routeurs (les noeuds) ont un lien d'inter-comnunication entre eux.
+
+![Topologie réseau avec sibling](Images/FR_WebUI-Reseau-Topologie-avec-sibling.png)
+
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+
 
 #### La liste des objets liés à la ZiGate
 

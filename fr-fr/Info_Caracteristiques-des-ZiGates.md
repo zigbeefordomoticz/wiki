@@ -6,10 +6,15 @@ Les ZiGates peuvent avoir des différences. Plutôt que d'éditer toutes les pag
 
 Le nombre d'objets géré par une ZiGate est limité :
 
-Modèle V1 : 40 objets maximum en direct sur la ZiGate et 30 objets passant par un routeur.
-Modèle V2 : En attente d'information (il est prévu une limite à 255 objets) ???
+Modèle **V1** avec **firmware standard** : 40 objets maximum en tout.
+Modèle **V1** avec **firmware OptiPDM** : 20 objets maximum en direct sur la ZiGate et jusqu'à 70 en tout (en passant par des routeurs).
+la ZiGate et 30 objets passant par un routeur.
 
-Dans tous les cas, DomoticZ a une limite à 255
+Modèle **V2** : En attente d'information (il est prévu une limite à 255 objets) ???
+
+Dans tous les cas, **DomoticZ limite le nombre de dispositifs par plugin à 255**.
+
+Pour info, un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs : Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression.
 
 
 ## Nombre de groupe limité
