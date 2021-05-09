@@ -66,7 +66,7 @@ Un exemple de topologie Sans Sibling : on voit que les routeurs (les noeuds) n'o
 
 ![Topologie réseau sans sibling](Images/FR_WebUI-Reseau-Topologie-sans-sibling.png)
 
-*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.* 
 
 ##### L'affichage avec Sibling
 
