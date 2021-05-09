@@ -72,7 +72,7 @@ Un exemple de topologie Sans Sibling : on voit le  les routeurs (les noeuds) n'o
 Il est possible dans [Réglages > Réglages de l'interface Web](WebUI_Reglages.md#r%C3%A9glages-de-linterface-web) d'activer l'option **displaySibling** pour afficher les liens de même niveau sur les graphiques de topologie réseau.
 
 ![Topologie réseau avec sibling](Images/FR_WebUI-Reseau-Topologie-avec-sibling.png)
-*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.* 
 
 
 #### La liste des objets liés à la ZiGate
