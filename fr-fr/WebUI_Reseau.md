@@ -62,7 +62,7 @@ Le Sibling correspond aux objets frères qui peuvent communiquer entre eux sans 
 
 Par défaut, le plugin affiche les liens directs entre les objets mais n'affiche pas les liens Sibling.
 
-Un exemple de topologie Sans Sibling : on voit le  les routeurs (les noeuds) n'ont pas d'intercomnunication entre eux.
+Un exemple de topologie Sans Sibling : on voit que les routeurs (les noeuds) n'ont pas d'inter-comnunication entre eux.
 
 ![Topologie réseau sans sibling](Images/FR_WebUI-Reseau-Topologie-sans-sibling.png)
 
@@ -71,6 +71,8 @@ Un exemple de topologie Sans Sibling : on voit le  les routeurs (les noeuds) n'o
 ##### L'affichage avec Sibling
 
 Il est possible dans [Réglages > Réglages de l'interface Web](WebUI_Reglages.md#r%C3%A9glages-de-linterface-web) d'activer l'option **displaySibling** pour afficher les liens de même niveau sur les graphiques de topologie réseau.
+
+Le même exemple de topologie Avec Sibling : on voit que les routeurs (les noeuds) ont un lien d'inter-comnunication entre eux.
 
 ![Topologie réseau avec sibling](Images/FR_WebUI-Reseau-Topologie-avec-sibling.png)
 
