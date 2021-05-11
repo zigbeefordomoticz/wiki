@@ -8,9 +8,8 @@ Le nombre d'objets géré par une ZiGate est limité :
 
 Modèle **V1** avec **firmware standard** : 40 objets maximum en tout.
 Modèle **V1** avec **firmware OptiPDM** : 20 objets maximum en direct sur la ZiGate et jusqu'à 70 en tout (en passant par des routeurs).
-la ZiGate et 30 objets passant par un routeur.
 
-Modèle **V2** : En attente d'information (il est prévu une limite à 255 objets) ???
+Modèle **V2** : En attente d'information (il est prévu une limite à 200 objets avec 20 maximum en direct) 
 
 Dans tous les cas, **DomoticZ limite le nombre de dispositifs par plugin à 255**.
 
