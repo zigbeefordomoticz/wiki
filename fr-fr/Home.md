@@ -55,6 +55,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
+* [Remplacer ou ré-initialiser la ZiGate](Tuto_Remplacer-zigate.md)
 * [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
