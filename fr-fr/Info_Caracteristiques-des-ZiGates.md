@@ -11,6 +11,7 @@ Modèle **V1** avec **firmware OptiPDM** : 20 objets maximum en direct sur la Zi
 
 Modèle **V2** : En attente d'information (il est prévu une limite à 200 objets avec 20 maximum en direct) 
 
+
 Dans tous les cas, **DomoticZ limite le nombre de dispositifs par plugin à 255**.
 
 Pour info, un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs : Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression.
