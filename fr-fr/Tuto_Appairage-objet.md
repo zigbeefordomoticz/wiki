@@ -38,6 +38,17 @@ Le plugin est autonome pour autoriser un appairage et créer les dispositifs dan
 
 Il est possible de créer les widgets automatiquement en même temps que les dispositifs : il faut activer __Accepter de nouveau dispositifs pendant 5 minutes__ dans les paramètres Système de DomoticZ puis suivre une des méthodes d'appairage ci-dessous.
 
+## Conseils d'appairage
+
+Il est recommandé :
+
+* D'appairer les objets les un après les autres en relançant une procédure d'appairage entre chaque objets.
+* D'appairer les objets à leur emplacement d'utilisation.
+* D'appairer les objets en commençant par les routeurs.
+* D'appairer les routeurs en commençant par celui le plus proche de la ZiGate et en s'éloignant au fur et à mesure.
+
+Plus de conseils sur la page : [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
+
 
 ## Méthodes
 
