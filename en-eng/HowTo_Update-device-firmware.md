@@ -33,7 +33,7 @@ The plugin host a directory tree to store the firmware for each Manufacturer
 | Domoticz-Zigate/OTAFirmware/SALUS         | Salus Firmware |
 
 
-## Retreive Firmware
+## Retrieve Firmware
 
 In each of the Manufacturer directory a README.md file is available and describe where to find the firmware.
 
