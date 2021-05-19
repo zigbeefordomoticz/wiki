@@ -6,8 +6,8 @@ Les ZiGates peuvent avoir des différences. Plutôt que d'éditer toutes les pag
 
 Le nombre d'objets géré par une ZiGate est limité :
 
-Modèle **V1** avec **firmware standard** : 40 objets maximum en tout.
-Modèle **V1** avec **firmware OptiPDM** : 20 objets maximum en direct sur la ZiGate et jusqu'à 70 en tout (en passant par des routeurs).
+* Modèle **V1** avec **firmware standard** : 40 objets maximum en tout.
+* Modèle **V1** avec **firmware OptiPDM** : 20 objets maximum en direct sur la ZiGate et jusqu'à 70 en tout (en passant par des routeurs).
 
 Modèle **V2** : 200 objets avec 20 maximum en direct sur la ZiGate et le reste en passant par des routeurs.
 
@@ -21,8 +21,8 @@ Pour info, un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs 
 
 Le nombre de groupes auxquels une ZiGate peut appartenir est limité :
 
-Modèle V1 : 5 Groupes
-Modèle V2 : 15 Groupes
+* Modèle V1 : 5 Groupes
+* Modèle V2 : 15 Groupes
 
 
 Le nombre de groupes auxquels un objet peut appartenir est limité :
