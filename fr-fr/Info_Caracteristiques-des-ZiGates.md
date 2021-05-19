@@ -24,7 +24,6 @@ Le nombre de groupes auxquels une ZiGate peut appartenir est limité :
 * Modèle V1 : 5 Groupes
 * Modèle V2 : 15 Groupes
 
-
 Le nombre de groupes auxquels un objet peut appartenir est limité :
 
 Généralement, un objet peut appartenir à 5 groupes différents. Pour rappel, c'est l'objet qui sait dans quel groupe il appartient. Le nombre exact va dépendre de chaque objet.
