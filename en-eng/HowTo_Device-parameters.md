@@ -43,4 +43,5 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | netatmoEnableDimmer | Enable Dimming mode | Legrand-Netatmo Switch w/o neutral |
 | netatmoInvertShutter | Invert the Shutter switch | Legrand-Netatmo Shutter|
 | netatmoReleaseButton | special for François | Remote Legrand-Netatmo |
-| SensorMode | Develop for Tuya Thermostat for now, specify which sensor to be use 0: IN, 1, ALL, 2: OUT | Tuya Thermostat TS0601 
+| SensorMode | Develop for Tuya Thermostat for now, specify which sensor to be use 0: IN, 1, ALL, 2: OUT | Tuya Thermostat TS0601 |
+| LightIndicator | Available for Tuya TS0601 switches 0: Off, 1: On when On, 2: On when Off | Tuya Switches 1,2,3 Gangs TS0601 |
