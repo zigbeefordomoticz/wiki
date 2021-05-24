@@ -34,6 +34,7 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
 
 
 Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différents canaux de mise à jour.
+Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
 
 Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
 
@@ -42,6 +43,7 @@ Les différentes branches sont :
 #### stable5
 
 C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2)
+<<<<<<< HEAD
 
 | Info  | Compatibilité  |
 | :------------: |:---------------:|
@@ -51,6 +53,17 @@ C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2)
 
 *Sous réserve d'une mauvaise surprise lors de la sortie d'une nouvelle version.
 
+=======
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Modèles de ZiGate | V1 et V2 |
+| Compatibilité minimale | DomoticZ 2020.1 |
+| Compatibilité maximale | Dernière version de DomoticZ* |
+
+*Sous réserve d'une mauvaise surprise lors de la sortie d'une nouvelle version.
+
+>>>>>>> c8807b5e3621322980788fc4db13d7a6c373858e
 #### stable
 
 C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V1.
