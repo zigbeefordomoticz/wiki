@@ -42,8 +42,7 @@ Les différentes branches sont :
 
 #### stable5
 
-C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2)
-<<<<<<< HEAD
+C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2).
 
 | Info  | Compatibilité  |
 | :------------: |:---------------:|
@@ -53,17 +52,6 @@ C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2)
 
 *Sous réserve d'une mauvaise surprise lors de la sortie d'une nouvelle version.
 
-=======
-
-| Info  | Compatibilité  |
-| :------------: |:---------------:|
-| Modèles de ZiGate | V1 et V2 |
-| Compatibilité minimale | DomoticZ 2020.1 |
-| Compatibilité maximale | Dernière version de DomoticZ* |
-
-*Sous réserve d'une mauvaise surprise lors de la sortie d'une nouvelle version.
-
->>>>>>> c8807b5e3621322980788fc4db13d7a6c373858e
 #### stable
 
 C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V1.
