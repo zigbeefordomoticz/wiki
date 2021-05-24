@@ -34,7 +34,6 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
 
 
 Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différents canaux de mise à jour.
-Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
 
 Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
 
@@ -48,9 +47,7 @@ C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2).
 | :------------: |:---------------:|
 | Modèles de ZiGate | V1 et V2 |
 | Compatibilité minimale | DomoticZ 2020.1 |
-| Compatibilité maximale | Dernière version de DomoticZ* |
-
-*Sous réserve d'une mauvaise surprise lors de la sortie d'une nouvelle version.
+| Compatibilité maximale | Dernière version de DomoticZ |
 
 #### stable
 
@@ -75,7 +72,7 @@ Si vous êtes sur la branche __beta__ (suite à l'ajout d'un nouveau matériel p
 | :------------: |:---------------:|
 | Modèles de ZiGate | V1 et V2 |
 | Compatibilité minimale | DomoticZ 2020.1 |
-| Compatibilité maximale | Dernière version de DomoticZ* |
+| Compatibilité maximale | Dernière version de DomoticZ |
 
 #### stableX-fix
 
@@ -89,7 +86,7 @@ Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau mat�
 | :------------: |:---------------:|
 | Modèles de ZiGate | V1 et V2 |
 | Compatibilité minimale | DomoticZ 2020.1 |
-| Compatibilité maximale | Dernière version de DomoticZ* |
+| Compatibilité maximale | Dernière version de DomoticZ |
 
 
 
