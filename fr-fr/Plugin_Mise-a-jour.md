@@ -49,6 +49,8 @@ C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2).
 | Compatibilité minimale | DomoticZ 2020.1 |
 | Compatibilité maximale | Dernière version de DomoticZ |
 
+__Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de renseigner des nouveaux paramètres dans le [Paramétrage du plugin](Plugin_Parametrage.md) sinon, vous aurez une erreur de communication au lancement du plugin.
+
 #### stable
 
 C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V1.
