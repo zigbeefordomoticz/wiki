@@ -38,12 +38,6 @@ Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et
 
 Les différentes branches sont :
 
-| Nom  | Description  | DomoticZ mini | DomoticZ maxi  |  Compatibilité ZiGate  |
-| :------------: |:---------------:|:-----:|:-----:|:-----:|
-| Stable5 | Version stable | 2020.1 | Dernière en date | V1 et V2 |
-| Stable | Version stable pour ancienne version | 4.97 | 2020.2 | V1 uniquement |
-| Master | Version stable pour ancienne version | 3.8153 | 4.10659 | V1 uniquement |
-
 #### stable5
 
 C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2)
