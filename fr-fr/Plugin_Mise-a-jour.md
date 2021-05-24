@@ -57,7 +57,7 @@ Sa compatibilité s'arrête avec DomoticZ 2020.2.
 | Info  | Compatibilité  |
 | :------------: |:---------------:|
 | Modèles de ZiGate | V1 |
-| Compatibilité minimale | DomoticZ 4.97 |
+| Compatibilité minimale | DomoticZ 4.XXX |
 | Compatibilité maximale | DomoticZ 2020.2 |
 
 Cette version ne recevra plus de mise à jour.
