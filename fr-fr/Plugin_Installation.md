@@ -17,7 +17,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 
 ## 1 - Installation du plugin via Python Plugin Manager sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md).
 
 ### 1.A - Prérequis
 
@@ -31,7 +31,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Rechercher __ZiGate Plugin__ et ajouter le.
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
 
@@ -55,25 +55,27 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Redémarrer DomoticZ.
 
 Le plugin Zigate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
 ------------
 ## 3 - Installation sur NAS Synology
 
-Cette méthode est uniquement valable pour les systèmes NAS Synology
+Cette méthode est uniquement valable pour les systèmes NAS Synology.
+
+__Note :__ Jahdal a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2.
 
 
 ### 3.A - Prérequis
 
 
-* Avant tout, Python doit être installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder))
+* Avant tout, Python doit être installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder).
 * Le paquet DomoticZ pour Synology à installer est la version 'avec Python'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v2020.1 avec Python 3.5.1.
 * Le Module Python du Package manager doit être installé (voir [Python Module](https://www.synology.com/en-uk/dsm/packages/PythonModule))
 * Le paquet GitHub server pour Synology doit être installé.
 * Installer le paquet Git Server via Diskstation. La partie Serveur du paquet Git Server n'est pas nécessaire, juste le 'git command' (pas de configurations spécifiques).
 * Vous devez avoir les accès root/admin avec la commande 'sudo'.
-* Si besoin, les drivers pour la ZiGate sont disponibles sur le site [jadahl.com](http://www.jadahl.com/drivers_6.2/)
+* Si besoin, les drivers pour la ZiGate sont disponibles sur le site [jadahl.com](http://www.jadahl.com/drivers_6.2/).
 
 
 ### 3.B - Procédure
@@ -86,7 +88,7 @@ Cette méthode est uniquement valable pour les systèmes NAS Synology
 * Arrêter et redémarrer DomoticZ depuis le gestionnaire de paquet.
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
 
@@ -228,7 +230,7 @@ Pour récupérer les logs complets depuis Docker, exécuter : `docker logs Domot
 
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
 ------------
@@ -336,7 +338,7 @@ L’arborescence de la ZiGate est installée :
 ![Win10 Installation](../Images/Win10Pic4.png)
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ### 5.3 - Un PC Windows comme box domotique
 
@@ -417,7 +419,7 @@ Arrêter le Raspberry Pi : `sudo halt`
 * Démarrer la PiZigate: `Tools/pi-zigate.sh run`
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md).
 
 ### 6.3 - Mise à jour
 
@@ -503,4 +505,4 @@ Voici un exemple de ce que vous devriez avoir :
 ```
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md))
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
