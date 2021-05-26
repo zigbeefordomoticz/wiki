@@ -35,24 +35,62 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
 
 Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différents canaux de mise à jour.
 
+Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
+
 Les différentes branches sont :
 
+#### stable5
+
+C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2).
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Modèles de ZiGate | V1 et V2 |
+| Compatibilité minimale | DomoticZ 2020.1 |
+| Compatibilité maximale | Dernière version de DomoticZ |
+
+__Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de renseigner des nouveaux paramètres dans le [Paramétrage du plugin](Plugin_Parametrage.md) sinon, vous aurez une erreur de communication au lancement du plugin.
 
 #### stable
 
-C'est la version la plus "solide". C'est la version par défaut.
+C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V1.
+Sa compatibilité s'arrête avec DomoticZ 2020.2.
 
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Modèles de ZiGate | V1 |
+| Compatibilité minimale | DomoticZ 4.XXX |
+| Compatibilité maximale | DomoticZ 2020.2 |
 
-#### stable-fix
-
-La branche stable-fix est l'anti-chambre de la branche stable. En gros les bug-fix sont réalisées sur celle-ci avant d'être envoyer sur la branche stable. Il n'y a pas de gestion de version sur cette branche!
-
+Cette version ne recevra plus de mise à jour.
 
 #### beta
 
 La branche Béta est le canal de développement. __Ne passez pas sur la branche beta sans y avoir été invité.__
 
-Si vous êtes sur la branche __Beta__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __Stable__ à la prochaine mise à jour du canal __Stable__.
+Si vous êtes sur la branche __beta__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stableX__ à la prochaine mise à jour du canal __stableX__.
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Modèles de ZiGate | V1 et V2 |
+| Compatibilité minimale | DomoticZ 2020.1 |
+| Compatibilité maximale | Dernière version de DomoticZ |
+
+#### stableX-fix
+
+La branche stableX-fix (avec un numéro à la place du X) est l'anti-chambre de la branche stableX. En gros les bug-fix sont réalisées sur celle-ci avant d'être envoyer sur la branche stableX. Il n'y a pas de gestion de version sur cette branche !
+
+__Ne passez pas sur la branche stableX-fix sans y avoir été invité.__
+
+Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __StableX__ à la prochaine mise à jour du canal __StableX__.
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Modèles de ZiGate | V1 et V2 |
+| Compatibilité minimale | DomoticZ 2020.1 |
+| Compatibilité maximale | Dernière version de DomoticZ |
+
+
 
 ### Connaître sa branche
 
@@ -69,8 +107,11 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 
 * Lancer la commande `git pull`
 
+* Lancer la commande `git checkout stable5` pour aller sur le canal stable5
 * Lancer la commande `git checkout stable` pour aller sur le canal stable
-* Lancer la commande `git checkout stable-fix` pour aller sur le canal stable-fix
+* Lancer la commande `git checkout stable5-fix` pour aller sur le canal stable5-fix
 * Lancer la commande `git checkout beta` pour aller sur le canal beta
+
+__Attention aux compatibilités avec DomoticZ lors du changement de branche.__
 
 [Poursuivre sur la mise à jour du plugin](Home.md#mises-%C3%A0-jour-du-plugin)
