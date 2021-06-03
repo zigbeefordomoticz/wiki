@@ -4,4 +4,9 @@ Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) de
 
 ## Avant propos
 
-La procédure pour mettre à jour la ZiGate est disponible sur le site [https://zigate.fr/documentation/mise-a-jour-de-la-zigate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate).
+Les procédures pour mettre à jour les ZiGates sont disponibles sur le site [https://zigate.fr/documentation/](https://zigate.fr/documentation).
+
+__Attention :__ Il faut bien choisir le firmware en fonction de votre modèle de ZiGate
+
+* Modèle V1 (vendu jusqu'à mai 2021) : [https://zigate.fr/documentation/mise-a-jour-de-la-zigate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
+* Modèle V2 (vendu à partir de mai 2021) : [https://zigate.fr/documentation/mise-a-jour-de-la-zigate-2](https://zigate.fr/documentation/mise-a-jour-de-la-zigate-2)
