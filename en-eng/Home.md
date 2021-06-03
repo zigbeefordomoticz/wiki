@@ -46,7 +46,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Use the plugin tools](HowTo_Using-tools.md)
 * [Group Management](HowTo_Group-management.md)
 * [Bindings](HowTo_Binding_Legrand.md)
-* [Deal with erros](HowTo_Dealing-pluging-error.md)
+* [Deal with errors](HowTo_Dealing-pluging-error.md)
 * [Change the Zigbee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
 * [Upgrading Firmware of Zigate](HowTo_Update-ZiGate-firmware.md)
