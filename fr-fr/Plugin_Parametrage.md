@@ -9,46 +9,46 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 ## Le paramétrage
 
 * Ouvrir __DomoticZ__ dans votre navigateur
+
 * Aller dans le menu __Configuration__ puis __Matériel__
+* Pour ajouter le plugin ZiGate, renseigner les informations suivantes :
 
-![Domoticz Hardware Menu for Plugin](../Images/DzMenu.png)
+| Paramètre    | Description | Information |
+| ------------ | ------------------ | ----------- |
+| __Nom__                  | Renseigner un Nom à la ZiGate  | Si vous utiliser plusieurs ZiGate, vous aurez besoin de plusieurs instances du matériel ZiGate et le nom permettra de les identifier.<br/><br/>Il est conseillé de ne pas mettre d'espace ou de caractère spécial dans le nom du plugin. Ce nom peut être utiliser dans une URL et un espace ou des caractères spéciaux peuvent générer des problèmes. |
+| __Type__                 | Sélectionner `ZiGate plugin` | Si ZiGate plugin n'apparait pas en bas de la liste, c'est que le plugin n'est pas correctement installé.
+| ZiGate Model         | Choisir entre les différents modèles :<br/> - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2) |
+| ZiGate Communication         | Choisir entre les différents mode de communication :<br/>-  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi)<br/>- Aucun |
+| __IP__                   | Renseigner l'IP de la ZiGate<br/>Pour le mode TCPIP uniquement. | Laisser 0.0.0.0 pour les autres modes |
+| __Port__                 | Renseigner le Port de la ZiGate (9999 par défaut)<br/>Pour le mode TCPIP uniquement| Laisser 9999 pour les autres modes |
+| __Port série__           | Sélectionner le port USB sur lequel est branché la ZiGate | Penser à fixer le port de vos équipements usb [Méthode persistent USB](https://easydomoticz.com/mon-premier-peripherique-z-wave-2)|
+| __Initialize ZiGate (Erase Memory)__ `Erase PDM` | Pour initialiser la ZiGate avec les paramètres du plugin (False par défaut). <br/>A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM). | __ATTENTION :__ L'activation va effacer toutes des informations d'appairage de la ZiGate. Pour activer, passer à True et redémarrer le plugin |
+| __Port for Web Admin GUI__| Renseigner le port pour accéder à l'administration web du plugin (9440 par défaut). | A modifier en cas d'utilisation de plusieurs instances du plugin. |
+| __Verbors and Debuging__ | Sélectionner le niveau du log du plugin (Aucun par défaut) |
 
-*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+* Si c'est pour la création du plugin, mettre Initialize ZiGate à __True__, sinon toujours laisser à __False__ (ce paramètre efface les informations de la ZiGate).
 
-
-
-| Id | Short Description    | Full Description |
-| -- | -------------------- | ---------------- |
-| 1  | Nom                  | Le nom donné à la ZiGate. Si vous utiliser plusieurs ZiGate, vous aurez besoin de plusieurs instances du matériel ZiGate et le nom permettra de les identifier. |
-| 2  | Type                 | `ZiGate plugin` à sélectionner dans la liste déroulante |
-| 3  | ZiGate Model         | Choisir entre les différents modèles de ZiGate (USB, DIN, PI, Wifi) |
-| 4  | IP                   | IP de la ZiGate pour le modèle Wifi uniquement. Laisser 0.0.0.0 pour les autres modèles |
-| 5  | Port                 | Port de la ZiGate pour le modèle Wifi uniquement (défaut 9999). Laisser 9999 pour les autres modèles |
-| 6  | Port série           | Port usb sur lequel est branché la ZiGate |
-| 7  | Initialize ZiGate (Erase Memory) `Erase PDM` | Pour initialiser la ZiGate avec les paramètres du plugin. A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM). __ATTENTION:__ L'activation va effacer toutes des informations d'appairage de la ZiGate. Pour activer, passer à True et redémarrer le plugin |
-| 8  | Port for Web Admin| Port pour accéder à l'administration web du plugin (défaut 9440). A modifier en cas d'utilisation de plusieurs instances du plugin. |
-| 9  | Verbors and Debuging | Sélection du niveau du log du plugin (Aucun par défaut) |
-
-
-* Coché __Activé__ pour activer le plugin.
-* Renseigner un __Nom__ : il est conseillé de ne pas mettre d'espace ou de caractère spécial dans le nom du plugin. Ce nom peut être utiliser dans une URL et un espace ou des caractères spéciaux peuvent générer des problèmes.
-* Sélectionner __ZiGate plugin__ dans la liste type.
-* Sélectionner votre modèle de ZiGate.
-* Renseigner les informations d'__IP__ et de __Port__ ou de __Port série__ en fonction de votre modèle de ZiGate.
-* laisser les autres paramètres par défaut pour le moment.
 * Cliquer sur __Ajouter__.
 
-La ligne correspondante à votre plugin ZiGate (avec le nom défini) est normalement apparue dans la liste des matériels. Cliquer dessus.
+La ligne correspondante à votre plugin ZiGate (avec le nom défini) est normalement apparue dans la liste des matériels.
+
+* Cliquer sur la ligne de votre plugin ZiGate.
+
+__ATTENTION :__ à partir de maintenant, il ne faut surtout plus cliquer sur le bouton __Ajouter__ en bas : cela aurait pour effet de dupliquer le plugin. Remontez toujours en haut des paramètres pour utiliser le bouton __Modifier__.
 
 * Mettre __Initialize ZiGate (Erase Memory)__ à __False__.
 * Décoché __Activé__ pour désactiver le plugin.
 * Cliquer sur __Modifier__ (ne pas cliquer sur Ajouter car cela dupliquera le plugin).
+
 * Recliquer sur la ligne du plugin ZiGate.
 * Recocher __Activé__ pour réactiver le plugin.
 * Cliquer sur __Modifier__ pour relancer le plugin.
 
 Vérifier les logs que le plugin ZiGate s'initialise correctement.
 
+![Domoticz Hardware Menu for Plugin](Images/FR_Plugin-Parametrage.png)
+
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ## Les widgets du plugin
 
