@@ -15,6 +15,7 @@ Par défaut, un objet certifié est initialisé avec les paramètres par défaut
 * La fenêtre d'édition de paramètres va s'ouvrir.
 
 ![FR_WebUI-Gestion-des-objets-parametres.png](Images/FR_WebUI-Gestion-des-objets-parametres.png)
+
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 Il est possible d'éditer le champ paramètres en ajoutant, supprimant ou en mettant à jour les attributs.
@@ -23,6 +24,9 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 
 
 ## Liste des paramètres
+
+*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/HowTo_Device-parameters.md) en anglais.*
+
 
 | Nom du paramètre | Description | Valeur / Unité | Objet concerné / Paramètre parent |
 | ---------------- | ----------- | -------------- | -------------- |
@@ -69,6 +73,3 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
   "TemperatureMinAlarm": 3,
   "TemperatureMaxAlarm": 27
 }
-
-
-*Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/HowTo_Device-parameters.md) en anglais.*
