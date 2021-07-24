@@ -45,3 +45,5 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | netatmoReleaseButton | special for François | Remote Legrand-Netatmo |
 | SensorMode | Develop for Tuya Thermostat for now, specify which sensor to be use 0: IN, 1, ALL, 2: OUT | Tuya Thermostat TS0601 |
 | LightIndicator | Available for Tuya TS0601 switches 0: Off, 1: On when On, 2: On when Off | Tuya Switches 1,2,3 Gangs TS0601 |
+| pingBlackListed | if enable ( 1 ) , never ping the device | all routers |
+| TuyaPing | if enable (1), it will simulate the Tuya Ping done every 5s by the Tuya GW| Tuya routers |
