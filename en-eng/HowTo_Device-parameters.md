@@ -47,3 +47,5 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | LightIndicator | Available for Tuya TS0601 switches 0: Off, 1: On when On, 2: On when Off | Tuya Switches 1,2,3 Gangs TS0601 |
 | pingBlackListed | if enable ( 1 ) , never ping the device | all routers |
 | TuyaPing | if enable (1), it will simulate the Tuya Ping done every 5s by the Tuya GW| Tuya routers |
+| TuyaEnergyChildLock | For Tuya DIN Energy Switch, allow to enable Child Lock ( not tested )| Tuya DIN Energy switch |
+| Countdown | when switching On or Off, it will use the countdown. If set to __n__, it will wait __n__ secondes before switching | Walkaround for Tuya DIN Energy |
