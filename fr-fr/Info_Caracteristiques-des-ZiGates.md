@@ -14,7 +14,7 @@ Modèle **V2** : 200 objets avec 20 maximum en direct sur la ZiGate et le reste 
 
 Dans tous les cas, **DomoticZ limite le nombre de dispositifs par plugin à 255**.
 
-Pour info, un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs : Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression. Par contre à tout instant il est possible de supprimer les dispositifs (Domotciz) non utilisés et ainsi gagner en nombre.
+Pour info, un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs : Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression. Il est possible à tout instant de supprimer les dispositifs (DomoticZ) non utilisés et ainsi gagner en nombre (attention, un dispositif supprimé ne pourra pas être récupérer sans un reset complet de l'objet).
 
 
 ## Nombre de groupe limité

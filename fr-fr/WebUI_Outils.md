@@ -37,6 +37,8 @@ Voici la page __Commande__ de l'interface Web du plugin :
 
 Cette page permet d'exécuter des commandes sur les objets sans passer par DomoticZ.
 
+Elle permet également d'envoyer des commandes au format RAW en suivant les informations du [http://zigate.fr/documentation/commandes-zigate](wiki de la ZiGate).
+
 
 ------------------------------------------------
 ## Couplage
