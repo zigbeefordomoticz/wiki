@@ -15,5 +15,5 @@ Cette page regroupe des informations génériques sur le plugin :
 * Que faire en cas de problèmes
 * L'équipe : développeurs, testeurs, traducteurs, rédacteurs
 
-
+------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

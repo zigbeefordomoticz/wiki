@@ -4,6 +4,8 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 
 __La modification des paramètres peut entraîner des dysfonctionnements au niveau de la ZiGate. Pensez à faire une sauvegarde avant toute modification.__
 
+*Les réglage décrits ont certainement évolués depuis la rédaction de cette page : il est possible que certains paramètres ait été déplacés directement au niveau des objets dans la section [Admin/Gestion des objets](WebUI_Admin.md#gestion-des-objets).*
+
 La section __Réglage__ comporte les modules :
 
 | Modules  | Modules  | Modules  |

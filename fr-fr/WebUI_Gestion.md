@@ -50,5 +50,6 @@ Le groupe est vu dans DomoticZ comme un unique widget de type Switch et ce indé
 Cette page permet de lister les groupes de d'objets gérés par le plugin.
 
 Se reporter au tutoriel [Gérer les groupes](Tuto_Gerer-les-groupes.md) pour plus d'informations.
+
 ------------------------------------------------
 Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).

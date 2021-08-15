@@ -17,11 +17,11 @@ Ce tutoriel explique comment remplacer ou ré-initialiser sa ZiGate.
 
 * Pour faire une simple mise à jour du firmware de la ZiGate.
 
-### Qu'est-ce qui va ce passer pour les appairages
+**Qu'est-ce qui va ce passer pour les appairages**
 
 A la fin de cette procédure, il faudra ré-appairer TOUS les objets avec la ZiGate. [Voir les conseils d'appairage](Tuto_Appairage-objet.md#conseils-dappairage)
 
-### Qu'est-ce qui va ce passer pour les dispositifs existants dans DomoticZ
+**Qu'est-ce qui va ce passer pour les dispositifs existants dans DomoticZ**
 
 En suivant cette procédure, qui ne touche ni à DomoticZ, ni au Plugin, les dispositifs seront retrouvés automatiquement lorsque les objets seront ré-appairer. Il n'y pas de perte de paramétrage dans le plugin, ni de perte d'historique dans DomoticZ.
 
