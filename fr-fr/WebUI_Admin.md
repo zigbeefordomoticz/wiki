@@ -71,7 +71,7 @@ Cette page permet de gérer le fonctionnement du hardware de la ZiGate.
 
 Elle permet :
 
-* De faire un redémarrage logiciel de la ZiGate : Cette action n’entraîne **aucune perte des objets appairés**.
+* De faire un redémarrage logiciel de la ZiGate : cette action n’entraîne **aucune perte des objets appairés**.
 * De modifier le canal de la ZiGate.
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
