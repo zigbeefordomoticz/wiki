@@ -13,6 +13,12 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
+
+__Note :__ L'installation d'une PiZiGate est spécifique. Se reporter aux parties 6 ou 7.
+
+__Info :__ Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethernet, etc...) sur Raspberry, se reporter aux parties 1 ou 2.
+
+
 ------------
 
 ## 1 - Installation du plugin via Python Plugin Manager sous Linux
@@ -37,7 +43,9 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ## 2 - Installation manuelle sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux : Rapsberry, Debian, Ubuntu, etc. Il sera nécessaire de modifier les lignes de commandes en fonction de votre système.
+
+__Important :__ Cette méthode d’installation n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
 ### 2.A - Prérequis
 
@@ -48,9 +56,9 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 ### 2.B - Procédure
 
 * Ouvrir le terminal
-* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. Le chemin est normalement <code>domoticz/plugins</code>
+* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement <code>cd domoticz/plugins/</code>
 * Exécuter la commande : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
-* Le répertoire __Domoticz-Zigate__ sera créé dans le dossier plugin
+* Le répertoire __Domoticz-Zigate__ sera créé dans le dossier plugins
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `chmod +x Domoticz-Zigate/plugin.py`
 * Redémarrer DomoticZ.
 
@@ -356,7 +364,10 @@ Pour cela, taper `netplwiz` dans l’invite de commande Windows et exécuter la 
 
 ## 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
 
-Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian par Pierre Gielen.
+Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian (rédaction par Pierre Gielen).
+
+__Important :__ Cette méthode d’installation n'est pas valable pour une installation d'une ZiGate USB, Wifi ou Ethernet sur un Raspberry (voir les [installations sous Linux](Plugin_Installation.md)).
+
 
 ### 6.1 - Prérequis
 
@@ -439,6 +450,8 @@ Redémarrer le Pi après la mise à jour du firmware. La configuration par défa
 ## 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
+
+__Important :__ Cette méthode d’installation n'est pas valable pour une installation d'une ZiGate USB, Wifi ou Ethernet sur un Raspberry (voir les [installations sous Linux](Plugin_Installation.md)).
 
 Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate et DomoticZ sont complètement opérationnels sous Fedora 29.
 
