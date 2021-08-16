@@ -358,7 +358,10 @@ Pour cela, taper `netplwiz` dans l’invite de commande Windows et exécuter la 
 
 ## 6 - Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian
 
-Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian par Pierre Gielen.
+Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian (rédaction par Pierre Gielen).
+
+__Important :__ Cette méthode d’installation n'est pas valable pour une installation d'une ZiGate USB, Wifi ou Ethernet sur un Raspberry (voir les [installations sous Linux](Plugin_Installation.md)).
+
 
 ### 6.1 - Prérequis
 
@@ -441,6 +444,8 @@ Redémarrer le Pi après la mise à jour du firmware. La configuration par défa
 ## 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
+
+__Important :__ Cette méthode d’installation n'est pas valable pour une installation d'une ZiGate USB, Wifi ou Ethernet sur un Raspberry (voir les [installations sous Linux](Plugin_Installation.md)).
 
 Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate et DomoticZ sont complètement opérationnels sous Fedora 29.
 
