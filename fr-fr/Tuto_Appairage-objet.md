@@ -34,7 +34,7 @@ Un réseau ZigBee est un réseau crypté qui permet de sécuriser les communicat
 
 ## Fonctionnement avec DomoticZ
 
-Le plugin est autonome pour autoriser un appairage et créer les dispositifs dans DomoticZ. Il n'y a pas d'action à faire du coté de DomoticZ.
+Le plugin est autonome pour autoriser un appairage et créer les dispositifs dans DomoticZ. Il n'y a pas d'action à faire du coté de DomoticZ. Une fois l'appairage réalisé, il faut se rendre dans __DomoticZ__, menu __Configuration/Dispositifs__ et retrouver les nouveaux dispositifs créés et générer les Widgets correspondants.
 
 Il est possible de créer les widgets automatiquement en même temps que les dispositifs : il faut activer __Accepter de nouveau dispositifs pendant 5 minutes__ dans les paramètres Système de DomoticZ puis suivre une des méthodes d'appairage ci-dessous.
 
