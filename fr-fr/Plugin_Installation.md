@@ -37,7 +37,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ## 2 - Installation manuelle sous Linux
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
+Cette méthode est uniquement valable pour les systèmes Linux : Rapsberry, Debian, Ubuntu, etc. Il sera nécessaire de modifier les lignes de commandes en fonction de votre système.
+Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
 ### 2.A - Prérequis
 
@@ -48,7 +49,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 ### 2.B - Procédure
 
 * Ouvrir le terminal
-* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. Le chemin est normalement <code>domoticz/plugins</code>
+* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. Le chemin est normalement <code>cd domoticz/plugins/</code>
 * Exécuter la commande : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
 * Le répertoire __Domoticz-Zigate__ sera créé dans le dossier plugin
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `chmod +x Domoticz-Zigate/plugin.py`
