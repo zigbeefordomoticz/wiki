@@ -15,6 +15,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 
 
 __Note :__ L'installation d'une PiZiGate est spécifique. Se reporter aux parties 6 ou 7.
+
 Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethernet, etc...) sur Raspberry, se reporter aux parties 1 ou 2.
 
 
