@@ -38,7 +38,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 ## 2 - Installation manuelle sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux : Rapsberry, Debian, Ubuntu, etc. Il sera nécessaire de modifier les lignes de commandes en fonction de votre système.
-Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
+
+__Important__ Cette méthode d’installation n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
 ### 2.A - Prérequis
 
