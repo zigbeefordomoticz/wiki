@@ -13,6 +13,11 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 
+
+__Note :__ L'installation d'une PiZiGate est spécifique. Se reporter aux parties 6 ou 7.
+Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethernet, etc...) sur Raspberry, se reporter aux parties 1 ou 2.
+
+
 ------------
 
 ## 1 - Installation du plugin via Python Plugin Manager sous Linux
