@@ -53,7 +53,7 @@ __Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de
 
 #### stable
 
-C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V1.
+C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V2.
 Sa compatibilité s'arrête avec DomoticZ 2020.2.
 
 | Info  | Compatibilité  |
