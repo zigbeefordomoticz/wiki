@@ -310,15 +310,6 @@ Il est possible cependant d’installer et de conserver plusieurs versions de py
 
 Gérer plusieurs version python avec py sous Windows n’est pas forcément simple mais des explications sont disponibles à la fin du Wiki consacré à Python et DomoticZ [Using Python plugins in DomoticZ](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 
-Lors de l’installation de Python, des librairies sont manquantes côté Python comme le package ZiGate pour Python.
-
-Lancer une invite de commande en tant qu'administrateur et se placer dans le répertoire de python en tapant : `cd \Program Files (x86)\Python35-32>`
-
-Exécuter la commande : `py -m pip install zigate`
-Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install zigate
-
-Attendre que l’installation du package soit terminé (vous devez être connecté à Internet)
-
 Il est fort possible que la librairie libpython utile à DomoticZ ne soit pas installée (vérifiez si un fichier du type libpython3.x existe dans le sous répertoire « libs » de python). S’il n’existe pas, effectuez la même opération avec la commande :  `py -m pip install libpython3.5`
 Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install libpython3.5
 
