@@ -11,11 +11,6 @@ When a device is paired this imply that the device is known in several locations
 
 In order to get a device fully removed , you need to make sure that device is removed on all 3 locations.
 
-### Attention
-
-By default, the plugin is configured to not request the device removal from Zigate. If you want to activate this feature, you have to enable the flag "Removal on ZiGate" from the Web UI Admin.
-
-![Removal On Zigate](../Images/EraseDeviceOnZigate.png)
 
 ## Removing End devices ( battery )
 
