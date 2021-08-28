@@ -173,7 +173,6 @@ Pas de paramètre simple dans ce module.
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
 | Creation du Group 0000 | | Désactivé | | ??? |
-| Suppression dans la ZiGate | | Désactivé | | Supprime l'objet dans la ZiGate en même temps que la suppression dans DomoticZ |
 | Reset permit to join at startup | | Activé | | Active un appairage au démarrage du plugin  |
 | Activer le Ping | | Activé | | Active un ping de la ZiGate toute les 4 minutes afin de vérifier la connexion |
 | breakConfigureReporting | | Désactivé | | ??? |

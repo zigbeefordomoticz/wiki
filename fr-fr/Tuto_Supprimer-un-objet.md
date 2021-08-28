@@ -43,7 +43,6 @@ Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
 ### Supprimer les routeurs
 
-* S'assurer que le réglage 'Suppression de la ZiGate' (voir [Réglage / Réglages de la ZiGate](WebUI_Reglages.md#réglages-de-la-zigate)) est activé.
 * Supprimer tous les dispositifs de l'objet dans DomoticZ.
 
 Généralement lorsque le dernier dispositifs est supprimé, le Plugin va automatiquement envoyé une demande de __Reset__ à l'objet.
