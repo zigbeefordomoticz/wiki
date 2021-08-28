@@ -12,12 +12,6 @@ Cet objet est donc connu par :
 A la fin de ce tutoriel, il faudra s'assurer que l'objet' a été retiré de ces 3 emplacements.
 
 
-### Prérequis
-
-Par défaut, le plugin est configuré pour __ne pas envoyer__ de suppression à la ZiGate. Pour activer cette fonction, il faut activer 'Suppression de la ZiGate' dans [Réglage / Réglages de la ZiGate](WebUI_Reglages.md#réglages-de-la-zigate).
-
-![Removal On Zigate](../Images/EraseDeviceOnZigate.png)
-
 
 ### Avertissement
 
