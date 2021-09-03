@@ -4,7 +4,7 @@ Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) de
 
 ## Avant propos
 
-Les procédures pour mettre à jour les ZiGates sont disponibles sur le site [https://zigate.fr/documentation/](https://zigate.fr/documentation).
+Les procédures pour mettre à jour les ZiGates sont disponibles sur le site [https://zigate.fr/documentation](https://zigate.fr/documentation).
 
 __Attention :__ Il faut bien choisir le firmware en fonction de votre modèle de ZiGate. Voir [les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md).
 
