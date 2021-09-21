@@ -75,7 +75,7 @@ Double cliquer dessus pour accéder aux détails :
 Domoticz est maintenant opérationnel et vous pouvez y accéder.
 Un dossier plugins est mainteant créé dans le repertoire docker/domoticz.
 
-##Installation du plugin
+## Installation du plugin
 
 Afin de fonctionner, le plugin a besoin de python et celui-ci n'est pas inclus dans l'Image domoticz.
 Nous allons donc procéder à son installation. Sur la page Détails du Conteneur domoticz, aller dans l'onglet Terminal.
