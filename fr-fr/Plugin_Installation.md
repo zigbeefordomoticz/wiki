@@ -7,7 +7,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 
 * 1 - [Installation via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
-* 3 - [Installation sur NAS Synology](#3---installation-sur-nas-synology)
+* 3 - [Installation sur Docker dans un NAS Synology](#3---installation-sur-docker-dans-un-nas-synology)
 * 4 - [Installation sur Docker](#4---installation-sur-docker)
 * 5 - [Installation sous Windows 10](#5---installation-sous-windows-10)
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
@@ -62,56 +62,62 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `chmod +x Domoticz-Zigate/plugin.py`
 * Redémarrer DomoticZ.
 
-Le plugin Zigate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
-
-
-------------
-## 3 - Installation sur NAS Synology
-
-Cette méthode est uniquement valable pour les systèmes NAS Synology.
-
-__Note :__ Jahdal a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2.
-
-
-### 3.A - Prérequis
-
-
-* Avant tout, Python doit être installé (voir [Domoticz Python page](https://www.domoticz.com/wiki/Synology_installation_folder)).
-* Le paquet DomoticZ pour Synology à installer est la version 'avec Python'. Vous pouvez la télécharger depuis Jahdal. Au moment de l'écriture de ces lignes, c'est la version v2020.1 avec Python 3.5.1.
-* Le Module Python du Package manager doit être installé (voir [Python Module](https://www.synology.com/en-uk/dsm/packages/PythonModule))
-* Le paquet GitHub server pour Synology doit être installé.
-* Installer le paquet Git Server via Diskstation. La partie Serveur du paquet Git Server n'est pas nécessaire, juste le 'git command' (pas de configurations spécifiques).
-* Vous devez avoir les accès root/admin avec la commande 'sudo'.
-* Si besoin, les drivers pour la ZiGate sont disponibles sur le site [jadahl.com](http://www.jadahl.com/drivers_6.2/).
-
-
-### 3.B - Procédure
-
-* Démarrer une session __Putty__
-* Se loguer
-
-* Aller jusqu'au dossier __plugins__ de DomoticZ : `cd /volume1/@appstore/domoticz/var/plugins`
-* Faire un clone du Git du plugin ZiGate dans un nouveau dossier : `sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate`
-* Arrêter et redémarrer DomoticZ depuis le gestionnaire de paquet.
-
 Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
+------------
+## 3 - Installation sur Docker dans un NAS Synology
 
-### 3.C - Erreurs connues
+### 3.A - Avant propos
 
-Il y a des erreurs connues dans Synology qui font planter DomoticZ au lancement du plugin ZiGate.
-Il faut désactiver le plugin ZiGate et vérifier s'il y a une mise à jour du plugin ou du firmware.
+Le développement réalisé par Jadahl ayant été arrêté, il est préférable de basculer sur l'utilisation d'une image Docker dans votre NAS Synology.
 
-Éditer le fichier __Domoticz-Zigate/Conf/PluginConf-xx.json__
-
-Et ajouter la ligne (de préférence au milieu du fichier afin de ne pas perturber la syntaxe globale) : `"internetAccess": 0,`
+Les anciennes Informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl sont toujours accessible sur [cette page](Old_versions/Plugin_Installation_OLD.md).  
 
 
-Ou aller dans la section [Réglages > Liste des services](#liste-des-services) et désactiver la fonction __internet access__.
+La suite a complètement réécrite par @SylvainPer utilisant l'image officielle Docker de DomoticZ.
 
+### 3.B - Prérequis
+
+DomoticZ doit être installé dans un conteneur Docker __avec un dossier domoticz__. Voir la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md)
+
+### 3.C - Procédure
+
+Afin de fonctionner, le plugin a besoin de python et celui-ci n'est pas inclus dans l'Image DomoticZ.
+Nous allons donc procéder à son installation. Sur la page Détails du Conteneur DomoticZ, aller dans l'onglet Terminal.
+Créer un nouveau terminal :
+![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal.png)
+
+Il faut entrer les commandes suivantes et valider par 'Y' si nécessaire:
+```
+apt update
+apt install curl
+apt install python
+apt install python-requests
+```
+
+![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal_2.png)
+
+A partir d'ici, deux façons d'installer le plugin :
+
+* Copier le répertoire du plugin directement dans le dossier `docker/domoticz/plugin`
+* Utiliser GIT pour avoir accès au mises à jour
+
+
+Je ne saurais que conseiller cette deuxième méthode que je détaille ensuite.
+Dans le terminal, procéder ainsi :
+```
+cd userdata
+cd plugins
+git clone https://github.com/pipiche38/Domoticz-Zigate.git
+```
+![GIT](Images/FR_Synology_Docker_Install_Bash_Git.png)
+
+Redémarrer le Conteneur pour que le plugin soit vu par DomoticZ.
+
+Le plugin ZiGate doit apparaître dans la liste des matériels.
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
 ## 4 - Installation sur Docker
