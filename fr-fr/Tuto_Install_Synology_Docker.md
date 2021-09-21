@@ -10,6 +10,9 @@ S'il s'agit d'une migration, vous devez :
 * Sur la page paremètre, Sauvegarde / restauration, Sauvegarder la base de données
 * Copier et sauvegarder le contenu du dossier Data/ du plugin
 
+
+Si besoin, les drivers pour la ZiGate sont disponibles sur le site [jadahl.com](http://www.jadahl.com/)
+
 ## Installation de Domoticz
 
 Lancer Docker, vous arrivez sur la Vue d'ensemble.
