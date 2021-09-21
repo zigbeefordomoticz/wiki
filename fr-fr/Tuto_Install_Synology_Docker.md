@@ -83,7 +83,8 @@ Créer un nouveau terminal :
 ![Terminal](Images/Synology_Docker/Synology_Docker_Install_Conteneur_Terminal.png)
 
 Il faut entrer les commandes suivantes et valider par 'Y' si nécessaire:
-```apt update
+```
+apt update
 apt install curl
 apt install python
 apt install python-requests
