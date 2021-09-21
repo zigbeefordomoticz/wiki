@@ -52,7 +52,7 @@ Une fois le dossier créé, il faut indiquer le chemin d'accès :
 
 
 Ensuite, choisir l'onglet Environnement et modifier le port SSL, le port 443 étant déjà utilisé par le NAS, cela va bloquer.
-![Environement](Images/Synology_Docker/Synology_Docker_Install_Environement.png)
+![Environement](Images/Synology_Docker/Synology_Docker_Install_Param_Environnement.png)
 
 
 Onglet Paramètres des ports, remplacer auto par les ports choisis:
