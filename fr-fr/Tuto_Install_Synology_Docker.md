@@ -112,6 +112,7 @@ Le plugin est maintenant installé et peut être ajouté.
 
 
 S'il s'agit d'une migration, c'est le moment de copier le contenu du dossier Data/ dans /docker/domoticz/plugins/Domoticz-Zigate/Data
+
 Il faut ensuite retourner dans les paramètres de Domoticz et Restaurer la base de données.
 
 
