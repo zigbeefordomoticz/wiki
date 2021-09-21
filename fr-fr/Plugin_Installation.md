@@ -78,7 +78,8 @@ La suite a complètement réécrite par @SylvainPer utilisant l'image officielle
 
 ### 3.B - Prérequis
 
-DomoticZ doit être installé dans un conteneur Docker __avec un dossier domoticz__. Voir la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md).
+DomoticZ doit être installé dans un conteneur Docker __avec un dossier domoticz__.
+Voir la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md).
 
 ### 3.C - Procédure
 
