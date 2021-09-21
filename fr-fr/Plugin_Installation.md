@@ -71,9 +71,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ### 3.A - Avant propos
 
-Le développement réalisé par Jadahl ayant été arrêté, il est préférable de basculer sur l'utilisation d'une image Docker dans votre NAS Synology.
-
-Les anciennes Informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl sont toujours accessible sur [cette page](Old_versions/Plugin_Installation_OLD.md).  
+Le développement réalisé par Jadahl ayant été arrêté, il est préférable de basculer sur l'utilisation d'une image Docker dans votre NAS Synology. Les anciennes informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl sont toujours accessible sur [cette page](Old_versions/Plugin_Installation_OLD.md).  
 
 
 La suite a complètement réécrite par @SylvainPer utilisant l'image officielle Docker de DomoticZ.
