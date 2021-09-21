@@ -30,7 +30,7 @@ Ensuite, aller dans Image:
 
 
 Double cliquer sur l'image domoticz. Nous arrivons dans les paramètres nécessaires à la création du Conteneur. Choisir un nom et cocher "Exécuter le conteneur à l'aide de pirvilèges élevés", puis sélectionner "Paramètres avancés".
-![Creation](Images/Synology_Docker/Synology_Docker_Install_Conteneur.png)
+![Creation](Images/Synology_Docker/Synology_Docker_Install_Creation_Conteneur.png)
 
 
 Cocher "Activer le redémarrage automatique", puis aller sur l'onglet Volume.
