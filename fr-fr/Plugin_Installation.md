@@ -7,7 +7,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 
 * 1 - [Installation via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
-* 3 - [Installation sur Docker dans un NAS Synology](#3---installation-sur-docker-dans-un-nas-synology)
+* 3 - [Installation sur NAS Synology avec Jahdal](#3---installation-sur-nas-synology-avec-jahdal)
 * 4 - [Installation sur Docker](#4---installation-sur-docker)
 * 5 - [Installation sous Windows 10](#5---installation-sous-windows-10)
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
@@ -67,28 +67,43 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
 ------------
-## 3 - Installation sur Docker dans un NAS Synology
+## 3 - Installation sur NAS Synology avec Jahdal
 
-### 3.A - Avant propos
+Cette méthode est uniquement valable pour les systèmes NAS Synology.
 
-Le développement réalisé par Jadahl ayant été arrêté, il est préférable de basculer sur l'utilisation d'une image Docker dans votre NAS Synology. Les anciennes informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl sont toujours accessible sur [cette page](Old_versions/Plugin_Installation_OLD.md).  
+__Note :__ Jahdal a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2.
+
+Les anciennes informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl sont accessibles sur [cette page](Old_versions/Plugin_Installation_OLD.md).
 
 
-La suite a complètement réécrite par @SylvainPer utilisant l'image officielle Docker de DomoticZ.
+Il est vivement recommandé de basculer sur un autre système. Docker est compatible avec DSM 7. Voir les explication ci-dessous.
 
-### 3.B - Prérequis
+------------
+## 4 - Installation sur Docker
+
+### 4.A - Avant propos
+
+Partie complètement réécrite par @SylvainPer utilisant l'image officielle Docker de DomoticZ. L'ancienne version est accessible sur [cette page](Old_versions/Plugin_Installation_OLD.md).
+
+L'exemple est donné pour une installation Docker dans un NAS Synology. Elle est également valable pour Docker dans d'autres systèmes.
+
+### 4.B - Prérequis
 
 DomoticZ doit être installé dans un conteneur Docker __avec un dossier domoticz__.
-Voir la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md).
+Se référer à la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md) pour une explication détaillée de l'installation et du paramétrage de Docker nécessaire.
 
-### 3.C - Procédure
+### 4.C - Procédure
+
+##### 4.C.1 - Python
 
 Afin de fonctionner, le plugin a besoin de python et celui-ci n'est pas inclus dans l'Image DomoticZ.
-Nous allons donc procéder à son installation. Sur la page Détails du Conteneur DomoticZ, aller dans l'onglet Terminal.
-Créer un nouveau terminal :
+
+* Sur la page Détails du Conteneur DomoticZ, aller dans l'onglet Terminal.
+
+* Créer un nouveau terminal :
 ![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal.png)
 
-Il faut entrer les commandes suivantes et valider par 'Y' si nécessaire:
+* Entrer les commandes suivantes et valider par 'Y' si nécessaire:
 ```
 apt update
 apt install curl
@@ -98,14 +113,12 @@ apt install python-requests
 
 ![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal_2.png)
 
-A partir d'ici, deux façons d'installer le plugin :
+#### 4.C.2 - Installation du plugin ZiGate
 
-* Copier le répertoire du plugin directement dans le dossier `docker/domoticz/plugin`
-* Utiliser GIT pour avoir accès au mises à jour
+Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/plugin`
 
+* Dans le terminal, lancer les commandes :
 
-Je ne saurais que conseiller cette deuxième méthode que je détaille ensuite.
-Dans le terminal, procéder ainsi :
 ```
 cd userdata
 cd plugins
@@ -113,134 +126,7 @@ git clone https://github.com/pipiche38/Domoticz-Zigate.git
 ```
 ![GIT](Images/FR_Synology_Docker_Install_Bash_Git.png)
 
-Redémarrer le Conteneur pour que le plugin soit vu par DomoticZ.
-
-Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
-
-------------
-## 4 - Installation sur Docker
-
-Cette méthode est uniquement valable pour les systèmes Docker.
-
-### 4.1 - Prérequis
-
-* Docker doit être installé (voir [Get Docker](https://docs.docker.com/get-docker/))
-
-
-### 4.2 - Procédure
-
-#### 4.2.A - Récupérer Docker-DomoticZ
-
-Avant de pouvoir exécuter le Docker DomoticZ, il faut le récupérer. Il y a deux possibilités :
-* Créer votre propre image Docker DomoticZ
-* Récupérer une image existante depuis le dépôt Docker
-
-
-##### 4.2.A.1 - Créer votre propre image Docker DomoticZ
-
-* Dans un dossier, créer un fichier **dockerfile** avec le contenu suivant :
-```
-#name of container: docker-domoticz
-#versison of container: 0.1.0
-FROM debian:buster-slim
-LABEL MAINTAINER your_name  "your_mail"
-
-#add repository and update the container
-#Installation of nesesary package/software for this containers...
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential\
-                    netcat \
-                    cmake  \
-                    libsqlite3-dev curl libusb-dev \
-                    zlib1g-dev libssl-dev git\
-                    libudev-dev \
-                    python3 \
-                    python3-dev \
-                    python \
-                    python-dev \
-                    python-libxml2 \
-                    libxml2-dev \
-                    python-pip \
-                    python3-pip \
-                    libxslt-dev \
-                    lib32z1-dev \
-                    liblua5.3 \
-                    liblua5.3-dev \
-                    libcereal-dev \
-                    wget libssl-dev git libcurl4-gnutls-dev libcereal-dev uthash-dev\
-                    && apt-get clean \
-                    && rm -rf /tmp/* /var/tmp/*  \
-                    && rm -rf /var/lib/apt/lists/*
-
-# Rebuild cmake because stable version (3.0.2) incompatible with openssl
-RUN wget -O- https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz | tar xzv \
-            && cd cmake-3.17.0 \
-            && ./configure --prefix=/opt/cmake \
-            && make \
-            && make install \
-            && cd ../
-
-RUN wget -O- https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz | tar zxv \
-            && cd boost_1_72_0 \
-            && ./bootstrap.sh \
-            && ./b2 install
-
-RUN pip3 install caldav
-RUN pip3 install broadlink
-RUN pip3 install pycrypto
-RUN pip3 install pyaes
-
-#Compile Domoticz
-RUN cd /opt && git clone -b development https://github.com/domoticz/domoticz.git domoticz && cd domoticz;git checkout external-libs;/opt/cmake/bin/cmake -J4 -DCMAKE_BUILD_TYPE=Release -DUSE_PYTHON=YES -DPython_ADDITIONAL_VERSIONS=3.5 . ;\
-    make CMAKE_COMMAND=/opt/cmake/bin/cmake #&& make CMAKE_COMMAND=/opt/cmake/bin/cmake install
-
-RUN mkdir -p /opt/domoticz/backup  /opt/scripts /opt/domoticz/db
-
-VOLUME ["/opt/domoticz/scripts", "/opt/domoticz/backups",  "/opt/domoticz/db", "/opt/domoticz/plugins", " /opt/domoticz/www/images/floorplans", " /opt/domoticz/www/templates"]
-
-# to allow access from outside of the container  to the container service
-# at that ports need to allow access from firewall if need to access it outside of the server.
-EXPOSE 8080 9440
-
-# Use baseimage-docker's init system.
-CMD ["/opt/domoticz/domoticz"]
-
-```
-Comme pour installation normale, vous pouvez ajouter des nouveaux paquets avec apt-get. Plus d''informations voir [Fichier Docker](https://docs.docker.com/engine/reference/builder/)
-
-
-* Ensuite, créer votre image Docker localement avec la commande : `docker build -t docker-domoticz .`
-
-
-##### 4.2.A.2 - Récupérer une image existante depuis le dépôt Docker
-
-* Aller sur [docker hub](https://hub.docker.com/)
-* Rechercher DomoticZ
-* Lancer la commande `docker pull image-name` en remplaçant __image-name__ par l'image trouvée
-
-
-
-#### 4.2.B - Exécuter l'image Docker DomoticZ
-
-Si vous avez des scripts, plugins ... mettez les dans un répertoire et définissez le chemin avant de lancer la commande.
-
-* Exécuter la commande : `docker run --privileged -d -p 8080:8080 -p 9440:9440 --name=Domoticz -v <Local path for your scripts>:/scripts -v <Local path for your plugins>:/opt/domoticz/plugins -v <Local path for your floorplans>:/opt/domoticz/www/images/floorplans -v /etc/localtime:/etc/localtime:ro -v <Local path for your domoticz.db>:/opt/domoticz/domoticz.db Your_Image_Name`
-
-Si vous avez des plugins qui ont besoin d'un accès réseau (comme la ZiGate Wifi), il faut ajouter `--network host` à la commande au-dessus.
-
-
-
-#### 4.2.C - Récupérer les logs Docker
-
-
-Pour récupérer les logs complets depuis Docker, exécuter : `docker logs Domoticz`
-
-
-#### 4.2.D - Connexion au Docker actif
-
-* Exécuter la commande `docker exec -it Domoticz bash`
-
+* Redémarrer le Conteneur.
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
