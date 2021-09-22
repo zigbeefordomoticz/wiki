@@ -7,7 +7,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 
 * 1 - [Installation via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
-* 3 - [Installation sur NAS Synology avec Jahdal](#3---installation-sur-nas-synology-avec-jahdal)
+* 3 - [Installation sur NAS Synology avec Jadahl](#3---installation-sur-nas-synology-avec-jadahl) Plus à jour > préférer Docker
 * 4 - [Installation sur Docker](#4---installation-sur-docker)
 * 5 - [Installation sous Windows 10](#5---installation-sous-windows-10)
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
@@ -67,11 +67,11 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
 ------------
-## 3 - Installation sur NAS Synology avec Jahdal
+## 3 - Installation sur NAS Synology avec Jadahl
 
 Cette méthode est uniquement valable pour les systèmes NAS Synology.
 
-__Note :__ Jahdal a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2. Il n'est plus conseillé de l'utiliser pour de nouvelles utilisations puisqu'il n'y aura plus de mises à jour et ce système ne fonctionne plus sur DSM 7. Il est préconisé de passer sous Docker si votre NAS le permet.
+__Note :__ Jadahl a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2. Il n'est plus conseillé de l'utiliser pour de nouvelles utilisations puisqu'il n'y aura plus de mises à jour et ce système ne fonctionne plus sur DSM 7. Il est préconisé de passer sous Docker si votre NAS le permet.
 
 Les informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl ont été déplacées sur [cette page](Old_versions/Plugin_Installation_OLD.md).
 

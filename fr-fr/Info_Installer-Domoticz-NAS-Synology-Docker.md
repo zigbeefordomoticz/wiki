@@ -2,7 +2,7 @@
 
 Ce tutoriel explique comment installer DomoticZ et le plugin avec Docker sur un NAS Synology.
 
-C'est un pré-requis à l'installation du plugin sous Docker [Installation sur Docker dans un NAS Synology](Plugin_Installation.md#3---installation-sur-docker-dans-un-nas-synology)
+C'est un pré-requis à l'installation du plugin sous Docker [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
 
 ## Avant propos
 Ce tutoriel suppose que Docker est déjà installé sur votre NAS (Centre de paquets)
@@ -80,4 +80,4 @@ DomoticZ est maintenant opérationnel et vous pouvez y accéder.
 Un dossier plugins est maintenant créé dans le répertoire __docker/domoticz__.
 
 
-Vous pouvez continuer l'installation du plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md#3---installation-sur-docker-dans-un-nas-synology)
+Vous pouvez continuer l'installation du plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
