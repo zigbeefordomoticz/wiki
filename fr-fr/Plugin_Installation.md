@@ -71,12 +71,10 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 Cette méthode est uniquement valable pour les systèmes NAS Synology.
 
-__Note :__ Jahdal a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2.
+__Note :__ Jahdal a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2. Il n'est plus conseillé de l'utiliser pour de nouvelles utilisations puisqu'il n'y aura plus de mises à jour et ce système ne fonctionne plus sur DSM 7. Il est préconisé de passer sous Docker si votre NAS le permet.
 
-Les anciennes informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl sont accessibles sur [cette page](Old_versions/Plugin_Installation_OLD.md).
+Les informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl ont été déplacées sur [cette page](Old_versions/Plugin_Installation_OLD.md).
 
-
-Il est vivement recommandé de basculer sur un autre système. Docker est compatible avec DSM 7. Voir les explication ci-dessous.
 
 ------------
 ## 4 - Installation sur Docker
