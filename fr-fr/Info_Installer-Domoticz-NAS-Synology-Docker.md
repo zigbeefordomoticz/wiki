@@ -26,7 +26,7 @@ Cherchez DomoticZ dans la barre en haut à droite :
 ![Registre](Images/FR_Synology_Docker_Install_Registre_1.png)
 
 
-Double cliquez sur l'image souhaité. Je choisis l'officiel, domoticz/domoticz. Il faut choisir sur quelle branche du projet on souhaite être : stable (latest) ou beta.
+Double cliquez sur l'image souhaité. Je choisis l'officiel, domoticz/domoticz. Il faut choisir sur quelle branche du projet on souhaite être : stable ou beta.
 ![Stable ou Beta](Images/FR_Synology_Docker_Install_Registre_2.png)
 
 
