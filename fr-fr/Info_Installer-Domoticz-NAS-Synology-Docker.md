@@ -55,11 +55,8 @@ Une fois le dossier créé, il faut indiquer le chemin d'accès : `/opt/domoticz
 ![/opt/domoticz/userdata](Images/FR_Synology_Docker_Install_Param_Volume_3.png)
 
 
-Ensuite, choisir l'onglet Environnement et modifier le port SSL, le port 443 étant déjà utilisé par le NAS, cela va bloquer.
-![Environement](Images/FR_Synology_Docker_Install_Param_Environnement.png)
-
-
-Onglet Paramètres des ports, remplacer auto par les ports choisis:
+Ensuite, choisir l'onglet Ports et modifier les 'Auto' par des ports fixes.
+Le port SSL 443 étant déjà utilisé par le NAS, il faut en choisir un autre :
 ![Ports](Images/FR_Synology_Docker_Install_Ports.png)
 
 
