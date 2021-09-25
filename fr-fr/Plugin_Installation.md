@@ -124,7 +124,10 @@ git clone https://github.com/pipiche38/Domoticz-Zigate.git
 ```
 ![GIT](Images/FR_Synology_Docker_Install_Bash_Git.png)
 
-* Redémarrer le Conteneur.
+* Stopper le Conteneur. Cliquer sur 'Modifier' et aller dans l'onglet 'Paramètres des ports'. Il faut ajouter le port d'accés au WebUI (par défaut 9440) :
+ ![Port WebUI](Images/FR_Synology_Docker_Install_Plugin_Ports.png)
+
+* Lancer le Conteneur.
 
 Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
