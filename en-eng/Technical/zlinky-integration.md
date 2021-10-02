@@ -9,6 +9,7 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 | Widget Name     | Widget Type | Mono | Tri | Base | HCHP | EJP | TEMPO | TIC Attributes                                           |  Details                                 |
 | -----------     | ----------- | ---- | --- | ---- | ---- | --- | ----  | -------------------------------------------------------- | ---------------------------------------- |
 | Power           | Power       |   X  |  X  |   X  |  X   |  X  |  X    | PAPP                                                     | Power in VA ( not Watts)                 |
+| Meter           | Meter       |   X  |  X  |   X  |  X   |  X  |  X    | PAPP                                                     | Power in VA ( not Watts)                 |
 | _P1Meter_ZL 01  | P1Meter     |   X  |     |   X  |  X   |  X  |  X    | BASE, HCHP, HCHC, EJPHN, EJPHPM, BBRHCJB, BBRHPJB, PAPP  | 1st: Power in VA, 2nd: Consumption in Wh |
 | _P1Meter_ZL f2  | P1Meter     |      |     |      |      |     |  X    | BBRHCJW, BBRHPJW                                         | 1st: Power in VA, 2nd: Consumption in Wh |
 | _P1Meter_ZL f3  | P1Meter     |      |     |      |      |     |  X    | BBRHCJR, BBRHPJR                                         | 1st: Power in VA, 2nd: Consumption in Wh |
