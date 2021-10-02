@@ -12,11 +12,13 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 | ZLinky_TIC_P1Meter_ZL f2  | P1Meter     |      |     |      |      |     |  X    | BBRHCJW, BBRHPJW                                         | 1st: Power in VA, 2nd: Consumption in Wh |
 | ZLinky_TIC_P1Meter_ZL f3  | P1Meter     |      |     |      |      |     |  X    | BBRHCJR, BBRHPJR                                         | 1st: Power in VA, 2nd: Consumption in Wh |
 | ZLinky_TIC_Ampere3        | Current     |   X  |  X  |      |      |     |       | IINST, IINST1, IINST2, IINST3                            | Current in A                             |
-| ZLinky_TIC_Alarm 01       | Alarm       |   X  |  X  |      |      |     |       | ADPS, ADIR1                                              | 80% - 01, 90% 02 , 98 03, Over 05        |
-| ZLinky_TIC_Alarm f2       | Alarm       |      |  X  |      |      |     |       | ADIR2                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
-| ZLinky_TIC_Alarm F3       | Alarm       |      |  X  |      |      |     |       | ADIR3                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
+| ZLinky_TIC_Alarm 01 *     | Alarm       |   X  |  X  |      |      |     |       | ADPS, ADIR1                                              | 80% - 01, 90% 02 , 98 03, Over 05        |
+| ZLinky_TIC_Alarm f2 *     | Alarm       |      |  X  |      |      |     |       | ADIR2                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
+| ZLinky_TIC_Alarm F3 *     | Alarm       |      |  X  |      |      |     |       | ADIR3                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
 | ZLinky_TIC_DEMAIN         | Alarm       |      |     |      |      |     |  X    | DEMAIN                                                   | Next day color ( Blue, White, Red)       |
 | ZLinky_TIC_EJP            | Alarm       |      |     |      |      |  X  |       | PEJP                                                     | prior notice EJP ( 30min)                |
+
+* ADPS, ADIR1, ADIR2, ADIR3 triger Critical Alarm only when over the subscribe intensity. The plugin is checking against the subscription to triger 80%, 90% or 98%
 
 ## TIC attributes not available via Widget
 
