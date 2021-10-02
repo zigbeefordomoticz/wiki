@@ -6,17 +6,17 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 
 ## Domoticz Widgets : mapping to TIC attributes
 
-| Widget Name               | Widget Type | Subscription            | TIC Attributes                                           |  Details                                 |
-| -----------               | ----------- | ----------------------- | -------------------------------------------------------- | ---------------------------------------- |
-| ZLinky_TIC_P1Meter_ZL 01  | P1Meter     | Base, HC/HP, EJP, TEMPO | BASE, HCHP, HCHC, EJPHN, EJPHPM, BBRHCJB, BBRHPJB, PAPP  | 1st: Power in VA, 2nd: Consumption in Wh |
-| ZLinky_TIC_P1Meter_ZL f2  | P1Meter     | TEMPO                   | BBRHCJW, BBRHPJW                                         | 1st: Power in VA, 2nd: Consumption in Wh |
-| ZLinky_TIC_P1Meter_ZL f3  | P1Meter     | TEMPO                   | BBRHCJR, BBRHPJR                                         | 1st: Power in VA, 2nd: Consumption in Wh |
-| ZLinky_TIC_Ampere3        | Current     | Base, HC/HP, EJP, TEMPO | IINST, IINST1, IINST2, IINST3                            | Current in A                             |
-| ZLinky_TIC_Alarm 01       | Alarm       | mon and tri-phase L0    | ADPS, ADIR1                                              | 80% - 01, 90% 02 , 98 03, Over 05        |
-| ZLinky_TIC_Alarm f2       | Alarm       | tri-phase  L2           | ADIR2                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
-| ZLinky_TIC_Alarm F3       | Alarm       | tri-phase  L3           | ADIR3                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
-| ZLinky_TIC_DEMAIN         | Alarm       | TEMPO                   | DEMAIN                                                   | Next day color ( Blue, White, Red)       |
-| ZLinky_TIC_EJP            | Alarm       | EJP                     | PEJP                                                     | prior notice EJP ( 30min)                |
+| Widget Name               | Widget Type | Mono | Tri | Base | HCHP | EJP | TEMPO | TIC Attributes                                           |  Details                                 |
+| -----------               | ----------- | ---- | --- | ---- | ---- | --- | ----  | -------------------------------------------------------- | ---------------------------------------- |
+| ZLinky_TIC_P1Meter_ZL 01  | P1Meter     |   X  |     |   X  |  X   |  X  |  X    | BASE, HCHP, HCHC, EJPHN, EJPHPM, BBRHCJB, BBRHPJB, PAPP  | 1st: Power in VA, 2nd: Consumption in Wh |
+| ZLinky_TIC_P1Meter_ZL f2  | P1Meter     |      |     |      |      |     |  X    | BBRHCJW, BBRHPJW                                         | 1st: Power in VA, 2nd: Consumption in Wh |
+| ZLinky_TIC_P1Meter_ZL f3  | P1Meter     |      |     |      |      |     |  X    | BBRHCJR, BBRHPJR                                         | 1st: Power in VA, 2nd: Consumption in Wh |
+| ZLinky_TIC_Ampere3        | Current     |   X  |  X  |      |      |     |       | IINST, IINST1, IINST2, IINST3                            | Current in A                             |
+| ZLinky_TIC_Alarm 01       | Alarm       |   X  |  X  |      |      |     |       | ADPS, ADIR1                                              | 80% - 01, 90% 02 , 98 03, Over 05        |
+| ZLinky_TIC_Alarm f2       | Alarm       |      |  X  |      |      |     |       | ADIR2                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
+| ZLinky_TIC_Alarm F3       | Alarm       |      |  X  |      |      |     |       | ADIR3                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
+| ZLinky_TIC_DEMAIN         | Alarm       |      |     |      |      |     |  X    | DEMAIN                                                   | Next day color ( Blue, White, Red)       |
+| ZLinky_TIC_EJP            | Alarm       |      |     |      |      |  X  |       | PEJP                                                     | prior notice EJP ( 30min)                |
 
 ## TIC attributes not available via Widget
 
