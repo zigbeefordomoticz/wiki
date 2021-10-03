@@ -6,8 +6,7 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 
 ## Domoticz Widgets after ZLinky pairing
 
-![List of Devices](../Images/ZLinky-Widgets.png])
-
+[ZLinky Widgets on Domoticz](../Images/ZLinky-Widgets.png])
 
 ## Domoticz Widgets : mapping to TIC attributes
 
