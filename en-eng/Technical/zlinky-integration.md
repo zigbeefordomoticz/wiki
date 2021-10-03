@@ -4,6 +4,11 @@
 
 Purpose is to describe the integration of the ZLinky_TIC module in the plugin and Domoticz
 
+## Domoticz Widgets after ZLinky pairing
+
+![List of Devices](../Images/ZLinky-Widgets.png])
+
+
 ## Domoticz Widgets : mapping to TIC attributes
 
 | Widget Name     | Widget Type | Mono | Tri | Base | HCHP | EJP | TEMPO | TIC Attributes                                           |  Details                                 |
