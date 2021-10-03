@@ -1,4 +1,5 @@
 ### English
+
 Purpose is to document the list of Hardware devices **tested** with the Zigate USB/WiFi and the Zigate plugin.
 
 Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
@@ -6,6 +7,7 @@ Either the information is coming from one of the plugin user (through direct com
 You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/zigate.html)
 
 ### Français
+
 Ce document est une liste des objets "certfiés" qui fonctionnent avec une ZiGate et le plugin ZiGate.
 
 Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du développeur qui rendu paramétrer l'objet pour qu'il fonctionne.
@@ -15,7 +17,8 @@ La liste des objets compatibles avec la ZiGate est disponible sur le site [ZiGat
 Le reste de la page est en anglais afin de ne faire vivre qu'une seule version.
 
 ## BITRON HOME
-https://www.conrad.com/o/bitron-home-2805047
+
+<https://www.conrad.com/o/bitron-home-2805047>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -23,9 +26,9 @@ https://www.conrad.com/o/bitron-home-2805047
 | Door/Windows contact (902010/121A) | Door | Door sensor Open/Closed | Fully Op. | 4.6 |
 | Motion Sensor (902010/22A) | Motion | Motion | Full Op. | 4.6 |
 
-
 ## Centralite Micro
-https://centralite.com/
+
+<https://centralite.com/>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -40,7 +43,7 @@ https://centralite.com/
 
 ## EUROTRONIC
 
-https://eurotronic.org/produkte/zigbee-heizkoerperthermostat/
+<https://eurotronic.org/produkte/zigbee-heizkoerperthermostat/>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -64,7 +67,6 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | HS2WD-E     | Switch Selector Off/Alarm/Siren/Strobe | Siren and Strobe | Fully Op. | 4.4 with Firm 3.1a |
 | HS1SA-E     | Smoke Detector   | | Fully Op. | 4.10 with Firm 3.1c|
 | HS1CA-M     | CO Detector    | | Fully Op. | 4.10 with Firm 3.1c|
-
 
 ## IKEA Tradfri
 
@@ -90,9 +92,6 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | TRADFRI bulb E27 WS opal 980lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
 | TRADFRI bulb GU10 WS 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
 
-
-
-
 ## Innr
 
 * In order to reset the RC 110, press On and Program for about 5s until the led blink
@@ -113,7 +112,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 * Channels: 15, 20,25
 
-### Attention:
+### Attention
 
 1. for now there is no reporting of Battery level ( under investigation )
 
@@ -124,17 +123,15 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 | Temp Humi   | Temp & Humi    | Temp et Humi| Op. with 4.5, Fully Op. with 4.6 | 4.6 |
 | Motion      | Motion         | Motion      | Fully Op.| 4.6 |
 
-
 ## Legrand
 
 * Channels: 11
 
-### Attention:
+### Attention
 
 * [Corner Legrand Netatmo](Corner_Legrand-Netatmo.md)
 
 Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
-
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -157,12 +154,10 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | One Gang C701SZ-11 | Switch | On/Off       | Under Dev | 4.6 & Firm 3.1b |
 
-
-
 ## OSRAM / LEDVANCE
 
 * I have noticed some auto-reset when devices are paired on a channel different than 11.
-* LEDVANCE firmware are available here https://update.ledvance.com/firmware-overview
+* LEDVANCE firmware are available here <https://update.ledvance.com/firmware-overview>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -172,18 +167,16 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 ## Paulmann
 
-
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | Paulmann LED dimmer 300.43 | Switch/LvlControl | Switch and Dimmer | Fully Op. | 4.5 |
-
 
 ## Philips
 
 * Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
 So there is a risk of latency when using Remote or Group command between the command and geting the status reflected on Domoticz (as it is based on the polling frequency)
 
-* Philips firmware are available here: https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions#philips-hue
+* Philips firmware are available here: <https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions#philips-hue>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -213,10 +206,9 @@ So there is a risk of latency when using Remote or Group command between the com
 
 ## Schneider
 
-* https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN )
+* <https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN> )
 
 * [Corner Wiser Setup](Corner_Wiser-Setup.md)
-
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
@@ -225,9 +217,6 @@ So there is a risk of latency when using Remote or Group command between the com
 | EER50000 Actionneur | Thermostat, Instant Power and Consumption Usage Fil Pilot, or conventional mode | Work | 4.6 |
 | EER3300x S Meter | 6 lines Power / Meter and Voltage of Battery| allow to get instant power as well as summation for each of the 6 lines | Work |  4.6 |
 | EER5300x Radiator Thermostat | Thermostat Mode, Setpoint, Local Temp | Full control of the radiator | Op. | 4.7 & 3.1c|
-
-
-
 
 ## TUYATEC
 
@@ -242,21 +231,17 @@ So there is a risk of latency when using Remote or Group command between the com
 | TS0003    | Switch   | 3 Switch | Op 4.6| 4.6        |
 | TS0201    | Temp + Humidity |Temp / Humidity / Temp + Humidity | Op 4.6| 4.6        |
 
-
 ## Trust.com
 
-* https://www.trust.com/fr/zigbee
+* <https://www.trust.com/fr/zigbee>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
 | ZLED-EC2206 | Switch/Lvl Control | Warm Color, 470lm/6w, Dimable | Op. | 4.5 |
 
-
-
 ## Xiaomi / Aqara
 
-* https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623
-
+* <https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623>
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |

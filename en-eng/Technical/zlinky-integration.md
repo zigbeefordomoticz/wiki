@@ -8,6 +8,22 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 
 ![ZLinky Widgets on Domoticz](../Images/ZLinky-Widgets.png)
 
+Afer pairing your Zlinky module quiet an extensive numbers of Widgets will be created ( 11 in Total)
+
+* In Base, or EJP contract and Mono phase setup the BLUE widgets will be used
+* If your installation is tri-phases, then the ORANGE will be used in addition
+* In case you have a TEMPO contract the RED widget will be used in addition
+
+In conclusion if you have a TEMPO contract with a tri-phase installation, then all 11 widgets are going to be used.
+
+The 11 Widgets will be used if you are in tri-phases and TEMPO subscription.
+In case of mono-phase and Base Contract only the Blue widgets will be used
+In case you have a tru-phase
+
+## IMPORTANT (for now)
+
+In case you are in BASE or EJP contract, and you decide to remove some of the widgets which are not used actually, you can. But if later on you move from BASE to TEMPO contract , unfortunatly the removed widgets won't be created, and you will have to start from scratch ( removeing all widgets and redoing the pairing)
+
 ## Domoticz Widgets : mapping to TIC attributes
 
 | Widget Name     | Widget Type | Mono | Tri | Base | HCHP | EJP | TEMPO | TIC Attributes                                           |  Details                                 |
