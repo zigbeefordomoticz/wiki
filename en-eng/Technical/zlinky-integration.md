@@ -17,7 +17,8 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 | _Alarm_ZL 01 *  | Alarm       |   X  |  X  |      |      |     |       | ADPS, ADIR1                                              | 80% - 01, 90% 02 , 98 03, Over 05        |
 | _Alarm_ZL f2 *  | Alarm       |      |  X  |      |      |     |       | ADIR2                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
 | _Alarm_ZL F3 *  | Alarm       |      |  X  |      |      |     |       | ADIR3                                                    | 80% - 01, 90% 02 , 98 03, Over 05        |
-| _Alarm_ZL2      | Alarm       |      |     |      |      |  X  |  X    | DEMAIN (For Tempo), EJP (for EJP)                                                  | Next day color ( Blue, White, Red)       |
+| _Alarm_ZL2      | Alarm       |      |     |      |      |  X  |  X    | DEMAIN (For Tempo), EJP (for EJP)                        | Next day color ( Blue, White, Red)       |
+| _Alarm_ZL3      | Alarm       |      |     |      |      |     |  X    | PTEC                                                     | Current Tarif HN, HC, HP, B,W,R ...      |
 | _EJP            | Alarm       |      |     |      |      |  X  |       | PEJP                                                     | prior notice EJP ( 30min)                |
 
 * ADPS, ADIR1, ADIR2, ADIR3 triger Critical Alarm only when over the subscribe intensity. The plugin is checking against the subscription to triger 80%, 90% or 98%
