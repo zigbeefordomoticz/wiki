@@ -33,6 +33,7 @@ In case you have a tri-phase
 1. `_Alarm_ZL f3`: Will report alarm on Intensity for phase 3 of tri-phases setup
 1. `_Alarm_ZL2 01`: Will report Next day color for TEMPO contract, or Mobile Peak for EJP contract
 1. `_Alarm_ZL3 01`: Will report the tarif of the day
+
 ## IMPORTANT (for now)
 
 In case you are in BASE or EJP contract, and you decide to remove some of the widgets which are not used actually, you can. But if later on you move from BASE to TEMPO contract , unfortunatly the removed widgets won't be created, and you will have to start from scratch ( removeing all widgets and redoing the pairing)
