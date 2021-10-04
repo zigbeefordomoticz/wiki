@@ -92,28 +92,11 @@ Se référer à la page [Installer DomoticZ sur un NAS Synology avec Docker](Inf
 
 ### 4.C - Procédure
 
-##### 4.C.1 - Python
-
-Afin de fonctionner, le plugin a besoin de python et celui-ci n'est pas inclus dans l'Image DomoticZ.
-
-* Sur la page Détails du Conteneur DomoticZ, aller dans l'onglet Terminal.
+Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/plugin`
 
 * Créer un nouveau terminal :
 ![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal.png)
 
-* Entrer les commandes suivantes et valider par 'Y' si nécessaire:
-```
-apt update
-apt install curl
-apt install python
-apt install python-requests
-```
-
-![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal_2.png)
-
-#### 4.C.2 - Installation du plugin ZiGate
-
-Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/plugin`
 
 * Dans le terminal, lancer les commandes :
 
