@@ -84,11 +84,14 @@ En fonction du modèle de zigate, le driver USB n'est pas le même.
 * Pour la v+, il faut le fichier __ftdi_sio.ko__, à partir de DSM7.0, celui-ci est déjà présent.
 
 
-Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en remplaçant xxxx.ko avec le fichier correspondant à votre modèle de clé :
+Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en utilisant la commande avec le fichier correspondant à votre modèle de clé :
 
 ```
 sudo insmod /lib/modules/usbserial.ko
+
 sudo insmod /lib/modules/cp210x.ko
+OR
+sudo insmod /lib/modules/ftdi_sio.ko
 ````
 
 Pour que les drivers soient chargés au démarage du NAS, vous pouvez ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
