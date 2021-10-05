@@ -4,7 +4,7 @@ Ce tutoriel explique comment installer DomoticZ et le plugin avec Docker sur un 
 
 C'est un pré-requis à l'installation du plugin sous Docker [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
 
-## Avant propos
+# Avant propos
 Ce tutoriel suppose que Docker est déjà installé sur votre NAS (Centre de paquets)
 
 S'il s'agit d'une migration, vous devez :
@@ -13,9 +13,8 @@ S'il s'agit d'une migration, vous devez :
 * Copier et sauvegarder le contenu du dossier Data/ du plugin
 
 
-Si besoin, les drivers pour la ZiGate sont disponibles sur le site [jadahl.com](http://www.jadahl.com/)
 
-## Installation de DomoticZ
+# Installation de DomoticZ
 
 Lancer Docker, vous arrivez sur la Vue d'ensemble.
 Cliquer sur Registre :
@@ -78,3 +77,44 @@ Un dossier plugins est maintenant créé dans le répertoire __docker/domoticz__
 
 
 Vous pouvez continuer l'installation du plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
+
+# Installation des drivers USB
+En fonction du modèle de zigate, le driver USB n'est pas le même.
+* Pour la première version, il faut le fichier __cp210x.ko__, on le trouve sur le de [jadahl.com](http://www.jadahl.com/). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have). Il faudra ensuite mettre le fichier dans le repertoire /lib/modules.
+* Pour la v+, il faut le fichier __ftdi_sio.ko__, à partir de DSM7.0, celui-ci est déjà présent.
+
+
+Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en remplaçant xxxx.ko avec le fichier correspondant à votre modèle de clé :
+
+```
+sudo insmod /lib/modules/usbserial.ko
+sudo insmod /lib/modules/cp210x.ko
+````
+
+Pour que les drivers soient chargés au démarage du NAS, vous pouvez ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
+
+Supprimer la ligne dont vous n'avez pas besoin (cp210x.ko ou ftdi_sio.ko).
+
+```
+#!/bin/sh
+case $1 in
+  start)
+    insmod /lib/modules/usbserial.ko > /dev/null 2>&1
+    insmod /lib/modules/cp210x.ko > /dev/null 2>&1
+    insmod /lib/modules/ftdi_sio.ko > /dev/null 2>&1
+    ;;
+  stop)
+    exit 0
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+```
+
+et de le rendre exécutable :
+```
+chmod +x /usr/local/etc/rc.d/start-usb-drivers.sh
+```
+
+(Merci Jadahl)
