@@ -8,7 +8,7 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 * 1 - [Installation via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
 * 3 - [Installation sur NAS Synology avec Jadahl](#3---installation-sur-nas-synology-avec-jadahl) Plus à jour > préférer Docker
-* 4 - [Installation sur Docker](#4---installation-sur-docker)
+* 4 - [Installation sur NAS Synology avec Docker](#4---installation-sur-nas-synology-avec-docker)
 * 5 - [Installation sous Windows 10](#5---installation-sous-windows-10)
 * 6 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Raspbian](#6---installation-dune-pizigate-rpi3b-sous-linux-avec-raspbian)
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
@@ -77,7 +77,7 @@ Les informations concernant l’installation sur NAS Synology fonctionnent sous 
 
 
 ------------
-## 4 - Installation sur Docker
+## 4 - Installation sur NAS Synology avec Docker
 
 ### 4.A - Avant propos
 
