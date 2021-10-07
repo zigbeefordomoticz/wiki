@@ -17,12 +17,12 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 | ------------ | ------------------ | ----------- |
 | __Nom__                  | Renseigner un Nom à la ZiGate  | Si vous utiliser plusieurs ZiGate, vous aurez besoin de plusieurs instances du matériel ZiGate et le nom permettra de les identifier.<br/><br/>Il est conseillé de ne pas mettre d'espace ou de caractère spécial dans le nom du plugin. Ce nom peut être utiliser dans une URL et un espace ou des caractères spéciaux peuvent générer des problèmes. |
 | __Type__                 | Sélectionner `ZiGate plugin` | Si ZiGate plugin n'apparait pas en bas de la liste, c'est que le plugin n'est pas correctement installé.
-| ZiGate Model         | Choisir entre les différents modèles :<br/> - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2) |
-| ZiGate Communication         | Choisir entre les différents mode de communication :<br/>-  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi)<br/>- Aucun |
-| __IP__                   | Renseigner l'IP de la ZiGate<br/>Pour le mode TCPIP uniquement. | Laisser 0.0.0.0 pour les autres modes |
-| __Port__                 | Renseigner le Port de la ZiGate (9999 par défaut)<br/>Pour le mode TCPIP uniquement| Laisser 9999 pour les autres modes |
+| ZiGate Model         | Sélectionner le modèle de ZiGate | - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2)|
+| ZiGate Communication         | Sélectionner mode de communication | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi ou ethernet)<br/>- Aucun|
+| __IP__                   | Renseigner l'IP de la ZiGate | Pour le mode TCPIP uniquement<br/>Laisser 0.0.0.0 pour les autres modes |
+| __Port__                 | Renseigner le Port de la ZiGate (9999 par défaut)| Pour le mode TCPIP uniquement<br/>Laisser 9999 pour les autres modes |
 | __Port série__           | Sélectionner le port USB sur lequel est branché la ZiGate | Penser à fixer le port de vos équipements usb [Méthode persistent USB](https://easydomoticz.com/mon-premier-peripherique-z-wave-2)|
-| __Initialize ZiGate (Erase Memory)__ `Erase PDM` | Pour initialiser la ZiGate avec les paramètres du plugin (False par défaut). <br/>A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM). | __ATTENTION :__ L'activation va effacer toutes des informations d'appairage de la ZiGate. Pour activer, passer à True et redémarrer le plugin |
+| __Initialize ZiGate (Erase Memory)__ `Erase PDM` | Sélectionner True pour initialiser la ZiGate avec les paramètres du plugin (False par défaut). <br/>A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM). | __ATTENTION :__ L'activation va effacer toutes des informations d'appairage de la ZiGate.<br/> Redémarrer le plugin pour lancer l'initialisation. Vérifier que le paramètre est à l'état False après le redémarrage. |
 | __Port for Web Admin GUI__| Renseigner le port pour accéder à l'administration web du plugin (9440 par défaut). | A modifier en cas d'utilisation de plusieurs instances du plugin. |
 | __Verbors and Debuging__ | Sélectionner le niveau du log du plugin (Aucun par défaut) |
 
