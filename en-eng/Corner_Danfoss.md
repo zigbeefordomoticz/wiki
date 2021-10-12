@@ -36,9 +36,9 @@ You will set the device parameter of the 3 eTRV to :  `{ "DanfossRoom": 1 , "Dan
 | 1 x Lumi Weather ( Temp, Humi, Baro ) for Room 1     |  `{ "DanfossRoom": 1 }`                          |
 | 3 x eTRV for Room 1                                  | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
 | 1 Philips Motion for Room 2                          | `{ "DanfossRoom": 2 }`                           |
-| 1 eTRV for Room 2                                    | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
+| 1 eTRV for Room 2                                    | `{ "DanfossRoom": 2 , "DanfossRoomFreq": 1800 }` |
 | 1 Frient Motion for Room 3                           | `{ "DanfossRoom": 3 }`                           |
-| 2 eTRV for Room 3                                    | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
+| 2 eTRV for Room 3                                    | `{ "DanfossRoom": 3 , "DanfossRoomFreq": 1800 }` |
 
 You can refer to [How To Device Parameters](../en-eng/HowTo_Device-parameters.md)
 
