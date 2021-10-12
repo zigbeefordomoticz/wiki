@@ -26,18 +26,18 @@ Two device parameters have been introduced:
 * 1 x Lumi Weather ( Temp, Humi, Baro )
 * 3 x eTRV
 
-You will set the device parameter of Lumi Weather to :  `{ "DanfosseRoom": 1 }` which will tell the plugin that the Lumi Weather is in Room #1
-You will set the device parameter of the 3 eTRV to :  `{ "DanfosseRoom": 1 , "DanfossRoomFreq": 1800 }` which will tel the plugin that each of the 3 eTRVs will receive the temperature from the Lumi Weater (and not from the eTRV local temp sensor). This will be refreshed every 30 minutes.
+You will set the device parameter of Lumi Weather to :  `{ "DanfossRoom": 1 }` which will tell the plugin that the Lumi Weather is in Room #1
+You will set the device parameter of the 3 eTRV to :  `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` which will tel the plugin that each of the 3 eTRVs will receive the temperature from the Lumi Weater (and not from the eTRV local temp sensor). This will be refreshed every 30 minutes.
 
 #### Exemple 2: 3 room  with the following zigbee devices
 
 | Devices                                              | Device Parameter to be use                        |
 | -------                                              | --------------------------                        |
-| 1 x Lumi Weather ( Temp, Humi, Baro ) for Room 1     |  `{ "DanfosseRoom": 1 }`                          |
-| 3 x eTRV for Room 1                                  | `{ "DanfosseRoom": 1 , "DanfossRoomFreq": 1800 }` |
-| 1 Philips Motion for Room 2                          | `{ "DanfosseRoom": 2 }`                           |
-| 1 eTRV for Room 2                                    | `{ "DanfosseRoom": 1 , "DanfossRoomFreq": 1800 }` |
-| 1 Frient Motion for Room 3                           | `{ "DanfosseRoom": 3 }`                           |
-| 2 eTRV for Room 3                                    | `{ "DanfosseRoom": 1 , "DanfossRoomFreq": 1800 }` |
+| 1 x Lumi Weather ( Temp, Humi, Baro ) for Room 1     |  `{ "DanfossRoom": 1 }`                          |
+| 3 x eTRV for Room 1                                  | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
+| 1 Philips Motion for Room 2                          | `{ "DanfossRoom": 2 }`                           |
+| 1 eTRV for Room 2                                    | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
+| 1 Frient Motion for Room 3                           | `{ "DanfossRoom": 3 }`                           |
+| 2 eTRV for Room 3                                    | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
 
 You can refer to [How To Device Parameters](../HowTo_Device-parameters.md)
