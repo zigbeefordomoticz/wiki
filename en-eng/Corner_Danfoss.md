@@ -40,4 +40,4 @@ You will set the device parameter of the 3 eTRV to :  `{ "DanfossRoom": 1 , "Dan
 | 1 Frient Motion for Room 3                           | `{ "DanfossRoom": 3 }`                           |
 | 2 eTRV for Room 3                                    | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
 
-You can refer to [How To Device Parameters](../HowTo_Device-parameters.md)
+You can refer to [How To Device Parameters](../en-eng/HowTo_Device-parameters.md)
