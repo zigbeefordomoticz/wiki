@@ -41,3 +41,9 @@ You will set the device parameter of the 3 eTRV to :  `{ "DanfossRoom": 1 , "Dan
 | 2 eTRV for Room 3                                    | `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` |
 
 You can refer to [How To Device Parameters](../en-eng/HowTo_Device-parameters.md)
+
+## ATTENTION
+
+* If you put 2 Temperature sensors in the same room, what is going to happen is impredictable and not supported!! You have be warnned, so check your configuration.
+* While using string could work with the room number we highly recommend the usage of digit/number
+* If you do not use this feature, make sure to leave "DanfossRoomFreq": 0
