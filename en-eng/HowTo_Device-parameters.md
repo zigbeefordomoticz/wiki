@@ -19,6 +19,10 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | Alarm3         | Configuration of Alarm3. you have to specify Duration Volume, Melody | Tuya Siren TS0601 |
 | Alarm4         | Configuration of Alarm4. you have to specify Duration Volume, Melody | Tuya Siren TS0601 |
 | Alarm5         | Configuration of Alarm5. you have to specify Duration Volume, Melody | Tuya Siren TS0601 |
+| alarmBothCode  | Allow to bypass the default code for Siren+Strobe command | All Sirens/Alarms using IAS Warning |
+| alarmSirenCode | Allow to bypass the default code for Siren command | All Sirens/Alarms using IAS Warning |
+| alarmStopCode  | Allow to bypass the default code for Stop command | All Sirens/Alarms using IAS Warning |
+| alarmStrobeCode | Allow to bypass the default code for Strobe command | All Sirens/Alarms using IAS Warning |
 | Duration       | Applicable only inside the Alarm definition, it will configure the duration of alarm in Sec | Tuya Siren TS0601 |
 | Volume         | Applicable only inside the Alarm definition, it will configure the Volume of alarm 0,1,2 (High, Medium, Low) | Tuya Siren TS0601 |
 | Melody         | Applicable only inside the Alarm definition, it will configure the Melody ( from 1 to 15 ) 0 - doorbell, 1 - fur elise, 2 - big ben, 3 - ring ring, 4 - lone ranger, 5 - turkish march, 6 - high pitch siren, 7 - red alert, 8 - cricket, 9 - beep beep, 10 - dogs, 11 - police, 12 - grandfather clock, 13 - phone ring, 14 - firetruck| Tuya Siren TS0601 |
