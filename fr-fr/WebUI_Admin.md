@@ -28,6 +28,8 @@ Elle permet :
 * D'ajouter un objet avec l'assistant
 * D'activer le mode appairage de la ZiGate (permanent ou 4 minutes)
 * D'ajouter un objet via un routeur particulier
+* De faire un reset d'un objets
+* De recréer les dispositifs dans DomoticZ
 
 Se reporter au tutoriel [Ajouter un nouvel objet](Tuto_Appairage-objet.md) pour plus d'informations.
 

@@ -120,3 +120,21 @@ Par défaut, la ZiGate va déterminer le meilleur chemin pour communiquer avec l
 * Cliquer sur le bouton __4 minutes__ pour lancer le mode d'appairage.
 
 Le fonctionnement est identique au paragraphe précédent hormis que la ZiGate cherchera à appairer le nouvel objet sur le routeur choisi.
+
+## Gestion des Dispositifs
+
+Lors de l'appairage, le plugin créé des dispositifs dans DomoticZ correspondant aux différents clusters d'un objet. Ces dispositifs peuvent être supprimés dans DomoticZ pour s'éloigner de la limite de 255 des plugins DomoticZ, mais __ATTENTION :__ un dispositif supprimé ne pourra pas être récupérer sans un reset complet de l'objet
+Prenons l'exemple d'un capteur de température Aqara avec 5 dispositifs : Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression. On décide de ne conserver que les deux premiers et on supprime les 3 autres. Il nous reste Température et Hygrométrie.
+Quelques temps plus tard, on souhaite retrouver le dispositif Pression.
+
+Deux possibilités :
+
+* Faire un reset complet de l'objet en supprimant les deux derniers dispositifs (l'objet sera ainsi supprimé du plugin) et refaire un appairage pour recréer les 5 dispositifs.
+__Cette possibilité fait perdre l'historique des anciens dispositifs__.
+
+* Utiliser la fonction __Re-création des dispositifs DomoticZ__
+
+Cette fonction disponible dans la section [Admin > Appairage](WebUI_Admin.md#appairage) va créer à nouveau tous les dispositifs d'un objet.
+Dans l'exemple précédent avec le capteur Aqara, il y aura  7 dispositifs : les 2 anciens Température et Hygrométrie et les 5 recréés Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression. __Il y a donc des doublons__. C'est à vous, depuis DomoticZ, de gérer ses doublons en supprimant les dispositifs que vous ne souhaitez pas conserver.
+
+__ATTENTION :__ La re-création de dispositif peut très vite vous faire arriver à la limite de 255 dispositifs par plugin.
