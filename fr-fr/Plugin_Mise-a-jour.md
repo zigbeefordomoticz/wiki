@@ -115,3 +115,8 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 __Attention aux compatibilités avec DomoticZ lors du changement de branche.__
 
 [Poursuivre sur la mise à jour du plugin](Home.md#mises-%C3%A0-jour-du-plugin)
+
+
+### Revenir à une version précédente
+
+En cas de gros soucis avec une nouvelle version, il est possible de revenir en arrière en utilisant la commande `git checkout beta-5.2.XXX` en remplaçant __beta__ et __5.2.XXX__ par les valeurs souhaitées.
