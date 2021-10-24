@@ -138,3 +138,7 @@ Cette fonction disponible dans la section [Admin > Appairage](WebUI_Admin.md#app
 Dans l'exemple précédent avec le capteur Aqara, il y aura  7 dispositifs : les 2 anciens Température et Hygrométrie et les 5 recréés Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression. __Il y a donc des doublons__. C'est à vous, depuis DomoticZ, de gérer ses doublons en supprimant les dispositifs que vous ne souhaitez pas conserver.
 
 __ATTENTION :__ La re-création de dispositif peut très vite vous faire arriver à la limite de 255 dispositifs par plugin.
+
+## Reset d'un objet
+
+Si un objet en mis dans le mode Reset, celui-ci sera réinitialisé au prochain appairage : tout sera fait comme si c'était le tout premier appairage hormis pour les dispositifs qui sont conservés. 
