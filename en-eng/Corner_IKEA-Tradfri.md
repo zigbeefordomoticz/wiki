@@ -84,3 +84,27 @@ From that , every time the motion sensor will turn on the light, you'll get as w
 You might want to align the Time setting of the Motion sensor with the Reset Time of the Motion widget in Domoticz
 
 [More info](Corner_Ikea-Tradfri-Motion.md)
+
+## How to use Fyrtur connected roller blind
+
+When IKEA Fyrtur blind is purchased, it comes in package which contains blind, wireless remote controller and wireless repeater.
+All three are connected together out-of-the box, and remote controller can be used to control blind.
+Additional blind(s) can be purchased, and additional blind(s) can be added to remote controller by following IKEA instructions.
+
+Currently, if blind is paired with Zigate, it is hard if not impossible to get blind remote to work with blind directly by grouping them together.
+You can factory reset blind/remote/repeater, but only pairing all three together you get the out-of-the box functionality back.
+
+Using blind, blind remote and repeater paired with Zigate in Domototicz is accomplished with following:
+
+   1. put Zigate/Domoticz into pairing mode and factory reset repeater. 
+   * Repeater will pair with Zigate and act as general purpose Zigbee repeater in Zigate network.
+   2. put Zigate/Domoticz into pairing mode and factory reset blind (long press on both blind buttons).  
+   * Blind will pair with Zigate, and Domoticz widget is created.  Widget can be used to control blind. 
+   3. put Zigate/Domoticz into pairing mode and factory reset blind remote (clicking remote pairing button rapidly four times).
+   * Befor pairing make sure "Create Group 0000" is enabled in Zigate advanced settings.  
+   * Repeater will pair with Zigate, and Domoticz widget is created.  Widget can be used to receive remote button presses. 
+
+If grouping remote and blind is tried (long press on remote pairing button), it will most likely fail one way or another.  
+Repeater will probably move away to another group, which is not visible to Zigate.  Factory reset and pairing remote to Zigate moves it back to "Group 0000".
+
+At current state of development, remote can be used by receiving the button presses with Domoticz, and using Domoticz scripting to control blind with blind widget.
