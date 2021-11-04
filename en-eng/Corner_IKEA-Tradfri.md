@@ -91,8 +91,7 @@ When IKEA Fyrtur blind is purchased, it comes in package which contains blind, w
 All three are connected together out-of-the box, and remote controller can be used to control blind.
 Additional blind(s) can be purchased, and additional blind(s) can be added to remote controller by following IKEA instructions.
 
-Currently, if blind is paired with Zigate, it is hard if not impossible to get blind remote to work with blind directly by grouping them together.
-You can factory reset blind/remote/repeater, but only pairing all three together you get the out-of-the box functionality back.
+You can factory reset blind/remote/repeater, and pairing all three together you get the out-of-the box functionality back.
 
 Using blind, blind remote and repeater paired with Zigate in Domototicz is accomplished with following:
 
@@ -100,11 +99,25 @@ Using blind, blind remote and repeater paired with Zigate in Domototicz is accom
    * Repeater will pair with Zigate and act as general purpose Zigbee repeater in Zigate network.
    2. put Zigate/Domoticz into pairing mode and factory reset blind (long press on both blind buttons).  
    * Blind will pair with Zigate, and Domoticz widget is created.  Widget can be used to control blind. 
-   3. put Zigate/Domoticz into pairing mode and factory reset blind remote (clicking remote pairing button rapidly four times).
+   3. put Zigate/Domoticz into pairing mode and factory reset blind remote (clicking remote's pairing button rapidly four times).
    * Befor pairing make sure "Create Group 0000" is enabled in Zigate advanced settings.  
-   * Repeater will pair with Zigate, and Domoticz widget is created.  Widget can be used to receive remote button presses. 
+   * Repeater will pair with Zigate, and Domoticz widget is created.  Widget can be used to receive remote's button presses. 
 
-If grouping remote and blind is tried (long press on remote pairing button), it will most likely fail one way or another.  
-Repeater will probably move away to another group, which is not visible to Zigate.  Factory reset and pairing remote to Zigate moves it back to "Group 0000".
+After steps 1-3 remote can be used by receiving the button presses with Domoticz, and using Domoticz scripting to control blind with blind widget.
 
-At current state of development, remote can be used by receiving the button presses with Domoticz, and using Domoticz scripting to control blind with blind widget.
+Using following additional steps we can add Zigate group containing blind(s) and remote.  Remote will then control blind directly, and Domoticz scripting is not necessary
+
+   4. In Zigate Web UI Management->Group Management, press "Add New Group" and select blind(s) into group. Press "Validate" and group is created.  Refresh Web UI page to see created group, and note "Group ID"
+   * Domoticz group widged is also created and can be added in Domoticz device management.  
+   5. Use Zigate REST api with following command to first un-bind remote grouping and then bind remote into group created in Zigate
+   * Find out remote IEEE address from Web UI ->Device Management.  We will use IEEE address 680ae2fffeaae6cb in this example
+   * unbind remote through REST API, for example using curl: 
+   *     curl -X PUT -d '{"sourceIeee":"680ae2fffeaae6cb", "sourceEp": "01", "groupId": "0000", "cluster": "0102"}' http://127.0.0.1:9440/rest-zigate/1/unbinding-group
+   * bind remote to group containg blind(s), using "Group ID" from step.  We will use group id 0002 in this example, again using curl and REST api
+   *     curl -X PUT -d '{"sourceIeee":"680ae2fffeaae6cb", "sourceEp": "01", "groupId": "0002", "cluster": "0102"}' http://127.0.0.1:9440/rest-zigate/1/binding-group
+   * remote will not appear in Web UI Group Management page, but if everything went well it will control the blind(s) in group. 
+   
+Test that remote is controlling blind(s).  Test that blind Domoticz widget is controlling blind.
+If you need to read remote button presses from Domotiz widged of remote, add Zigate into same group with blinds from Web UI group management
+
+If you need to re-do grouping of remote, it is best to remove pairing to Zigate (remove Domoticz widget) and do steps 2. and 5. again.
