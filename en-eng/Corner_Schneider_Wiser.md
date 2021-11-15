@@ -170,7 +170,7 @@ In short your extended PANID must looks like : 0x----484504015e10, where the 1st
 | 28766	| 705E	| referenceFrequency|
 | 57600	| E100	| MMSSensorType|
 | 57632	| E120	| MMSAlarmsMask|
-| 57856	| E200	| ctStatusRegister|
+| 57856	| E200	| ctStatusRegister  This is for BMS (first bit  0 == Not active, first bit 1 == Active|
 | 57857	| E201	| ctPowerConfiguration|
 | 57858	| E202	| ctCalibrationMultiplier|
 
