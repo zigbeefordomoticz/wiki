@@ -64,3 +64,4 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | eTRVExerciseDay | 0-6: (Sun-Sat) The day to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
 | eTRVExerciseTime | Minutes after midnight to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
 | vibrationAqarasensitivity | set the Aqara vibration sensibility level low, medium are high are the correct values |
+| WiserroomNumber | Room Number association between eTRV thermostat and external temperature sensor | Schneider Wiser iTRV |
