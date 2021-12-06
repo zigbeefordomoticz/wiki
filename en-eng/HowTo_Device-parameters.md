@@ -55,7 +55,7 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | TuyaPing | if enable (1), it will simulate the Tuya Ping done every 5s by the Tuya GW| Tuya routers |
 | TuyaEnergyChildLock | For Tuya DIN Energy Switch, allow to enable Child Lock ( not tested )| Tuya DIN Energy switch |
 | Countdown | when switching On or Off, it will use the countdown. If set to __n__, it will wait __n__ secondes before switching | Walkaround for Tuya DIN Energy |
-| WiserRoomNumber | Allow to define a room number per Wiser Thermostat, which monitor the heating demand of Actionners belongings to the same room. So you need to define the WiserRoomNumber parameter with the same room number for each actionners and the thermostat per room | Wiser Thermostat and any Actionners |
+| WiserRoomNumber | Allow to define a room number per Wiser Thermostat, which monitor the heating demand of Actionners belongings to the same room. So you need to define the WiserRoomNumber parameter with the same room number for each actionners and the thermostat per room (Room Number association between eTRV thermostat and external temperature sensor)| Wiser Thermostat and any Actionners |
 | BatteryPollingFreq | Polling frequency for getting Battery level | Needed for SChneider Wiser Thermostat RTS |
 | DanfossRoom | Room Number association between eTRV thermostat and external temperature sensor | Danfoss eTRV thermostat and any type of Temperature Sensor  |
 | DanfossRoomFreq | Polling Frequency in second, 0 disable. Indicates the frequency when refreshing the external temperature. Must be above 1800 seconds | Danfoss eTRV thermostat |
@@ -64,4 +64,3 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | eTRVExerciseDay | 0-6: (Sun-Sat) The day to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
 | eTRVExerciseTime | Minutes after midnight to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
 | vibrationAqarasensitivity | set the Aqara vibration sensibility level low, medium are high are the correct values |
-| WiserroomNumber | Room Number association between eTRV thermostat and external temperature sensor | Schneider Wiser iTRV |
