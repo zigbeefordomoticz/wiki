@@ -107,6 +107,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
 * [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md)
+* [Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)](Tuto_python3.8-sur-rasperrypi-OS-11.md)
 
 ## Liens utiles
 
