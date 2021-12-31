@@ -30,7 +30,7 @@ En suivant cette procédure, qui ne touche ni à DomoticZ, ni au Plugin, les dis
 
 ## Procédure
 
-1. Être à jour sur la branche stable (stableX) du Plugin.
+1. Être à jour sur la dernière branche stable (stableX) du Plugin.
 
 2. Être de préférence sur une version 2021.1 ou supérieure de DomoticZ.
 
