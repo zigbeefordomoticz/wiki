@@ -2,6 +2,7 @@
 
 # Info - Généralités sur le wiki
 
+
 Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisation du plugin.
 
 **Ce wiki en français a été traduit à partir du [wiki anglais](../en-eng/home.md) :** nous avons essayé de faire de notre mieux, mais si des choses ne sont pas claires ou approximatives, ne pas hésiter à nous faire un retour. Merci d'avance.
