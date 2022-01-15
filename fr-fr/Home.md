@@ -1,6 +1,6 @@
 # Bienvenue sur le wiki du plugin ZigBeeforDomoticZ pour DomoticZ !
 
-![Logo](../Images/zigbee4domoticz-logo.jpg)
+>!![Logo](../Images/zigbee4domoticz-logo.jpg)
 
 <a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
