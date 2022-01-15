@@ -1,4 +1,4 @@
-# Installation du plugin ZiGate
+# Installation du plugin Domoticz-Zigbee
 
 Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
@@ -22,6 +22,8 @@ __Info :__ Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethern
 ------------
 
 ## 1 - Installation du plugin via Python Plugin Manager sous Linux
+
+__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
 
 Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md).
 
@@ -72,6 +74,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 ------------
 ## 3 - Installation sur NAS Synology avec Jadahl
 
+__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
+
 Cette méthode est uniquement valable pour les systèmes NAS Synology.
 
 __Note :__ Jadahl a arrêté son développement en 2020. La dernière version disponible est DomoticZ Béta 2020.2 for DSM 6.2. Il n'est plus conseillé de l'utiliser pour de nouvelles utilisations puisqu'il n'y aura plus de mises à jour et ce système ne fonctionne plus sur DSM 7. Il est préconisé de passer sous Docker si votre NAS le permet.
@@ -81,6 +85,8 @@ Les informations concernant l’installation sur NAS Synology fonctionnent sous 
 
 ------------
 ## 4 - Installation sur NAS Synology avec Docker
+
+__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
 
 ### 4.A - Avant propos
 
@@ -121,6 +127,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
 ## 5 - Installation sous Windows 10
+
+__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
 
 Cette méthode est uniquement valable pour les systèmes Windows 10.
 
