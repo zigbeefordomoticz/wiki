@@ -23,7 +23,7 @@ Explication des termes utilisés sur ce Wiki :
 
 | Terme          | Signification |
 | -------------- | ------------- |
-| Coordinateur   | Objet connecté au serveur qui initie le réseau ZigBee : ZiGates, Texas Instruments avec firmware znp, etc ... |
+| Coordinateur   | Objet qui initie le réseau ZigBee : ZiGates, Texas Instruments avec firmware znp, etc ... |
 | Objet          | L'objet physique : sonde, bouton, ampoule, prise, volet, sirène, etc... |
 | Routeur        | Un objet branché généralement sur le secteur qui peut recevoir des commandes : une ampoule, une prise, un volet, etc... Il joue un rôle de routeur/répéteur dans le maillage du réseau ZigBee |
 | Objet terminal | Un objet généralement sur batterie qui envoi des informations : une sonde, un bouton |
