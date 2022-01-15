@@ -2,6 +2,11 @@
 
 Une application en python permet de visualiser en temps réel l'utilisation des fréquences. 
 
+## Compatibilité avec les coordinateurs
+
+* Texas Intruments avec un firmware znp = Oui
+* ZiGate = Non
+
 ## Méthode
 
 * __Arréter le plugin__
@@ -12,8 +17,10 @@ Une application en python permet de visualiser en temps réel l'utilisation des 
 
 Pour arréter le défilement, faire : __Ctrl+C__
 
-Le résultat s'affiche sous cette forme
+Le résultat s'affiche sous cette forme :
 
 ![Network Toplogy](../Images/real-time-topology.png)
+
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 __Note :__ Les meilleurs valeurs sont les plus faibles.

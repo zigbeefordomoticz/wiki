@@ -1,4 +1,4 @@
-# DomoticZ ZiGate plugin Wiki
+# ZigBeeforDomoticZ plugin Wiki
 
 
 <table width="200" border="0" cellpadding="2">
@@ -18,7 +18,7 @@
 
 # About
 
-This repository aim to centralize all Domoticz-Zigate documentation.
+This repository aim to centralize all ZigBeeforDomoticZ plugin's documentation.
 
 In particular you can find the various version of the plugin Wiki.
 
@@ -26,4 +26,4 @@ If you would like to translate a part or the totality of the Wiki into an other 
 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism.
 
-The Domoticz-Zigate plugin code is available at https://github.com/pipiche38/Domoticz-Zigate
+The ZigBeeforDomoticZ plugin code is available at https://github.com/zigbeefordomoticz/Domoticz-Zigbee
