@@ -2,6 +2,11 @@
 
 Une application en python permet de visualiser en temps réel l'utilisation des fréquences. 
 
+## Compatibilité avec les coordinateurs
+
+* Texas avec un firmware znp = Oui
+* ZiGate = Non
+
 ## Méthode
 
 * __Arréter le plugin__
