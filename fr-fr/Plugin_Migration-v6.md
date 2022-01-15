@@ -22,6 +22,8 @@ Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
 Le `git pull` n'est plus suffisant, il faut maintenat faire la commande `git pull --recurse-submodules`
 
+Redémarrer DomoticZ
+
 ## Concernant la phase de développement
 
 Il y a 4 modèles de coordinateurs possibiles :
