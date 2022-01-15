@@ -1,3 +1,5 @@
+<a href="#"><img align="left" width="100" height="100" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # ZigBeeforDomoticZ plugin Wiki
 
 
