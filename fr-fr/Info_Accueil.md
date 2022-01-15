@@ -1,4 +1,4 @@
-<a href=".."><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+<a href="#"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
 
 # Info - Généralités sur le wiki
 
