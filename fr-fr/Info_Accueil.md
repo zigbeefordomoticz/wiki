@@ -1,3 +1,5 @@
+<img align="left" width="100" height="100" src="../Images/zigbee4domoticz-logo.png" alt="Logo">
+
 # Info - Généralités sur le wiki
 
 Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisation du plugin.
