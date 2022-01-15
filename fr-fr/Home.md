@@ -1,5 +1,4 @@
 <img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo">
-
 # Bienvenue sur le wiki du plugin ZigBeeforDomoticZ pour DomoticZ !
 
 
