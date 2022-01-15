@@ -4,7 +4,7 @@ Une application en python permet de visualiser en temps réel l'utilisation des 
 
 ## Compatibilité avec les coordinateurs
 
-* Texas avec un firmware znp = Oui
+* Texas Intruments avec un firmware znp = Oui
 * ZiGate = Non
 
 ## Méthode
