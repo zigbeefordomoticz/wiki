@@ -17,6 +17,11 @@ Le temps de la phase de développement, il faut passer sur la branche zigpy : `g
 
 Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
+
+## Mise à jour du plugin
+
+Le `git pull` n'est plus suffisant, il faut maintenat faire la commande `git pull --recurse-submodules`
+
 ## Concernant la phase de développement
 
 Il y a 4 modèles de coordinateurs possibiles :
