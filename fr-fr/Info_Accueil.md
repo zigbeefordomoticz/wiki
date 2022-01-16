@@ -2,6 +2,7 @@
 
 # Info - Généralités sur le wiki
 
+</br>
 
 Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisation du plugin.
 
