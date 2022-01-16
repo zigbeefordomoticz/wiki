@@ -2,6 +2,7 @@
 
 # ZigBeeforDomoticZ plugin Wiki
 
+</br>
 
 <table width="200" border="0" cellpadding="2">
 <tr>
