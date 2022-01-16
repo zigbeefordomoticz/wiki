@@ -11,7 +11,7 @@ Il y a deux limitations possible au nombre d'objet gérer par une ZiGate. C'est 
 
 ### Les limitations des ZiGates
 
-Les ZiGates ont une limite d'objets qu'elles peuvent gérer (voir les [caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md#nombre-dobjet-limit%C3%A9))
+Les ZiGates ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](Info_Caracteristiques-des-coordinateurs.md#nombre-dobjet-limit%C3%A9))
 
 ### La limitation de DomoticZ
 
@@ -141,4 +141,4 @@ __ATTENTION :__ La re-création de dispositif peut très vite vous faire arriver
 
 ## Reset d'un objet
 
-Si un objet en mis dans le mode Reset, celui-ci sera réinitialisé au prochain appairage : tout sera fait comme si c'était le tout premier appairage hormis pour les dispositifs qui sont conservés. 
+Si un objet en mis dans le mode Reset, celui-ci sera réinitialisé au prochain appairage : tout sera fait comme si c'était le tout premier appairage hormis pour les dispositifs qui sont conservés.
