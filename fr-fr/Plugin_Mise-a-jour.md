@@ -7,7 +7,7 @@ Le plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 ### Procédure
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
 * Lancer la commande `git pull`
 
