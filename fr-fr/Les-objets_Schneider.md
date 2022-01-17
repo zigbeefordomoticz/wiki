@@ -1,10 +1,14 @@
+<a href="#"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Les objets de la marque Schneider Wiser
+
+</br>
 
 Certains objets de la marque Schneider ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 
 **Cette page n'est pas une liste des objets compatibles.**
 
-La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
+La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4d.html](https://zigbee.blakadder.com/z4d.html).
 
 ## Renvoi vers le wiki en anglais
 

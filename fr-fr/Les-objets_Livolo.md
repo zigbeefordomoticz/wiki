@@ -4,7 +4,7 @@ Certains objets de la marque Livolo ont besoin d'une configuration particulière
 
 **Cette page n'est pas une liste des objets compatibles.**
 
-La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
+La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4d.html](https://zigbee.blakadder.com/z4d.html).
 
 
 ## Avertissement

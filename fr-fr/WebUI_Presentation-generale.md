@@ -23,9 +23,9 @@ Les différentes pages du plugin s'afficheront ici.
 #### Le pied de page
 
 Il contient de gauche à droite :
-* La date et l'heure du démarrage du plugin ZiGate
-* Les valeurs Rx/m, Tx/m et MaxLoad indiquant la charge de la ZiGate
-* L'état du plugin, normalement il est indiqué __Ready__
+* La date et l'heure du démarrage du plugin ZigBeeForDomoticZ.
+* Les valeurs Rx/m, Tx/m et MaxLoad indiquant la charge de la ZiGate.
+* L'état du plugin, normalement il est indiqué __Ready__.
 * La version du plugin. L'écriture en rouge indique qu'une mise à jour est disponible (valable uniquement pour les branches Stable et Béta).
 * Le firmware de la ZiGate. L'écriture en rouge indique qu'une mise à jour est disponible.
 

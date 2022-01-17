@@ -32,7 +32,7 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZiGate |
+| Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZigBeeForDomoticZ |
 | Activer interrogation des objets | | Désactivé | | Active la fonction Polling |
 | Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour. Cette vérification se fait toutes les 6 heures. __A ne pas activer sur Synology__|
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!*|

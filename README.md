@@ -1,6 +1,6 @@
 <a href="#"><img align="left" width="80" height="80" src="Images/zigbee4domoticz-logo.png" alt="Logo"></a>
 
-# ZigBeeforDomoticZ plugin Wiki
+# ZigBeeForDomoticZ plugin Wiki
 
 </br>
 
@@ -21,7 +21,7 @@
 
 # About
 
-This repository aim to centralize all ZigBeeforDomoticZ plugin's documentation.
+This repository aim to centralize all ZigBeeForDomoticZ plugin's documentation.
 
 In particular you can find the various version of the plugin Wiki.
 
@@ -29,4 +29,4 @@ If you would like to translate a part or the totality of the Wiki into an other 
 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism.
 
-The ZigBeeforDomoticZ plugin code is available at https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+The ZigBeeForDomoticZ plugin code is available at https://github.com/zigbeefordomoticz/Domoticz-Zigbee

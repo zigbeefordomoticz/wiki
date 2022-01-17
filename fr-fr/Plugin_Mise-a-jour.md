@@ -7,7 +7,7 @@ Le plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 ### Procédure
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
 * Lancer la commande `git pull`
 
@@ -95,7 +95,7 @@ Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau mat�
 ### Connaître sa branche
 
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 * Lancer la commande `git status`
 
 
@@ -103,7 +103,7 @@ Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau mat�
 
 Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZiGate (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 
 * Lancer la commande `git pull`
 

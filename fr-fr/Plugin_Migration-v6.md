@@ -1,6 +1,10 @@
+<a href="#"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Migration du plugin de V5 vers V6
 
-__Note :__ Ces explications sont valables pour une installtion sous linux
+</br>
+
+__Note :__ Ces explications sont valables pour une installation sous Linux.
 
 
 
@@ -20,16 +24,15 @@ Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
 ## Mise à jour du plugin
 
-Le `git pull` n'est plus suffisant, il faut maintenat faire la commande `git pull --recurse-submodules`
+Le `git pull` n'est plus suffisant, il faut maintenant faire la commande `git pull --recurse-submodules`
 
 Redémarrer DomoticZ
 
 ## Concernant la phase de développement
 
-Il y a 4 modèles de coordinateurs possibiles :
+Il y a 4 modèles de coordinateurs possibles :
 
-* ZiGate : aucune modification sur le fontionnement du plugin existant
-* ZiGate + : aucune modification sur le fontionnement du plugin existant
-* ZiGate (via zigpy) : le plugin communique avec la ZiGate avec les librairies zigpy. C'est uniquement expériemental et ne doit pas être utilisé.
-* Texas Instruments ZNP : pour les nouveux coordinateurs
-
+* ZiGate : aucune modification sur le fonctionnement du plugin existant
+* ZiGate + : aucune modification sur le fonctionnement du plugin existant
+* ZiGate (via zigpy) : le plugin communique avec la ZiGate avec les librairies zigpy. C'est uniquement expérimental et ne doit pas être utilisé.
+* Texas Instruments ZNP : pour les nouveaux coordinateurs

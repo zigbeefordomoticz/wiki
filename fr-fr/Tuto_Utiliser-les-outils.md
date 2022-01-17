@@ -35,7 +35,7 @@ API REST : zigate
 
 ### Liste des dispositifs DomoticZ (json)
 
-Cet outil liste tous les dispositifs dans DomoticZ qui sont liés au plugin ZiGate.
+Cet outil liste tous les dispositifs dans DomoticZ qui sont liés au plugin ZigBeeForDomoticZ.
 
 Usage : Développement
 API REST : device
@@ -49,7 +49,7 @@ API REST : zdevice
 
 ### Liste des groupes (json)
 
-Cet outil liste les groupes créé dans le plugin ZiGate.
+Cet outil liste les groupes créé dans le plugin ZigBeeForDomoticZ.
 
 Usage : Débogage
 API REST : zgroup

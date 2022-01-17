@@ -1,4 +1,8 @@
+<a href="#"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Info - ZigBee et Wifi
+
+</br>
 
 ## Configuration
 
@@ -6,10 +10,10 @@ Le canal utilisé pour le réseau ZigBee dans la bande des 2,4 Ghz peut-être co
 
 Les réglages possibles sont :
 
-- Défaut : le plugin choisira un canal entre le 11 et le 26. Il peut varier en fonction des performances
+- Défaut : le plugin choisira un canal entre le 11 et le 26. Il peut varier en fonction des performances.
 - 11 ou 12 ou ... ou 26 : permet de définir un canal fixe
 
-**Pour enregistrer un changement de canal, la ZiGate nécessite un redémarrage logiciel.**
+**Pour enregistrer un changement de canal, les coordinateurs nécessitent un redémarrage logiciel.**
 
 
 ## 1. Sélection des canaux ZigBee et Wifi
@@ -30,7 +34,7 @@ Pour le canal 6, la bande est centrée autour de 2437 MHz et s'étend de 2426 à
 __Une configuration simple :__ régler le canal ZigBee sur 11 et le canal wifi sur 11 également. Les bandes de fréquences ZigBee et Wifi étant décalées, il ne devrait pas y avoir d'interférences.
 
 ## 2. Séparation physique
-Il est recommandé d'avoir une distance de 8m entre votre émetteur wifi (box, routeur, borne, etc...) et le récepteur ZigBee afin de ne pas dégrader les performances.
+Il est recommandé d'avoir une distance de 8m entre votre émetteur wifi (box, routeur, borne, etc...) et le coordinateur ZigBee afin de ne pas dégrader les performances.
 
 ## 3. Un réseau maillé
 
@@ -39,7 +43,7 @@ Le protocole ZigBee offre les avantages d'un réseau maillé autogéré dynamiqu
 ## 4. Choses à savoir
 
 * Le ZigBee est un réseau à faible puissance contrairement au Wifi.
-Il a été noté que les Caméras IP/Wifi étaient capable de perturber le ZigBee lorsqu'elles étaient en streaming, il faudra donc faire attention à l'emplacement des modules ZigBee par rapport aux Wifi et ce même si ils sont sur des canaux bien séparés.
+Il a été noté que les Caméras IP/Wifi étaient capable de perturber le ZigBee lorsqu'elles étaient en streaming, il faudra donc faire attention à l'emplacement des modules ZigBee par rapport aux équipements Wifi et ce même si ils sont sur des canaux bien séparés.
 
 * Beaucoup de problématiques de perte d'objets (déconnexion du réseau) sont très souvent liés à un problème d'interférences ou de densité insuffisante du réseau ZigBee et l'ajout d'objets de type routeurs est souvent très positif.
 
