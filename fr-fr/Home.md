@@ -1,6 +1,6 @@
 <a href="#"><img align="left" width="100" height="100" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
 
-# Bienvenue sur le wiki du plugin ZigBeeforDomoticZ pour DomoticZ !
+# Bienvenue sur le wiki du plugin ZigBeeForDomoticZ pour DomoticZ !
 
 </br>
 
@@ -104,7 +104,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## Informations
 
 * [Les objets compatibles](Info_Accueil.md#presentation)
-* [Les caractéristiques des coordinateurs](Info_Caracteristiques-des-coordinateurs.md)
+* [Les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
