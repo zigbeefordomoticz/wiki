@@ -1,4 +1,8 @@
+<a href="#"><img align="left" width="100" height="100" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Paramétrage du plugin
+
+</br>
 
 Cette étape est la deuxième du processus d'installation du plugin ZigBeeForDomoticZ.
 
