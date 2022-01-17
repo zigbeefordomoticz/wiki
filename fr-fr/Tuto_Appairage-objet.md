@@ -11,7 +11,7 @@ Il y a deux limitations possible au nombre d'objet gérer par une ZiGate. C'est 
 
 ### Les limitations des ZiGates
 
-Les ZiGates ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](Info_Caracteristiques-des-coordinateurs.md#nombre-dobjet-limit%C3%A9))
+Les ZiGates ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md#nombre-dobjet-limit%C3%A9))
 
 ### La limitation de DomoticZ
 
