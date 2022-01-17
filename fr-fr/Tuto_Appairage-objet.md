@@ -1,4 +1,8 @@
-# Tutoriel - Appairer un objet ZigBee avec la ZiGate
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
+# Tutoriel - Appairer un objet ZigBee
+
+</br>
 
 
 ## Introduction
@@ -7,11 +11,11 @@ Ce tutoriel explique comment ajouter un nouvel objet connecté ZigBee dans Domot
 
 ## Les limitations
 
-Il y a deux limitations possible au nombre d'objet gérer par une ZiGate. C'est la première limite atteinte qui est bloquante.
+Il y a deux limitations possible au nombre d'objet gérer par un coordinateur. C'est la première limite atteinte qui est bloquante.
 
-### Les limitations des ZiGates
+### Les limitations des Coordinateurs
 
-Les ZiGates ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md#nombre-dobjet-limit%C3%A9))
+Les Coordinateurs ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md#nombre-dobjet-limit%C3%A9))
 
 ### La limitation de DomoticZ
 
@@ -75,7 +79,7 @@ Il existe plusieurs méthodes :
 
 ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
- La LED bleu de la ZiGate doit clignoter.
+ La LED bleu de la ZiGate doit clignoter. Sur le autres coordinateurs, la led peut s’allumer ou changer de couleur.
 
 * Faire un Reset de l'objet pour le passer en mode appairage. *Se référer à la documentation de l'objet si nécessaire.*
 
@@ -94,14 +98,14 @@ Si rien ne se produit :
 ------------------------------------------------      
 ### 2. Appairage sur une durée
 
-Cette méthode permettra de passer la ZiGate en mode appairage pendant une durée. Les informations d'appairage seront affichées dans la logs de DomoticZ.
-*Conseil :* Filtrer les logs afin de ne garder que les lignes concernant la ZiGate.
+Cette méthode permettra de passer le coordinateur en mode appairage pendant une durée. Les informations d'appairage seront affichées dans la logs de DomoticZ.
+*Conseil :* Filtrer les logs afin de ne garder que les lignes concernant le plugin.
 
 * Aller dans le module __Appairage sur une durée__.
 
 * Cliquer le bouton __4 minutes__ ou __permanent__ pour choisir la durée du mode appairage souhaitée.
 
- La LED bleu de la ZiGate doit clignoter.
+ La LED bleu de la ZiGate doit clignoter. Sur le autres coordinateurs, la led peut s’allumer ou changer de couleur.
 
  * Cliquer le bouton __Stop__ pour arrêter le mode appairage.
 
@@ -111,7 +115,7 @@ Cette méthode permettra de passer la ZiGate en mode appairage pendant une duré
 ------------------------------------------------      
 ### 3. Appairage sur un routeur spécifique
 
-Par défaut, la ZiGate va déterminer le meilleur chemin pour communiquer avec les objets. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouvel objet.
+Par défaut, le coordinateur va déterminer le meilleur chemin pour communiquer avec les objets. Il est cependant possible de spécifier un routeur sur lequel doit s'appairer le nouvel objet.
 
 * Aller dans le module __Appairage sur un routeur spécifique__.
 
@@ -119,7 +123,7 @@ Par défaut, la ZiGate va déterminer le meilleur chemin pour communiquer avec l
 
 * Cliquer sur le bouton __4 minutes__ pour lancer le mode d'appairage.
 
-Le fonctionnement est identique au paragraphe précédent hormis que la ZiGate cherchera à appairer le nouvel objet sur le routeur choisi.
+Le fonctionnement est identique au paragraphe précédent hormis que le coordinateur cherchera à appairer le nouvel objet sur le routeur choisi.
 
 ## Gestion des Dispositifs
 
