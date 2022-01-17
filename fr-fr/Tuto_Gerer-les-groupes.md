@@ -1,16 +1,20 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Tutoriel - Gérer les groupes
+
+</br>
 
 
 ## Introduction
 
-Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le plugin de la ZiGate.
+Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le plugin ZigBeeForDomoticZ.
 
 Depuis la mise en place de l'interface Web avec la version 4.7 du plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
 Des améliorations ont été apportées avec la version 4.9 pour rendre la gestion des groupes plus facile mais il reste encore du travail pour améliorer l'expérience utilisateur.
 
 ## Présentation
 
-Un groupe ZiGate permet de regrouper plusieurs objets connectés sur secteur (routeur) sous un seul dispositif dans DomoticZ. Une action sur un Widget sera transmis à tous les objets appartenant au groupe.
+Un groupe ZigBee permet de regrouper plusieurs objets connectés sur secteur (routeur) sous un seul dispositif dans DomoticZ. Une action sur un Widget sera transmis à tous les objets appartenant au groupe.
 
 __Les objets terminaux ne peuvent pas être associés à un groupe dans la ZiGate.__
 
