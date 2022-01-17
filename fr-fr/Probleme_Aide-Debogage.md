@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Problème - Aide au débogage
+
+</br>
 
 Ce document présente les possibilités pour réaliser un débogage mais également les informations nécessaires pour remonter les soucis.
 
@@ -19,14 +23,14 @@ Ce document présente les possibilités pour réaliser un débogage mais égalem
 
 | Module | Description |
 | ------ | ----------- |
-| debugInput  | Tous les messages entrant de la ZiGate |
-| debugOutput | Tous les messages sortant vers la ZiGate |
+| debugInput  | Tous les messages entrant vers le coordinateur |
+| debugOutput | Tous les messages sortant depuis le coordinateur |
 | debugCluster | Extrait le contenu des messages |
 | debugHeartbeat | Exécution toutes les 5 secondes pour réaliser des actions récursives |
-| debugWidget | Forcer la mise à jour des Widgets de DomoticZ par rapport à la ZiGate |
+| debugWidget | Forcer la mise à jour des Widgets de DomoticZ par rapport au coordinateur |
 | debugPlugin | Le programme du plugin |
 | debugDatabase | Gérer la base de données du plugin |
-| debugCommand | Mettre en attente toutes les actions de DomoticZ pour forcer les actions de la ZiGate |
+| debugCommand | Mettre en attente toutes les actions de DomoticZ pour forcer les actions du coordinateur |
 
 
 ## Cas
