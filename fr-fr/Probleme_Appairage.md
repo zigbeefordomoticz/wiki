@@ -23,6 +23,6 @@ L'appairage se réalise à deux niveaux :
 
 ## Que faire ?  
 
-Venez nous rejoindre sur le forum français de DomoticZ https://easydomoticz.com/forum. Nous y avons une section dédiée au plugin ZiGate dans laquelle vous pourrez créer un sujet et nous faire remonter vos questions ou difficultés.
+Venez nous rejoindre sur le forum français de DomoticZ https://easydomoticz.com/forum. Nous y avons une section dédiée au plugin ZigBeeForDomoticZ dans laquelle vous pourrez créer un sujet et nous faire remonter vos questions ou difficultés.
 
 Merci de suivre ce guide [[A lire avant de poster] Guide pour bien formuler une demande](https://easydomoticz.com/forum/viewtopic.php?f=28&t=10886) afin que nous ayons un maximum d'informations dés le départ.

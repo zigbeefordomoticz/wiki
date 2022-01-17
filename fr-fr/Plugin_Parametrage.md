@@ -1,6 +1,6 @@
 # Paramétrage du plugin
 
-Cette étape est la deuxième du processus d'installation du plugin ZiGate.
+Cette étape est la deuxième du processus d'installation du plugin ZigBeeForDomoticZ.
 
 Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plugin_Installation.md)
 
@@ -11,7 +11,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 * Ouvrir __DomoticZ__ dans votre navigateur
 
 * Aller dans le menu __Configuration__ puis __Matériel__
-* Pour ajouter le plugin ZiGate, renseigner les informations suivantes :
+* Pour ajouter le plugin ZigBeeForDomoticZ, renseigner les informations suivantes :
 
 | Paramètre    | Description | Information |
 | ------------ | ------------------ | ----------- |
@@ -30,9 +30,9 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du plugin](Plug
 
 * Cliquer sur __Ajouter__.
 
-La ligne correspondante à votre plugin ZiGate (avec le nom défini) est normalement apparue dans la liste des matériels.
+La ligne correspondante à votre plugin ZigBeeForDomoticZ (avec le nom défini) est normalement apparue dans la liste des matériels.
 
-* Cliquer sur la ligne de votre plugin ZiGate.
+* Cliquer sur la ligne de votre plugin ZigBeeForDomoticZ.
 
 __ATTENTION :__ à partir de maintenant, il ne faut surtout plus cliquer sur le bouton __Ajouter__ en bas : cela aurait pour effet de dupliquer le plugin. Remontez toujours en haut des paramètres pour utiliser le bouton __Modifier__.
 
@@ -40,11 +40,11 @@ __ATTENTION :__ à partir de maintenant, il ne faut surtout plus cliquer sur le 
 * Décoché __Activé__ pour désactiver le plugin.
 * Cliquer sur __Modifier__ (ne pas cliquer sur Ajouter car cela dupliquera le plugin).
 
-* Recliquer sur la ligne du plugin ZiGate.
+* Recliquer sur la ligne du plugin ZigBeeForDomoticZ.
 * Recocher __Activé__ pour réactiver le plugin.
 * Cliquer sur __Modifier__ pour relancer le plugin.
 
-Vérifier les logs que le plugin ZiGate s'initialise correctement.
+Vérifier les logs que le plugin ZigBeeForDomoticZ s'initialise correctement.
 
 ![Domoticz Hardware Menu for Plugin](Images/FR_Plugin-Parametrage.png)
 
@@ -58,7 +58,7 @@ A l'installation, le plugin créé 2 widgets dans l'onglet __Mesures__ de Domoti
 
 ### Widget Statut
 
-Le widget s'appelle 'Zigate Status XX' avec XX correspondant au numéro de matériel du plugin ZiGate. Il indiquera l'état du plugin. Le Log du widget permettra d'avoir l'historique des états du plugins.
+Le widget s'appelle 'Zigate Status XX' avec XX correspondant au numéro de matériel du plugin ZigBeeForDomoticZ. Il indiquera l'état du plugin. Le Log du widget permettra d'avoir l'historique des états du plugins.
 
 Les différents états possibles sont :
 

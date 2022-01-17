@@ -2,7 +2,7 @@
 
 Cette page présente les éléments à sauvegarder en prévision d'une réinstallation afin de ne pas perdre de données.
 
-Le dossier du plugin ZiGate contient des fichiers __critiques__ qu'il faut sauvegarder en plus de la base de données de DomoticZ `domoticz.db`.
+Le dossier du plugin ZigBeeForDomoticZ contient des fichiers __critiques__ qu'il faut sauvegarder en plus de la base de données de DomoticZ `domoticz.db`.
 
 En plus de sauvegarder le plugin, pensez à sauvegarder votre ZiGate. Voir le guide sur : [https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
 
@@ -11,20 +11,20 @@ En plus de sauvegarder le plugin, pensez à sauvegarder votre ZiGate. Voir le gu
 Les explications suivantes seront données pour :
 
 * Le répertoire des plugins de DomoticZ __/home/pi/domoticz/plugins__
-* Le répertoire d'installation du plugin ZiGate __/home/pi/domoticz/plugins/Domoticz-Zigate__
+* Le répertoire d'installation du plugin ZigBeeForDomoticZ __/home/pi/domoticz/plugins/Domoticz-Zigate__
 
 Modifier les chemins en fonction de votre configuration.
 
 ## Procédure de sauvegarde
 
 1. Arrêter DomoticZ
-2. Sauvegarder à minima les éléments suivant localisés sous le répertoire d'installation du plugin ZiGate :
+2. Sauvegarder à minima les éléments suivant localisés sous le répertoire d'installation du plugin ZigBeeForDomoticZ :
 
 * Le fichier  Conf/PluginConf-*.json
 * Le dossier  Data/*
 * Le dossier  Reports/*
 
-Pour information, la commande pour copier tout le répertoire du plugin ZiGate vers votre bureau
+Pour information, la commande pour copier tout le répertoire du plugin ZigBeeForDomoticZ vers votre bureau
 
 ```
 cp /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi
