@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Problèmes - L'appairage
+
+</br>
 
 Le plugin est développé pour pouvoir communiquer avec les objets respectant les spécifications ZigBee. Par exemple, si le plugin essaye d'appairer un objet inconnu, il va essayer de créer des dispositifs dans DomoticZ en se basant sur les fonctionnalités de l'objet.
 
@@ -6,7 +10,7 @@ Le plugin est développé pour pouvoir communiquer avec les objets respectant le
 
 L'appairage se réalise à deux niveaux :
 
-1. Au niveau de la ZiGate, où l'objet rejoint le réseau ZigBee de la ZiGate
+1. Au niveau du coordinateur, où l'objet rejoint le réseau ZigBee du coordinateur
 2. Au niveau du Plugin, qui va essayer de trouver les fonctionnalités de l'objet comme :
   * Est-ce un routeur (alimenté sur secteur)
   * Est-ce un interrupteur
