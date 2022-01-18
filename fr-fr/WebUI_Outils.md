@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # L'interface Web - La section Outils
+
+</br>
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
@@ -37,7 +41,7 @@ Voici la page __Commande__ de l'interface Web du plugin :
 
 Cette page permet d'exécuter des commandes sur les objets sans passer par DomoticZ.
 
-Elle permet également d'envoyer des commandes au format RAW en suivant les informations du [http://zigate.fr/documentation/commandes-zigate](wiki de la ZiGate).
+Elle permet également d'envoyer des commandes au format RAW en suivant les informations du [http://zigate.fr/documentation/commandes-zigate](wiki de la ZiGate) ****.
 
 
 ------------------------------------------------
