@@ -18,7 +18,7 @@ In this first step, there are severals installation methodes depending on your O
 ## 1 - Python Plugin Manager installation running on Linux
 
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
-* Just search for "Zigate Plugin" entry and add it.
+* Just search for "Zigbee for domoticz Plugin" entry and add it.
 
 
 ------------
