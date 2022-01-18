@@ -1,11 +1,15 @@
-# Tutoriel - Supprimer un objet appairé avec la ZiGate
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
+# Tutoriel - Supprimer un objet appairé
+
+</br>
 
 
 ## Introduction
 
-Ce tutoriel explique comment supprimer un objet appairé avec la ZiGate.
+Ce tutoriel explique comment supprimer un objet appairé avec le coordinateur.
 Cet objet est donc connu par :
-* La ZiGate
+* Le coordinateur
 * Le plugin
 * DomoticZ (avec un ou plusieurs dispositifs et widgets associés à l'objet)
 
@@ -35,7 +39,7 @@ Il n'y a pas de suppression automatique : il faut le faire manuellement.
 
 Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
-`Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
+`Status: (DIN-Zigbee)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 
 * Supprimer tous les dispositifs de cet objet dans DomoticZ.
 
@@ -49,7 +53,7 @@ Généralement lorsque le dernier dispositifs est supprimé, le Plugin va automa
 
 Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 
-`Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
+`Status: (DIN-Zigbee)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 
 Si vous ne voyez pas de message similaire, il faut appliquer la procédure pour [Supprimer les objets terminaux](#supprimer-les-objets-terminaux).
 
