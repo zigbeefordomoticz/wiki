@@ -27,9 +27,9 @@ In this first step, there are severals installation methodes depending on your O
 
 * Go in your Domoticz directory using a command line and open the plugins directory.
 * Usually you should be under <code>domoticz/plugins</code>
-* Run: `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
-* It will create a folder 'Domoticz-Zigate'
-* Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
+* Run: `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
+* It will create a folder 'Domoticz-Zigbee'
+* Make the plugin.py file executable `chmod +x Domoticz-Zigbee/plugin.py`
 * Restart Domoticz.
 
 
@@ -59,9 +59,9 @@ Navigate to plugin folder domoticz:
 
 cd /volume1/@appstore/domoticz/var/plugins
 
-GIT clone Zigate plugin to new folder Zigate:
+GIT clone Zigbee for Domoticz plugin to new folder Zigbee:
 
-sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate
+sudo git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee Zigbee
 
 Stop and start domoticz from package manager.
 
@@ -84,7 +84,7 @@ When you are done adding devices set the permit join value to something lower th
 There is a known issue on Syno which makes Domoticz to crash when starting the plugin.
 You need to disable the feature to check for plugin and firmware update availability.
 
-You have to edit the file Domoticz-Zigate/Conf/PluginConf-xx.json
+You have to edit the file Domoticz-ZigbeeConf/PluginConf-xx.json
 and add the following line
 
 "internetAccess": 0,
@@ -322,14 +322,14 @@ docker exec -it Domoticz bash
 
     ```bash
     cd /home/pi/domoticz/plugins
-    git clone https://github.com/sasu-drooz/Domoticz-Zigate.git
-    chmod +x Domoticz-Zigate/plugin.py
+    git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+    chmod +x Domoticz-Zigbee/plugin.py
     ```
 
 1. If already installed, update to the newest version:
 
     ```bash
-    cd /home/pi/domoticz/plugins/Domoticz-Zigate
+    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
     git pull
     sudo reboot
     ```
@@ -342,8 +342,8 @@ docker exec -it Domoticz bash
     ```
 
 1. Go to the hardware tab of Domoticz and Add the new hardware:
-    Name: Zigate (or something similar)
-    Type: Zigate plugin
+    Name: Zigbee (or something similar)
+    Type: Zigbee for domoticz plugin
     Click Add
 
     Next, click on Zigate in the hardware list to edit settings:
