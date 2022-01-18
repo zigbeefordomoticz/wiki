@@ -4,7 +4,6 @@
 
 </br>
 
-
 Ce tutoriel explique comment remplacer ou ré-initialiser sa ZiGate.
 
 ## Avant propos

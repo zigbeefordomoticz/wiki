@@ -4,7 +4,6 @@
 
 </br>
 
-
 Ce tutoriel explique comment paramétrer spécifiquement certains objets.
 
 ## Avant propos
