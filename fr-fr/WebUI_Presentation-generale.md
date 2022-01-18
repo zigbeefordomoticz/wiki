@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # L'interface Web - Présentation générale
+
+</br>
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
@@ -24,10 +28,10 @@ Les différentes pages du plugin s'afficheront ici.
 
 Il contient de gauche à droite :
 * La date et l'heure du démarrage du plugin ZigBeeForDomoticZ.
-* Les valeurs Rx/m, Tx/m et MaxLoad indiquant la charge de la ZiGate.
+* Les valeurs Rx/m, Tx/m et MaxLoad indiquant la charge du coordinateur.
 * L'état du plugin, normalement il est indiqué __Ready__.
 * La version du plugin. L'écriture en rouge indique qu'une mise à jour est disponible (valable uniquement pour les branches Stable et Béta).
-* Le firmware de la ZiGate. L'écriture en rouge indique qu'une mise à jour est disponible.
+* Le firmware du coordinateur. L'écriture en rouge indique qu'une mise à jour est disponible.
 
 Le bandeau est vert si le plugin fonctionne normalement.
 Le bandeau rouge indique un problème de connexion avec la ZiGate.

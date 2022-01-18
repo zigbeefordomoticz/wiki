@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # L'interface Web - La section Admin
+
+</br>
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
@@ -26,7 +30,7 @@ Cette page permet d'appairer les objets avec la ZiGate et DomoticZ.
 Elle permet :
 
 * D'ajouter un objet avec l'assistant
-* D'activer le mode appairage de la ZiGate (permanent ou 4 minutes)
+* D'activer le mode appairage du coordinateur
 * D'ajouter un objet via un routeur particulier
 * De faire un reset d'un objets
 * De recréer les dispositifs dans DomoticZ
@@ -47,7 +51,7 @@ L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tou
 
 ### Utilisation
 
-Cette page permet de gérer les groupes d'objets dans la ZiGate.
+Cette page permet de gérer les groupes d'objets dans le réseau zigBee.
 
 Elle permet :
 
@@ -89,11 +93,11 @@ Voici la page __Plugin__ de l'interface Web du plugin :
 
 ### Utilisation
 
-Cette page permet de gérer le fonctionnement du plugin de la ZiGate.
+Cette page permet de gérer le fonctionnement du plugin ZigBeeForDomoticZ.
 
 Elle permet :
 
-* De faire un redémarrage du plugin de la ZiGate
+* De faire un redémarrage du plugin.
 
 Se reporter à la section [Tutoriels](Home.md#tutoriels) pour plus d'informations.
 

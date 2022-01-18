@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Tutoriel - Remplacer ou ré-initialiser la ZiGate
+
+</br>
 
 Ce tutoriel explique comment remplacer ou ré-initialiser sa ZiGate.
 

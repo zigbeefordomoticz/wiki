@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # L'interface Web - La section Réseau
+
+</br>
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
@@ -24,7 +28,7 @@ Elle permet :
 
 * De visualiser et gérer les différents rapports d'analyse du réseau
 * De lancer une analyse du réseau basée sur le LQI (puissance du signal détecté)
-  * A noter que le filtrage des paquets implémenté dans la ZiGate s'appuie sur la LQI. Un coût supérieur à 5 implique une perte potentielle de paquets
+  * A noter que le filtrage des paquets implémenté dans le coordinateur s'appuie sur la LQI. Un coût supérieur à 5 implique une perte potentielle de paquets
 
 | LQI interval | Cost |
 | ---------| -----|
@@ -44,7 +48,7 @@ Le rapport de topologie réseau est constitué de deux graphiques présentant le
 
 #### Le graphique du maillage
 
-L'illustration de votre maillage montre tous les liens entre les objets et ZiGate.
+L'illustration de votre maillage montre tous les liens entre les objets et le coordinateur.
 En déplaçant votre souris sur un lien un pop-up vous indique les composants participant à ce lien ainsi que la qualité de la liaison (LQI) : échelle de 0 (très mauvaise) à 255 (la meilleure).
 
 Un bouton (Chart context menu) en haut à droite du graphique permet de l'afficher en plein écran, de l'imprimer ou de l'exporter sous différent formats.
@@ -66,7 +70,7 @@ Un exemple de topologie Sans Sibling : on voit que les routeurs (les noeuds) n'o
 
 ![Topologie réseau sans sibling](Images/FR_WebUI-Reseau-Topologie-sans-sibling.png)
 
-*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.* 
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ##### L'affichage avec Sibling
 
@@ -79,9 +83,9 @@ Le même exemple de topologie Avec Sibling : on voit que les routeurs (les noeud
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 
-#### La liste des objets liés à la ZiGate
+#### La liste des objets liés au coordinateur
 
-Vous retrouvez sous cet item un tableau fournissant des informations relatives aux objets liées à la ZiGate et remontées dans les widgets DomoticZ.
+Vous retrouvez sous cet item un tableau fournissant des informations relatives aux objets liées au coordinateur et remontées dans les widgets DomoticZ.
 
 ![Network_Topology](Images/FR_WebUI-Reseau-ListDispositifs.png)
 
@@ -108,10 +112,10 @@ Elle permet :
 
 Voir les [explications](Info_ZigBee-et-Wifi.md) sur les interférences entre le Wifi et le ZigBee
 
-Le niveaux d'interférence est calculé avec la communication entre la ZiGate et un routeur.
+Le niveaux d'interférence est calculé avec la communication entre le coordinateur et un routeur.
 Si vous ne disposez pas de routeur, vous ne pouvez pas faire d'analyse du niveau d'interférence.
 
-Les graphiques montrent pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec la ZiGate: échelle de 0 (aucune détérioration du signal) à 255 (message inaudible).
+Les graphiques montrent pour chaque canal ZigBee (de 11 à 26) et pour chaque routeur, le niveau d'interférence lors de la communication avec le coordinateur : échelle de 0 (aucune détérioration du signal) à 255 (message inaudible).
 
 ![Niveau d'interférences-1](Images/FR_WebUI-Reseau-Interferences-1.png)
 

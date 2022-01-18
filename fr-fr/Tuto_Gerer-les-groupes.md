@@ -4,7 +4,6 @@
 
 </br>
 
-
 ## Introduction
 
 Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le plugin ZigBeeForDomoticZ.
@@ -16,10 +15,10 @@ Des améliorations ont été apportées avec la version 4.9 pour rendre la gesti
 
 Un groupe ZigBee permet de regrouper plusieurs objets connectés sur secteur (routeur) sous un seul dispositif dans DomoticZ. Une action sur un Widget sera transmis à tous les objets appartenant au groupe.
 
-__Les objets terminaux ne peuvent pas être associés à un groupe dans la ZiGate.__
+__Les objets terminaux ne peuvent pas être associés à un groupe.__
 
-Dans le détail, ce n'est pas la ZiGate qui tient la liste des objets de chaque groupe ; ce sont les objets qui conservent en mémoire dans quels groupes ils appartiennent.
-Concrètement la ZiGate envoie la commande à tout le réseau en indiquant que c'est pour le groupe 1001 (par exemple) : tous les objets vont recevoir la demande et si un objet reconnaît le groupe auquel il appartient, il va appliquer la commande.
+Dans le détail, ce n'est pas le coordinateur qui tient la liste des objets de chaque groupe ; ce sont les objets qui conservent en mémoire dans quels groupes ils appartiennent.
+Concrètement le coordinateur envoie la commande à tout le réseau en indiquant que c'est pour le groupe 1001 (par exemple) : tous les objets vont recevoir la demande et si un objet reconnaît le groupe auquel il appartient, il va appliquer la commande.
 
 Pour appliquer une commande pour un groupe, un objet doit écouter le réseau. Les objets terminaux (sur batterie) n'ont pas cette fonction d'écoute, c'est la raison pour laquelle les objets terminaux ne peuvent pas être ajouter dans un groupe ; seuls les routeurs peuvent l'être.
 
@@ -70,8 +69,8 @@ Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
 * Indiquer le nom du groupe.
 * Sélectionner les objets appartenant au groupe en les cliquant un par un. En cas d'erreur, utiliser la petit croix pour retirer un objet de la liste.
 
-Il est possible d'ajouter la ZiGate dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea (voir [la page des objets Ikea](Les-objets_Ikea.md)).
-__La ZiGate peut appartenir à un nombre limité de groupes :__ voir les [caractéristiques des ZiGates](Caracteristiques-des-ZiGates.md#nombre-de-groupe-limit%C3%A9).
+Il est possible d'ajouter le coordinateur dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea (voir [la page des objets Ikea](Les-objets_Ikea.md)).
+__Le coordinateur ne peut appartenir qu'à un nombre limité de groupes :__ voir les [caractéristiques des coordinateur](Caracteristiques-des-Coordinateurs.md#nombre-de-groupe-limit%C3%A9).
 
 * Cliquer sur le bouton __Valider__.
 
