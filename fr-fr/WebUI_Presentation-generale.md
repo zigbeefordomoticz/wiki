@@ -4,6 +4,7 @@
 
 </br>
 
+
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
 Voici la présentation générale de l'interface Web du plugin :

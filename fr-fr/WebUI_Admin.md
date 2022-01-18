@@ -4,6 +4,7 @@
 
 </br>
 
+
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
 La section __Admin__ comporte les pages :

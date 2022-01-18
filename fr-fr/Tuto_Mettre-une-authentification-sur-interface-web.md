@@ -4,7 +4,6 @@
 
 </br>
 
-
 ## Introduction
 
 Ce tutoriel explique comment mettre en place une authentification pour accéder à l'interface web du plugin.

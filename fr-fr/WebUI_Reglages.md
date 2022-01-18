@@ -4,6 +4,7 @@
 
 </br>
 
+
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
 __La modification des paramètres peut entraîner des dysfonctionnements au niveau du coordinateur et du réseau zigBee Pensez à faire une sauvegarde avant toute modification.__

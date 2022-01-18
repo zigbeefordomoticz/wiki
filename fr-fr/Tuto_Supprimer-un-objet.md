@@ -4,7 +4,6 @@
 
 </br>
 
-
 ## Introduction
 
 Ce tutoriel explique comment supprimer un objet appairé avec le coordinateur.

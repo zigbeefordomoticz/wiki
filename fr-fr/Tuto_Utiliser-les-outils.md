@@ -4,7 +4,6 @@
 
 </br>
 
-
 ## Introduction
 
 Ce tutoriel explique comment utiliser les outils du plugin.
