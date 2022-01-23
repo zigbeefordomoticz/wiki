@@ -1,5 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
 
 # Web Admin: Tools page
+
+</br>
 
 This page give access to a set of REST API to query directly the plugin memory. This page is mainly for developers and for debugging purposes.
 The REST API are mainly developped to be used by the plugin Web Admin interface.
