@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # The Web interface - Network section
+
+</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -31,7 +35,7 @@ Here are shown on a weel, all links between 2 devices. If you leave the mouse on
 
 #### Right: Topology graph
 
-Here you can see more the hierarchical structure of your Zigbee network.
+Here you can see more the hierarchical structure of your ZigBee network.
 
 ------------------------------------------------
 ## Interference level
@@ -42,12 +46,12 @@ Here is the __Interference level__ page of the plugin Web interface :
 
 *This picture may have have changed since this documentation was written.*
 
-Starting Plugin Version: > 4.4, the plugin queries Zigate to get informations on the Energy level per channel.
+Starting Plugin Version: > 4.4, the plugin queries the coordinator to get informations on the Energy level per channel.
 
 In the 10 first minutes after plugin start, a Network Energy Level scan will be executed.
 
-The Energy-Level measurement is a value from 0 to 255 given for all Zigate supported channels ( 11, 15, 19, 20, 25 and 26).
-It is given in an arbitrary units (didn't find any more information in the NXP Zigbee documentation).
+The Energy-Level measurement is a value from 0 to 255 given for all coordinator supported channels ( 11, 15, 19, 20, 25 and 26).
+It is given in an arbitrary units (didn't find any more information in the NXP ZigBee documentation).
 
 
 
@@ -71,13 +75,13 @@ It is important to know that the Packet filtering implemented is using the LQI v
 
 Source: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
 
-A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded
+A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded.
 
 ### 1. Enable the report
 
 ### 2. Example of report
 
-The report will take a certain time based on the size of the network ( number of devices and especially number of routers). The output will be put in the domoticz log in the here after format.
+The report will take a certain time based on the size of the network ( number of devices and especially number of routers). The output will be put in the DomoticZ log in the here after format.
 A raw format is also provided and is analysed via the Web UI.
 
 ** Graphical using the Web User Interface
