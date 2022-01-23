@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # The Web interface - Settings page
+
+</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -10,7 +14,7 @@ Here is the __Seetings__ page of the plugin Web interface :
 
 ## Contents
 
-This file is used to customized some behaviour of the plugin at run time
+This file is used to customized some behaviour of the plugin at run time.
 
 If you are updating values in PluginConf, we strongly recommend you to make a copy of it in order to avoid any lost when doing an update of the plugin.
 
@@ -123,7 +127,7 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 
 
 
- # Zigate Configuration
+## ZiGate Configuration
 
 | parameter | default | description |
 | --------- | ------- | ----------- |
