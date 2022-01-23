@@ -1,6 +1,8 @@
-# Welcome to the Domoticz-Zigate wiki !
+<a href="#"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
 
-![zigate.fr](../Images/ZiGate.png)
+# Welcome to the plugin ZigBeeForDomoticZ wiki !
+
+</br>
 
 <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
@@ -62,7 +64,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Dealing with not certified devices](Problem_Dealing-with-none-certified-device.md)
 * [Debug mode](Problem_Debuging-mode.md)
 * [FAQ ZiGate](FAQ_ZiGate.md)
-* [FAQ ZiGate plugin](FAQ_ZiGate-Plugin.md)
+* [FAQ plugin](FAQ_Plugin.md)
 
 
 ## Devices specifics
