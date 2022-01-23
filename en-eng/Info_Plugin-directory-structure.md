@@ -1,7 +1,13 @@
-Starting with release 4.1 the plugin directory structure is : 
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
+# Plugin directory structure
+
+</br>
+
+Starting with release 4.1 the plugin directory structure is :
 
 
-+ domoticz/plugins/Domoticz-Zigate
++ domoticz/plugins/Domoticz-Zigbee
 
 | root | 1st level | Description | Access right |
 | ---  | --------- | ----------- | ------------ |

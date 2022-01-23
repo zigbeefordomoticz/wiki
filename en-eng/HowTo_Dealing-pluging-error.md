@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # How To - Dealing with plugin errors
+
+</br>
 
 
 ## Introduction

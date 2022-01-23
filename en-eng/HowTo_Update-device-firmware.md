@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Firmware update of a device or a serie of devices
+
+</br>
 
 ## Overview
 
@@ -46,7 +50,7 @@ For the IKEA TRADFRI we are providing a script to retreive all Firmware from the
 1. Go to the IKEA Firmware folder
 
    ```
-   cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI
+   cd Domoticz-Zigbee\OTAFirmware\IKEA-TRADFRI
    ```
 
 1. Launch the script to retreive the firmware

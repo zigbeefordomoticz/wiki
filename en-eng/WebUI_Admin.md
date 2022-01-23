@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # The Web interface - Admin section
+
+</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -21,7 +25,7 @@ Here is the __Pairing__ page of the plugin Web interface :
 
 ### How to use
 
-Use this page to pair your devices with the ZiGate and DomoticZ.
+Use this page to pair your devices with the coordinator and DomoticZ.
 
 You can :
 

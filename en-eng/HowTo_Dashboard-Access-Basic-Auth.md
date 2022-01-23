@@ -1,9 +1,13 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Protection Plugin Web Admin via Basic Authentication
+
+</br>
 
 ## Introduction
 
 The aim of this page is to allow you to acces to the plugin admin page through a basic authentication page.
-This method uses nginx and a let's encrypt certificate on rpi with raspbian but the nginx configuration works on other systems.
+This method uses nginx and a let's encrypt certificate on rpi with Raspbian but the nginx configuration works on other systems.
 
 **Prefer to use a VPN to your local network or other methods (VPS...) that avoid exposing a web page.**
 
@@ -63,16 +67,16 @@ You can use online generator or the local tool.
 Create a password file and a first user. Run the htpasswd utility with the -c flag (to create a new file), the file pathname as the first argument, and the username as the second argument:
 
 ```shell
-sudo htpasswd -c /etc/nginx/.htpasswd zigate
+sudo htpasswd -c /etc/nginx/.htpasswd zigbeefordomoticz
 ```
 
-Press Enter and type the password for zigate at the prompts.
+Press Enter and type the password for zigbeefordomoticz at the prompts.
 
 You can confirm that the file contains paired usernames and encrypted passwords:
 
 ```shell
 $ cat /etc/nginx/.htpasswd
-zigate:$apr1$/woC1jnP$KAh0SsVn5qeSMjTtn0E9Q0
+zigbeefordomoticz:$apr1$/woC1jnP$KAh0SsVn5qeSMjTtn0E9Q0
 ```
 
 ## Reverse Proxy with HTTP Basic Authentication
@@ -107,12 +111,12 @@ server {
         ssl_prefer_server_ciphers on;
 
         location / {
-            root   /home/pi/domoticz/plugins/Domoticz-Zigate/www;
+            root   /home/pi/domoticz/plugins/Domoticz-Zigbee/www;
             index  index.html index.htm;
         }
 
-        location /rest-zigate {
-            proxy_pass http://127.0.0.1:9440/rest-zigate;
+        location /rest-zigbee {
+            proxy_pass http://127.0.0.1:9440/rest-zigbee;
         }
 }
 ```
@@ -175,9 +179,9 @@ You can check what is going on:
 sudo fail2ban-client status
 ```
 
-## OPTION 2 - Use the certificate with Domoticz
+## OPTION 2 - Use the certificate with DomoticZ
 
-You can use the certificate with domoticz by running (replace \<your domain>):
+You can use the certificate with DomoticZ by running (replace \<your domain>):
 
 ```shell
 sudo mv ~/domoticz/server_cert.pem ~/domoticz/server_cert.pem.org
@@ -187,4 +191,4 @@ sudo cp ~/domoticz/server_cert.pem ~/domoticz/letsencrypt_server_cert.pem
 sudo service domoticz restart
 ```
 
-As every update of domoticz overwrites your certificate, the last command backups your new certificate so that you may may restore it if needed.
+As every update of DomoticZ overwrites your certificate, the last command backups your new certificate so that you may may restore it if needed.

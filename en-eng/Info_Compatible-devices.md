@@ -1,6 +1,12 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
+# Compatible devices
+
+</br>
+
 ### English
 
-Purpose is to document the list of Hardware devices **tested** with the Zigate USB/WiFi and the Zigate plugin.
+Purpose is to document the list of Hardware devices **tested** with the ZiGate USB/WiFi and the ZigBeeForDomoticZ plugin.
 
 Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
 
@@ -8,7 +14,7 @@ You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadd
 
 ### Français
 
-Ce document est une liste des objets "certfiés" qui fonctionnent avec une ZiGate et le plugin ZiGate.
+Ce document est une liste des objets "certifiés" qui fonctionnent avec une ZiGate et le plugin ZigBeeForDomoticZ.
 
 Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du développeur qui rendu paramétrer l'objet pour qu'il fonctionne.
 

@@ -1,14 +1,16 @@
-# Domoticz Plugin Menu Description
+
+
+# DomoticZ Plugin Menu Description
 
 
 ## Overview
 
-Explain all parameters and options which can be found on the Domoticz Hardware menu for the plugin.
+Explain all parameters and options which can be found on the DomoticZ Hardware menu for the plugin.
 
 
 ## Description
 
-![Domoticz Hardware Menu for Plugin](https://raw.githubusercontent.com/pipiche38/Domoticz-Zigate-Wiki/master/Images/DzMenu.png)
+![Domoticz Hardware Menu for Plugin](../Images/DzMenu.png)
 
 
 | Id | Short Description | Full Description |
