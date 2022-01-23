@@ -1,8 +1,8 @@
 -- This is a basic/simple dzVents script that is intended to detect dead or timed-out devices.
--- It is based on the script written by Benp: 
+-- It is based on the script written by Benp:
 -- https://easydomoticz.com/forum/viewtopic.php?f=28&t=8251&start=80#p69239
 -- You can find a more complete script from Deufo here :
--- https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/Contrib/CheckDeadDevices.lua
+-- https://github.com/pipiche38/Domoticz-Zigbee-Wiki/blob/master/Contrib/CheckDeadDevices.lua
 
 
 
@@ -17,13 +17,13 @@ local devicesToCheck = {
 }
 
 
-return 
+return
 {
 	on = {
      timer = {'at 11:50'},				-- Choose how often you want to check if devices are alive. I check it once a day at 11:50
      httpResponses = {'lastUP' }
 	},
-	
+
     execute = function(domoticz, item)
         print('trigger:' .. tostring(item.isTimer) .. '/' .. tostring(item.isHTTPResponse))
 
@@ -44,19 +44,19 @@ return
             if (item.isHTTPResponse and item.ok) then
                 local Time = require('Time')
                 local results = item.json.result
-                
+
                  for i, node in pairs(results) do
                     -- convert the time stamp in the raw data into a
                     -- dzVents Time object
                     local lastUpdate = Time(node.LastUpdate)
                     print(node.Name)
                     print('Hours ago: ' .. lastUpdate.hoursAgo)
-                
-                    if(lastUpdate.hoursAgo > 4) then  	-- Set the threshold to consider the device timed-out. Write here what you want to do if the device is timed-out. 
+
+                    if(lastUpdate.hoursAgo > 4) then  	-- Set the threshold to consider the device timed-out. Write here what you want to do if the device is timed-out.
                         local message = ""				-- I send a SMS to my phone using free-mobile SMS notifications feature.
                         message = message .. 'Device ' .. node.Name .. ' seems to be timed-out. Last seen: ' .. lastUpdate.hoursAgo ..' hours ago.'
                         domoticz.openURL('https://smsapi.free-mobile.fr/sendmsg?user=XXXXXXXX&pass=xxxxxxxxxxxxxx&msg= ' .. message .. ' ')
-                    end           
+                    end
                 end
             end
     end
