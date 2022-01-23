@@ -13,15 +13,15 @@ Purpose of this page is to document how to bind a "Double gangs remote switch_Le
 
 This will be applicable for most of the devices as soon as they support binding between 2 end devices.
 
-ATTENTION: it will required to have the ZiGate up and running to have the binding operationnal. Do not expect to have binding working while the Zigate is Off.
+ATTENTION: it will required to have the ZiGate up and running to have the binding operationnal. Do not expect to have binding working while the ZiGate is Off.
 
 While it is possible to use the Double bang remote switch to bind , the 'Remote Shutter' seems not to accept any bindings.
 
 ## Step 1 : Pairing
 
 1. Put the ZiGate in Pairing mode
-1. Pair the "Micromodule" with Zigate, and check after pairing that you can command the Micromodule from DomoticZ
-1. Pair the "Double gangs remote" with Zigate, and check that any actions on the remote is seen on DomoticZ
+1. Pair the "Micromodule" with ZiGate, and check after pairing that you can command the Micromodule from DomoticZ
+1. Pair the "Double gangs remote" with ZiGate, and check that any actions on the remote is seen on DomoticZ
 
 At that stage you should have :
 
