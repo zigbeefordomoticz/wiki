@@ -85,3 +85,7 @@ Here is the __Error__ page of the plugin Web interface :
 Use this page to manage the plugin errors.
 
 Refer to the tutorial [Deal with plugin error](HowTo_Dealing-pluging-error.md) for more informations.
+
+
+------------------------------------------------
+Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
