@@ -51,7 +51,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Deal with errors](HowTo_Dealing-pluging-error.md)
 * [Change the Zigbee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
-* [Upgrading Firmware of Zigate](HowTo_Update-ZiGate-firmware.md)
+* [Upgrading Firmware of ZiGate](HowTo_Update-ZiGate-firmware.md)
 * [Expose the dashboard with basic authentication on a https link](HowTo_Dashboard-Access-Basic-Auth.md)
 
 ## ZiGate How-to
@@ -100,7 +100,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
-* [How-to Configure ZiGate in ZiBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
+* [How-to Configure ZiGate in ZigBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
 
 ## More
 

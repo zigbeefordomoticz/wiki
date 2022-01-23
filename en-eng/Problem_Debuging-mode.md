@@ -20,7 +20,7 @@ The debugging options are available from the Web admin interface in the Menu Set
 | Option | Purpose |
 | ------- | -------- |
 | debugMatchId | you can specify here a short address or and IEEE of a specific device you want to track. In that case you will only see debug messages related to that specific address (short or IEEE) |
-| Use Domoticz Log | By default enabled, the plugin logs are issued in the Domoticz log. If you disable this, you will have the plugin Logs written in files under the plugin Logs folder ( Domoticz-Zigate/Logs/ ) |
+| Use Domoticz Log | By default enabled, the plugin logs are issued in the Domoticz log. If you disable this, you will have the plugin Logs written in files under the plugin Logs folder ( Domoticz-Zigbee/Logs/ ) |
 
 ### The Plugin Modules
 

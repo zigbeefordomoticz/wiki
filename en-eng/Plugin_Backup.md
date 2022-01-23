@@ -30,7 +30,7 @@ In case this is different, please use your own location
 
 1. Stop domoticz
 
-1. Move the Zigate plugin folder to your home directory
+1. Move the ZigBeeForDomoticZ plugin folder to your home directory
 
    ```
    mv /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
