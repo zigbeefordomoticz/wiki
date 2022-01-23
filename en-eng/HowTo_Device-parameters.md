@@ -1,8 +1,12 @@
-# How To : Device Parameters
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
+# How To : Device Parameter
+
+</br>s
 
 A number of parameters are available inside the plugin to customize the behaviour of the plugin or the behaviour of the device.
 
-By default a Certified device get default parameters already initiatialized. If you want to customize you have to go to the plugin Web Admin page,
+By default, a Certified device get default parameters allready initiatialized. If you want to customize, you have to go to the plugin Web Admin page,
 then go to Management -> Device Management and you will find for each device a Parameters icon ( right column ) > a popup will open :
 
 ![EN_WebUI-Device-management-parametres.png](../Images/EN_WebUI-Device-management-parametres.png)
