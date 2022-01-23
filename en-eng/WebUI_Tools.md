@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # The Web interface - Tools section
+
+</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -81,6 +85,3 @@ Here is the __Error__ page of the plugin Web interface :
 Use this page to manage the plugin errors.
 
 Refer to the tutorial [Deal with plugin error](HowTo_Dealing-pluging-error.md) for more informations.
-
-------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
