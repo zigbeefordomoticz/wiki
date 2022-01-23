@@ -1,5 +1,11 @@
 # Welkom op de wiki van de Domoticz-Zigate !
 
+<br><br>
+
+__All the informations written here are depreciated now. Please refer to the [English Wiki](../en-eng/Home.md)__
+
+<br><br>
+
 ![zigate.fr](../Images/ZiGate.png)
 
 <a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md)
