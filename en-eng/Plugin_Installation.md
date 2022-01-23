@@ -1,6 +1,7 @@
+
 <a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
 
-# Plugin ZiGate installation
+# ZigBeeForDomoticZ plugin installation
 
 </br>
 
@@ -22,12 +23,20 @@ In this first step, there are severals installation methodes depending on your O
 ## 1 - Python Plugin Manager installation running on Linux
 
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
-* Just search for "Zigate Plugin" entry and add it.
+* Just search for "Zigbee for domoticz Plugin" entry and add it.
 
 
 ------------
 
 ## 2 - Manual Installation running on Linux
+
+
+* Go in your Domoticz directory using a command line and open the plugins directory.
+* Usually you should be under <code>domoticz/plugins</code>
+* Run: `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
+* It will create a folder 'Domoticz-Zigbee'
+* Make the plugin.py file executable `chmod +x Domoticz-Zigbee/plugin.py`
+* Restart Domoticz.
 
 ### 2.A - Prerequisite
 
@@ -36,6 +45,7 @@ In this first step, there are severals installation methodes depending on your O
 * Git packet installated
 
 ### 2.B - Procedure
+
 
 * Open the terminal
 * Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually <code>cd domoticz/plugins/</code>
@@ -73,9 +83,9 @@ Navigate to plugin folder domoticz:
 
 cd /volume1/@appstore/domoticz/var/plugins
 
-GIT clone Zigate plugin to new folder Zigate:
+GIT clone Zigbee for Domoticz plugin to new folder Zigbee:
 
-sudo git clone https://github.com/sasu-drooz/Domoticz-Zigate.git Zigate
+sudo git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee Zigbee
 
 Stop and start domoticz from package manager.
 
@@ -98,7 +108,7 @@ When you are done adding devices set the permit join value to something lower th
 There is a known issue on Syno which makes Domoticz to crash when starting the plugin.
 You need to disable the feature to check for plugin and firmware update availability.
 
-You have to edit the file Domoticz-Zigate/Conf/PluginConf-xx.json
+You have to edit the file Domoticz-ZigbeeConf/PluginConf-xx.json
 and add the following line
 
 "internetAccess": 0,
@@ -336,14 +346,14 @@ docker exec -it Domoticz bash
 
     ```bash
     cd /home/pi/domoticz/plugins
-    git clone https://github.com/sasu-drooz/Domoticz-Zigate.git
-    chmod +x Domoticz-Zigate/plugin.py
+    git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+    chmod +x Domoticz-Zigbee/plugin.py
     ```
 
 1. If already installed, update to the newest version:
 
     ```bash
-    cd /home/pi/domoticz/plugins/Domoticz-Zigate
+    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
     git pull
     sudo reboot
     ```
@@ -356,8 +366,8 @@ docker exec -it Domoticz bash
     ```
 
 1. Go to the hardware tab of Domoticz and Add the new hardware:
-    Name: Zigate (or something similar)
-    Type: Zigate plugin
+    Name: Zigbee (or something similar)
+    Type: Zigbee for domoticz plugin
     Click Add
 
     Next, click on Zigate in the hardware list to edit settings:
