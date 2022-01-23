@@ -1,7 +1,11 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Plugin ZiGate installation
 
-In every installation methodes, the plugin requires Domoticz version 3.87xx or greater and Python version 3.5 or higher.
-Make sure that you have __python3-dev package__ installed. More informations on [Domoticz Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
+</br>
+
+In every installation methodes, the plugin requires DomoticZ version 3.87xx or greater and Python version 3.5 or higher.
+Make sure that you have __python3-dev package__ installed. More informations on [DomoticZ Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 In this first step, there are severals installation methodes depending on your Operating System :
 
@@ -25,13 +29,23 @@ In this first step, there are severals installation methodes depending on your O
 
 ## 2 - Manual Installation running on Linux
 
-* Go in your Domoticz directory using a command line and open the plugins directory.
-* Usually you should be under <code>domoticz/plugins</code>
-* Run: `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
-* It will create a folder 'Domoticz-Zigate'
-* Make the plugin.py file executable `chmod +x Domoticz-Zigate/plugin.py`
-* Restart Domoticz.
+### 2.A - Prerequisite
 
+* DomoticZ version aabove 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+* Python version above 3.7 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Git packet installated
+
+### 2.B - Procedure
+
+* Open the terminal
+* Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually <code>cd domoticz/plugins/</code>
+* Run the command : `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git`
+* The folder __Domoticz-Zigbee__ will be created in the plugins folder.
+* Go to the __Domoticz-Zigbee__ folder. The command is usually <code>cd Domoticz-Zigbee/</code>
+* Install the needed Python packet with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attr attrs aiohttp pyserial-asyncio`
+* Install the missing Python librairies with the command : `git submodule update --init --recursive`
+* Make the __plugin.py__ file executable with the command : `sudo chmod +x plugin.py`
+* Restart DomoticZ.
 
 ------------
 
