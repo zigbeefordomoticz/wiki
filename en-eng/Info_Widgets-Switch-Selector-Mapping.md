@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/zigbee4domoticz-logo.png" alt="Logo"></a>
+
 # Provide a Mapping between Generic Switch Selector and what we have found
+
+</br>
 
 
 
@@ -21,6 +25,6 @@
 | Aqara     | Xcube   | Select | Yes | Off|Shake|Alert|Free_Fall|Flip_90|Flip_180|Move|Tap|Clock_Wise|Anti_Clock_Wise |
 | Aqara     | Vibration | Select | No |   Off|Tilt|Vibrate|Free Fall |                             
 | INNR      | RC 110 mode scene | Select | No | Off|On|click_up|click_down|move_up|move_down|stop|scene1|scene2|scene3|scene4|scene5|scene6 |
-| INNR      | RC 110 mode light | Select | No | Off|On|Off|On|click_up|click_down|move_up|move_down|stop| 
+| INNR      | RC 110 mode light | Select | No | Off|On|Off|On|click_up|click_down|move_up|move_down|stop|
 | IKEA      | Switch | Select | No | Off|On|Push Up|Push Down|Release |
 | IKEA  | Round 5 but | Select | No | Off|ToggleOnOff|Left_click|Right_click|Up_click|Up_push|Up_release|Down_click|Down_push|Down_release|Right_push|Right_release|Left |
