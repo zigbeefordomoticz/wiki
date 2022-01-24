@@ -4,6 +4,8 @@
 
 __All the informations written here are depreciated now. Please refer to the [English Wiki](../en-eng/Home.md)__
 
+*We are looking for someone to help us to keep this wiki updated. Any help for translating from French or English will be appreciated.*
+
 <br><br>
 
 ![zigate.fr](../Images/ZiGate.png)
