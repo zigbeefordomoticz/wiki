@@ -24,7 +24,7 @@ Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
 A partir de maintenant, le terme ZiGate est remplacé par __coordinateur__, plus générique.
 
-Si vous avez déjà un plugin configuré avec une Zigate comme coordinateur, vous n'avez rien à faire le plugin doit continuer a fonctionner normalement.
+Si vous avez déjà un plugin configuré avec une ZiGate comme coordinateur, vous n'avez rien à faire le plugin doit continuer a fonctionner normalement.
 
 ## Le paramétrage
 
@@ -37,7 +37,6 @@ Il y a 4 modèles de coordinateurs possibles :
 
 
 
-## IMPORTANT Mise à jour du plugin 
+## IMPORTANT Mise à jour du plugin
 
-Le `git pull` n'est plus suffisant, il faut maintenant faire la commande `git pull --recurse-submodules`
-
+Le `git pull` n'est plus suffisant, il faut maintenant faire la commande `git pull --recurse-submodules`.
