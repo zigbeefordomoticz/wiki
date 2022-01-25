@@ -10,7 +10,7 @@ __Note :__ Ces explications sont valables pour une installation sous Linux.
 
 * Ouvrir le terminal
 * Aller dans le répertoire du plugin. La commande est normalement <code>cd domoticz/plugins/Domoticz-Zigate</code>
-* Exécuter la commande : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
+* Exécuter la commande : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git`
 * Installer les paquets python nécessaire avec la commande : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attr attrs aiohttp pyserial-asyncio`
 
 Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 : `git checkout beta6`
