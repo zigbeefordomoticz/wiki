@@ -1,6 +1,6 @@
 <a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
 
-# Explications passer de la version 5 à la version 6 plugin.
+# Explications pour passer de la version 5 à la version 6 plugin.
 
 </br>
 
@@ -24,6 +24,7 @@ Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
 A partir de maintenant, le terme ZiGate est remplacé par __coordinateur__, plus générique.
 
+Si vous avez déjà un plugin configuré avec une ZiGate comme coordinateur, vous n'avez rien à faire le plugin doit continuer a fonctionner normalement.
 
 ## Le paramétrage
 
@@ -31,13 +32,11 @@ Il y a 4 modèles de coordinateurs possibles :
 
 * ZiGate : aucune modification sur le fonctionnement du plugin existant
 * ZiGate + : aucune modification sur le fonctionnement du plugin existant
-* ZiGate (via zigpy) : le plugin communique avec la ZiGate avec les librairies zigpy. C'est uniquement expérimental et ne doit pas être utilisé.
-* Texas Instruments ZNP : pour les nouveaux coordinateurs
+* ZiGate (via zigpy) : le plugin communique avec la ZiGate avec les librairies zigpy. C'est uniquement expérimental et n'est pas supporté.
+* Texas Instruments ZNP : pour les nouveaux coordinateurs de marque TI
 
 
 
-## Mise à jour du plugin
+## IMPORTANT Mise à jour du plugin
 
-Le `git pull` n'est plus suffisant, il faut maintenant faire la commande `git pull --recurse-submodules`
-
-Redémarrer DomoticZ (le redémarrage du plugin n'est plus suffisant).
+Le `git pull` n'est plus suffisant, il faut maintenant faire la commande `git pull --recurse-submodules`.
