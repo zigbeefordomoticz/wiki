@@ -4,7 +4,7 @@
 
 </br>
 
-<a href="../fr-fr/Plugin_Version-6.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
+<img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo">
 [Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)
 
 
