@@ -9,7 +9,7 @@ Les coordinateurs peuvent avoir des différences. Plutôt que d'éditer toutes l
 |                  Fabricants                 | Coordinateurs | Firmwares ou puces          | Objets en tout | Objets en direct | Groupes |
 |:-------------------------------------------:|:-------------:|-----------------------------|:--------------:|:----------------:|:-------:|
 |          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware Legacy             |       40       |         ?        |    5    |
-|          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware : OptiPDM          |       70       |        20        |    5    |
+|          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware OptiPDM            |       70       |        20        |    5    |
 |          [Lixee](https://zigate.fr)         |   ZiGate V2   |                             |       200      |        20        |    15   |
 | [Electrolama](https://shop.electrolama.com) |  ZZH RF Stick | TI CC2652R1                 |        ?       |         ?        |    ?    |
 |                    Sonoff                   |   ZBDongle-P  | TI CC2652P + CP2102N        |       40       |        21        |    ?    |
