@@ -6,17 +6,18 @@
 
 Les coordinateurs peuvent avoir des différences. Plutôt que d'éditer toutes les pages du wiki pour rajouter les infos pour les nouveaux modèles, toutes les informations sont regroupées dans ce tableau :  
 
-|                  Fabricants                 | Coordinateurs | Firmwares ou puces          | Objets en tout | Objets en direct | Groupes |
-|:-------------------------------------------:|:-------------:|-----------------------------|:--------------:|:----------------:|:-------:|
-|          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware Legacy             |       40       |         ?        |    5    |
-|          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware OptiPDM            |       70       |        20        |    5    |
-|          [Lixee](https://zigate.fr)         |   ZiGate V2   |                             |       200      |        20        |    15   |
-| [Electrolama](https://shop.electrolama.com) |  ZZH RF Stick | TI CC2652R1                 |        ?       |         ?        |    ?    |
-|                    Sonoff                   |   ZBDongle-P  | TI CC2652P + CP2102N        |       40       |        21        |    ?    |
-|                                             |               | TI CC1352P/CC1352R          |        ?       |         ?        |         |
-|                                             |               | TI CC2531                   |       20*      |         ?        |    ?    |
-|                                             |               | TI CC2530 + CC2591/CC2592   |       20*      |         ?        |    ?    |
-|                                             |               | TI CC2652P/CC2652R/CC2652RB |        ?       |         ?        |    ?    |
+|                  Fabricants                 | Coordinateurs | Firmwares ou puces          | Objets en tout | Objets en direct | Groupes |   Commentaires  |
+|:-------------------------------------------:|:-------------:|-----------------------------|:--------------:|:----------------:|:-------:|:---------------:|
+|          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware Legacy             |       40       |         ?        |    5    |                 |
+|          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware : OptiPDM          |       70       |        20        |    5    |                 |
+|          [Lixee](https://zigate.fr)         |   ZiGate V2   |                             |       200      |        20        |    15   |                 |
+| [Electrolama](https://shop.electrolama.com) |  ZZH RF Stick | TI CC2652R1                 |        ?       |         ?        |    ?    |                 |
+|                    Sonoff                   |   ZBDongle-P  | TI CC2652P + CP2102N        |       40       |        21        |    ?    |                 |
+|                                             |               | TI CC1352P/CC1352R          |        ?       |         ?        |         |                 |
+|                                             |               | TI CC2531                   |       20       |         ?        |    ?    |  Non recommandé |
+|                                             |               | TI CC2530 + CC2591/CC2592   |       20       |         ?        |    ?    |  Non recommandé |
+|                                             |               | TI CC2652P/CC2652R/CC2652RB |        ?       |         ?        |    ?    |                 |
+|                     Xxxx                    |               |                             |                |                  |         | Non fonctionnel |
 
 Le * indique des utilisations non recommandées. [Plus d'infos](https://github.com/zigpy/zigpy-znp#hardware-requirements)
 
