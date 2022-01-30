@@ -14,10 +14,11 @@ Les coordinateurs peuvent avoir des différences. Plutôt que d'éditer toutes l
 | [Electrolama](https://shop.electrolama.com) |  ZZH RF Stick | TI CC2652R1                 |        ?       |         ?        |    ?    |
 |                    Sonoff                   |   ZBDongle-P  | TI CC2652P + CP2102N        |       40       |        21        |    ?    |
 |                                             |               | TI CC1352P/CC1352R          |        ?       |         ?        |         |
-|                                             |               | TI CC2531                   |       20       |         ?        |    ?    |
-|                                             |               | TI CC2530 + CC2591/CC2592   |       20       |         ?        |    ?    |
+|                                             |               | TI CC2531                   |       20*      |         ?        |    ?    |
+|                                             |               | TI CC2530 + CC2591/CC2592   |       20*      |         ?        |    ?    |
 |                                             |               | TI CC2652P/CC2652R/CC2652RB |        ?       |         ?        |    ?    |
 
+Le * indique des utilisations non recommandées. [Plus d'infos](https://github.com/zigpy/zigpy-znp#hardware-requirements)
 
 ## Nombre d'objets limité
 
