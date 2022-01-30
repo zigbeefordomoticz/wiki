@@ -59,7 +59,7 @@ There are 4 possible coordinator models:
 
 * ZiGate : no changes to the existing plugin.
 * ZiGate + : no changes to the existing plugin.
-* ZiGate (via zigpy) : the plugin communicates with the ZiGate withe the use of zigpy libraries.  communique avec la ZiGate avec les librairies zigpy. It's only experimental and not supported.
+* ZiGate (via zigpy) : the plugin communicates with the ZiGate withe the use of zigpy libraries. It's only experimental and not supported.
 * Texas Instruments ZNP : for new TI Brand Coordinators.
 
 
