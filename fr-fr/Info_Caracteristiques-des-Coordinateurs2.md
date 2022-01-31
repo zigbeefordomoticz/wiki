@@ -17,6 +17,7 @@ Les coordinateurs peuvent avoir des différences. Plutôt que d'éditer toutes l
 |                                             |               | TI CC2531                   |       20       |         ?        |    ?    |  Non recommandé |
 |                                             |               | TI CC2530 + CC2591/CC2592   |       20       |         ?        |    ?    |  Non recommandé |
 |                                             |               | TI CC2652P/CC2652R/CC2652RB |        ?       |         ?        |    ?    |                 |
+
 |                     Xxxx                    |               |                             |                |                  |         | Non fonctionnel |
 
 Le * indique des utilisations non recommandées. [Plus d'infos](https://github.com/zigpy/zigpy-znp#hardware-requirements)
