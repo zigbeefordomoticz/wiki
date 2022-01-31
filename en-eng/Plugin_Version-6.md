@@ -32,6 +32,7 @@ Remember to save :
 
 ## Procedure
 
+* Stop DomoticZ or at least the plugin
 * Open the terminal
 * Go in the plugin directory. The command is usually <code>cd domoticz/plugins/Domoticz-Zigate/</code>
 * Run the command : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
