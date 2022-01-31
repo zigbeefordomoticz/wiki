@@ -39,7 +39,6 @@ Remember to save :
 
 During the time of the development phase, it is necessary to move on to the new beta6 branch : `git checkout beta6`
 
-* Update the plugin with the command : `git pull`
 * Install the missing Python libraries with the command : `git submodule update --init --recursive`
 * Make the __plugin.py__ file executable with the command : `sudo chmod +x plugin.py`
 * Restart DomoticZ.
