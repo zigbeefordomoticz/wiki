@@ -11,6 +11,7 @@ __Note :__ Ces explications sont valables pour une installation sous Linux.
 * Aller dans le répertoire du plugin. La commande est normalement <code>cd domoticz/plugins/Domoticz-Zigate</code>
 * Exécuter la commande : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
 * Installer les paquets python nécessaire avec la commande : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attr attrs aiohttp pyserial-asyncio`
+* Lancer la commande `sudo chown -R pi:pi .` depuis le repertoire principal du plugin. Adapter `pi:pi`si necessaire au `user:group`utilisé
 
 Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 : `git checkout beta6`
 
@@ -30,7 +31,7 @@ Il y a 4 modèles de coordinateurs possibles :
 
 * ZiGate : aucune modification sur le fonctionnement du plugin existant
 * ZiGate + : aucune modification sur le fonctionnement du plugin existant
-* ZiGate (via zigpy) : le plugin communique avec la ZiGate avec les librairies zigpy. C'est uniquement expérimental et n'est pas supporté.
+* ZiGate (via zigpy) : le plugin communique avec la ZiGate par le biais des librairies zigpy. C'est uniquement expérimental et n'est pas supporté.
 * Texas Instruments ZNP : pour les nouveaux coordinateurs de marque TI
 
 
