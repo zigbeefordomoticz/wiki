@@ -36,7 +36,6 @@ Pensez à sauvegarder :
 
 Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 : `git checkout beta6`
 
-* Mettre à jour le plugin avec la commande : `git pull`
 * Installer les librairies Python manquantes avec la commande : `git submodule update --init --recursive`
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `sudo chmod +x plugin.py`
 * Redémarrer DomoticZ.
