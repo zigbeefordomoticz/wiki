@@ -5,9 +5,28 @@
 
 __Note :__ Ces explications sont valables pour une installation sous Linux.
 
+## Prérequis
+
+Avant de commencer la procédure, vous devez :
+
+* Avoir une version de DomoticZ 2021.1 au minimum.
+* Être sur la branche __Stable5__ du plugin. Commande `git checkout stable5` si besoin.
+* Avoir la dernière version du plugin. Commande `git pull` si besoin.
 
 
-* Arreter Domoticz, ou à minima arreter le plugin
+## Sauvegarde
+
+Même si la procédure a été testé plusieurs fois, il est possible que les choses ne se passent pas comme prévus.
+Il est recommandé de faire une sauvegarde complète pour pouvoir revenir en arrière si besoin.
+Pensez à sauvegarder :
+
+* DomoticZ
+* Les données du plugin
+* Le système d'exploitation
+
+
+## Procédure
+
 * Ouvrir le terminal
 * Arrêter DomoticZ. La commande est normalement : `sudo service domoticz.sh stop`
 * Aller dans le répertoire du plugin. La commande est normalement : `cd domoticz/plugins/Domoticz-Zigate`
@@ -33,7 +52,7 @@ Il y a 4 modèles de coordinateurs possibles :
 
 * ZiGate : aucune modification sur le fonctionnement du plugin existant
 * ZiGate + : aucune modification sur le fonctionnement du plugin existant
-* ZiGate (via zigpy) : le plugin communique avec la ZiGate par le biais des librairies zigpy. C'est uniquement expérimental et n'est pas supporté.
+* ZiGate (via zigpy) : le plugin communique avec la ZiGate par le biais des librairies zigpy. C'est uniquement expérimental et aucun support ne sera fait.
 * Texas Instruments ZNP : pour les nouveaux coordinateurs de marque TI
 
 
