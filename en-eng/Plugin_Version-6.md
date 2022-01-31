@@ -36,6 +36,7 @@ Remember to save :
 * Go in the plugin directory. The command is usually <code>cd domoticz/plugins/Domoticz-Zigate/</code>
 * Run the command : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
 * Install the necessary Python packages with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attr attrs aiohttp pyserial-asyncio`
+* Run the commande `sudo chown -R pi:pi .`from the plugin's home directory and if needed replace `pi:pi`accordingly to the user:group that you are using.
 
 During the time of the development phase, it is necessary to move on to the new beta6 branch : `git checkout beta6`
 
@@ -57,7 +58,7 @@ There are 4 possible coordinator models:
 
 * ZiGate : no changes to the existing plugin.
 * ZiGate + : no changes to the existing plugin.
-* ZiGate (via zigpy) : the plugin communicates with the ZiGate withe the use of zigpy libraries. It's only experimental and not supported.
+* ZiGate (via zigpy) : the plugin communicates with the ZiGate through zigpy libraries. It's only experimental and won't be supported.
 * Texas Instruments ZNP : for new TI Brand Coordinators.
 
 
