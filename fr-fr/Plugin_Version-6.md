@@ -7,6 +7,7 @@ __Note :__ Ces explications sont valables pour une installation sous Linux.
 
 
 
+* Arreter Domoticz, ou à minima arreter le plugin
 * Ouvrir le terminal
 * Arrêter DomoticZ. La commande est normalement : `sudo service domoticz.sh stop`
 * Aller dans le répertoire du plugin. La commande est normalement : `cd domoticz/plugins/Domoticz-Zigate`
