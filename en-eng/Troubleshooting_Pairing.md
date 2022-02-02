@@ -16,3 +16,5 @@ Verify that you try to follow recommended best practices to avoid pairing and/or
     - Note that some ZigBee devices are not fully compatible with all brands of ZigBee router devices. Xiaomi/Aqara devices are for example known not to work with ZigBee router devices from Centralite, General Electrics, Iris, Ledvance/OSRAM, LIGHTIFY/Sylvania, Orvibo, PEQ, Securifi, and SmartThings/Samsung. Better results can usually be achieved by using mains-powered devices IKEA and Nue/3A Home or dedicated DIY routing devices based on Texas Instruments CC253x/CC26x2 and XBee Series 2/3 ZigBee radios.
 - Be patient as the pairing of some ZigBee devices may require multiple attempts and you may sometimes need to try again and again.
     - Some devices, like example those from Xiaomi/Aqara, are known to not be 100% compliant with the standard ZigBee specifications and may therefore require many paring attempts over 10-20 minutes or longer.
+
+Written by Hedda
