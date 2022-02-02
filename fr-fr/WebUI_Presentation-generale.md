@@ -17,7 +17,7 @@ Voici la présentation générale de l'interface Web du plugin :
 
 Elle contient de gauche à droite :
 * les différents liens vers les pages
-* le bouton pour passer la ZiGate en mode Appairage permanent
+* le bouton pour passer le coordinateur en mode Appairage
 * le bouton de choix de la langue
 
 #### Le corps de la page
@@ -33,9 +33,12 @@ Il contient de gauche à droite :
 * La version du plugin. L'écriture en rouge indique qu'une mise à jour est disponible (valable uniquement pour les branches Stable et Béta).
 * Le firmware du coordinateur. L'écriture en rouge indique qu'une mise à jour est disponible.
 
+##### La couleur du pied de page
+
 Le bandeau est vert si le plugin fonctionne normalement.
-Le bandeau rouge indique un problème de connexion avec la ZiGate.
-Le bandeau jaune indique l'appairage d'un dispositif ou que la ZiGate est chargée. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
+Le bandeau est bleu lorsque le plugin est en train de démarrer.
+Le bandeau rouge indique un problème de connexion avec le coordinateur.
+Le bandeau jaune indique l'appairage d'un dispositif ou que le coordinateur est chargé. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
 ------------------------------------------------
 Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
