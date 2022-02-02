@@ -1,6 +1,6 @@
 # Les objets de la marque Muller Licht
 
-Certains objets de la marque Muller Licht ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque Muller Licht ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 
 **Cette page n'est pas une liste des objets compatibles.**
 
@@ -47,4 +47,4 @@ __Le sélecteur à 18 valeurs n'a aucune action sur la télécommande. Il s'agit
 
 #### Note
 
-Si les 4 groupes n'existent plus (ou on été supprimés), il est possible d'activer le paramètre __zigatePartOfGroupTint__ et redémarrer le plugin. Les groupes seront automatiquement recréés.
+Si les 4 groupes n'existent plus (ou on été supprimés), il est possible d'activer le paramètre __zigatePartOfGroupTint__ et redémarrer le Plugin. Les groupes seront automatiquement recréés.
