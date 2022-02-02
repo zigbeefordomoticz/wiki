@@ -15,7 +15,7 @@ Une application en python permet de visualiser en temps réel l'utilisation des 
 
 * __Arrêter le plugin__
 * Ouvrir un terminal
-* Aller dans le répertoire du plugin. La commande est normalement <code>cd domoticz/plugins/Domoticz-Zigbee</code>
+* Aller dans le répertoire du Plugin. La commande est normalement <code>cd domoticz/plugins/Domoticz-Zigbee</code>
 * Installer les paquets python nécessaire avec la commande : `sudo pip3 install jsonschema coloredlogs`
 * Lancer la commande : `python3  -m zigpy_znp.tools.energy_scan /dev/ttyUSB0` en remplacant /dev/ttyUSB0 par celui de votre coordinateur.
 
