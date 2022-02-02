@@ -17,4 +17,4 @@ Verify that you try to follow recommended best practices to avoid pairing and/or
 - Be patient as the pairing of some ZigBee devices may require multiple attempts and you may sometimes need to try again and again.
     - Some devices, like example those from Xiaomi/Aqara, are known to not be 100% compliant with the standard ZigBee specifications and may therefore require many paring attempts over 10-20 minutes or longer.
 
-Written by @Hedda
+Written by [@Hedda](https://github.com/Hedda)
