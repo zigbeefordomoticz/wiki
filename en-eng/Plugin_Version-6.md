@@ -36,7 +36,7 @@ Remember to save :
 * Stop DomoticZ. The command is usually : `sudo service domoticz.sh stop`
 * Go in the plugin directory. The command is usually `cd domoticz/plugins/Domoticz-Zigate/`
 * Run the command : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
-* Install the necessary Python packages with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attr attrs aiohttp pyserial-asyncio`
+* Install the necessary Python packages with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
 * Run the commande `sudo chown -R pi:pi .` (attention to take the dot at the end). If needed, replace __pi:pi__ accordingly to the __user:group__ that you are using.
 
 During the time of the development phase, it is necessary to move on to the new beta6 branch : `git checkout beta6`
