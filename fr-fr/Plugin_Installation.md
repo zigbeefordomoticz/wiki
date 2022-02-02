@@ -62,7 +62,7 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 * Exécuter la commande : `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git`
 * Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins
 * Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement <code>cd Domoticz-Zigbee/</code>
-* Installer les paquets python nécessaire avec la commande : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attr attrs aiohttp pyserial-asyncio`
+* Installer les paquets python nécessaire avec la commande : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
 * Installer les librairies python manquantes avec la commande : `git submodule update --init --recursive`
 * Rendre le fichier __plugin.py__ exécutable en lançant la commande : `sudo chmod +x plugin.py`
 * Redémarrer DomoticZ.
