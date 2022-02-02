@@ -6,11 +6,11 @@
 
 ## Configuration
 
-Le canal utilisé pour le réseau ZigBee dans la bande des 2,4 Ghz peut-être configuré dans l'interface d'administration du plugin.
+Le canal utilisé pour le réseau ZigBee dans la bande des 2,4 Ghz peut-être configuré dans l'interface d'administration du Plugin.
 
 Les réglages possibles sont :
 
-- Défaut : le plugin choisira un canal entre le 11 et le 26. Il peut varier en fonction des performances.
+- Défaut : le Plugin choisira un canal entre le 11 et le 26. Il peut varier en fonction des performances.
 - 11 ou 12 ou ... ou 26 : permet de définir un canal fixe
 
 **Pour enregistrer un changement de canal, les coordinateurs nécessitent un redémarrage logiciel.**
