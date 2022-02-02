@@ -1,12 +1,12 @@
 <a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
 
-# Bienvenue sur le wiki du plugin ZigBeeForDomoticZ pour DomoticZ !
+# Bienvenue sur le wiki du Plugin ZigBeeForDomoticZ pour DomoticZ !
 
 </br>
 
 <a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
-Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
+Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 
 ## Introduction
@@ -17,23 +17,23 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Installation
 
-* Étape 1 [Installation du plugin](Plugin_Installation.md)
-* Étape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
-* Étape 3 [Configuration du plugin](Plugin_Configuration.md)
+* Étape 1 [Installation du Plugin](Plugin_Installation.md)
+* Étape 2 [Paramétrage du Plugin](Plugin_Parametrage.md)
+* Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
 
 
-## Mises à jour du plugin
+## Mises à jour du Plugin
 
-* [Mettre à jour le plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
+* [Mettre à jour le Plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
 
 ## Sauvegardes
 
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Plugin_Sauvegardes.md)
+* [Sauvegardes à faire pour pouvoir réinstaller le Plugin sans perdre de données](Plugin_Sauvegardes.md)
 
 
-## L'interface Web du plugin
+## L'interface Web du Plugin
 
 * [Présentation générale](WebUI_Presentation-generale.md)
 * La section [Tableau de bord](WebUI_Tableau-de-bord.md)
@@ -58,7 +58,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Remplacer ou ré-initialiser la ZiGate](Tuto_Remplacer-zigate.md)
-* [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
+* [Mettre une authentification sur interface d'administration du Plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
 ## Tutoriels ZiGate
