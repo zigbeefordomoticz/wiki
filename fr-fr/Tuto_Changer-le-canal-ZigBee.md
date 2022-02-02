@@ -20,7 +20,7 @@ Il est cependant possible de fixer le canal pour :
 
 ## Méthode 1 : via l'assistant
 
-* Allez dans la section [Admin > Zigate](WebUI_Admin.md#zigate).
+* Allez dans la section [Admin > ZiGate](WebUI_Admin.md#zigate).
 * Sélectionner le nouveau canal dans la partie **Changement du canal de communication du coordinateur**.
 * Cliquer sur __Changer le canal__.
 

@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Ce tutoriel explique comment mettre en place une authentification pour accéder à l'interface web du plugin.
+Ce tutoriel explique comment mettre en place une authentification pour accéder à l'interface web du Plugin.
 La méthode utilise [Nginx](https://www.nginx.com) et un certificat [Let's Encrypt](https://letsencrypt.org/). Elle sera expliquée sur Raspbian (Raspberry) mais elle peut-être appliquée sur d'autres distributions Linux.
 
 **Il est recommandé d'utiliser un VPN ou une autre méthode sécurisée (VPS...) pour se connecter depuis l'extérieur au réseau local afin de ne pas exposer la page web sur internet.**

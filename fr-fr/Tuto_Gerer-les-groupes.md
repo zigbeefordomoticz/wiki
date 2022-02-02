@@ -6,9 +6,9 @@
 
 ## Introduction
 
-Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le plugin ZigBeeForDomoticZ.
+Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le Plugin ZigBeeForDomoticZ.
 
-Depuis la mise en place de l'interface Web avec la version 4.7 du plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
+Depuis la mise en place de l'interface Web avec la version 4.7 du Plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
 Des améliorations ont été apportées avec la version 4.9 pour rendre la gestion des groupes plus facile mais il reste encore du travail pour améliorer l'expérience utilisateur.
 
 ## Présentation
@@ -28,7 +28,7 @@ __Ce fonctionnement est complètement indépendant des groupes dans DomoticZ.__
 
 * Version du firmware de la ZiGate supérieur à 3.0f
 * Version du Plugin supérieur à 4.
-* Version de DomoticZ supérieur à 2020.1 (avec l'interface web du plugin activé)
+* Version de DomoticZ supérieur à 2020.1 (avec l'interface web du Plugin activé)
 
 
 ## Méthode
@@ -40,7 +40,7 @@ __Ce fonctionnement est complètement indépendant des groupes dans DomoticZ.__
 
 ![Settings for Group Management](../Images/SettingsGroup.png)
 
-* Redémarrer le plugin.
+* Redémarrer le Plugin.
 * Initialiser les groupes (voir ci-dessous).
 
 
@@ -96,7 +96,7 @@ Il y a deux possibilités :
 
 * Supprimer le widget correspondant au groupe dans DomoticZ.
 
-##### Depuis L'interface web du plugin
+##### Depuis L'interface web du Plugin
 
 * Aller dans la section [Management > Gestion des groupes](WebUI_Gestion.md#gestion-des-groupes).
 * Sélectionner le groupe à supprimer.
@@ -116,5 +116,5 @@ L'activation du groupe 0000 créera le dispositif et le widget correspondant dan
 
 ## Avertissements
 
-Le plugin a un TimeOut de 7 secondes lors d'une analyse du réseau. C'est à dire que si un objet ne répond pas, il attend 7 secondes avant de passer à la commande suivante.
-Lors d'une analyse, si des objets ne sont pas connectés sur le réseau ZigBee, le plugin va attendre 7 secondes avant de passer à l'objet suivant. Si vous essayez d'envoyer une autre commande pendant ce temps là, elle va être mise en attente.
+Le Plugin a un TimeOut de 7 secondes lors d'une analyse du réseau. C'est à dire que si un objet ne répond pas, il attend 7 secondes avant de passer à la commande suivante.
+Lors d'une analyse, si des objets ne sont pas connectés sur le réseau ZigBee, le Plugin va attendre 7 secondes avant de passer à l'objet suivant. Si vous essayez d'envoyer une autre commande pendant ce temps là, elle va être mise en attente.
