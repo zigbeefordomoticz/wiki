@@ -42,6 +42,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## How-to
 
+* [Build a ZigBee mesh network](HowTo_Build-a-ZigBee-network.md)
 * [Add a new devices](HowTo_Pairing-device.md)
 * [Remove a Device](HowTo_Remove-device.md)
 * [Device parameters](HowTo_Device-parameters.md)
@@ -84,6 +85,8 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Release 4.1](Release_4.1.md)
 
 ## In case of Trouble
+
+* [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
 
 1. Watch the log, you should fine some information if something is going wrong.
 1. Use one of the forum channels

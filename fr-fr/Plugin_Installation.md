@@ -86,6 +86,8 @@ Les informations concernant l’installation sur NAS Synology fonctionnent sous 
 ------------
 ## 4 - Installation sur NAS Synology avec Docker
 
+Rédaction par [@SylvainPer](https://github.com/SylvainPer)
+
 __Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
 
 ### 4.A - Avant propos
@@ -127,6 +129,8 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
 ## 5 - Installation sous Windows 10
+
+Rédaction par [@Pipiche38](https://github.com/pipiche38)
 
 __Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
 
