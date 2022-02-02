@@ -94,3 +94,5 @@ Quand tous vos objets sont appairés, arrêter votre coordinateur durant une vin
 Cette page est issue de [How to Build a Solid ZigBee Mesh](https://docs.hubitat.com/index.php?title=How_to_Build_a_Solid_ZigBee_Mesh).
 
 Mesh Network = Réseau maillé = topologie réseau décentralisée - [Voir Wikipedia Reseau maillé](https://fr.wikipedia.org/wiki/Topologie_mesh)
+
+Traduction par [@NewTurtle](https://github.com/NewTurtle)

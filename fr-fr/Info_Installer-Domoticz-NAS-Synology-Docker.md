@@ -121,3 +121,5 @@ chmod +x /usr/local/etc/rc.d/start-usb-drivers.sh
 ```
 
 (Merci Jadahl)
+
+Rédaction par [@SylvainPer](https://github.com/SylvainPer)
