@@ -32,7 +32,7 @@ Elle permet :
 * D'ajouter un objet avec l'assistant
 * D'activer le mode appairage du coordinateur
 * D'ajouter un objet via un routeur particulier
-* De faire un reset d'un objets
+* De réinitialiser les infos d'appairage d'un objet
 * De recréer les dispositifs dans DomoticZ
 
 Se reporter au tutoriel [Ajouter un nouvel objet](Tuto_Appairage-objet.md) pour plus d'informations.
@@ -47,11 +47,11 @@ Voici la page __Groupe__ de l'interface Web du plugin :
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 Le groupe que vous pourrez créer via ce plugin est vu dans DomoticZ comme un unique dispositif de type Switch et ce indépendamment du nombre d'objets composant le groupe.
-L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous les objets du groupe.
+L'action sur le Widget (DomoticZ) sera alors répercutée simultanément sur tous les objets du groupe.
 
 ### Utilisation
 
-Cette page permet de gérer les groupes d'objets dans le réseau zigBee.
+Cette page permet de gérer les groupes d'objets dans le réseau ZigBee.
 
 Elle permet :
 
