@@ -22,7 +22,7 @@ Il est recommandé de faire une sauvegarde complète pour pouvoir revenir en arr
 Pensez à sauvegarder :
 
 * DomoticZ
-* Les données du plugin
+* Les données du Plugin
 * Le système d'exploitation
 
 
