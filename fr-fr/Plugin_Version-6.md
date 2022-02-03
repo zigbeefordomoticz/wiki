@@ -50,7 +50,7 @@ sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pys
 sudo chown -R pi:pi .
 ```
 
-Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 : 
+Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 :
 ```
 git checkout beta6
 ```
@@ -67,6 +67,7 @@ sudo chmod +x plugin.py
 ```
 sudo service domoticz.sh start
 ```
+
 
 Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
