@@ -51,21 +51,46 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 
 ### 2.A - Prérequis
 
-* DomoticZ version supérieur à 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version supérieur à 3.7 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* DomoticZ version supérieur ou égal à 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+* Python version supérieur ou égal à 3.7 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le paquet Git doit être installé (voir [Installation de Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git))
 
 ### 2.B - Procédure
 
 * Ouvrir le terminal
-* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement <code>cd domoticz/plugins/</code>
-* Exécuter la commande : `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git`
-* Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins
-* Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement <code>cd Domoticz-Zigbee/</code>
-* Installer les paquets python nécessaire avec la commande : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
-* Installer les librairies python manquantes avec la commande : `git submodule update --init --recursive`
-* Rendre le fichier __plugin.py__ exécutable en lançant la commande : `sudo chmod +x plugin.py`
-* Redémarrer DomoticZ.
+* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement
+```
+cd domoticz/plugins/
+```
+* Exécuter la commande :
+```
+git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+```
+Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins
+* Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement
+```
+cd Domoticz-Zigbee/
+```
+* Installer les paquets Python nécessaires avec la commande :
+```
+sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+```
+* Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
+```
+sudo chown -R pi:pi .
+```
+* Installer les librairies Python manquantes avec la commande :
+```
+git submodule update --init --recursive
+```
+* Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+```
+sudo chmod +x plugin.py
+```
+* Redémarrer DomoticZ. La commande est normalement :
+```
+sudo service domoticz.sh restart
+```
 
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels (tout en bas).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
