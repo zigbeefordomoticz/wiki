@@ -1,4 +1,8 @@
+<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
+
 # Les mises à jour et les branches
+
+</br>
 
 ## Mettre à jour le Plugin
 
@@ -9,7 +13,9 @@ Le Plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 * Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
-* Lancer la commande `git pull`
+* Lancer la commande `git submodule update --init --recursive`
+
+__Note :__ Depuis la version 6, le git pull n'est plus suffisant.
 
 Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessous :
 
