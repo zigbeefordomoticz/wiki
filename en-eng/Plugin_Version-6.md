@@ -17,8 +17,6 @@ To upgrade from version 5 to version 6, the procedure is described below. __It i
 
 Testers for other operating systems are welcome!!
 
-__Note :__ This how-to is only validated for a Linux installation.
-
 
 ## Prerequisites
 
