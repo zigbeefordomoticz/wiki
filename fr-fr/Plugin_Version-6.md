@@ -83,7 +83,7 @@ Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
 A partir de maintenant, le terme ZiGate est remplacé par __coordinateur__, plus générique.
 
-Si vous avez déjà un plugin configuré avec une ZiGate comme coordinateur, vous n'avez rien à faire le plugin doit continuer a fonctionner normalement.
+Si vous avez déjà un plugin configuré avec une ZiGate comme coordinateur, vous n'avez rien à faire le plugin doit continuer à fonctionner normalement.
 
 ## Le paramétrage
 
