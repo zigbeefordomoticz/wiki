@@ -22,6 +22,8 @@ In this first step, there are severals installation methodes depending on your O
 
 ## 1 - Python Plugin Manager installation running on Linux
 
+__This procedure is not yet updated to be compatible with version 6 of the plugin.__
+
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
 * Just search for "Zigbee for domoticz Plugin" entry and add it.
 
@@ -29,14 +31,6 @@ In this first step, there are severals installation methodes depending on your O
 ------------
 
 ## 2 - Manual Installation running on Linux
-
-
-* Go in your Domoticz directory using a command line and open the plugins directory.
-* Usually you should be under <code>domoticz/plugins</code>
-* Run: `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
-* It will create a folder 'Domoticz-Zigbee'
-* Make the plugin.py file executable `chmod +x Domoticz-Zigbee/plugin.py`
-* Restart Domoticz.
 
 ### 2.A - Prerequisite
 
@@ -46,20 +40,49 @@ In this first step, there are severals installation methodes depending on your O
 
 ### 2.B - Procedure
 
-
 * Open the terminal
-* Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually <code>cd domoticz/plugins/</code>
-* Run the command : `git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git`
-* The folder __Domoticz-Zigbee__ will be created in the plugins folder.
-* Go to the __Domoticz-Zigbee__ folder. The command is usually <code>cd Domoticz-Zigbee/</code>
-* Install the needed Python packet with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
-* Install the missing Python libraries with the command : `git submodule update --init --recursive`
-* Make the __plugin.py__ file executable with the command : `sudo chmod +x plugin.py`
-* Restart DomoticZ.
+* Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
+```
+cd domoticz/plugins/
+```
+* Run the command :
+```
+git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+```
+The folder __Domoticz-Zigbee__ will be created in the plugins folder.
+* Go to the __Domoticz-Zigbee__ folder. The command is usually :
+```
+cd Domoticz-Zigbee/
+```
+* Install the needed Python packet with the command :
+```
+sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+```
+* Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
+```
+sudo chown -R pi:pi .
+```
+* Install the missing Python libraries with the command :
+```
+git submodule update --init --recursive
+```
+* Make the __plugin.py__ file executable with the command :
+```
+sudo chmod +x plugin.py
+```
+* Restart DomoticZ. The command is usually :
+```
+sudo service domoticz.sh restart
+```
+
+The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom).
+Move on to [step 2 Plugin settings](Plugin_Seetings.md).
 
 ------------
 
 ## 3 - Installation running on Synology NAS
+
+__This procedure is not yet updated to be compatible with version 6 of the plugin.__
 
 The purpose of this document is to help you in the installation of the Zigate plugin on a Synlology platform
 
@@ -119,6 +142,8 @@ the best is to add it in the middle of the file, so you don't break the all file
 ------------
 
 ## 4 - Installation running on Docker
+
+__This procedure is not yet updated to be compatible with version 6 of the plugin.__
 
 ### 1. Docker Install
 
@@ -249,6 +274,8 @@ docker exec -it Domoticz bash
 ------------
 
 ## 5 - Installation running on Windows 10
+
+__This procedure is not yet updated to be compatible with version 6 of the plugin.__
 
 [Refer to french page](../fr-fr/Plugin_Installation.md#5---installation-sous-windows-10)
 
