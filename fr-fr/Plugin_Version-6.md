@@ -3,7 +3,15 @@
 
 </br>
 
-__Note :__ Ces explications sont valables pour une installation sous Linux.
+## Informations concernant la phase Béta (de test)
+
+Le wiki à consulter est disponible sur [la branche du wiki](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Home.md). Ce wiki deviendra la version par défaut lorsque la version 6 sortira comme version stable.
+
+Pour __une nouvelle installation du plugin__, merci de suivre [la procédure d'installation sur la branche zigpy](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Plugin_Installation.md#2---installation-manuelle-sous-linux). Pour le moment, seule l'installation manuelle sous Linux a été testée et validée.
+
+Pour passer de la version 5 à la version 6, la procédure est décrite ci-dessous. __Elle n'est valable que pour une installation manuelle sous Linux.
+
+Les testeurs pour les autres systèmes d'exploitation sont les bienvenus !!
 
 ## Prérequis
 
