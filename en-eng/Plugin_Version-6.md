@@ -7,6 +7,16 @@
 [Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)
 
 
+## Informations about Beta
+
+The Wiki you now have to look at is on [the zigpy branch](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/en-eng/Home.md). This wiki will become the default version when version 6 is released as a stable version.
+
+To make a __new plugin install__, please follow [the install procedure on zigpy branch](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/en-eng/Plugin_Installation.md#2---manual-installation-running-on-linux). For the moment, only the manual installation on Linux has been tested and validated.
+
+To upgrade from version 5 to version 6, the procedure is described below. __It is only valid for manual installation on Linux__.
+
+Testers for other operating systems are welcome!!
+
 __Note :__ This how-to is only validated for a Linux installation.
 
 
