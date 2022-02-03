@@ -62,6 +62,12 @@ sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pys
 ```
 sudo chown -R pi:pi .
 ```
+
+During the time of the development phase, it is necessary to move on to the new beta6 branch :
+```
+git checkout beta6
+```
+
 * Install the missing Python libraries with the command :
 ```
 git submodule update --init --recursive
