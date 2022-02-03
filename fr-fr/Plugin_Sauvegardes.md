@@ -1,6 +1,6 @@
 <a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
 
-# Sauvegardes du plugin
+# Sauvegardes du Plugin
 
 </br>
 
@@ -8,7 +8,7 @@ Cette page présente les éléments à sauvegarder en prévision d'une réinstal
 
 Le dossier du plugin ZigBeeForDomoticZ contient des fichiers __critiques__ qu'il faut sauvegarder en plus de la base de données de DomoticZ `domoticz.db`.
 
-En plus de sauvegarder le plugin, pensez à sauvegarder votre coordinateur. Voir les guides sur : [https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) ****
+En plus de sauvegarder le plugin, pensez à sauvegarder votre coordinateur. Voir les guides sur : [https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
 
 ## Avant-propos
 
