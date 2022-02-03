@@ -32,18 +32,18 @@ Remember to save :
 
 ## Procedure
 
-* Open the terminal
-* Stop DomoticZ. The command is usually : `sudo service domoticz.sh stop`
-* Go in the plugin directory. The command is usually `cd domoticz/plugins/Domoticz-Zigate/`
-* Run the command : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
-* Install the necessary Python packages with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
-* Run the commande `sudo chown -R pi:pi .` (attention to take the dot at the end). If needed, replace __pi:pi__ accordingly to the __user:group__ that you are using.
+1. Open the terminal
+2. Stop DomoticZ. The command is usually : `sudo service domoticz.sh stop`
+3. Go in the plugin directory. The command is usually `cd domoticz/plugins/Domoticz-Zigate/`
+4. Run the command : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
+5 Install the necessary Python packages with the command : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
+6. Run the commande `sudo chown -R pi:pi .` (attention to take the dot at the end). If needed, replace __pi:pi__ accordingly to the __user:group__ that you are using.
 
 During the time of the development phase, it is necessary to move on to the new beta6 branch : `git checkout beta6`
 
-* Install the missing Python libraries with the command : `git submodule update --init --recursive`
-* Make the __plugin.py__ file executable with the command : `sudo chmod +x plugin.py`
-* Restart DomoticZ. The command is usually : `sudo service domoticz.sh start`
+7. Install the missing Python libraries with the command : `git submodule update --init --recursive`
+8. Make the __plugin.py__ file executable with the command : `sudo chmod +x plugin.py`
+9. Restart DomoticZ. The command is usually : `sudo service domoticz.sh start`
 
 
 Normally, the name of the plugin in hardware has become __ZigBee for DomoticZ__.
