@@ -57,8 +57,8 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 
 ### 2.B - Procédure
 
-* Ouvrir le terminal
-* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement
+* Ouvrir le terminal.
+* Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement :
 ```
 cd domoticz/plugins/
 ```
@@ -66,8 +66,8 @@ cd domoticz/plugins/
 ```
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
-Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins
-* Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement
+Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins.
+* Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
 ```
 cd Domoticz-Zigbee/
 ```
