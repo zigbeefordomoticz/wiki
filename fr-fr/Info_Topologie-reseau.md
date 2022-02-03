@@ -4,8 +4,8 @@
 
 </br>
 
- Le plugin permet de générer un rapport sur la topologie du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
-__Important :__ Le filtrage des paquets implémenté utilise la valeur LQI
+ Le Plugin permet de générer un rapport sur la topologie du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
+__Important :__ Le filtrage des paquets implémenté utilise la valeur LQI.
 
 
 | LQI range | Coût |

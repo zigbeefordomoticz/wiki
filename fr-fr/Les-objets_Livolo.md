@@ -1,6 +1,6 @@
 # Les objets de la marque Livolo
 
-Certains objets de la marque Livolo ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque Livolo ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 
 **Cette page n'est pas une liste des objets compatibles.**
 
@@ -18,7 +18,7 @@ Livolo semble __ne pas suivre__ les standard ZigBee. Il en résulte :
 
 * L'interrupteur Livolo (simple ou double) __peut seulement être appairer sur le canal 26__. Une méthode est décrite plus bas pour mettre l'interrupteur sur le canal 11.
 * Firmware 3.1b de la ZiGate
-* Version du plugin 4.6 ou supérieure
+* Version du Plugin 4.6 ou supérieure
 * __Obligation de laisser la ZiGate en mode appairage en permanence.__
 
 
@@ -32,7 +32,7 @@ Après un moment, l'interrupteur devrait être appairer et deux Widgets seront c
 
 **Information :**
 
-Que l'interrupteur soit à simple ou à double commande, il sera identifier comme un __TI0001__. C'est la raison pour laquelle le plugin ne peut pas identifier le type de l'interrupteur. Même si vous avez un interrupteur simple, 2 Widgets seront crées. Il est possible de supprimer le Widget qui ne sera pas utilisé.
+Que l'interrupteur soit à simple ou à double commande, il sera identifier comme un __TI0001__. C'est la raison pour laquelle le Plugin ne peut pas identifier le type de l'interrupteur. Même si vous avez un interrupteur simple, 2 Widgets seront crées. Il est possible de supprimer le Widget qui ne sera pas utilisé.
 
 ## Forcer le canal 11
 

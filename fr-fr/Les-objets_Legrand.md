@@ -4,7 +4,7 @@
 
 </br>
 
-Certains objets de la marque Legrand ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque Legrand ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 
 **Cette page n'est pas une liste des objets compatibles.**
 

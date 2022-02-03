@@ -4,7 +4,17 @@
 
 </br>
 
-__Note :__ Ces explications sont valables pour une installation sous Linux.
+
+## Informations concernant la phase Béta (de test)
+
+Le wiki à consulter est disponible sur [la branche du wiki](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Home.md). Ce wiki deviendra la version par défaut lorsque la version 6 sortira comme version stable.
+
+Pour __une nouvelle installation du plugin__, merci de suivre [la procédure d'installation sur la branche zigpy](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Plugin_Installation.md#2---installation-manuelle-sous-linux). Pour le moment, seule l'installation manuelle sous Linux a été testée et validée.
+
+Pour passer de la version 5 à la version 6, la procédure est décrite ci-dessous. __Elle n'est valable que pour une installation manuelle sous Linux__.
+
+Les testeurs pour les autres systèmes d'exploitation sont les bienvenus !!
+
 
 ## Prérequis
 
@@ -22,30 +32,58 @@ Il est recommandé de faire une sauvegarde complète pour pouvoir revenir en arr
 Pensez à sauvegarder :
 
 * DomoticZ
-* Les données du plugin
+* Les données du Plugin
 * Le système d'exploitation
 
 
 ## Procédure
 
 * Ouvrir le terminal
-* Arrêter DomoticZ. La commande est normalement : `sudo service domoticz.sh stop`
-* Aller dans le répertoire du plugin. La commande est normalement : `cd domoticz/plugins/Domoticz-Zigate`
-* Exécuter la commande : `git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee`
-* Installer les paquets Python nécessaires avec la commande : `sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio`
-* Exécuter la commande `sudo chown -R pi:pi .` (attention à bien prendre le point à la fin). Adapter __pi:pi__ si nécessaire au __user:group__ utilisé.
+* Arrêter DomoticZ. La commande est normalement :
+```
+sudo service domoticz.sh stop
+```
+* Aller dans le répertoire du plugin. La commande est normalement :
+```
+cd domoticz/plugins/Domoticz-Zigate
+```
+* Exécuter la commande :
+```
+git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+```
+* Installer les paquets Python nécessaires avec la commande :
+```
+sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+```
+* Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
+```
+sudo chown -R pi:pi .
+```
 
-Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 : `git checkout beta6`
+Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 :
+```
+git checkout beta6
+```
 
-* Installer les librairies Python manquantes avec la commande : `git submodule update --init --recursive`
-* Rendre le fichier __plugin.py__ exécutable en lançant la commande : `sudo chmod +x plugin.py`
-* Redémarrer DomoticZ. La commande est normalement : `sudo service domoticz.sh start`
+* Installer les librairies Python manquantes avec la commande :
+```
+git submodule update --init --recursive
+```
+* Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+```
+sudo chmod +x plugin.py
+```
+* Redémarrer DomoticZ. La commande est normalement :
+```
+sudo service domoticz.sh start
+```
+
 
 Normalement, le nom du plugin dans matériel est devenu __ZigBee for DomoticZ__.
 
 A partir de maintenant, le terme ZiGate est remplacé par __coordinateur__, plus générique.
 
-Si vous avez déjà un plugin configuré avec une ZiGate comme coordinateur, vous n'avez rien à faire le plugin doit continuer a fonctionner normalement.
+Si vous avez déjà un plugin configuré avec une ZiGate comme coordinateur, vous n'avez rien à faire le plugin doit continuer à fonctionner normalement.
 
 ## Le paramétrage
 

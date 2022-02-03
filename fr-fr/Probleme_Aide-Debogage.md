@@ -61,5 +61,5 @@ Il faut vérifier qu'il y a des messages entrants, s'ils sont correctement trait
 ## Adresse réseau et IEEE
 
 Pour trouver l'adresse réseau ou l'IEEE d'un objet :
-  * via DomoticZ: dans la colonne ID
+  * via DomoticZ : dans la colonne ID
   * via le Plugin : dans la section Gestion des objets

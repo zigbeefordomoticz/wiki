@@ -1,13 +1,13 @@
 # Les mises à jour et les branches
 
-## Mettre à jour le plugin
+## Mettre à jour le Plugin
 
-Le plugin est régulièrement mis à jour que ce soit pour de la correction de bug ou l'ajout de nouvelle fonctionnalités.
+Le Plugin est régulièrement mis à jour que ce soit pour de la correction de bug ou l'ajout de nouvelle fonctionnalités.
 
 
 ### Procédure
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
+* Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
 * Lancer la commande `git pull`
 
@@ -33,9 +33,9 @@ Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire le
 ## Les branches de mise à jour
 
 
-Le plugin évolue en permanence suite à la correction de bug, l'amélioration du plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du plugin est disponible sous différents canaux de mise à jour.
+Le Plugin évolue en permanence suite à la correction de bug, l'amélioration du Plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du Plugin est disponible sous différents canaux de mise à jour.
 
-Au fur et à mesure des évolutions de DomoticZ, le plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
+Au fur et à mesure des évolutions de DomoticZ, le Plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du Plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
 
 Les différentes branches sont :
 
@@ -49,7 +49,7 @@ C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2).
 | Compatibilité minimale | DomoticZ 2020.1 |
 | Compatibilité maximale | Dernière version de DomoticZ |
 
-__Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de renseigner des nouveaux paramètres dans le [Paramétrage du plugin](Plugin_Parametrage.md) sinon, vous aurez une erreur de communication au lancement du plugin.
+__Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de renseigner des nouveaux paramètres dans le [Paramétrage du plugin](Plugin_Parametrage.md) sinon, vous aurez une erreur de communication au lancement du Plugin.
 
 #### stable
 
@@ -95,7 +95,7 @@ Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau mat�
 ### Connaître sa branche
 
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 * Lancer la commande `git status`
 
 
@@ -103,7 +103,7 @@ Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau mat�
 
 Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de faire des modifications afin de pouvoir revenir en arrière en cas de problèmes.
 
-* Ouvrir un terminal et aller jusqu'au répertoire du plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
+* Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 
 * Lancer la commande `git pull`
 
@@ -114,7 +114,7 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 
 __Attention aux compatibilités avec DomoticZ lors du changement de branche.__
 
-[Poursuivre sur la mise à jour du plugin](Home.md#mises-%C3%A0-jour-du-plugin)
+[Poursuivre sur la mise à jour du Plugin](Home.md#mises-%C3%A0-jour-du-plugin)
 
 
 ### Revenir à une version précédente
