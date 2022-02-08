@@ -39,6 +39,7 @@ Pensez à sauvegarder :
 ## Procédure
 
  Ouvrir le terminal.
+ 
 1- Arrêter DomoticZ. La commande est normalement :
 ```
 sudo service domoticz.sh stop
