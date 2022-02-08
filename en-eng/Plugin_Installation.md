@@ -40,43 +40,44 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
 ### 2.B - Procedure
 
-* Open the terminal
-* Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
+Open the terminal
+
+1- Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
 ```
 cd domoticz/plugins/
 ```
-* Run the command :
+2- Run the command :
 ```
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 The folder __Domoticz-Zigbee__ will be created in the plugins folder.
-* Go to the __Domoticz-Zigbee__ folder. The command is usually :
+3- Go to the __Domoticz-Zigbee__ folder. The command is usually :
 ```
 cd Domoticz-Zigbee/
 ```
-* Install the needed Python packet with the command :
+4- Install the needed Python packet with the command :
 ```
 sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
 ```
-* Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
+5- Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
 ```
 sudo chown -R pi:pi .
 ```
 
-During the time of the development phase, it is necessary to move on to the new beta6 branch :
+6- During the time of the development phase, it is necessary to move on to the new beta6 branch :
 ```
 git checkout beta6
 ```
 
-* Install the missing Python libraries with the command :
+7- Install the missing Python libraries with the command :
 ```
 git submodule update --init --recursive
 ```
-* Make the __plugin.py__ file executable with the command :
+8- Make the __plugin.py__ file executable with the command :
 ```
 sudo chmod +x plugin.py
 ```
-* Restart DomoticZ. The command is usually :
+9- Restart DomoticZ. The command is usually :
 ```
 sudo service domoticz.sh restart
 ```
