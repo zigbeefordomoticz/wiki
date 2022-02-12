@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Info - Généralités sur le wiki
-
-</br>
 
 Le but de ce wiki est de fournir le plus d'informations possible sur l'utilisation du Plugin.
 

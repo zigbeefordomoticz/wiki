@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Sauvegardes du Plugin
-
-</br>
 
 Cette page présente les éléments à sauvegarder en prévision d'une réinstallation afin de ne pas perdre de données.
 

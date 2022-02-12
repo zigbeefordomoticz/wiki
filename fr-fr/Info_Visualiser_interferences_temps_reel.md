@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Visualiser les interférences en temps réel
-
-</br>
 
 Une application en python permet de visualiser en temps réel l'utilisation des fréquences.
 

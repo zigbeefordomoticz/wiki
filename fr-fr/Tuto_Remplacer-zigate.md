@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Tutoriel - Remplacer ou ré-initialiser la ZiGate
-
-</br>
 
 Ce tutoriel explique comment remplacer ou ré-initialiser sa ZiGate.
 

@@ -14,4 +14,4 @@ __Attention :__ Il faut bien choisir le firmware en fonction de votre modèle de
 
 ## Les fichiers firmwares
 
-A partir de mai 2021, les différents firmwares sont stockés dans le dossier __Zigate-Firmware__ du plugin.
+A partir de mai 2021, les différents firmwares sont stockés dans le dossier __Zigate-Firmware__ du plugin. 

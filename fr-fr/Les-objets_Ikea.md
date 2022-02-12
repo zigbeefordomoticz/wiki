@@ -1,4 +1,4 @@
-# Les objets de la marque Ikea
+# Les objets de la marque Ikea 
 
 Certains objets de la marque Ikea ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 
