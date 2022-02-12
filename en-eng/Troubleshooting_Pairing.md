@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Troubleshooting - Best practices to avoid pairing/connection difficulties
-
-</br>
 
 Verify that you try to follow recommended best practices to avoid pairing and/or connection issues:
 

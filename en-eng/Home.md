@@ -1,10 +1,6 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Welcome to the plugin ZigBeeForDomoticZ wiki !
 
-</br>
-
-<a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
+[Lien vers le Wiki en français](../fr-fr/Home.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
 
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.

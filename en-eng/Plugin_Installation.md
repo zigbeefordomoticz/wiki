@@ -1,9 +1,4 @@
-
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # ZigBeeForDomoticZ plugin installation
-
-</br>
 
 In every installation methodes, the plugin requires DomoticZ version 3.87xx or greater and Python version 3.5 or higher.
 Make sure that you have __python3-dev package__ installed. More informations on [DomoticZ Python page](https://www.domoticz.com/wiki/Using_Python_plugins).

@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # HowTo - Build a good ZigBee mesh network
-
-</br>
 
 ## Best practices for optimizing reception and transmission to improve ZigBee network range and coverage
 

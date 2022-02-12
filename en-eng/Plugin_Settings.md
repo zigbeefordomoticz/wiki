@@ -1,7 +1,4 @@
-
-
 # DomoticZ Plugin Menu Description
-
 
 ## Overview
 
