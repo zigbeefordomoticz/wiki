@@ -32,7 +32,7 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
 
 * Reset of Shutter and Remote command
 
-   1. Check that Zigate is not in pairing mode.
+   1. Check that Coordinator is not in pairing mode.
    1. 5 times on R (back side of remote)
    
    Remote will flash RED then GREEN
@@ -42,7 +42,7 @@ The pairing process is well documented on [Zigate.fr]( https://zigate.fr/2018/02
    You can check that the remote command the shutter. In case not, please consult the Profalux documentation
    
 * Pairing of Shutter
-   1. Switch Zigate to pairing mode ( Permit to Join, or use the Provisionning function from Web Admin)
+   1. Switch Coordinator to pairing mode ( Permit to Join, or use the Provisionning function from Web Admin)
       ___Any Shutter part of the network will do an Up/Down___
       
    1. Press once on R (back side of remote)
@@ -110,9 +110,12 @@ Cluster Out 8: fc21
 
 * Configure Reporting can be set on Cluster LevelControl (0x0008) attribute (0x0000)
 
-The remote is very basic and it is not adviced to try doing anything with it. During the pairing process, the Shutter and the Remote will announced themselve, just drop the remote, but keep it paired on Zigate as both VR and Remote must be part of the same network.
+* The remote is very basic and it is not adviced to try doing anything with it. During the pairing process, the Shutter and the Remote will announced themselve, just drop the remote, but keep it paired on Coordinator as both VR and Remote must be part of the same network.
 
-* If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... ) Otherwise , Profalux informed me that depending on the Firmware version of Zoe, they must be pgraded before been paired with a non-Profalux controler. For that the best is to contact Profalux for getting the upgrade.
+* Never try to bind the remote with the Coordinator
+
+* If you have a ZOE central remote, you can create groups, and those groupes are created in the range of 0x8000 - 0x8... ) Otherwise , Profalux informed me that depending on the Firmware version of Zoe, they must be pgraded before been paired with a non-Profalux controler. 
+For that the best is to contact Profalux for getting the upgrade.
 
 
 
