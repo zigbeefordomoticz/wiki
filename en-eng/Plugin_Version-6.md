@@ -53,6 +53,7 @@ cd domoticz/plugins/Domoticz-Zigate
 3- Run the command :
 ```
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+git config --add submodule.recurse true
 ```
 4- Install the necessary Python packages with the command :
 ```
