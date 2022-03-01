@@ -10,35 +10,25 @@ Make sure that you have __python3-dev package__ installed. More informations on 
 
 In this first step, there are severals installation methodes depending on your Operating System :
 
-* 1 - [Python Plugin Manager installation running on Linux](#1---python-plugin-manager-installation-running-on-linux)
-* 2 - [Manual Installation running on Linux](#2---manual-installation-running-on-linux)
+* 1 - [Manual Installation running on Linux](#1---manual-installation-running-on-linux)
+* 2 - [Python Plugin Manager installation running on Linux](#2---python-plugin-manager-installation-running-on-linux)
 * 3 - [Installation running on Synology NAS](#3---installation-running-on-synology-nas)
 * 4 - [Installation running on Docker](4---installation-running-on-docker)
 * 5 - [Installation running on Windows 10](#5---installation-running-on-windows-10)
 * 6 - [PiZigate Installation on RPi3B+ running on Raspbian (Linux)](#6---pizigate-installation-on-rpi3b-running-on-raspbian-linux)
 * 7 - [PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)](#7---pizigate-installation-on-rpi3b-running-on-fedora-29-linux)
 
-------------
-
-## 1 - Python Plugin Manager installation running on Linux
-
-__This procedure is not yet updated to be compatible with version 6 of the plugin.__
-
-* If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
-* Just search for "Zigbee for domoticz Plugin" entry and add it.
-
 
 ------------
+## 1 - Manual Installation running on Linux
 
-## 2 - Manual Installation running on Linux
-
-### 2.A - Prerequisite
+### 1.A - Prerequisite
 
 * DomoticZ version aabove 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
 * Python version above 3.7 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Git packet installated
 
-### 2.B - Procedure
+### 1.B - Procedure
 
 Open the terminal
 
@@ -88,8 +78,18 @@ sudo service domoticz.sh restart
 The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom).
 Move on to [step 2 Plugin settings](Plugin_Seetings.md).
 
-------------
 
+------------
+## 2 - Python Plugin Manager installation running on Linux
+
+__This procedure is not yet updated to be compatible with version 6 of the plugin.__
+
+* If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
+* Just search for "Zigbee for domoticz Plugin" entry and add it.
+
+
+
+------------
 ## 3 - Installation running on Synology NAS
 
 __This procedure is not yet updated to be compatible with version 6 of the plugin.__
