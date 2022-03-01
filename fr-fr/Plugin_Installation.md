@@ -5,8 +5,8 @@ Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 3
 
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
-* 1 - [Installation via Python Plugin Manager sous Linux](#1---installation-du-plugin-via-python-plugin-manager-sous-linux)
-* 2 - [Installation manuelle sous Linux](#2---installation-manuelle-sous-linux)
+* 1 - [Installation manuelle sous Linux](#1---installation-manuelle-sous-linux)
+* 2 - [Installation via Python Plugin Manager sous Linux](#2---installation-du-plugin-via-python-plugin-manager-sous-linux)
 * 3 - [Installation sur NAS Synology avec Jadahl](#3---installation-sur-nas-synology-avec-jadahl) Plus à jour > préférer Docker
 * 4 - [Installation sur NAS Synology avec Docker](#4---installation-sur-nas-synology-avec-docker)
 * 5 - [Installation sous Windows 10](#5---installation-sous-windows-10)
@@ -20,42 +20,19 @@ __Info :__ Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethern
 
 
 ------------
-
-## 1 - Installation du plugin via Python Plugin Manager sous Linux
-
-__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
-
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md).
-
-### 1.A - Prérequis
-
-* DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version supérieur à 3.5 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
-* Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
-
-### 1.B - Procédure
-
-* Aller dans le plugin __Python Plugin Manager__ (pp-manager)
-* Rechercher __ZiGate Plugin__ et ajouter le.
-
-Le plugin ZiGate doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
-
-------------
-
-## 2 - Installation manuelle sous Linux
+## 1 - Installation manuelle sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux : Raspberry, Debian, Ubuntu, etc. Il sera nécessaire de modifier les lignes de commandes en fonction de votre système.
 
 __Important :__ Cette méthode d’installation n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
-### 2.A - Prérequis
+### 1.A - Prérequis
 
 * DomoticZ version supérieur ou égal à 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
 * Python version supérieur ou égal à 3.7 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le paquet Git doit être installé (voir [Installation de Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git))
 
-### 2.B - Procédure
+### 1.B - Procédure
 
 Ouvrir le terminal.
 
@@ -103,6 +80,28 @@ sudo service domoticz.sh restart
 ```
 
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels (tout en bas).
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
+
+
+------------
+## 2 - Installation du plugin via Python Plugin Manager sous Linux
+
+__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
+
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md).
+
+### 2.A - Prérequis
+
+* DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+* Python version supérieur à 3.5 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
+
+### 2.B - Procédure
+
+* Aller dans le plugin __Python Plugin Manager__ (pp-manager)
+* Rechercher __ZiGate Plugin__ et ajouter le.
+
+Le plugin ZiGate doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 
