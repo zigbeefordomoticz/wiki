@@ -39,7 +39,7 @@ Pensez à sauvegarder :
 ## Procédure
 
  Ouvrir le terminal.
- 
+
 1- Arrêter DomoticZ. La commande est normalement :
 ```
 sudo service domoticz.sh stop
@@ -48,9 +48,10 @@ sudo service domoticz.sh stop
 ```
 cd domoticz/plugins/Domoticz-Zigate
 ```
-3- Exécuter la commande :
+3- Exécuter les commandes :
 ```
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+git config --add submodule.recurse true
 ```
 4- Installer les paquets Python nécessaires avec la commande :
 ```
