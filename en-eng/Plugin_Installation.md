@@ -68,16 +68,19 @@ sudo chown -R pi:pi .
 ```
 git checkout beta6
 ```
-
-7- Install the missing Python libraries with the command :
+7- Run the command :
+```
+git config --add submodule.recurse true
+```
+8- Install the missing Python libraries with the command :
 ```
 git submodule update --init --recursive
 ```
-8- Make the __plugin.py__ file executable with the command :
+9- Make the __plugin.py__ file executable with the command :
 ```
 sudo chmod +x plugin.py
 ```
-9- Restart DomoticZ. The command is usually :
+10- Restart DomoticZ. The command is usually :
 ```
 sudo service domoticz.sh restart
 ```
