@@ -45,10 +45,9 @@ sudo service domoticz.sh stop
 ```
 cd domoticz/plugins/Domoticz-Zigate
 ```
-3- Exécuter les commandes :
+3- Exécuter la commande :
 ```
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
-git config --add submodule.recurse true
 ```
 4- Installer les paquets Python nécessaires avec la commande :
 ```
@@ -63,16 +62,19 @@ sudo chown -R pi:pi .
 ```
 git checkout beta6
 ```
-
-7- Installer les librairies Python manquantes avec la commande :
+7- Exécuter les commandes :
+```
+git config --add submodule.recurse true
+```
+8- Installer les librairies Python manquantes avec la commande :
 ```
 git submodule update --init --recursive
 ```
-8- Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+9- Rendre le fichier __plugin.py__ exécutable en lançant la commande :
 ```
 sudo chmod +x plugin.py
 ```
-9- Redémarrer DomoticZ. La commande est normalement :
+10- Redémarrer DomoticZ. La commande est normalement :
 ```
 sudo service domoticz.sh start
 ```
