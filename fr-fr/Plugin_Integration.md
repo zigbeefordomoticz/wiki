@@ -5,6 +5,7 @@ L'interface d'administration du plugin (WebUI) est accessible à l'adresse http:
 ![Intégration du WebUI](Images/FR_DomoticZ-WebUI.png)
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
+
 ## Ajouter un menu pour le WebUI
 
 1. Aller dans le dossier __domoticz/www/templates__
