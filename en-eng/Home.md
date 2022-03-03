@@ -15,6 +15,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * Step 1 [Plugin installation](Plugin_Installation.md)
 * Step 2 [Plugin settings](Plugin_Settings.md)
 * Step 3 [Plugin configuration](Plugin_Configuration.md)
+* Step 4 [Plugin integration](Plugin_Integration.md)
 
 ## Plugin updates
 
