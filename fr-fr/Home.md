@@ -16,6 +16,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * Étape 1 [Installation du Plugin](Plugin_Installation.md)
 * Étape 2 [Paramétrage du Plugin](Plugin_Parametrage.md)
 * Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
+* Étape 4 [Intégration du Plugin](Plugin_Integration.md)
 
 
 ## Mises à jour du Plugin
