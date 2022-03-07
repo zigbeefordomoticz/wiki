@@ -25,7 +25,7 @@ They shaw the device state :
 * Battery level
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
 
 
 This is a Plugin Dashboard from which you can in a short time if anything else is going wrong on the coordinator environment.

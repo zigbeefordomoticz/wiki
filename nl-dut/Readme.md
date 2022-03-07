@@ -2,7 +2,7 @@
 
 <br><br>
 
-__All the informations written here are depreciated now. Please refer to the [English Wiki](../en-eng/Home.md)__
+__All the informations written here are depreciated now. Please refer to the [English Wiki](../en-eng/)__
 
 *We are looking for someone to help us to keep this wiki updated. Any help for translating from French or English will be appreciated.*
 
@@ -10,7 +10,7 @@ __All the informations written here are depreciated now. Please refer to the [En
 
 ![zigate.fr](../Images/ZiGate.png)
 
-<a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md)
+[Link to the English Wiki](../en-eng/) - [Lien vers le Wiki en français](../fr-fr/)
 
 Op deze wiki is alle informatie te vinden omtrent de plugin van de Domoticz plugin.
 

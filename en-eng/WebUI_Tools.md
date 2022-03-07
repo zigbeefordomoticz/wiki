@@ -84,4 +84,4 @@ Refer to the tutorial [Deal with plugin error](HowTo_Dealing-pluging-error.md) f
 
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).

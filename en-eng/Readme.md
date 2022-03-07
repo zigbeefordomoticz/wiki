@@ -1,6 +1,6 @@
 # Welcome to the plugin ZigBeeForDomoticZ wiki !
 
-[Lien vers le Wiki en français](../fr-fr/Home.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
+[Lien vers le Wiki en français](../fr-fr/) - [Link naar de Wiki in het Nederlands](../nl-dut/)
 
 
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.

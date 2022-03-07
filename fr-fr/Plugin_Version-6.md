@@ -2,7 +2,7 @@
 
 ## Informations concernant la phase Béta (de test)
 
-Le wiki à consulter est disponible sur [la branche du wiki](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Home.md). Ce wiki deviendra la version par défaut lorsque la version 6 sortira comme version stable.
+Le wiki à consulter est disponible sur [la branche du wiki](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Readme.md). Ce wiki deviendra la version par défaut lorsque la version 6 sortira comme version stable.
 
 Pour __une nouvelle installation du plugin__, merci de suivre [la procédure d'installation sur la branche zigpy](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Plugin_Installation.md#2---installation-manuelle-sous-linux). Pour le moment, seule l'installation manuelle sous Linux a été testée et validée.
 
