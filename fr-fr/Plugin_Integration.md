@@ -13,6 +13,7 @@ L'interface d'administration du plugin (WebUI) est accessible à l'adresse http:
 2. Créer un fichier __ZigBeeForDomoticZ.html__ Le nom du fichier sera utiliser comme nom du menu.
 
 3. Mettre la ligne suivante dans le fichier html :
+
 ```
 <IFRAME SRC="http://IP_DomoticZ:9440/" height="800" width="100%"></IFRAME>
 ```
@@ -30,6 +31,7 @@ Depuis la sortie de la version 6, le nouveau format du Wiki sous forme de page W
 2. Créer un fichier __Wiki plugin Z4D.html__ Le nom du fichier sera utiliser comme nom du menu.
 
 3. Mettre la ligne suivante dans le fichier html :
+
 ```
 <IFRAME SRC="https://zigbeefordomoticz.github.io/Wiki/fr-fr" height="800" width="100%"></IFRAME>
 ```
