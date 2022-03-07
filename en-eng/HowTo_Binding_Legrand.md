@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # How to Bind Legrand-Netatmo Remote with a Micromodule
-
-</br>
 
 The HowTo is validated for a ZiGate.
 We don not have any informations for the other coordinators.

@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Dealing with pairing issues
-
-</br>
 
 The plugin is developped in a way that it is capable to handle devices which respects ZigBee specifications.
 For instance if the plugin see an unknown device type, it will try to create widgets based on the Device capabilities.

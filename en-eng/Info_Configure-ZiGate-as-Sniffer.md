@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Configure ZiGate as sniffer
-
-</br>
 
 # ZiGate preparation
 ZiGate comes with a CP2102 (red board) usb to ttl converter.

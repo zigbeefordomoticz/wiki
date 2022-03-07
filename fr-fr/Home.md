@@ -1,10 +1,6 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Bienvenue sur le wiki du Plugin ZigBeeForDomoticZ pour DomoticZ !
 
-</br>
-
-<a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
+[Link to the English Wiki](../en-eng/Home.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
@@ -20,6 +16,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * Étape 1 [Installation du Plugin](Plugin_Installation.md)
 * Étape 2 [Paramétrage du Plugin](Plugin_Parametrage.md)
 * Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
+* Étape 4 [Intégration du Plugin](Plugin_Integration.md)
 
 
 ## Mises à jour du Plugin

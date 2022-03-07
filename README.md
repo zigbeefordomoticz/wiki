@@ -1,27 +1,13 @@
-<a href=""><img align="left" width="80" height="80" src="Images/logo_Z4D.png" alt="Logo"></a>
-
-# ZigBeeForDomoticZ plugin Wiki
-
-</br>
-
-<table width="200" border="0" cellpadding="2">
-<tr>
-<td valign="middle" ><a href=en-eng/Home.md><img src="Images/flag_uk.png" width="40" height="40"></a></td>
-<td valign="middle"><a href=en-eng/Home.md>Click here to access English Wiki</a></td>
-</tr>
-<tr>
-<td valign="middle"><a href=fr-fr/Home.md><img src="Images/flag_france.png" width="40" height="40"</a></td>
-<td valign="middle"><a href=fr-fr/Home.md>Cliquer ici pour accéder au wiki en français</a></td>
-</tr>
-<tr>
-<td valign="middle"><a href=nl-dut/Home.md><img src="Images/flag_netherlands.png" width="40" height="40"></a></td>
-<td valign="middle"><a href=nl-dut/Home.md>Klik hier om Nederland Wiki te opene</a></td>
-</tr>
-</table>
+| <img src="Images/flag_uk.png" width="40" height="40"> | [__Click here to access English Wiki__](en-eng/Home.md)      |
+|:------------:|:----------:|
+| <img src="Images/flag_france.png" width="40" height="40">   | [__Cliquer ici pour accéder au wiki en français__](fr-fr/Home.md) |
+| <img src="Images/flag_netherlands.png" width="40" height="40">     | [__Klik hier om Nederland Wiki te opene__](nl-dut/Home.md) |
 
 # About
 
 This repository aim to centralize all ZigBeeForDomoticZ plugin's documentation.
+
+![Dashboard](Images/Dashboard.png)
 
 In particular you can find the various version of the plugin Wiki.
 

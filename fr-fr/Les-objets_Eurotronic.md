@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Les objets de la marque Eurotronic
-
-</br>
 
 Certains objets de la marque Eurotronic ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 

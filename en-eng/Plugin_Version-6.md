@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # How to move from version 5 to version 6
-
-</br>
 
 <a href="../fr-fr/Plugin_Version-6.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
 [Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)

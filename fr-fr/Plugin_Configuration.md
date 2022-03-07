@@ -1,9 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Configuration du Plugin
-
-</br>
-
 
 Cette étape est la troisième étape du processus d'installation du Plugin ZigBeeForDomoticZ.
 

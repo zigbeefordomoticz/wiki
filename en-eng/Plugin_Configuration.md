@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Plugin configuration
-
-</br>
 
 This is the tird step of the plugin ZigBeeForDomoticZ installation process.
 

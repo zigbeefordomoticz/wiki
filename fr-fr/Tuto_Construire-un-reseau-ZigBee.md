@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Comment construire et maintenir un bon réseau maillé ZigBee ?
-
-</br>
 
 ## Avant-propos
 

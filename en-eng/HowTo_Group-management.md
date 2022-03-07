@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # How To : Group management
-
-</br>s
 
 ## 1. Purpose
 The purpose is to offer the possibility to use the ZigBee group functionality.
