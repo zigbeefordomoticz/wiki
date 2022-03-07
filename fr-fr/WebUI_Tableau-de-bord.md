@@ -23,4 +23,4 @@ Ils indiquent l'état des objets :
 * La santé
 * Le niveau de batterie
 
-Voir les autres pages de l'[interface Web du Plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du Plugin](Readme.md#linterface-web-du-plugin).

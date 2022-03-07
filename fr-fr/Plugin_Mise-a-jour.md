@@ -116,7 +116,7 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 
 __Attention aux compatibilités avec DomoticZ lors du changement de branche.__
 
-[Poursuivre sur la mise à jour du Plugin](Home.md#mises-%C3%A0-jour-du-plugin)
+[Poursuivre sur la mise à jour du Plugin](Readme.md#mises-%C3%A0-jour-du-plugin)
 
 
 ### Revenir à une version précédente

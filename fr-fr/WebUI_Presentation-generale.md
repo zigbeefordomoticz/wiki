@@ -37,4 +37,4 @@ Le bandeau rouge indique un problème de connexion avec le coordinateur.
 Le bandeau jaune indique l'appairage d'un dispositif ou que le coordinateur est chargé. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
 ------------------------------------------------
-Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).
