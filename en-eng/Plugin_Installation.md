@@ -41,6 +41,7 @@ cd domoticz/plugins/
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 The folder __Domoticz-Zigbee__ will be created in the plugins folder.
+
 3- Go to the __Domoticz-Zigbee__ folder. The command is usually :
 ```
 cd Domoticz-Zigbee/
