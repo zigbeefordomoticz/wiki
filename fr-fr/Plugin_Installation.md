@@ -1,4 +1,4 @@
-# Installation du plugin ZigBeeForDomoticZ 
+# Installation du plugin ZigBeeForDomoticZ
 
 Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
@@ -45,6 +45,7 @@ cd domoticz/plugins/
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins.
+
 3- Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
 ```
 cd Domoticz-Zigbee/
