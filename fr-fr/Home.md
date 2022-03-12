@@ -61,17 +61,17 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Mettre une authentification sur interface d'administration du Plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
-## Les coordinateurs et objets compatibles
+## Les objets compatibles
 
 * [Les objets compatibles](Info_Accueil.md#presentation)
 
+
+## Les coordinateurs compatibles
+
 * [Les caractéristiques des coordinateurs](Les-coordinateurs_Caracteristiques.md)
-
-
 * [Les coordinateurs ZiGate](Les-coordinateurs_ZiGate.md)
 * [Les coordinateurs Electrolama](Les-coordinateurs_Electrolama.md)
 * [Les coordinateurs Sonoff](Les-coordinateurs_Sonoff.md)
-
 
 
 ## Que faire si un objet ne fonctionne pas correctement ?
