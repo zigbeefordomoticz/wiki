@@ -12,7 +12,7 @@ Les coordinateurs peuvent avoir des différences. Plutôt que d'éditer toutes l
 |          [Lixee](https://zigate.fr)         |   ZiGate V1   | Firmware : OptiPDM          |       70       |        20        |    5    |                 |
 |          [Lixee](https://zigate.fr)         |   ZiGate V2   |                             |       200      |        20        |    15   |                 |
 | [Electrolama](https://shop.electrolama.com) |  ZZH RF Stick | TI CC2652R1                 |        ?       |         ?        |    ?    |                 |
-|                    Sonoff                   |   ZBDongle-P  | TI CC2652P + CP2102N        |       40       |        21        |    ?    |                 |
+| [Sonoff](https://sonoff.tech/product/diy-smart-switch/sonoff-dongle-plus/)   |   USB Dongle Plus  | TI CC2652P + CP2102N        |       40       |        21        |    ?    |                 |
 |                                             |               | TI CC1352P/CC1352R          |        ?       |         ?        |         |                 |
 |                                             |               | TI CC2531                   |       20       |         ?        |    ?    |  Non recommandé |
 |                                             |               | TI CC2530 + CC2591/CC2592   |       20       |         ?        |    ?    |  Non recommandé |
