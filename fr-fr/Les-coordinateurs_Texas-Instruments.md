@@ -6,6 +6,8 @@
 
 ## Compatibilité des firmwares
 
+Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
+
 ###
 
 *
