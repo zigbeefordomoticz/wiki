@@ -61,10 +61,16 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Mettre une authentification sur interface d'administration du Plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
-## Tutoriels ZiGate
+## Les coordinateurs et objets compatibles
 
-* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
-* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
+* [Les objets compatibles](Info_Accueil.md#presentation)
+
+* [Les caractéristiques des coordinateurs](Les-coordinateurs_Caracteristiques.md)
+
+* [Les coordinateurs ZiGate](Les-coordinateurs_ZiGate.md)
+* [Les coordinateurs Electrolama](Les-coordinateurs_Electrolama.md)
+* [Les coordinateurs Sonoff](Les-coordinateurs_Sonoff.md)
+
 
 
 ## Que faire si un objet ne fonctionne pas correctement ?
@@ -103,8 +109,6 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Informations
 
-* [Les objets compatibles](Info_Accueil.md#presentation)
-* [Les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
