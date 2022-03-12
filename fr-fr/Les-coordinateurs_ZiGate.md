@@ -9,6 +9,7 @@
 ### ZiGate V1 Legacy
 
 * Plugin 5.1.017 : firmware 3.1e minimum
+* Plugin 4.9.1   : firmware 3.1c minimum
 
 ### ZiGate V1 OptiPDM
 
