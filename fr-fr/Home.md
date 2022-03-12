@@ -15,6 +15,13 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Lexique](Info_Accueil.md#lexique)
 
 
+## Les compatibilités
+
+* [Les objets compatibles](Les-objets.md)
+* [Les coordinateurs compatibles](Les-coordinateurs.md)
+* [Les versions de DomoticZ](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
+
+
 ## Installation
 
 * Étape 1 [Installation du Plugin](Plugin_Installation.md)
@@ -44,6 +51,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * La section [Outils](WebUI_Outils.md)
 * La section [A propos](WebUI_A-propos.md)
 
+
 ## Tutoriels
 
 * [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
@@ -60,20 +68,6 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Remplacer ou ré-initialiser la ZiGate](Tuto_Remplacer-zigate.md)
 * [Mettre une authentification sur interface d'administration du Plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
-
-## Les objets compatibles
-
-* [Les objets compatibles](Info_Accueil.md#presentation)
-
-
-## Les coordinateurs compatibles
-
-* [Les caractéristiques des coordinateurs](Les-coordinateurs_Caracteristiques.md)
-* [Les coordinateurs ZiGate](Les-coordinateurs_ZiGate.md)
-* [Les coordinateurs Electrolama](Les-coordinateurs_Electrolama.md)
-* [Les coordinateurs ELElabs](Les-coordinateurs_ELElabs.md)
-* [Les coordinateurs Sonoff](Les-coordinateurs_Sonoff.md)
-* [Les coordinateurs Texas Instruments](Les-coordinateurs_Texas-Instruments.md)
 
 ## Que faire si un objet ne fonctionne pas correctement ?
 
@@ -101,6 +95,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
    * Le forum français : [https://easydomoticz.com/forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * Le forum anglais : [https://www.domoticz.com/forum](https://www.domoticz.com/forum/viewforum.php?f=68)
 
+
 ## Scripts
 
 * [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
@@ -109,6 +104,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 [D'autres exemples](../Contrib/)
 
+
 ## Informations
 
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
@@ -116,6 +112,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
 * [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md)
 * [Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)](Info_Mettre-python3.8-sur-RaspberryOS-Bullseye.md)
+
 
 ## Liens utiles
 
