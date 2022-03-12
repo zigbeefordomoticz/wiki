@@ -518,7 +518,7 @@ Platform: RPI3 B+
  1. OpenWRT provides a number of prebuilt python packages via opkg that must be installed instead of the normal dependencies :
 
  ```
- opkg install kmod-usb-serial kmod-usb-serial-cp210x shadow-usermod python3 python3-pip python3-voluptuous python3-cryptodome python3-attrs python3-aiohttp python3-jsonschema domoticz
+ opkg install kmod-usb-serial kmod-usb-serial-cp210x shadow-usermod python3 python3-pip python3-voluptuous python3-cryptodome python3-attrs python3-aiohttp python3-jsonschema domoticz curl
  pip install aiosqlite crccheck pyusb pyserial-asyncio coloredlogs
  ```
 
