@@ -475,16 +475,19 @@ usermod -a -G dialout domoticz
 ```
 
 Add a custom page to access Zigbee-for-domoticz from within the domoticz UI:
+
 ```
 echo '<IFRAME SRC="http://10.0.0.1:9440/" height="800" width="100%"></IFRAME>' > /usr/share/domoticz/www/templates/Zigate2.html
 ```
 
-Finally, restart the domoticz to apply all changes:
+Finally, restart domoticz to apply all changes:
+
 ```
 service domoticz restart
 ```
 
 You can verify that your Zigbee USB dongle was detected via:
+
 ```
 lsusb
 dmesg | grep ttyUSB
