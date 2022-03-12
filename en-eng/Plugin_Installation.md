@@ -8,10 +8,11 @@ In this first step, there are severals installation methodes depending on your O
 * 1 - [Python Plugin Manager installation running on Linux](#1---python-plugin-manager-installation-running-on-linux)
 * 2 - [Manual Installation running on Linux](#2---manual-installation-running-on-linux)
 * 3 - [Installation running on Synology NAS](#3---installation-running-on-synology-nas)
-* 4 - [Installation running on Docker](4---installation-running-on-docker)
+* 4 - [Installation running on Docker](#4---installation-running-on-docker)
 * 5 - [Installation running on Windows 10](#5---installation-running-on-windows-10)
 * 6 - [PiZigate Installation on RPi3B+ running on Raspbian (Linux)](#6---pizigate-installation-on-rpi3b-running-on-raspbian-linux)
 * 7 - [PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)](#7---pizigate-installation-on-rpi3b-running-on-fedora-29-linux)
+* 8 - [Installation running on OpenWRT](#8---installation-running-on-openwrt)
 
 ------------
 
@@ -448,3 +449,46 @@ Platform: RPI3 B+
 
 
  If you reach this step, you can start domoticz and configure the Zigate plugin on the PiZigate
+
+## 8 - Installation Running on OpenWRT
+
+OpenWRT provides a number of prebuilt python packages via opkg that must be installed instead of the normal dependencies:
+
+```
+opkg install kmod-usb-serial kmod-usb-serial-cp210x shadow-usermod python3 python3-pip python3-voluptuous python3-cryptodome python3-attrs python3-aiohttp python3-jsonschema domoticz
+pip install aiosqlite crccheck pyusb pyserial-asyncio coloredlogs
+```
+
+The domoticz package provided by opkg has slightly different installation paths:
+
+```
+cd /etc/domoticz/plugins
+git clone --recurse-submodules --depth 1 -b beta6 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+chmod +x Domoticz-Zigbee/plugin.py
+```
+
+Domoticz is automatically configured to run under the 'domoticz' user and group, permissions must be granted to any resources it needs:
+
+```
+chown -R domoticz:domoticz /etc/domoticz/plugins/Domoticz-Zigbee
+usermod -a -G dialout domoticz
+```
+
+Add a custom page to access Zigbee-for-domoticz from within the domoticz UI:
+
+```
+echo '<IFRAME SRC="http://10.0.0.1:9440/" height="800" width="100%"></IFRAME>' > /usr/share/domoticz/www/templates/Zigate2.html
+```
+
+Finally, restart domoticz to apply all changes:
+
+```
+service domoticz restart
+```
+
+You can verify that your Zigbee USB dongle was detected via:
+
+```
+lsusb
+dmesg | grep ttyUSB
+```
