@@ -8,7 +8,7 @@ In this first step, there are severals installation methodes depending on your O
 * 1 - [Python Plugin Manager installation running on Linux](#1---python-plugin-manager-installation-running-on-linux)
 * 2 - [Manual Installation running on Linux](#2---manual-installation-running-on-linux)
 * 3 - [Installation running on Synology NAS](#3---installation-running-on-synology-nas)
-* 4 - [Installation running on Docker](4---installation-running-on-docker)
+* 4 - [Installation running on Docker](#4---installation-running-on-docker)
 * 5 - [Installation running on Windows 10](#5---installation-running-on-windows-10)
 * 6 - [PiZigate Installation on RPi3B+ running on Raspbian (Linux)](#6---pizigate-installation-on-rpi3b-running-on-raspbian-linux)
 * 7 - [PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)](#7---pizigate-installation-on-rpi3b-running-on-fedora-29-linux)
