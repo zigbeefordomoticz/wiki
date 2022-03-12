@@ -32,46 +32,46 @@ In this first step, there are severals installation methodes depending on your O
 
 Open the terminal
 
-1- Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
+1. Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
 ```
 cd domoticz/plugins/
 ```
-2- Run the command :
+1. Run the command :
 ```
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 The folder __Domoticz-Zigbee__ will be created in the plugins folder.
 
-3- Go to the __Domoticz-Zigbee__ folder. The command is usually :
+1. Go to the __Domoticz-Zigbee__ folder. The command is usually :
 ```
 cd Domoticz-Zigbee/
 ```
-4- Install the needed Python packet with the command :
+1. Install the needed Python packet with the command :
 ```
 sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
 ```
-5- Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
+1. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
 ```
 sudo chown -R pi:pi .
 ```
 
-6- During the time of the development phase, it is necessary to move on to the new beta6 branch :
+1. During the time of the development phase, it is necessary to move on to the new beta6 branch :
 ```
 git checkout beta6
 ```
-7- Run the command :
+1. Run the command :
 ```
 git config --add submodule.recurse true
 ```
-8- Install the missing Python libraries with the command :
+1. Install the missing Python libraries with the command :
 ```
 git submodule update --init --recursive
 ```
-9- Make the __plugin.py__ file executable with the command :
+1. Make the __plugin.py__ file executable with the command :
 ```
 sudo chmod +x plugin.py
 ```
-10- Restart DomoticZ. The command is usually :
+1. Restart DomoticZ. The command is usually :
 ```
 sudo service domoticz.sh restart
 ```
@@ -515,14 +515,14 @@ Platform: RPI3 B+
 
  ## 8 - Installation Running on OpenWRT
 
- OpenWRT provides a number of prebuilt python packages via opkg that must be installed instead of the normal dependencies:
+ 1. OpenWRT provides a number of prebuilt python packages via opkg that must be installed instead of the normal dependencies :
 
  ```
  opkg install kmod-usb-serial kmod-usb-serial-cp210x shadow-usermod python3 python3-pip python3-voluptuous python3-cryptodome python3-attrs python3-aiohttp python3-jsonschema domoticz
  pip install aiosqlite crccheck pyusb pyserial-asyncio coloredlogs
  ```
 
- The domoticz package provided by opkg has slightly different installation paths:
+ 2. The domoticz package provided by opkg has slightly different installation paths:
 
  ```
  cd /etc/domoticz/plugins
@@ -530,26 +530,20 @@ Platform: RPI3 B+
  chmod +x Domoticz-Zigbee/plugin.py
  ```
 
- Domoticz is automatically configured to run under the 'domoticz' user and group, permissions must be granted to any resources it needs:
+ 3. Domoticz is automatically configured to run under the 'domoticz' user and group, permissions must be granted to any resources it needs:
 
  ```
  chown -R domoticz:domoticz /etc/domoticz/plugins/Domoticz-Zigbee
  usermod -a -G dialout domoticz
  ```
 
- Add a custom page to access Zigbee-for-domoticz from within the domoticz UI:
-
- ```
- echo '<IFRAME SRC="http://10.0.0.1:9440/" height="800" width="100%"></IFRAME>' > /usr/share/domoticz/www/templates/Zigate2.html
- ```
-
- Finally, restart domoticz to apply all changes:
+ 4. Finally, restart domoticz to apply all changes:
 
  ```
  service domoticz restart
  ```
 
- You can verify that your Zigbee USB dongle was detected via:
+ 5. You can verify that your Zigbee USB dongle was detected via:
 
  ```
  lsusb

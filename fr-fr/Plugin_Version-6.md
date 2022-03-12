@@ -40,44 +40,44 @@ Pensez à sauvegarder :
 
  Ouvrir le terminal.
 
-1- Arrêter DomoticZ. La commande est normalement :
+1. Arrêter DomoticZ. La commande est normalement :
 ```
 sudo service domoticz.sh stop
 ```
-2- Aller dans le répertoire du plugin. La commande est normalement :
+1. Aller dans le répertoire du plugin. La commande est normalement :
 ```
 cd domoticz/plugins/Domoticz-Zigate
 ```
-3- Exécuter la commande :
+1. Exécuter la commande :
 ```
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
 ```
-4- Installer les paquets Python nécessaires avec la commande :
+1. Installer les paquets Python nécessaires avec la commande :
 ```
 sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
 ```
-5- Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
+1. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
 ```
 sudo chown -R pi:pi .
 ```
 
- 6- Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 :
+1. Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 :
 ```
 git checkout beta6
 ```
-7- Exécuter la commande :
+1. Exécuter la commande :
 ```
 git config --add submodule.recurse true
 ```
-8- Installer les librairies Python manquantes avec la commande :
+1. Installer les librairies Python manquantes avec la commande :
 ```
 git submodule update --init --recursive
 ```
-9- Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+1. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
 ```
 sudo chmod +x plugin.py
 ```
-10- Redémarrer DomoticZ. La commande est normalement :
+1. Redémarrer DomoticZ. La commande est normalement :
 ```
 sudo service domoticz.sh start
 ```
