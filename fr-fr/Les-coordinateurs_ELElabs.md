@@ -16,6 +16,10 @@
 
 ## Tutoriels
 
+## Infos
+
+Exemple hack de la gateway Lidl : https://paulbanks.org/projects/lidl-zigbee/
+Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellows#hardware-requirement
 
 ## Puissance Tx
 
