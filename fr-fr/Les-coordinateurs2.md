@@ -44,7 +44,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
     </tbody>
 </table>
 
-* [Chipset scilabs](#les-coordinateurs-scilabs)
+* [Chipset scilabs](#les-coordinateurs-avec-chipset-scilabs)
 
 <table>
     <thead>
@@ -81,7 +81,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 
 
-* [Chipset Texas Instruments](#les-coordinateurs-texas-instruments)
+* [Chipset Texas Instruments](#les-coordinateurs-avec-chipset-texas-instruments)
 
 <table>
     <thead>
