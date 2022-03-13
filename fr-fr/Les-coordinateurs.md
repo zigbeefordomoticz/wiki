@@ -44,7 +44,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
         <tr>
             <td rowspan=2><a href="#les-coordinateurs-scilabs">SCIlabs</a></td>
             <td rowspan=2>ELElabs</td>
-            <td rowspan=1>ELU013 (dongle USB)</td>
+            <td rowspan=1>ELU013 <br>(dongle USB)</td>
             <td></td>
             <td>?</td>
             <td>?</td>
@@ -52,7 +52,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
             <td></td>
         </tr>
         <tr>
-            <td rowspan=1>ELU023 (shield Pi)</td>
+            <td rowspan=1>ELU023 <br>(shield Pi)</td>
             <td></td>
             <td>?</td>
             <td>?</td>
