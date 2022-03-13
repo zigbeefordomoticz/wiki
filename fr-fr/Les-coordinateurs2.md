@@ -1,8 +1,9 @@
-# Les coordinateurs
+# Coordinators - Les coordinateurs
 
+Click on the chipset links to get to the inforamtions.
 Cliquer sur les liens de chipset pour accéder aux informations.
 
-* [Chipset NXP](#les-coordinateurs-avec-chipset-nxp)
+* [Chipset NXP](#coordinators-with-nxp-chipset)
 
 <table style="width:100%">
     <thead>
@@ -45,7 +46,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 </table>
 
 
-* [Chipset scilabs](#les-coordinateurs-avec-chipset-scilabs)
+* [Chipset scilabs](#coordinators-with-scilabs-chipset)
 
 <table style="width:100%">
     <thead>
@@ -82,7 +83,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 
 
-* [Chipset Texas Instruments](#les-coordinateurs-avec-chipset-texas-instruments)
+* [Chipset Texas Instruments](#coordinators-with-texas-instruments-chipset)
 
 <table style="width:100%">
     <thead>
