@@ -196,8 +196,8 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 ### Infos
 
-Exemple hack de la gateway Lidl : https://paulbanks.org/projects/lidl-zigbee/
-Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellows#hardware-requirement
+Exemple hack de la gateway Lidl : https://paulbanks.org/projects/lidl-zigbee/.
+Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellows#hardware-requirement.
 
 ### Puissance Tx
 
@@ -220,8 +220,8 @@ Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellow
 
 ### Fimwares compatibily
 
-The firmwares installed on the TI keys must __imperatively__ come from https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
-Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
+The firmwares installed on the TI keys must __imperatively__ come from https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator.
+Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator.
 
 ####
 
