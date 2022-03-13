@@ -81,8 +81,6 @@ Cliquer sur les liens de chipset pour accéder aux informations.
     </tbody>
 </table>
 
-
-
 * [Chipset Texas Instruments](#coordinators-with-texas-instruments-chipset)
 
 <table style="width:100%">
