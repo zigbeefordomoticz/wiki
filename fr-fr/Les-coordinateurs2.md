@@ -156,9 +156,9 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 
 --------------------
-## Les coordinateurs avec chipset NXP
+## Coordinators with NXP chipset
 
-### Compatibilité des firmwares
+### Fimwares compatibily
 
 #### ZiGate V1 Legacy
 
@@ -180,9 +180,9 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 
 --------------------
-## Les coordinateurs avec chipset SCIlabs
+## Coordinators with SCIlabs chipset
 
-### Compatibilité des firmwares
+### Fimwares compatibily
 
 #### ELU013 (dongle USB)
 
@@ -216,10 +216,11 @@ Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellow
 
 
 --------------------
-## Les coordinateurs avec chipset Texas Instruments
+## Coordinators with Texas Instruments chipset
 
-### Compatibilité des firmwares
+### Fimwares compatibily
 
+The firmwares installed on the TI keys must __imperatively__ come from https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
 Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
 
 ####
