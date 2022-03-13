@@ -18,7 +18,6 @@ We are contributing to this project on our spare time. If you do consider that i
 ## Compatibily
 
 * [Compatible objects](Objetcs.md)
-
 * [Compatible coordinators](Coordinators.md)
 
 
