@@ -14,7 +14,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
             <th style="width:15%">Objects in all<br>Objets en tout</th>
             <th style="width:15%">Direct objects<br>Objets en direct</th>
             <th style="width:5%">Groups<br>Groupes</th>
-            <th>Comments<br>Commentaires</th>
+            <th style="width:15%">Comments<br>Commentaires</th>
         </tr>
     </thead>
     <tbody>
@@ -57,7 +57,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
             <th style="width:15%">Objects in all<br>Objets en tout</th>
             <th style="width:15%">Direct objects<br>Objets en direct</th>
             <th style="width:5%">Groups<br>Groupes</th>
-            <th>Comments<br>Commentaires</th>
+            <th style="width:15%">Comments<br>Commentaires</th>
         </tr>
     </thead>
     <tbody>
@@ -94,7 +94,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
             <th style="width:15%">Objects in all<br>Objets en tout</th>
             <th style="width:15%">Direct objects<br>Objets en direct</th>
             <th style="width:5%">Groups<br>Groupes</th>
-            <th>Comments<br>Commentaires</th>
+            <th style="width:15%">Comments<br>Commentaires</th>
         </tr>
     </thead>
     <tbody>
