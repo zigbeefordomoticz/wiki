@@ -15,7 +15,7 @@ Il y a deux limitations possible au nombre d'objet gérer par un coordinateur. C
 
 ### Les limitations des Coordinateurs
 
-Les Coordinateurs ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md#nombre-dobjet-limit%C3%A9))
+Les Coordinateurs ont une limite d'objets qu'elles peuvent gérer (voir les [les caractéristiques des coordinateurs](../en-eng/Coordinators.md#nombre-dobjet-limit%C3%A9))
 
 ### La limitation de DomoticZ
 

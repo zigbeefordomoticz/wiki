@@ -14,6 +14,13 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [Start](Info_Home.md) for beginners
 
+
+## Compatibily
+
+* [Compatible objects](Objetcs.md)
+* [Compatible coordinators](Coordinators.md)
+
+
 ## Installation
 
 * Step 1 [Plugin installation](Plugin_Installation.md)

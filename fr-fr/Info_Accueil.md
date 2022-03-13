@@ -15,8 +15,6 @@ L'objectif de ce Plugin est de réaliser une passerelle entre un coordinateur Zi
 
 Le Plugin dispose d'une interface utilisateur dédiée accessible depuis votre navigateur web. Cette interface permettra de configurer le Plugin et régler le fonctionnement des coordinateurs.
 
-Voici une liste non exhaustive des objets compatibles : [https://zigbee.blakadder.com](https://zigbee.blakadder.com/z4d.html). Ceux présents dans la liste ont été "certifiés" : nous savons qu'ils fonctionnent avec le Plugin lorsque l’étiquette __Zigbee for Domoticz__ est présente.
-
 
 ## Lexique
 
