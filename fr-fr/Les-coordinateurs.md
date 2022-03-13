@@ -1,5 +1,6 @@
 # Les coordinateurs
 
+Cliquer sur les liens de chipset pour accéder aux informations.
 
 <table>
     <thead>
