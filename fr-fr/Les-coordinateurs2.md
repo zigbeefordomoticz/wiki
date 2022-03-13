@@ -62,7 +62,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
     <tbody>
         <tr>
             <td rowspan=2>ELElabs</td>
-            <td rowspan=1>ELU013 <br>(dongle USB)</td>
+            <td rowspan=1>ELU013 (USB)</td>
             <td></td>
             <td>?</td>
             <td>?</td>
@@ -70,7 +70,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
             <td></td>
         </tr>
         <tr>
-            <td rowspan=1>ELU023 <br>(shield Pi)</td>
+            <td rowspan=1>ELU023 (Pi)</td>
             <td></td>
             <td>?</td>
             <td>?</td>
