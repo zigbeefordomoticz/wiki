@@ -2,7 +2,7 @@
 
 Cliquer sur les liens de chipset pour accéder aux informations.
 
-* [Chipset NXP]()
+* [Chipset NXP](#les-coordinateurs-avec-chipset-nxp)
 
 <table>
     <thead>
@@ -44,8 +44,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
     </tbody>
 </table>
 
-
-* [Chipset Texas Instruments]()
+* [Chipset scilabs](#les-coordinateurs-scilabs)
 
 <table>
     <thead>
@@ -81,7 +80,8 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 </table>
 
 
-* Chipset scilabs
+
+* [Chipset Texas Instruments](#les-coordinateurs-texas-instruments)
 
 <table>
     <thead>
@@ -179,35 +179,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 
 --------------------
-## Les coordinateurs Texas Instruments
-
-### Compatibilité des firmwares
-
-Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
-
-####
-
-*
-
-### Tutoriels
-
-
-### Puissance Tx
-
-* CC1352P ("P" for embedded Power-Amplifier) has a programmable output power up to +20dBm (and down to -?dBm).
-* CC1352R has a maximum TX power configuration of +5dBm (and down to -?dBm unknown)
-* CC2652P ("P" for embedded Power-Amplifier) has programmable output power up to +20dBm (and down to -?dBm)
-* CC2652R has a programmable output power up to +5dBm (and down to -?dBm unknown)
-* CC2652RB has a programmable output power up to +5dBm (and down to -?dBm unknown)
-* CC2538 without a power amplifier chip has a programmable output power up to +7dBm (and down to -?dBm)
-* CC2538 + CC2591 or CC2592 power amplifier chip has a programmable output power up to +19dBm (and down to -?dBm)
-* CC2531 without has a programmable output power up to +4.5dBm (and down to -?dBm unknown)
-* CC2531 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
-* CC2530 without has a programmable output power up to +4.5dBm (and down to -?dBm)
-* CC2530 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
-
---------------------
-## Les coordinateurs SCIlabs
+## Les coordinateurs avec chipset SCIlabs
 
 ### Compatibilité des firmwares
 
@@ -240,3 +212,32 @@ Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellow
 * MGM13S has a programmable output power up to +10dBm and down to -30dBm
 * EFR32MG13P732xxxxxxxx has a programmable output power up to +10dBm and down to -30dBm
 * EFR32MG13P632xxxxxxxx has a programmable output power up to +10dBm and down to -30dBm
+
+
+--------------------
+## Les coordinateurs avec chipset Texas Instruments
+
+### Compatibilité des firmwares
+
+Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator
+
+####
+
+*
+
+### Tutoriels
+
+
+### Puissance Tx
+
+* CC1352P ("P" for embedded Power-Amplifier) has a programmable output power up to +20dBm (and down to -?dBm).
+* CC1352R has a maximum TX power configuration of +5dBm (and down to -?dBm unknown)
+* CC2652P ("P" for embedded Power-Amplifier) has programmable output power up to +20dBm (and down to -?dBm)
+* CC2652R has a programmable output power up to +5dBm (and down to -?dBm unknown)
+* CC2652RB has a programmable output power up to +5dBm (and down to -?dBm unknown)
+* CC2538 without a power amplifier chip has a programmable output power up to +7dBm (and down to -?dBm)
+* CC2538 + CC2591 or CC2592 power amplifier chip has a programmable output power up to +19dBm (and down to -?dBm)
+* CC2531 without has a programmable output power up to +4.5dBm (and down to -?dBm unknown)
+* CC2531 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
+* CC2530 without has a programmable output power up to +4.5dBm (and down to -?dBm)
+* CC2530 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
