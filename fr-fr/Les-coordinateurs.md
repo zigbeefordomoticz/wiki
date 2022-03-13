@@ -155,7 +155,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 --------------------
 
-## Some explanations - Quelques explications
+## Some explanations
 
 ### Limited number of objects
 
@@ -172,6 +172,8 @@ There is a limit to the number of groups to which a coordinator can belong.
 
 __Info:__ The number of groups to which an object can belong is limited. Typically, an object can belong to 5 different groups. As a reminder, it is the object that knows in which group it belongs. The exact number will depend on each object.
 
+
+## Quelques explications
 
 ### Nombre d'objets limité
 
