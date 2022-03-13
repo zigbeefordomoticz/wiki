@@ -18,7 +18,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## Les compatibilités
 
 * [Les objets compatibles](Les-objets.md)
-* [Les coordinateurs compatibles](Les-coordinateurs.md)
+* [Les coordinateurs compatibles](../en-eng/Coordinators.md)
 * [Les versions de DomoticZ](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
 
