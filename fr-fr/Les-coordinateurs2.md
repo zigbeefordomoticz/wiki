@@ -7,13 +7,13 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 <table style="width:100%">
     <thead>
         <tr>
-            <th style="width:15%">Fabricant</th>
-            <th style="width:20%">Coordinateur</th>
-            <th style="width:15%">Firmware ou puce</th>
-            <th style="width:15%">Objets en tout</th>
-            <th style="width:15%">Objets en direct</th>
-            <th style="width:5%">Groupes</th>
-            <th>Commentaires</th>
+            <th style="width:15%">Maker<br>Fabricant</th>
+            <th style="width:20%">Coordinator<br>Coordinateur</th>
+            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
+            <th style="width:15%">Objects in all<br>Objets en tout</th>
+            <th style="width:15%">Direct objects<br>Objets en direct</th>
+            <th style="width:5%">Groups<br>Groupes</th>
+            <th>Comments<br>Commentaires</th>
         </tr>
     </thead>
     <tbody>
@@ -50,13 +50,13 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 <table style="width:100%">
     <thead>
         <tr>
-            <th style="width:15%">Fabricant</th>
-            <th style="width:20%">Coordinateur</th>
-            <th style="width:15%">Firmware ou puce</th>
-            <th style="width:15%">Objets en tout</th>
-            <th style="width:15%">Objets en direct</th>
-            <th style="width:5%">Groupes</th>
-            <th>Commentaires</th>
+            <th style="width:15%">Maker<br>Fabricant</th>
+            <th style="width:20%">Coordinator<br>Coordinateur</th>
+            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
+            <th style="width:15%">Objects in all<br>Objets en tout</th>
+            <th style="width:15%">Direct objects<br>Objets en direct</th>
+            <th style="width:5%">Groups<br>Groupes</th>
+            <th>Comments<br>Commentaires</th>
         </tr>
     </thead>
     <tbody>
@@ -87,13 +87,13 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 <table style="width:100%">
     <thead>
         <tr>
-            <th style="width:15%">Fabricant</th>
-            <th style="width:20%">Coordinateur</th>
-            <th style="width:15%">Firmware ou puce</th>
-            <th style="width:15%">Objets en tout</th>
-            <th style="width:15%">Objets en direct</th>
-            <th style="width:5%">Groupes</th>
-            <th>Commentaires</th>
+            <th style="width:15%">Maker<br>Fabricant</th>
+            <th style="width:20%">Coordinator<br>Coordinateur</th>
+            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
+            <th style="width:15%">Objects in all<br>Objets en tout</th>
+            <th style="width:15%">Direct objects<br>Objets en direct</th>
+            <th style="width:5%">Groups<br>Groupes</th>
+            <th>Comments<br>Commentaires</th>
         </tr>
     </thead>
     <tbody>
