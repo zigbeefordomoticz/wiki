@@ -4,15 +4,15 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 * [Chipset NXP](#les-coordinateurs-avec-chipset-nxp)
 
-<table>
+<table style="width:100%">
     <thead>
         <tr>
-            <th>Fabricant</th>
-            <th>Coordinateur</th>
-            <th>Firmware ou puce</th>
-            <th>Objets en tout</th>
-            <th>Objets en direct</th>
-            <th>Groupes</th>
+            <th style="width:15%">Fabricant</th>
+            <th style="width:20%">Coordinateur</th>
+            <th style="width:15%">Firmware ou puce</th>
+            <th style="width:15%">Objets en tout</th>
+            <th style="width:15%">Objets en direct</th>
+            <th style="width:5%">Groupes</th>
             <th>Commentaires</th>
         </tr>
     </thead>
@@ -46,15 +46,15 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 * [Chipset scilabs](#les-coordinateurs-avec-chipset-scilabs)
 
-<table>
+<table style="width:100%">
     <thead>
         <tr>
-            <th>Fabricant</th>
-            <th>Coordinateur</th>
-            <th>Firmware ou puce</th>
-            <th>Objets en tout</th>
-            <th>Objets en direct</th>
-            <th>Groupes</th>
+            <th style="width:15%">Fabricant</th>
+            <th style="width:20%">Coordinateur</th>
+            <th style="width:15%">Firmware ou puce</th>
+            <th style="width:15%">Objets en tout</th>
+            <th style="width:15%">Objets en direct</th>
+            <th style="width:5%">Groupes</th>
             <th>Commentaires</th>
         </tr>
     </thead>
@@ -83,15 +83,15 @@ Cliquer sur les liens de chipset pour accéder aux informations.
 
 * [Chipset Texas Instruments](#les-coordinateurs-avec-chipset-texas-instruments)
 
-<table>
+<table style="width:100%">
     <thead>
         <tr>
-            <th>Fabricant</th>
-            <th>Coordinateur</th>
-            <th>Firmware ou puce</th>
-            <th>Objets en tout</th>
-            <th>Objets en direct</th>
-            <th>Groupes</th>
+            <th style="width:15%">Fabricant</th>
+            <th style="width:20%">Coordinateur</th>
+            <th style="width:15%">Firmware ou puce</th>
+            <th style="width:15%">Objets en tout</th>
+            <th style="width:15%">Objets en direct</th>
+            <th style="width:5%">Groupes</th>
             <th>Commentaires</th>
         </tr>
     </thead>
