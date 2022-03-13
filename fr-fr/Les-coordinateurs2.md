@@ -144,7 +144,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
         <tr>
             <td rowspan=1></td>
             <td rowspan=1></td>
-            <td>TI CC2652P/CC2652R/CC2652RB</td>
+            <td>TI CC2652P/ CC2652R/ CC2652RB</td>
             <td>20</td>
             <td>?</td>
             <td>?</td>
