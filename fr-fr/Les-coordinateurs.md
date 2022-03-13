@@ -19,7 +19,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
         <tr>
             <td rowspan=3><a href="#les-coordinateurs-zigate">ZiGate</a></td>
             <td rowspan=3>Lixee</td>
-            <td rowspan=2>ZiGate V1<br>USB, PiZiGate, Wiifi, Ethernet</td>
+            <td rowspan=2>ZiGate V1<br>(USB, PiZiGate, Wiifi, Ethernet)</td>
             <td>Legacy</td>
             <td>40</td>
             <td>?</td>
@@ -34,7 +34,7 @@ Cliquer sur les liens de chipset pour accéder aux informations.
             <td></td>
         </tr>
         <tr>
-            <td rowspan=1>ZiGate V2<br>USB, PiZiGate, Wiifi, Ethernet</td>
+            <td rowspan=1>ZiGate V2<br>(USB, PiZiGate, Wiifi, Ethernet)</td>
             <td></td>
             <td>200</td>
             <td>20</td>
