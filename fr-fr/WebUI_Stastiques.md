@@ -2,12 +2,13 @@
 
 Avec le lancement de la version 6, nous avons ajouté une fonctionnalité de statistique au WebUI. Cela nous permet d'avoir des informations concernant l’utilisation du plugin dans le but de l'améliorer.
 
-La solution utilisée pour récolter ces données est  [Matomo](https://fr.matomo.org)(anciennement Piwik) dont nous hébergeons le serveur nous même.
+La solution utilisée pour récolter ces données est  [Matomo](https://fr.matomo.org) (anciennement Piwik) dont nous hébergeons le serveur nous même.
 
 
 ## Les cookies
 
 Le WebUI étant un mini site web, nous utilisons la fonctionnalité de cookies déposé dans votre navigateur. Lors de la première ouverture du WebUI, un bandeau en bas vous demande votre autorisation pour collecter ces données.
+
 **A tout moment**, il est possible de modifier votre choix de nous envoyer vos données en utilisant le paramètre __PluginAnalytics__ dans la page de réglages du WebUI.
 
 
@@ -26,7 +27,7 @@ En plus des traditionnelles informations récoltées sur les sites internet (nav
 
 ## Exemple de taille du réseau
 
-Les statistiques de taille du réseau peut nous être remontés sous forme graphique :
+Les statistiques de taille du réseau peuvent nous être remontés sous forme graphique :
 
 ![Exemple réseau](Images/FR_Statistiques-reseau.png)
 
