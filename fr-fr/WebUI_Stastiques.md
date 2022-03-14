@@ -2,7 +2,7 @@
 
 Avec le lancement de la version 6, nous avons ajouté une fonctionnalité de statistique au WebUI. Cela nous permet d'avoir des informations concernant l’utilisation du plugin dans le but de l'améliorer.
 
-La solution utilisée pour récolter ces données est [Matomo](https://fr.matomo.org)(anciennement Piwik) dont nous hébergeons le serveur nous même.
+La solution utilisée pour récolter ces données est  [Matomo](https://fr.matomo.org)(anciennement Piwik) dont nous hébergeons le serveur nous même.
 
 
 ## Les cookies
