@@ -108,6 +108,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Informations
 
+* [Plugin's statistics](WebUI_Stastics.md)
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
 * [How-to Configure ZiGate in ZigBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
