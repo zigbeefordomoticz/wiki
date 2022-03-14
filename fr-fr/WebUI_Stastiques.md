@@ -38,5 +38,10 @@ Dans l'exemple, on voit tout à droite, un réseau avec 56 objets, dont 19 route
 
 ## Pourquoi ?
 
-Nous sommes une petite équipe de bénévoles qui partageons notre temps pour développer ce plugin. Avec ce petit retour d'infos, vous nous permettez de connaître l'utilisation que vous en faite. Ainsi nous pourrons concentrer nos efforts là où il y aurait le plus besoin.
+Nous sommes une petite équipe de bénévoles qui partageons notre temps pour développer ce plugin.
+
+Avec ce petit retour d'infos, vous nous permettez de connaître l'utilisation que vous en faite.
+
+Ainsi nous pourrons concentrer nos efforts là où il y aurait le plus besoin.
+
 Merci.
