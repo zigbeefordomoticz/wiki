@@ -107,6 +107,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Informations
 
+* [Les statistiques du plugin](WebUI_Stastiques.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
