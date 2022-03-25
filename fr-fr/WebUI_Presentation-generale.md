@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # L'interface Web - Présentation générale
-
-</br>
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
@@ -41,4 +37,4 @@ Le bandeau rouge indique un problème de connexion avec le coordinateur.
 Le bandeau jaune indique l'appairage d'un dispositif ou que le coordinateur est chargé. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
 ------------------------------------------------
-Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).

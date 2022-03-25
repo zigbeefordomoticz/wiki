@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Info - Wiki's informations
-
-</br>
 
 We try through this wiki, to put as much information as possible on how to use the ZigBeeForDomoticZ plugin.
 

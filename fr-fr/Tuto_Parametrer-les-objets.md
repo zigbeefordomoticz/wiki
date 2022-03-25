@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Tutoriel - Paramétrer les objets
-
-</br>
 
 Ce tutoriel explique comment paramétrer spécifiquement certains objets.
 

@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # FAQ for ZigBeeForDomoticZ plugin
-
-</br>
 
 ## How to manage several USB key and make sure that the coordinator is awlays using the same port
 

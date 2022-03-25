@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Problèmes - L'appairage
-
-</br>
 
 Le plugin est développé pour pouvoir communiquer avec les objets respectant les spécifications ZigBee. Par exemple, si le plugin essaye d'appairer un objet inconnu, il va essayer de créer des dispositifs dans DomoticZ en se basant sur les fonctionnalités de l'objet.
 

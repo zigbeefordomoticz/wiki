@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Problème - Aide au débogage
-
-</br>
 
 Ce document présente les possibilités pour réaliser un débogage mais également les informations nécessaires pour remonter les soucis.
 

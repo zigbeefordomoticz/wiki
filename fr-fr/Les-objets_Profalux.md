@@ -1,4 +1,4 @@
-# Les objets de la marque Profalux
+# Les objets de la marque Profalux 
 
 Certains objets de la marque Profalux ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
 

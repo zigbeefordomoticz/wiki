@@ -1,5 +1,3 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Bienvenue sur le wiki du Plugin ZigBeeForDomoticZ pour DomoticZ !
 
 </br>
@@ -117,7 +115,6 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Liens utiles
 
-* [Le wiki ZiGate.fr](https://zigate.fr/documentation)
-* [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
-* [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
-* [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
+Le wiki a changé de forme !! Il est maintenant consultable sous la forme d'un site web : [voir le Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
+
+[![WikiUI-FR](Images/FR_WikiUI.png)](https://zigbeefordomoticz.github.io/wiki/fr-fr)

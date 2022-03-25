@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 ## Plugin Update
-
-</br>
 
 The plugin is regularly updated. For bug fixing or enhancement. In order to keep the plugin up to date
 
