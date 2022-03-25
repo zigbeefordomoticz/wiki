@@ -27,6 +27,7 @@ ListOfDevices is an internal plugin structure which is managing the all plugin d
 | HW Version | Hardware version |
 | Status | inDB (in Domoticz DB), UNKNOWN (unidentified device) |
 | Battery | battery % |
+| BatteryUpdateTime | last battery update time |
 | RSSI | Link quality |
 | SQN | Sequence Number |
 | ClusterType | Domoticz device Id and Cluster Type |

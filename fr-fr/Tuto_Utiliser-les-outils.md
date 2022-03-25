@@ -16,6 +16,7 @@ Le plugin dispose d'une section regroupant les outils du Plugin :  [Outils > Ou
 | [Plugin infos (json)](#plugin-infos-json) | [ZiGate infos (json)](#zigate-infos-json) | [Liste des dispositifs DomoticZ (json)](#liste-des-dispositifs-domoticz-json) | [Liste des objets (json)](#liste-des-%objets-json) |
 | [Liste des groupes (json)](#liste-des-groupes-json) | [Liste des objets raw (json)](#liste-des-objets-raw-json) | [Santé plugin (json)](#sant%C3%A9-plugin-json) | [zGroup-1st-devices (json)](#zgroup-1st-devices-json) |
 | [Paramètres (json)](#param%C3%A8tres-json) | [Trafic (json)](#trafic-json) | [Liste des objets (json)](#liste-des-objets-json) | [Paramètres DomoticZ (json)](#param%C3%A8tres-domoticz-json) |
+| [Etats Batterie (json)](#etats-batterie-json)|
 
 
 ### Plugin infos (json)
@@ -99,6 +100,13 @@ Cet outil affiche les paramètres pour accéder à l'API de DomoticZ.
 Usage : Développement
 API REST : domoticz-env
 
+### Etats Batterie (json)
+
+Cet outil affiche les informations batterie par niveau et date de mise à jour
+
+Usage : Débogage
+API REST : battery-state
+
 
 ## L'API REST
 
@@ -107,3 +115,6 @@ Il est possible d'accéder aux données de ces outils sans passer par l'interfac
 * Ouvrir dans votre navigateur *IP_DomoticZ:Port_Plugin-ZiGate/rest-zigate/1/__API REST__* en remplaçant API REST par celui voulu.
 
 Exemple : http://127.0.0.1:9440/rest-zigate/1/plugin
+
+ou par terminal :
+`curl http://127.0.0.1:9440/rest-zigate/1/plugin-stat`
