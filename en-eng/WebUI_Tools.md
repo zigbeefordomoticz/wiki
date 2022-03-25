@@ -23,7 +23,7 @@ Here is the __Tools__ page of the plugin Web interface :
 
 Use this page to use the differents tools of the plugin.
 
-Refer to the tutorial [Using tools](How-To_Using-tools.md) for more informations.
+Refer to the tutorial [Using tools](HowTo_Using-tools.md) for more informations.
 
 ------------------------------------------------
 ## Command
@@ -50,7 +50,7 @@ Here is the __Bindings__ page of the plugin Web interface :
 
 Use this page to manage bindings between devices.
 
-Refer to the tutorial [Bind two devices](HowTo_Binding-Legrand.md) for more informations.
+Refer to the tutorial [Bind two devices](HowTo_Binding_Legrand.md) for more informations.
 
 
 ------------------------------------------------
