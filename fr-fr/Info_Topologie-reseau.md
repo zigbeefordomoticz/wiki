@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Info - Topologie du réseau
-
-</br>
 
  Le Plugin permet de générer un rapport sur la topologie du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
 __Important :__ Le filtrage des paquets implémenté utilise la valeur LQI.

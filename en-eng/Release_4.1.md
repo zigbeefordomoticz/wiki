@@ -1,4 +1,4 @@
-## Release 4.1
+## Release 4.1 
 
 Even if we are just moving from 4.0.8 , release 4.1 is a pretty important release in terms of functionalities coming on board.
 The most important one is with the empowerement of Zigate firmware 3.0f we are bringing a native support of Groups management.

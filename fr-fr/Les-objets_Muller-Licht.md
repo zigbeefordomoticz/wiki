@@ -1,4 +1,4 @@
-# Les objets de la marque Muller Licht
+# Les objets de la marque Muller Licht 
 
 Certains objets de la marque Muller Licht ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 

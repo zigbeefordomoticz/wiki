@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # L'interface Web - La page A propos
-
-</br>
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
@@ -20,4 +16,4 @@ Cette page regroupe des informations génériques sur le plugin :
 * L'équipe : développeurs, testeurs, traducteurs, rédacteurs
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).

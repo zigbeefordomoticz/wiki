@@ -1,9 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Tutoriel - Appairer un objet ZigBee
-
-</br>
-
 
 ## Introduction
 
@@ -70,7 +65,7 @@ Il existe plusieurs méthodes :
 * Appairage sur une durée
 * Appairage sur un routeur spécifique
 
-**Note :** Vérifier qu'il n'y a pas de particularités pour l'appairage de votre objet. Voir la liste des [Objets avec des particularités](Home.md#particularit%C3%A9s-de-certains-objets).
+**Note :** Vérifier qu'il n'y a pas de particularités pour l'appairage de votre objet. Voir la liste des [Objets avec des particularités](Readme.md#particularit%C3%A9s-de-certains-objets).
 
 ------------------------------------------------
 ### 1. Appairage avec le suivi

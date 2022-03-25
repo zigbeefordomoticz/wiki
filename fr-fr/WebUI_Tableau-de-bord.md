@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # L'interface Web - La page Tableau de bord
-
-</br>
 
 Pour accéder à l'interface d'administration du Plugin, voir l'étape 3 [Configuration du Plugin](Plugin_Configuration.md).
 
@@ -27,4 +23,4 @@ Ils indiquent l'état des objets :
 * La santé
 * Le niveau de batterie
 
-Voir les autres pages de l'[interface Web du Plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du Plugin](Readme.md#linterface-web-du-plugin).

@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # The Web interface - Admin section
-
-</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -75,7 +71,7 @@ You can :
 
 * Make a soft reset : **this action will not loose any paired device**.
 
-Refer to the sectionl [How to](Home.md#how-to) for more informations.
+Refer to the sectionl [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Plugin
@@ -93,7 +89,7 @@ You can :
 
 * Make a restart of the plugin
 
-Refer to the sectionl [How to](Home.md#how-to) for more informations.
+Refer to the sectionl [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Firmware
@@ -111,8 +107,8 @@ You can :
 
 * Make an update of your paired device
 
-Refer to the section [How to](Home.md#how-to) for more informations.
+Refer to the section [How to](Readme.md#how-to) for more informations.
 
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).

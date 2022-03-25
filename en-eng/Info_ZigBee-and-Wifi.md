@@ -1,8 +1,5 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # ZigBee and Wifi
 
-</br>
 ## Plugin Configuration
 
 The choice of 2.4-GHz band channel for the network is pre-configured as either a fixed channel (in the range 11-26) or a set of channels from which the best channel will be selected by the Coordinator. In the latter case, the Coordinator performs an energy scan of the possible channels and chooses the quietest channel.

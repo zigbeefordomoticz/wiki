@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # How to move from version 5 to version 6
-
-</br>
 
 <a href="../fr-fr/Plugin_Version-6.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
 [Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)
@@ -10,7 +6,7 @@
 
 ## Informations about Beta
 
-The Wiki you now have to look at is on [the zigpy branch](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/en-eng/Home.md). This wiki will become the default version when version 6 is released as a stable version.
+The Wiki you now have to look at is on [the zigpy branch](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/en-eng/Readme.md). This wiki will become the default version when version 6 is released as a stable version.
 
 To make a __new plugin install__, please follow [the install procedure on zigpy branch](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/en-eng/Plugin_Installation.md#2---manual-installation-running-on-linux). For the moment, only the manual installation on Linux has been tested and validated.
 
