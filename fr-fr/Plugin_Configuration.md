@@ -1,9 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Configuration du Plugin
-
-</br>
-
 
 Cette étape est la troisième étape du processus d'installation du Plugin ZigBeeForDomoticZ.
 
@@ -42,4 +37,4 @@ Sur le bandeau en bas de la page, vous disposez des informations suivantes (de g
 ![Plugin Web Admin Interface](../Images/Dashboard.png)
 
 ## Présentation de l'interface d'administration
-[L'interface web du Plugin](Home.md#linterface-web-du-plugin)
+[L'interface web du Plugin](Readme.md#linterface-web-du-plugin)

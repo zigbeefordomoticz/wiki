@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Les mises à jour et les branches
-
-</br>
 
 ## Mettre à jour le Plugin
 
@@ -120,7 +116,7 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 
 __Attention aux compatibilités avec DomoticZ lors du changement de branche.__
 
-[Poursuivre sur la mise à jour du Plugin](Home.md#mises-%C3%A0-jour-du-plugin)
+[Poursuivre sur la mise à jour du Plugin](Readme.md#mises-%C3%A0-jour-du-plugin)
 
 
 ### Revenir à une version précédente

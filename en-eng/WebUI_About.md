@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # The Web interface - About page
-
-</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -21,4 +17,4 @@ This page compile the plugin's overall informations :
 * The team : developpers, testers, translaters, writters
 
 
-Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).

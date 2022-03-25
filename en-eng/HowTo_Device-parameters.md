@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # How To : Device Parameter
-
-</br>s
 
 A number of parameters are available inside the plugin to customize the behaviour of the plugin or the behaviour of the device.
 

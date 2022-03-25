@@ -1,9 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Provide a Mapping between Generic Switch Selector and what we have found
-
-</br>
-
 
 
 | Brand | Device | Style | Off Hidden | Selector 1 | Selector 2 | Selector 3 | Selector 4 | Selector 5 | Selector 6 | Selector 7 |  Selector 8 |  Selector 9 |  Selector 10 |  Selector 11 |  Selector 12 |  Selector 13 |

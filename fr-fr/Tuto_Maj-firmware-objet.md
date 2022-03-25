@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # Tutoriel - Mettre à jour le firmware d'un objet
-
-</br>
 
 Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'un objet ZigBee avec le coordinateur.
 

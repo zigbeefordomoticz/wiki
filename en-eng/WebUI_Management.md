@@ -1,8 +1,4 @@
-<a href="Home.md"><img align="left" width="80" height="80" src="../Images/logo_Z4D.png" alt="Logo"></a>
-
 # The Web interface - Management section
-
-</br>
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
@@ -48,4 +44,4 @@ Use this page to manage your groups.
 Refer to the section [How to manage groups](HowTo_Group-management.md) for more informations.
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
