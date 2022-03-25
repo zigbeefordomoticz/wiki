@@ -20,10 +20,11 @@ For troubleshooting purposes you might be asked to do an export.json of the __Pl
 | Settings (json)             |  /settings      | dev   | Provide the list of plugin settings |
 | Plugin Groups (json)        |  /zgroup        | debug | Provide the group plugin database |
 | Traffic (json)              |  /plugin-stat   | debug | dump all plugin statistics |
+| Battery State (json)        |  /battery-state | debug | dump all battery information by level and update time |
 
 
 ## How to use the REST API
 
   If you want to call /plugin-health in order to check the plugin health
 
-  `wget <http://127.0.0.1:9440/rest-zigate/1/plugin-stat>`
+  `curl http://127.0.0.1:9440/rest-zigate/1/plugin-stat`
