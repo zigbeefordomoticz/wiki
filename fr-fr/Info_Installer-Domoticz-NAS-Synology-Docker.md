@@ -81,7 +81,8 @@ Vous pouvez continuer l'installation du plugin en suivant : [Installation sur Do
 # Installation des drivers USB
 En fonction du modèle de zigate, le driver USB n'est pas le même.
 * Pour la première version, il faut le fichier __cp210x.ko__, on le trouve sur le de [jadahl.com](http://www.jadahl.com/). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have). Il faudra ensuite mettre le fichier dans le repertoire /lib/modules.
-* Pour la v+, il faut le fichier __ftdi_sio.ko__, à partir de DSM7.0, celui-ci est déjà présent.
+* Pour la v2, les clés TI ou la conbee, il faut le fichier __ftdi_sio.ko__, à partir de DSM7.0, celui-ci est déjà présent.
+* Pour la conbee 2, il faut également ajouter cdc-acm.ko
 
 
 Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en utilisant la commande avec le fichier correspondant à votre modèle de clé :
@@ -92,9 +93,15 @@ sudo insmod /lib/modules/usbserial.ko
 sudo insmod /lib/modules/cp210x.ko
 OR
 sudo insmod /lib/modules/ftdi_sio.ko
+OR/AND
+sudo insmod /lib/modules/cdc-acm.ko
 ````
 
-Pour que les drivers soient chargés au démarage du NAS, vous pouvez ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
+Pour que les drivers soient chargés au démarage du NAS, vous pouvez :
+* Soit utiliser le planificateur de tâches (panneau de configuration) en créeant une tâche déclenchée
+
+
+* Soit ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
 
 Supprimer la ligne dont vous n'avez pas besoin (cp210x.ko ou ftdi_sio.ko).
 
@@ -105,6 +112,7 @@ case $1 in
     insmod /lib/modules/usbserial.ko > /dev/null 2>&1
     insmod /lib/modules/cp210x.ko > /dev/null 2>&1
     insmod /lib/modules/ftdi_sio.ko > /dev/null 2>&1
+    insmod /lib/modules/cdc-acm.ko > /dev/null 2>&1
     ;;
   stop)
     exit 0
