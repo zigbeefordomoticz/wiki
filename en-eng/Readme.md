@@ -6,6 +6,12 @@
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.
 [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
+
+## Migrating to stable6
+
+On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate from earlier versions, it is necessary to follow the following procedure : [Plugin_Version-6](Plugin_Version-6.md)
+
+
 ## Introduction
 
 * [Start](Info_Home.md) for beginners
