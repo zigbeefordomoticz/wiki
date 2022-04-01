@@ -15,4 +15,4 @@ If you would like to translate a part or the totality of the Wiki into an other 
 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism.
 
-The ZigBeeForDomoticZ plugin code is available at https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+The ZigBeeForDomoticZ plugin code is available at https://github.com/zigbeefordomoticz/Domoticz-Zigbee 

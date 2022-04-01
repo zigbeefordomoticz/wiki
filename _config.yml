@@ -1,4 +1,4 @@
-remote_theme: jp-keros/primer
+remote_theme: zigbeefordomoticz/primer
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: ""
