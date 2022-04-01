@@ -43,7 +43,7 @@ Voici la page __Gestion des groupes__ de l'interface Web du plugin :
 ![Gestion des groupes](Images/FR_WebUI-Gestion-des-groupes.png)
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
-Le groupe est vu dans DomoticZ comme un unique widget de type Switch et ce indépendamment du nombre de d'objet composant le groupe. L'action sur le switch (DomoticZ) sera alors répercutée simultanément sur tous des objets du groupe.
+Le groupe est vu dans DomoticZ comme un unique widget de type Switch et ce indépendamment du nombre de d'objet composant le groupe. L'action sur le Widget (DomoticZ) sera alors répercutée simultanément sur tous des objets du groupe.
 
 ### Utilisation
 
@@ -52,4 +52,4 @@ Cette page permet de lister les groupes de d'objets gérés par le plugin.
 Se reporter au tutoriel [Gérer les groupes](Tuto_Gerer-les-groupes.md) pour plus d'informations.
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).

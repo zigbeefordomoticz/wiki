@@ -1,4 +1,4 @@
- # Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)
+# Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)
 
 Domoticz a des soucis avec python3.9 sur raspberry pi, or c’est désormais la version par défaut de python avec RaspberryOS. Nous allons donc voir comment revenir à la version précédente de python pour permettre à domoticz de fonctionner correctement.
 

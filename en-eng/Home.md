@@ -1,6 +1,6 @@
-# Welcome to the Domoticz-Zigate wiki !
+# Welcome to the plugin ZigBeeForDomoticZ wiki !
 
-![zigate.fr](../Images/ZiGate.png)
+</br>
 
 <a href=../fr-fr/Home.md><img src="../Images/flag_france.png" width="15" height="15"></a> [Lien vers le Wiki en français](../fr-fr/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
@@ -11,6 +11,13 @@ We are contributing to this project on our spare time. If you do consider that i
 ## Introduction
 
 * [Start](Info_Home.md) for beginners
+
+
+## Compatibily
+
+* [Compatible objects](Objetcs.md)
+* [Compatible coordinators](Coordinators.md)
+
 
 ## Installation
 
@@ -40,6 +47,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## How-to
 
+* [Build a ZigBee mesh network](HowTo_Build-a-ZigBee-network.md)
 * [Add a new devices](HowTo_Pairing-device.md)
 * [Remove a Device](HowTo_Remove-device.md)
 * [Device parameters](HowTo_Device-parameters.md)
@@ -49,7 +57,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Deal with errors](HowTo_Dealing-pluging-error.md)
 * [Change the Zigbee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
-* [Upgrading Firmware of Zigate](HowTo_Update-ZiGate-firmware.md)
+* [Upgrading Firmware of ZiGate](HowTo_Update-ZiGate-firmware.md)
 * [Expose the dashboard with basic authentication on a https link](HowTo_Dashboard-Access-Basic-Auth.md)
 
 ## ZiGate How-to
@@ -62,7 +70,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Dealing with not certified devices](Problem_Dealing-with-none-certified-device.md)
 * [Debug mode](Problem_Debuging-mode.md)
 * [FAQ ZiGate](FAQ_ZiGate.md)
-* [FAQ ZiGate plugin](FAQ_ZiGate-Plugin.md)
+* [FAQ plugin](FAQ_Plugin.md)
 
 
 ## Devices specifics
@@ -83,6 +91,8 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## In case of Trouble
 
+* [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
+
 1. Watch the log, you should fine some information if something is going wrong.
 1. Use one of the forum channels
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
@@ -96,12 +106,13 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Informations
 
+* [Plugin's statistics](WebUI_Stastics.md)
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
-* [How-to Configure ZiGate in ZiBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
+* [How-to Configure ZiGate in ZigBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
 
 ## More
 
-* [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
-* [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
-* [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
+The wiki has changed shape!! It is now searchable as a website : [see the Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
+
+[![WikiUI-EN](Images/EN_WikiUI.png)](https://zigbeefordomoticz.github.io/wiki/en-eng)

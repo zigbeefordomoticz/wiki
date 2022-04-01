@@ -1,9 +1,8 @@
 # Tutoriel - Gérer les erreurs du plugin
 
-
 ## Introduction
 
-Ce tutoriel explique comment gérer les erreur plugin de la ZiGate.
+Ce tutoriel explique comment gérer les erreur plugin ZigBeeForDomoticZ.
 
 ## Présentation
 

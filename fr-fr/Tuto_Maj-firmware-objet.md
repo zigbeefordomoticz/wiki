@@ -1,6 +1,6 @@
 # Tutoriel - Mettre à jour le firmware d'un objet
 
-Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'un objet ZigBee avec la ZiGate.
+Ce tutoriel explique comment mettre à jour le firmware (le logiciel interne) d'un objet ZigBee avec le coordinateur.
 
 ## Avant propos
 
@@ -14,11 +14,11 @@ _Il n'est donc pas possible de mettre à jour le firmware de tous les objets con
 
 | Fabricant    | Dossier de stockage pour les firmwares          |
 | ------------ | ---------------------------------------- |
-| IKEA TRADFRI | Domoticz-Zigate/OTAFirmware/IKEA-TRADFRI |
-| LEDVANCE     | Domoticz-Zigate/OTAFirmware/LEDVANCE     |
-| LEGRAND      | Domoticz-Zigate/OTAFirmware/LEGRAND      |
-| Philips Hue  | Domoticz-Zigate/OTAFirmware/PHILIPS      |
-| Salus        | Domoticz-Zigate/OTAFirmware/SALUS        |
+| IKEA TRADFRI | Domoticz-Zigbee/OTAFirmware/IKEA-TRADFRI |
+| LEDVANCE     | Domoticz-Zigbee/OTAFirmware/LEDVANCE     |
+| LEGRAND      | Domoticz-Zigbee/OTAFirmware/LEGRAND      |
+| Philips Hue  | Domoticz-Zigbee/OTAFirmware/PHILIPS      |
+| Salus        | Domoticz-Zigbee/OTAFirmware/SALUS        |
 
 Chaque dossier de fabricant contient un fichier README.md qui décrit ou trouver le firmware.
 Une liste plus complète sur les objets ZigBee est disponible sur https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions.

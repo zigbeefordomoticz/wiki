@@ -11,7 +11,7 @@ Ce tutoriel explique comment remplacer ou ré-initialiser sa ZiGate.
 * Pour réinitialiser compétemment une ZiGate (cause de bug par exemple)*.
 * Pour passer d'un firmware classique au firmware OptiPDM (à partir de la version 3.1e)
 
-\* Demander conseils sur les forums et attendre un avi des développeurs.
+\* Demander conseils sur les forums et attendre un avis des développeurs.
 
 **Quand __NE PAS__ appliquer ce Tutoriel ?**
 
@@ -36,7 +36,7 @@ En suivant cette procédure, qui ne touche ni à DomoticZ, ni au Plugin, les dis
 
 Cela apporte des améliorations pour le fonctionnement du plugin.
 
-3. Redémarrer complètement (Serveur, Domoticz, Plugin, ZiGate).
+3. Redémarrer complètement (Serveur, DomoticZ, Plugin, ZiGate).
 
 S'assurer que tout fonctionne normalement.
 

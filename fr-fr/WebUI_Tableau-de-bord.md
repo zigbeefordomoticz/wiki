@@ -1,10 +1,10 @@
 # L'interface Web - La page Tableau de bord
 
-Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
+Pour accéder à l'interface d'administration du Plugin, voir l'étape 3 [Configuration du Plugin](Plugin_Configuration.md).
 
-Voici la page __Tableau de bord__ de l'interface Web du plugin :
+Voici la page __Tableau de bord__ de l'interface Web du Plugin :
 
-![Tableau de bord du plugin](Images/FR_WebUI-Tableau-de-bord.png)
+![Tableau de bord du Plugin](Images/FR_WebUI-Tableau-de-bord.png)
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Composition
@@ -23,4 +23,4 @@ Ils indiquent l'état des objets :
 * La santé
 * Le niveau de batterie
 
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du Plugin](Readme.md#linterface-web-du-plugin).

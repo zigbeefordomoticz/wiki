@@ -1,6 +1,6 @@
 # Plugin configuration
 
-This is the tird step of the plugin Zigate installation process.
+This is the tird step of the plugin ZigBeeForDomoticZ installation process.
 
 You should have already finished the [STEP 1 Instalaltion](Plugin_Installation.md) and the [STEP 2 Seetings](Plugin_Settings.md).
 
@@ -12,7 +12,7 @@ The administration interface gives you an access the following elements :
 - A dashboard
 - Devices and groups management
 - Network topology and ZigBee network quality
-- Commands to administrate ZiGate, plugin and devices
+- Commands to administrate the coordinator, plugin and devices
 - Plugin configuration
 - Tools to debug, manage errors and interaction with devices
 

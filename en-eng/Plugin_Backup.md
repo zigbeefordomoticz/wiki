@@ -1,11 +1,10 @@
 # Reinstall Plugin and keep Database and Configuration
 
-
 ## Overview
 
 Purpose is to do a re-install of the plugin without loosing any data
 
-You have __critical__ files under the Domoticz-Zigate folder. In case of crash, you might want to have backup to restore. Here after are the files to backup
+You have __critical__ files under the Domoticz-Zigbee folder. In case of crash, you might want to have backup to restore. Here after are the files to backup
 
     Conf/PluginConf-*.json
     Data/*
@@ -17,7 +16,7 @@ Of course you must backup the Domoticz Database `domoticz.db` (check to Domoticz
 ## Assumption
 
 * Domoticz plugins are located in ```/home/pi/domoticz/plugins ```
-* Zigate plugin has been installed by default under ```/home/pi/domoticz/plugins/Domoticz-Zigate```
+* ZigBeeForDomoticZ plugin has been installed by default under ```/home/pi/domoticz/plugins/Domoticz-Zigbee```
 
 In case this is different, please use your own location
 
@@ -26,43 +25,34 @@ In case this is different, please use your own location
 
 1. Stop domoticz
 
-1. Move the Zigate plugin folder to your home directory
+1. Move the ZigBeeForDomoticZ plugin folder to your home directory
 
-   ```mv /home/pi/domoticz/plugins/Domoticz-Zigate   /home/pi```
+   ```
+   mv /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
+   ```
 
 1. Install the fresh version of the plugin
 
-   ```
-   cd /home/pi/domoticz/plugins
-   git clone https://github.com/pipiche38/Domoticz-Zigate.git
-   ```
+see Instalaltion page
 
-1. Copy the Zigate plugin database to the new installation
+1. Copy the ZigBeeForDomoticZ plugin database to the new installation
 
    ```
-   cp /home/pi/Domoticz-Zigate/Data/* /home/pi/domoticz/plugins/Domoticz-Zigate/Data
+   cp /home/pi/Domoticz-Zigbee/Data/* /home/pi/domoticz/plugins/Domoticz-Zigbee/Data
    ```
 
 1. Copy the Plugin configurations file
 
    ```
-   cp /home/pi/Domoticz-Zigate/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigate/Conf
+   cp /home/pi/Domoticz-Zigbee/Conf/PluginConf* /home/pi/domoticz/plugins/Domoticz-Zigbee/Conf
    ```
 
 1. Copy the Plugin reports (if you want to keep the old reports)
 
    ```
-   cp /home/pi/Domoticz-Zigate/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigate/Reports
+   cp /home/pi/Domoticz-Zigbee/Reports/* /home/pi/domoticz/plugins/Domoticz-Zigbee/Reports
    ```
 
-   At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigate and a new version ready to be launched in ```/home/pi/domoticz/plugins/Domoticz-Zigate```
+   At that stage you have a copy of the Old plugin in /home/pi/Domoticz-Zigbee and a new version ready to be launched in ```/home/pi/domoticz/plugins/Domoticz-Zigbee```
 
-1. By default you'll be on the 'stable' branch, if you want to switch to 'beta' do
-
-   ```
-   cd /home/pi/domoticz/plugins/Domoticz-Zigate/
-   git pull
-   git checkout beta
-   ```
-
-1. You can now restart Domoticz
+1. You can now restart DomoticZ

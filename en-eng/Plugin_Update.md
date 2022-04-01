@@ -1,11 +1,12 @@
-
-
 ## Plugin Update
 
 The plugin is regularly updated. For bug fixing or enhancement. In order to keep the plugin up to date
 
 * Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
-* Run: `git pull`
+* Run: `git submodule update --init --recursive`
+
+__Note :__ Since version 6, the git pull is no longer enough.
+
 * In case you have edited/updated some of the plugin controlled file, you might get an error message protecting any update. In such situation you can reset those files with the latest version with the following commands
   ```
   git reset –-hard
@@ -14,6 +15,8 @@ The plugin is regularly updated. For bug fixing or enhancement. In order to keep
 
 * Run: `sudo chmod +x plugin.py`
 * Restart Domoticz.
+
+* Lancer la commande `git submodule update --init --recursive`
 
 
 

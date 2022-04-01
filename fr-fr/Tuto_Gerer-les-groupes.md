@@ -1,21 +1,20 @@
 # Tutoriel - Gérer les groupes
 
-
 ## Introduction
 
-Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le plugin de la ZiGate.
+Ce tutoriel explique comment gérer les groupes d'objets ZigBee directement depuis le Plugin ZigBeeForDomoticZ.
 
-Depuis la mise en place de l'interface Web avec la version 4.7 du plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
+Depuis la mise en place de l'interface Web avec la version 4.7 du Plugin, la gestion des groupes a été simplifiée. Elle se faisait auparavant principalement en ligne de commande.
 Des améliorations ont été apportées avec la version 4.9 pour rendre la gestion des groupes plus facile mais il reste encore du travail pour améliorer l'expérience utilisateur.
 
 ## Présentation
 
-Un groupe ZiGate permet de regrouper plusieurs objets connectés sur secteur (routeur) sous un seul dispositif dans DomoticZ. Une action sur un Widget sera transmis à tous les objets appartenant au groupe.
+Un groupe ZigBee permet de regrouper plusieurs objets connectés sur secteur (routeur) sous un seul dispositif dans DomoticZ. Une action sur un Widget sera transmis à tous les objets appartenant au groupe.
 
-__Les objets terminaux ne peuvent pas être associés à un groupe dans la ZiGate.__
+__Les objets terminaux ne peuvent pas être associés à un groupe.__
 
-Dans le détail, ce n'est pas la ZiGate qui tient la liste des objets de chaque groupe ; ce sont les objets qui conservent en mémoire dans quels groupes ils appartiennent.
-Concrètement la ZiGate envoie la commande à tout le réseau en indiquant que c'est pour le groupe 1001 (par exemple) : tous les objets vont recevoir la demande et si un objet reconnaît le groupe auquel il appartient, il va appliquer la commande.
+Dans le détail, ce n'est pas le coordinateur qui tient la liste des objets de chaque groupe ; ce sont les objets qui conservent en mémoire dans quels groupes ils appartiennent.
+Concrètement le coordinateur envoie la commande à tout le réseau en indiquant que c'est pour le groupe 1001 (par exemple) : tous les objets vont recevoir la demande et si un objet reconnaît le groupe auquel il appartient, il va appliquer la commande.
 
 Pour appliquer une commande pour un groupe, un objet doit écouter le réseau. Les objets terminaux (sur batterie) n'ont pas cette fonction d'écoute, c'est la raison pour laquelle les objets terminaux ne peuvent pas être ajouter dans un groupe ; seuls les routeurs peuvent l'être.
 
@@ -25,7 +24,7 @@ __Ce fonctionnement est complètement indépendant des groupes dans DomoticZ.__
 
 * Version du firmware de la ZiGate supérieur à 3.0f
 * Version du Plugin supérieur à 4.
-* Version de DomoticZ supérieur à 2020.1 (avec l'interface web du plugin activé)
+* Version de DomoticZ supérieur à 2020.1 (avec l'interface web du Plugin activé)
 
 
 ## Méthode
@@ -37,7 +36,7 @@ __Ce fonctionnement est complètement indépendant des groupes dans DomoticZ.__
 
 ![Settings for Group Management](../Images/SettingsGroup.png)
 
-* Redémarrer le plugin.
+* Redémarrer le Plugin.
 * Initialiser les groupes (voir ci-dessous).
 
 
@@ -66,8 +65,8 @@ Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
 * Indiquer le nom du groupe.
 * Sélectionner les objets appartenant au groupe en les cliquant un par un. En cas d'erreur, utiliser la petit croix pour retirer un objet de la liste.
 
-Il est possible d'ajouter la ZiGate dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea (voir [la page des objets Ikea](Les-objets_Ikea.md)).
-__La ZiGate peut appartenir à un nombre limité de groupes :__ voir les [caractéristiques des ZiGates](Caracteristiques-des-ZiGates.md#nombre-de-groupe-limit%C3%A9).
+Il est possible d'ajouter le coordinateur dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea (voir [la page des objets Ikea](Les-objets_Ikea.md)).
+__Le coordinateur ne peut appartenir qu'à un nombre limité de groupes :__ voir les [caractéristiques des coordinateur](Caracteristiques-des-Coordinateurs.md#nombre-de-groupe-limit%C3%A9).
 
 * Cliquer sur le bouton __Valider__.
 
@@ -93,7 +92,7 @@ Il y a deux possibilités :
 
 * Supprimer le widget correspondant au groupe dans DomoticZ.
 
-##### Depuis L'interface web du plugin
+##### Depuis L'interface web du Plugin
 
 * Aller dans la section [Management > Gestion des groupes](WebUI_Gestion.md#gestion-des-groupes).
 * Sélectionner le groupe à supprimer.
@@ -113,5 +112,5 @@ L'activation du groupe 0000 créera le dispositif et le widget correspondant dan
 
 ## Avertissements
 
-Le plugin a un TimeOut de 7 secondes lors d'une analyse du réseau. C'est à dire que si un objet ne répond pas, il attend 7 secondes avant de passer à la commande suivante.
-Lors d'une analyse, si des objets ne sont pas connectés sur le réseau ZigBee, le plugin va attendre 7 secondes avant de passer à l'objet suivant. Si vous essayez d'envoyer une autre commande pendant ce temps là, elle va être mise en attente.
+Le Plugin a un TimeOut de 7 secondes lors d'une analyse du réseau. C'est à dire que si un objet ne répond pas, il attend 7 secondes avant de passer à la commande suivante.
+Lors d'une analyse, si des objets ne sont pas connectés sur le réseau ZigBee, le Plugin va attendre 7 secondes avant de passer à l'objet suivant. Si vous essayez d'envoyer une autre commande pendant ce temps là, elle va être mise en attente.

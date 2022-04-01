@@ -1,8 +1,8 @@
-# How To : Device Parameters
+# How To : Device Parameter
 
 A number of parameters are available inside the plugin to customize the behaviour of the plugin or the behaviour of the device.
 
-By default a Certified device get default parameters already initiatialized. If you want to customize you have to go to the plugin Web Admin page,
+By default, a Certified device get default parameters allready initiatialized. If you want to customize, you have to go to the plugin Web Admin page,
 then go to Management -> Device Management and you will find for each device a Parameters icon ( right column ) > a popup will open :
 
 ![EN_WebUI-Device-management-parametres.png](../Images/EN_WebUI-Device-management-parametres.png)

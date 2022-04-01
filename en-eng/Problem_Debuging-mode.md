@@ -1,4 +1,4 @@
-# Debuging mode for ZiGate Plugin for Domoticz
+# Debuging mode for ZigBeeForDomoticZ Plugin
 
 ## Introduction
 
@@ -16,27 +16,27 @@ The debugging options are available from the Web admin interface in the Menu Set
 | Option | Purpose |
 | ------- | -------- |
 | debugMatchId | you can specify here a short address or and IEEE of a specific device you want to track. In that case you will only see debug messages related to that specific address (short or IEEE) |
-| Use Domoticz Log | By default enabled, the plugin logs are issued in the Domoticz log. If you disable this, you will have the plugin Logs written in files under the plugin Logs folder ( Domoticz-Zigate/Logs/ ) |
+| Use Domoticz Log | By default enabled, the plugin logs are issued in the Domoticz log. If you disable this, you will have the plugin Logs written in files under the plugin Logs folder ( Domoticz-Zigbee/Logs/ ) |
 
 ### The Plugin Modules
 
 | Module | Description |
 | ------ | ----------- |
-| Input  | All incoming messages (from ZiGate) |
-| Output | All out going messages (to ZiGate) |
+| Input  | All incoming messages (from the coordinator) |
+| Output | All out going messages (to the coordinator) |
 | Cluster | decoding incoming messages. This is where we extract information from the messages payload |
 | Heartbeat | executed every 5s to perform recurring actions |
 | Widget | Updating Domoticz Widgets, usally call from Input or Cluster modules |
 | Plugin | the plugin program |
 | Database | Managing plugin database |
-| Command | Handling all actions from Domoticz, usally calling Output to perform ZiGate actions |
+| Command | Handling all actions from DomoticZ, usally calling Output to perform cordinator actions |
 
 
 ## Use Cases
 
-### Case 1: I do not see a sensor updating widgets on Domoticz
+### Case 1: I do not see a sensor updating widgets on DomoticZS
 
-In that case you need to check if we have incoming messages, if they are correctly processed, if they are pushed to Domoticz for update.
+In that case you need to check if we have incoming messages, if they are correctly processed, if they are pushed to DomoticZ for update.
 
 1. Enable debugInput, debugCluster and debugWidget
 1. set debugMatchId with the Short Address of this particular sensor, so you will limit the logs.

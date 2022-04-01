@@ -1,15 +1,15 @@
-# Info - Les caractéristiques des ZiGates
+# Info - Les caractéristiques des coordinateurs
 
-Les ZiGates peuvent avoir des différences. Plutôt que d'éditer toutes les pages du wiki pour rajouter les infos pour les nouveaux modèles, toutes les informations de ce type sont regroupées dans cette page.
+Les coordinateurs peuvent avoir des différences. Plutôt que d'éditer toutes les pages du wiki pour rajouter les infos pour les nouveaux modèles, toutes les informations de ce type sont regroupées dans cette page.
 
 ## Nombre d'objet limité
 
-Le nombre d'objets géré par une ZiGate est limité :
+Le nombre d'objets géré par un coordinateur est limité :
 
-* Modèle **V1** avec **firmware standard** : 40 objets en tout.
-* Modèle **V1** avec **firmware OptiPDM** : 70 objets en tout avec 20 objets maximum en direct sur la ZiGate, le reste en passant par les routeurs.
+* ZiGate Modèle **V1** avec **firmware standard** : 40 objets en tout.
+* ZiGate Modèle **V1** avec **firmware OptiPDM** : 70 objets en tout avec 20 objets maximum en direct sur la ZiGate, le reste en passant par les routeurs.
 
-* Modèle **V2** : 200 objets avec 20 maximum en direct sur la ZiGate, le reste en passant par les routeurs.
+* ZiGate Modèle **V2** : 200 objets avec 20 maximum en direct sur la ZiGate, le reste en passant par les routeurs.
 
 
 Dans tous les cas, **DomoticZ limite le nombre de dispositifs par plugin à 255**.
@@ -20,10 +20,10 @@ Pour info, un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs 
 
 ## Nombre de groupe limité
 
-Le nombre de groupes auxquels une ZiGate peut appartenir est limité :
+Le nombre de groupes auxquels un coordinateur peut appartenir est limité :
 
-* Modèle V1 : 5 Groupes
-* Modèle V2 : 15 Groupes
+* ZiGate Modèle V1 : 5 Groupes
+* ZiGate Modèle V2 : 15 Groupes
 
 Le nombre de groupes auxquels un objet peut appartenir est limité :
 

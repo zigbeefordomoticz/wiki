@@ -1,7 +1,9 @@
-Starting with release 4.1 the plugin directory structure is : 
+# Plugin directory structure
+
+Starting with release 4.1 the plugin directory structure is :
 
 
-+ domoticz/plugins/Domoticz-Zigate
++ domoticz/plugins/Domoticz-Zigbee
 
 | root | 1st level | Description | Access right |
 | ---  | --------- | ----------- | ------------ |

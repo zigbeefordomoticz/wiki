@@ -16,4 +16,4 @@ Cette page regroupe des informations génériques sur le plugin :
 * L'équipe : développeurs, testeurs, traducteurs, rédacteurs
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).

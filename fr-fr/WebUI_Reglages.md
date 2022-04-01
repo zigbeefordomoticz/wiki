@@ -2,7 +2,7 @@
 
 Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Configuration du plugin](Plugin_Configuration.md).
 
-__La modification des paramètres peut entraîner des dysfonctionnements au niveau de la ZiGate. Pensez à faire une sauvegarde avant toute modification.__
+__La modification des paramètres peut entraîner des dysfonctionnements au niveau du coordinateur et du réseau ZigBee Pensez à faire une sauvegarde avant toute modification.__
 
 *Les réglage décrits ont certainement évolués depuis la rédaction de cette page : il est possible que certains paramètres ait été déplacés directement au niveau des objets dans la section [Admin/Gestion des objets](WebUI_Admin.md#gestion-des-objets).*
 
@@ -32,7 +32,7 @@ Voici la page __Réglages__ de l'interface Web du plugin :
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZiGate |
+| Activer les Groupes | | Désactivé | | Active l'utilisation des groupes dans le plugin ZigBeeForDomoticZ |
 | Activer interrogation des objets | | Désactivé | | Active la fonction Polling |
 | Autoriser accès Internet | | Activé | | Autorise le plugin a ce connecté au web pour récupérer les informations de mise à jour. Cette vérification se fait toutes les 6 heures. __A ne pas activer sur Synology__|
 | Active l'interface Web | | Activé | | Active l'interface Web *La désactivation bloquera l'accès à cette page !!!*|
@@ -337,4 +337,4 @@ Permet d'activer des modes spécifiques aux équipements Schneider Wiser
 
 
 ------------------------------------------------
-Voir les autres pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les autres pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).

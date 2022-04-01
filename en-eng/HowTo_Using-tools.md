@@ -1,4 +1,3 @@
-
 # Web Admin: Tools page
 
 This page give access to a set of REST API to query directly the plugin memory. This page is mainly for developers and for debugging purposes.

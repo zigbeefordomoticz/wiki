@@ -10,7 +10,7 @@ Here is the __Seetings__ page of the plugin Web interface :
 
 ## Contents
 
-This file is used to customized some behaviour of the plugin at run time
+This file is used to customized some behaviour of the plugin at run time.
 
 If you are updating values in PluginConf, we strongly recommend you to make a copy of it in order to avoid any lost when doing an update of the plugin.
 
@@ -34,13 +34,13 @@ Those parameters allow the activation or not of services at plugin start.
 | allowOTA | disable |  manage the Over-the-Air firmware upgrade |
 | pingDevices | enable |  ping every hour each main powered device (see pingDevicesFeq parameter) |
 
-## DomoticzEnvironment
+## DomoticZEnvironment
 
-Some of the Domoticz parameters like on which port Domoticz listen for getting access to the domoticz API need to be provided.
+Some of the DomoticZ parameters like on which port DomoticZ listen for getting access to the domoticZ API need to be provided.
 
 | parameter | default | description |
 | --------- | ------- | ----------- |
-| port      | 8080    | on which port Domoticz listen to accept API requests |
+| port      | 8080    | on which port DomoticZ listen to accept API requests |
 
 
 ## Group Management
@@ -111,7 +111,7 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | parameter | default | description |
 | --------- | ------- | ----------- |
 | forcePollingAfterAction | enable | will request a status update of the device state after an action |
-| forcePassiveWidget | disable | will allow a Domoticz acion on the widget dispite the fact that the end device cannot receive the command. For exemple you have a Xiaomi battery device. |
+| forcePassiveWidget | disable | will allow a DomoticZ acion on the widget dispite the fact that the end device cannot receive the command. For exemple you have a Xiaomi battery device. |
 | allowForceCreationDomoDevice| disable | Will create a Domotciz Widget even if there is already an existing one. |
 | resetPluginDS | disable | will reset the plugin database data structure |
 | resetConfigureReporting| disable | will reset the Configure Reporting info |
@@ -123,7 +123,7 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 
 
 
- # Zigate Configuration
+## ZiGate Configuration
 
 | parameter | default | description |
 | --------- | ------- | ----------- |
@@ -157,10 +157,10 @@ Menu has been moved to the Tool Debug sub menu
 | debugOutput | disable | debuging all outgoing messages |
 | debugCluster | disable | debuging incoming clusters |
 | debugHeartbeat | disable | debuging recurring activities |
-| debugWidget | disable | debuging widget/domoticz management |
+| debugWidget | disable | debuging widget/DomoticZ management |
 | debugPlugin | disable | debiging main plugin |
 | debugDatabase | disable | debuging plugin database |
-| debugCommand | disable | debuging Command/domoticz actions |
+| debugCommand | disable | debuging Command/DomoticZ actions |
 | debugPairing | disable | debuging pairing process |
 
 

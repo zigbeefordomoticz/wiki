@@ -1,11 +1,13 @@
+# FAQ for ZiGate
 
-### How to reset a Zigate Wifi
-if you are not able to reach the Zigate Wifi, there is a tip in order to reset the Wifi module.
-You must stop your wifi at home, and they unplug/plug the Zigate Wifi. Then after a while the Zigate Wifi will provide a Wifi Access Point ( ZIGATE_xxxx ). You can then connect your laptop to it and edit the SSID, Password and other network parameters.
+### How to reset a ZiGate Wifi
+
+If you are not able to reach the ZiGate Wifi, there is a tip in order to reset the Wifi module.
+You must stop your wifi at home, and they unplug/plug the ZiGate Wifi. Then after a while the ZiGate Wifi will provide a Wifi Access Point ( ZIGATE_xxxx ). You can then connect your laptop to it and edit the SSID, Password and other network parameters.
 
 ## USB-TTL Zigate converter ( USB to UART Bridge )
 
-In order to connect the Zigbee module to USB, there is a piece of hardware called USB-TTL converter. Zigate is currently shipped with one of 2 USB-TTL converter models
+In order to connect the Zigbee module to USB, there is a piece of hardware called USB-TTL converter. The ZiGate is currently shipped with one of 2 USB-TTL converter models
 
 On a linux platform, the best way to check which one is in place
 

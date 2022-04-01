@@ -7,7 +7,7 @@ For instance if the plugin see an unknown device type, it will try to create wid
 
 The pairing is done at 2 levels.
 
-1. At the Zigate level, where we have the fact that the device is joining the Zigbee network controled by Zigate.
+1. At the coordinator level, where we have the fact that the device is joining the Zigbee network controled by the coordinator.
 1. At the Plugin level, where the plugin will do a discovery of the devices capabilities like:
    1. Is that main powered device
    1. Is there a Switch ON/OFF

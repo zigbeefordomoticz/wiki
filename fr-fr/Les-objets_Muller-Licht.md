@@ -1,10 +1,10 @@
-# Les objets de la marque Muller Licht
+# Les objets de la marque Muller Licht 
 
-Certains objets de la marque Muller Licht ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque Muller Licht ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 
 **Cette page n'est pas une liste des objets compatibles.**
 
-La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
+La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4d.html](https://zigbee.blakadder.com/z4d.html).
 
 
 ## Sommaire
@@ -40,11 +40,11 @@ __Le sélecteur à 18 valeurs n'a aucune action sur la télécommande. Il s'agit
 
 #### Important
 
-* Une ZiGate ne peut appartenir qu'à un nombre limité de groupes (voir [Les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md)) (5 pour la V1). La télécommande en occupera 4 si vous souhaitez remonter les informations de tous les actions des groupes dans DomoticZ.
+* Une ZiGate ne peut appartenir qu'à un nombre limité de groupes (voir [Les caractéristiques des coordinateurs](../en-eng/Coordinators.md)) (5 pour la V1). La télécommande en occupera 4 si vous souhaitez remonter les informations de tous les actions des groupes dans DomoticZ.
 * Si vous n'utilisez pas les dispositifs dans DomoticZ, il est recommandé de supprimé la ZiGate des ces groupes. La télécommande continuera d'activer les groupes mais aucun retour d'état ou commande se fera dans DomoticZ.
 **Rappel : lorsqu'il n'y a plus d'objets dans un groupe, celui-ci sera supprimé lorsque la ZiGate sera retirée du groupe.
 
 
 #### Note
 
-Si les 4 groupes n'existent plus (ou on été supprimés), il est possible d'activer le paramètre __zigatePartOfGroupTint__ et redémarrer le plugin. Les groupes seront automatiquement recréés.
+Si les 4 groupes n'existent plus (ou on été supprimés), il est possible d'activer le paramètre __zigatePartOfGroupTint__ et redémarrer le Plugin. Les groupes seront automatiquement recréés.

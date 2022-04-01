@@ -46,7 +46,7 @@ For the IKEA TRADFRI we are providing a script to retreive all Firmware from the
 1. Go to the IKEA Firmware folder
 
    ```
-   cd Domoticz-Zigate\OTAFirmware\IKEA-TRADFRI
+   cd Domoticz-Zigbee\OTAFirmware\IKEA-TRADFRI
    ```
 
 1. Launch the script to retreive the firmware

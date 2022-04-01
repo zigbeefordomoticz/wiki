@@ -1,8 +1,8 @@
-# Tutoriel - Installation sur Synology avec Docker
+# Tutoriel - Installation sur Synology avec Docker 
 
-Ce tutoriel explique comment installer DomoticZ et le plugin avec Docker sur un NAS Synology.
+Ce tutoriel explique comment installer DomoticZ et le Plugin avec Docker sur un NAS Synology.
 
-C'est un pré-requis à l'installation du plugin sous Docker [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
+C'est un pré-requis à l'installation du Plugin sous Docker [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
 
 # Avant propos
 Ce tutoriel suppose que Docker est déjà installé sur votre NAS (Centre de paquets)
@@ -10,7 +10,7 @@ Ce tutoriel suppose que Docker est déjà installé sur votre NAS (Centre de paq
 S'il s'agit d'une migration, vous devez :
 
 * Sur la page Paramètre, Sauvegarde / restauration, Sauvegarder la base de données
-* Copier et sauvegarder le contenu du dossier Data/ du plugin
+* Copier et sauvegarder le contenu du dossier Data/ du Plugin
 
 
 
@@ -41,7 +41,7 @@ Cocher "Activer le redémarrage automatique", puis aller sur l'onglet Volume.
 ![Redémarrage automatique](Images/FR_Synology_Docker_Install_Param_1.png)
 
 
-Cette partie est très importante pour le plugin car elle va permette d'avoir accès aux plugins via File Station.
+Cette partie est très importante pour le Plugin car elle va permette d'avoir accès aux plugins via File Station.
 Il faut cliquer sur "Ajouter un dossier".
 ![Ajouter un dossier](Images/FR_Synology_Docker_Install_Param_Volume_1.png)
 
@@ -76,7 +76,7 @@ DomoticZ est maintenant opérationnel et vous pouvez y accéder.
 Un dossier plugins est maintenant créé dans le répertoire __docker/domoticz__.
 
 
-Vous pouvez continuer l'installation du plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
+Vous pouvez continuer l'installation du Plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
 
 # Installation des drivers USB
 En fonction du modèle de zigate, le driver USB n'est pas le même.
@@ -129,3 +129,5 @@ chmod +x /usr/local/etc/rc.d/start-usb-drivers.sh
 ```
 
 (Merci Jadahl)
+
+Rédaction par [@SylvainPer](https://github.com/SylvainPer)

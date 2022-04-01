@@ -1,10 +1,10 @@
 # Les objets de la marque Legrand Netatmo
 
-Certains objets de la marque Legrand ont besoin d'une configuration particulière pour fonctionner avec le plugin. Ils seront listés dans cette page.
+Certains objets de la marque Legrand ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
 
 **Cette page n'est pas une liste des objets compatibles.**
 
-La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/zigate.html](https://zigbee.blakadder.com/zigate.html).
+La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4d.html](https://zigbee.blakadder.com/z4d.html).
 
 ## Renvoi vers le wiki en anglais
 

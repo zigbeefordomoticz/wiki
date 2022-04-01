@@ -1,6 +1,5 @@
 # How To - Dealing with plugin errors
 
-
 ## Introduction
 
 This tutorial explains how to deal with the plugin errors.

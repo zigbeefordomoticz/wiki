@@ -1,13 +1,12 @@
 # Tutoriel - Utiliser les outils
 
-
 ## Introduction
 
-Ce tutoriel explique comment utiliser les outils du plugin.
+Ce tutoriel explique comment utiliser les outils du Plugin.
 
 ## Présentation
 
-Le plugin dispose d'une section regroupant les outils du plugin :  [Outils > Outils](WebUI_Outils.md#outils)
+Le plugin dispose d'une section regroupant les outils du Plugin :  [Outils > Outils](WebUI_Outils.md#outils)
 
 
 ## Liste des outils
@@ -22,7 +21,7 @@ Le plugin dispose d'une section regroupant les outils du plugin :  [Outils > Ou
 
 ### Plugin infos (json)
 
-Cet outil donne toutes les informations sur les paramètres DomoticZ du plugin.
+Cet outil donne toutes les informations sur les paramètres DomoticZ du Plugin.
 
 Usage : Développement
 API REST : plugin
@@ -36,28 +35,28 @@ API REST : zigate
 
 ### Liste des dispositifs DomoticZ (json)
 
-Cet outil liste tous les dispositifs dans DomoticZ qui sont liés au plugin ZiGate.
+Cet outil liste tous les dispositifs dans DomoticZ qui sont liés au plugin ZigBeeForDomoticZ.
 
 Usage : Développement
 API REST : device
 
 ### Liste des objets (json)
 
-Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres.
+Cet outil liste tous les objets appairés au coordinateur et indique leurs paramètres.
 
 Usage : Développement
 API REST : zdevice
 
 ### Liste des groupes (json)
 
-Cet outil liste les groupes créé dans le plugin ZiGate.
+Cet outil liste les groupes créé dans le Plugin ZigBeeForDomoticZ.
 
 Usage : Débogage
 API REST : zgroup
 
 ### Liste des objets raw (json)
 
-Cet outil liste tous les objets appairés à la ZiGate et indique leurs paramètres en mémoire
+Cet outil liste tous les objets appairés au coordinateur et indique leurs paramètres en mémoire.
 
 Usage : Débogage
 API REST : zdevice-raw
@@ -78,21 +77,21 @@ API REST : zgroup-list-available-device
 
 ### Paramètres (json)
 
-Cet outil liste touts les paramètres du plugin avec leurs valeurs.
+Cet outil liste touts les paramètres du Plugin avec leurs valeurs.
 
 Usage : Développement
 API REST : settings
 
 ### Trafic (json)
 
-Cet outil donne toutes les statistiques de la ZiGate.
+Cet outil donne toutes les statistiques du coordinateur.
 
 Usage : Débogage
 API REST : plugin-stat
 
 ### Liste des objets (json)
 
-Cet outil liste tous les objets. ???
+Cet outil liste tous les objets.
 
 ### Paramètres DomoticZ (json)
 
@@ -111,7 +110,7 @@ API REST : battery-state
 
 ## L'API REST
 
-Il est possible d'accéder aux données de ces outils sans passer par l'interface d'administration du plugin.
+Il est possible d'accéder aux données de ces outils sans passer par l'interface d'administration du Plugin.
 
 * Ouvrir dans votre navigateur *IP_DomoticZ:Port_Plugin-ZiGate/rest-zigate/1/__API REST__* en remplaçant API REST par celui voulu.
 

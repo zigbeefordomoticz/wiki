@@ -1,10 +1,10 @@
-# Bienvenue sur le wiki du plugin ZiGate pour DomoticZ !
+# Bienvenue sur le wiki du Plugin ZigBeeForDomoticZ pour DomoticZ !
 
-![zigate.fr](../Images/ZiGate.png)
+</br>
 
 <a href=../en-eng/Home.md><img src="../Images/flag_uk.png" width="15" height="15"></a> [Link to the English Wiki](../en-eng/Home.md) <a href=../nl-dut/Home.md><img src="../Images/flag_netherlands.png" width="15" height="15"></a> [Link naar de Wiki in het Nederlands](../nl-dut/Home.md)
 
-Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le plugin ZiGate. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
+Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 
 ## Introduction
@@ -13,25 +13,32 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Lexique](Info_Accueil.md#lexique)
 
 
+## Les compatibilités
+
+* [Les objets compatibles](Les-objets.md)
+* [Les coordinateurs compatibles](../en-eng/Coordinators.md)
+* [Les versions de DomoticZ](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
+
+
 ## Installation
 
-* Étape 1 [Installation du plugin](Plugin_Installation.md)
-* Étape 2 [Paramétrage du plugin](Plugin_Parametrage.md)
-* Étape 3 [Configuration du plugin](Plugin_Configuration.md)
+* Étape 1 [Installation du Plugin](Plugin_Installation.md)
+* Étape 2 [Paramétrage du Plugin](Plugin_Parametrage.md)
+* Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
 
 
-## Mises à jour du plugin
+## Mises à jour du Plugin
 
-* [Mettre à jour le plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
+* [Mettre à jour le Plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
 
 ## Sauvegardes
 
-* [Sauvegardes à faire pour pouvoir réinstaller le plugin sans perdre de données](Plugin_Sauvegardes.md)
+* [Sauvegardes à faire pour pouvoir réinstaller le Plugin sans perdre de données](Plugin_Sauvegardes.md)
 
 
-## L'interface Web du plugin
+## L'interface Web du Plugin
 
 * [Présentation générale](WebUI_Presentation-generale.md)
 * La section [Tableau de bord](WebUI_Tableau-de-bord.md)
@@ -41,6 +48,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * La section [Réglages](WebUI_Reglages.md)
 * La section [Outils](WebUI_Outils.md)
 * La section [A propos](WebUI_A-propos.md)
+
 
 ## Tutoriels
 
@@ -56,13 +64,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Remplacer ou ré-initialiser la ZiGate](Tuto_Remplacer-zigate.md)
-* [Mettre une authentification sur interface d'administration du plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
-
-
-## Tutoriels ZiGate
-
-* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
-* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
+* [Mettre une authentification sur interface d'administration du Plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
 ## Que faire si un objet ne fonctionne pas correctement ?
@@ -91,6 +93,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
    * Le forum français : [https://easydomoticz.com/forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * Le forum anglais : [https://www.domoticz.com/forum](https://www.domoticz.com/forum/viewforum.php?f=68)
 
+
 ## Scripts
 
 * [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
@@ -99,19 +102,19 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 [D'autres exemples](../Contrib/)
 
+
 ## Informations
 
-* [Les objets compatibles](Info_Accueil.md#presentation)
-* [Les caractéristiques des ZiGates](Info_Caracteristiques-des-ZiGates.md)
+* [Les statistiques du plugin](WebUI_Stastiques.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
 * [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md)
 * [Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)](Info_Mettre-python3.8-sur-RaspberryOS-Bullseye.md)
 
+
 ## Liens utiles
 
-* [Le wiki ZiGate.fr](https://zigate.fr/documentation)
-* [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
-* [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
-* [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
+Le wiki a changé de forme !! Il est maintenant consultable sous la forme d'un site web : [voir le Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
+
+[![WikiUI-FR](Images/FR_WikiUI.png)](https://zigbeefordomoticz.github.io/wiki/fr-fr)

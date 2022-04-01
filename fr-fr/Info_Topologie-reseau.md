@@ -1,7 +1,7 @@
 # Info - Topologie du réseau
 
-Le plugin permet de générer un rapport sur la topologie du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
-__Important :__ Le filtrage des paquets implémenté utilise la valeur LQI
+ Le Plugin permet de générer un rapport sur la topologie du réseau. Celui-ci est basé sur le LQI (la force du signal détecté).
+__Important :__ Le filtrage des paquets implémenté utilise la valeur LQI.
 
 
 | LQI range | Coût |
@@ -83,7 +83,7 @@ Lorsque le rapport est généré, le message suivant apparaît dans les logs de 
 
 
 * Noeud : Le point de départ.
-  * 0000 c'est la ZiGate.
+  * 0000 c'est le coordinateur.
 * LQI : c'est la valeur estimative de la qualité de la transmission avec le noeud voisin.
 * Rebond : C'est le nombre de niveau entre le noeud voisin et la ZiGate (rebond 0).
 * Relation: c'est une valeur en 3 Bit représentant la relation avec les noeuds voisins :

@@ -13,7 +13,7 @@ Voici la présentation générale de l'interface Web du plugin :
 
 Elle contient de gauche à droite :
 * les différents liens vers les pages
-* le bouton pour passer la ZiGate en mode Appairage permanent
+* le bouton pour passer le coordinateur en mode Appairage
 * le bouton de choix de la langue
 
 #### Le corps de la page
@@ -23,15 +23,18 @@ Les différentes pages du plugin s'afficheront ici.
 #### Le pied de page
 
 Il contient de gauche à droite :
-* La date et l'heure du démarrage du plugin ZiGate
-* Les valeurs Rx/m, Tx/m et MaxLoad indiquant la charge de la ZiGate
-* L'état du plugin, normalement il est indiqué __Ready__
+* La date et l'heure du démarrage du plugin ZigBeeForDomoticZ.
+* Les valeurs Rx/m, Tx/m et MaxLoad indiquant la charge du coordinateur.
+* L'état du plugin, normalement il est indiqué __Ready__.
 * La version du plugin. L'écriture en rouge indique qu'une mise à jour est disponible (valable uniquement pour les branches Stable et Béta).
-* Le firmware de la ZiGate. L'écriture en rouge indique qu'une mise à jour est disponible.
+* Le firmware du coordinateur. L'écriture en rouge indique qu'une mise à jour est disponible.
+
+##### La couleur du pied de page
 
 Le bandeau est vert si le plugin fonctionne normalement.
-Le bandeau rouge indique un problème de connexion avec la ZiGate.
-Le bandeau jaune indique l'appairage d'un dispositif ou que la ZiGate est chargée. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
+Le bandeau est bleu lorsque le plugin est en train de démarrer.
+Le bandeau rouge indique un problème de connexion avec le coordinateur.
+Le bandeau jaune indique l'appairage d'un dispositif ou que le coordinateur est chargé. C'est une alerte indiquant qu'il peut y avoir un peu de latence sur les commandes.
 
 ------------------------------------------------
-Voir les pages de l'[interface Web du plugin](Home.md#linterface-web-du-plugin).
+Voir les pages de l'[interface Web du plugin](Readme.md#linterface-web-du-plugin).

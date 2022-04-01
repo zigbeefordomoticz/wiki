@@ -1,20 +1,19 @@
-# Pairing a Zigbee device with Zigate
-
+# Pairing a Zigbee device with the coordinator
 
 ## Introduction
 
-Purpose is to explain the step process to pair a new device and get it into Domoticz
+Purpose is to explain the step process to pair a new device and get it into DomoticZ.
 
 
-## Step1: Put Domoticz in 'Add New Hardware mode'
+## Step1: Put DomoticZ in 'Add New Hardware mode'
 
-1. Check that Domoticz accept new Hardware Devices
-   * Go in the Domoticz Setting menu, and check that Accept new Hardware Devices is enabled, as on the picture here after
+1. Check that DomoticZ accept new Hardware Devices
+   * Go in the DomoticZ Setting menu, and check that Accept new Hardware Devices is enabled, as on the picture here after
 
    ![Domoticz Accept New Hardware](../Images/DzHardwareMode.png)
 
 
-## Step2: Pairing and Provisioning in Domoticz
+## Step2: Pairing and Provisioning in DomoticZ
 
 1. Assited Provisioning
 
@@ -33,7 +32,7 @@ Purpose is to explain the step process to pair a new device and get it into Domo
 
       ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
-   1. Check that the Zigate Led is flashing Blue
+   1. Check that the coordinator Led is flashing or has changed of colour (depends on your coordinator).
 
    1. Reset your Device to trigger the pairing
 
@@ -41,23 +40,23 @@ Purpose is to explain the step process to pair a new device and get it into Domo
 
    1. If after a while ( 2 minutes ) nothing happen
 
-      1. Check Domoticz Log to se if there is no error
+      1. Check DomoticZ Log to se if there is no error
       1. Restart the plugin and try the pairing once more time
 
 1. Advanced provisioning
 
-Here we will more rely on the Logs to see that the Provisioning is happening. The Domoticz logs are available via the Domoticz User Interface.
+Here we will more rely on the Logs to see that the Provisioning is happening. The DomoticZ logs are available via the DomoticZ User Interface.
 You can eventually add a filter to get only the related logs
 
   1. You can check if the Accept new hardware`
 
   ![Domoticz Accept New Hardware](../Images/Dashboard_Accept_new_Hardware.png)
 
-  You can easily switch it On, and the Zigate blue Led, must start flashing.
+  You can easily switch it On, and the coordinator Led, must start flashing or changing colour (depends on your coordinator).
 
-  1. reset the Device to trgger the pairing
+  1. reset the Device to trgger the pairing.
 
-  1. Watch the Domoticz log to see what is happening
+  1. Watch the DomoticZ log to see what is happening.
 
 
 
@@ -72,7 +71,7 @@ You can eventually add a filter to get only the related logs
 
   ## What to do
 
-  1. Make sure the Zigate is not in pairing mode, if yes, Stop it
+  1. Make sure the coordinator is not in pairing mode, if yes, Stop it
 
   1. From the Plugin Web User Interface
 
@@ -84,4 +83,4 @@ You can eventually add a filter to get only the related logs
 
   __Attention__
 
-  It may happen that after pairing a device the all routers switches to pairing mode. If you want to continue pairing only from that specific device, you need to redo the all cycle
+  It may happen that after pairing a device the all routers switches to pairing mode. If you want to continue pairing only from that specific device, you need to redo the all cycle.

@@ -21,7 +21,7 @@ Here is the __Pairing__ page of the plugin Web interface :
 
 ### How to use
 
-Use this page to pair your devices with the ZiGate and DomoticZ.
+Use this page to pair your devices with the coordinator and DomoticZ.
 
 You can :
 
@@ -71,7 +71,7 @@ You can :
 
 * Make a soft reset : **this action will not loose any paired device**.
 
-Refer to the sectionl [How to](Home.md#how-to) for more informations.
+Refer to the sectionl [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Plugin
@@ -89,7 +89,7 @@ You can :
 
 * Make a restart of the plugin
 
-Refer to the sectionl [How to](Home.md#how-to) for more informations.
+Refer to the sectionl [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Firmware
@@ -107,8 +107,8 @@ You can :
 
 * Make an update of your paired device
 
-Refer to the section [How to](Home.md#how-to) for more informations.
+Refer to the section [How to](Readme.md#how-to) for more informations.
 
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Home.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).

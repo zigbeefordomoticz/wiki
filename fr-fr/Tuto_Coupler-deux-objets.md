@@ -1,9 +1,8 @@
 # Tutoriel - Coupler deux objets entre eux
 
-
 ## Introduction
 
-Ce tutoriel explique comment lier deux objets entre eux afin qu'ils puissent communiquer ensemble directement sans passer par la ZiGate.
+Ce tutoriel explique comment lier deux objets entre eux afin qu'ils puissent communiquer ensemble directement sans passer par le coordinateur.
 Par exemple un interrupteur avec un micro module ou encore le capteur de mouvement et l'ampoule.
 
 __Note :__ Les objets ne sont pas tous compatibles avec cette fonction de lien direct.
