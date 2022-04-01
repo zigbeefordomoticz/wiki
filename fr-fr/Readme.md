@@ -5,6 +5,11 @@
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 
+## Migration vers stable6
+
+Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migrer depuis les versions antérieures, il est nécessaire de suivre la procédure suivante : [Plugin_Version-6](Plugin_Version-6.md)
+
+
 ## Introduction
 
 * [Présentation](Info_Accueil.md) à lire pour les nouveaux utilisateurs
