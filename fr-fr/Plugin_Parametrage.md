@@ -11,13 +11,14 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du Plugin](Plug
 * Ouvrir __DomoticZ__ dans votre navigateur
 
 * Aller dans le menu __Configuration__ puis __Matériel__
+
 * Pour ajouter le Plugin ZigBeeForDomoticZ, renseigner les informations suivantes :
 
 | Paramètre    | Description | Information |
 | ------------ | ------------------ | ----------- |
 | __Nom__                  | Renseigner un Nom du coordinateur  | Si vous utiliser plusieurs coordinateur, vous aurez besoin de plusieurs instances du matériel ZigBeeForDomoticZ et le nom permettra de les identifier.<br/><br/>Il est conseillé de ne pas mettre d'espace ou de caractère spécial dans le nom du Plugin. Ce nom peut être utiliser dans une URL et un espace ou des caractères spéciaux peuvent générer des problèmes. |
 | __Type__                 | Sélectionner `ZigBeeForDomoticZ plugin` | Si ZigBeeForDomoticZ plugin n’apparaît pas en bas de la liste, c'est que le Plugin n'est pas correctement installé.
-| Coordinator Model         | Sélectionner le modèle de coordinateur | - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2) - Texas Instruments ZNP|
+| Coordinator Model         | Sélectionner le modèle de coordinateur | - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2)<br/> - Texas Instruments ZNP<br/> - Silicon Labs EZSP|
 | Coordinator Communication         | Sélectionner mode de communication | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi ou ethernet)<br/>- Aucun|
 | __IP__                   | Renseigner l'IP du coordinateur | Pour le mode TCPIP uniquement<br/>Laisser 0.0.0.0 pour les autres modes |
 | __Port__                 | Renseigner le Port du coordinateur (9999 par défaut)| Pour le mode TCPIP uniquement<br/>Laisser 9999 pour les autres modes |
@@ -37,11 +38,15 @@ La ligne correspondante à votre plugin ZigBeeForDomoticZ (avec le nom défini) 
 __ATTENTION :__ à partir de maintenant, il ne faut surtout plus cliquer sur le bouton __Ajouter__ en bas : cela aurait pour effet de dupliquer le plugin. Remontez toujours en haut des paramètres pour utiliser le bouton __Modifier__.
 
 * Mettre __Initialize ZCoordinator (Erase Memory)__ à __False__.
+
 * Décoché __Activé__ pour désactiver le plugin.
+
 * Cliquer sur __Modifier__ (ne pas cliquer sur Ajouter car cela dupliquera le plugin).
 
 * Recliquer sur la ligne du plugin ZigBeeForDomoticZ.
+
 * Recocher __Activé__ pour réactiver le Plugin.
+
 * Cliquer sur __Modifier__ pour relancer le Plugin.
 
 Vérifier les logs que le plugin ZigBeeForDomoticZ s'initialise correctement.
