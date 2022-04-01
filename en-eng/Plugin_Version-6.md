@@ -3,7 +3,7 @@
 <a href="../fr-fr/Plugin_Version-6.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
 [Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)
 
-To make a __new plugin install__, please follow [the install procedure on zigpy branch](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/en-eng/Plugin_Installation.md#2---manual-installation-running-on-linux). For the moment, only the manual installation on Linux has been tested and validated.
+To make a __new plugin install__, please follow [the install procedure](Plugin_Installation.md). For the moment, only the manual installation on Linux has been tested and validated.
 
 To upgrade from version 5 to version 6, the procedure is described below. __It is only valid for manual installation on Linux__.
 
@@ -32,61 +32,46 @@ Remember to save :
 Open the terminal.
 
 1. Stop DomoticZ. The command is usually :
-
 ```
 sudo service domoticz.sh stop
 ```
 
-1. Go in the plugin directory. The command is usually :
-
+2. Go in the plugin directory. The command is usually :
 ```
 cd domoticz/plugins/Domoticz-Zigate
 ```
 
-1. Run the command :
-
+3. Run the command :
 ```
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
 ```
 
-1. Install the necessary Python packages with the command :
-
+4. Install the necessary Python packages with the command :
 ```
 sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
 ```
 
-1. Execute the command by adapting pi:pi if necessary to the user:group used. Be careful to take the point at the end.
-
+5. Execute the command by adapting pi:pi if necessary to the user:group used. Be careful to take the point at the end.
 ```
 sudo chown -R pi:pi .
 ```
 
-1. During the time of the development phase, it is necessary to move on to the new beta6 branch :
-
-```
-git checkout beta6
-```
-
-1. Run the command :
-
+6. Run the command :
 ```
 git config --add submodule.recurse true
 ```
 
-1. Install the missing Python libraries with the command :
-
+7. Install the missing Python libraries with the command :
 ```
 git submodule update --init --recursive
 ```
 
-1. Make the __plugin.py__ file executable with the command :
-
+8. Make the __plugin.py__ file executable with the command :
 ```
 sudo chmod +x plugin.py
 ```
 
-1. Restart DomoticZ. The command is usually :
-
+9. Restart DomoticZ. The command is usually :
 ```
 sudo service domoticz.sh start
 ```
