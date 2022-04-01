@@ -1,6 +1,11 @@
 <!-- Matomo -->
 <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
+  // require user consent before processing data
+  _paq.push(['requireConsent']);
+  _paq.push(['trackPageview']);
+  _paq.push(['rememberConsentGiven'])
+  _paq.push(['forgetConsentGiven']);
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
