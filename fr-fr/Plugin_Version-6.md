@@ -1,12 +1,10 @@
 # Explications pour passer de la version 5 à la version 6 plugin.
 
-## Informations concernant la phase Béta (de test)
 
-Le wiki à consulter est disponible sur [la branche du wiki](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Readme.md). Ce wiki deviendra la version par défaut lorsque la version 6 sortira comme version stable.
+Pour __une nouvelle installation du plugin__, merci de suivre [la procédure d'installation](Plugin_Installation.md).
 
-Pour __une nouvelle installation du plugin__, merci de suivre [la procédure d'installation sur la branche zigpy](https://github.com/zigbeefordomoticz/wiki/blob/zigpy/fr-fr/Plugin_Installation.md#2---installation-manuelle-sous-linux). Pour le moment, seule l'installation manuelle sous Linux a été testée et validée.
 
-Pour passer de la version 5 à la version 6, la procédure est décrite ci-dessous. __Elle n'est valable que pour une installation manuelle sous Linux__.
+__La procédure ci-dessus est valable pour un passage de la version 5 à la version 6 du plugin pour un système fonctionnant sous Linux.__.
 
 Les testeurs pour les autres systèmes d'exploitation sont les bienvenus !!
 
@@ -39,40 +37,43 @@ Pensez à sauvegarder :
 ```
 sudo service domoticz.sh stop
 ```
-1. Aller dans le répertoire du plugin. La commande est normalement :
+
+2. Aller dans le répertoire du plugin. La commande est normalement :
 ```
 cd domoticz/plugins/Domoticz-Zigate
 ```
-1. Exécuter la commande :
+
+3. Exécuter la commande :
 ```
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
 ```
-1. Installer les paquets Python nécessaires avec la commande :
+
+4. Installer les paquets Python nécessaires avec la commande :
 ```
 sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
 ```
-1. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
+
+5. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
 ```
 sudo chown -R pi:pi .
 ```
 
-1. Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 :
-```
-git checkout beta6
-```
-1. Exécuter la commande :
+6. Exécuter la commande :
 ```
 git config --add submodule.recurse true
 ```
-1. Installer les librairies Python manquantes avec la commande :
+
+7. Installer les librairies Python manquantes avec la commande :
 ```
 git submodule update --init --recursive
 ```
-1. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+
+8. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
 ```
 sudo chmod +x plugin.py
 ```
-1. Redémarrer DomoticZ. La commande est normalement :
+
+9. Redémarrer DomoticZ. La commande est normalement :
 ```
 sudo service domoticz.sh start
 ```
