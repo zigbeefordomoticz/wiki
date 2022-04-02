@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-* [Q1. Where can I get support ?](#1.-where-can-i-get-support)
+* [Q1. Where can I get support ?](#1-where-can-i-get-support)
 * [Q2. Where are the logs ?]()
 * [Q3. Can I debug myself ?]()
 * [Q4. Where can I find the list of supported Coordinators and Devices ?]()
@@ -12,8 +12,7 @@
 
 ## Coordinators
 
-* [C1. I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working]()
-* [C2. I cannot get my TI CCxxx dongle working with the plugin]()
+* [C1. My coordinator is not working]()
 
 
 ## Errors
@@ -23,9 +22,11 @@
 * [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`]()
 
 
+
+
 ------------
 ------------
-## 1. Where can I get support
+## Q1. Where can I get support ?
 
 Welcome to Zigbee for Domoticz.
 The first source of support is the Wiki
@@ -43,7 +44,66 @@ You can also get support and ask questions :
 
 
 ------------
-## 2. I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working
+## Q2. Where are the logs ?
+
+Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
+
+The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you used the plugin ZiGate before april 2022.
+
+
+------------
+## Q3. Can I debug myself ?
+
+Please refer to [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
+
+
+------------
+## Q4. Where can I find the list of supported Coordinators and Devices ?
+
+Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
+
+
+------------
+## Q5. Where can I find the coordinator firmwares ?
+
+* For __Texas Instrument__, we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). We do not recommend to use _develop_ branch and rely on the _master_.
+* For __ZiGate__, the firmwares are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
+* For __EZNP (Silicon Labs)__, we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
+
+------------
+## Q6. Can I use several coodinators in the same DomoticZ ?
+
+We have currently a limitation of the nimber of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
+
+If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
+If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
+
+
+------------
+## Q7. Can I fixe the USB Port number ?
+
+Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number witch cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
+
+* [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
+* [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
+
+
+------------
+## Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy
+
+For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
+
+If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
+
+1. Open the __PluginConf.txt__ file
+1. Please check if the parameter "AllowRebindingClusters" is set to 1.
+    If it is not, set it to "1"
+1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
+The rebinding process will start itself, the status problems should now be fixed.
+
+
+------------
+## C1. My coordinator is not working
 
 I can see in the log file ( domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-xx.log ) some messages like that
 
@@ -89,44 +149,7 @@ Please check [here](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Deal
 
 
 ------------
-## 5. I want to debug myself and get more logs
-
-Please check [here](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Debuging-mode.html)
-
-
-------------
-## 7. Where can I find the list of supported Coordinators and Devices
-
-Please check the  [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
-
-
-------------
 ## 8. Can I use several dongles in the same Domoticz
-
-We have currently a limitation of the nimber of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
-
-If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
-If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
-
-
-------------
-## 9. Where can I find the coordinator firmwares
-
-* For Texas Instrument we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). we do not recommend to use _develop_ branch and rely on the _master_
-* For ZiGate, the firmware are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
-* For EZNP (Silicon Labs) we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
-
-
-
-
-
-------------
-## 11. How to manage several USB key and make sure that the coordinator is awlays using the same port
-
-This is more an OS issue, but here are few hints
-
-* [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
-* [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
 
 
 ------------
@@ -137,19 +160,6 @@ This is more an OS issue, but here are few hints
 1. Start the Plugin
 1. Trigger the pairing process from the device
 
-
-------------
-## 13. I don't get the device updated in DomoticZ when interacting via a remote control or manualy
-
-For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
-
-If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
-
-1. Open the PluginConf.txt file
-1. Please check if the parameter "AllowRebindingClusters" is set to 1.
-    If it is not, set it to "1"
-1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
-The rebinding process will start itself, the status problems should now be fixed.
 
 
 ------------
