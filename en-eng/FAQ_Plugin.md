@@ -105,8 +105,8 @@ You shouldn't worry much of this message.
 
 This is more an OS issue, but here are few hints
 
-* <https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port>
-* <https://www.domoticz.com/wiki/PersistentUSBDevices>
+* [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
+* [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
 
 ## How to commission/pair a new device
 
