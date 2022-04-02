@@ -1,11 +1,8 @@
-# Zigbee for Domoticz Troubleshooting guide.
-
-
+# Zigbee for Domoticz Troubleshooting guide
 
 ## I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working
 
 I can see in the log file ( domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-xx.log ) some messages like that
-
 
 ```
 2022-02-25 00:19:41,006 INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
@@ -25,10 +22,9 @@ This indicate a miss communication between the plugin and the dongle. you need t
 * ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
 * ensure that there is not an other process running on the port
 
-
 ## I cannot get my TI CCxxx dongle working with the plugin
 
-In that case, we suggest that you try to test the TI CCxxx dongle without Domoticz and the plugin. 
+In that case, we suggest that you try to test the TI CCxxx dongle without Domoticz and the plugin.
 
 1. make sure that the plugin is stopped
 2. Installed missing python modules if requires `sudo pip3 install jsonschema coloredlogs`
@@ -48,9 +44,9 @@ Please check [here](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Deal
 
 Please check [here](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Debuging-mode.html)
 
-## While running , I see some `Decode8000`errors in the log file.
+## While running , I see some `Decode8000`errors in the log file
 
-if you see error logs like here after, this is most-likely an issue with the ZiGate hardware. 
+if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
 
 ```
 2022-02-22 18:03:11.851 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
@@ -65,5 +61,6 @@ if you see error logs like here after, this is most-likely an issue with the ZiG
 
 cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
+## Where can I find the list of supported devices
 
-
+Please check the  [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
