@@ -1,5 +1,16 @@
 # Zigbee for Domoticz Troubleshooting guide
 
+## Where can I get support
+
+Welcome to Zigbee for Domoticz.
+The first source of support is the Wiki
+
+* [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng/)
+* [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr/)
+* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut/) Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki
+
+You can also get support and ask questions on the [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68), [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28) or on the [Keybase English channel](https://keybase.io/team/zigateforum) or [keybase French channel](https://keybase.io/team/zigate)
+
 ## I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working
 
 I can see in the log file ( domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-xx.log ) some messages like that
@@ -61,6 +72,13 @@ if you see error logs like here after, this is most-likely an issue with the ZiG
 
 cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
-## Where can I find the list of supported devices
+## Where can I find the list of supported Coordinators and Devices
 
 Please check the  [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
+
+## Can I use several dongles in the same Domoticz
+
+We have currently a limitation of the nimber of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
+
+If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
+If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
