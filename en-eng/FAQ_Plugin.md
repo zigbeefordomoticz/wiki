@@ -30,8 +30,7 @@
 ------------
 ## Q1. Where can I get support ?
 
-Welcome to Zigbee for Domoticz.
-The first source of support is the Wiki
+The first source of support is the Wiki :
 
 * [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
 * [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
