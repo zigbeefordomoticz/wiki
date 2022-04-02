@@ -1,6 +1,6 @@
 # Compatible devices
 
-### English
+## English
 
 Purpose is to document the list of Hardware devices **tested** with the ZiGate USB/WiFi and the ZigBeeForDomoticZ plugin.
 
@@ -8,7 +8,7 @@ Either the information is coming from one of the plugin user (through direct com
 
 You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/z4d.html)
 
-### Français
+## Français
 
 Ce document est une liste des objets "certifiés" qui fonctionnent avec une ZiGate et le plugin ZigBeeForDomoticZ.
 
