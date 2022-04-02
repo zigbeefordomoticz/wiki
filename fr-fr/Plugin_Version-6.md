@@ -91,9 +91,8 @@ Il y a 4 modèles de coordinateurs possibles :
 
 * ZiGate : aucune modification sur le fonctionnement du plugin existant
 * ZiGate + : aucune modification sur le fonctionnement du plugin existant
-* ZiGate (via zigpy) : le plugin communique avec la ZiGate par le biais des librairies zigpy. C'est uniquement expérimental et aucun support ne sera fait.
 * Texas Instruments ZNP : pour les nouveaux coordinateurs de marque TI
-
+* Silicon Labs EZSP  : pour les nouveaux coordinateurs de marque Silicon Labs
 
 
 ## IMPORTANT Mise à jour du plugin
