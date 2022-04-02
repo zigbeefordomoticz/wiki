@@ -122,6 +122,7 @@ Vous avez les messages suivant dans le fichier de [log file](#q2.-ou-trouver-les
 
 Cela indique un souci de communication entre le plugin et le coordinateur. Vous devez vérifier les éléments suivants dans la configuration du plugin dans DomoticZ :
 
+* Si c'est la première fois que vous utilisez le coordinateur (aucun objets appairés pour le moment), vous devez l'initialiser.  Définir le __Initialize Coordinateur: True__ dans le menu Matériel DomoticZ lors du démarrage du plugin. Une fois que le premier démarrage est correct, désactivez ce paramètre pour éviter d'effacer tous les périphériques appariés au prochain redémarrage.
 * Assurez-vous que le port série est le bon.
 * Assurez-vous que le modèle de coordinateur correspond à votre dongle.
 * Assurez-vous qu'aucun autre processus n'est en cours d'exécution sur le port USB.
