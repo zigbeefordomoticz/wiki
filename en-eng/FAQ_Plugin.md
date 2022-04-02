@@ -1,4 +1,4 @@
-# Zigbee for Domoticz Troubleshooting guide
+# Zigbee for Domoticz FAQ
 
 ## Where can I get support
 
