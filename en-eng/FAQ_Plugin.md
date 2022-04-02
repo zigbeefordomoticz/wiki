@@ -118,7 +118,6 @@ I can see in the [log file](#q2.-where-are-the-logs) some messages like that
 2022-02-25 00:19:43,955 INFO    : [       MainThread] Transport mode: ZigpyZNP
 2022-02-25 00:20:45,074 ERROR   : [       MainThread] [ 61] I have hard time to get Coordinator Version. Mostlikly there is a communication issue
 2022-02-25 00:20:45,084 ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
-
 ```
 
 This indicate a miss communication between the plugin and the coordinator. You need to cross-check the following pieces in the DomoticZ Hardware menu :
