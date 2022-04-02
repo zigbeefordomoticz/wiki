@@ -1,4 +1,4 @@
-# Zigbee for Domoticz FAQ
+# ZigBee For DomoticZ FAQ
 
 
 
