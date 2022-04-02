@@ -1,22 +1,20 @@
 # Frequently Asked Questions
 
-* [Q1. Where can I get support](#1.-where-can-i-get-support)
-
-
-* [Q4. Pairing issues - Not able to pair a device, the pairing works, but the device doesn't work or doesn't behave as expected]()
-* [Q5. I want to debug myself and get more logs]()
-* [Q7. Where can I find the list of supported Coordinators and Devices]()
-* [Q8. Can I use several dongles in the same Domoticz]()
-* [Q9. Where can I find the coordinator firmwares]()
-* [11. How to manage several USB key and make sure that the coordinator is awlays using the same port]()
-* [12. How to commission/pair a new device]()
-* [13. I don't get the device updated in DomoticZ when interacting via a remote control or manualy]()
-
+* [Q1. Where can I get support ?](#1.-where-can-i-get-support)
+* [Q2. Where are the logs ?]()
+* [Q3. Can I debug myself ?]()
+* [Q4. Where can I find the list of supported Coordinators and Devices ?]()
+* [Q5. Where can I find the coordinator firmwares ?]()
+* [Q6. Can I use several coodinators in the same DomoticZ ?]()
+* [Q7. Can I fixe the USB Port number ?]()
+* [Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy]()
 
 
 ## Coordinators
+
 * [C1. I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working]()
 * [C2. I cannot get my TI CCxxx dongle working with the plugin]()
+
 
 ## Errors
 
