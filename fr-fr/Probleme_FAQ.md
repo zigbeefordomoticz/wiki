@@ -1,7 +1,7 @@
 # Frequently Asked Questions
 
-* [Q1. Where can I get support ?](#1-where-can-i-get-support)
-* [Q2. Where are the logs ?](#q2-where-are-the-logs-)
+* [Q1. Où obtenir de l'aide ?](#1-where-can-i-get-support)
+* [Q2. Où sont les logs ?](#q2-where-are-the-logs-)
 * [Q3. Can I debug myself ?](#q3-can-i-debug-myself-)
 * [Q4. Where can I find the list of supported Coordinators and Devices ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
 * [Q5. Where can I find the coordinator firmwares ?](#q5-where-can-i-find-the-coordinator-firmwares-)
@@ -28,85 +28,86 @@
 
 ------------
 ------------
-## Q1. Where can I get support ?
+## Q1. Où obtenir de l'aide ?
 
-The first source of support is the Wiki :
+La première source d'aide est le wiki :
 
-* [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
-* [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
-* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
+* [Wiki français](https://zigbeefordomoticz.github.io/wiki/fr-fr)
+* [Wiki anglais](https://zigbeefordomoticz.github.io/wiki/en-eng)
+* [Wiki allemand](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Malheureusement, il n'est plus à jour. Merci de nous contacter si vous êtes prêt à contribuer dans l'amélioration de ce wiki_)
 
-You can also get support and ask questions :
+Vous pouvez également obtenir de l'aide et poser des questions : :
 
-* The [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
-* The [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
-* The [Keybase English channel](https://keybase.io/team/zigateforum)
-* The [Keybase French channel](https://keybase.io/team/zigate)
-
-
-------------
-## Q2. Where are the logs ?
-
-Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
-
-The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you used the plugin ZiGate before april 2022.
+* Le [forum français](https://easydomoticz.com/forum/viewforum.php?f=28)
+* Le [forum anglais](https://www.domoticz.com/forum/viewforum.php?f=68)
+* [Keybase groupe français](https://keybase.io/team/zigate)
+* [Keybase groupe anglais](https://keybase.io/team/zigateforum)
 
 
 ------------
-## Q3. Can I debug myself ?
+## Q2. Où trouver les logs ?
 
-Please refer to [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
+Depuis la Stable6, les logs sont enregistés dans le fichier : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
-
-------------
-## Q4. Where can I find the list of supported Coordinators and Devices ?
-
-Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
+Le dossier __Domoticz-Zigbee__ peut s'appeler __Domoticz-Zigate__ si vous aviez installer le plugin ZiGate avant avril 2022.
 
 
 ------------
-## Q5. Where can I find the coordinator firmwares ?
+## Q3. Comment faire du débogage ?
 
-* For __Texas Instrument__, we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). We do not recommend to use _develop_ branch and rely on the _master_.
-* For __ZiGate__, the firmwares are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
-* For __EZNP (Silicon Labs)__, we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
-
-------------
-## Q6. Can I use several coodinators in the same DomoticZ ?
-
-We have currently a limitation of the nimber of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
-
-If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
-If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
+Merci de consulter la page [Aide au débogage](Probleme_Aide-Debogage.md)
 
 
 ------------
-## Q7. Can I fixe the USB Port number ?
+## Q4. Où trouver la liste des coordinateurs et des objets supportés ?
 
-Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number witch cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
+Merci de consulter le site [https://zigbee.blakadder.com/z4d.html](https://zigbee.blakadder.com/z4d.html)
 
+
+------------
+## Q5. Où trouver les firmwares des coordinateurs ?
+
+* Pour __Texas Instrument__, nous recommandons l'utilisation des firmwares Z-Stack firmware de @Koenkk disponibles [ici](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). Nous ne recommandons pas l'utilisation de la branche _develop_. Merci de rester sur la branche _master_.
+* Pour __ZiGate__, Les firmwares sont disponibles [ici pour la Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) et [ici pour la ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
+* Pour __EZNP (Silicon Labs)__, nous recommandons de suivre les [recommendations zigpy](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
+
+
+------------
+## Q6. Est il possible d'utiliser plusieurs coordinateurs dans un seul DomoticZ ?
+
+* Si vous utilisez des coordinateurs ZiGates, vous pouvez faire fonctionner plusieurs instances du plugin en parallèle.
+* Si vous utilisez d'autres coordinateurs (TI CCxxxx, Silicon Labs), il ne peut y avoir qu'une seule instance du plugin utilisant la couche ZigPy.
+
+Il peut y avoir deux instances ZiGate et une instance Zigpy : cela fonctionne.
+
+
+------------
+## Q7. Est il possible de fixer le numéro du port USB ?
+
+Quelques fois, au redémarrage du système, le port USB (_dev/ttyUSB0_ par exemple) peut changer de numéro ce qui provoque une erreur de communication avec le coordinateur. C'est plus un souci au niveau de l'OS, mais il y a des solutions :
+
+* [Persistent USB Devices en français](https://easydomoticz.com/mon-premier-peripherique-z-wave-2/)
 * [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
 * [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
 
 
 ------------
-## Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy
+## Q8. Mon objet n'est pas mis à jour dans DomoticZ quand je l'actionne manuellement
 
-For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
+Par exemple : Si vous éteignez une ampoule Ikea (avec l'interrupteur physique) puis que vous la rallumez, l'état de l'ampoule n'est pas mis à jour dans DomoticZ. Ou une télécommande qui ne met pas non plus à jour son état actuel vers DomoticZ.
 
-If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
+Si vous rencontrez des problèmes comme l'exemple ci-dessus, il est fort probable que le rapport automatique ne soit pas configuré correctement à partir de l'objet. Veuillez suivre les étapes ci-dessous pour résoudre ce problème :
 
-1. Go to the settings page on the WebUI
-1. Activate the advanced settings
-1. Please check if the parameter __AllowRebindingClusters__.
-1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
-The rebinding process will start itself, the status problems should now be fixed.
+1. Aller sur la page Réglages du WebUI
+1. Activer les réglages avancés
+1. Activer le paramètre __AllowRebindingClusters__.
+1. Éteignez l'ampoule Ikea avec l'interrupteur physique, attendez 10 secondes, puis rallumez-la. Le processus d'appairage va commencer de lui-même, les problèmes d'état devraient maintenant être résolus.
 
 
 ------------
-## T1. My coordinator is not working
+## T1. Mon coordinateur ne fonctionne pas.
 
-I can see in the [log file](#q2.-where-are-the-logs) some messages like that
+Vous avez les messages suivant dans le fichier de [log file](#q2.-ou-trouver-les-logs-) :
 
 ```log
 2022-02-25 00:19:41,006 INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
@@ -119,45 +120,45 @@ I can see in the [log file](#q2.-where-are-the-logs) some messages like that
 2022-02-25 00:20:45,084 ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
 ```
 
-This indicate a miss communication between the plugin and the coordinator. You need to cross-check the following pieces in the DomoticZ Hardware menu :
+Cela indique un souci de communication entre le plugin et le coordinateur. Vous devez vérifier les éléments suivants dans la configuration du plugin dans DomoticZ :
 
-* Ensure that the serial port is the right one.
-* Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
-* Ensure that there is not an other process running on the port
-
-
-If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
+* Assurez-vous que le port série est le bon.
+* Assurez-vous que le modèle de coordinateur correspond à votre dongle.
+* Assurez-vous qu'aucun autre processus n'est en cours d'exécution sur le port USB.
 
 
-------------
-## T2. My object can not be paired
-
-Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
+Si cela ne fonctionne toujours pas, vous pouvez essayer de tester le coordinateur en faisant une [analyse de topologie en temps reel](HowTo_Have-a-real-time-topology.md). Ce test se fera sans DomoticZ ni le plugin. Il ne fonctionne qu'avec TI CCxxx.
 
 
 ------------
-## T3. My object doen't work as expected
+## T2. Mon objet ne s'appaire pas
 
-Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
+Merci de consulter la page [Problèmes d'appairage](Probleme_Appairage.md)
 
 
 ------------
-## E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
+## T3. Mon objet ne fonctionne pas comme prévu
 
-Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
+Merci de consulter la page [Problèmes d'appairage](Probleme_Appairage.md)
+
+
+------------
+## E1. Erreur : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
+
+De temps en temps, il y a le message d'erreur suivant. Est-ce un gros problème ? Comment puis-je m'en débarrasser ?
 
 ```log
 Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
 ```
 
-This error is coming from DomoticZ and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
-You shouldn't worry much of this message.
+Cette erreur provient de DomoticZ et est liée au fait que vous aviez la page WebUI ouverte depuis un moment et lorsque vous essayez d'actualiser cette page, DomoticZ a détecté qu'il n'y avait plus de communication.
+Vous ne devriez pas vous inquiéter de ce message.
 
 
 ------------
-## E2. Log error : `Decode8000`
+## E2. Erreur : `Decode8000`
 
-if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
+Si vous voyez des journaux d'erreurs comme ici après, il s'agit très probablement d'un problème avec le matériel ZiGate.
 
 ```log
 2022-02-22 18:03:11.851 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
@@ -166,20 +167,20 @@ if you see error logs like here after, this is most-likely an issue with the ZiG
 2022-02-22 18:06:30.499 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
 ```
 
-* Make sure that you don't have the old __blue__ USB-TTL module (it must be a red one )
-* Try to power off the ZiGate by stopping the plugin, removing ZiGate, wait for 1 minute, plug-in back and restart the plugin
+* Assurez vous de ne pas utiliser le vieux module USB-TTL __bleu__ (il faut utiliser le rouge).
+* Essayez d'éteindre le ZiGate en arrêtant le plugin, de débrancher la ZiGate pendant 1 minute, de rebrancher et  redémarrez le plugin.
 
-cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
+cc: [Une issue est ouverte](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
 
 ------------
-## E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
+## E3. Erreur : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
-Here after is an exemple of errors found in the log file.
+Voici ci-dessous un exemple d'erreurs trouvées dans le fichier de logs :
 
 ```log
 Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
 Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
 ```
 
-This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem with it -
+Cela indique que l'objet ```90fd9ffffe31f150``` n'est pas joignable ou que la ZiGate a un problème de communication avec lui.
