@@ -105,7 +105,7 @@ The rebinding process will start itself, the status problems should now be fixed
 ------------
 ## C1. My coordinator is not working
 
-I can see in the log file ( domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-xx.log ) some messages like that
+I can see in the [log file](#q2.-where-are-the-logs) some messages like that
 
 ```log
 2022-02-25 00:19:41,006 INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
@@ -119,11 +119,11 @@ I can see in the log file ( domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-x
 
 ```
 
-This indicate a miss communication between the plugin and the dongle. you need to cross-check the following pieces in the Domoticz Hardware menu:
+This indicate a miss communication between the plugin and the coordinator. You need to cross-check the following pieces in the DomoticZ Hardware menu :
 
-* ensure that the serial port is the right one.
-* ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
-* ensure that there is not an other process running on the port
+* Ensure that the serial port is the right one.
+* Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
+* Ensure that there is not an other process running on the port
 
 
 ------------
