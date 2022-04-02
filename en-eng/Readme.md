@@ -68,7 +68,7 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * [Dealing with not certified devices](Problem_Dealing-with-none-certified-device.md)
 * [Debug mode](Problem_Debuging-mode.md)
 * [FAQ ZiGate](FAQ_ZiGate.md)
-* [FAQ plugin](FAQ_Plugin.md)
+* [FAQ plugin](Problem_FAQ.md)
 
 
 ## Devices specifics

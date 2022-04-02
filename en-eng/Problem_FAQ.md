@@ -34,7 +34,7 @@ The first source of support is the Wiki :
 
 * [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
 * [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
-* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
+* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunately outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
 
 You can also get support and ask questions :
 
@@ -70,6 +70,7 @@ Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadde
 * For __Texas Instrument__, we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). We do not recommend to use _develop_ branch and rely on the _master_.
 * For __ZiGate__, the firmwares are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For __EZNP (Silicon Labs)__, we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
+
 
 ------------
 ## Q6. Can I use several coodinators in the same DomoticZ ?
