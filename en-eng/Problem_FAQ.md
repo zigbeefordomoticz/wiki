@@ -84,7 +84,7 @@ If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only
 ------------
 ## Q7. Can I fixe the USB Port number ?
 
-Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number witch cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
+Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number which cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
 
 * [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
 * [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
