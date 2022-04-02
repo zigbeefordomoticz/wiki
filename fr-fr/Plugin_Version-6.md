@@ -1,4 +1,4 @@
-# Explications pour passer de la version 5 à la version 6 plugin.
+# Explications pour passer de la version 5 à la version 6 du plugin.
 
 
 Pour __une nouvelle installation du plugin__, merci de suivre [la procédure d'installation](Plugin_Installation.md).
