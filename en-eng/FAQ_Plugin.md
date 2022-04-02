@@ -7,9 +7,14 @@ The first source of support is the Wiki
 
 * [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng/)
 * [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr/)
-* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut/) Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki
+* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut/) ( _Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
 
-You can also get support and ask questions on the [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68), [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28) or on the [Keybase English channel](https://keybase.io/team/zigateforum) or [keybase French channel](https://keybase.io/team/zigate)
+You can also get support and ask questions
+
+* on the [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68),
+* [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28) or,
+* on the [Keybase English channel](https://keybase.io/team/zigateforum),
+* or finaly [keybase French channel](https://keybase.io/team/zigate)
 
 ## I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working
 
