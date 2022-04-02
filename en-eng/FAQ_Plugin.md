@@ -94,7 +94,7 @@ If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only
 * For ZiGate, the firmware are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For EZNP (Silicon Labs) we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
 
-## `No transport, write directive to` in the log
+## _No transport, write directive to_ in the log
 
 Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
 
