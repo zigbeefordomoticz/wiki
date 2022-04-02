@@ -1,37 +1,31 @@
 # Frequently Asked Questions
 
-* [1. Where can I get support](#1.-where-can-i-get-support)
+* [Q1. Where can I get support](#1.-where-can-i-get-support)
 
-## 2. I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working
-## 3. I cannot get my TI CCxxx dongle working with the plugin
 
-## 4. Pairing issues - Not able to pair a device, the pairing works, but the device doesn't work or doesn't behave as expected
-
-## 5. I want to debug myself and get more logs
-
-## 6. While running , I see some `Decode8000`errors in the log file
-
-## 7. Where can I find the list of supported Coordinators and Devices
-
-## 8. Can I use several dongles in the same Domoticz
-
-## 9. Where can I find the coordinator firmwares
-
-## 10. _No transport, write directive to_ in the log
-
-## 11. How to manage several USB key and make sure that the coordinator is awlays using the same port
-
-## 12. How to commission/pair a new device
-
-## 13. I don't get the device updated in DomoticZ when interacting via a remote control or manualy
-
-## 14. I'm getting 'Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150'
+* [Q4. Pairing issues - Not able to pair a device, the pairing works, but the device doesn't work or doesn't behave as expected]()
+* [Q5. I want to debug myself and get more logs]()
+* [Q7. Where can I find the list of supported Coordinators and Devices]()
+* [Q8. Can I use several dongles in the same Domoticz]()
+* [Q9. Where can I find the coordinator firmwares]()
+* [11. How to manage several USB key and make sure that the coordinator is awlays using the same port]()
+* [12. How to commission/pair a new device]()
+* [13. I don't get the device updated in DomoticZ when interacting via a remote control or manualy]()
 
 
 
+## Coordinators
+* [C1. I'm using a SONOFF Zigbee USB Dongle Plus, but it is not working]()
+* [C2. I cannot get my TI CCxxx dongle working with the plugin]()
+
+## Errors
+
+* [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX`]()
+* [E2. Log error : `Decode8000`]()
+* [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`]()
 
 
-
+------------
 ------------
 ## 1. Where can I get support
 
