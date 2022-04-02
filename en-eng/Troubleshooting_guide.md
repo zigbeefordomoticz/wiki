@@ -82,3 +82,9 @@ We have currently a limitation of the nimber of instances using Zigpy layer, whi
 
 If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
 If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
+
+## Where can I find the coordinator firmwares
+
+* For Texas Instrument we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). we do not recommend to use _develop_ branch and rely on the _master_
+* For ZiGate, the firmware are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
+* For EZNP (Silicon Labs) we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
