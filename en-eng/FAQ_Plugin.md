@@ -10,9 +10,11 @@
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy]()
 
 
-## Coordinators
+## Troubleshooting
 
-* [C1. My coordinator is not working]()
+* [T1. My coordinator is not working]()
+* [T2. My object can not be paired]()
+* [T3. My object doen't work as expected]()
 
 
 ## Errors
@@ -103,7 +105,7 @@ The rebinding process will start itself, the status problems should now be fixed
 
 
 ------------
-## C1. My coordinator is not working
+## T1. My coordinator is not working
 
 I can see in the [log file](#q2.-where-are-the-logs) some messages like that
 
@@ -126,40 +128,19 @@ This indicate a miss communication between the plugin and the coordinator. You n
 * Ensure that there is not an other process running on the port
 
 
-------------
-## 3. I cannot get my TI CCxxx dongle working with the plugin
-
-In that case, we suggest that you try to test the TI CCxxx dongle without Domoticz and the plugin.
-
-1. make sure that the plugin is stopped
-2. Installed missing python modules if requires `sudo pip3 install jsonschema coloredlogs`
-3. from the plugin home folder `domoticz/plugins/Domoticz-Zigbee`, run `python3 -m zigpy_znp.tools.energy_scan /dev/ttyUSB0`where /dev/ttyUSB0 is the serial port to the USB dongle
-
-This should provide you a scan of all Zigbee channels and reports the level of noise
-
-![Network Toplogy](../Images/real-time-topology.png)
-
-If you do not succeed here, this mean that something is wrong between the system and the USB dongle
+If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
 
 
 ------------
-## 4. Pairing issues - Not able to pair a device, the pairing works, but the device doesn't work or doesn't behave as expected
+## T2. My object can not be paired
 
-Please check [here](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
-
-
-------------
-## 8. Can I use several dongles in the same Domoticz
+Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
 
 ------------
-## 12. How to commission/pair a new device
+## T3. My object doen't work as expected
 
-1. Make sure you authorized new hardware in DomoticZ
-1. Set the Permit Join to 120 ( 120 seconds )
-1. Start the Plugin
-1. Trigger the pairing process from the device
-
+Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
 
 ------------
