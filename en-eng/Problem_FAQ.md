@@ -75,7 +75,7 @@ Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadde
 ------------
 ## Q6. Can I use several coodinators in the same DomoticZ ?
 
-We have currently a limitation of the nimber of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
+We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
 
 If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
 If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
