@@ -18,7 +18,7 @@
 
 ## Errors
 
-* [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX`]()
+* [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`]()
 * [E2. Log error : `Decode8000`]()
 * [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`]()
 
@@ -30,9 +30,9 @@
 Welcome to Zigbee for Domoticz.
 The first source of support is the Wiki
 
-* [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng/)
-* [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr/)
-* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut/) ( _Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
+* [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
+* [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
+* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunatly outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
 
 You can also get support and ask questions :
 
@@ -95,25 +95,6 @@ Please check [here](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Debu
 
 
 ------------
-## 6. While running , I see some `Decode8000`errors in the log file
-
-if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
-
-```log
-2022-02-22 18:03:11.851 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:23.656 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:30.282 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:30.499 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
-
-```
-
-* make sure that you don't have the old __blue__ USB-TTL module (it must be a red one )
-* try to power off the ZiGate by stopping the plugin, removing ZiGate, wait for 1 minute, plug-in back and restart the plugin
-
-cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
-
-
-------------
 ## 7. Where can I find the list of supported Coordinators and Devices
 
 Please check the  [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
@@ -135,18 +116,8 @@ If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only
 * For ZiGate, the firmware are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For EZNP (Silicon Labs) we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
 
-------------
-## 10. _No transport, write directive to_ in the log
 
-Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
 
-```log
-Apr 02 13:30:23 pi3 domoticz[1328]: 2022-04-02 13:30:23.327  Error: Zigate: No transport, write directive to '10.0.0.166:52348' ignored.
-Apr 02 13:30:23 pi3 domoticz[1328]: 2022-04-02 13:30:23.327  Error: Zigate: No transport, write directive to '10.0.0.166:52346' ignored.
-```
-
-This error is coming from Domoticz and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
-You shouldn't worry much of this message.
 
 
 ------------
@@ -182,7 +153,39 @@ The rebinding process will start itself, the status problems should now be fixed
 
 
 ------------
-## 14. I'm getting 'Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150'
+## E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
+
+Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
+
+```log
+Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
+```
+
+This error is coming from DomoticZ and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
+You shouldn't worry much of this message.
+
+
+------------
+## E2. Log error : `Decode8000`
+
+if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
+
+```log
+2022-02-22 18:03:11.851 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
+2022-02-22 18:06:23.656 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
+2022-02-22 18:06:30.282 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
+2022-02-22 18:06:30.499 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
+
+```
+
+* Make sure that you don't have the old __blue__ USB-TTL module (it must be a red one )
+* Try to power off the ZiGate by stopping the plugin, removing ZiGate, wait for 1 minute, plug-in back and restart the plugin
+
+cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
+
+
+------------
+## E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
 Here after is an exemple of errors found in the log file.
 
@@ -192,4 +195,4 @@ Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) De
 
 ```
 
-This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem wit it -
+This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem with it -
