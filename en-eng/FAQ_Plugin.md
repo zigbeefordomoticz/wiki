@@ -95,9 +95,9 @@ For example : If you power off an Ikea bulb (with the physical switch) and then 
 
 If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
 
-1. Open the __PluginConf.txt__ file
-1. Please check if the parameter "AllowRebindingClusters" is set to 1.
-    If it is not, set it to "1"
+1. Go to the settings page on the WebUI
+1. Activate the advanced settings
+1. Please check if the parameter __AllowRebindingClusters__.
 1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
 The rebinding process will start itself, the status problems should now be fixed.
 
