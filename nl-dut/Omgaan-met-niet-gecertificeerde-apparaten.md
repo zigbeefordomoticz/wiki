@@ -3,17 +3,17 @@
 Het proces wat hierna volgt helpt ons het probleem te identificeren met niet gecertificeerde apparaten (als deze zich voordoen) deze informatie kan je dus verzamelen om mee te geven als je een probleem aan maakt op GitHub.
 
 1. Zet “Frame discovery archiving” aan bij de plugin instellen in Domoticz.
-Het doel hiervan is om alle frames te archiveren tijdens het koppel proces van het apparaat. Koppel dan ook het apparaat als deze modus is ingeschakeld. Pas de [PluginConf.txt] aan (https://github.com/sasu-drooz/Domoticz-Zigate/wiki/PluginConf) en zet 'allowStoreDiscoveryFrames' op '1'. 
+Het doel hiervan is om alle frames te archiveren tijdens het koppel proces van het apparaat. Koppel dan ook het apparaat als deze modus is ingeschakeld. Pas de [PluginConf.txt] aan (<https://zigbeefordomoticz.github.io/wiki/en-eng>) en zet 'allowStoreDiscoveryFrames' op '1'.
 
 LET OP: Laat deze optie niet op “1” staan na de test, dit resulteert namelijk dat het systeem je vorige gekoppelde apparaten niet meer leest vanuit de DeviceConf.txt.
 
 Het volgende proces zal een .json bestand aanmaken na het discovery proces. Je kan dit bestand vinden onder de “ZDatas” folder.
 
-2. Zet “Permit to Join” aan in het plugin menu van Domoticz. 
+2. Zet “Permit to Join” aan in het plugin menu van Domoticz.
 3. Koppel je nieuwe apparaat, het proces duurt even na een tijdje wordt een nieuw bestand aangemaakt in de “ZDates” folder. Het bestand ziet er dan ongeveer zo uit:
 `DiscoveryDevice-00158d00028f8e74.json` . Hier is “ 00158d00028f8e74 “ het IEEE (Mac Adres) van het apparaat.
 
-Het bestand ziet er dan ongeveer zo uit van binnen : 
+Het bestand ziet er dan ongeveer zo uit van binnen :
 
 `cat DiscoveryDevice-00158d00028f8e74.json`
 
@@ -33,6 +33,3 @@ Het bestand ziet er dan ongeveer zo uit van binnen :
 | LogicalType  | Controler / Router / End device |
 | PowerSource  | Main / Battery |
 | ReceiveOnIdle | Ether accept or not receiving messages when idle |
-
-
-
