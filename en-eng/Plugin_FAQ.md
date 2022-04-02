@@ -88,3 +88,15 @@ If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only
 * For Texas Instrument we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). we do not recommend to use _develop_ branch and rely on the _master_
 * For ZiGate, the firmware are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For EZNP (Silicon Labs) we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
+
+## `No transport, write directive to` in the log
+
+Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
+
+```
+Apr 02 13:30:23 pi3 domoticz[1328]: 2022-04-02 13:30:23.327  Error: Zigate: No transport, write directive to '10.0.0.166:52348' ignored.
+Apr 02 13:30:23 pi3 domoticz[1328]: 2022-04-02 13:30:23.327  Error: Zigate: No transport, write directive to '10.0.0.166:52346' ignored.
+```
+
+This error is coming from Domoticz and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
+You shouldn't worry much of this message.
