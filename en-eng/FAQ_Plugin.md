@@ -1,8 +1,9 @@
-# ZigBee For DomoticZ FAQ
+# Frequently Asked Questions
 
-this is a list of Frequently Asked Questions about the plugin :
+This is a list of Frequently Asked Questions about the plugin :
 
 * [1. Where can I get support](#1.-where-can-i-get-support)
+
 
 ------------
 ## 1. Where can I get support
