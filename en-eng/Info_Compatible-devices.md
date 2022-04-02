@@ -6,7 +6,7 @@ Purpose is to document the list of Hardware devices **tested** with the ZiGate U
 
 Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
 
-You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/zigate.html)
+You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/z4d.html)
 
 ### Français
 
@@ -14,7 +14,7 @@ Ce document est une liste des objets "certifiés" qui fonctionnent avec une ZiGa
 
 Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du développeur qui rendu paramétrer l'objet pour qu'il fonctionne.
 
-La liste des objets compatibles avec la ZiGate est disponible sur le site [ZiGate ZigGee Compatibility](https://zigbee.blakadder.com/zigate.html)
+La liste des objets compatibles avec la ZiGate est disponible sur le site [ZiGate ZigGee Compatibility](https://zigbee.blakadder.com/z4d.html)
 
 Le reste de la page est en anglais afin de ne faire vivre qu'une seule version.
 
