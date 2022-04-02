@@ -9,13 +9,11 @@
 * [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manualy)
 
-
 ## Troubleshooting
 
 * [T1. My coordinator is not working](#t1-my-coordinator-is-not-working)
 * [T2. My object can not be paired](#t2-my-object-can-not-be-paired)
 * [T3. My object doen't work as expected](#t3-my-object-doent-work-as-expected)
-
 
 ## Errors
 
@@ -23,11 +21,9 @@
 * [E2. Log error : `Decode8000`](#e2-log-error--decode8000)
 * [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 
-
-
-
 ------------
 ------------
+
 ## Q1. Where can I get support ?
 
 The first source of support is the Wiki :
@@ -43,36 +39,36 @@ You can also get support and ask questions :
 * The [Keybase English channel](https://keybase.io/team/zigateforum)
 * The [Keybase French channel](https://keybase.io/team/zigate)
 
-
 ------------
+
 ## Q2. Where are the logs ?
 
 Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
 The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you used the plugin ZiGate before april 2022.
 
-
 ------------
+
 ## Q3. Can I debug myself ?
 
 Please refer to [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
 
-
 ------------
+
 ## Q4. Where can I find the list of supported Coordinators and Devices ?
 
 Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
 
-
 ------------
+
 ## Q5. Where can I find the coordinator firmwares ?
 
 * For __Texas Instrument__, we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). We do not recommend to use _develop_ branch and rely on the _master_.
 * For __ZiGate__, the firmwares are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For __EZNP (Silicon Labs)__, we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
 
-
 ------------
+
 ## Q6. Can I use several coodinators in the same DomoticZ ?
 
 We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
@@ -80,8 +76,8 @@ We have currently a limitation of the number of instances using Zigpy layer, whi
 If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
 If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
 
-
 ------------
+
 ## Q7. Can I fixe the USB Port number ?
 
 Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number which cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
@@ -89,8 +85,8 @@ Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can c
 * [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
 * [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
 
-
 ------------
+
 ## Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy
 
 For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
@@ -103,8 +99,8 @@ If you encounter problems like the above example, it is most likely the automati
 1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
 The rebinding process will start itself, the status problems should now be fixed.
 
-
 ------------
+
 ## T1. My coordinator is not working
 
 I can see in the [log file](#q2.-where-are-the-logs) some messages like that
@@ -122,27 +118,27 @@ I can see in the [log file](#q2.-where-are-the-logs) some messages like that
 
 This indicate a miss communication between the plugin and the coordinator. You need to cross-check the following pieces in the DomoticZ Hardware menu :
 
+* If this is the first time you are using the Coordinator (no device paired yet), you have to initialize it, set the __Initialize Coordinator: True__ in the Domoticz Hardware menu when starting the plugin. Once the first startup is ok, then disable this parameter to prevent erasing all paired devices at the next restart.
 * Ensure that the serial port is the right one.
 * Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
 * Ensure that there is not an other process running on the port
 
-
 If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
 
-
 ------------
+
 ## T2. My object can not be paired
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
-
 ------------
+
 ## T3. My object doen't work as expected
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
-
 ------------
+
 ## E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
 
 Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
@@ -154,8 +150,8 @@ Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No tr
 This error is coming from DomoticZ and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
 You shouldn't worry much of this message.
 
-
 ------------
+
 ## E2. Log error : `Decode8000`
 
 if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
@@ -172,8 +168,8 @@ if you see error logs like here after, this is most-likely an issue with the ZiG
 
 cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
-
 ------------
+
 ## E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
 Here after is an exemple of errors found in the log file.
