@@ -33,7 +33,7 @@ Depuis la sortie de la version 6, le nouveau format du Wiki sous forme de page W
 3. Mettre la ligne suivante dans le fichier html :
 
 ```
-<IFRAME SRC="https://zigbeefordomoticz.github.io/Wiki/fr-fr" height="800" width="100%"></IFRAME>
+<IFRAME SRC="https://zigbeefordomoticz.github.io/wiki/fr-fr" height="800" width="100%"></IFRAME>
 ```
 
 Vous aurez accès à la page FR du wiki directement depuis DomoticZ :
