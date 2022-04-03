@@ -33,7 +33,7 @@ Since the release of version 6, the new Wiki format as a web page (WikiUI) is al
 3. Put the following line in the html file :
 
 ```
-<IFRAME SRC="https://zigbeefordomoticz.github.io/Wiki/en-eng" height="800" width="100%"></IFRAME>
+<IFRAME SRC="https://zigbeefordomoticz.github.io/wiki/en-eng" height="800" width="100%"></IFRAME>
 ```
 
 You will have access to the EN page of the wiki directly from DomoticZ :
