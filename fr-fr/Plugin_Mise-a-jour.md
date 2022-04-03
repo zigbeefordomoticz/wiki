@@ -41,15 +41,43 @@ Au fur et à mesure des évolutions de DomoticZ, le Plugin se doit d'évoluer et
 
 Les différentes branches sont :
 
-#### stable5
+#### stable6 (créée en avril 2022)
 
-C'est la version par défaut actuelle, compatible avec la ZiGate+ (V2).
+C'est la branche par défaut actuelle.
+C'est la version qui a ouvert le plugin aux coordinateurs TI CCXXXX, Sonoff, Elelabs, ZNP.
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Coordinateurs | ZiGate V1 et V2<br>ELElabs<br>ZZH<br>Sonoff<br>TI CCXXXX |
+| Compatibilité minimale | DomoticZ 2021.1 |
+| Compatibilité maximale | Dernière version de DomoticZ |
+
+__Note :__ Le passage à la stable6 nécessite une procédure particulière : voir la page [Migration vers version 6](Plugin_Version-6.md).
+
+#### beta6 (créée en avril 2022)
+
+La branche béta6 est le canal de développement. __Ne passez pas sur la branche beta6 sans y avoir été invité.__
+
+Si vous êtes sur la branche __beta6__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stable6__ à la prochaine mise à jour du canal __stable6__.
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Coordinateurs | idem stable6 |
+| Compatibilité minimale | DomoticZ 2021.1 |
+| Compatibilité maximale | Dernière version de DomoticZ |
+
+
+#### stable5 (créée en mai 2021)
+
+C'est la version qui a ajouté la compatibilité avec la ZiGate+ (V2).
 
 | Info  | Compatibilité  |
 | :------------: |:---------------:|
 | Modèles de ZiGate | V1 et V2 |
 | Compatibilité minimale | DomoticZ 2020.1 |
-| Compatibilité maximale | Dernière version de DomoticZ |
+| Compatibilité maximale | DomoticZ 2022.1 |
+
+Cette version ne recevra plus de mise à jour.
 
 __Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de renseigner des nouveaux paramètres dans le [Paramétrage du plugin](Plugin_Parametrage.md) sinon, vous aurez une erreur de communication au lancement du Plugin.
 
@@ -77,6 +105,8 @@ Si vous êtes sur la branche __beta__ (suite à l'ajout d'un nouveau matériel p
 | Modèles de ZiGate | V1 et V2 |
 | Compatibilité minimale | DomoticZ 2020.1 |
 | Compatibilité maximale | Dernière version de DomoticZ |
+
+Cette version ne recevra plus de mise à jour.
 
 #### stableX-fix
 
