@@ -15,6 +15,7 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 ## Introduction
 
 * [Start](Info_Home.md) for beginners
+* [Compatibles coordinators](Coordinators.md)
 
 ## Installation
 

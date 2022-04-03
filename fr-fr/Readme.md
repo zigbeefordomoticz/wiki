@@ -14,6 +14,8 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 
 * [Présentation](Info_Accueil.md) à lire pour les nouveaux utilisateurs
 * [Lexique](Info_Accueil.md#lexique)
+* [Les coordinateurs compatibles](../en-eng/Coordinators.md)
+* [Les objets compatibles](Les-objets.md)
 
 
 ## Installation
