@@ -126,6 +126,8 @@ Cela indique un souci de communication entre le plugin et le coordinateur. Vous 
 * Assurez-vous que le port série est le bon.
 * Assurez-vous que le modèle de coordinateur correspond à votre dongle.
 * Assurez-vous qu'aucun autre processus n'est en cours d'exécution sur le port USB.
+* Si le coordinateur est connecté sur un Raspberry Pi, assurez-vous d'utiliser un port USB2 (et non l'USB3 du PI4).
+* Si le coordinateur est branché sur un hub USB, essayez de la brancher directement sur un port USB de votre serveur.
 
 
 Si cela ne fonctionne toujours pas, vous pouvez essayer de tester le coordinateur en faisant une [analyse de topologie en temps reel](HowTo_Have-a-real-time-topology.md). Ce test se fera sans DomoticZ ni le plugin. Il ne fonctionne qu'avec TI CCxxx.
@@ -133,6 +135,8 @@ Si cela ne fonctionne toujours pas, vous pouvez essayer de tester le coordinateu
 
 ------------
 ## T2. Mon objet ne s'appaire pas
+
+
 
 Merci de consulter la page [Problèmes d'appairage](Probleme_Appairage.md)
 
