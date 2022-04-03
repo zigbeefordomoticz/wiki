@@ -136,7 +136,7 @@ Si cela ne fonctionne toujours pas, vous pouvez essayer de tester le coordinateu
 ------------
 ## T2. Mon objet ne s'appaire pas
 
-* Si le coordinateur est branché directement sur un port USB du serveur, essayez de le déporter en utilisant une rallonge USB (ne pas utiliser de Hub USB). Ceci permettra de l'éloigner des interférences, et en particulier celles des disques SSD.
+* Si le coordinateur est branché directement sur un port USB du serveur, essayez de le déporter en utilisant une rallonge USB (ne pas utiliser de Hub USB). Ceci permettra de l'éloigner des interférences, et en particulier celles des disques SSD, puces wifi, etc...
 
 Merci de consulter la page [Problèmes d'appairage](Probleme_Appairage.md)
 

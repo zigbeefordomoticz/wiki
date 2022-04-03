@@ -136,7 +136,7 @@ If it still don't work, you can try to test the coordinator with [making Real ti
 
 ## T2. My object can not be paired
 
-* If the coordinator is plugged directly into a USB port on the server, try deporting it using a USB extension cord (don't use an USB HUB). This will keep it away from interference, especially from SSD disks.
+* If the coordinator is plugged directly into a USB port on the server, try deporting it using a USB extension cord (don't use an USB HUB). This will keep it away from interference, especially from SSD disks, wifi chips, etc...
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
