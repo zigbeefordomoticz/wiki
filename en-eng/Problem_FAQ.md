@@ -14,6 +14,7 @@
 * [T1. My coordinator is not working](#t1-my-coordinator-is-not-working)
 * [T2. My object can not be paired](#t2-my-object-can-not-be-paired)
 * [T3. My object doen't work as expected](#t3-my-object-doent-work-as-expected)
+* [T4. I have a PI4 and I'm not able to pair any object](#t4-unable-to-pair-object-with-pi4)
 
 ## Errors
 
@@ -136,6 +137,14 @@ Please refer to [Dealing with none certified device](https://zigbeefordomoticz.g
 ## T3. My object doen't work as expected
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
+
+------------
+
+## T4. Unable to pair object with pi4
+
+I have Domoticz installed on a PI4 with an SSD disk drive, and I'm unable to pair any Zigbee objects.
+
+Try to avoid USB3 port and use an USB extender to place the Zigbee coordinator far from the SSD disk drive which is creating a lot of interferences
 
 ------------
 
