@@ -129,13 +129,15 @@ This indicate a miss communication between the plugin and the coordinator. You n
 * Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
 * Ensure that there is not an other process running on the port
 * If the coordinator is connected on a PI, make sure that you use USB2 (and not the USB3 from the PI4)
-* If you have connected the coordinator on a USB HUB, try to plug it directly to the server
+* If you have connected the coordinator on an USB HUB, try to plug it directly to the server
 
 If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
 
 ------------
 
 ## T2. My object can not be paired
+
+* If the coordinator is plugged directly into a USB port on the server, try deporting it using a USB extension cord (don't use an USB HUB). This will keep it away from interference.
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
