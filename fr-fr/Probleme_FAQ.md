@@ -1,27 +1,27 @@
 # Frequently Asked Questions
 
 * [Q1. Où obtenir de l'aide ?](#1-where-can-i-get-support)
-* [Q2. Où sont les logs ?](#q2-where-are-the-logs-)
-* [Q3. Can I debug myself ?](#q3-can-i-debug-myself-)
-* [Q4. Where can I find the list of supported Coordinators and Devices ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
-* [Q5. Where can I find the coordinator firmwares ?](#q5-where-can-i-find-the-coordinator-firmwares-)
-* [Q6. Can I use several coodinators in the same DomoticZ ?](#q6-can-i-use-several-coodinators-in-the-same-domoticz-)
-* [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
-* [Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manualy)
+* [Q2. Où trouver les logs ?](#q2-where-are-the-logs-)
+* Q3. Comment faire du débogage ?](#q3-can-i-debug-myself-)
+* [Q4. Où trouver la liste des coordinateurs et des objets supportés ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
+* [Q5. Où trouver les firmwares des coordinateurs ?](#q5-where-can-i-find-the-coordinator-firmwares-)
+* [Q6. Est il possible d'utiliser plusieurs coordinateurs dans un seul DomoticZ ?](#q6-can-i-use-several-coodinators-in-the-same-domoticz-)
+* [Q7. Est il possible de fixer le numéro du port USB ?](#q7-can-i-fixe-the-usb-port-number-)
+* [Q8. Mon objet n'est pas mis à jour dans DomoticZ quand je l'actionne manuellement](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manualy)
 
 
-## Troubleshooting
+## Débogage
 
-* [T1. My coordinator is not working](#t1-my-coordinator-is-not-working)
-* [T2. My object can not be paired](#t2-my-object-can-not-be-paired)
-* [T3. My object doen't work as expected](#t3-my-object-doent-work-as-expected)
+* [T1. Mon coordinateur ne fonctionne pas](#t1-my-coordinator-is-not-working)
+* [T2. Mon objet ne s'appaire pas](#t2-my-object-can-not-be-paired)
+* [T3. Mon objet ne fonctionne pas comme prévu](#t3-my-object-doent-work-as-expected)
 
 
-## Errors
+## Erreurs
 
-* [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
-* [E2. Log error : `Decode8000`](#e2-log-error--decode8000)
-* [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
+* [E1. Erreur : No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
+* [E2. Erreur : Decode8000](#e2-log-error--decode8000)
+* [E3. Erreur : Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 
 
 
@@ -105,7 +105,7 @@ Si vous rencontrez des problèmes comme l'exemple ci-dessus, il est fort probabl
 
 
 ------------
-## T1. Mon coordinateur ne fonctionne pas.
+## T1. Mon coordinateur ne fonctionne pas
 
 Vous avez les messages suivant dans le fichier de [log file](#q2.-ou-trouver-les-logs-) :
 
