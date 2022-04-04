@@ -46,7 +46,7 @@ You can also get support and ask questions :
 
 Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
-The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you used the plugin ZiGate before april 2022.
+The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you have installed the plugin  before april 2022.
 
 ------------
 
@@ -75,7 +75,7 @@ Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadde
 We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
 
 If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
-If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want.
+If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want. For more information you can see the progress of that issue on [#1117](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues/1117)
 
 ------------
 
