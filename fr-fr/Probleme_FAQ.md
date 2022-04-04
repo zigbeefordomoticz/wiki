@@ -1,27 +1,27 @@
 # Frequently Asked Questions
 
-* [Q1. Où obtenir de l'aide ?](#1-where-can-i-get-support)
-* [Q2. Où trouver les logs ?](#q2-where-are-the-logs-)
-* Q3. Comment faire du débogage ?](#q3-can-i-debug-myself-)
-* [Q4. Où trouver la liste des coordinateurs et des objets supportés ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
-* [Q5. Où trouver les firmwares des coordinateurs ?](#q5-where-can-i-find-the-coordinator-firmwares-)
-* [Q6. Est il possible d'utiliser plusieurs coordinateurs dans un seul DomoticZ ?](#q6-can-i-use-several-coodinators-in-the-same-domoticz-)
-* [Q7. Est il possible de fixer le numéro du port USB ?](#q7-can-i-fixe-the-usb-port-number-)
-* [Q8. Mon objet n'est pas mis à jour dans DomoticZ quand je l'actionne manuellement](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manualy)
+* [Q1. Où obtenir de l'aide ?](q1-o%C3%B9-obtenir-de-laide-)
+* [Q2. Où trouver les logs ?](#q2-o%C3%B9-trouver-les-logs-)
+* [Q3. Comment faire du débogage ?](#q3-comment-faire-du-d%C3%A9bogage-)
+* [Q4. Où trouver la liste des coordinateurs et des objets supportés ?](q4-o%C3%B9-trouver-la-liste-des-coordinateurs-et-des-objets-support%C3%A9s-)
+* [Q5. Où trouver les firmwares des coordinateurs ?](#q5-o%C3%B9-trouver-les-firmwares-des-coordinateurs-)
+* [Q6. Est il possible d'utiliser plusieurs coordinateurs dans un seul DomoticZ ?](#q6-est-il-possible-dutiliser-plusieurs-coordinateurs-dans-un-seul-domoticz-)
+* [Q7. Est il possible de fixer le numéro du port USB ?](#q7-est-il-possible-de-fixer-le-num%C3%A9ro-du-port-usb-)
+* [Q8. Mon objet n'est pas mis à jour dans DomoticZ quand je l'actionne manuellement](#q8-mon-objet-nest-pas-mis-%C3%A0-jour-dans-domoticz-quand-je-lactionne-manuellement)
 
 
 ## Débogage
 
-* [T1. Mon coordinateur ne fonctionne pas](#t1-my-coordinator-is-not-working)
-* [T2. Mon objet ne s'appaire pas](#t2-my-object-can-not-be-paired)
-* [T3. Mon objet ne fonctionne pas comme prévu](#t3-my-object-doent-work-as-expected)
+* [T1. Mon coordinateur ne fonctionne pas](#t1-mon-coordinateur-ne-fonctionne-pas)
+* [T2. Mon objet ne s'appaire pas](#t2-mon-objet-ne-sappaire-pas)
+* [T3. Mon objet ne fonctionne pas comme prévu](#t3-mon-objet-ne-fonctionne-pas-comme-pr%C3%A9vu)
 
 
 ## Erreurs
 
-* [E1. Erreur : No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
-* [E2. Erreur : Decode8000](#e2-log-error--decode8000)
-* [E3. Erreur : Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
+* [E1. Erreur : No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored](#e1-erreur--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
+* [E2. Erreur : Decode8000](Q#e2-erreur--decode8000)
+* [E3. Erreur : Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX](#e3-erreur--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 
 
 
