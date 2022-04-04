@@ -13,7 +13,7 @@ In order to install modules globally under C:\Program Files\Python310\Lib\site-p
 Make sure to be in the pluin home directory ( domoticz/plugins/Domoticz-Zigbee )
 
 ```bash
-pip install -r install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Make the Symbolic links correct
