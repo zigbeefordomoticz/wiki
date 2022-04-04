@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-* [Q1. Where can I get support ?](#1-where-can-i-get-support)
+* [Q1. Where can I get support ?](#q1-where-can-i-get-support)
 * [Q2. Where are the logs ?](#q2-where-are-the-logs-)
 * [Q3. Can I debug myself ?](#q3-can-i-debug-myself-)
 * [Q4. Where can I find the list of supported Coordinators and Devices ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
