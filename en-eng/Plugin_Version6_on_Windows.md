@@ -10,8 +10,10 @@ You must start a Git Bash windows in with administrator privileges
 
 In order to install modules globally under C:\Program Files\Python310\Lib\site-packages start CMD prompt as administrator and then install modules. But make sure that you didn't install the module before for the user, if that is the case you need to remove them.
 
+Make sure to be in the pluin home directory ( domoticz/plugins/Domoticz-Zigbee )
+
 ```bash
-pip install voluptuous aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio pycryptodome
+pip install -r install requirements.txt
 ```
 
 ## Make the Symbolic links correct
