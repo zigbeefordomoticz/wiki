@@ -8,7 +8,7 @@
 * [Q6. Can I use several coodinators in the same DomoticZ ?](#q6-can-i-use-several-coodinators-in-the-same-domoticz-)
 * [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manualy)
-* [Q9. Can I run Plugin Version 6 on a Windows system ?](#q9can-i-run-plugin-version-6-on-a-windows-system)
+* [Q9. Can I run Plugin Version 6 on a Windows system ?](#q9-can-i-run-plugin-version-6-on-a-windows-system)
 
 ## Troubleshooting
 
