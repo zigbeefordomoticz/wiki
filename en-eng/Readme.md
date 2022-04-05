@@ -103,6 +103,8 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * [How-to check lost devices (version 1)](../Contrib/CheckLastSeen.dzVents) in DzVents
 * [How-to check lost devices (version 2)](../Contrib/CheckDeadDevices.lua) in DzVents
 
+ [Other examples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
+
 ## Informations
 
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
