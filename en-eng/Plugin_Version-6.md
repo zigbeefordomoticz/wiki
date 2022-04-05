@@ -51,37 +51,39 @@ git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
 
 4. Install the necessary Python packages with the command :
 
-```
-sudo pip3 install voluptuous pycryptodome aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+go to the plugin folder domoticz/plugins/Domoticz-Zigbee (or Domoticz-Zigate)
+
+``` bash
+sudo pip3 install -r requirements.txt
 ```
 
 5. Execute the command by adapting pi:pi if necessary to the user:group used. Be careful to take the point at the end.
 
-```
+``` bash
 sudo chown -R pi:pi .
 ```
 
 6. Run the command :
 
-```
+``` bash
 git config --add submodule.recurse true
 ```
 
 7. Install the missing Python libraries with the command :
 
-```
+``` bash
 git submodule update --init --recursive
 ```
 
 8. Make the __plugin.py__ file executable with the command :
 
-```
+``` bash
 sudo chmod +x plugin.py
 ```
 
 9. Restart DomoticZ. The command is usually :
 
-```
+``` bash
 sudo service domoticz.sh start
 ```
 

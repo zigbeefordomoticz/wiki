@@ -2,7 +2,6 @@
 
 Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
-
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
 * 1 - [Installation manuelle sous Linux](#1---installation-manuelle-sous-linux)
@@ -14,13 +13,12 @@ Pour cette première étape, il existe différentes méthodes d'installation sel
 * 7 - [Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29](#7---installation-dune-pizigate-rpi3b-sous-linux-avec-fedora-29)
 * 8 - [Installation sous OpenWRT](#8---installation-sous-openwrt)
 
-
 __Note :__ L'installation d'une PiZiGate est spécifique. Se reporter aux parties 6 ou 7.
 
 __Info :__ Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethernet, etc...) sur Raspberry, se reporter aux parties 1 ou 2.
 
-
 ------------
+
 ## 1 - Installation manuelle sous Linux
 
 Cette méthode est uniquement valable pour les systèmes Linux : Raspberry, Debian, Ubuntu, etc. Il sera nécessaire de modifier les lignes de commandes en fonction de votre système.
@@ -38,48 +36,57 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 Ouvrir le terminal.
 
 1. Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement :
+
 ```
 cd domoticz/plugins/
 ```
 
 2. Exécuter la commande :
-```
+
+``` bash
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 
 Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins.
 
 3. Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
-```
+
+``` bash
 cd Domoticz-Zigbee/
 ```
 
 4. Installer les paquets Python nécessaires avec la commande :
-```
-sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+
+``` bash
+sudo pip3 install -r requirements.txt
 ```
 
 5. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
+
 ```
 sudo chown -R pi:pi .
 ```
 
 6. Exécuter la commande :
-```
+
+```  bash
 git config --add submodule.recurse true
 ```
 
 7. Installer les librairies Python manquantes avec la commande :
+
 ```
 git submodule update --init --recursive
 ```
 
 8. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+
 ```
 sudo chmod +x plugin.py
 ```
 
 9. Redémarrer DomoticZ. La commande est normalement :
+
 ```
 sudo service domoticz.sh restart
 ```
@@ -87,8 +94,8 @@ sudo service domoticz.sh restart
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels (tout en bas).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
-
 ------------
+
 ## 2 - Installation du plugin via Python Plugin Manager sous Linux
 
 __Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
@@ -109,8 +116,8 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
-
 ------------
+
 ## 3 - Installation sur NAS Synology avec Jadahl
 
 __Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
@@ -121,8 +128,8 @@ __Note :__ Jadahl a arrêté son développement en 2020. La dernière version di
 
 Les informations concernant l’installation sur NAS Synology fonctionnent sous Jadahl ont été déplacées sur [cette page](Old_versions/Plugin_Installation_OLD.md).
 
-
 ------------
+
 ## 4 - Installation sur NAS Synology avec Docker
 
 Rédaction par [@SylvainPer](https://github.com/SylvainPer)
@@ -147,7 +154,6 @@ Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/pl
 * Créer un nouveau terminal :
 ![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal.png)
 
-
 * Dans le terminal, lancer les commandes :
 
 ```
@@ -155,6 +161,7 @@ cd userdata
 cd plugins
 git clone https://github.com/pipiche38/Domoticz-Zigate.git
 ```
+
 ![GIT](Images/FR_Synology_Docker_Install_Bash_Git.png)
 
 * Stopper le Conteneur. Cliquer sur 'Modifier' et aller dans l'onglet 'Paramètres des ports'. Il faut ajouter le port d'accés au WebUI (par défaut 9440) :
@@ -165,8 +172,8 @@ git clone https://github.com/pipiche38/Domoticz-Zigate.git
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
-
 ------------
+
 ## 5 - Installation sous Windows 10
 
 Rédaction par [@Pipiche38](https://github.com/pipiche38)
@@ -195,7 +202,6 @@ Le premier conseil est d’installer DomoticZ (version stable par exemple) dans 
 
 ![Win10 Installation](../Images/Win10Pic1png.png)
 
-
 Attention, DomoticZ et ZiGate ont besoin d’écrire des fichiers dans des sous répertoires et un droit d’accès manquant pourra faire apparaître dans l’onglet  « Configuration/log » de  DomoticZ ce type de message :
 
 ![Win10 Installation](../Images/Win10Pic2.png)
@@ -203,10 +209,9 @@ Attention, DomoticZ et ZiGate ont besoin d’écrire des fichiers dans des sous 
 Même en attribuant le maximum de droits autorisés (administrateur, utilisateur avec droits en écriture ...), il m’est arrivé d’obtenir ce message (peut être un oubli…).
 Pour éviter tout problème, j’ai finalement choisi d’installer DomoticZ directement à la racine sous C:\Domoticz et depuis aucun problème.
 
-
 #### 5.2.B - Installation de la ZiGate
 
-Il est recommandé d’installer la ZiGate selon les instructions disponibles sur le site officiel : https://zigate.fr/documentation/tester-la-zigate-usb
+Il est recommandé d’installer la ZiGate selon les instructions disponibles sur le site officiel : <https://zigate.fr/documentation/tester-la-zigate-usb>
 
 Installer les pilotes (pour le convertisseur USB rouge, allez sur le site de siliconlabs et télécharger CP210x Universal Windows Driver )
 
@@ -225,7 +230,7 @@ Pour la suite, deux logiciels sont nécessaires et utiles pour réaliser une ins
 
 Installer une version de Python prenant en charge DomoticZ comme indiqué dans le Wiki: [Using Python plugins in DomoticZ](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 
-Installer une version 32 bits pour Windows à partir du site Python.org (par exemple, 3.5.2 et 32 bits) : https://www.python.org/downloads/windows
+Installer une version 32 bits pour Windows à partir du site Python.org (par exemple, 3.5.2 et 32 bits) : <https://www.python.org/downloads/windows>
 
 Si la version est compatible avec DomoticZ, un message de statut dans l’onglet « Configuration/Log » de DomoticZ l’indiquera au démarrage:
 
@@ -288,7 +293,6 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Raspbian (
 
 __Important :__ Cette méthode d’installation n'est pas valable pour une installation d'une ZiGate USB, Wifi ou Ethernet sur un Raspberry (voir les [installations sous Linux](Plugin_Installation.md)).
 
-
 ### 6.1 - Prérequis
 
 * Assurez-vous d'avoir installé les dernières versions de Raspbian ainsi que python-dev
@@ -336,6 +340,7 @@ Sortez en sauvegardant les modifications
     sudo usermod -ag gpio <pi>
     sudo shutdown
 ```
+
 Arrêter le Raspberry Pi : `sudo halt`
 
 * Brancher la PiZigate sur les ports GPIO
@@ -355,6 +360,7 @@ Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md).
 ### 6.3 - Mise à jour
 
 Avant de faire une mise à jour du firmware de la PiZigate en flash mode, il faut modifier les GPIO :
+
 ```
 0 gpio way out
 2 gpio way out
@@ -365,8 +371,8 @@ gpio write 0 1
 
 Redémarrer le Pi après la mise à jour du firmware. La configuration par défaut du rc.local sera appliquée.
 
-
 ------------
+
 ## 7 - Installation d'une PiZigate (RPi3B+) sous Linux avec Fedora 29
 
 Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
@@ -374,7 +380,6 @@ Cette méthode est uniquement valable pour la PiZigate installée sur Fedora 29.
 __Important :__ Cette méthode d’installation n'est pas valable pour une installation d'une ZiGate USB, Wifi ou Ethernet sur un Raspberry (voir les [installations sous Linux](Plugin_Installation.md)).
 
 Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plusieurs essais et quelques modifications, la PiZigate et DomoticZ sont complètement opérationnels sous Fedora 29.
-
 
 ### 7.1 - Prérequis
 
@@ -387,8 +392,8 @@ Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plu
       * reboot
 
   * Désactiver Getty on /dev/ttyS1
-     * `systemctl stop serial-getty@ttyS1.service1`
-     * `systemctl disable serial-getty@ttyS1.service`
+    * `systemctl stop serial-getty@ttyS1.service1`
+    * `systemctl disable serial-getty@ttyS1.service`
 
 * Vérifier qu'il n'y a plus de processus attaché à  /dev/ttyS1 : `lsof /dev/ttyS1` or `ps -ef | grep ttyS1`
 
@@ -407,6 +412,7 @@ Au départ, la PiZigate n'était fonctionnelle que sur Raspbian. Mais après plu
   * Éditer __/etc/exlinux.conf__ et ajouter iomem=relaxed in the append statement
 
 Voici un exemple de ce que vous devriez avoir :
+
 ```
      label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
     kernel /vmlinuz-5.4.17-200.fc31.armv7hl
@@ -440,49 +446,65 @@ Voici un exemple de ce que vous devriez avoir :
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
-
 ## 8 - Installation sous OpenWRT
 
  1. Installer les paquets opkg nécessaires avec la commande :
+
  ```
  opkg install kmod-usb-serial kmod-usb-serial-cp210x shadow-usermod python3 python3-pip python3-voluptuous python3-cryptodome python3-attrs python3-aiohttp python3-jsonschema domoticz curl
  ```
+
  1. Installer les paquets Python nécessaires avec la commande :
+
  ```
  pip install aiosqlite crccheck pyusb pyserial-asyncio coloredlogs
  ```
+
  1. Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
+
  ```
  cd /etc/domoticz/plugins
  ```
+
  1. Exécuter la commande :
+
  ```
  git clone --recurse-submodules --depth 1 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
  ```
+
  Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins.
 
  1. Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
+
  ```
  cd Domoticz-Zigbee/
  ```
+
  1. DomoticZ est configuré automatiquement pour fonctionner sous l'utilisateur __domoticz__ et dans le groupe __domoticz__. Attribuer les permissions avec la commande :
+
  ```
  sudo chown -R domoticz:domoticz .
  usermod -a -G dialout domoticz
  ```
 
  1. Le temps de la phase de développement, il faut passer sur la nouvelle branche beta6 :
+
  ```
  git checkout beta6
  ```
+
  1. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+
  ```
  sudo chmod +x plugin.py
  ```
+
  1. Redémarrer DomoticZ. La commande est normalement :
+
  ```
  sudo service domoticz.sh restart
  ```
+
  1. Vérifier que le dongle USB est détecté avec les commandes :
 
  ```

@@ -15,6 +15,7 @@ In this first step, there are severals installation methodes depending on your O
 * 8 - [Installation running on OpenWRT](#8---installation-running-on-openwrt)
 
 ------------
+
 ## 1 - Manual Installation running on Linux
 
 ### 1.A - Prerequisite
@@ -28,56 +29,66 @@ In this first step, there are severals installation methodes depending on your O
 Open the terminal
 
 1. Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
-```
+
+``` bash
 cd domoticz/plugins/
 ```
 
 2. Run the command :
-```
+
+``` bash
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
+
 The folder __Domoticz-Zigbee__ will be created in the plugins folder.
 
 3. Go to the __Domoticz-Zigbee__ folder. The command is usually :
-```
+
+``` bash
 cd Domoticz-Zigbee/
 ```
 
 4. Install the needed Python packet with the command :
-```
-sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+
+``` bash
+sudo pip3 install -r requirements.txt
 ```
 
 5. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
-```
+
+``` bash
 sudo chown -R pi:pi .
 ```
 
 6. Run the command :
-```
+
+``` bash
 git config --add submodule.recurse true
 ```
 
 7. Install the missing Python libraries with the command :
-```
+
+``` bash
 git submodule update --init --recursive
 ```
 
 8. Make the __plugin.py__ file executable with the command :
-```
+
+``` bash
 sudo chmod +x plugin.py
 ```
 
 9. Restart DomoticZ. The command is usually :
-```
+
+``` bash
 sudo service domoticz.sh restart
 ```
 
 The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom).
 Move on to [step 2 Plugin settings](Plugin_Seetings.md).
 
-
 ------------
+
 ## 2 - Python Plugin Manager installation running on Linux
 
 __This procedure is not yet updated to be compatible with version 6 of the plugin.__
@@ -85,9 +96,8 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
 * Just search for "Zigbee for domoticz Plugin" entry and add it.
 
-
-
 ------------
+
 ## 3 - Installation running on Synology NAS
 
 __This procedure is not yet updated to be compatible with version 6 of the plugin.__
@@ -103,11 +113,13 @@ The purpose of this document is to help you in the installation of the Zigate pl
 * it is assumed that you have 'root'/'admin' right access with the use of 'sudo' command
 
 Attention:
-  * You need git-server package
-  * Domoticz with python
-  * USB drivers for ZiGate can be found on [jadahl.com](http://www.jadahl.com/drivers_6.2/)
+
+* You need git-server package
+* Domoticz with python
+* USB drivers for ZiGate can be found on [jadahl.com](http://www.jadahl.com/drivers_6.2/)
 
 ### Installation of the Plugin
+
 Start a Putty session and login
 
 Navigate to plugin folder domoticz:
@@ -116,7 +128,7 @@ cd /volume1/@appstore/domoticz/var/plugins
 
 GIT clone Zigbee for Domoticz plugin to new folder Zigbee:
 
-sudo git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee Zigbee
+sudo git clone <https://github.com/zigbeefordomoticz/Domoticz-Zigbee> Zigbee
 
 Stop and start domoticz from package manager.
 
@@ -146,7 +158,6 @@ and add the following line
 
 the best is to add it in the middle of the file, so you don't break the all file syntax
 
-
 ------------
 
 ## 4 - Installation running on Docker
@@ -161,12 +172,14 @@ see [Get Docker](https://docs.docker.com/get-docker/)
 
 Before run the domoticz's docker, you need to get it.
 For this you have two choices :
+
 * build your own docker-domoticz's image
 * get an existing Domoticz's image from docker hub
 
 #### A. Build Your own Docker-Domoticz
 
-In a folder create a file named **dockerfile**, add this line in :
+In a folder create a file named __dockerfile__, add this line in :
+
 ```
 #name of container: docker-domoticz
 #versison of container: 0.1.0
@@ -234,11 +247,13 @@ EXPOSE 8080 9440
 CMD ["/opt/domoticz/domoticz"]
 
 ```
+
 Like in a normal install, you can add new packages with apt-get
 
 for more information about dockerfile see [here](https://docs.docker.com/engine/reference/builder/)
 
 Then you can build your docker's image localy with this command :
+
 ```
 docker build -t docker-domoticz .
 ```
@@ -248,6 +263,7 @@ Now you can run your docker-domoticz's image
 #### B. Get from docker Hub
 
 Go on [docker hub](https://hub.docker.com/) and search for domoticz, when you find an image you want, run :
+
 ```
 docker pull image-name
 ```
@@ -255,12 +271,14 @@ docker pull image-name
 ### 3. Run docker-domoticz's image
 
 To lunch domoticz's image run :
+
 ```
 docker run --privileged -d -p 8080:8080 -p 9440:9440 --name=Domoticz -v <Local path for your scripts>:/scripts -v <Local path for your plugins>:/opt/domoticz/plugins -v <Local path for your floorplans>:/opt/domoticz/www/images/floorplans -v /etc/localtime:/etc/localtime:ro -v <Local path for your domoticz.db>:/opt/domoticz/domoticz.db Your_Image_Name
 ```
 
 If you have script, plugins ... put them in a directory and set the path before running this command
 If you have a pluging who need to broadcast on your network (like xiaomi gateway) you need to add this :
+
 ```
 --network host
 ```
@@ -268,6 +286,7 @@ If you have a pluging who need to broadcast on your network (like xiaomi gateway
 ### 4. Get docker log
 
 to get full log from your docker, run :
+
 ```
 docker logs Domoticz
 ```
@@ -275,6 +294,7 @@ docker logs Domoticz
 ### 5. Connect to your running docker
 
 Run :
+
 ```
 docker exec -it Domoticz bash
 ```
@@ -286,7 +306,6 @@ docker exec -it Domoticz bash
 __This procedure is not yet updated to be compatible with version 6 of the plugin.__
 
 [Refer to french page](../fr-fr/Plugin_Installation.md#5---installation-sous-windows-10)
-
 
 ------------
 
@@ -428,8 +447,8 @@ gpio write 0 1
 
 After flashing the firmware, a sudo reboot will reload defaults from rc.local
 
-
 ------------
+
 ## 7 - PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)
 
 Fedora is my developpement platform, and I was a bit frustrated when the PiZigate came and was only running on Raspbian.
@@ -441,7 +460,7 @@ Platform: RPI3 B+
 
 1. Enable UART
 
-   * Edit file ` /boot/efi/config.txt`
+   * Edit file `/boot/efi/config.txt`
      * Make sure that the following lines are uncommented
        * `enable_uart=1`
        * `dtoverlay = pi3-disable-bt`
@@ -473,14 +492,15 @@ Platform: RPI3 B+
      * Edit /etc/exlinux.conf and add iomem=relaxed in the append statement
 
      Here is an exemple of what you should have
+
      ```
      label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
-	   kernel /vmlinuz-5.4.17-200.fc31.armv7hl
-	   append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
-	   fdtdir /dtb-5.4.17-200.fc31.armv7hl/
-	   initrd /initramfs-5.4.17-200.fc31.armv7hl.img
-     ```
+    kernel /vmlinuz-5.4.17-200.fc31.armv7hl
+    append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
+    fdtdir /dtb-5.4.17-200.fc31.armv7hl/
+    initrd /initramfs-5.4.17-200.fc31.armv7hl.img
 
+     ```
 
    * You can use the pi-zigate-fedora.py tool provided under Tools/Fedora to switch the PiZigate
    to RUN or FLASH mode. For now you must be root when executing this module
@@ -505,12 +525,9 @@ Platform: RPI3 B+
    01 80 10 00 05 8f 00 03 03 1a 00 03
    ```
 
-
  If you reach this step, you can start domoticz and configure the Zigate plugin on the PiZigate
 
-
-
- ## 8 - Installation Running on OpenWRT
+## 8 - Installation Running on OpenWRT
 
  1. OpenWRT provides a number of prebuilt python packages via opkg that must be installed instead of the normal dependencies :
 
