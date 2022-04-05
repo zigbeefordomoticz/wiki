@@ -103,7 +103,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * [Vérifier la perte d'objets (version 1)](../Contrib/CheckLastSeen.dzVents) en DzVents
 * [Vérifier la perte d'objets (version 2)](../Contrib/CheckDeadDevices.lua) en DzVents
 
-[D'autres exemples](../Contrib/)
+[D'autres exemples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
 
 ## Informations
 
