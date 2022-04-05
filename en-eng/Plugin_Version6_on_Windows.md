@@ -2,6 +2,8 @@
 
 ## Assumptions
 
+* [Domoticz Installation](https://www.domoticz.com/wiki/Windows) has been followed
+* [Installing Python for Windows](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 * [Git for Windows](https://gitforwindows.org) is installed, and especially Git Bash
 
 ## How to install the python additional modules
@@ -28,5 +30,7 @@ run: `git submodule update --init --recursive`
 Restart Domoticz.
 
 ## References
+
+* [Plugin Installation on Windows (French)](https://zigbeefordomoticz.github.io/wiki/fr-fr/Plugin_Installation.html#5---installation-sous-windows-10)
 
 * <https://stackoverflow.com/questions/36936212/how-do-i-install-a-pip-package-globally-instead-of-locally>
