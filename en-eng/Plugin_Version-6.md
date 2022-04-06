@@ -33,19 +33,19 @@ Open the terminal.
 
 1. Stop DomoticZ. The command is usually :
 
-```
+``` bash
 sudo service domoticz.sh stop
 ```
 
 2. Go in the plugin directory. The command is usually :
 
-```
+``` bash
 cd domoticz/plugins/Domoticz-Zigate
 ```
 
 3. Run the command :
 
-```
+``` bash
 git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
 ```
 
