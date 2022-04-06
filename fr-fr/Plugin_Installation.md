@@ -37,62 +37,62 @@ Ouvrir le terminal.
 
 1. Aller dans le répertoire DomoticZ puis le répertoire __plugins__. La commande est normalement :
 
-```
-cd domoticz/plugins/
-```
+  ```bash
+  cd domoticz/plugins/
+  ```
 
-2. Exécuter la commande :
+1. Exécuter la commande :
 
-``` bash
-git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
-```
+  ``` bash
+  git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+  ```
 
-Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins.
+  Le répertoire __Domoticz-Zigbee__ sera créé dans le dossier plugins.
 
-3. Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
+1. Aller dans le répertoire __Domoticz-Zigbee__. La commande est normalement :
 
-``` bash
-cd Domoticz-Zigbee/
-```
+  ``` bash
+  cd Domoticz-Zigbee/
+  ```
 
-4. Installer les paquets Python nécessaires avec la commande :
+1. Installer les paquets Python nécessaires avec la commande :
 
-``` bash
-sudo pip3 install -r requirements.txt
-```
+  ``` bash
+  sudo pip3 install -r requirements.txt
+  ```
 
-5. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
+1. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
 
-```
-sudo chown -R pi:pi .
-```
+  ```bash
+  sudo chown -R pi:pi .
+  ```
 
-6. Exécuter la commande :
+1. Exécuter la commande :
 
-```  bash
-git config --add submodule.recurse true
-```
+  ```  bash
+  git config --add submodule.recurse true
+  ```
 
-7. Installer les librairies Python manquantes avec la commande :
+1. Installer les librairies Python manquantes avec la commande :
 
-```
-git submodule update --init --recursive
-```
+  ```bash
+  git submodule update --init --recursive
+  ```
 
-8. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
+1. Rendre le fichier __plugin.py__ exécutable en lançant la commande :
 
-```
-sudo chmod +x plugin.py
-```
+  ```bash
+  sudo chmod +x plugin.py
+  ```
 
-9. Redémarrer DomoticZ. La commande est normalement :
+1. Redémarrer DomoticZ. La commande est normalement :
 
-```
-sudo service domoticz.sh restart
-```
+  ```bash
+  sudo service domoticz.sh restart
+  ```
 
-Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels (tout en bas).
-Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels (tout en bas).
+  Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
 

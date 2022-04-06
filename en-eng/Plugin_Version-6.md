@@ -33,65 +33,65 @@ Open the terminal.
 
 1. Stop DomoticZ. The command is usually :
 
-``` bash
-sudo service domoticz.sh stop
-```
+    ``` bash
+    sudo service domoticz.sh stop
+    ```
 
-2. Go in the plugin directory. The command is usually :
+1. Go in the plugin directory. The command is usually :
 
-``` bash
-cd domoticz/plugins/Domoticz-Zigate
-```
+    ``` bash
+    cd domoticz/plugins/Domoticz-Zigate
+    ```
 
-3. Run the command :
+1. Run the command :
 
-``` bash
-git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
-```
+    ``` bash
+    git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
+    ```
 
-4. Install the necessary Python packages with the command :
+1. Install the necessary Python packages with the command :
 
-go to the plugin folder domoticz/plugins/Domoticz-Zigbee (or Domoticz-Zigate)
+    go to the plugin folder domoticz/plugins/Domoticz-Zigbee (or Domoticz-Zigate)
 
-``` bash
-sudo pip3 install -r requirements.txt
-```
+    ``` bash
+    sudo pip3 install -r requirements.txt
+    ```
 
-5. Execute the command by adapting pi:pi if necessary to the user:group used. Be careful to take the point at the end.
+1. Execute the command by adapting pi:pi if necessary to the user:group used. Be careful to take the point at the end.
 
-``` bash
-sudo chown -R pi:pi .
-```
+    ``` bash
+    sudo chown -R pi:pi .
+    ```
 
-6. Run the command :
+1. Run the command :
 
-``` bash
-git config --add submodule.recurse true
-```
+    ``` bash
+    git config --add submodule.recurse true
+    ```
 
-7. Install the missing Python libraries with the command :
+1. Install the missing Python libraries with the command :
 
-``` bash
-git submodule update --init --recursive
-```
+    ``` bash
+    git submodule update --init --recursive
+    ```
 
-8. Make the __plugin.py__ file executable with the command :
+1. Make the __plugin.py__ file executable with the command :
 
-``` bash
-sudo chmod +x plugin.py
-```
+    ``` bash
+    sudo chmod +x plugin.py
+    ```
 
-9. Restart DomoticZ. The command is usually :
+1. Restart DomoticZ. The command is usually :
 
-``` bash
-sudo service domoticz.sh start
-```
+    ``` bash
+    sudo service domoticz.sh start
+    ```
 
-Normally, the name of the plugin in hardware has become __ZigBee for DomoticZ__.
+    Normally, the name of the plugin in hardware has become __ZigBee for DomoticZ__.
 
-From now on, the term ZiGate is replaced by __coordinateur__, more generic.
+    From now on, the term ZiGate is replaced by __coordinateur__, more generic.
 
-If you already have a plugin configured with a ZiGate as coordinator, you don't have to do anything : the plugin should continue to work normally.
+    If you already have a plugin configured with a ZiGate as coordinator, you don't have to do anything : the plugin should continue to     work normally.
 
 ## Settings
 
