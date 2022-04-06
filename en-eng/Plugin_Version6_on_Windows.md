@@ -10,7 +10,7 @@
 
 You must start a Git Bash windows in with administrator privileges
 
-In order to install modules globally under C:\Program Files\Python310\Lib\site-packages start CMD prompt as administrator and then install modules. But make sure that you didn't install the module before for the user, if that is the case you need to remove them.
+In order to install modules globally under C:\Program Files\Python3xx\Lib\site-packages start CMD prompt as administrator and then install modules. But make sure that you didn't install the module before for the user, if that is the case you need to remove them.
 
 Make sure to be in the pluin home directory ( domoticz/plugins/Domoticz-Zigbee )
 
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Make the Symbolic links correct
 
-a file `symlink.bat` is available on the home directory of the plugin, make sur to execute it with Administrator privileges
+a file `symlink.bat` is available on the home directory of the plugin, make sure to execute it with Administrator privileges
 
 ## Last check
 
