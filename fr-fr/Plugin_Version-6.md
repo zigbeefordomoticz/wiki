@@ -46,6 +46,12 @@ Pensez à sauvegarder :
     git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
     ```
 
+1. Basculer sur la version 6
+
+    ```bash
+    git checkout stable6
+    ```
+    
 1. Installer les paquets Python nécessaires avec la commande :
 
     ``` bash
