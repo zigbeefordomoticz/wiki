@@ -49,6 +49,12 @@ Open the terminal.
     git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
     ```
 
+1. Switch to stable6 or beta6 (as you whish)
+
+    ```bash
+    git checkout stable6
+    ```
+    
 1. Install the necessary Python packages with the command :
 
     go to the plugin folder domoticz/plugins/Domoticz-Zigbee (or Domoticz-Zigate)
