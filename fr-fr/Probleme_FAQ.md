@@ -22,6 +22,7 @@
 * [E1. Erreur : No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored](#e1-erreur--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
 * [E2. Erreur : Decode8000](Q#e2-erreur--decode8000)
 * [E3. Erreur : Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX](#e3-erreur--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
+* [[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter]
 
 
 
@@ -189,3 +190,9 @@ Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) De
 ```
 
 Cela indique que l'objet ```90fd9ffffe31f150``` n'est pas joignable ou que la ZiGate a un problème de communication avec lui.
+
+
+------------
+## E4. Erreur : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
+
+Cette erreur apparaît lors de l'arrêt du plugin. Ne pas en tenir compte.
