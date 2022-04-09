@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+# FAQ - Réponses aux questions fréquentes
 
 * [Q1. Où obtenir de l'aide ?](q1-o%C3%B9-obtenir-de-laide-)
 * [Q2. Où trouver les logs ?](#q2-o%C3%B9-trouver-les-logs-)
