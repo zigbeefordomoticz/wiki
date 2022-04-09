@@ -21,7 +21,7 @@
 * [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
 * [E2. Log error : `Decode8000`](#e2-log-error--decode8000)
 * [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
-* [E4. Error : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`]()
+* [E4. Error : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-error--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 
 
 
