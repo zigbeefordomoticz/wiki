@@ -73,6 +73,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 
 ## Que faire si un objet ne fonctionne pas correctement ?
 
+* [Regarder notre FAQ](Probleme_FAQ.md)
 * [Problèmes d'appairage](Probleme_Appairage.md)
 * [Aide au débogage](Probleme_Aide-Debogage.md)
 
@@ -92,7 +93,8 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 ## En cas de problèmes
 
 1. Vérifiez les logs de DomoticZ, ils contiennent de nombreuses informations utiles à la compréhension du(es) dysfonctionnement(s).
-2. Venez en discuter sur les forums :
+1. [Regarder notre FAQ](Probleme_FAQ.md)
+1. Venez en discuter sur les forums :
 
    * Le forum français : [https://easydomoticz.com/forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * Le forum anglais : [https://www.domoticz.com/forum](https://www.domoticz.com/forum/viewforum.php?f=68)
