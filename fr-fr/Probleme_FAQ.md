@@ -22,7 +22,7 @@
 * [E1. Erreur : No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored](#e1-erreur--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
 * [E2. Erreur : Decode8000](Q#e2-erreur--decode8000)
 * [E3. Erreur : Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX](#e3-erreur--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
-* [[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter]
+* [[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter](#e4-erreur--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 
 
 
@@ -151,14 +151,14 @@ Merci de consulter la page [Problèmes d'appairage](Probleme_Appairage.md)
 ------------
 ## E1. Erreur : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
 
-De temps en temps, il y a le message d'erreur suivant. Est-ce un gros problème ? Comment puis-je m'en débarrasser ?
+De temps en temps, il y a le message d'erreur suivant. Est-ce un gros problème ?
 
 ```log
 Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
 ```
 
 Cette erreur provient de DomoticZ et est liée au fait que vous aviez la page WebUI ouverte depuis un moment et lorsque vous essayez d'actualiser cette page, DomoticZ a détecté qu'il n'y avait plus de communication.
-Vous ne devriez pas vous inquiéter de ce message.
+Ne pas s'inquiéter de ce message.
 
 
 ------------
@@ -194,5 +194,9 @@ Cela indique que l'objet ```90fd9ffffe31f150``` n'est pas joignable ou que la Zi
 
 ------------
 ## E4. Erreur : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
+
+```log
+2022-04-09 07:27:25.699 Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
+```
 
 Cette erreur apparaît lors de l'arrêt du plugin. Ne pas en tenir compte.
