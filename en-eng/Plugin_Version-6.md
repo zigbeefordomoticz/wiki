@@ -49,7 +49,13 @@ Open the terminal.
     git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
     ```
 
-1. Switch to stable6 or beta6 (as you whish)
+1. If not done yet do update the repository
+
+    ```bash
+    git pull
+    ```
+
+3. Switch to stable6 or beta6 (as you whish)
 
     ```bash
     git checkout stable6
