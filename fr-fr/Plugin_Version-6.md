@@ -46,7 +46,14 @@ Pensez à sauvegarder :
     git remote set-url origin https://github.com/zigbeefordomoticz/Domoticz-Zigbee
     ```
 
-1. Basculer sur la version 6
+1. si cela n'a pas déjà été fait au début
+
+
+    ```bash
+    git pull
+    ```
+    
+3. Basculer sur la version 6
 
     ```bash
     git checkout stable6
