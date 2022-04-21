@@ -1,6 +1,6 @@
 # FAQ - Réponses aux questions fréquentes
 
-* [Q1. Où obtenir de l'aide ?](q1-o%C3%B9-obtenir-de-laide-)
+* [Q1. Où obtenir de l'aide ?](#q1-o%C3%B9-obtenir-de-laide-)
 * [Q2. Où trouver les logs ?](#q2-o%C3%B9-trouver-les-logs-)
 * [Q3. Comment faire du débogage ?](#q3-comment-faire-du-d%C3%A9bogage-)
 * [Q4. Où trouver la liste des coordinateurs et des objets supportés ?](q4-o%C3%B9-trouver-la-liste-des-coordinateurs-et-des-objets-support%C3%A9s-)
