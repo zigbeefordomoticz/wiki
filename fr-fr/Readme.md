@@ -5,8 +5,7 @@
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 
->Techniquement, nous avons ouvert le plugin à d'autres coordinateurs.
->Maintenant, nous souhaitons ouvrir le plugin à un maximum d'utilisateurs et, pour cela, nous recherchons des personnes pouvant nous aider à traduire le WebUI.
+>Techniquement, nous avons ouvert le plugin à d'autres coordinateurs. Maintenant, nous souhaitons ouvrir le plugin à un maximum d'utilisateurs et, pour cela, nous recherchons des personnes pouvant nous aider à traduire le WebUI.
 >
 >Aujourd'hui, l'interface web du plugin est disponible en Français, Anglais, Allemand et Espagnol. Si vous parlez d'autres langues, contribuez vous aussi à la diffusion de ce plugin dans le monde entier.
 >

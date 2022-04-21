@@ -6,6 +6,12 @@
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.
 [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
+>Technically, we opened the plugin to other coordinators. Now, we want to open the plugin to as many users as possible and, for this, we are looking for people who can help us translate the WebUI.
+>
+>Today, the plugin's web interface is available in English, French, German and Spanish. If you speak other languages, you too can contribute to the distribution of this plugin worldwide.
+>
+> Come and join our team on [Keybase](https://keybase.io/team/zigateforum) or the [forum](https://www.domoticz.com/forum/viewforum.php?f=68) : the translation is done in an Excel file, there is nothing complicated ;-)
+
 
 ## Migrating to stable6
 
