@@ -7,7 +7,8 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 > Nous recherchons des personnes pour nous aider à traduire le WebUI du plugin dans d'autres langues. A ce jour, il est en Français, Anglais, Allemand et Espagnol. Il y a un tout petit plus de 400 lignes à traduire dans un fichier Excel.
 >
-> Merci de nous contacter via les forums ou sur Keybase directement.
+> Merci de nous contacter via le [forum ](https://easydomoticz.com/forum/viewforum.php?f=28) ou sur [Keybase](https://keybase.io/team/zigate)
+ directement.
 
 ## Migration vers stable6
 
