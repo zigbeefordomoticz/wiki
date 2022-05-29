@@ -1,6 +1,6 @@
 ## Plugin Update
 
-__ATTENTION:__ We assume here that you are already on Version 6. Otherwise please upgrade first to [version 6](Plugin_Update.md#plugin-update)
+__ATTENTION:__ We assume here that you are already on Version 6. Otherwise please upgrade first to [version 6](Plugin_Version-6.md)
 
 
 The plugin is regularly updated. For bug fixing or enhancement. In order to keep the plugin up to date
