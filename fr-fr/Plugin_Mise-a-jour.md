@@ -7,6 +7,8 @@ Le Plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 ### Procédure
 
+__ATTENTION:__ si vous n'etes pas encore en Version 6, merci de suivre cette procédure de  mise à jour vers la [version 6](Plugin_Version-6.md)
+
 * Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
 * Lancer la commande `git submodule update --init --recursive`
