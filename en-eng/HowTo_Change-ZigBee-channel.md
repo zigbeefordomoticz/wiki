@@ -9,7 +9,7 @@ However you might want to fix the Channel, because some devices would required a
 * Livolo requires channel 26
 * Legrand requires channel 11
 
-## Method 1, live channel change
+## Method 1, live channel change ( ZiGate, TI CCxxxx, SiliconLabs)
 
 In this approach __the most appropriate one__ you will change the coordinator channel, and at the same time you will inform all routers of the channel change. This should allow to have your all network equipments moving to this new channel.
 That is a ZigBee 3.0 feature, and that is quiet important for End Devices (battery based), as they won't be notified of such change. If they are ZB 3.0 compliant the next time they wake up they should detect the new channel and change. If that is not happening you'll have to re-pair them.
@@ -20,7 +20,7 @@ That is a ZigBee 3.0 feature, and that is quiet important for End Devices (batte
 
 ![HowTo Change ZigBee Channel](Images/EN_Channel_change.png)
 
-## Method 2, via channel setting
+## Method 2, via channel setting ( ZiGate only)
 
 __That is valid for ZiGate Coordinator only__ If you have a Texas Instrument, Silicon Labs you need to use the first method
 
