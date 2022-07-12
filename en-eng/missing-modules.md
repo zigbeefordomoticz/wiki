@@ -32,3 +32,6 @@ git submodule update --init --recursive
 ```
 sudo pip3 install -r requirements.txt
 ```
+
+ATTENTION:
+* On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first tipme. If you have run once already without Administrator windows, you must start removing all already installed modules.
