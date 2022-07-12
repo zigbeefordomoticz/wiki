@@ -1,6 +1,6 @@
 # Installation du plugin ZigBeeForDomoticZ
 
-Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 3.87 ou supérieure et Python version 3.5 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
+Quelque soit la méthode d'installation, le plugin nécessite DomoticZ version 2021.1 ou supérieure et Python version 3.8 ou supérieur. Assurez-vous que le paquet __python3-dev__ est installé. Plus d'informations sur la page [DomoticZ Python plugin](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 Pour cette première étape, il existe différentes méthodes d'installation selon votre système d'exploitation :
 
@@ -28,7 +28,7 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 ### 1.A - Prérequis
 
 * DomoticZ version supérieur ou égal à 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version supérieur ou égal à 3.7 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Python version supérieur ou égal à 3.8 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le paquet Git doit être installé (voir [Installation de Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git))
 
 ### 1.B - Procédure
@@ -105,7 +105,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 ### 2.A - Prérequis
 
 * DomoticZ version supérieur à 2020.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version supérieur à 3.5 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Python version supérieur à 3.8 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le plugin Python Plugin Manager doit être installé (voir [pp-manager](https://github.com/ycahome/pp-manager))
 
 ### 2.B - Procédure
