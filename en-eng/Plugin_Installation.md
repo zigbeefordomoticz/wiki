@@ -1,6 +1,6 @@
 # ZigBeeForDomoticZ plugin installation
 
-In every installation methodes, the plugin requires DomoticZ version 3.87xx or greater and Python version 3.5 or higher.
+In every installation methodes, the plugin requires DomoticZ version 2021.1 or greater and Python version 3.8 or higher.
 Make sure that you have __python3-dev package__ installed. More informations on [DomoticZ Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
 
 In this first step, there are severals installation methodes depending on your Operating System :
