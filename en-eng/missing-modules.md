@@ -30,5 +30,5 @@ git submodule update --init --recursive
 
 
 ```
-sudo pip3 install voluptuous pycrypto aiosqlite crccheck pyusb attrs aiohttp pyserial-asyncio
+sudo pip3 install -r requirements.txt
 ```
