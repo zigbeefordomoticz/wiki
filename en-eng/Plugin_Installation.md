@@ -21,7 +21,7 @@ In this first step, there are severals installation methodes depending on your O
 ### 1.A - Prerequisite
 
 * DomoticZ version aabove 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version above 3.7 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Python version above 3.8 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Git packet installated
 
 ### 1.B - Procedure
