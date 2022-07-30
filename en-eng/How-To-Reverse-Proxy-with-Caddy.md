@@ -84,7 +84,11 @@ if your domain name is my-domain.com
      }
      ```
 	
+## 4- Firwall setup
 	
+   make sure that
+	* port 80 is open (it will be used by Caddy at startup to configure a Let's Encrypt certificate)
+	* port 443 is open (it will be used to get access to your domoticz and web admin pages)
 
 ## References & Links
 	
