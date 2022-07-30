@@ -25,6 +25,11 @@ if your domain name is my-domain.com
 
 ## 3- Caddy setup
 
+   We assumed, if in your configuration this is somehow different, please replace by your values
+   
+   domoticz is accessible on port 8080 and nothing else. The SSL support will be provided by Caddy
+   the zigbee4domoticz web admin is accessible on port 9440.
+
 1. go to the '/etc/caddy' folder and check if you have a folder 'Caddyfile.d' or 'conf.d'. If that is the case skip 2. and go directly to 3.
 2. edit the file Caddyfile and the line
    ```
@@ -78,3 +83,11 @@ if your domain name is my-domain.com
           }
      }
      ```
+	
+	
+
+## References & Links
+	
+   * [Caddy documentation](https://caddyserver.com/docs/)
+   * [Caddy basic Authentication](https://caddyserver.com/docs/caddyfile/directives/basicauth)
+
