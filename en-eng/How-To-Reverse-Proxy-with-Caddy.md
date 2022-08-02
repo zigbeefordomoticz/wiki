@@ -59,29 +59,19 @@ if your domain name is my-domain.com
     header_down Strict-Transport-Security max-age=31536000
    }
 
+	
    domoticz.my-domain.net:443 {
-        encode gzip
-	      reverse_proxy localhost:8080 {
-		         import reverseproxyheaders
-	      }
+   	# Reverse Plugin Zigbee for Domoticz
+    	reverse_proxy /zigate*   127.0.0.1:9440
+    	reverse_proxy /rest-z4d* 127.0.0.1:9440
 
-        log {
-             output file /var/log/caddy/domoticz.log
-        }
+    	# Reverse Domoticz
+    	reverse_proxy 127.0.0.1:8080
+
+    	log {
+        	output file /var/log/caddy/domoticz.log
+    	}
     }
-
-    zigbee-admin.my-domain.com:443 {
-	        reverse_proxy localhost:9440 {
-		           import reverseproxyheaders
-	        }
-
-	        basicauth / {
-		           administrator JDJhJDE0JEdHY0Y5ZW1nTnlMU0RzNFNIOFNObnVobXN3SVBHUkdCam1JWWV2c2hXcFZSd3AwZ2JWOHdl
-	        }
-          log {
-                output file /var/log/caddy/domoticz-admin.log
-          }
-     }
      ```
 	
 ## 4- Firwall setup
