@@ -112,7 +112,7 @@ server {
         }
 
         location /rest-zigate {
-            proxy_pass http://127.0.0.1:9440/rest-zigate;
+            proxy_pass http://127.0.0.1:9440/rest-z4d;
         }
 }
 ```
