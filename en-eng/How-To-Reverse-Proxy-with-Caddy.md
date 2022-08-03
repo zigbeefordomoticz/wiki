@@ -3,7 +3,7 @@
 ## Overview
 
 The purpose is to use [Caddy](https://caddyserver.com/docs/) and setup a reverse proxy to allow access to Domoticz and the plugin Web Admin
-
+The Domoticz interface will be accessible via `domoticz.my-domain.com` while the plugin WebAdmin will be via `domoticz.my-domain.com/zigate`
 ## Assumpion
 
 You have a domain name where you can register 2 names ( CNAME or A record) to point one to domoticz and one to plugin webadmin
@@ -21,7 +21,7 @@ For exemple:
 if your domain name is my-domain.com
 
 * domoticz.my-domain.com
-* zigbee-admin.my-domain.com
+
 
 ## 3- Caddy setup
 
