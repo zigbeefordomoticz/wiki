@@ -96,6 +96,24 @@ if your domain name is my-domain.com
 	* port 80 is open (it will be used by Caddy at startup to configure a Let's Encrypt certificate)
 	* port 443 is open (it will be used to get access to your domoticz and web admin pages)
 
+## 5- Domoticz Custom Menu
+	
+   Finally you need to create a specific Custom Menu if you want to access the WebUI plugin via the Domoticz Custom menu as the default one "Zigbee" won't work when reaching through the reverse-proxy
+
+   We suggest to create a file under "www/template" on the Domoticz environement with the following content. Of course you need to update `domoticz.my-domain.com`by your specific domain name
+	
+   ```
+   cat > "Zigbee(from External)".html
+   <iframe id="Zigbee"style="width:100%;height:800px;overflow:scroll;">
+   </iframe>
+
+   <script>
+   document.getElementById('Zigbee').src = "https://domoticz.my-domain.com/z4d/";
+   </script>
+   ```
+	
+	
+	
 ## References & Links
 	
    * [Caddy documentation](https://caddyserver.com/docs/)
