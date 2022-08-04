@@ -116,6 +116,24 @@ server {
         }
 }
 ```
+
+ATTENTION pour les utilisateurs d'une version du plugin supérieur à stable6.1.6 ou beta6.2.117 il faut remplacer
+
+       ```
+       location / {
+            root   /home/pi/domoticz/plugins/Domoticz-Zigate/www;
+            index  index.html index.htm;
+        }
+        ```
+        
+par
+       ```
+       location /z4d {
+            root   /home/pi/domoticz/plugins/Domoticz-Zigate/www;
+            index  index.html index.htm;
+        }
+        ```
+        
 Dans le cas d'une configuration manuelle,
 
    * Modifier le nom du serveur (server_name)
