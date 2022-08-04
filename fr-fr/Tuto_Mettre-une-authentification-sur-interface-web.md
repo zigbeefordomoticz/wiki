@@ -124,8 +124,10 @@ ATTENTION pour les utilisateurs d'une version du plugin supérieur à stable6.1.
             root   /home/pi/domoticz/plugins/Domoticz-Zigate/www;
             index  index.html index.htm;
         }
-        ```     
+        ```   
+        
 par
+        
         ```
         location /z4d {
             root   /home/pi/domoticz/plugins/Domoticz-Zigate/www;
