@@ -54,24 +54,40 @@ if your domain name is my-domain.com
 5. create the Caddy file for the 2 records
 
    ```
-   (reverseproxyheaders) {
-    header_up X-Real-IP {remote}
-    header_down Strict-Transport-Security max-age=31536000
-   }
+(reverseproxyheaders) {
+    header_up X-Real-IP 127.0.0.1
+    header_up X-Forwarded-Port 9440
+    header_up X-Forwarded-Proto http
+}
 
-	
-   domoticz.my-domain.net:443 {
-   	# Reverse Plugin Zigbee for Domoticz
-    	reverse_proxy /zigate*   127.0.0.1:9440
-    	reverse_proxy /rest-z4d* 127.0.0.1:9440
-
-    	# Reverse Domoticz
-    	reverse_proxy 127.0.0.1:8080
-
-    	log {
-        	output file /var/log/caddy/domoticz.log
-    	}
+domoticz.my-domain.com:443 {
+    encode gzip
+    basicauth / {
+        support JDJhJDE0JFpWUEU0b1FlV0RiUDJrb24ybGp6cy43NGszWnFSY0FOUXZTcmk5ZzE1MWhDQnplUnFLdmNH
     }
+    handle /z4d* {
+        reverse_proxy 127.0.0.1:9440 {
+            import reverseproxyheaders
+        }
+    }
+    handle /rest-z4d* {
+        reverse_proxy 127.0.0.1:9440 {
+            import reverseproxyheaders
+        }
+    }
+
+    handle /*/Custom* {
+        reverse_proxy 10.0.0.22:8080
+    }
+    handle /* {
+        reverse_proxy 10.0.0.22:8080
+    }
+
+    log {
+        output file /var/log/caddy/domoticz.log
+    }
+
+}	
      ```
 	
 ## 4- Firwall setup
