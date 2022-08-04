@@ -100,7 +100,7 @@ if your domain name is my-domain.com
 	
    Finally you need to create a specific Custom Menu if you want to access the WebUI plugin via the Domoticz Custom menu as the default one "Zigbee" won't work when reaching through the reverse-proxy
 
-   We suggest to create a file under "www/template" on the Domoticz environement with the following content. Of course you need to update `domoticz.my-domain.com`by your specific domain name
+   We have to create a file under `domoticz/www/template` on the Domoticz environement with the following content. Of course you need to update `domoticz.my-domain.com`by your specific domain name
 	
    ```
    cat > "Zigbee(from External)".html
