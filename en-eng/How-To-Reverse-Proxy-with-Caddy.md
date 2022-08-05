@@ -6,7 +6,8 @@ The purpose is to use [Caddy](https://caddyserver.com/docs/) and setup a reverse
 The Domoticz interface will be accessible via `domoticz.my-domain.com` while the plugin WebAdmin will be via `domoticz.my-domain.com/zigate`
 ## Assumpion
 
-You have a domain name where you can register 2 names ( CNAME or A record) to point one to domoticz and one to plugin webadmin
+You have a domain name where you can register 1 name ( CNAME or A record) to point one to domoticz and one to plugin webadmin
+You'll have only port 443 open on your firwall ( Internet box)
 
 ## 1- Install Caddy
 
@@ -14,7 +15,7 @@ There are plenty of how-to , but I would recommend the [Caddy Documentation](htt
 
 ## 2- DNS setup
 
-You'll need to setup 2 records ( CNAME or A ).
+You'll need to setup 1 records ( CNAME or A ).
 
 For exemple:
 
@@ -31,7 +32,8 @@ if your domain name is my-domain.com
    the zigbee4domoticz web admin is accessible on port 9440.
 
 1. go to the '/etc/caddy' folder and check if you have a folder 'Caddyfile.d' or 'conf.d'. If that is the case skip 2. and go directly to 3.
-2. edit the file Caddyfile and the line
+
+3. edit the file Caddyfile and the line
    ```
    import Caddyfile.d/*.caddyfile
    ```
