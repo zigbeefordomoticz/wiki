@@ -62,3 +62,5 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | eTRVExerciseDay | 0-6: (Sun-Sat) The day to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
 | eTRVExerciseTime | Minutes after midnight to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
 | vibrationAqarasensitivity | set the Aqara vibration sensibility level low, medium are high are the correct values |
+| resetMotiondelay | when it is not possible to configure the OnOffdelay for device like Aqara motion, you can overwrite the 30 seconds delay with that | Aqara, and other motion devices |
+| resetSwitchSelectorPushButton | When you have a switch Selector, you might want to have it coming back to the Off position after a while. This is tru when your Switch selector works as a push buttons | Scene controler | 
