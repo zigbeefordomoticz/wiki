@@ -198,6 +198,7 @@ Un conseil : installer tous les logiciels en mode Administrateur ! (Clic droit d
 
 #### 5.2.A - Installation de DomoticZ
 
+
 Le premier conseil est d’installer DomoticZ (version stable par exemple) dans un répertoire autre que le classique Programmes (x86) par défaut. Sinon, il faudra jouer avec les droits utilisateurs. Si tel est le cas, pour modifier les droits, ouvrez l’explorateur Windows, faire clic-droit sur le disque C :, puis propriétés, onglet sécurité :
 
 ![Win10 Installation](../Images/Win10Pic1png.png)
@@ -207,9 +208,12 @@ Attention, DomoticZ et ZiGate ont besoin d’écrire des fichiers dans des sous 
 ![Win10 Installation](../Images/Win10Pic2.png)
 
 Même en attribuant le maximum de droits autorisés (administrateur, utilisateur avec droits en écriture ...), il m’est arrivé d’obtenir ce message (peut être un oubli…).
-Pour éviter tout problème, j’ai finalement choisi d’installer DomoticZ directement à la racine sous C:\Domoticz et depuis aucun problème.
+Pour éviter tout problème, j’ai finalement choisi d’installer DomoticZ directement à la racine sous C:\Domoticz et depuis aucun problème. D'autres utilisateurs n'ont pas eu de problèmes en mettant DomoticZ dans le dossier C:\Program files (x86).
 
-#### 5.2.B - Installation de la ZiGate
+
+#### 5.2.B - Installation des coordinateurs la ZiGate
+
+##### 5.2.B.1 - La ZiGate
 
 Il est recommandé d’installer la ZiGate selon les instructions disponibles sur le site officiel : <https://zigate.fr/documentation/tester-la-zigate-usb>
 
@@ -221,6 +225,11 @@ Vous pouvez également utiliser un client Git pour Windows (voir 3.2 ci après)
 L’application se situe dans un sous répertoire Tools et se nomme ZGWUI.exe
 
 Vérifier que la ZiGate est correctement installée et fonctionnelle en effectuant les tests mentionnés sur le site de ZiGate
+
+##### 5.2.B.2 - La clé Sonoff
+
+Aucune manipulation à effectuer, elle est directement reconnue par Windows et affectée à un port COM.
+
 
 #### 5.2.C - Logiciels additionnels
 
@@ -236,7 +245,7 @@ Si la version est compatible avec DomoticZ, un message de statut dans l’onglet
 
 ![Win10 Installation](../Images/Win10Pic3.png)
 
-Autrement, un message du type Python Failed apparaîtra
+Autrement, un message du type Python Failed apparaîtra.
 
 Pour avoir testé plusieurs versions avec échec et succès, j’ai finalement opté pour conserver la version 3.5.2 (mentionnée dans le wiki DomoticZ)  qui a fonctionné correctement et j’ai supprimé toutes les autres .
 
@@ -244,34 +253,62 @@ Il est possible cependant d’installer et de conserver plusieurs versions de py
 
 Gérer plusieurs version python avec py sous Windows n’est pas forcément simple mais des explications sont disponibles à la fin du Wiki consacré à Python et DomoticZ [Using Python plugins in DomoticZ](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 
-Il est fort possible que la librairie libpython utile à DomoticZ ne soit pas installée (vérifiez si un fichier du type libpython3.x existe dans le sous répertoire « libs » de python). S’il n’existe pas, effectuez la même opération avec la commande :  `py -m pip install libpython3.5`
-Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install libpython3.5
+Il est fort possible que la librairie libpython utile à DomoticZ ne soit pas installée (vérifiez si un fichier du type libpython3.x existe dans le sous répertoire « libs » de python). S’il n’existe pas, effectuez la même opération avec la commande :  `py -m pip install libpython3.8`
+Cela donne donc : C:\Program Files (x86)\Python35-32>py -m pip install libpython3.8
 
 En fonction de la version x de Python installée, vous devez installer libpython3.x
-Attendre que l’installation du package soit terminé (vous devez être connecté à Internet)
+Attendre que l’installation du package soit terminé (vous devez être connecté à Internet).
 
 ##### 5.2.C.2 - Git pour Windows
 
-De nombreux packages de plugin sont disponibles sur GitHub pour DomoticZ. C’est le cas notamment pour la ZiGate.
+De nombreux packages de plugin sont disponibles sur GitHub pour DomoticZ. C’est le cas notamment pour pour les clefs Zigbee.
 
 Sous Windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : <https://gitforwindows.org/>
 
+
 #### 5.2.D. - Installation du plugin ZiGate
 
-La dernière étape consiste à installer le plugin de Pipiche pour gérer la ZiGate dans DomoticZ.
+La dernière étape consiste à installer le plugin ZigBeeForDomoticZ pour gérer les coordinateurs ZigBee dans DomoticZ.
 
-Cependant, le répertoire ou sont installés les plugins n’existe pas lors de l’installation de DomoticZ. Il faut donc le créer manuellement.
+* Ouvrir une session avec le compte Administrateur
+* Arrêter le service DomoticZ
+* Ouvrir l’explorateur Windows et aller dans le sous-répertoire plugins de DomoticZ (par exemple C:\Program Files (x86)\Domoticz\plugins)
+* Supprimer entièrement le répertoire Domoticz-Zigbee s'il est présent
+* Depuis le répertoire plugins, ouvrir une fenêtre de commande en mode Administrateur
+* Copier les données du plugin avec la commande :
 
-Pour cela, ouvrez l’explorateur Windows et allez dans le répertoire où est installé DomoticZ (pour mon cas,  C:\DomoticZ)
-Clic droit sur DomoticZ, puis Nouveau Dossier que vous nommerez plugins
-En exécutant une invite de commande CMD en mode administrateur, positionnez vous dans le répertoire plugins puis taper la ligne d’instruction : `git clone https://github.com/pipiche38/Domoticz-Zigate.git`
+  ``` bash
+  git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+  ```
+* Se positionner dans le répertoire du plugin
+  ``` bash
+  cd Domoticz-Zigbee
+  ```
+* Exécuter  
+  ``` bash
+  git config --add submodule.recurse true
+  ```
+* Exécuter
+  ``` bash
+  git submodule update --init --recursive
+  ```
+* Exécuter
+  ``` bash
+  pip3 install -r requirements.txt
+  ```
+* Exécuter
+  ``` bash
+  symlink.bat
+  ```
+* Redémarrer le service DomoticZ.
 
-L’arborescence de la ZiGate est installée :
+L’arborescence du plugin est installée:
 
 ![Win10 Installation](../Images/Win10Pic4.png)
 
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels.
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
+
 
 ### 5.3 - Un PC Windows comme box domotique
 
