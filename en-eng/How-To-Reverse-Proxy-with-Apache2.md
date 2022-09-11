@@ -24,7 +24,7 @@ But u will have to import this certificate in windows, linux, mac, android, ios 
 ### create configuration file for domoticz certificate :
 
   ```
-    sudo cp /etc/ssl/openssl.cnf domoticz.cnf
+    sudo cp /etc/ssl/openssl.cnf /etc/ssl/domoticz.cnf
     sudo nano /etc/ssl/domoticz.cnf
   ```
 
@@ -105,9 +105,9 @@ sudo htpasswd -c /etc/apache2/.htpasswd USER_TO_CHANGE
 ### configure virtual host
 
 ```
-sudo cp /etc/apache2/sites-available/default-ssl.conf domoticz.conf
-sudo mv /etc/apache2/sites-available/default-ssl.conf default-ssl.conf.old
-sudo mv /etc/apache2/sites-available/000-default.conf 000-default.conf.old
+sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/domoticz.conf
+sudo mv /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.old
+sudo mv /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.old
 sudo nano /etc/apache2/sites-available/domoticz.conf
 ```
 change
