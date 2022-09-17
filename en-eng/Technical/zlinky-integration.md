@@ -10,15 +10,15 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 * 
 | Linky mode | Status | Coordinator | Comments |
 | ---------- | ------ | ----------- | -------- |
-| Historique Mono base | OK         | @deufo   |
-| Historique Mono HCHP | WIP        | @krakoukas |
+| Historique Mono base | OK         | @deufo (Electrolama zzh)  |
+| Historique Mono HCHP | WIP        | @krakoukas (ZiGate V2) |
 | Historique Mono EJP |             |            |
 | Historique Mono Tempo |           |            |
 | Historique Tri base |             |            |
 | Historique Tri HCHP |             |            |
 | Historique Tri EJP |              |            |
 | Historique Tri Tempo | WIP        | @jp_keros  |
-| Standard Mono base | Ok           | @pipiche   |
+| Standard Mono base | Ok           | @pipiche (Elelabs shield)  |
 | Standard Mono HCHP |              |            |
 | Standard Mono EJP |               |            |
 | Standard Mono Tempo |             |            |
