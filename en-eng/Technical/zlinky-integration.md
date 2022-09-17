@@ -4,6 +4,28 @@
 
 Purpose is to describe the integration of the ZLinky_TIC module in the plugin and Domoticz
 
+## Integration status
+
+* Minimum ZLinky version is V5 while for Standard mode, it is required to get an extended Configurable Table size, so v6 is adviced
+| Linky mode | Status | Coordinator | Comments |
+| ---------- | ------ | ----------- | -------- |
+| Historique Mono base | OK         | @deufo   |
+| Historique Mono HCHP | WIP        | @krakoukas |
+| Historique Mono EJP |             |            |
+| Historique Mono Tempo |           |            |
+| Historique Tri base |             |            |
+| Historique Tri HCHP |             |            |
+| Historique Tri EJP |              |            |
+| Historique Tri Tempo | WIP        | @jp_keros  |
+| Standard Mono base | Ok           | @pipiche   |
+| Standard Mono HCHP |              |            |
+| Standard Mono EJP |               |            |
+| Standard Mono Tempo |             |            |
+| Standard Tri base |               |            |
+| Standard Tri HCHP |               |            |
+| Standard Tri EJP |                |            |
+| Standard Tri Tempo |              |            |
+
 ## Domoticz Widgets after ZLinky pairing
 
 ![ZLinky Widgets on Domoticz](../Images/ZLinky-Widgets.png)
@@ -23,7 +45,7 @@ In case you have a tri-phase
 ### Description of each Widget
 
 1. `_Power 01`: report the apparent power. ATTENTION, this is is not real power in W, but only AV.
-1. `_Meter 01`: report apparent power and meter it, so you can get the accumulated power a long the day. ATTENTION, this is is not real power in W, but only AV
+1. `_Meter 01`: report apparent power and meter it, so you can get the accumulated power a long the day. ATTENTION, this is is not real power in W, but only AV. This widget as been discontinued as it is not possible to manage several Indexes.
 1. `_Ampere3 01`: report the current. If you have a tri-phases setup, all phase/line will be reported into this one, allowing you to see if this is well balanced.
 1. `_P1Meter_ZL 01`: report the power consumption, and manage peak and off-peak power (for Base, EJP contract; for Tempo it will report Blue days consumption)
 1. `_P1Meter_ZL f2`: report power consumption, manage peak and off-peak power of TEMPO contract. White day.
