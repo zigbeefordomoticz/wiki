@@ -7,6 +7,7 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 ## Integration status
 
 * Minimum ZLinky version is V5 while for Standard mode, it is required to get an extended Configurable Table size, so v6 is adviced
+* 
 | Linky mode | Status | Coordinator | Comments |
 | ---------- | ------ | ----------- | -------- |
 | Historique Mono base | OK         | @deufo   |
