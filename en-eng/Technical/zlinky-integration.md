@@ -99,6 +99,31 @@ This attributes are store if received , and can be check via the Tools
 |HHPHC       |0xFF66 | 0x0002  |RO    | Uint8    |-      | Horaire Heure Pleines Heures Creuses | 0               |
 |PPOT        |0xFF66 | 0x0003  |RO    | Uint8    |-      | Présence des potentiels              | 0               |
 
+
+## Automatic reporting and configuration
+
+Zigbee allows to configure the device to report automatically attributes either on value change or after a period of Time.
+For those who have a TI or SiliconLabs or deConz based coordinator, you can edit the reporting setting.
+Please be aware that the ZLinky firwmare is putting some constraint and not all of the attribute can be automatically reported.
+
+
+All Indexes ( Base, HCHP, EJP, BBRx ) are configured with the following setting
+
+| Setting | Value | Description |
+| ------- | ----- | ----------- |
+| Min | 0x000e ( 15 )  | Cannot be often than every 15 secondes |
+| Max | 0x0e10 ( 3600) | Cannot be less than every hours |
+| Change | 0x1 | as soon as there is 1 more Wh to the index it should be reported (depending on the MIN) |
+
+Instant Power ( or Puissance Apparente ) is configured as follow:
+
+| Setting | Value | Description |
+| ------- | ----- | ----------- |
+| Min | 0x000e ( 15 )  | Cannot be often than every 15 secondes |
+| Max | 0x0e10 ( 3600) | Cannot be less than every hours |
+| Change | 0x1 | as soon as there is 1 Ampere change it should be reported (depending on the MIN) |
+
+
 ## References
 
 * <http://www.enedis.fr/sites/default/files/Enedis-NOI-CPT_54E.pdf>
