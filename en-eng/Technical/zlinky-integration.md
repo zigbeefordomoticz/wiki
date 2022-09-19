@@ -124,6 +124,19 @@ Instant Power ( or Puissance Apparente ) is configured as follow:
 | Change | 0x1 | as soon as there is 1 Ampere change it should be reported (depending on the MIN) |
 
 
+## Polling mecanism
+
+Because ZLinky doesn't provide Configure Reporting capabilities for all attributes, we have put in place a polling mecanism with the following parameters
+
+| Parameter | Default Value | Description |
+| --------- | ------------- | ----------- |
+|
+| PollingCusterff66 | 86400 | Will read all ZLinky manufacturer relevant attributes |
+| ZLinkyPollingGlobal | 86400 | Will read all ZLinky attributes on cluster  0x0702, 0x0b01, 0x0b04 | 
+| ZLinkyPollingPTEC | 900 | Every 900s ( 15 minutes) we retreive the Current Tarif. This will allow to get if we are in HC, HP ... |
+| ZLinkyIndexes | "12:30" | Will retreive the PTEC information at a specific time here 12:30 |
+                
+                
 ## References
 
 * <http://www.enedis.fr/sites/default/files/Enedis-NOI-CPT_54E.pdf>
