@@ -130,7 +130,6 @@ Because ZLinky doesn't provide Configure Reporting capabilities for all attribut
 
 | Parameter | Default Value | Description |
 | --------- | ------------- | ----------- |
-|
 | PollingCusterff66 | 86400 | Will read all ZLinky manufacturer relevant attributes |
 | ZLinkyPollingGlobal | 86400 | Will read all ZLinky attributes on cluster  0x0702, 0x0b01, 0x0b04 | 
 | ZLinkyPollingPTEC | 900 | Every 900s ( 15 minutes) we retreive the Current Tarif. This will allow to get if we are in HC, HP ... |
