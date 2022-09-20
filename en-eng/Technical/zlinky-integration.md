@@ -6,8 +6,9 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 
 ## Integration status
 
-* Minimum ZLinky version is V5 while for Standard mode, it is required to get an extended Configurable Table size, so v6 is adviced
-* 
+* Minimum ZLinky version is V5.
+* For Standard mode, Historique Tri mode the number of Reporting to be configured are above the limite of V5, so it is adviced to use the up coming firmware version. For now we have tested V6 and it seems to be working however not recommended by the manufacturer for production usage. So until a new release is officialy announced you might get some restrictions with the V5.
+
 | Linky mode | Status | Coordinator | Comments |
 | ---------- | ------ | ----------- | -------- |
 | Historique Mono base | OK         | @deufo (Electrolama zzh)  |
