@@ -47,16 +47,19 @@ In case you have a tri-phase
 ### Description of each Widget
 
 1. `_Power 01`: report the apparent power. ATTENTION, this is is not real power in W, but only AV.
-1. `_Meter 01`: report apparent power and meter it, so you can get the accumulated power a long the day. ATTENTION, this is is not real power in W, but only AV. This widget as been discontinued as it is not possible to manage several Indexes.
-1. `_Ampere3 01`: report the current. If you have a tri-phases setup, all phase/line will be reported into this one, allowing you to see if this is well balanced.
-1. `_P1Meter_ZL 01`: report the power consumption, and manage peak and off-peak power (for Base, EJP contract; for Tempo it will report Blue days consumption)
-1. `_P1Meter_ZL f2`: report power consumption, manage peak and off-peak power of TEMPO contract. White day.
-1. `_P1Meter_ZL f3`: report power consumption, manage peak and off-peak power of TEMPO contract. Red day.
-1. `_Alarm_ZL 01`: Will report alarm on Intensity for mono and phase 1 of tri-phases setup
-1. `_Alarm_ZL f2`: Will report alarm on Intensity for phase 2 of tri-phases setup
-1. `_Alarm_ZL f3`: Will report alarm on Intensity for phase 3 of tri-phases setup
-1. `_Alarm_ZL2 01`: Will report Next day color for TEMPO contract, or Mobile Peak for EJP contract
-1. `_Alarm_ZL3 01`: Will report the tarif of the day
+2. `_Meter 01`: report apparent power and meter it, so you can get the accumulated power a long the day. ATTENTION, this is is not real power in W, but only AV. This widget as been discontinued as it is not possible to manage several Indexes.
+3. `_Ampere3 01`: report the current. If you have a tri-phases setup, all phase/line will be reported into this one, allowing you to see if this is well balanced.
+
+`_P1Meter_SL xx` counters are updated only when receiving a new comsuption state and consequently the Power displayed on the P1Meter widget will be updated at that time. You can notice some discrapency between the P1Meter Power and the Power reported on the `_Power 01` or `_Meter 01` which are updated every time a power update is provided
+
+4. `_P1Meter_ZL 01`: report the power consumption, and manage peak and off-peak power (for Base, EJP contract; for Tempo it will report Blue days consumption)
+5. `_P1Meter_ZL f2`: report power consumption, manage peak and off-peak power of TEMPO contract. White day.
+6. `_P1Meter_ZL f3`: report power consumption, manage peak and off-peak power of TEMPO contract. Red day.
+7. `_Alarm_ZL 01`: Will report alarm on Intensity for mono and phase 1 of tri-phases setup
+8. `_Alarm_ZL f2`: Will report alarm on Intensity for phase 2 of tri-phases setup
+9. `_Alarm_ZL f3`: Will report alarm on Intensity for phase 3 of tri-phases setup
+10. `_Alarm_ZL2 01`: Will report Next day color for TEMPO contract, or Mobile Peak for EJP contract
+11. `_Alarm_ZL3 01`: Will report the tarif of the day
 
 ## IMPORTANT (for now)
 
