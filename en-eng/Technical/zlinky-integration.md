@@ -11,7 +11,7 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 | Linky mode | Status | Coordinator | Comments |
 | ---------- | ------ | ----------- | -------- |
 | Historique Mono base | OK         | @deufo (Electrolama zzh)  |
-| Historique Mono HCHP | WIP        | @krakoukas (ZiGate V2) |
+| Historique Mono HCHP | Ok         | @krakoukas (ZiGate V2) |
 | Historique Mono EJP |             |            |
 | Historique Mono Tempo |           |            |
 | Historique Tri base |             |            |
