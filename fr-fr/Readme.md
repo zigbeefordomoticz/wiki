@@ -1,6 +1,6 @@
 # Bienvenue sur le wiki du Plugin ZigBeeForDomoticZ pour DomoticZ !
 
-[Link to the English Wiki](../en-eng) - [Link naar de Wiki in het Nederlands](../nl-dut/)
+[Link to the English Wiki](../en-eng/Readme.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Readme.md)
 
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
@@ -54,6 +54,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * La section [Réglages](WebUI_Reglages.md)
 * La section [Outils](WebUI_Outils.md)
 * La section [A propos](WebUI_A-propos.md)
+* [Les statistiques](WebUI_Statistiques.md)
 
 ## Tutoriels
 
@@ -66,6 +67,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * [Coupler deux objets entre eux](Tuto_Coupler-deux-objets.md)
 * [Gérer les erreurs](Tuto_Gerer-erreurs-plugin.md)
 * [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
+* [Visualiser les interférences en temps réel](Tuto_Visualiser_interferences_temps_reel.md)
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Remplacer ou ré-initialiser la ZiGate](Tuto_Remplacer-zigate.md)
@@ -120,7 +122,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * [Les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
 * [Topologie du réseau](Info_Topologie-reseau.md)
-* [Configurer la ZiGate en sniffer ZigBee](../en-eng/Zigate-Sniffer.md)  en anglais
+* [Configurer la ZiGate en sniffer ZigBee](../en-eng/Info_Configure-ZiGate-as-Sniffer.md)  en anglais
 * [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md)
 * [Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)](Info_Mettre-python3.8-sur-RaspberryOS-Bullseye.md)
 

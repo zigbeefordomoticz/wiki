@@ -32,7 +32,7 @@ Le cluster est le type de commande qui sera lié. Les clusters possibles sont :
 * Cliquer sur le bouton __Couplage__
 
 
-![Bindings](..Images/Binding.png)
+![Bindings](../Images/Binding.png)
 
 Il est possible de lier plusieurs clusters : il faut alors faire plusieurs liens (un pour chaque cluster).
 

@@ -1,6 +1,6 @@
 # Welcome to the plugin ZigBeeForDomoticZ wiki !
 
-[Lien vers le Wiki en français](../fr-fr/) - [Link naar de Wiki in het Nederlands](../nl-dut/)
+[Lien vers le Wiki en français](../fr-fr/Readme.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Readme.md)
 
 
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.
@@ -62,8 +62,12 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * [Deal with errors](HowTo_Dealing-pluging-error.md)
 * [Change the Zigbee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
+* [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md)
+* [Form a ZigPy network](HowTo_Form-network-zigpy.md)
 * [Upgrading Firmware of ZiGate](HowTo_Update-ZiGate-firmware.md)
 * [Expose the dashboard with basic authentication on a https link](HowTo_Dashboard-Access-Basic-Auth.md)
+* [Use a Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
+* [Use a Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
 
 ## ZiGate How-to
 

@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "83d2bb02ea530c30",
+    "type": "split",
+    "children": [
+      {
+        "id": "1169772298394386",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "549519bdec74d80a",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fe40aab817758a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "efcb1bcfe58cd0d9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b46f312d1e882a51",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aeb82801761e60f8",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "063086714398879b",
+    "type": "split",
+    "children": [
+      {
+        "id": "f50b0c3490f5b121",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2355c14cc3d2b4b8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "369434317b4d1910",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2aae5520ae87ddee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2e001b2e8652f41d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1169772298394386",
+  "lastOpenFiles": [
+    "fr-fr/Tuto_Gerer-les-groupes.md",
+    "fr-fr/Info_Accueil.md",
+    "fr-fr/Home.md",
+    "fr-fr/Probleme_FAQ.md",
+    "fr-fr/Plugin_Sauvegardes.md",
+    "fr-fr/Plugin_Installation.md",
+    "Installation.md",
+    "Contrib/Devices-Health.md",
+    "en-eng/HowTo-form-network-zigpy.md",
+    "Readme.md"
+  ]
+}

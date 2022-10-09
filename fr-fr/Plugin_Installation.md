@@ -392,7 +392,7 @@ Arrêter le Raspberry Pi : `sudo halt`
 * Démarrer la PiZigate: `Tools/pi-zigate.sh run`
 
 Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels.
-Passer à l'[étape 2 Paramétrage du plugin](Parametrage.md).
+Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ### 6.3 - Mise à jour
 
