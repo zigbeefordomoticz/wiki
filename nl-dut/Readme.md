@@ -8,8 +8,6 @@ __All the informations written here are depreciated now. Please refer to the [En
 
 <br><br>
 
-![zigate.fr](../Images/ZiGate.png)
-
 [Link to the English Wiki](../en-eng/Readme.md) - [Lien vers le Wiki en français](../fr-fr/Readme.md)
 
 Op deze wiki is alle informatie te vinden omtrent de plugin van de Domoticz plugin.
@@ -24,12 +22,13 @@ Het doel van de plugin is om een koppeling te maken tussen de Zigate (hardware) 
 
 Hieronder is een lijst met de verschillende apparaten welke compatible zijn met de plugin, deze producten zijn daadwerkelijk door het team getest en zijn dus “gecertificeerd”. Het is mogelijk dat een ander Zigbee product ook functioneert met de plugin, echter is dit niet uitvoerig getest door het team.
 
-* [Lijst met certificeerde apparaten] <https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Compatible-Devices>)
-
 ## Om te beginnen
 
-* [1. Plugin installatie en update](https://zigbeefordomoticz.github.io/wiki/en-eng/Plugin_Installation.html)
-* [2. Plugin Configuratie](https://zigbeefordomoticz.github.io/wiki/en-eng/Plugin_Configuration.html)
+* Step 1 [Plugin installation](../en-eng/Plugin_Installation.md)
+* Step 2 [Plugin settings](../en-eng/Plugin_Settings.md)
+* Step 3 [Plugin configuration](../en-eng/Plugin_Configuration.md)
+* Step 4 [Plugin integration](../en-eng/Plugin_Integration.md)
+
 
 ## In het geval van problemen met de plugin
 
@@ -40,17 +39,24 @@ Hieronder is een lijst met de verschillende apparaten welke compatible zijn met 
 
 ## Veel gestelde vragen
 
-* [Vragen over: IKEA Tradfri](https://zigbeefordomoticz.github.io/wiki/en-eng/Corner_IKEA-Tradfri.html)
-* [Vragen over: Xiaomi/Aqara corner](https://zigbeefordomoticz.github.io/wiki/en-eng/Corner_AqaraOppleSwitchs.html)
-* [Vragen over : Zigate](https://zigbeefordomoticz.github.io/wiki/en-eng/FAQ_ZiGate.html)
-* [Vragen over : Zigate Plugin](https://zigbeefordomoticz.github.io/wiki/en-eng/FAQ_Plugin.html)
+* [Vragen over: IKEA Tradfri](../en-eng/Corner_IKEA-Tradfri.md)
+* [Vragen over: Xiaomi/Aqara corner](../en-eng/Corner_AqaraOppleSwitchs.md)
+* [Vragen over : Zigate](../en-eng/FAQ_ZiGate.md)
+* [Vragen over : Zigate Plugin](../en-eng/Problem_FAQ.md)
 
 ## Wil je meer diepgang?
 
 Hieronder vindt je verschillende geavanceerde handleiding zoals bijvoorbeeld het toevoegen van niet gecertificeerde apparaten.
 
-* [De relatie tussen Wifi en Zigbee](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Co-existence-of-IEEE-802.15.4-at-2.4-GHz-and-Zigbee)
-* [Het omgaan met niet gecertificeerde apparaten](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Dealing-with-un-certified-device)
-* [Enrolment Proces](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Enrolment-process)
-* Documentatie van [DeviceConf.txt](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/DeviceConf)
-* [Interne structuur van de lijst met apparaten ( DeviceList-xx.txt )](https://github.com/sasu-drooz/Domoticz-Zigate/wiki/Structure-of-ListOfDevices)
+* [De relatie tussen Wifi en Zigbee](../en-eng/Info_ZigBee-and-Wifi.md)
+* [Het omgaan met niet gecertificeerde apparaten](../en-eng/Problem_Dealing-with-none-certified-device.md)
+
+
+## Old pages :
+
+* [ZiGate FAQ](Zigate-FAQ.md)
+* [ZiGate plugin FAQ](Zigate-Plugin-FAQ.md)
+* [Werkende-Apparaten](Werkende-Apparaten.md)
+* [Omgaan-met-niet-gecertificeerde-apparaten](Omgaan-met-niet-gecertificeerde-apparaten.md)
+* [Frequenties-IEEE-802.15.4-op-2.4-GHz-en-Zigbee](Frequenties-IEEE-802.15.4-op-2.4-GHz-en-Zigbee.md)
+* [Aqara-Cube-decoding](Aqara-Cube-decoding.md)
