@@ -21,8 +21,8 @@
 * [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
 * [E2. Log error : `Decode8000`](#e2-log-error--decode8000)
 * [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
-* [E4. Error : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-error--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
-
+* [E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-log-error--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
+* [E5. Missing module Error ](#e5-missing-module-error)
 
 
 ------------
@@ -194,10 +194,48 @@ This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate ge
 
 
 ------------
-## E4. Error : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
+## E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
 
 ```log
 2022-04-09 07:27:25.699 Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
 ```
 
 This error appears when stopping the plugin. Ignore it.
+
+
+------------
+## E5. Missing module error
+
+### Make sure that you have correctly installed the plugin 
+
+from the plugin home directory _Domoticz-Zigbee_ or _Domoticz-Zigate_ do the following command
+
+
+``` bash
+ls -l external/dnspython/
+
+```
+
+if the response is 
+```
+total 0
+```
+
+you need to run
+
+
+``` bash
+git config --add submodule.recurse true
+git submodule update --init --recursive
+
+```
+
+#### Make sure that all dependencies have been installed
+
+
+``` bash
+sudo pip3 install -r requirements.txt
+```
+
+ATTENTION:
+* On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first tipme. If you have run once already without Administrator windows, you must start removing all already installed modules.

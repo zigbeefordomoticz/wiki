@@ -48,7 +48,7 @@ Comme expliquer dans la présentation, les informations concernant les groupes s
 * Aller dans la section [Admin > Groupe](WebUI_Admin.md#groupe).
 * Lancer une __Analyse complète__.
 
-![Group Management](../Images/AdminGroupMenu.png)
+![Group Management](../Images/GroupManagementMenu.png)
 
 Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
 
@@ -66,7 +66,7 @@ Chaque routeur sera interrogé pour savoir s'il appartient à un groupe.
 * Sélectionner les objets appartenant au groupe en les cliquant un par un. En cas d'erreur, utiliser la petit croix pour retirer un objet de la liste.
 
 Il est possible d'ajouter le coordinateur dans le groupe. Ceci est nécessaire pour récupérer d'une télécommande Ikea (voir [la page des objets Ikea](Les-objets_Ikea.md)).
-__Le coordinateur ne peut appartenir qu'à un nombre limité de groupes :__ voir les [caractéristiques des coordinateur](Caracteristiques-des-Coordinateurs.md#nombre-de-groupe-limit%C3%A9).
+__Le coordinateur ne peut appartenir qu'à un nombre limité de groupes :__ voir les [caractéristiques des coordinateur](Info_Caracteristiques-des-Coordinateurs.md#nombre-de-groupe-limit%C3%A9).
 
 * Cliquer sur le bouton __Valider__.
 

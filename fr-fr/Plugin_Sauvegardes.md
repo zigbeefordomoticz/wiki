@@ -34,7 +34,7 @@ cp /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
 
 ## Fin de la procédure de sauvegarde
 
-1. Installer une nouvelle version du plugin (voir [Installation](Installation.md))
+1. Installer une nouvelle version du plugin (voir l'[étape 1 Installation du plugin](Plugin_Installation.md))
 
 ## Procédure de récupération
 
