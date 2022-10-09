@@ -18,8 +18,8 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du Plugin](Plug
 | ------------ | ------------------ | ----------- |
 | __Nom__                  | Renseigner un Nom du coordinateur  | Si vous utiliser plusieurs coordinateur, vous aurez besoin de plusieurs instances du matériel ZigBeeForDomoticZ et le nom permettra de les identifier.<br/><br/>Il est conseillé de ne pas mettre d'espace ou de caractère spécial dans le nom du Plugin. Ce nom peut être utiliser dans une URL et un espace ou des caractères spéciaux peuvent générer des problèmes. |
 | __Type__                 | Sélectionner `ZigBeeForDomoticZ plugin` | Si ZigBeeForDomoticZ plugin n’apparaît pas en bas de la liste, c'est que le Plugin n'est pas correctement installé.
-| Coordinator Model         | Sélectionner le modèle de coordinateur | - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2)<br/> - Texas Instruments ZNP<br/> - Silicon Labs EZSP|
-| Coordinator Communication         | Sélectionner mode de communication | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi ou ethernet)<br/>- Aucun|
+| __Coordinator Model__         | Sélectionner le modèle de coordinateur | - ZiGate (modèle V1)<br/> - ZiGate+ (modèle V2)<br/> - Texas Instruments ZNP<br/> - Silicon Labs EZSP|
+| __Coordinator Communication__         | Sélectionner mode de communication | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi ou ethernet)<br/>- Aucun|
 | __IP__                   | Renseigner l'IP du coordinateur | Pour le mode TCPIP uniquement<br/>Laisser 0.0.0.0 pour les autres modes |
 | __Port__                 | Renseigner le Port du coordinateur (9999 par défaut)| Pour le mode TCPIP uniquement<br/>Laisser 9999 pour les autres modes |
 | __Port série__           | Sélectionner le port USB sur lequel est branché le coordinateur | Penser à fixer le port de vos équipements usb [Méthode persistent USB](https://easydomoticz.com/mon-premier-peripherique-z-wave-2)|
