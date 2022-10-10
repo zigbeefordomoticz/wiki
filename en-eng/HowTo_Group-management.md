@@ -30,7 +30,7 @@ You need to restart the plugin after enabling Group Management.
 After the first activation of Group Management, it is import to query each device for group membership.
 To do so you can go to the Admin Group sub menu and then request a Full scan.
 
-![Group Management](../Images/AdminGroupMenu.png)
+![Group Management](../Images/GroupManagementMenu.png)
 
 This will consist in quering each main powered devices for the group membership.
 

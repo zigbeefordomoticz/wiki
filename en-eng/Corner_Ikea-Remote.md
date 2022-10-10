@@ -42,7 +42,7 @@ logFORMAT':'0'
 1. Pair your bulb(s) with Zigate. For that you have to reset the bulb by doing, from a power on state, 6 times power-off power-on ( in a short time ). At the end of that process, you should have a new Widget in Domoticz which will command the Bulb.
    * You can at that stage note the Bulb IEEE, by looking after the List of Devices (in Domoticz) and the IEEE is the 3rd columns named ID.
 
-![List of Devices](../Images/Domoticz-ListOfDevices.png])
+![List of Devices](../Images/Domoticz-ListOfDevices.png)
 
 1. Pair the Tradfri remote command with Zigate. For that you have to reset the remote command, by pressing 4 times, the small setup button. At the end of that process, you should have a new widget in Domoticz representing the Remote Command. At that stage the widget do not get any event from the remote - this is normal -. The widget is passive.
 1. Pair the Remote Command with the Tradfri Bulbs you want to have in the group. For that, you need to bring the remote command close to each bulb and press the setup button. The light of the bulb will fluctuate, and when you have a peak of intensity, the pairing should have been done. Release the setup button. Check that you can switch off/off the bulb from the remote. If not retry the pairing and make sure that you stay up to the end of this pairing process.
