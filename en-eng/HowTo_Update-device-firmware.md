@@ -82,3 +82,7 @@ For the IKEA TRADFRI we are providing a script to retreive all Firmware from the
 
 ## References:
  * https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions
+
+
+## Old version:
+* [IKEA-OTA-Upgrade-old](Archives/IKEA-OTA-Upgrade-old.md)

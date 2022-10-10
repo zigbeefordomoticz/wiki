@@ -12,7 +12,7 @@ Now, there may be specifics to use it: see the [Particularités de certains obje
 
 ### My object is not referenced for the Plugin :
 
-Deux possibilities :
+Two possibilities :
 
 * The object works with the plugin natively. It will be good to update the site to indicate it: there is a small red button __Edit Page__ at the top right of the objects page.
-* The object doesn't work or can't join correctly : please have a look to [What to do if the device doesn't behave correctly](Home.md#what-to-do-if-the-device-doesnt-behave-correctly).
+* The object doesn't work or can't join correctly : please have a look to [What to do if the device doesn't behave correctly](Readme.md#what-to-do-if-the-device-doesnt-behave-correctly).

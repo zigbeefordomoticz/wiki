@@ -56,6 +56,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * La section [A propos](WebUI_A-propos.md)
 * [Les statistiques](WebUI_Statistiques.md)
 
+
 ## Tutoriels
 
 * [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
@@ -108,6 +109,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
    * Le forum français : [https://easydomoticz.com/forum](https://easydomoticz.com/forum/viewforum.php?f=28)
    * Le forum anglais : [https://www.domoticz.com/forum](https://www.domoticz.com/forum/viewforum.php?f=68)
 
+
 ## Scripts
 
 * [Vérifier le niveau des batteries](../Contrib/CheckBatteryLevel.dzVents) en DzVents
@@ -115,6 +117,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * [Vérifier la perte d'objets (version 2)](../Contrib/CheckDeadDevices.lua) en DzVents
 
 [D'autres exemples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
+
 
 ## Informations
 
@@ -125,6 +128,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * [Configurer la ZiGate en sniffer ZigBee](../en-eng/Info_Configure-ZiGate-as-Sniffer.md)  en anglais
 * [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md)
 * [Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)](Info_Mettre-python3.8-sur-RaspberryOS-Bullseye.md)
+
 
 ## Liens utiles
 

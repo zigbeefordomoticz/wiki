@@ -22,6 +22,8 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 
 * [Start](Info_Home.md) for beginners
 * [Compatibles coordinators](Coordinators.md)
+* [Compatibles objects](Objects.md)
+
 
 ## Installation
 
@@ -30,14 +32,17 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * Step 3 [Plugin configuration](Plugin_Configuration.md)
 * Step 4 [Plugin integration](Plugin_Integration.md)
 
+
 ## Plugin updates
 
 * [Plugin updates](Plugin_Update.md#plugin-update)
 * [Plugin branches](Plugin_Update.md#plugin-branches)
 
+
 ## Backups
 
 * [Backups to do to be able to restore without loosing crucials informations](Plugin_Backup.md)
+
 
 ## Plugin's web Interface
 
@@ -49,6 +54,8 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * Section [Settings](WebUI_Settings.md)
 * Section [Tools](WebUI_Tools.md)
 * Section [About](WebUI_About.md)
+* [Statistics](WebUI_Stastics)
+
 
 ## How-to
 
@@ -69,10 +76,6 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * [Use a Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
 * [Use a Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
 
-## ZiGate How-to
-
-* [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
-* [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french
 
 ## What to do if the device doesn't behave correctly
 
@@ -91,12 +94,15 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * [Legrand Netatmo](Corner_Legrand-Netatmo.md)
 * [Livolo](Corner_Livolo.md)
 * [Muller Licht](Corner_Tint.md)
+* [Philips Gledopto](Corner_Philips-Gledopto.md)
 * [Profalux](Corner_Profalux-corner.md)
 * [Schneider Wiser](Corner_Schneider_Wiser.md)
+
 
 ## Information about releases
 
 * [Release 4.1](Release_4.1.md)
+
 
 ## In case of Trouble
 
@@ -107,6 +113,11 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
    * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
 
+
+## Developpment
+
+* [Technical infos](Technical/Readme.md)
+
 ## Scripts
 
 * [How-to check battery levels](../Contrib/CheckBatteryLevel.dzVents) in DzVents
@@ -115,11 +126,21 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 
  [Other examples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
 
+
+## ZiGate How-to
+
+ * [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
+ * [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french
+
+
 ## Informations
 
+* [Firmware list](Info_Firmware-list.md)
+* [Widgets Switch Selector Mapping](Info_Widgets-Switch-Selector-Mapping)
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
 * [How-to Configure ZiGate in ZigBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
+
 
 ## More
 
