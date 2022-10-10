@@ -87,7 +87,7 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 * [Aqara Opple Switchs](Corner_AqaraOppleSwitchs.md)
 * [BlitzWolf](Corner_Blitzwolf.md)
 * [Eurotronics](Corner_Eurotronics.md)
-* [Ikea Tradfri](Corner_IKEA-Tradfri.md)
+* [Ikea Tradfri](Corner_Ikea-Tradfri.md)
 * [Legrand Netatmo](Corner_Legrand-Netatmo.md)
 * [Livolo](Corner_Livolo.md)
 * [Muller Licht](Corner_Tint.md)

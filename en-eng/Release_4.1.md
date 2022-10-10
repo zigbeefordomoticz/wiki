@@ -1,4 +1,4 @@
-## Release 4.1 
+## Release 4.1
 
 Even if we are just moving from 4.0.8 , release 4.1 is a pretty important release in terms of functionalities coming on board.
 The most important one is with the empowerement of Zigate firmware 3.0f we are bringing a native support of Groups management.
@@ -59,7 +59,7 @@ Anyone willing to improve , translate in other languages are more than welcome
 ## CONTRIBUTIONS
 
 We would like also to encourage sharing and if you wouldn't to share with the other users some scripts, dzVents, LUA ... please
-feel free to get an account on GitHub and push to the plugin [Contrib](../Contrib)
+feel free to get an account on GitHub and push to the plugin [Contrib](../Contrib/Readme.md)
 
 More details can be found in the Release Notes.
 

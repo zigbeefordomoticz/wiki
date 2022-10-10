@@ -14,7 +14,7 @@ for each available Firmware
              Do
                   Propose the firmware to the device
                   if the firmware is accepted for upgrade then
-                     Do 
+                     Do
                         Transfert the firmware to the device
                         Upgrade
                      Done
@@ -36,14 +36,14 @@ By enable this feature, the plugin will propose to each devices the available fi
 
   * allowOTA set to 1, will enable the OTA upgrade feature in the plugin.
   * waitingOTA is the amount of time (in seconds) the plugin will wait from start before starting the process. Please do consider carefully seting a low value here, as the process can load the Zigate in terms of Traffic, so try to avoid value lower than 300 ( 5 minutes ).
-  
+
 ## Tracking Upgrade
 
 The plugin is pushing information via the admin Zigate Widget
 
 Here after is a screenshot of the Notification Text widget showing the starting time of the OTA process and its completion.
 
-![Admin Widget showing OTA](../Images/OTAu.png)
+![Admin Widget showing OTA](../../Images/OTAu.png)
 
 ## Upgrade of Battery powered devices
 
@@ -57,13 +57,13 @@ This is a bit more tricky here, as the devices usally doesn't accept communicati
 1. Identify the Network Short address of the device
 1. Configure the plugin some OTA upgrade is enabled.
    Here after is an exemple of the OTA parameters ( PluginConf-xx.txt )set for OTA and battery device upgrade.
-   
+
     ```
     'allowOTA':'1',        # Enable OTA upgrade
     'batteryOTA':'1',      # Enable to enroll battery powered devices
     'waitingOTA':'60',     # Start the OTA upgrade process 60s after plugin start
     ```
-    
+
 1. Start Domoticz and switch to the Log output in order to see when the device will get notified of the update
 1. When you see the Short address of your Device (in exemple here after 77d4 ), press the ON/OFF button of the Device
 
@@ -81,7 +81,7 @@ OTA heartbeat - [18] Type: 4545 out of   1 remaining Images, Device: ecaf, out o
 OTA heartbeat - [19] Type: 4545 out of   1 remaining Images, Device: None, out of   1 remaining devices
 UpdateDevice - (     Lampe IKEA) 1:On
 OTA heartbeat - [20] Type: 4545 out of   1 remaining Images, Device: 77d4, out of   0 remaining devices
-OTA heartbeat - [21] Type: 4545 out of   1 remaining Images, Device: 77d4, 
+OTA heartbeat - [21] Type: 4545 out of   1 remaining Images, Device: 77d4,
 Status: (Zigate-DEV) Starting firmware process on 77d4/01
 Firmware transfert for 77d4/01 - Progress:  0.0 %
 ```

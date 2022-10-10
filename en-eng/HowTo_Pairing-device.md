@@ -19,7 +19,7 @@ Purpose is to explain the step process to pair a new device and get it into Domo
 
    1. Go to the Admin -> Provisioning menu
 
-      ![Domoticz Accept New Hardware](../Images//Provisionning_1.png)
+      ![Domoticz Accept New Hardware](../Images/Provisionning_1.png)
 
       from here you have 4 choices
 

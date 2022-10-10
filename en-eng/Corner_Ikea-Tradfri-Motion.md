@@ -54,7 +54,7 @@ Now it is possible to use the MS in a script (LUA, Dzvent or Blockly). This way 
 
 ### Groupmanagement with active Ikea tradfri remotes and motion sensors
 
-When using tradfri devices like the Ikea 5 button round remote or the Ikea motion sensor the created widgets are not active after pairing. After paring the device widgets are added to Domoticz but actions can not be seen in Domoticz. There you to add those devices to a group. See [tutorial](Ikea-Remote.md)
+When using tradfri devices like the Ikea 5 button round remote or the Ikea motion sensor the created widgets are not active after pairing. After paring the device widgets are added to DomoticZ but actions can not be seen in DomoticZ. There you to add those devices to a group. See [Corner_Ikea-Remote](Corner_Ikea-Remote.md)
 To make them active go to webUI management  Group management and fill the checkmark behind the group where the remote or motion sensor is part of, to make active. After validating, a group rescan and plugin restart the remote or motion sensor will be active. This way you get statusupdate in the widgets and the remote will be capable of using the left and right button.
 
 ## Limitation

@@ -39,7 +39,7 @@ Hieronder is een lijst met de verschillende apparaten welke compatible zijn met 
 
 ## Veel gestelde vragen
 
-* [Vragen over: IKEA Tradfri](../en-eng/Corner_IKEA-Tradfri.md)
+* [Vragen over: IKEA Tradfri](../en-eng/Corner_Ikea-Tradfri.md)
 * [Vragen over: Xiaomi/Aqara corner](../en-eng/Corner_AqaraOppleSwitchs.md)
 * [Vragen over : Zigate](../en-eng/FAQ_ZiGate.md)
 * [Vragen over : Zigate Plugin](../en-eng/Problem_FAQ.md)
