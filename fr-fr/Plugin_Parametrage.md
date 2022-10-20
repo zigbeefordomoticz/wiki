@@ -24,11 +24,11 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du Plugin](Plug
 | __IP__                   | Renseigner l'IP du coordinateur | Pour le mode TCPIP uniquement<br/>Laisser 0.0.0.0 pour les autres modes |
 | __Port__                 | Renseigner le Port du coordinateur (9999 par défaut)| Pour le mode TCPIP uniquement<br/>Laisser 9999 pour les autres modes |
 | __API base url__ | Renseigner l'adresse du serveur DomoticZ | Adresse sous la forme http://username:password@127.0.0.1:port <br/>Par défaut http://127.0.0.1:8080 |
+| __WebUI Port__| Renseigner le port pour accéder à l'administration web du Plugin (9440 par défaut). | A modifier en cas d'utilisation de plusieurs instances du Plugin. |
 | __Initialize Coordinator (Erase Memory)__ `Erase PDM` | Sélectionner True pour initialiser le coordinateur avec les paramètres du Plugin (False par défaut). <br/>A __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM). | __ATTENTION :__ L'activation va effacer toutes des informations d'appairage du coordinateur.<br/> Redémarrer le Plugin pour lancer l'initialisation. Vérifier que le paramètre est à l'état False après le redémarrage. |
-| __Port for Web Admin GUI__| Renseigner le port pour accéder à l'administration web du Plugin (9440 par défaut). | A modifier en cas d'utilisation de plusieurs instances du Plugin. |
-| __Verbors and Debuging__ | Sélectionner le niveau du log du Plugin (Aucun par défaut) |
+| __Debugging__ | Laisser vide |
 
-* Si c'est pour la création du Plugin, mettre Initialize Coordinator à __True__, sinon toujours laisser à __False__ (ce paramètre efface les informations de la ZiGate).
+* Si c'est pour une première installation du Plugin avec un nouveau coordinateur, mettre Initialize Coordinator à __True__, sinon toujours laisser à __False__ (ce paramètre efface les informations du coordinateur).
 
 * Cliquer sur __Ajouter__.
 
