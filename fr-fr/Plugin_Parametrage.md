@@ -25,7 +25,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation du Plugin](Plug
 | __Port__                 | Renseigner le Port du coordinateur (9999 par défaut)| Pour le mode TCPIP uniquement<br/>Laisser 9999 pour les autres modes |
 | __API base url__ | Renseigner l'adresse du serveur DomoticZ | Adresse sous la forme http://username:password@127.0.0.1:port <br/>Par défaut http://127.0.0.1:8080 |
 | __WebUI Port__| Renseigner le port pour accéder à l'administration web du Plugin (9440 par défaut). | A modifier en cas d'utilisation de plusieurs instances du Plugin. |
-| __Initialize Coordinator | Sélectionner True pour initialiser le coordinateur avec les paramètres du Plugin (False par défaut). <br/>À __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM d'une ZiGate). | __ATTENTION :__ L'activation va effacer toutes des informations d'appairage du coordinateur.<br/> Redémarrer le Plugin pour lancer l'initialisation. Vérifier que le paramètre est à l'état False après le redémarrage. |
+| __Initialize Coordinator__ | Sélectionner True pour initialiser le coordinateur avec les paramètres du Plugin (False par défaut). <br/>À __activer obligatoirement__ lors de la configuration initiale (ou après un Erase EEPROM d'une ZiGate). | __ATTENTION :__ L'activation va effacer toutes des informations d'appairage du coordinateur.<br/> Redémarrer le Plugin pour lancer l'initialisation. Vérifier que le paramètre est à l'état False après le redémarrage. |
 | __Debugging__ | Laisser vide |
 
 * Si c'est pour une première installation du Plugin avec un nouveau coordinateur, mettre Initialize Coordinator à __True__, sinon toujours laisser à __False__ (ce paramètre efface les informations du coordinateur).
