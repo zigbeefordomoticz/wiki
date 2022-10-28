@@ -4,7 +4,6 @@
 
 Le Plugin est régulièrement mis à jour que ce soit pour de la correction de bug ou l'ajout de nouvelle fonctionnalités.
 
-
 ### Procédure
 
 __ATTENTION:__ si vous n'etes pas encore en Version 6, merci de suivre cette procédure de  mise à jour vers la [version 6](Plugin_Version-6.md)
@@ -23,24 +22,20 @@ Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessou
 
 * Redémarrer DomoticZ
 
-
 ### En cas d'erreurs
-
 
 Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire les commandes suivantes :
 
-```
+```bash
   git reset –-hard
   git pull --force
  ```
 
 ## Les branches de mise à jour
 
-
 Le Plugin évolue en permanence suite à la correction de bug, l'amélioration du Plugin ou l'ajout de nouveaux objets. Afin d'éviter un maximum de bug, le code du Plugin est disponible sous différents canaux de mise à jour.
 
 Au fur et à mesure des évolutions de DomoticZ, le Plugin se doit d'évoluer et, malheureusement, il n'est pas possible de conserver une compatibilité du Plugin avec toutes les versions antérieurs de DomoticZ. C'est pourquoi à partir de la version 5 (mai 2021), une branche __stable5__ est crée pour conserver la branche __stable__ compatible avec les anciennes versions.
-
 
 Les différentes branches sont :
 
@@ -57,19 +52,17 @@ C'est la version qui a ouvert le plugin aux coordinateurs TI CCXXXX, Sonoff, Ele
 
 __Note :__ Le passage à la stable6 nécessite une procédure particulière : voir la page [Migration vers version 6](Plugin_Version-6.md).
 
+#### beta6/dev (créée en avril 2022)
 
-#### beta6 (créée en avril 2022)
+La branche béta6 est le canal de développement. __Ne passez pas sur la branche beta6/dev sans y avoir été invité.__
 
-La branche béta6 est le canal de développement. __Ne passez pas sur la branche beta6 sans y avoir été invité.__
-
-Si vous êtes sur la branche __beta6__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stable6__ à la prochaine mise à jour du canal __stable6__.
+Si vous êtes sur la branche __beta6/dev__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stable6/dev__ à la prochaine mise à jour du canal __stable6__.
 
 | Info  | Compatibilité  |
 | :------------: |:---------------:|
 | Coordinateurs | idem stable6 |
 | Compatibilité minimale | DomoticZ 2021.1 |
 | Compatibilité maximale | Dernière version de DomoticZ |
-
 
 #### stable5 (créée en mai 2021)
 
@@ -85,7 +78,6 @@ Cette version ne recevra plus de mise à jour.
 
 __Note :__ Le passage à la stable5 nécessite un redémarrage de DomoticZ et de renseigner des nouveaux paramètres dans le [Paramétrage du plugin](Plugin_Parametrage.md) sinon, vous aurez une erreur de communication au lancement du Plugin.
 
-
 #### stable
 
 C'était la version par défaut jusqu'au moment de la sortie de la ZiGate V2.
@@ -99,12 +91,11 @@ Sa compatibilité s'arrête avec DomoticZ 2020.2.
 
 Cette version ne recevra plus de mise à jour.
 
+#### dev
 
-#### beta
+La branche dev est le canal de développement. __Ne passez pas sur la branche dev sans y avoir été invité.__
 
-La branche Béta est le canal de développement. __Ne passez pas sur la branche beta sans y avoir été invité.__
-
-Si vous êtes sur la branche __beta__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stableX__ à la prochaine mise à jour du canal __stableX__.
+Si vous êtes sur la branche dev (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stableX__ à la prochaine mise à jour du canal __stableX__.
 
 | Info  | Compatibilité  |
 | :------------: |:---------------:|
@@ -114,23 +105,10 @@ Si vous êtes sur la branche __beta__ (suite à l'ajout d'un nouveau matériel p
 
 Cette version ne recevra plus de mise à jour.
 
-
-#### stableX-fix
-
-La branche stableX-fix (avec un numéro à la place du X) est l'anti-chambre de la branche stableX. En gros les bug-fix sont réalisées sur celle-ci avant d'être envoyer sur la branche stableX. Il n'y a pas de gestion de version sur cette branche !
-
-__Ne passez pas sur la branche stableX-fix sans y avoir été invité.__
-
-Si vous êtes sur la branche __stableX-fix__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __StableX__ à la prochaine mise à jour du canal __StableX__.
-
-
-
 ### Connaître sa branche
-
 
 * Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigate')
 * Lancer la commande `git status`
-
 
 ### Passer d'une branche à l'autre
 
@@ -141,15 +119,11 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 * Lancer la commande `git pull`
 
 * Lancer la commande `git checkout stable6` pour aller sur le canal stable6
-* Lancer la commande `git checkout beta6` pour aller sur le canal beta6
-* Lancer la commande `git checkout stable5` pour aller sur le canal stable5 (obsolète)
-* Lancer la commande `git checkout stable` pour aller sur le canal stable (obsolète)
-* Lancer la commande `git checkout beta` pour aller sur le canal beta (obsolète)
+* Lancer la commande `git checkout dev` pour aller sur le canal de developement
 
 __Attention aux compatibilités avec DomoticZ lors du changement de branche.__
 
 [Poursuivre sur la mise à jour du Plugin](Readme.md#mises-%C3%A0-jour-du-plugin)
-
 
 ### Revenir à une version précédente
 

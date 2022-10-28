@@ -1,4 +1,4 @@
-# How to move from version 5 (stable5) to version 6 (stable6 or beta6)
+# How to move from version 5 (stable5) to version 6 (stable6)
 
 <a href="../fr-fr/Plugin_Version-6.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
 [Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)
@@ -55,7 +55,7 @@ Open the terminal.
     git pull
     ```
 
-3. Switch to stable6 or beta6 (as you whish)
+1. Switch to stable6 or stable6 (as you whish)
 
     ```bash
     git checkout stable6
@@ -114,24 +114,21 @@ There are 4 possible coordinator models:
 * ZiGate (via zigpy) : the plugin communicates with the ZiGate through zigpy libraries. It's only experimental and won't be supported.
 * Texas Instruments ZNP : for  TI Brand Coordinators.
 * Silicon Labs EZSP: for the Silicon Labs Coordinators.
+* deConz: for the deConz Coordinators like RaspBee and ConBee
 
 ## IMPORTANT Plugin's update
 
 The `git pull` is no longer sufficient, it is now necessary to make the command `git pull --recurse-submodules`.
 
+## Plugin Version 6 running on Windows
 
-
-
-
-# Plugin Version 6 running on Windows
-
-## Assumptions
+### Assumptions
 
 * [Domoticz Installation](https://www.domoticz.com/wiki/Windows) has been followed
 * [Installing Python for Windows](https://www.domoticz.com/wiki/Using_Python_plugins#Installing_Python_for_Windows)
 * [Git for Windows](https://gitforwindows.org) is installed, and especially Git Bash
 
-## How to install the python additional modules
+### How to install the python additional modules
 
 You must start a Git Bash windows in with administrator privileges
 
@@ -143,18 +140,18 @@ Make sure to be in the pluin home directory ( domoticz/plugins/Domoticz-Zigbee )
 pip install -r requirements.txt
 ```
 
-## Make the Symbolic links correct
+### Make the Symbolic links correct
 
 a file `symlink.bat` is available on the home directory of the plugin, make sure to execute it with Administrator privileges
 
-## Last check
+### Last check
 
 Go in the Zigbee for Domoticz folder ( Domoticz-Zigbee ). Usally you should be under domoticz/plugins/Domoticz-Zigbee
 run: `git config --add submodule.recurse true`
 run: `git submodule update --init --recursive`
 Restart Domoticz.
 
-## References
+### References
 
 * [Plugin Installation on Windows (French)](https://zigbeefordomoticz.github.io/wiki/fr-fr/Plugin_Installation.html#5---installation-sous-windows-10)
 

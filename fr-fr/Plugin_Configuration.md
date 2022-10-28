@@ -7,6 +7,7 @@ Vous devez donc avoir suivi et terminé l'[étape 1 Installation](Plugin_Install
 ## Accéder à l'interface d'administration
 
 L'interface d'administration vous donne accès aux éléments suivants :
+
 - Un tableau de bord synthétique
 - La gestion des objets et des groupes
 - La visualisation de la topologie et la qualité du réseau ZigBee
@@ -14,9 +15,9 @@ L'interface d'administration vous donne accès aux éléments suivants :
 - La configuration du Plugin
 - Un jeu d'outils permettant le debug, la gestion des erreurs et l'interaction directe avec les objets.
 
-Vous pouvez accéder à l'interface web d'administration en allant à la page http://IP-serveur-domoticz:numéro-de-port-défini-dans-paramétrage.
+Vous pouvez accéder à l'interface web d'administration en allant à la page <http://IP-serveur-domoticz:numéro-de-port-défini-dans-paramétrage>.
 
-Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port par défaut, l'adresse de l'interface web est http://127.0.0.1:9440
+Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port par défaut, l'adresse de l'interface web est <http://127.0.0.1:9440>
 
 **ATTENTION :** Pour des raisons de sécurité, **ne pas présenter le port 9440 sur votre réseau externe** sous peine d'ouvrir à tous la gestion de votre domotique.
 
@@ -25,6 +26,7 @@ Chaque section de ce table de bord est commentée pour permettre une lecture sim
 En haut de page, vous avez accès aux différents onglets décrits ci dessus. Vous trouvez également un switch (haut/droite) permettant de basculer le coordinateur en mode appairage (dans le cas où le coordinateur est déjà en mode appairage, le swictch est automatiquement activé).
 
 Sur le bandeau en bas de la page, vous disposez des informations suivantes (de gauche vers droite) :
+
 - Date et heure de démarrage du Plugin.
 - Le nombre de messages envoyés/reçus par seconde par le coordinateur.
 - Le MaxLoad (indication du nombre de messages en attente d'envoi par le coordinateur).
@@ -37,4 +39,5 @@ Sur le bandeau en bas de la page, vous disposez des informations suivantes (de g
 ![Plugin Web Admin Interface](../Images/Dashboard.png)
 
 ## Présentation de l'interface d'administration
+
 [L'interface web du Plugin](Readme.md#linterface-web-du-plugin)
