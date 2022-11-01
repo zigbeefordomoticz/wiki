@@ -33,13 +33,15 @@ Ensuite, aller dans Image:
 ![Image](Images/FR_Synology_Docker_Install_Image.png)
 
 
-Double cliquer sur l'image DomoticZ. Nous arrivons dans les paramètres nécessaires à la création du Conteneur. Choisir un nom et cocher "Exécuter le conteneur à l'aide de privilèges élevés", puis sélectionner "Paramètres avancés".
+Double cliquer sur l'image DomoticZ. Nous arrivons dans les paramètres nécessaires à la création du Conteneur. En premier lieu, nous choisissons l'interface réseau, dans mon cas, bridge.
 ![Creation](Images/FR_Synology_Docker_Install_Creation_Conteneur.png)
 
-
-Cocher "Activer le redémarrage automatique", puis aller sur l'onglet Volume.
+Choisir un nom et cocher "Exécuter le conteneur à l'aide de privilèges élevés", ainsi que "Activer le redémarrage automatique", puis valider "Suivant".
 ![Redémarrage automatique](Images/FR_Synology_Docker_Install_Param_1.png)
 
+Ensuite, choisir l'onglet Ports et modifier les 'Auto' par des ports fixes.
+Le port SSL 443 étant déjà utilisé par le NAS, il faut en choisir un autre :
+![Ports](Images/FR_Synology_Docker_Install_Ports.png)
 
 Cette partie est très importante pour le Plugin car elle va permette d'avoir accès aux plugins via File Station.
 Il faut cliquer sur "Ajouter un dossier".
@@ -54,9 +56,6 @@ Une fois le dossier créé, il faut indiquer le chemin d'accès : `/opt/domoticz
 ![/opt/domoticz/userdata](Images/FR_Synology_Docker_Install_Param_Volume_3.png)
 
 
-Ensuite, choisir l'onglet Ports et modifier les 'Auto' par des ports fixes.
-Le port SSL 443 étant déjà utilisé par le NAS, il faut en choisir un autre :
-![Ports](Images/FR_Synology_Docker_Install_Ports.png)
 
 
 Et voilà, la configuration est faite, appliquer et faire suivant.
@@ -98,7 +97,8 @@ sudo insmod /lib/modules/cdc-acm.ko
 ````
 
 Pour que les drivers soient chargés au démarage du NAS, vous pouvez :
-* Soit utiliser le planificateur de tâches (panneau de configuration) en créeant une tâche déclenchée
+* Soit utiliser le planificateur de tâches (panneau de configuration) en créeant une tâche déclenchée (j'ai ajouté la copie des fichiers car ils sont supprimés lors des mises à jours de DSM)
+![Tache](Images/FR_Synology_Docker_Install_Tache.png)
 
 
 * Soit ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
