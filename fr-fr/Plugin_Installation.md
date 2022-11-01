@@ -159,7 +159,13 @@ Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/pl
 ```bash
 cd userdata
 cd plugins
-git clone https://github.com/pipiche38/Domoticz-Zigate.git
+git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+cd Domoticz-Zigbee
+apt update
+apt install python3-dev
+python3 -m pip install --upgrade pip
+pip3 install wheel
+pip3 install -r requirements.txt
 ```
 
 ![GIT](Images/FR_Synology_Docker_Install_Bash_Git.png)
