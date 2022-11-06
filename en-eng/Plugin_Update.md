@@ -1,10 +1,19 @@
 ## Plugin Update
 
-__ATTENTION:__ We assume here that you are already on Version 6. Otherwise please upgrade first to [version 6](Plugin_Version-6.md)
+__ATTENTION:__ We assume here that you are already on Version 6.3. Otherwise please upgrade first to [version 6](Plugin_Version-6.md) and to [version 6.3](Release_6.3.md)
 
 The plugin is regularly updated. For bug fixing or enhancement. In order to keep the plugin up to date
 
-* Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
+
+### From the WebUI
+
+Since version 6.3, it is now possible to update the plugin form the plugin administration page : Admin > Plugin > Update
+
+
+### Manually
+
+* Go in your DomoticZ directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
+
 * Run: `git submodule update --init --recursive`
 
 __Note :__ Since version 6, the git pull is no longer enough.
@@ -19,7 +28,6 @@ __Note :__ Since version 6, the git pull is no longer enough.
 * Run: `sudo chmod +x plugin.py`
 * Restart Domoticz.
 
-* Lancer la commande `git submodule update --init --recursive`
 
 ## Plugin branches
 
