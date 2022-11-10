@@ -23,7 +23,8 @@
 * [E2. Erreur : Decode8000](#e2-erreur--decode8000)
 * [E3. Erreur : Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX](#e3-erreur--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 * [E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter](#e4-erreur--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
-
+* [E5. Missing module Error ](#e5-missing-module-error)
+* [E5. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter](#e4-erreur--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 
 
 ------------
@@ -199,3 +200,44 @@ Cela indique que l'objet ```90fd9ffffe31f150``` n'est pas joignable ou que la Zi
 ```
 
 Cette erreur apparaît lors de l'arrêt du plugin. Ne pas en tenir compte.
+
+
+------------
+## E5. Erreur : `Missing module error`
+
+### Vérifier que le plugin est correctement installé :
+
+* Aller dans le répertoire du plugin _Domoticz-Zigbee_ ou _Domoticz-Zigate_
+* Lancer la commande
+
+``` bash
+ls -l external/dnspython/
+
+```
+
+Si la réponse est :
+```
+total 0
+```
+
+Il faut lancer les commandes
+``` bash
+git config --add submodule.recurse true
+git submodule update --init --recursive
+```
+
+### Vérifier que les dépendances sont bien installées
+
+* Lancer la commande depuis le répertoire du plugin
+``` bash
+sudo pip3 install -r requirements.txt
+```
+
+ATTENTION:
+Sur les Windows, il faut lancer les commandes _pip3 install_ en mode administrateur etce, dès la première fois.
+Si cela n'a pas été fait la première fois, il faut désinstaller les modules existants.
+
+------------
+## E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`
+
+Cette erreur apparaît lorsque _API base url_ n'est pas (ou pas bien) paramétrée dans DomoticZ. Se reporter à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md) pour plus d'infos.
