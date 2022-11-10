@@ -23,7 +23,7 @@
 * [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 * [E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-log-error--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 * [E5. Missing module Error ](#e5-missing-module-error)
-
+* [E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-error--error-plugins-name--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
 
 ------------
 ------------
@@ -206,7 +206,7 @@ This error appears when stopping the plugin. Ignore it.
 ------------
 ## E5. Missing module error
 
-### Make sure that you have correctly installed the plugin 
+### Make sure that you have correctly installed the plugin
 
 from the plugin home directory _Domoticz-Zigbee_ or _Domoticz-Zigate_ do the following command
 
@@ -216,7 +216,7 @@ ls -l external/dnspython/
 
 ```
 
-if the response is 
+if the response is
 ```
 total 0
 ```
@@ -239,3 +239,9 @@ sudo pip3 install -r requirements.txt
 
 ATTENTION:
 * On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first tipme. If you have run once already without Administrator windows, you must start removing all already installed modules.
+
+
+------------
+## E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`
+
+This error appears when the DomoticZ parameter _API base url_ is not correctly filled. More infos on [step 2 Plugin settings](Plugin_Settings.md).
