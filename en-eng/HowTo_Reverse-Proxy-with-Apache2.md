@@ -68,6 +68,7 @@ sudo apt-get install apache2 apache2-utils
 ### install mod :
 ``` 
 sudo a2enmod ssl
+sudo a2enmod headers
 sudo a2enmod lbmethod_byrequests
 sudo a2enmod proxy_balancer
 sudo a2enmod proxy_http
@@ -121,6 +122,7 @@ change certificate path :
 ```
 add reverse proxy :
 ```
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 ServerName ben33880.no-ip.com
 ProxyPreserveHost On
 ProxyPass /z4d/  http://127.0.0.1:9440/z4d/
