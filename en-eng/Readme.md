@@ -87,7 +87,7 @@ On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate
 
 ## Devices specifics
 
-* [Aqara Opple Switchs](Corner_AqaraOppleSwitchs.md)
+* [Aqara](Corner_Aqara.md)
 * [BlitzWolf](Corner_Blitzwolf.md)
 * [Eurotronics](Corner_Eurotronics.md)
 * [Ikea Tradfri](Corner_Ikea-Tradfri.md)
