@@ -14,5 +14,4 @@ Les objets nécessitant une configuration particulière :
 * [Les détecteurs de mouvements](#les-d%C3%A9texterus-de-mouvements)
 
 
-
 ### Les détecteurs de mouvements
