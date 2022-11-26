@@ -1,20 +1,10 @@
-# Les objets de la marque Aqara
-
-Certains objets de la marque Aqara ont besoin d'une configuration particulière pour fonctionner avec le Plugin. Ils seront listés dans cette page.
-
-**Cette page n'est pas une liste des objets compatibles.**
-
-La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4d.html](https://zigbee.blakadder.com/z4d.html).
+# Aqara corner
 
 
 ## Summary
 
 * [Opple Switchs](#opple-switchs)
 * [Lumi motion](#lumi-motion)
-
-
-
-### Les détecteurs de mouvements
 
 
 ## Opple Switchs
