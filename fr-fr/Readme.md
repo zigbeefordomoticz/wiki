@@ -90,6 +90,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 
 ## Particularités de certains objets
 
+* [Aqara](Les-objets_Aqara.md))
 * [BlitzWolf](Les-objets_Blitzwolf.md)
 * [Eurotronic](Les-objets_Eurotronic.md)
 * [Ikea Tradfri](Les-objets_Ikea.md)
