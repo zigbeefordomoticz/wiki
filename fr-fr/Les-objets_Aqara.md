@@ -12,9 +12,7 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4
 Les objets nécessitant une configuration particulière :
 
 * [Les détecteurs de mouvements](#les-d%C3%A9texterus-de-mouvements)
-* [Les prises connectées](#les-prises-connect%C3%A9es)
-* [Les capteurs de mouvement](#les-capteurs-de-mouvement)
-* [La télécommande 5 boutons](#les-d%C3%A9texterus-de-mouvements)
+
 
 
 ### Les détecteurs de mouvements
