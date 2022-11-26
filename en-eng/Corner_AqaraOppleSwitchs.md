@@ -7,10 +7,6 @@
 * [Lumi motion](#lumi-motion)
 
 
-
-### Les détecteurs de mouvements
-
-
 ## Opple Switchs
 
 ### Introduction
