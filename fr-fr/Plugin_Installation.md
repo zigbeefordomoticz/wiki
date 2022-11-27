@@ -161,6 +161,8 @@ cd userdata
 cd plugins
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 cd Domoticz-Zigbee
+git config --add submodule.recurse true
+git submodule update --init --recursive
 apt update
 apt install python3-dev
 python3 -m pip install --upgrade pip
