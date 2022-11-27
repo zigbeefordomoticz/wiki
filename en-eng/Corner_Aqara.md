@@ -21,7 +21,7 @@ Those switchs have 2 modes of operating.
 
 ### Domoticz Zigate Plugin behaviours
 
-On teh Zigate plugin for Domoticz, we have 3 operating modes:
+On the ZigBeeForDomoticZ plugin, we have 3 operating modes:
 
    1. By default the switch is configured in 6 events per button mode. During the provisioning phase, 1 widget will be created in Domoticz per button
    1. You can enable a mode, where the switch will be bound to Zigte and in that case you will let events. For the 6 butons switch, you will
