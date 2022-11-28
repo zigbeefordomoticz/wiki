@@ -45,6 +45,7 @@ This sensor isn't a Motion Sensor, this is a presence sensor with ability to che
 
 1. You have to set resetMotiondelay': 0, parameter otherwise no motion is detected until a real physical leave
 2. Other Parameter
-| RTCZCGQ11LMMotionSensibility =  Motion sensibility for Presence Detector FP1 RTCZCGQ11LM : 1=low 2=mid 3=high
-| RTCZCGQ11LMApproachDistance =	Approach Distance for Presence Detector FP1 RTCZCGQ11LM :  0=far 1=mid 2=close |
-| RTCZCGQ11LMMonitoringMode =	Monitoring mode for Presence Detector FP1 RTCZCGQ11LM 1 : 0=undirected 1=left/right ability to check left/right enter/leaving  |
+
+* RTCZCGQ11LMMotionSensibility =  Motion sensibility for Presence Detector FP1 RTCZCGQ11LM : 1=low 2=mid 3=high
+* RTCZCGQ11LMApproachDistance =	Approach Distance for Presence Detector FP1 RTCZCGQ11LM :  0=far 1=mid 2=close
+* RTCZCGQ11LMMonitoringMode =	Monitoring mode for Presence Detector FP1 RTCZCGQ11LM 1 : 0=undirected 1=left/right ability to check left/right enter/leaving
