@@ -43,7 +43,7 @@ This sensor isn't a Motion Sensor, this is a presence sensor with ability to che
 
 4 parameters for this device
 
-1. You have to set resetMotiondelay': 0, parameter otherwise no motion is detected until a real physical leave
+1. You have to set "resetMotiondelay': 0", parameter otherwise no motion is detected until a real physical leave
 2. Other Parameter
 
 * RTCZCGQ11LMMotionSensibility =  Motion sensibility for Presence Detector FP1 RTCZCGQ11LM : 1=low 2=mid 3=high
