@@ -11,9 +11,22 @@ La liste des objets compatibles est sur le site [https://zigbee.blakadder.com/z4
 
 Les objets nécessitant une configuration particulière :
 
-* [Le détecteur de presence : Presence Detector FP1 RTCZCGQ11LM](#les-d%C3%A9texterus-de-presence)
+* [Lumi Presence Detector FP1 RTCZCGQ11LM](#Lumi-Presence-Detector-FP1-RTCZCGQ11LM)
 
 
-### Les détecteurs de mouvements
+## Lumi Presence Detector FP1 RTCZCGQ11LM
 
-Pour ce capteur de presence il est imperatif de mettre le parametre : resetMotiondelay': 0, sans quoi il n'y a plus de mouvement detecter jusqu'au prochain leave
+Ce capteur n'est pas capteur de mouvement mais de presence, il est capable de detecter si il y a une presence dans une piece.
+
+Pas de zone de detection
+
+4 parametres pour ce module
+
+
+1. Il est imperatif de mettre en parametre : "resetMotiondelay': 0" sinon vous by passer la fonction presence du module
+2. Les autres parametres :
+
+* RTCZCGQ11LMMotionSensibility = Sensibilité de mouvement : 1=faible 2=moyenne 3=haute
+* RTCZCGQ11LMApproachDistance =	Sensibilité de Distance de detection :  0=loin 1=moyenne 2=proche
+* RTCZCGQ11LMMonitoringMode =	type de detection : 0=global 1=gauche/droite capacité de detecter les entrée/sortie a droite/gauche
+
