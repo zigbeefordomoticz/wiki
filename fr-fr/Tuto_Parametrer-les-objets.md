@@ -56,9 +56,9 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | OnOffPollingFreq |	Fréquence (en nb de secondes) de rafraîchissement du status On/Off ainsi que le niveau d'intensité. 0 pour désactiver |	Ampoules Gledopto et Philips|
 | PowerPollingFreq |	Fréquence (en nb de secondes) de rafraîchissement de la puissance instantanée consommée. 0 pour désactiver |	Prise BlitzWolf et prise Lumi maeu01 |
 | AC201Polling |	Polling of AC201 and CAC201 status |	Only for OWON AC201 and Casia CAC201 |
-| RTCZCGQ11LMMotionSensibility |	Sensibilité de la détection pour les détecteurs RTCZCGQ11LM/lumi.motion.ac01. 1 faible, 2 moyenne, 3 haute | Pour RTCZCGQ11LM/lumi.motion.ac01 |
-| RTCZCGQ11LMApproachDistance |	Sensibilité de la distance de detection pour les détecteurs RTCZCGQ11LM/lumi.motion.ac01. 0 loin, 1 moyenne, 2 proche |	Pour RTCZCGQ11LM/lumi.motion.ac01 |
-| RTCZCGQ11LMMonitoringMode |	Orientation de la detection pour les détecteurs RTCZCGQ11LM/lumi.motion.ac01. 0 de tous cotés sans differenciation, 1 Gauche/Droite possibilité de detecter le sens d'entré et de sorti  |	Pour RTCZCGQ11LM/lumi.motion.ac01 |
+| RTCZCGQ11LMMotionSensibility |	Sensibilité de la détection pour les détecteurs RTCZCGQ11LM/lumi.motion.ac01 | 1 faible, 2 moyenne, 3 haute | RTCZCGQ11LM/lumi.motion.ac01 |
+| RTCZCGQ11LMApproachDistance |	Sensibilité de la distance de detection pour les détecteurs RTCZCGQ11LM/lumi.motion.ac01 |  0 loin, 1 moyenne, 2 proche |	RTCZCGQ11LM/lumi.motion.ac01 |
+| RTCZCGQ11LMMonitoringMode |	Orientation de la detection pour les détecteurs RTCZCGQ11LM/lumi.motion.ac01 | 0 de tous cotés sans differenciation, 1 Gauche/Droite possibilité de detecter le sens d'entré et de sorti  | RTCZCGQ11LM/lumi.motion.ac01 |
 
 *Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/HowTo_Device-parameters.md) en anglais.*
 
