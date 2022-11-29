@@ -43,4 +43,4 @@ This will create an export.json file that you can save.
 * What do you expect
 * The logs from the pairing process
 
-Please create an issue here on GitHub: https://github.com/pipiche38/Domoticz-Zigate/issues/new?assignees=&labels=&template=Add_New_Hardware.md&title= with the here above informations
+Please create an issue here on GitHub: [Create a Github Issue](https://github.com/pipiche38/Domoticz-Zigate/issues/new?assignees=&labels=&template=Add_New_Hardware.md&title=) with the here above informations
