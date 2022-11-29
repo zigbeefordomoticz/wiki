@@ -62,6 +62,7 @@ Le __01/04/2022__, nous avons sortie la version __stable6__ du plugin. Pour migr
 * [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
 * [Ajouter un nouvel objet](Tuto_Appairage-objet.md)
 * [Supprimer un objet appairé](Tuto_Supprimer-un-objet.md)
+* [Gérer un objet non-optimisé](Tuto_Gerer-objet-non-optimise.md)
 * [Paramétrer les objets](Tuto_Parametrer-les-objets.md)
 * [Utiliser les outils](Tuto_Utiliser-les-outils.md)
 * [Gérer les groupes](Tuto_Gerer-les-groupes.md)
