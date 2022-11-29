@@ -6,7 +6,7 @@ We try to keep a non-exhaustive list of compatible objects on the site [https://
 
 ### My object is referenced for the Plugin :
 
-If your item is listed on the site with the label __Zigbee for Domoticz__, it is that it is __certified__ : its operation with the plugin has been validated.
+If your item is listed on the site with the label __Zigbee for Domoticz__, it is that it is __optimized__ : its operation with the plugin has been validated.
 Now, there may be specifics to use it: see the [Particularités de certains objets](Readme.md#devices-specifics)
 
 
