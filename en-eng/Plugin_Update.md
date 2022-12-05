@@ -14,7 +14,7 @@ Since version 6.3, it is now possible to update the plugin form the plugin admin
 
 * Go in your DomoticZ directory using a command line and open the plugins directory then the Domoticz-Zigate-Plugin directory.
 
-* Run: `git submodule update --init --recursive`
+* Run: `git pull; git submodule update --init --recursive`
 
 __Note :__ Since version 6, the git pull is no longer enough.
 
