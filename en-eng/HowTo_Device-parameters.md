@@ -64,6 +64,9 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | vibrationAqarasensitivity | set the Aqara vibration sensibility level low, medium are high are the correct values |
 | resetMotiondelay | when it is not possible to configure the OnOffdelay for device like Aqara motion, you can overwrite the 30 seconds delay with that | Aqara, and other motion devices |
 | resetSwitchSelectorPushButton | When you have a switch Selector, you might want to have it coming back to the Off position after a while. This is tru when your Switch selector works as a push buttons | Scene controler |
-| RTCZCGQ11LMMotionSensibility | Motion sensibility for Presence Detector FP1 RTCZCGQ11LM | 1=low 2=mid 3=high | Presence Detector FP1 RTCZCGQ11LM  |
-| RTCZCGQ11LMApproachDistance |	Approach Distance for Presence Detector FP1 RTCZCGQ11LM |  0=far 1=mid 2=close |	Presence Detector FP1 RTCZCGQ11LM |
-| RTCZCGQ11LMMonitoringMode |	Monitoring mode for Presence Detector FP1 RTCZCGQ11LM | 0=undirected 1=left/right ability to check left/right enter/leaving  | Presence Detector FP1 RTCZCGQ11LM  |
+| RTCZCGQ11LMMotionSensibility | Motion sensibility for Presence Detector FP1 RTCZCGQ11LM, 1=low 2=mid 3=high | Presence Detector FP1 RTCZCGQ11LM  |
+| RTCZCGQ11LMApproachDistance |	Approach Distance for Presence Detector FP1 RTCZCGQ11LM,  0=far 1=mid 2=close |	Presence Detector FP1 RTCZCGQ11LM |
+| RTCZCGQ11LMMonitoringMode |	Monitoring mode for Presence Detector FP1 RTCZCGQ11LM, 0=undirected 1=left/right ability to check left/right enter/leaving  | Presence Detector FP1 RTCZCGQ11LM  |
+| TuyaMotoReversal | Manage the motor direction. Used with Curtain Smart Switch, 0=Standard sens (UP for opening / DOWN for closing), 1=Reversed sens | Tuya TS130F __TZ3000_ltiqubue |
+| TuyaBackLight | Allow to backlight the active button on Curtain Smart Switch, 0=Active button lightning, 1=No backlight | Tuya TS130F __TZ3000_ltiqubue |
+| moesCalibrationTime | Define the duration of motor activation, <value>=[nb 1/10 second], Value 10 = 1 second | Tuya TS130F __TZ3000_ltiqubue |
