@@ -43,24 +43,24 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 
 ## evaluation
 
-_value_ is a special variable which contained the zigbee device value
+* _value_ is a special variable which contained the zigbee device value
 
 1. Transform a centi-degree _value_ into degree
 
-``` "eval": "round(int(value) / 100, 1)", ```
+    ``` "eval": "round(int(value) / 100, 1)", ```
 
-1. transform the received data ( _value_ ) into the Atmo Pressure as per the Zigbee standard
+2. transform the received data ( _value_ ) into the Atmo Pressure as per the Zigbee standard
 
-``` "eval": "round(int(value) * pow( 10, scale), 1)", ```
+    ``` "eval": "round(int(value) * pow( 10, scale), 1)", ```
 
-1. transform the Scaled Pressure measurement.
+3. transform the Scaled Pressure measurement.
 
-   1. retreive the _scale_ in attribute 0x0014 of cluster 0x0403
-   1. evaluate the the formula with the retreived _scale_ information
+   a. retreive the _scale_ in attribute 0x0014 of cluster 0x0403
+   b. evaluate the the formula with the retreived _scale_ information
 
-```json
-{
- "evalInputs": {"scale": { "Cluster": "0403", "Attribute": "0014"}},
- "eval": "round(int(value) * pow( 10, scale), 1)",
-}
- ```
+    ```json
+    {
+     "evalInputs": {"scale": { "Cluster": "0403", "Attribute": "0014"}},
+     "eval": "round(int(value) * pow( 10, scale), 1)",
+    }
+     ```
