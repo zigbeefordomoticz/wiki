@@ -28,6 +28,8 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 | attribute | valueList     |         |  List of values with a dedcoded value in string |
 | attribute | SpecialValues |         |  List of special values |
 | attribute | majdomoformat |  result of eval |  format on how the value should be formated before sent to majDomoDevice ( str, float, int ) |
+| attribute | majdomoCluster |        |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
+| attribute | majdomoAttribute | none |  Force to do the majDomoDevice on a specific attribute |
 | attribute | overwrite     |         |  Overwrite the value, by the one given here |
 | attribute | evalInputs    |         |  list of variables to be retreived in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
 | evalInputs | yyyy         |         |  variable name to be used in the eval string |
