@@ -55,8 +55,8 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 
 3. transform the Scaled Pressure measurement.
 
-   a. retreive the _scale_ in attribute 0x0014 of cluster 0x0403
-   b. evaluate the the formula with the retreived _scale_ information
+   1. retreive the _scale_ in attribute 0x0014 of cluster 0x0403
+   2. evaluate the the formula with the retreived _scale_ information
 
     ```json
     {
