@@ -5,7 +5,7 @@
 It might happen that your device is well paired with the coordinator and the plugin, but do not behave has expected.
 The plugin is providing a way to overwrite the Zigbee standard behaviour by adding specifics to the device plugin configuration.
 
-## Commands
+## Properties
 
 | Level     | Object Name   | default | Description |
 | -----     | -----------   | ------- | ----------- |
