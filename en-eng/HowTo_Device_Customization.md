@@ -7,36 +7,36 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 
 ## Properties
 
-| Level     | Object Name   | default | Description |
-| -----     | -----------   | ------- | ----------- |
-| main      | ClusterId     |         |  Cluster ID defined in this json file |
-| main      | Description   |         |  Description of the Cluster ID |
-| main      | Version       |         |  Version number of this cluster definition |
-| main      | Enabled       |         |  Is this Cluster definition is enabled or not |
-| main      | Attributes    |         |  list of Attribute and their definition |
-| attribute | xxxx          |         |  Object describing attribute xxxx of ClusterId |
-| attribute | Enabled       |         |  Is this attribute definition enabled or nor |
-| attribute | Name          |         |  Name of the attribute |
-| attribute | DataType      |         |  Attribute data type in hexa |
-| attribute | Range         |         |  Attribute value ranges in hexa |
-| attribute | Acc           |         |  Attribute access right ( RP: Reporting, R: read, W, write |
-| attribute | Default       |         |  Attribute default value |
-| attribute | Mandatory     |         |  Attribute mandatory flag. |
-| attribute | dzClusterType |         |  Plugin ClusterType info ( Lux, Switch, Motion, ...) |
-| attribute | eval          |  value  |  string containing a forumla to compute the attribute value. Based on python3 eval() function|
-| attribute | function      |         |  Function name define in a module in the DevicesModules (see Devices modules for more info.) |
-| attribute | action        |         |  List of action(s) to be triggered
-| attribute | valueList     |         |  List of values with a dedcoded value in string |
-| attribute | SpecialValues |         |  List of special values |
-| attribute | MajDomoDeviceValidValues | True | Evaluation which should return True or False, and which will condition the MajDomoDevice call |
-| attribute | majdomoformat |  result of eval |  format on how the value should be formated before sent to majDomoDevice ( str, float, int ) |
-| attribute | majdomoCluster |        |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
-| attribute | majdomoAttribute | none |  Force to do the majDomoDevice on a specific attribute |
-| attribute | overwrite     |         |  Overwrite the value, by the one given here |
-| attribute | evalInputs    |         |  list of variables to be retreived in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
-| evalInputs | yyyy         |         |  variable name to be used in the eval string |
-| evalInputs | Cluster      |         |  cluster from which the variable value should be retreived |
-| evalInputs | Attribute    |         |  attribute from which the variable should be retreived |
+| Level      | Object Name              | default | Description |
+| -----      | -----------              | ------- | ----------- |
+| main       | ClusterId                |         |  Cluster ID defined in this json file |
+| main       | Description              |         |  Description of the Cluster ID |
+| main       | Version                  |         |  Version number of this cluster definition |
+| main       | Enabled                  |         |  Is this Cluster definition is enabled or not |
+| main       | Attributes               |         |  list of Attribute and their definition |
+| attribute  | xxxx                     |         |  Object describing attribute xxxx of ClusterId |
+| attribute  | Enabled                  |         |  Is this attribute definition enabled or nor |
+| attribute  | Name                     |         |  Name of the attribute |
+| attribute  | DataType                 |         |  Attribute data type in hexa |
+| attribute  | Range                    |         |  Attribute value ranges in hexa |
+| attribute  | Acc                      |         |  Attribute access right ( RP: Reporting, R: read, W, write |
+| attribute  | Default                  |         |  Attribute default value |
+| attribute  | Mandatory                |         |  Attribute mandatory flag. |
+| attribute  | dzClusterType            |         |  Plugin ClusterType info ( Lux, Switch, Motion, ...) |
+| attribute  | eval                     |  value  |  string containing a forumla to compute the attribute value. Based on python3 eval() function|
+| attribute  | evalFunction             |         |  Function name define in a module in the DevicesModules (see Devices modules for more info.) |
+| attribute  | action                   |         |  List of action(s) to be triggered
+| attribute  | valueList                |         |  List of values with a decoded value in string |
+| attribute  | SpecialValues            |         |  List of special values |
+| attribute  | MajDomoDeviceValidValues | True    | Evaluation which should return True or False, and which will condition the MajDomoDevice call |
+| attribute  | majdomoformat            | result of eval |  format on how the value should be formated before sent to majDomoDevice ( str, float, int ) |
+| attribute  | majdomoCluster           |         |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
+| attribute  | majdomoAttribute         | none    |  Force to do the majDomoDevice on a specific attribute |
+| attribute  | overwrite                |         |  Overwrite the value, by the one given here |
+| attribute  | evalInputs               |         |  list of variables to be retreived in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
+| evalInputs | yyyy                     |         |  variable name to be used in the eval string |
+| evalInputs | Cluster                  |         |  cluster from which the variable value should be retreived |
+| evalInputs | Attribute                |         |  attribute from which the variable should be retreived |
 
 ## __action__
 
