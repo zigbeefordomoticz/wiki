@@ -24,9 +24,11 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 | attribute | Mandatory     |         |  Attribute mandatory flag. |
 | attribute | dzClusterType |         |  Plugin ClusterType info ( Lux, Switch, Motion, ...) |
 | attribute | eval          |  value  |  string containing a forumla to compute the attribute value. Based on python3 eval() function|
+| attribute | function      |         |  Function name define in a module in the DevicesModules (see Devices modules for more info.) |
 | attribute | action        |         |  List of action(s) to be triggered
 | attribute | valueList     |         |  List of values with a dedcoded value in string |
 | attribute | SpecialValues |         |  List of special values |
+| attribute | MajDomoDeviceValidValues | True | Evaluation which should return True or False, and which will condition the MajDomoDevice call |
 | attribute | majdomoformat |  result of eval |  format on how the value should be formated before sent to majDomoDevice ( str, float, int ) |
 | attribute | majdomoCluster |        |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
 | attribute | majdomoAttribute | none |  Force to do the majDomoDevice on a specific attribute |
@@ -66,3 +68,10 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
      "eval": "round(int(value) * pow( 10, scale), 1)",
     }
      ```
+
+## Device module
+
+### overview
+
+instead of using eval which is limited to simple expression, you can implement a full python function to handle the value as an input and return the result.
+If returning None, no action will be taken
