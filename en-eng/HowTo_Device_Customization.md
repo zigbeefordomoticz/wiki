@@ -38,7 +38,7 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 | evalInputs | ClusterId                |         |  cluster from which the variable value should be retreived |
 | evalInputs | AttributeId              |         |  attribute from which the variable should be retreived |
 
-## __action__
+## ActionList
 
 | name          | function |
 | ----          | -------- |
