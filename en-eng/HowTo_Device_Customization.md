@@ -119,7 +119,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
    1. as shown on the here above screenshot you'll see a list of device, and the one with the yellow icon refer to devices for which there is no associated config file for the plugin and their behaviour might not be optimum.
 
-   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste in the Json viewer ( like that one [JsonViewer](http://jsonviewer.stack.hu/]). You will see a resultat like this one
+   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste in the Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer). You will see a resultat like this one
 
     ![JsonViewer Exemple](../Images/jsonviewer.png)
 
