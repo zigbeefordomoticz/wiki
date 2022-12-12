@@ -115,7 +115,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
    1. open the WebUI and go to the Device Management section
 
-    ![WebUI:Device Management](../Images/EN_WebUI_Device-Management-Not_Optimized.png)
+    ![WebUI:Device Management](Images/EN_WebUI_Device-Management-Not_Optimized.png)
 
    1. as shown on the here above screenshot you'll see a list of device, and the one with the yellow icon refer to devices for which there is no associated config file for the plugin and their behaviour might not be optimum.
 
