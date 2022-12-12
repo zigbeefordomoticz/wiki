@@ -128,6 +128,8 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     1. You have to create the file under the `Conf/Certified/00Local` folder
     1. You have to create the file with a specific name. The name is based on the Zigbee Model identifier you can get in the json file, look at attribute `Model`, and create the file as _modelname_.json.
 
+    for exemple if we look after the Json file above, the Zigbee model identifier is __lumi.weather__, so you will create a file name __Conf/Certified/00Local/lumi.weather.json__
+
     you can initialize the file with the following content, that we will show how to update in the next steps
 
     ```json
