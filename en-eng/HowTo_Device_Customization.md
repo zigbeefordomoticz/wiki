@@ -102,3 +102,52 @@ If returning None, no action will be taken
         "konke_onoff": konke_onoff,
     }
     ```
+
+### Optimize a non-yet optimized device
+
+It is likely that your device - if fully Zigbee 3.0 compliant - works well with the plugin. It means that you have paired the device, and automatically the plugin made a descovery of the device features and created the corresponding domoticz widgets.
+
+In that case, it might be efficient to get the plugin fully aware of what the device is and is not capable.
+
+To do so, you have to create a 'config' file under the `Conf/Certified/\<manufacturer name\>` folder.
+
+1. First you need to extract raw device informations from the plugin.
+
+   1. open the WebUI and go to the Device Management section
+
+    ![WebUI:Device Management](../Images/EN_WebUI_Device-Management-Not_Optimized.png)
+
+   1. as shown on the here above screenshot you'll see a list of device, and the one with the yellow icon refer to devices for which there is no associated config file for the plugin and their behaviour might not be optimum.
+
+   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste in the Json viewer ( like that one [JsonViewer](http://jsonviewer.stack.hu/]). You will see a resultat like this one
+
+    ![JsonViewer Exemple](../Images/jsonviewer.png)
+
+1. Create the configuration file for this device
+
+    1. You have to create the file under the `Conf/Certified/00Local` folder
+    1. You have to create the file with a specific name. The name is based on the Zigbee Model identifier you can get in the json file, look at attribute `Model`, and create the file as _modelname_.json.
+
+    you can initialize the file with the following content, that we will show how to update in the next steps
+
+    ```json
+    {
+        "_comment": "",
+        "_blakkader": "",
+        "_version": "",
+        "Ep": {
+            "01": {
+                "0000": "",
+                "Type": ""
+            }
+        },
+        "Type": "",
+        "ClusterToBind": [ ],
+        "ConfigureReporting": {
+        },
+        "ReadAttributes": {
+        },
+        "Param": {
+        },
+    }
+    ```
