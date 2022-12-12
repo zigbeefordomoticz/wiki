@@ -135,7 +135,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     ```json
     {
         "_comment": "",
-        "_blakkader": "",
+        "_blakadder": "",
         "_version": "",
         "Ep": {
             "01": {
@@ -153,3 +153,9 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
         },
     }
     ```
+
+    1. Update the attributes
+
+        * __"\_comment":__  _put what ever comment you would like. We are recommending to put at least the Device Product Name and manufacturer_
+        * __"\_blakadder":__  _you can add here the link to the [blakadder](https://zigbee.blakadder.com/) web site, where your device is referenced. If the device is not yet referenced, we strongly recommend you to request to get it in._
+        * __"\_version":__ _this is a version number you can put._
