@@ -2,6 +2,7 @@
 ## Standard Cluster Domoticz Widget association
 
  | Cluster | Widget |
+ | ------- | ------ |
  | 0001    | Voltage |
  | 0006    | Switch |
  | 0008    | LvlControl |
@@ -9,7 +10,7 @@
  | 000c    | Analog |
  | 0101    | DoorLock |
  | 0102    | WindowCovering |
- | 0201    | Temp/ThermoSetpoint/ThermoMode/Valve *|
+ | 0201    | Temp/ThermoSetpoint/ThermoMode/Valve \*|
  | 0202    | FanControl |
  | 0300    | ColorControl |
  | 0400    | Lux |
@@ -17,10 +18,10 @@
  | 0403    | Baro |
  | 0405    | Humi |
  | 0406    | Motion |
- | 0702    | Power/Meter **|
+ | 0702    | Power/Meter \*\*|
  | 0500    | Door |
  | 0502    | AlarmWD |
-| 0b04    | Power/Meter/Ampere/Voltage***|
+| 0b04    | Power/Meter/Ampere/Voltage \*\*\*|
 
 \* 0201 is the Thermostat cluster. This cluster can provide several informations such as:
     Local temperature
