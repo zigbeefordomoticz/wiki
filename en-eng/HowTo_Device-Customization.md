@@ -198,6 +198,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
                     "Type": "Switch"
                 }
            },
+           "Type": "",
         .....
         ```
 
