@@ -23,13 +23,8 @@
  | 0502    | AlarmWD |
 | 0b04    | Power/Meter/Ampere/Voltage \*\*\*|
 
-\* 0201 is the Thermostat cluster. This cluster can provide several informations such as:
-    Local temperature
-    SetPoint
-    Thermostat Mode
-    Valve status
-
-    depending on the device not all of the sensor could be enabled.
+depending on the device not all of the sensor could be enabled.
+\* 0201 is the Thermostat cluster. This cluster can provide several informations such as Local temperature, SetPoint, Thermostat Mode, Valve status
 
 \*\* 0702 is the Metering (Smart Energy) cluster. It can report instant power (Power) and summation (Meter)
 
