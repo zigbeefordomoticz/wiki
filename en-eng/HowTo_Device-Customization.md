@@ -215,6 +215,8 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
     In summary __Type__ is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
 
+    More information on the [Cluster -> Widget](Technical/Clusters_Widget.md)
+
 1. Update the ClusterToBind section
 
 1. Update the ConfigureReporting section
