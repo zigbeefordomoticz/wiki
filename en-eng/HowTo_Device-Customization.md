@@ -212,3 +212,5 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
         if you look to the Json you could say that there is less clusters than  the reallity discovered by the plugin.
         Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information accross several Ep.
+
+        In summary __Type__ is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
