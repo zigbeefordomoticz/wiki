@@ -154,27 +154,27 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     }
     ```
 
-    1. Update the attributes
+1. Update the attributes
 
-        * __"\_comment":__  _put what ever comment you would like. We are recommending to put at least the Device Product Name and manufacturer_
-        * __"\_blakadder":__  _you can add here the link to the [blakadder](https://zigbee.blakadder.com/) web site, where your device is referenced. If the device is not yet referenced, we strongly recommend you to request to get it in._
-        * __"\_version":__ _this is a version number you can put._
+    * __"\_comment":__  _put what ever comment you would like. We are recommending to put at least the Device Product Name and manufacturer_
+    * __"\_blakadder":__  _you can add here the link to the [blakadder](https://zigbee.blakadder.com/) web site, where your device is referenced. If the device is not yet referenced, we strongly recommend you to request to get it in._
+    * __"\_version":__ _this is a version number you can put._
 
-    1. Update the "Ep" section
+1. Update the "Ep" section
 
-        Here we have to declare what are the Endpoint (EP) the device has and what are the Clusters available on each of the EP. for more information on Ep and Clusters I suggest you to look after the [Zigbee technical presentation](https://csa-iot.org/wp-content/uploads/2021/12/zigbee-technical-presentation.zip)
+    Here we have to declare what are the Endpoint (EP) the device has and what are the Clusters available on each of the EP. for more information on Ep and Clusters I suggest you to look after the [Zigbee technical presentation](https://csa-iot.org/wp-content/uploads/2021/12/zigbee-technical-presentation.zip)
 
-        During pairing, the plugin started a discovery process and interviewed the device for the list of endpoints, and the supported clusters for each of the endpoint. This information will be found on the Json.
+    During pairing, the plugin started a discovery process and interviewed the device for the list of endpoints, and the supported clusters for each of the endpoint. This information will be found on the Json.
 
-        In the here after exemple you can see a somehow complex device which has 3 endpoints.
+    In the here after exemple you can see a somehow complex device which has 3 endpoints.
 
-        ![Json Complex EndPoint Device CMS323](../Images/Json_Endoint.png)
+    ![Json Complex EndPoint Device CMS323](../Images/Json_Endoint.png)
 
-        We can see :
+    We can see :
 
-        3 Endpoints : 0x01, 0x02 and 0x04 and we see for each of the ep the associated cluster.
+    3 Endpoints : 0x01, 0x02 and 0x04 and we see for each of the ep the associated cluster.
 
-        This will result in the following config file where fo each Endpoint we have listed the available cluster and we have also define what are the associated Domoticz Widgets.
+    This will result in the following config file where fo each Endpoint we have listed the available cluster and we have also define what are the associated Domoticz Widgets.
 
         ```json
         {
@@ -202,21 +202,21 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
         .....
         ```
 
-        | Ep | Widget | Cluster source of information |
-        | -- | ------ | ----------------------------- |
-        | 01 | Motion | The motion detection will come from the Cluster 0x0500 ( IAS ), Domoticz will switch the Motion widget from On to Off depending on the notification |
-        |    | Voltage| The device will send voltage information via the cluster 0x0001 ( Power ), and domoticz will displayed thge voltage value |
-        | 02 | Temperature | The device will send Temperature information via cluster 0x0402 |
-        |    | Humidity | Humidity info will be provided from cluster 0x0405 |
-        | 04 | Switch | The device offer the possibility to detect vibration on cluster 04 and the cluster 0500 will be used for |
+    | Ep | Widget | Cluster source of information |
+    | -- | ------ | ----------------------------- |
+    | 01 | Motion | The motion detection will come from the Cluster 0x0500 ( IAS ), Domoticz will switch the Motion widget from On to Off depending on the notification |
+    |    | Voltage| The device will send voltage information via the cluster 0x0001 ( Power ), and domoticz will displayed thge voltage value |
+    | 02 | Temperature | The device will send Temperature information via cluster 0x0402 |
+    |    | Humidity | Humidity info will be provided from cluster 0x0405 |
+    | 04 | Switch | The device offer the possibility to detect vibration on cluster 04 and the cluster 0500 will be used for |
 
-        if you look to the Json you could say that there is less clusters than  the reallity discovered by the plugin.
-        Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information accross several Ep.
+    if you look to the Json you could say that there is less clusters than  the reallity discovered by the plugin.
+    Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information accross several Ep.
 
-        In summary __Type__ is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
+    In summary __Type__ is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
 
-    1. Update the ClusterToBind section
+1. Update the ClusterToBind section
 
-    1. Update the ConfigureReporting section
+1. Update the ConfigureReporting section
 
-    1. Update the ReadAttributes section
+1. Update the ReadAttributes section
