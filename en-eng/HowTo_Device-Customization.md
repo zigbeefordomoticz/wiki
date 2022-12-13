@@ -243,6 +243,16 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     The Configure Reporting command is used to configure the reporting mechanism for one or more of the attributes of a cluster.
     Usally in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well
 
+```json
+
+    "ConfigureReporting": {
+        "0001": { "Attributes": { "0021": { "DataType": "20", "MinInterval": "0E10", "MaxInterval": "A8C0", "TimeOut": "0000", "Change": "01" } }},
+        "0402": { "Attributes": { "0000": { "DataType": "29", "MinInterval": "003C", "MaxInterval": "0384", "TimeOut": "0000", "Change": "0032" } } },
+        "0405": { "Attributes": { "0000": { "DataType": "21", "MinInterval": "003C", "MaxInterval": "0384", "TimeOut": "0000", "Change": "0032" } } }
+    },
+
+````
+
 1. Update the ReadAttributes section
 
     The Read Attribute command is used to query the device on attributes.
