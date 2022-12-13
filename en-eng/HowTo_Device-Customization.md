@@ -133,6 +133,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     you can initialize the file with the following content, that we will show how to update in the next steps
 
     ```json
+    
     {
         "_comment": "",
         "_blakadder": "",
@@ -153,6 +154,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
         "Param": {
         },
     }
+
     ```
 
 1. Update the attributes
@@ -178,6 +180,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     This will result in the following config file where fo each Endpoint we have listed the available cluster and we have also define what are the associated Domoticz Widgets.
 
         ```json
+
         {
             "Ep": {
                 "01": {
@@ -200,7 +203,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
                 }
            },
            "Type": "",
-        .....
+
         ```
 
     | Ep | Widget | Cluster source of information |
@@ -231,11 +234,9 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     If we follow the __CMS323__  device, we need to bind 01/0001, 02/0001, 04/001, 02/0402, 04/0405
 
     ```json
-    ...
 
     "ClusterToBind": [ "0001", "0402", "0405" ],
 
-    ...
     ```
 
 1. Update the ConfigureReporting section
@@ -243,7 +244,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     The Configure Reporting command is used to configure the reporting mechanism for one or more of the attributes of a cluster.
     Usally in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well
 
-```json
+    ```json
 
     "ConfigureReporting": {
         "0001": { "Attributes": { "0021": { "DataType": "20", "MinInterval": "0E10", "MaxInterval": "A8C0", "TimeOut": "0000", "Change": "01" } }},
@@ -251,7 +252,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
         "0405": { "Attributes": { "0000": { "DataType": "21", "MinInterval": "003C", "MaxInterval": "0384", "TimeOut": "0000", "Change": "0032" } } }
     },
 
-````
+    ````
 
 1. Update the ReadAttributes section
 
