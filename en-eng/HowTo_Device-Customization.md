@@ -214,3 +214,9 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
         Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information accross several Ep.
 
         In summary __Type__ is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
+
+    1. Update the ClusterToBind section
+
+    1. Update the ConfigureReporting section
+
+    1. Update the ReadAttributes section
