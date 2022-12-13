@@ -144,7 +144,8 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
             }
         },
         "Type": "",
-        "ClusterToBind": [ ],
+        
+        ,
         "ConfigureReporting": {
         },
         "ReadAttributes": {
@@ -219,6 +220,43 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
 1. Update the ClusterToBind section
 
+    A __Binding__ is the creation of a unidirectional logical link between a source endpoint/cluster identifier pair and a destination endpoint.
+
+    It might be needed to established a binding between the device and the coordinator in order to receive automatic report such as sensor information.
+
+    In `"ClusterToBind": [ ]` you will be able to list the clusters to be bound with the coordinator. By default , the plugin is looking after the Endpoint list (Ep) and will established a bind for each of the Ep/Cluster existing.
+
+    In case you have a multiple Ep device which serve same cluster, you might want to restrict the binding to only a specific Ep. In such case you can use `"bindEp": [ ]`
+
+    If we follow the __CMS323__  device, we need to bind 01/0001, 02/0001, 04/001, 02/0402, 04/0405
+
+    ```json
+    ...
+
+    "ClusterToBind": [ "0001", "0402", "0405" ],
+
+    ...
+    ```
+
 1. Update the ConfigureReporting section
 
+    The Configure Reporting command is used to configure the reporting mechanism for one or more of the attributes of a cluster.
+    Usally in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well
+
 1. Update the ReadAttributes section
+
+    The Read Attribute command is used to query the device on attributes.
+    In this section we are going to indicate to the plugin which Cluster/Attributes are valid and can be queried.
+
+    ```json
+    
+    "ReadAttributes": {
+        "0000": ["0004","0005","0006","0007"],
+        "0001": [ "0020" ],
+        "0003": [],
+        "0402": [ "0000" ],
+        "0405": [ "0000" ],
+        "0500": [ "0000", "0001", "0002", "0010", "0011" ]
+    },
+    
+    ```
