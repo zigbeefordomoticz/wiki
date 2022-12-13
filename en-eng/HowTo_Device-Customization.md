@@ -133,7 +133,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     you can initialize the file with the following content, that we will show how to update in the next steps
 
     ```json
-    
+
     {
         "_comment": "",
         "_blakadder": "",
@@ -271,3 +271,13 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     },
     
     ```
+
+1. Additional parameters
+
+| Parameter                   | Description |
+| ---------                   | ----------- |
+| VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
+| BatteryDevice               | specify that the device is a battery based device and must be treated as such |
+| BatteryPercentageConverter  | the value will be used to device the value send byt the device. eg. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
+| MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
+| MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
