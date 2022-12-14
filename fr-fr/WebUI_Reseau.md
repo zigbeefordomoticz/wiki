@@ -58,6 +58,8 @@ Un bouton (Chart context menu) en haut à droite du graphique permet de l'affich
 
 ##### L'affichage sans Sibling
 
+Uniquement pour les Zigates
+
 Le Sibling correspond aux objets frères qui peuvent communiquer entre eux sans passer par un parent.
 
 Par défaut, le plugin affiche les liens directs entre les objets mais n'affiche pas les liens Sibling.
@@ -67,6 +69,7 @@ Un exemple de topologie Sans Sibling : on voit que les routeurs (les noeuds) n'o
 ![Topologie réseau sans sibling](Images/FR_WebUI-Reseau-Topologie-sans-sibling.png)
 
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+
 
 ##### L'affichage avec Sibling
 
