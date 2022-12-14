@@ -92,6 +92,8 @@ Vous retrouvez sous cet item un tableau fournissant des informations relatives a
 ------------------------------------------------
 ## Niveau d'interférences
 
+Uniquement pour les Zigates
+
 Voici la page __Niveau d'interférences__ de l'interface Web du plugin :
 
 ![Niveau d'interférences](Images/FR_WebUI-Reseau-Interferences.png)
