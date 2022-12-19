@@ -251,7 +251,7 @@ This error appears when the DomoticZ parameter _API base url_ is not correctly f
 
 When doing the command `pip3 install -r requirements.txt` or `python3 -m pip install -r requirements.txt --upgrade` you get this error.
 
-```
+```log
 ERROR: Failed building wheel for cryptography
 Failed to build cryptography
 ERROR: Could not build wheels for cryptography which use PEP 517 and cannot be installed directly
