@@ -36,6 +36,8 @@ Here you can see more the hierarchical structure of your ZigBee network.
 ------------------------------------------------
 ## Interference level
 
+For Zigate only
+
 Here is the __Interference level__ page of the plugin Web interface :
 
 ![Network Energy ](Images/EN_WebUI-Network-Interference-level.png)
