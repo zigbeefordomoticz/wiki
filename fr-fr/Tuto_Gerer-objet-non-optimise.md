@@ -10,11 +10,14 @@ La page d'accueil du plugin indique la répartition entre les objets optimisés 
 
 ## Explication
 
-Un objet optimisé indique qu'il y a eu un travail de fait pour intégrer cet objet dans la configuration du plugin.
+Un objet optimisé indique qu'il n'y a pas eu de travail effectué pour intégrer cet objet dans la configuration du plugin.
+
 Lorsqu'un nouvel objet est appairé,
 
-* soit il est reconnu comme optimisé et il devrait fonctionné comme attendu,
-* soit le plugin essaye de lui générer des fonctionnalités génériques : l'objet peut fonctionner mais il est possible qu'il ne soit pas 100% fonctionnel.
+* soit il est reconnu comme optimisé et il devrait fonctionner comme attendu,
+* soit le plugin essaye de découvrir ses fonctionnalités par une découverte, alors 2 cas peuvent se présenter
+  1. l'objet de fonctionne pas du tout ou à motié. Dans ce cas un travail d'intégration est à effectuer pour le rendre fonctionnel si compatible
+  1. l'objet fonctionne parfaitement . Dans ce cas il faut vérifier si la découverte s'est bien passée et si il n'y a pas des optimisation à faire.
 
 ## Méthode
 
