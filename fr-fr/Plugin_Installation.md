@@ -149,7 +149,7 @@ Se référer à la page [Installer DomoticZ sur un NAS Synology avec Docker](Inf
 
 ### 4.C - Procédure
 
-Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/plugin`
+Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/plugins`
 
 * Créer un nouveau terminal :
 ![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal.png)
