@@ -148,7 +148,24 @@ DomoticZ doit être installé dans un conteneur Docker __avec un dossier domotic
 Se référer à la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md) pour une explication détaillée de l'installation et du paramétrage de Docker nécessaire.
 
 ### 4.C - Procédure
+Il existe deux procédures pour installer le plugin et les librairies nécessaires, une solution via un script automatiquement lancé par domoticz au lancement du docker, celui-ci vérifie si les librairies sont présentes ainsi que le plugin et une dernière solution manuelle.
 
+#### 4.C.1 Procédure par script
+Cette méthode consiste à utiliser un script dans le repertoire userdata de domoticz. Si vous avez suivi la procédure d'installation, cela correspond à `docker/domoticz`.
+Vous pouvez télécharger directement le script [ici](https://raw.githubusercontent.com/zigbeefordomoticz/Domoticz-Zigbee/dev/Tools/customstart.sh) et l'ajouter dans le répertoire via l'interface graphique ou via terminal :
+
+* Créer un nouveau terminal :
+![Terminal](Images/FR_Synology_Docker_Install_Conteneur_Terminal.png)
+
+* Dans le terminal, lancer les commandes :
+```bash
+cd userdata
+wget https://raw.githubusercontent.com/zigbeefordomoticz/Domoticz-Zigbee/dev/Tools/customstart.sh
+```
+
+Enfin, relancer le Conteneur.
+
+#### 4.C.2 Procédure manuelle
 Le chemin pour le répertoire d'installation du plugin est : `docker/domoticz/plugins`
 
 * Créer un nouveau terminal :
@@ -172,6 +189,8 @@ pip3 install -r requirements.txt
 
 ![GIT](Images/FR_Synology_Docker_Install_Bash_Git.png)
 
+
+### 4.D Configuration du port du WebUI
 * Stopper le Conteneur. Cliquer sur 'Modifier' et aller dans l'onglet 'Paramètres des ports'. Il faut ajouter le port d'accés au WebUI (par défaut 9440) :
  ![Port WebUI](Images/FR_Synology_Docker_Install_Plugin_Ports.png)
 
