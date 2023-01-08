@@ -70,3 +70,5 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | TuyaMotoReversal | Manage the motor direction. Used with Curtain Smart Switch, 0=Standard sens (UP for opening / DOWN for closing), 1=Reversed sens | Tuya TS130F __TZ3000_ltiqubue |
 | TuyaBackLight | Allow to backlight the active button on Curtain Smart Switch, 0=Active button lightning, 1=No backlight | Tuya TS130F __TZ3000_ltiqubue |
 | moesCalibrationTime | Define the duration of motor activation, <value>=[nb 1/10 second], Value 10 = 1 second | Tuya TS130F __TZ3000_ltiqubue |
+| ZG204Z_MotionSensivity | Motion sensitivity 0:low, 1:medium, 2:high | TUYA PIR ZG-204Z |
+| ZG204Z_MotionOccupancyTime | Occupancy keep time 0:10s, 1:30:s, 2:60s, 3:120s | TUYA PIR ZG-204Z |
