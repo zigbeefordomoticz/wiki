@@ -75,7 +75,7 @@ DomoticZ est maintenant opérationnel et vous pouvez y accéder.
 Un dossier plugins est maintenant créé dans le répertoire __docker/domoticz__.
 
 
-Vous pouvez continuer l'installation du Plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md##4---installation-sur-docker)
+Vous pouvez continuer l'installation du Plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md#4---installation-sur-nas-synology-avec-docker)
 
 # Installation des drivers USB
 En fonction du modèle de zigate, le driver USB n'est pas le même.
