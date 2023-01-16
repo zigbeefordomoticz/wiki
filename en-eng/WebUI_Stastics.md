@@ -1,8 +1,10 @@
 # The WebUI stastistics
 
-With the launch of version 6, we added a statistics feature to the WebUI. This allows us to have information about the use of the plugin for the purpose of improving it.
+Like most website operators, Zigbee for Domoticz WEBUi collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. We uses [Matomo](https://fr.matomo.org) (prevously Piwik) for this. Zigbee for Domoticz’s purpose in collecting non-personally identifying information is to better understand how Z4D plugin’s visitors use its website. From time to time, we may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage like:
 
-The solution used to collect this data is  [Matomo](https://fr.matomo.org) (prevously Piwik) The solution used to collect this data is toto whose server we host ourselves..
+* Coordinator type
+* Plugin version
+* Network size.
 
 
 ## cookies
