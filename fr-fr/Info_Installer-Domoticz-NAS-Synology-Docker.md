@@ -78,15 +78,41 @@ Un dossier plugins est maintenant créé dans le répertoire __docker/domoticz__
 Vous pouvez continuer l'installation du Plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md#4---installation-sur-nas-synology-avec-docker)
 
 # Installation des drivers USB
-En fonction du modèle de zigate, le driver USB n'est pas le même.
-* Pour la première version, il faut le fichier __cp210x.ko__, on le trouve sur le de [jadahl.com](http://www.jadahl.com/). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have). Il faudra ensuite mettre le fichier dans le repertoire /lib/modules.
-* Pour la v2, les clés TI ou la conbee, il faut le fichier __ftdi_sio.ko__, à partir de DSM7.0, celui-ci est déjà présent.
-* Pour la conbee 2, il faut également ajouter cdc-acm.ko
+En fonction du modèle de coordinateur, le ou les drivers USB ne sont pas les mêmes :
+* Pour la première version de la zigate ou le dongle Elelabs, il faut le driver __cp210x.ko__, on le trouve sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
+* Pour la zigate v2, les clés à base de chipset TI (Zzh, SonOff version P...) ou la conbee, il faut le fichier __ftdi_sio.ko__. A partir de DSM7.0, celui-ci est déjà présent.
+* Pour la conbee 2, il faut également charger __cdc-acm.ko__, également présent.
+* Pour la SonOff version E à base de chipset Silabs, il faut le driver __ch341.ko__ disponible sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers) de la même manière que pour le driver cp210x.ko.
 
+## Chargement automatique
+Cette solution utilise le planificateur de tâches (panneau de configuration) en créant une tâche déclenchée.
+Cette tâche sera chargée de copier les drivers dans le repertoire /lib/modules car à chaque mise à jour de DSM, les drivers sont supprimés.
+Ensuite, intervient le chargement des drivers dans le noyau.
 
-Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en utilisant la commande avec le fichier correspondant à votre modèle de clé :
+![Planificateur](Images/FR_Synology_Docker_Install_Planificateur_1.png)
+
+J'ai choisi de mettre les fichiers à la racine de mon home, remplacer les xxx par votre répertoire et ne chargez que le nécessaire :
 
 ```
+cd /var/services/homes/xxx
+cp *.ko /lib/modules/
+insmod /lib/modules/usbserial.ko > /dev/null 2>&1
+insmod /lib/modules/cp210x.ko > /dev/null 2>&1
+insmod /lib/modules/ftdi_sio.ko > /dev/null 2>&1
+insmod /lib/modules/cdc-acm.ko > /dev/null 2>&1
+insmod /lib/modules/ch341.ko > /dev/null 2>&1
+```
+
+![Tache](Images/FR_Synology_Docker_Install_Tache.png)
+
+
+
+## Chargement manuel (utilisateur avancé)
+Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en utilisant la commande avec le fichier correspondant à votre modèle de clé après avoir copié les drivers :
+
+```
+cp *.ko /lib/modules/
+
 sudo insmod /lib/modules/usbserial.ko
 
 sudo insmod /lib/modules/cp210x.ko
@@ -94,11 +120,11 @@ OR
 sudo insmod /lib/modules/ftdi_sio.ko
 OR/AND
 sudo insmod /lib/modules/cdc-acm.ko
+OR
+sudo insmod /lib/modules/ch341.ko
 ````
 
 Pour que les drivers soient chargés au démarage du NAS, vous pouvez :
-* Soit utiliser le planificateur de tâches (panneau de configuration) en créeant une tâche déclenchée (j'ai ajouté la copie des fichiers car ils sont supprimés lors des mises à jours de DSM)
-![Tache](Images/FR_Synology_Docker_Install_Tache.png)
 
 
 * Soit ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
@@ -113,6 +139,7 @@ case $1 in
     insmod /lib/modules/cp210x.ko > /dev/null 2>&1
     insmod /lib/modules/ftdi_sio.ko > /dev/null 2>&1
     insmod /lib/modules/cdc-acm.ko > /dev/null 2>&1
+    insmod /lib/modules/ch341.ko > /dev/null 2>&1
     ;;
   stop)
     exit 0
@@ -127,7 +154,5 @@ et de le rendre exécutable :
 ```
 chmod +x /usr/local/etc/rc.d/start-usb-drivers.sh
 ```
-
-(Merci Jadahl)
 
 Rédaction par [@SylvainPer](https://github.com/SylvainPer)
