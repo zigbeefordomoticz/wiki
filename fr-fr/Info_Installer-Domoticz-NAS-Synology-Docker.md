@@ -105,6 +105,7 @@ insmod /lib/modules/ch341.ko > /dev/null 2>&1
 
 ![Tache](Images/FR_Synology_Docker_Install_Tache.png)
 
+Il ne reste plus qu'à redémarrer DSM.
 
 
 ## Chargement manuel (utilisateur avancé)
