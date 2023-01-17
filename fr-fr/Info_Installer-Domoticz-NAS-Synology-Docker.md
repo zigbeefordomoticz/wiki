@@ -80,9 +80,9 @@ Vous pouvez continuer l'installation du Plugin en suivant : [Installation sur Do
 # Installation des drivers USB
 En fonction du modèle de coordinateur, le ou les drivers USB ne sont pas les mêmes :
 * Pour la première version de la zigate ou le dongle Elelabs, il faut le driver __cp210x.ko__, on le trouve sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
-* Pour la zigate v2, les clés à base de chipset TI (Zzh, SonOff version P...) ou la conbee, il faut le fichier __ftdi_sio.ko__. A partir de DSM7.0, celui-ci est déjà présent.
+* Pour la zigate v2, les clés à base de chipset TI (Zzh-p, SonOff version P...) ou la conbee, il faut le fichier __ftdi_sio.ko__. A partir de DSM7.0, celui-ci est déjà présent.
 * Pour la conbee 2, il faut également charger __cdc-acm.ko__, également présent.
-* Pour la SonOff version E à base de chipset Silabs, il faut le driver __ch341.ko__ disponible sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers) de la même manière que pour le driver cp210x.ko.
+* Pour la SonOff version E à base de chipset Silabs ou la Zzh d'Electrolama, il faut le driver __ch341.ko__ disponible sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers) de la même manière que pour le driver cp210x.ko.
 
 ## Chargement automatique
 Cette solution utilise le planificateur de tâches (panneau de configuration) en créant une tâche déclenchée.
