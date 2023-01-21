@@ -1,6 +1,3 @@
-DRAFT
-
-
 # Tutorial - Installation with Docker on Synology (DSM 7.x)
 
 This tutorial explains how to install Domoticz with the embedded Docker application on a Synology NAS.
@@ -17,7 +14,7 @@ If it's a migration from another system, first do a [backup](Plugin_Backup.md).
 
 # DomoticZ installation
 
-Lanch Docker, you should have the Overview.
+Launch Docker, you should have the Overview.
 Select Registry :
 ![Overview](Images/EN_Synology_Docker_Install_Home.png)
 
@@ -86,11 +83,11 @@ Following the coordinator model, the USB drivers differ:
 
 ## Automatic loading at startup
 This solution uses the task scheduler (Conftrol pannel) by creating a Triggered Task.
-This task will copy the needed drivers in /lib/modules and load them in the kernell. I advise the copy as the drivers are removed on DSM upgrade.
+This task will copy the needed drivers in /lib/modules and load them in the kernel. I advise the copy as the drivers are removed on DSM upgrade.
 
 ![Planificateur](Images/EN_Synology_Docker_Install_Planificateur_1.png)
 
-I choose to let the drivers in my home, replace the directory by yours :
+I choose to let the drivers in my home, replace the directory by yours:
 
 ```
 cd /var/services/homes/xxx
@@ -124,7 +121,8 @@ OR
 sudo insmod /lib/modules/ch341.ko
 ````
 
-If you want to load them automaticly, you can use the Task scheduler (see above) or use a script run at startup:
+If you want to load them automatically, you can use the Task scheduler (see above) or use a script run at startup:
+
 Add a file start-usb-drivers.sh in the folder /usr/local/etc/rc.d/start-usb-drivers.sh
 
 ```
