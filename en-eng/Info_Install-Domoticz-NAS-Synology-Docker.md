@@ -1,86 +1,83 @@
 DRAFT
 
 
-# Tutoriel - Installation sur Synology avec Docker 
+# Tutorial - Installation with Docker on Synology (DSM 7.x)
 
-Ce tutoriel explique comment installer DomoticZ et le Plugin avec Docker sur un NAS Synology.
+This tutorial explains how to install Domoticz with the embedded Docker application on a Synology NAS.
 
-C'est un pré-requis à l'installation du Plugin sous Docker [Installation sur Docker dans un NAS Synology](Plugin_Installation.md#4---installation-sur-nas-synology-avec-docker)
+These are the first steps before [Installing the plugin on Synology](Plugin_Installation.md#3---installation-running-on-synology-nas)
+* 1 - [DomoticZ installation](#DomoticZ-installation)
+* 2 - [USB drivers installation](#USB-drivers-installation)
 
-# Avant propos
-Ce tutoriel suppose que Docker est déjà installé sur votre NAS (Centre de paquets)
+# Foreword
+You first need the docker application installed (Application center)
 
-S'il s'agit d'une migration, vous devez :
-
-* Sur la page Paramètre, Sauvegarde / restauration, Sauvegarder la base de données
-* Copier et sauvegarder le contenu du dossier Data/ du Plugin
-
+If it's a migration from another system, first do a [backup](Plugin_Backup.md).
 
 
-# Installation de DomoticZ
+# DomoticZ installation
 
-Lancer Docker, vous arrivez sur la Vue d'ensemble.
-Cliquer sur Registre :
-![Vue d'ensemble](Images/EN_Synology_Docker_Install_Home.png)
-
-
-Cherchez DomoticZ dans la barre en haut à droite :
-![Registre](Images/EN_Synology_Docker_Install_Registre_1.png)
+Lanch Docker, you should have the Overview.
+Select Registry :
+![Overview](Images/EN_Synology_Docker_Install_Home.png)
 
 
-Double cliquez sur l'image souhaité. Je choisis l'officiel, domoticz/domoticz. Il faut choisir sur quelle branche du projet on souhaite être : stable ou beta.
-![Stable ou Beta](Images/EN_Synology_Docker_Install_Registre_2.png)
+Look for DomoticZ in the search bar (top right):
+![Registry](Images/EN_Synology_Docker_Install_Registre_1.png)
 
 
-Ensuite, aller dans Image:
+Double click on the official image (domoticz/domoticz) and choose for which version you need. Stable or beta allows to be on the last corresponding version.
+![Stable or Beta](Images/EN_Synology_Docker_Install_Registre_2.png)
+
+
+Next, wait for the download and go in Image:
 ![Image](Images/EN_Synology_Docker_Install_Image.png)
 
 
-Double cliquer sur l'image DomoticZ. Nous arrivons dans les paramètres nécessaires à la création du Conteneur. En premier lieu, nous choisissons l'interface réseau, dans mon cas, bridge.
+Double click on the DomoticZ image. A new window open with the necessary parameters for the container creation. First step, network interface, select the default one:
 ![Creation](Images/EN_Synology_Docker_Install_Creation_Conteneur.png)
 
-Choisir un nom et cocher "Exécuter le conteneur à l'aide de privilèges élevés", ainsi que "Activer le redémarrage automatique", puis valider "Suivant".
-![Redémarrage automatique](Images/EN_Synology_Docker_Install_Param_1.png)
+Choose a name and check "Execute container using high privilege" and "Enable auto-restart", then validate with "Next".
+![Parameters](Images/EN_Synology_Docker_Install_Param_1.png)
 
-Ensuite, choisir l'onglet Ports et modifier les 'Auto' par des ports fixes.
-Le port SSL 443 étant déjà utilisé par le NAS, il faut en choisir un autre :
+You need to choose port numbers and modify the 'Auto' by the wanted one, the auto option will generate new port numbers at restart and you'll need to open docker to take notice.
+The SSL port 443 is currently used by DSM, you need to choose another one (or let Auto if you don't plan to use it):
 ![Ports](Images/EN_Synology_Docker_Install_Ports.png)
 
-Cette partie est très importante pour le Plugin car elle va permette d'avoir accès aux plugins via File Station.
-Il faut cliquer sur "Ajouter un dossier".
-![Ajouter un dossier](Images/EN_Synology_Docker_Install_Param_Volume_1.png)
+This part is quite important as it allows to keep outside docker the userdatas (database, plugins, scripts...) and gain access with DSM interface (file station). You need to select "Add Folder":
+![Add Folder](Images/EN_Synology_Docker_Install_Param_Volume_1.png)
 
 
-Sélectionner docker puis "Créer dossier" et le nommer domoticz.
-![Ajouter un dossier docker/domoticz](Images/EN_Synology_Docker_Install_Param_Volume_2.png)
+Select docker then "Crate folder" and name it domotciz.
+![Add folder docker/domoticz](Images/EN_Synology_Docker_Install_Param_Volume_2.png)
 
 
-Une fois le dossier créé, il faut indiquer le chemin d'accès : `/opt/domoticz/userdata`
+Once the folder has been created, you must indicate the access path: `/opt/domoticz/userdata`
 ![/opt/domoticz/userdata](Images/EN_Synology_Docker_Install_Param_Volume_3.png)
 
 
 
 
-Et voilà, la configuration est faite, appliquer et faire suivant.
-Le dernier écran propose un résumé avant la création du Conteneur :
+And that's it, the configuration is done, apply and do next.
+The last screen offers a summary before the container is created:
 ![Resume](Images/EN_Synology_Docker_Install_Conteneur_Resume.png)
 
-
-Aller dans l'onglet Conteneur, notre nouveau Conteneur est créé:
+Go to the Container tab, our new container is created:
 ![Conteneur](Images/EN_Synology_Docker_Install_Conteneur.png)
 
 
-Double cliquer dessus pour accéder aux détails :
+Double click on it to access the details:
 ![Details](Images/EN_Synology_Docker_Install_Conteneur_Details.png)
 
 
-DomoticZ est maintenant opérationnel et vous pouvez y accéder.
-Un dossier plugins est maintenant créé dans le répertoire __docker/domoticz__.
+DomoticZ is now operational and you can access it.
+A plugins folder is now created in the directory __docker/domoticz__.
 
 
-Vous pouvez continuer l'installation du Plugin en suivant : [Installation sur Docker dans un NAS Synology](Plugin_Installation.md#4---installation-sur-nas-synology-avec-docker)
+You can continue the installation of the Plugin by following:  [Installing the plugin on Synology](Plugin_Installation.md#3---installation-running-on-synology-nas)
 
-# Installation des drivers USB
+
+# USB drivers installation
 En fonction du modèle de coordinateur, le ou les drivers USB ne sont pas les mêmes :
 * Pour la première version de la zigate, le dongle Elelabs, la clé SonOff version P, il faut le driver __cp210x.ko__, on le trouve sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
 * Pour la zigate v2 ou la conbee, il faut le fichier __ftdi_sio.ko__. A partir de DSM7.0, celui-ci est déjà présent.
