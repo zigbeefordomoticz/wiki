@@ -48,7 +48,7 @@ This part is quite important as it allows to keep outside docker the userdatas (
 ![Add Folder](Images/EN_Synology_Docker_Install_Param_Volume_1.png)
 
 
-Select docker then "Crate folder" and name it domotciz.
+Select docker then "Create folder" and name it domotciz.
 ![Add folder docker/domoticz](Images/EN_Synology_Docker_Install_Param_Volume_2.png)
 
 
@@ -71,27 +71,26 @@ Double click on it to access the details:
 
 
 DomoticZ is now operational and you can access it.
-A plugins folder is now created in the directory __docker/domoticz__.
+A plugins folder is created in the directory __docker/domoticz__.
 
 
 You can continue the installation of the Plugin by following:  [Installing the plugin on Synology](Plugin_Installation.md#3---installation-running-on-synology-nas)
 
 
 # USB drivers installation
-En fonction du modèle de coordinateur, le ou les drivers USB ne sont pas les mêmes :
-* Pour la première version de la zigate, le dongle Elelabs, la clé SonOff version P, il faut le driver __cp210x.ko__, on le trouve sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers). Pour choisir le bon fichier, il faut connaitre le nom du type de CPU sur le site de [Synology](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
-* Pour la zigate v2 ou la conbee, il faut le fichier __ftdi_sio.ko__. A partir de DSM7.0, celui-ci est déjà présent.
-* Pour la conbee 2 ou la SonOff version E à base de chipset Silabs, il faut également charger __cdc-acm.ko__, également présent.
-* Pour la Zzh d'Electrolama, il faut le driver __ch341.ko__ disponible sur le [github](https://github.com/robertklep/dsm7-usb-serial-drivers) de la même manière que pour le driver cp210x.ko.
+Following the coordinator model, the USB drivers differ:
+* For the first zigate version, the Elelabs dongle, the SonOff dongle version P, you need the driver __cp210x.ko__, you can find it on this [github](https://github.com/robertklep/dsm7-usb-serial-drivers). To choose the right file, you need to know the CPU name of your [Synology NAS](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
+* For the zigate v2 or the conbee 2, you need the file __ftdi_sio.ko__. From DSM7.0, it's already existing in modules folder.
+* For the conbee 2 or the SonOff dongle version E (Silabs chipset), you also need to load __cdc-acm.ko__ (also existing).
+* For the Electrolama Zzh, you need the driver __ch341.ko__ available on the [github](https://github.com/robertklep/dsm7-usb-serial-drivers) with the same method as for cp210x.ko.
 
-## Chargement automatique
-Cette solution utilise le planificateur de tâches (panneau de configuration) en créant une tâche déclenchée.
-Cette tâche sera chargée de copier les drivers dans le repertoire /lib/modules car à chaque mise à jour de DSM, les drivers sont supprimés.
-Ensuite, intervient le chargement des drivers dans le noyau.
+## Automatic loading at startup
+This solution uses the task scheduler (Conftrol pannel) by creating a Triggered Task.
+This task will copy the needed drivers in /lib/modules and load them in the kernell. I advise the copy as the drivers are removed on DSM upgrade.
 
 ![Planificateur](Images/EN_Synology_Docker_Install_Planificateur_1.png)
 
-J'ai choisi de mettre les fichiers à la racine de mon home, remplacer les xxx par votre répertoire et ne chargez que le nécessaire :
+I choose to let the drivers in my home, replace the directory by yours :
 
 ```
 cd /var/services/homes/xxx
@@ -105,11 +104,11 @@ insmod /lib/modules/ch341.ko > /dev/null 2>&1
 
 ![Tache](Images/EN_Synology_Docker_Install_Tache.png)
 
-Il ne reste plus qu'à redémarrer DSM.
+All that remains is to restart DSM.
 
 
-## Chargement manuel (utilisateur avancé)
-Pour charger les drivers, connectez-vous en ssh au NAS et éxécuter les commandes suivantes, en utilisant la commande avec le fichier correspondant à votre modèle de clé après avoir copié les drivers :
+## Manual load (Advanced user)
+To load the drivers, connect to the NAS with ssh and run the following commands, choose only the needed drivers after copy them:
 
 ```
 cp *.ko /lib/modules/
@@ -125,12 +124,8 @@ OR
 sudo insmod /lib/modules/ch341.ko
 ````
 
-Pour que les drivers soient chargés au démarage du NAS, vous pouvez :
-
-
-* Soit ajouter un fichier start-usb-drivers.sh dans le répertoire /usr/local/etc/rc.d/start-usb-drivers.sh
-
-Supprimer la ligne dont vous n'avez pas besoin (cp210x.ko ou ftdi_sio.ko).
+If you want to load them automaticly, you can use the Task scheduler (see above) or use a script run at startup:
+Add a file start-usb-drivers.sh in the folder /usr/local/etc/rc.d/start-usb-drivers.sh
 
 ```
 #!/bin/sh
@@ -151,7 +146,7 @@ case $1 in
 esac
 ```
 
-et de le rendre exécutable :
+Make it runnable:
 ```
 chmod +x /usr/local/etc/rc.d/start-usb-drivers.sh
 ```
