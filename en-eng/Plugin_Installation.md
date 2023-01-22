@@ -331,6 +331,8 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
     ```bash
     sudo apt-get install wiringpi
     ```
+    
+    if it doesn't work you can download the wiringpi package from [here](https://project-downloads.drogon.net/wiringpi-latest.deb)
 
 1. Set the gpio pins for production mode in rc.local so that this will happen on every reboot:
 
