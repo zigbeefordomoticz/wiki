@@ -281,6 +281,8 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 | BatteryPercentageConverter  | the value will be used to device the value send byt the device. eg. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
 | MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
 | MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
+| BatteryPoweredDevice        | Used to indicate despite what the device tell, it is a Battery powered device |
+| MainPoweredDevice           | Used to indicate despite what the device tell, it is a Main powered device |
 | ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
 | RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
 | RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
