@@ -286,6 +286,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 | ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
 | RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
 | RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
+| MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz, `Unitless` (means that we have Watts and we can send it like that) |
 | PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 | 
 | PowerMeteringDivisor        | Divisor to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
 | SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
