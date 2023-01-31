@@ -131,11 +131,6 @@ Les informations concernant l’installation sur NAS Synology fonctionnent sous 
 ------------
 
 ## 4 - Installation sur NAS Synology avec Docker
-
-Rédaction par [@SylvainPer](https://github.com/SylvainPer)
-
-__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
-
 ### 4.A - Avant propos
 
 Partie complètement réécrite par @SylvainPer utilisant l'image officielle Docker de DomoticZ. L'ancienne version est accessible sur [cette page](Old_versions/Plugin_Installation_OLD.md).
