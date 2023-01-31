@@ -155,7 +155,7 @@ Vous pouvez télécharger directement le script [ici](https://raw.githubusercont
 * Dans le terminal, lancer les commandes :
 ```bash
 cd userdata
-wget https://raw.githubusercontent.com/zigbeefordomoticz/Domoticz-Zigbee/stable6/Tools/customstart.sh
+curl https://raw.githubusercontent.com/zigbeefordomoticz/Domoticz-Zigbee/stable6/Tools/customstart.sh > customstart.sh
 ```
 
 Enfin, relancer le Conteneur.
