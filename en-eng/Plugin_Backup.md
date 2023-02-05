@@ -25,7 +25,7 @@ In case this is different, please use your own location
 
 1. Stop domoticz
 
-1. Move the ZigBeeForDomoticZ plugin folder to your home directory
+1. Copy the ZigBeeForDomoticZ plugin folder to your home directory
 
    ```
    cp /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
