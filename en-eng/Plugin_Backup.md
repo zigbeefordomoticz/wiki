@@ -28,7 +28,7 @@ In case this is different, please use your own location
 1. Move the ZigBeeForDomoticZ plugin folder to your home directory
 
    ```
-   mv /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
+   cp /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
    ```
 
 1. Install the fresh version of the plugin
