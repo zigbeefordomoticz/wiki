@@ -27,7 +27,7 @@ Modifier les chemins en fonction de votre configuration.
 Pour information, la commande pour copier tout le répertoire du plugin ZigBeeForDomoticZ vers votre bureau
 
 ```
-cp /home/pi/domoticz/plugins/Domoticz-Zigbee   /home/pi
+cp -r /home/pi/domoticz/plugins/Domoticz-Zigbee /home/pi
 ```
 
 3. Sauvegarder __en même temps__ la base de données de DomoticZ `domoticz.db`.
