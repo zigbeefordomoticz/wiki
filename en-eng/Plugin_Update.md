@@ -43,7 +43,7 @@ In order to provide stability and also provide more recent development, Zigate p
 
 This is considered as a solid , reliable version.
 
-### dev
+### develop
 
 This is the developpment channel
 
@@ -53,4 +53,4 @@ This is the developpment channel
 
 `git checkout stable6 // will move you to the stable6 channel`
 
-`git checkout dev    // will move you to the dev channel`
+`git checkout develop    // will move you to the develop channel`
