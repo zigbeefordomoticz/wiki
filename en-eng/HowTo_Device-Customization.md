@@ -200,31 +200,29 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
     This will result in the following config file where fo each Endpoint we have listed the available cluster and we have also define what are the associated Domoticz Widgets.
 
-        ```json
-
-        {
-            "Ep": {
-                "01": {
-                    "0000": "",
-                    "0001": "",
-                    "0003": "",
-                    "0500": "",
-                    "Type": "Motion/Voltage"
-                },
-                "02": {
-                    "0001": "",
-                    "0402": "",
-                    "0405": "",
-                    "Type": "Temp/Humi"
-                },
-                "04": {
-                    "0001": "",
-                    "0500": "",
-                    "Type": "Switch"
-                }
-           },
-           "Type": "",
-
+    ```json
+    {
+        "Ep": {
+            "01": {
+                "0000": "",
+                "0001": "",
+                "0003": "",
+                "0500": "",
+                "Type": "Motion/Voltage"
+            },
+            "02": {
+                "0001": "",
+                "0402": "",
+                "0405": "",
+                "Type": "Temp/Humi"
+            },
+            "04": {
+                "0001": "",
+                "0500": "",
+                "Type": "Switch"
+            }
+        },
+        "Type": "",
         ```
 
     | Ep | Widget | Cluster source of information |
