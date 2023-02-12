@@ -295,20 +295,68 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
 1. Additional parameters
 
-| Parameter                   | Description |
-| ---------                   | ----------- |
-| VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
-| BatteryDevice               | specify that the device is a battery based device and must be treated as such |
-| BatteryPercentageConverter  | the value will be used to device the value send byt the device. eg. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
-| MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
-| MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
-| BatteryPoweredDevice        | Used to indicate despite what the device tell, it is a Battery powered device |
-| MainPoweredDevice           | Used to indicate despite what the device tell, it is a Main powered device |
-| ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
-| RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
-| RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
-| MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz, `Unitless` (means that we have Watts and we can send it like that) |
-| PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
-| PowerMeteringDivisor        | Divisor to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
-| SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
-| SummationMeteringDivisor    | Divisor to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
+    | Parameter                   | Description |
+    | ---------                   | ----------- |
+    | VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
+    | BatteryDevice               | specify that the device is a battery based device and must be treated as such |
+    | BatteryPercentageConverter  | the value will be used to device the value send byt the device. eg. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
+    | MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
+    | MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
+    | BatteryPoweredDevice        | Used to indicate despite what the device tell, it is a Battery powered device |
+    | MainPoweredDevice           | Used to indicate despite what the device tell, it is a Main powered device |
+    | ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
+    | RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
+    | RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
+    | MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz, `Unitless` (means that we have Watts and we can send it like that) |
+    | PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
+    | PowerMeteringDivisor        | Divisor to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
+    | SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
+    | SummationMeteringDivisor    | Divisor to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
+
+## A concreate exemple: lumi Weather
+
+```json
+{
+    "Ep": {
+        "01": {
+            "0000": { 
+                "Attributes": {
+                    "fff0": { "Enabled": true, "Name": "Aqara_0000_fff0", "DataType": "42" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]},
+                    "ff01": { "Enabled": true, "Name": "Aqara_0000_ff01", "DataType": "42" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]},
+                    "ff02": { "Enabled": true, "Name": "Aqara_0000_ff02", "DataType": "42" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]}  
+                }
+            },
+            "0003": "",
+            "0402": "",
+            "0403": {
+                "Attributes": {
+                    "0000": { "Enabled": true, "Name": "Aqara MeasuredValue","DataType": "29" , "DomoClusterType": "Baro","ActionList": [ "check_store_value"]},
+                    "0010": { "Enabled": true, "Name": "Aqara ScaledValue", "DataType": "29" , "EvalExp": "round(int(value) / 10, 1)", "ActionList": [ "check_store_value", "upd_domo_device"]},
+                    "0014": { "Enabled": true, "Name": "Aqara Scale", "DataType": "28", "ActionList": [ "check_store_value"] }
+                }
+            },
+            "0405": "",
+            "ffff": "",
+            "Type": "Temp/Humi/Baro"
+        }
+    },
+    "Type": "",
+    "ClusterToBind": [],
+    "ConfigureReporting": {},
+    "ReadAttributes": {
+        "0000": [ "0004", "0005" ],
+        "0402": [],
+        "0403": [],
+        "0405": []
+    }
+}
+```
+
+In this exemple we can note in addition to what was explain before:
+
+    * For attributes 0xfff0, 0xff01, 0xff02 of Cluster 0x0000 we are delegating the handling to a specific function `Lumi_fcc0`.
+      The reason is that Lumi is using those attributs to pass various informations like Battery level, On/Off state for Door sensor and plenty of other infos.
+    
+    * For attribute 0x0000 of 0x0403 we are just storing the received info. Usally this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
+    
+    * For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
