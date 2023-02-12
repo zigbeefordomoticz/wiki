@@ -223,7 +223,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
             }
         },
         "Type": "",
-        ```
+    ```
 
     | Ep | Widget | Cluster source of information |
     | -- | ------ | ----------------------------- |
