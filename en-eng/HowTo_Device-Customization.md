@@ -31,19 +31,26 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 | attribute  | ValidValuesDomoDevices  | True    | Evaluation which should return True or False, and which will condition the MajDomoDevice call |
 | attribute  | DomoDeviceFormat        | result of eval |  format on how the value should be formated before sent to majDomoDevice ( str, float, int ) |
 | attribute  | UpdDomoDeviceWithCluster |         |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
-| attribute  | UpdDomoDeviceWithAttibute| none    |  Force to do the majDomoDevice on a specific attribute |
+| attribute  | UpdDomoDeviceWithAttribute| none    |  Force to do the majDomoDevice on a specific attribute |
 | attribute  | ValueOverwrite           |         |  Overwrite the value, by the one given here |
 | attribute  | EvalExpCustomVariables   |         |  list of variables to be retreived in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
 | evalInputs | yyyy                     |         |  variable name to be used in the eval string |
 | evalInputs | ClusterId                |         |  cluster from which the variable value should be retreived |
 | evalInputs | AttributeId              |         |  attribute from which the variable should be retreived |
+| attribute  | ManufRawData             |         | Use in conjonction with **ManufSpecificFunc** and indicates that we must use the raw value and not the decoded one|
+| attribute  | ManufSpecificFunc        |         | Define a function from the device module to be called |
+| attribute  | SpecifStoragelvl1        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
+| attribute  | SpecifStoragelvl2        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
+| attribute  | SpecifStoragelvl3        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
 
 ## ActionList
 
-| name          | function |
-| ----          | -------- |
-| check_store_value    | store the value to the corresponding Ep, Cluster,Attribute |
-| upd_domo_device | request an update of the corresponding ClusterType for this value of Cluster|
+| name                    | function |
+| ----                    | -------- |
+| check_store_value       | store the value to the corresponding Ep, Cluster,Attribute |
+| upd_domo_device         | request an update of the corresponding ClusterType for this value of Cluster |
+| store_specif_attribute  | request to store the value under the hierarchie SpecifStoragelvl1:SpecifStoragelvl2:SpecifStoragelvl3 |
+| basic_model_name        | reserved to handle the attribute 0005 of Basic cluster |
 
 ## evaluation
 
@@ -91,16 +98,30 @@ If returning None, no action will be taken
     ```
 
 1. Integrate the function in the flow
-    1. Edit the file DevicesModules/__init__.py, just follow the same as what has already been done
+    1. Edit the file `DevicesModules/__init__.py`, just follow the same as what has already been done
        * import your module
        * link the function to the stanza you will put in the conf file
 
-    ```python
-    from DevicesModules.custom_konke import konke_onoff
+    ```python3
+    FUNCTION_WITH_ACTIONS_MODULE = {
+        # Lumi 0xfcc
+        "Lumi_fcc0": lumi_private_cluster,
 
+        # ZLinky
+        "zlinky_clusters": zlinky_clusters
+
+    }
     FUNCTION_MODULE = {
+        # 0702 helper
+        "compute_metering_conso": compute_metering_conso,
+
+        # 0b04 helper
+        "compute_electrical_measurement_conso": compute_electrical_measurement_conso,
+
+        # Konke Switch
         "konke_onoff": konke_onoff,
     }
+
     ```
 
 ### Optimize a non-yet optimized device
@@ -128,7 +149,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     1. You have to create the file under the `Conf/Certified/00Local` folder
     1. You have to create the file with a specific name. The name is based on the Zigbee Model identifier you can get in the json file, look at attribute `Model`, and create the file as _modelname_.json.
 
-    for exemple if we look after the Json file above, the Zigbee model identifier is __lumi.weather__, so you will create a file name __Conf/Certified/00Local/lumi.weather.json__
+    for exemple if we look after the Json file above, the Zigbee model identifier is **lumi.weather**, so you will create a file name **Conf/Certified/00Local/lumi.weather.json**
 
     you can initialize the file with the following content, that we will show how to update in the next steps
 
@@ -217,13 +238,13 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
     if you look to the Json you could say that there is less clusters than  the reallity discovered by the plugin.
     Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information accross several Ep.
 
-    In summary __Type__ is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
+    In summary **Type** is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
 
     More information on the [Cluster -> Widget](Technical/Clusters_Widget.md)
 
 1. Update the ClusterToBind section
 
-    A __Binding__ is the creation of a unidirectional logical link between a source endpoint/cluster identifier pair and a destination endpoint.
+    A **Binding** is the creation of a unidirectional logical link between a source endpoint/cluster identifier pair and a destination endpoint.
 
     It might be needed to established a binding between the device and the coordinator in order to receive automatic report such as sensor information.
 
@@ -231,7 +252,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
     In case you have a multiple Ep device which serve same cluster, you might want to restrict the binding to only a specific Ep. In such case you can use `"bindEp": [ ]`
 
-    If we follow the __CMS323__  device, we need to bind 01/0001, 02/0001, 04/001, 02/0402, 04/0405
+    If we follow the **CMS323**  device, we need to bind 01/0001, 02/0001, 04/001, 02/0402, 04/0405
 
     ```json
 
@@ -287,7 +308,7 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 | RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
 | RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
 | MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz, `Unitless` (means that we have Watts and we can send it like that) |
-| PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 | 
+| PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
 | PowerMeteringDivisor        | Divisor to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
 | SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
 | SummationMeteringDivisor    | Divisor to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
