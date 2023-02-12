@@ -352,9 +352,9 @@ To do so, you have to create a 'config' file under the `Conf/Certified/\<manufac
 
 In this exemple we can note in addition to what was explain before:
 
-    * For attributes 0xfff0, 0xff01, 0xff02 of Cluster 0x0000 we are delegating the handling to a specific function `Lumi_fcc0`.
-      The reason is that Lumi is using those attributs to pass various informations like Battery level, On/Off state for Door sensor and plenty of other infos.
-    
-    * For attribute 0x0000 of 0x0403 we are just storing the received info. Usally this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
-    
-    * For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
+* For attributes 0xfff0, 0xff01, 0xff02 of Cluster 0x0000 we are delegating the handling to a specific function `Lumi_fcc0`.
+    The reason is that Lumi is using those attributs to pass various informations like Battery level, On/Off state for Door sensor and plenty of other infos.
+
+* For attribute 0x0000 of 0x0403 we are just storing the received info. Usally this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
+
+* For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
