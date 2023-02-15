@@ -5,14 +5,33 @@ L'interface d'administration du plugin (WebUI) est accessible à l'adresse http:
 ![Intégration du WebUI](Images/FR_DomoticZ-WebUI.png)
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
+## Ajout automatique du menu
 
-## Ajouter un menu pour le WebUI
+Par défaut, ce menu est ajouté automatiquement au lancement du plugin et enlever à l'arret du plugin.
 
-1. Aller dans le dossier __domoticz/www/templates__
+Il faut vérifier que l'onglet Personnalisé est bien activé :
 
-2. Créer un fichier __ZigBeeForDomoticZ.html__ Le nom du fichier sera utiliser comme nom du menu.
+* Pour les versions de DomoticZ jusqu'à la 2022.2, aller dans Configuration / Paramètres / Onglet Système et vérifier la coche de l'onglet Personnalisé tout en bas.
 
-3. Mettre la ligne suivante dans le fichier html :
+* Pour les versions de DomoticZ depuis la 2023.1, aller dans Configuration / Users et vérifier que l'onglet Personnalisé est bien coché pour les utilisateurs souhaités.
+
+Le nom du menu ajouté est le nom du plugin.
+
+
+## Désactivation de l'ajout automatique du menu dans le WebUI
+
+Il est possible de désactiver la création automatique du menu via le Paramètres __Ajouter un lien vers le WebUI dans le Custom Menu de DomoticZ__ dans le menu Réglage.
+
+
+## Ajouter manuel d'un menu pour le WebUI
+
+1. Désactiver le Paramètres __Ajouter un lien vers le WebUI dans le Custom Menu de DomoticZ__ dans le menu Réglage
+
+2. Aller dans le dossier __domoticz/www/templates__
+
+3. Créer un fichier __ZigBeeForDomoticZ.html__ Le nom du fichier sera utiliser comme nom du menu.
+
+4. Mettre la ligne suivante dans le fichier html :
 
 ```
 <IFRAME SRC="http://IP_DomoticZ:9440/" height="800" width="100%"></IFRAME>
