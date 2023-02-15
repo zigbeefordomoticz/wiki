@@ -8,7 +8,7 @@
 * [Q6. Est il possible d'utiliser plusieurs coordinateurs dans un seul DomoticZ ?](#q6-est-il-possible-dutiliser-plusieurs-coordinateurs-dans-un-seul-domoticz-)
 * [Q7. Est il possible de fixer le numéro du port USB ?](#q7-est-il-possible-de-fixer-le-num%C3%A9ro-du-port-usb-)
 * [Q8. Mon objet n'est pas mis à jour dans DomoticZ quand je l'actionne manuellement](#q8-mon-objet-nest-pas-mis-%C3%A0-jour-dans-domoticz-quand-je-lactionne-manuellement)
-* [Q9. Le lien de menu ne s'affiche pas dans DomoticZ](#q9-le-lien-de-menu-ne-s-affiche-pas-dans-domoticz)
+* [Q9. Le lien de menu ne s'affiche pas dans DomoticZ](#q9-le-lien-de-menu-ne-saffiche-pas-dans-domoticz)
 
 
 ## Débogage
