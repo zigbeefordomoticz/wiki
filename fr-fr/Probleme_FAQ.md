@@ -8,6 +8,7 @@
 * [Q6. Est il possible d'utiliser plusieurs coordinateurs dans un seul DomoticZ ?](#q6-est-il-possible-dutiliser-plusieurs-coordinateurs-dans-un-seul-domoticz-)
 * [Q7. Est il possible de fixer le numéro du port USB ?](#q7-est-il-possible-de-fixer-le-num%C3%A9ro-du-port-usb-)
 * [Q8. Mon objet n'est pas mis à jour dans DomoticZ quand je l'actionne manuellement](#q8-mon-objet-nest-pas-mis-%C3%A0-jour-dans-domoticz-quand-je-lactionne-manuellement)
+* [Q9. Le lien de menu ne s'affiche pas dans DomoticZ](#q9-le-lien-de-menu-ne-s-affiche-pas-dans-domoticz)
 
 
 ## Débogage
@@ -105,6 +106,17 @@ Si vous rencontrez des problèmes comme l'exemple ci-dessus, il est fort probabl
 1. Activer le paramètre __AllowRebindingClusters__.
 1. Éteignez l'ampoule Ikea avec l'interrupteur physique, attendez 10 secondes, puis rallumez-la. Le processus d'appairage va commencer de lui-même, les problèmes d'état devraient maintenant être résolus.
 
+
+------------
+## Q9. Le lien de menu ne s'affiche pas dans DomoticZ
+
+Vérifier que laffichage de l'onglet Personnalisé est bien activé :
+
+* Pour les versions de DomoticZ jusqu'à la 2022.2, aller dans Configuration / Paramètres / Onglet Système et vérifier la coche de l'onglet Personnalisé tout en bas.
+
+* Pour les versions de DomoticZ depuis la 2023.1, aller dans Configuration / Users et vérifier que l'onglet Personnalisé est bien coché pour les utilisateurs souhaités.
+
+Vérifier également que le paramètre __Ajouter un lien vers le WebUI dans le Custom Menu de DomoticZ__ est bien activé dans le menu Réglage
 
 ------------
 ## T1. Mon coordinateur ne fonctionne pas

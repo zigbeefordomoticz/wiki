@@ -20,7 +20,7 @@ Le nom du menu ajouté est le nom du plugin.
 
 ## Désactivation de l'ajout automatique du menu dans le WebUI
 
-Il est possible de désactiver la création automatique du menu via le Paramètres __Ajouter un lien vers le WebUI dans le Custom Menu de DomoticZ__ dans le menu Réglage.
+Il est possible de désactiver la création automatique du menu via le paramètre __Ajouter un lien vers le WebUI dans le Custom Menu de DomoticZ__ dans le menu Réglage.
 
 
 ## Ajouter manuel d'un menu pour le WebUI
