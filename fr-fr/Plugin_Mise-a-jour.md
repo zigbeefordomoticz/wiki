@@ -27,7 +27,7 @@ Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessou
 Il peut y avoir des fichiers dont les droits ont changés. Dans ce cas, faire les commandes suivantes :
 
 ```bash
-  git reset –-hard
+  git reset --hard
   git pull --force
  ```
 
