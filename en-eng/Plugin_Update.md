@@ -21,7 +21,7 @@ __Note :__ Since version 6, the git pull is no longer enough.
 * In case you have edited/updated some of the plugin controlled file, you might get an error message protecting any update. In such situation you can reset those files with the latest version with the following commands
 
   ```bash
-  git reset –-hard
+  git reset --hard
   git pull --force
   ```
 
