@@ -130,7 +130,7 @@ It is likely that your device - if fully Zigbee 3.0 compliant - works well with 
 
 In that case, it might be efficient to get the plugin fully aware of what the device is and is not capable.
 
-To do so, you have to create a 'config' file under the `Conf/Certified/\<manufacturer name\>` folder.
+To do so, you have to create a 'config' file under the `Local-Devices` folder.
 
 1. First you need to extract raw device informations from the plugin.
 
