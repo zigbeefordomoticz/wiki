@@ -358,3 +358,64 @@ In this exemple we can note in addition to what was explain before:
 * For attribute 0x0000 of 0x0403 we are just storing the received info. Usally this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
 
 * For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
+
+## Special case of the Tuya TS0601 model name
+
+Tuya has implemented a manufacturer private cluster documented [Tuya Zigbee Generic Interfaces](https://developer.tuya.com/en/docs/iot/tuya-zigbee-universal-docking-access-standard?id=K9ik6zvofpzql)
+
+For that you need to identify the DataPoint which correspond to the Snensor informations. Based with the Dp, you can create the mapping between Widgets and Actions
+
+1. Sensor type ( mapping to Domoticz widgets)
+    | sensor_type | description |
+    | ----------- | ----------- |
+    | "motion" |     |
+    | "illuminance" |     |
+    | "temperature" |     |
+    | "setpoint" |     |
+    | "humidity" |     |
+    | "distance" |     |
+    | "battery" |     |
+    | "tamper" |     |
+    | "switch" |     |
+    | "door" |     |
+    | "lvl_percentage" |     |
+    | "co2" |     |
+    | "voc" |     |
+    | "ch20" |     |
+    | "metering" |     |
+    | "power" |     |
+    | "voltage" |     |
+
+1. Action type ( when an action needs to be sent to the device )
+
+    | action_type | description |
+    | ----------- | ----------- |
+    | setpoint    |             |
+
+1. Concreate case : ** Tuya TS0601 Radar Presence
+
+    in the here example you'll see only the specific things.
+
+    ```json
+    {
+        "TS0601_DP": {
+            "01": { "sensor_type": "motion", "DomoDeviceFormat": "str"},
+            "09": { "sensor_type": "distance", "EvalExp": "int((value//10)*10)"}, 
+            "68": { "sensor_type": "illuminance"},
+            "02": { "store_tuya_attribute": "sensitivity"},
+            "03": { "store_tuya_attribute": "radar_min_range"},
+            "04": { "store_tuya_attribute": "radar_max_range"},
+            "65": { "store_tuya_attribute": "radar_detection_delay"},
+            "66": { "store_tuya_attribute": "radar_fading_time"}
+
+        },
+        "TUYA_REGISTRATION": 13,
+        ...
+    }
+    ```
+
+    * **TS0601_DP** is the attribute which allow to define the TS0601 properties
+
+        * **0x01** (1) is the DataPoint (DP) reporting Motion/Presence detection. By defining "sensor_type": "motion", the plugin will report this value to the _Motion_ widget in Domoticz. "DomoDeviceFormat": "str" will force to convert the value in string.
+        * **0x09** (9) is the DP reporting the distance . By defining "sensor_type": "distance", the plugin will report this value to the _Distance_ Widget in Domoticz. "EvalExp": "int((value//10)*10)" will round the value to the tenth value.
+        * **0x68** (104) is the DP reporting the illuminance/Lux. By defining "sensor_type": "illuminance", the plugin will report this value to the _Lux_ widget in Domoticz
