@@ -72,8 +72,8 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | moesCalibrationTime | Define the duration of motor activation, <value>=[nb 1/10 second], Value 10 = 1 second | Tuya TS130F __TZ3000_ltiqubue |
 | ZG204Z_MotionSensivity | Motion sensitivity 0:low, 1:medium, 2:high | TUYA PIR ZG-204Z |
 | ZG204Z_MotionOccupancyTime | Occupancy keep time 0:10s, 1:30:s, 2:60s, 3:120s | TUYA PIR ZG-204Z |
-| RadarMotionSensitivity |	Motion Sensitivity |  from 0 to 9 (0 desactivate motion)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
-| RadarMotionMinRange | Minimum detection Range | from 60 to 950 (centimetres)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
-| RadarMotionMaxRange | Maximum detection Range | from 60 to 950 (centimetres)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
-| RadarMotionDelay | Time needed to detect a human staying on the room| from 0 to 10 (secondes) | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
-| RadarMotionFading | Time needed to turn OFF the motion sensor | from 0 to 1500 (secondes)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionSensitivity |from 0 to 9 (0 desactivate motion)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionMinRange | from 60 to 950 (centimetres)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionMaxRange | from 60 to 950 (centimetres)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionDelay | from 0 to 10 (secondes) | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl | 
+ | RadarMotionFading | from 0 to 1500 (secondes)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
