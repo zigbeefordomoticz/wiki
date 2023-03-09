@@ -59,6 +59,11 @@ Il est important de suivre le formalisme suivant :  { 'parametre1': valeur, 'par
 | RTCZCGQ11LMMotionSensibility |	Sensibilité de la détection | 1=faible 2=moyenne 3=haute | Presence Detector FP1 RTCZCGQ11LM |
 | RTCZCGQ11LMApproachDistance |	Sensibilité de la distance de detection  |  0=loin 1=moyenne 2=proche |	Presence Detector FP1 RTCZCGQ11LM |
 | RTCZCGQ11LMMonitoringMode |	Orientation de la detection  | 0=de tous cotés sans differenciation 1=Gauche/Droite possibilité de detecter le sens d'entré et de sorti  | Presence Detector FP1 RTCZCGQ11LM |
+| RadarMotionSensitivity|	Sensibilité de la detection  | de 0 a 9 (0 desactive la detection)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionMinRange|	Distance Minimum de detection  | de 60 a 950 (centimetre)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionMaxRange|	Distance Maximum de detection  | de 60 a 950 (centimetre)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionDelay|	Temps necessaire pour valider la detection d'une personne  | de 0 a 10 (seconde)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
+| RadarMotionFading| Temps necessaire pour valider la non detection d'une personne  | de 0 a 1500 (seconde)  | TS0601-radar Presence Detector ZY-M100_TZE204_ztc6ggyl |
 
 *Cette page est issue d'une traduction : il est possible que le tableau ci-dessus ne soit pas à jour. Se référer à la [page originale](../en-eng/HowTo_Device-parameters.md) en anglais.*
 
