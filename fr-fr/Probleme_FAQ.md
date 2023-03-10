@@ -257,7 +257,7 @@ Si cela n'a pas été fait la première fois, il faut désinstaller les modules 
 Cette erreur apparaît lorsque _API base url_ n'est pas (ou pas bien) paramétrée dans DomoticZ. Se reporter à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md) pour plus d'infos.
 
 ------------
-## E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'``
+## E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`
 
 Cette erreur apparaît lorsque il n'y a pas la bonne version de la dependance charset-normalizer, vous devez etre en 2.0.12 
 
