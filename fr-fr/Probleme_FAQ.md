@@ -263,11 +263,15 @@ Cette erreur apparaît lorsque vous avez plusieurs sessions du plugin et qu'il n
 
 Verifiez votre version avec : 
 - (sudo) pip show charset-normalizer
+ 
 ou
+
 -(sudo) pip3 show charset-normalizer (si vous avez encore python2 sur votre installation)
 
 Si la réponse ne donne pas la verison 2.0.12 alors : 
 
 - (sudo) pip install --force-reinstall --upgrade charset-normalizer==2.0.12
+
 ou
+
 - (sudo) pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12 (si vous avez encore python2 sur votre installation)
