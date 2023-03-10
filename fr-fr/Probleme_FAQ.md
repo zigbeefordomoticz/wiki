@@ -26,7 +26,7 @@
 * [E4. Erreur : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-erreur--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 * [E5. Missing module Error ](#e5-missing-module-error)
 * [E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-erreur--error-nom-du-plugin--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
-* [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError:-no-module-named-'cchardet')
+* [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError-no-module-named-cchardet)
 
 
 
