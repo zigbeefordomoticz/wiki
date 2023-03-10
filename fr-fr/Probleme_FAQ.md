@@ -26,6 +26,7 @@
 * [E4. Erreur : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-erreur--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 * [E5. Missing module Error ](#e5-missing-module-error)
 * [E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-erreur--error-nom-du-plugin--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
+* [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e6-erreur--error-nom-du-plugin--ModuleNotFoundError:-no-module-named-'cchardet')
 
 
 
@@ -254,3 +255,18 @@ Si cela n'a pas été fait la première fois, il faut désinstaller les modules 
 ## E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`
 
 Cette erreur apparaît lorsque _API base url_ n'est pas (ou pas bien) paramétrée dans DomoticZ. Se reporter à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md) pour plus d'infos.
+
+------------
+## E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'``
+
+Cette erreur apparaît lorsque il n'y a pas la bonne version de la dependance charset-normalizer, vous devez etre en 2.0.12 
+
+Verifiez votre version avec : 
+- (sudo) pip show charset-normalizer
+- ou
+-(sudo) pip3 show charset-normalizer (si vous avez encore python2 sur votre installation)
+
+Si la réponse ne donne pas la verison 2.0.12 alors : 
+- (sudo) pip install --force-reinstall --upgrade charset-normalizer==2.0.12
+- ou
+- (sudo) pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12 (si vous avez encore python2 sur votre installation)
