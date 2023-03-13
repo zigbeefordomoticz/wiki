@@ -56,7 +56,8 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | WiserRoomNumber | Allow to define a room number per Wiser Thermostat, which monitor the heating demand of Actionners belongings to the same room. So you need to define the WiserRoomNumber parameter with the same room number for each actionners and the thermostat per room (Room Number association between eTRV thermostat and external temperature sensor)| Wiser Thermostat and any Actionners |
 | BatteryPollingFreq | Polling frequency for getting Battery level | Needed for SChneider Wiser Thermostat RTS |
 | DanfossRoom | Room Number association between eTRV thermostat and external temperature sensor | Danfoss eTRV thermostat and any type of Temperature Sensor both associated in same plugin instance  |
-| DanfossRoomFreq | Polling Frequency in second, 0 disable. Indicates the frequency when refreshing the external temperature. | Danfoss eTRV thermostat  recommendation depends on which mode is set in thermostat: 1800- 10800 in "offset mode", 300-1800 in "room sensor mode" |
+| DanfossRoomFreq | Polling Frequency in second, 0 disable. Indicates the frequency when refreshing the external temperature. | Danfoss eTRV thermostat  recommendation depends on which mode is set in thermostat: 1800- 10800 in "Auto Offset Mode", 300-1800 in "Room Sensor Mode" |
+| DanfossCovered | 'F' or 'T': 'T' indicates that radiator is covered. | Danfoss eTRV thermostat will be put into "Room Sensor Mode" when radiator is covered, where thermostat will use only external sensor for room temperature  |
 | DanfossTRVOrientation | 'H' or 'V': Orientation of thermostat, Horizontal or Vertical | Danfoss eTRV thermostat  |
 | DanfossViewDirection | 1 or 2: The viewing direction of thermostat LCD| Danfoss eTRV thermostat  |
 | eTRVExerciseDay | 0-6: (Sun-Sat) The day to do weekly exercising of radiator valve | Danfoss eTRV thermostat  |
