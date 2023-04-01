@@ -275,3 +275,14 @@ Si la réponse ne donne pas la verison 2.0.12 alors :
 ou
 
 - (sudo) pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12 (si vous avez encore python2 sur votre installation)
+
+
+------------
+## E8. Erreur : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`
+
+Cette erreur peut apparaitre lors d'un retour depuis la branche develop vers la branche stable6 : le niveau de version du modul dnspython n'est pas le même.
+
+* Lancer la commande depuis le répertoire du plugin
+``` bash
+sudo python3 -m pip install -r requirements.txt --upgrade
+```
