@@ -25,6 +25,9 @@
 * [E5. Missing module Error](#e5-missing-module-error)
 * [E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-error--error-plugins-name--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
 * [E7. Error when updating python modules](#e7-error-when_updating-python-module)
+* [E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-error--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
+
+
 
 ------------
 ------------
@@ -265,3 +268,14 @@ ERROR: Could not build wheels for cryptography which use PEP 517 and cannot be i
 
 1. make sure your /tmp is large enought
 1. make sure you have enought swap, if requires , add some filesytem swap
+
+
+------------
+## E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`
+
+This error may appear when you change branch from developp to stable6 : the dnspython module level is not the same.
+
+* Do the folowing command from the plugin home directory
+``` bash
+sudo python3 -m pip install -r requirements.txt --upgrade
+```
