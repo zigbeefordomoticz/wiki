@@ -5,6 +5,10 @@
 It might happen that your device is well paired with the coordinator and the plugin, but do not behave has expected.
 The plugin is providing a way to overwrite the Zigbee standard behaviour by adding specifics to the device plugin configuration.
 
+Since plugin version 6.4.4xx, the device config files have moved out of the plugin core engine to a specific python module ( z4d-certified-devices ). This will allow to have more regular update of config files without touching the plugin core engine.
+
+The source code of the [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices) can be used as reference or examples.
+
 ## Properties
 
 | Level      | Object Name              | default | Description |
