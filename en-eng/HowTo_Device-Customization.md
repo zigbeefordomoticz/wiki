@@ -7,7 +7,7 @@ The plugin is providing a way to overwrite the Zigbee standard behaviour by addi
 
 Since plugin version 6.4.4xx, the device config files have moved out of the plugin core engine to a specific python module ( z4d-certified-devices ). This will allow to have more regular update of config files without touching the plugin core engine.
 
-The source code of the [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices) can be used as reference or examples.
+The source code of the [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified) can be used as reference or examples.
 
 ## Properties
 
