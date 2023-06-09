@@ -9,6 +9,9 @@ Since plugin version 6.4.4xx, the device config files have moved out of the plug
 
 The source code of the [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified) can be used as reference or examples.
 
+if you need some support/help to build your own config file, the best is to use the [Discussions forum](https://github.com/zigbeefordomoticz/z4d-certified-devices/discussions/),
+and for course we are counting on you to make the config file available for others.
+
 ## Properties
 
 | Level      | Object Name              | default | Description |
