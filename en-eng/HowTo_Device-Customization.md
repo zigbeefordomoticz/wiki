@@ -295,21 +295,27 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
 
     | Parameter                   | Description |
     | ---------                   | ----------- |
-    | VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
+    | ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
     | BatteryDevice               | specify that the device is a battery based device and must be treated as such |
     | BatteryPercentageConverter  | the value will be used to device the value send byt the device. eg. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
-    | MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
-    | MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
     | BatteryPoweredDevice        | Used to indicate despite what the device tell, it is a Battery powered device |
+    | CreateWidgetDomoticz        | |
+    | IgnoreWindowsCoverringValue50 | |
     | MainPoweredDevice           | Used to indicate despite what the device tell, it is a Main powered device |
-    | ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
-    | RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
-    | RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
+    | MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
     | MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz, `Unitless` (means that we have Watts and we can send it like that) |
-    | PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
+    | MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
     | PowerMeteringDivisor        | Divisor to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
-    | SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
+    | PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
+    | PowerOnOffStateAttribute8002 | |
+    | RMSCurrentDivisor           | Divisor to be used when receiving RMS Current via Cluster 0x0b04 and Attribute 0x0508 |
+    | RMSVoltageDivisor           | Divisor to be used when receiving RMS Voltage via Cluster 0x0b04 and Attribute 0x0505, 0x0905, 0x0a05 |
     | SummationMeteringDivisor    | Divisor to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
+    | SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
+    | TUYA_REGISTRATION           | |
+    | TUYA_REMOTE                 | |
+    | VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
+    | WindowsCoverringInverted    | |
 
 ## A concreate exemple: lumi Weather
 
@@ -368,29 +374,50 @@ For that you need to identify the DataPoint which correspond to the Snensor info
 1. Sensor type ( mapping to Domoticz widgets)
     | sensor_type | description |
     | ----------- | ----------- |
-    | "motion" |     |
-    | "illuminance" |     |
-    | "temperature" |     |
-    | "setpoint" |     |
-    | "humidity" |     |
-    | "distance" |     |
-    | "battery" |     |
-    | "tamper" |     |
-    | "switch" |     |
-    | "door" |     |
-    | "lvl_percentage" |     |
-    | "co2" |     |
-    | "voc" |     |
-    | "ch20" |     |
-    | "metering" |     |
-    | "power" |     |
-    | "voltage" |     |
+    | motion | |
+    | illuminance | |
+    | temperature | |
+    | setpoint | |
+    | humidity | |
+    | distance | |
+    | battery | |
+    | batteryState | |
+    | tamper | |
+    | switch | |
+    | door | |
+    | lvl_percentage | |
+    | co2 | |
+    | voc | |
+    | ch20 | |
+    | mp25 | |
+    | current | |
+    | metering | |
+    | power | |
+    | voltage | |
+    | heatingstatus | |
+    | valveposition | |
+    | calibration | |
+    | windowsopened | |
+    | TRV6SystemMode | |
+    | TRV7SystemMode | |
+    | TuyaAlarmDuration | |
+    | TuyaAlarmMelody | |
+    | TuyaAlarmLevel | |
+    | TuyaAlarmSwitch | |
+    | smoke_state | |
+    | smoke_ppm | |
+    | water_consumption | |
 
 1. Action type ( when an action needs to be sent to the device )
 
     | action_type | description |
     | ----------- | ----------- |
-    | setpoint    |             |
+    | switch | |
+    | setpoint | |
+    | calibration | |
+    | TRV6SystemMode | |
+    | TRV7SystemMode | |
+    | TuyaAlarmSwitch | |
 
 1. Concreate case : ** Tuya TS0601 Radar Presence
 
