@@ -43,4 +43,4 @@ This will create an export.json file that you can save.
 * What do you expect
 * The logs from the pairing process
 
-Please create an issue here on GitHub: [Create a Github Issue](https://github.com/pipiche38/Domoticz-Zigate/issues/new?assignees=&labels=&template=Add_New_Hardware.md&title=) with the here above informations
+Please create an issue here on GitHub: [Create a Github Issue](https://github.com/zigbeefordomoticz/z4d-certified-devices/issues/new?assignees=&labels=Device+Integration&projects=&template=certified-device-model.md&title=%5BModel+Certification%5D+-+) with the here above informations
