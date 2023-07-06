@@ -24,6 +24,6 @@ Lorsqu'un nouvel objet est appairé,
 * Aller sur la page de Gestion des objets
 * Cliquer sur la petite icône orange. Les informations nécessaires sont alors mises dans le presse papier. Ces informations sont le minimum nécessaire pour pouvoir travailler coté plugin. En effet elles contiennent le résultat de la découverte effectuée par le plugin.
 * Donner également des informations relatives à l'objet comme, site marchand où il a été acquis, référence, fonctionnement attendu ...
-* Contacter de préférence sur [GitHub](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues/new?assignees=&labels=Device+Integration&template=certified-device-model.md&title=%5BModel+Certification%5D+-+) , ou éventuellement via Keybase ou les forums pour nous transmettre les données de votre objet.
+* Contacter de préférence sur [GitHub](https://github.com/zigbeefordomoticz/z4d-certified-devices/issues/new?assignees=&labels=Device+Integration&projects=&template=certified-device-model.md&title=%5BModel+Certification%5D+-+) , ou éventuellement via Keybase ou les forums pour nous transmettre les données de votre objet.
 
 En remontant les infos des objets non-certifiés, vous participez à l'amélioration de votre instalation et du plugin. Merci
