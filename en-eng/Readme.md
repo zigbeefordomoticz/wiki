@@ -13,9 +13,9 @@ We are contributing to this project on our spare time. If you do consider that i
 > Come and join our team on [Keybase](https://keybase.io/team/zigateforum) or the [forum](https://www.domoticz.com/forum/viewforum.php?f=68) : the translation is done in an Excel file, there is nothing complicated ;-)
 
 
-## Migrating to stable6
+## Upgrading to Release 7
 
-On __01/04/2022__, we released the __stable6__ version of the plugin. To migrate from earlier versions, it is necessary to follow the following procedure : [Plugin_Version-6](Plugin_Version-6.md)
+On __14/07/20232__, we released the __stable7__ version of the plugin. The necessary to follow the following procedure : [Plugin_Version-7](Release_7.1.md)
 
 
 ## Introduction
