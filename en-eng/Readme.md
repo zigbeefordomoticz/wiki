@@ -15,8 +15,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Upgrading to Release 7
 
-On __14/07/20232__, we released the __stable7__ version of the plugin. The necessary to follow the following procedure : [Plugin_Version-7](Release_7.1.md)
-
+On __14/07/20232__, we released the __stable7__ version of the plugin. The necessary to follow the following procedure : [Plugin_Version-7](Release_7.1.md). If you are runner Buster, you have to upgrade to Bullseye first, and you must have python3.8 or above.
 
 ## Introduction
 
