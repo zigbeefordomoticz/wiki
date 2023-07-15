@@ -26,6 +26,7 @@
 * [E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-error--error-plugins-name--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
 * [E7. Error when updating python modules](#e7-error-when_updating-python-module)
 * [E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-error--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
+* [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process](#e9-error---ImportError--PyO3 modules may only be initialized once per interpreter process)
 
 
 
@@ -279,3 +280,36 @@ This error may appear when you change branch from developp to stable6 : the dnsp
 ``` bash
 sudo python3 -m pip install -r requirements.txt --upgrade
 ```
+
+------------
+## E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process`
+
+```
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.286  Status: Zigpy-Elelabs: Transport mode: ZigpyEZSP
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.632  Error: Zigpy-Elelabs: Call to function 'onStart' failed, exception details:
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs: Traceback (most recent call last):
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 1537, in onStart
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     _plugin.onStart()
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 602, in onStart
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     from zigpy.config import (CONF_DEVICE, CONF_DEVICE_PATH,
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/init.py", line 32, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     from zigpy.config.validators import (
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/validators.py", line 9, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     import zigpy.zdo.types as zdo_t
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/zdo/init.py", line 10, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     import zigpy.util
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/util.py", line 14, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers import Cipher
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/init.py", line 11, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers.base import (
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/base.py", line 10, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.exceptions import (
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/exceptions.py", line 9, in <module>
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.hazmat.bindings.rust import exceptions as rustexceptions
+Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs: ImportError: PyO3 modules may only be initialized once per interpreter process
+```
+
+This is related to the fact that you are using a recent cryptography module.
+you can solmve this issue by downgrading the crypography module 
+
+`sudo python3 pip install cryptography==40.0.2 --upgrade`
