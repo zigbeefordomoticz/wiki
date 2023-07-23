@@ -27,10 +27,11 @@
 * [E7. Error when updating python modules](#e7-error-when_updating-python-module)
 * [E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-error--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
 * [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process](#e9-error--ImportError-PyO3-modules-may-only-be-initialized-once-per-interpreter-process)
+* [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
+
 
 ------------
 ------------
-
 ## Q1. Where can I get support ?
 
 The first source of support is the Wiki :
@@ -46,36 +47,36 @@ You can also get support and ask questions :
 * The [Keybase English channel](https://keybase.io/team/zigateforum)
 * The [Keybase French channel](https://keybase.io/team/zigate)
 
-------------
 
+------------
 ## Q2. Where are the logs ?
 
 Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
 The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you have installed the plugin  before april 2022.
 
-------------
 
+------------
 ## Q3. Can I debug myself ?
 
 Please refer to [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
 
-------------
 
+------------
 ## Q4. Where can I find the list of supported Coordinators and Devices ?
 
 Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
 
-------------
 
+------------
 ## Q5. Where can I find the coordinator firmwares ?
 
 * For __Texas Instrument__, we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). We do not recommend to use _develop_ branch and rely on the _master_.
 * For __ZiGate__, the firmwares are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For __EZNP (Silicon Labs)__, we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
 
-------------
 
+------------
 ## Q6. Can I use several coodinators in the same DomoticZ ?
 
 We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
@@ -83,8 +84,8 @@ We have currently a limitation of the number of instances using Zigpy layer, whi
 If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
 If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want. For more information you can see the progress of that issue on [#1117](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues/1117)
 
-------------
 
+------------
 ## Q7. Can I fixe the USB Port number ?
 
 Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number which cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
@@ -92,8 +93,8 @@ Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can c
 * [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
 * [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
 
-------------
 
+------------
 ## Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy
 
 For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
@@ -106,12 +107,12 @@ If you encounter problems like the above example, it is most likely the automati
 1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
 The rebinding process will start itself, the status problems should now be fixed.
 
-------------
 
+------------
 ## Q9. Can I run Plugin Version 6 on a Windows system ?
 
-------------
 
+------------
 ## T1. My coordinator is not working
 
 I can see in the [log file](#q2.-where-are-the-logs) some messages like that
@@ -138,22 +139,22 @@ This indicate a miss communication between the plugin and the coordinator. You n
 
 If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
 
-------------
 
+------------
 ## T2. My object can not be paired
 
 * If the coordinator is plugged directly into a USB port on the server, try deporting it using a USB extension cord (don't use an USB HUB). This will keep it away from interference, especially from SSD disks, wifi chips, etc...
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
-------------
 
+------------
 ## T3. My object doen't work as expected
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
-------------
 
+------------
 ## E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
 
 Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
@@ -165,8 +166,8 @@ Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No tr
 This error is coming from DomoticZ and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
 You shouldn't worry much of this message.
 
-------------
 
+------------
 ## E2. Log error : `Decode8000`
 
 if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
@@ -183,8 +184,8 @@ if you see error logs like here after, this is most-likely an issue with the ZiG
 
 cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
-------------
 
+------------
 ## E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
 Here after is an exemple of errors found in the log file.
@@ -196,8 +197,8 @@ Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) De
 
 This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem with it -
 
-------------
 
+------------
 ## E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
 
 ```log
@@ -206,8 +207,8 @@ This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate ge
 
 This error appears when stopping the plugin. Ignore it.
 
-------------
 
+------------
 ## E5. Missing module error
 
 ### Make sure that you have correctly installed the plugin
@@ -243,8 +244,8 @@ ATTENTION:
 
 * On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first tipme. If you have run once already without Administrator windows, you must start removing all already installed modules.
 
-------------
 
+------------
 ## E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`
 
 This error appears when the DomoticZ parameter _API base url_ is not correctly filled. More infos on [step 2 Plugin settings](Plugin_Settings.md).
@@ -311,3 +312,11 @@ This is related to the fact that you are using a recent cryptography module.
 you can solmve this issue by downgrading the crypography module 
 
 `sudo python3 pip install cryptography==40.0.2 --upgrade`
+
+
+------------
+## E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`
+
+This error commes with the API modification of DomoticZ 2023.2
+
+You need to update to the plugin version 7 following the [instructions](../Release_7.1.md).
