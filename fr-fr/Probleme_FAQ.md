@@ -29,6 +29,7 @@
 * [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError-no-module-named-cchardet)
 * [E8. Erreur : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-erreur--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
 
+
 ------------
 ------------
 ## Q1. Où obtenir de l'aide ?
@@ -285,3 +286,11 @@ Cette erreur peut apparaitre lors d'un retour depuis la branche develop vers la 
 ``` bash
 sudo python3 -m pip install -r requirements.txt --upgrade
 ```
+
+
+------------
+## E9. Erreur : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`
+
+Cette erreur est apparue à la suite de la modification de l'API de DomoticZ dans la version 2023.2. 
+
+Il suffit de mettre à jour le plugin en version 7 en suivant les recommandations.
