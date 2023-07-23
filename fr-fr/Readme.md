@@ -15,7 +15,9 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## Migration vers stable7
 
 Le __14/07/2023__, nous avons sortie la version __stable7__ du plugin. Pour migrer depuis les versions antérieures, il est nécessaire de suivre la procédure suivante : [Plugin_Version-7](../en-eng/Release_7.1.md).
+
 Cette version 7 est nécessaire pour fonctionner sans erreur avec DomoticZ 2023.2. Il est recommandé de mettre à jour le plugin en version 7 avant de faire la mise à jour de DomoticZ en 2023.1.
+
 Cette version 7 nécessite au minimum Debian Bullseye car Python 3.7 intégrer dans Buster n'est plus suffisant. La mise à jour vers un système fonctionnant avec python 3.8 ou plus est impératif.
 
 
