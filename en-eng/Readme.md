@@ -18,6 +18,12 @@ We are contributing to this project on our spare time. If you do consider that i
 On __14/07/2023__, we released the __stable7__ version of the plugin. The necessary to follow the following procedure : [Plugin_Version-7](Release_7.1.md). If you are runner Buster, you have to upgrade to Bullseye first, and you must have python3.8 or above.
 The stable7 is also the miminum to run with DomoticZ 2023.2 otherwise you will have some API errors.
 
+## Debian 12
+
+On __01/09/2023__, we encounter difficulties between Debian 12, Python3, pip additionals pakets which creats errors with Certified Devices. Any help would be appreciated.
+
+The plugin is not compatible with Debian 12 (BookWorm) and we recommend staying under Debian 11 (Bullseye).
+
 ## Introduction
 
 * [Start](Info_Home.md) for beginners

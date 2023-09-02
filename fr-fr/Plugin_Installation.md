@@ -23,7 +23,9 @@ __Info :__ Pour l'installation des autres modèles de ZiGates (USB, Wifi, Ethern
 
 Cette méthode est uniquement valable pour les systèmes Linux : Raspberry, Debian, Ubuntu, etc. Il sera nécessaire de modifier les lignes de commandes en fonction de votre système.
 
-__Important :__ Cette méthode d’installation n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
+__Important :__ Cette méthode d’installation n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md#)).
+
+__Debian 12 :__ Pour le moment, le plugin n'est pas compatible avec Debian 12 (BookWorm) ([Plus d'infos](Readme.md#debian-12)).
 
 ### 1.A - Prérequis
 

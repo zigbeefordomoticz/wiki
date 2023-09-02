@@ -18,6 +18,12 @@ In this first step, there are severals installation methodes depending on your O
 
 ## 1 - Manual Installation running on Linux
 
+This method is only valid for Linux : Raspberry, Debian, Ubuntu, etc. It will be necessary to modify the command lines according to your system..
+
+__Important :__ This installation method is not valid for an installation of the PiZigate (check the [PiZigate installations process](Plugin_Installation.md)).
+
+__Debian 12 :__ For the moment, the plugin is not compatible with Debian 12 (BookWorm) ([More infos](Readme.md#debian-12)).
+
 ### 1.A - Prerequisite
 
 * DomoticZ version aabove 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
