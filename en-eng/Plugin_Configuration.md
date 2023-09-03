@@ -1,6 +1,6 @@
 # Plugin configuration
 
-This is the tird step of the plugin ZigBeeForDomoticZ installation process.
+This is the third step of the plugin ZigBeeForDomoticZ installation process.
 
 You should have already finished the [STEP 1 Instalaltion](Plugin_Installation.md) and the [STEP 2 Seetings](Plugin_Settings.md).
 
