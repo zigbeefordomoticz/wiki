@@ -3,7 +3,7 @@
 ## Overview
 
 It might happen that your device is well paired with the coordinator and the plugin, but do not behave has expected.
-The plugin is providing a way to overwrite the Zigbee standard behaviour by adding specifics to the device plugin configuration.
+The plugin is providing a way to overwrite the Zigbee standard behavior by adding specifics to the device plugin configuration.
 
 Since plugin version 6.4.4xx, the device config files have moved out of the plugin core engine to a specific python module ( z4d-certified-devices ). This will allow to have more regular update of config files without touching the plugin core engine.
 
@@ -26,11 +26,11 @@ and for course we are counting on you to make the config file available for othe
 | attribute  | Name                     |         |  Name of the attribute |
 | attribute  | DataType                 |         |  Attribute data type in hexa |
 | attribute  | Range                    |         |  Attribute value ranges in hexa |
-| attribute  | Acc                      |         |  Attribute access right ( RP: Reporting, R: read, W, write |
+| attribute  | Acc                      |         |  Attribute access right (RP: Reporting, R: read, W, write) |
 | attribute  | Default                  |         |  Attribute default value |
 | attribute  | Mandatory                |         |  Attribute mandatory flag. |
 | attribute  | DomoClusterType          |         |  Plugin ClusterType info ( Lux, Switch, Motion, ...) |
-| attribute  | EvalExp                  |  value  |  string containing a forumla to compute the attribute value. Based on python3 eval() function|
+| attribute  | EvalExp                  |  value  |  string containing a formula to compute the attribute value. Based on python3 eval() function|
 | attribute  | EvalFunc                 |         |  Function name define in a module in the DevicesModules (see Devices modules for more info.) |
 | attribute  | ActionList               |         |  List of action(s) to be triggered
 | attribute  | DecodedValueList         |         |  List of values with a decoded value in string |
@@ -40,10 +40,10 @@ and for course we are counting on you to make the config file available for othe
 | attribute  | UpdDomoDeviceWithCluster |         |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
 | attribute  | UpdDomoDeviceWithAttribute| none    |  Force to do the majDomoDevice on a specific attribute |
 | attribute  | ValueOverwrite           |         |  Overwrite the value, by the one given here |
-| attribute  | EvalExpCustomVariables   |         |  list of variables to be retreived in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
+| attribute  | EvalExpCustomVariables   |         |  list of variables to be retrieved in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
 | evalInputs | yyyy                     |         |  variable name to be used in the eval string |
-| evalInputs | ClusterId                |         |  cluster from which the variable value should be retreived |
-| evalInputs | AttributeId              |         |  attribute from which the variable should be retreived |
+| evalInputs | ClusterId                |         |  cluster from which the variable value should be retrieved |
+| evalInputs | AttributeId              |         |  attribute from which the variable should be retrieved |
 | attribute  | ManufRawData             |         | Use in conjonction with **ManufSpecificFunc** and indicates that we must use the raw value and not the decoded one|
 | attribute  | ManufSpecificFunc        |         | Define a function from the device module to be called |
 | attribute  | SpecifStoragelvl1        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
@@ -73,8 +73,8 @@ and for course we are counting on you to make the config file available for othe
 
 3. transform the Scaled Pressure measurement.
 
-   1. retreive the _scale_ in attribute 0x0014 of cluster 0x0403
-   2. evaluate the the formula with the retreived _scale_ information
+   1. retrieve the _scale_ in attribute 0x0014 of cluster 0x0403
+   2. evaluate the the formula with the retrieved _scale_ information
 
     ```json
     {
@@ -133,7 +133,7 @@ If returning None, no action will be taken
 
 ### Optimize a non-yet optimized device
 
-It is likely that your device - if fully Zigbee 3.0 compliant - works well with the plugin. It means that you have paired the device, and automatically the plugin made a descovery of the device features and created the corresponding domoticz widgets.
+It is likely that your device - if fully Zigbee 3.0 compliant - works well with the plugin. It means that you have paired the device, and automatically the plugin made a discovery of the device features and created the corresponding domoticz widgets.
 
 In that case, it might be efficient to get the plugin fully aware of what the device is and is not capable.
 
@@ -145,9 +145,9 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
 
     ![WebUI:Device Management](Images/EN_WebUI_Device-Management-Not_Optimized.png)
 
-   1. as shown on the here above screenshot you'll see a list of device, and the one with the yellow icon refer to devices for which there is no associated config file for the plugin and their behaviour might not be optimum.
+   1. as shown on the here above screenshot you'll see a list of device, and the one with the yellow icon refer to devices for which there is no associated config file for the plugin and their behavior might not be optimum.
 
-   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste in the Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer). You will see a resultat like this one
+   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste in the Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer). You will see a result like this one
 
     ![JsonViewer Exemple](../Images/jsonviewer.png)
 
@@ -235,13 +235,13 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
     | Ep | Widget | Cluster source of information |
     | -- | ------ | ----------------------------- |
     | 01 | Motion | The motion detection will come from the Cluster 0x0500 ( IAS ), Domoticz will switch the Motion widget from On to Off depending on the notification |
-    |    | Voltage| The device will send voltage information via the cluster 0x0001 ( Power ), and domoticz will displayed thge voltage value |
+    |    | Voltage| The device will send voltage information via the cluster 0x0001 ( Power ), and domoticz will displayed the voltage value |
     | 02 | Temperature | The device will send Temperature information via cluster 0x0402 |
     |    | Humidity | Humidity info will be provided from cluster 0x0405 |
     | 04 | Switch | The device offer the possibility to detect vibration on cluster 04 and the cluster 0500 will be used for |
 
-    if you look to the Json you could say that there is less clusters than  the reallity discovered by the plugin.
-    Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information accross several Ep.
+    if you look to the Json you could say that there is less clusters than the reality discovered by the plugin.
+    Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information across several Ep.
 
     In summary **Type** is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
 
@@ -268,7 +268,7 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
 1. Update the ConfigureReporting section
 
     The Configure Reporting command is used to configure the reporting mechanism for one or more of the attributes of a cluster.
-    Usally in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well
+    Usually in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well
 
     ```json
 
@@ -368,7 +368,7 @@ In this exemple we can note in addition to what was explain before:
 * For attributes 0xfff0, 0xff01, 0xff02 of Cluster 0x0000 we are delegating the handling to a specific function `Lumi_fcc0`.
     The reason is that Lumi is using those attributs to pass various informations like Battery level, On/Off state for Door sensor and plenty of other infos.
 
-* For attribute 0x0000 of 0x0403 we are just storing the received info. Usally this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
+* For attribute 0x0000 of 0x0403 we are just storing the received info. Usually this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
 
 * For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
 
@@ -376,7 +376,7 @@ In this exemple we can note in addition to what was explain before:
 
 Tuya has implemented a manufacturer private cluster documented [Tuya Zigbee Generic Interfaces](https://developer.tuya.com/en/docs/iot/tuya-zigbee-universal-docking-access-standard?id=K9ik6zvofpzql)
 
-For that you need to identify the DataPoint which correspond to the Snensor informations. Based with the Dp, you can create the mapping between Widgets and Actions
+For that you need to identify the DataPoint which correspond to the Sensor informations. Based with the Dp, you can create the mapping between Widgets and Actions
 
 1. Sensor type ( mapping to Domoticz widgets)
     | sensor_type | description |
@@ -426,7 +426,7 @@ For that you need to identify the DataPoint which correspond to the Snensor info
     | TRV7SystemMode | |
     | TuyaAlarmSwitch | |
 
-1. Concreate case : ** Tuya TS0601 Radar Presence
+1. Concret case : ** Tuya TS0601 Radar Presence
 
     in the here example you'll see only the specific things.
 
