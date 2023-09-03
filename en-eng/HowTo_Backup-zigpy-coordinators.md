@@ -1,6 +1,6 @@
 # How to backup zigpy compatible coordinators
 
-## Zigpy compatible coordintaors
+## Zigpy compatible coordinators
 
 * Texas Instrument CCxxxx based chipset using zigpy-znp 
 * Sililabs based chipset using bellows
