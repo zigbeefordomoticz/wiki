@@ -4,10 +4,10 @@
 
 The purpose is to use [Caddy](https://caddyserver.com/docs/) and setup a reverse proxy to allow access to Domoticz and the plugin Web Admin
 The Domoticz interface will be accessible via `domoticz.my-domain.com` while the plugin WebAdmin will be via `domoticz.my-domain.com/zigate`
-## Assumpion
+## Assumption
 
 You have a domain name where you can register 1 name ( CNAME or A record) to point one to domoticz and one to plugin webadmin
-You'll have only port 443 open on your firwall ( Internet box)
+You'll have only port 443 open on your firewall ( Internet box)
 
 ## 1- Install Caddy
 
@@ -102,7 +102,7 @@ if your domain name is my-domain.com
 	
    Finally you need to create a specific Custom Menu if you want to access the WebUI plugin via the Domoticz Custom menu as the default one "Zigbee" won't work when reaching through the reverse-proxy
 
-   We have to create a file under `domoticz/www/template` on the Domoticz environement with the following content. Of course you need to update `domoticz.my-domain.com`by your specific domain name
+   We have to create a file under `domoticz/www/template` on the Domoticz environment with the following content. Of course you need to update `domoticz.my-domain.com`by your specific domain name
 	
    ```
    cat > "Zigbee(from External)".html
