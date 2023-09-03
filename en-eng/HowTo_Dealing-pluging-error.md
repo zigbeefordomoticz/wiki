@@ -6,11 +6,11 @@ This tutorial explains how to deal with the plugin errors.
 
 ## Presentation
 
-The plugin contens a section to visualize the errors : [Tools > Error(s)](WebUI_Tools.md#error)
+The plugin contains a section to visualize the errors : [Tools > Error(s)](WebUI_Tools.md#error)
 
 ## On the interface web
 
-When there are some errors, a little red triangle appears on the top right of the web insterface.
+When there are some errors, a little red triangle appears on the top right of the web interface.
 
 ![Affichage des erreurs](Images/FR_WebUI-Tableau-de-bord-erreur.png)
 
