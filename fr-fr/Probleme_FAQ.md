@@ -29,7 +29,7 @@
 * [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError-no-module-named-cchardet)
 * [E8. Erreur : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-erreur--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
 * [E10. Erreur : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-erreur--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
-* [E11. Erreur à l'instalation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` ](#e11-erreur-à-linstalation-sous-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
+* [E11. Erreur à l'installation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` ](#e11-erreur-à-linstallation-sous-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 
 ------------
 ------------
@@ -297,7 +297,7 @@ Il suffit de mettre à jour le plugin en version 7 en suivant les [recommandatio
 
 
 ------------
-## E11. Erreur à l'instalation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` 
+## E11. Erreur à l'installation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` 
 
 L'erreur complète est :
 
