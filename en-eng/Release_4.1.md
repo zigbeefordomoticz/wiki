@@ -7,14 +7,14 @@ While using Domoticz groups which operates then device by device, the plugin nat
 group of devices and to send the same command to all devices of that group at once. Result is a quiet
 responsive Domotic system.
 
-Important efforts have been made to support a number of additional devices and especially remotes controllers as well as some otherss
+Important efforts have been made to support a number of additional devices and especially remotes controllers as well as some others
 * Hue remote controller
 * Ikea Tradfri remote controller ( 5 buttons and the yellow one)
 * Xiaomi Vibration
 * Zipato smoke detector
 * Hue Motion Sensor
 
-Features like, using Domoticz Temperature and Pressure adjustement can made out of the Domoticz widget. The Motion (off delay)
+Features like, using Domoticz Temperature and Pressure adjustment can made out of the Domoticz widget. The Motion (off delay)
 can also be configured directly from the Domoticz widget.
 
 The plugin has been tested with the new up-coming PiZigate. No special integration have been done, except than providing a
@@ -28,7 +28,7 @@ Addition work have been also done around the discovery mecanishm in order to spe
 as much as possible ZLL and ZHA compliant devices.
 
 ## IMPORTANT
-* There is not Migration path from 3.x.x to 4.1. If you are still in 3.x.x version you have unfortunatly to start from scratch.
+* There is not Migration path from 3.x.x to 4.1. If you are still in 3.x.x version you have unfortunately to start from scratch.
 
 * Last but not least, we have also restructured the plugin filesystem in order to have a cleaner situation. As a result,
 a short migration step needs to performed by yourself, before restarting the plugin.
@@ -38,7 +38,7 @@ a short migration step needs to performed by yourself, before restarting the plu
    Read with attention [here](https://github.com/sasu-drooz/Domoticz-Zigate/blob/pre-4.1/00-UPGRADE-FROM-STABLE-4.0.md)
 
 ## NOTES:
-* If you want to have the full power of the plugin, some of the features rely on the latest developement of Domoticz.
+* If you want to have the full power of the plugin, some of the features rely on the latest development of Domoticz.
 We recommend using Domoticz V4.10547 or higher. However the plugin remains compatible with the current Domoticz V4.9700.
 
 ## KNOWN ISSUES and LIMITATIONS
