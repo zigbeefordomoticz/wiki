@@ -32,7 +32,7 @@ In case you are still on a PI with Buster, this is not compatible and you must m
     git pull
     ```
 
-    you might have to use `sudo`in order to execure the above commands with the root privileges.
+    you might have to use `sudo`in order to execute the above commands with the root privileges.
 
 1. Install and update the required python3 modules
 
@@ -42,7 +42,7 @@ In case you are still on a PI with Buster, this is not compatible and you must m
     sudo python3 -m pip install -r requirements.txt --upgrade
     ```
 
-    * `sudo` is required as usally domoticz runs under root user
+    * `sudo` is required as usually domoticz runs under root user
 
 ## Features
 
