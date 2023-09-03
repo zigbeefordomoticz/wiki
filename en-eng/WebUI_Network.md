@@ -25,9 +25,9 @@ All available reports are available in the upper-left list, sorted by date. From
 
 There are 2 graphical representations of the report.
 
-#### Left: Topology weel
+#### Left: Topology wheel
 
-Here are shown on a weel, all links between 2 devices. If you leave the mouse on a link, you'll see the direction and a number which correspond to the Link Quality ( the worst is 0, the best is 255).
+Here are shown on a wheel, all links between 2 devices. If you leave the mouse on a link, you'll see the direction and a number which correspond to the Link Quality ( the worst is 0, the best is 255).
 
 #### Right: Topology graph
 
@@ -80,14 +80,14 @@ A cost of 5 is used as the packet filtering threshold, which means that above th
 ### 2. Example of report
 
 The report will take a certain time based on the size of the network ( number of devices and especially number of routers). The output will be put in the DomoticZ log in the here after format.
-A raw format is also provided and is analysed via the Web UI.
+A raw format is also provided and is analyzed via the Web UI.
 
 ** Graphical using the Web User Interface
-![Network Toplogy](../Images/Network_Topology.png)
+![Network Topology](../Images/Network_Topology.png)
 
 **(Zigate) LQI Results:**
 
-| Node | Child | Relationship | Type | Depth | LQY | Rx on Iddle |
+| Node | Child | Relationship | Type | Depth | LQY | Rx on Idle |
 | -----| ----- | ------------ | ---- | ------ | --- | ------------ |
 |  0000 | 27a3 |   Child |  End Device |  1 |  86 | Rx-Off |
 |  0000 | 9b5f |   Child |  End Device |  1 | 119 | Rx-Off |
@@ -146,7 +146,7 @@ A raw format is also provided and is analysed via the Web UI.
 * Node: the starting point
   * 0000 is the Zigate itself ( Controller)
 * LQI : is the estimated LQI (link quality) value for radio transmissions from the neighbouring node
-* Depth: is the tree depth of the neighbouring node (where the Co-ordinator is at depth zero)
+* Depth: is the tree depth of the neighbouring node (where the Coordinator is at depth zero)
 * Relationship: is a 3-bit value representing the neighbouring node’s relationship to the local node:
   * 0: Neighbour is the parent
   * 1: Neighbour is a child
