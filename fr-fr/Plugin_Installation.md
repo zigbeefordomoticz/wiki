@@ -25,7 +25,6 @@ Cette méthode est uniquement valable pour les systèmes Linux : Raspberry, Debi
 
 __Important :__ Cette méthode d’installation n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md#)).
 
-__Debian 12 :__ Pour le moment, le plugin n'est pas compatible avec Debian 12 (BookWorm) ([Plus d'infos](Readme.md#debian-12)).
 
 ### 1.A - Prérequis
 

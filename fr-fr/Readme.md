@@ -21,13 +21,6 @@ Cette version 7 est nécessaire pour fonctionner sans erreur avec DomoticZ 2023.
 Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégrer dans Debian 10 Buster n'est plus suffisant. La mise à jour vers un système fonctionnant avec Python 3.8 ou plus est impératif.
 
 
-## Debian 12
-
-Au __01/09/2023__, nous rencontrons des difficultés entre Debian 12, Python3, pip et les paquets additionnels ce qui génère des erreurs avec les Certified Devices. Toute aide serait appréciée.
-
-Le plugin n'est pas compatible avec Debian 12 (BookWorm) et nous recommandons de rester sous Debian 11 (Bullseye).
-
-
 ## Introduction
 
 * [Présentation](Info_Accueil.md) à lire pour les nouveaux utilisateurs

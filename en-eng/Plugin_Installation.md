@@ -22,7 +22,6 @@ This method is only valid for Linux : Raspberry, Debian, Ubuntu, etc. It will be
 
 __Important :__ This installation method is not valid for an installation of the PiZigate (check the [PiZigate installations process](Plugin_Installation.md)).
 
-__Debian 12 :__ For the moment, the plugin is not compatible with Debian 12 (BookWorm) ([More infos](Readme.md#debian-12)).
 
 ### 1.A - Prerequisite
 
