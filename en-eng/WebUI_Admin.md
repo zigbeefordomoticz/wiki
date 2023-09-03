@@ -26,7 +26,7 @@ Use this page to pair your devices with the coordinator and DomoticZ.
 You can :
 
 * Add a device with the assistant
-* Activate the apairing mode (full time or 4 minutes)
+* Activate the pairing mode (full time or 4 minutes)
 * Add a device to a specific routeur
 
 Refer to the tutorial [Add new device](HowTo_Pairing-device.md) for more informations.
@@ -71,7 +71,7 @@ You can :
 
 * Make a soft reset : **this action will not loose any paired device**.
 
-Refer to the sectionl [How to](Readme.md#how-to) for more informations.
+Refer to the section [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Plugin
@@ -89,7 +89,7 @@ You can :
 
 * Make a restart of the plugin
 
-Refer to the sectionl [How to](Readme.md#how-to) for more informations.
+Refer to the section [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Firmware
