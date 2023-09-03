@@ -1,13 +1,13 @@
 # Dealing with pairing issues
 
-The plugin is developped in a way that it is capable to handle devices which respects ZigBee specifications.
+The plugin is developed in a way that it is capable to handle devices which respects ZigBee specifications.
 For instance if the plugin see an unknown device type, it will try to create widgets based on the Device capabilities.
 
 ## Introduction
 
 The pairing is done at 2 levels.
 
-1. At the coordinator level, where we have the fact that the device is joining the Zigbee network controled by the coordinator.
+1. At the coordinator level, where we have the fact that the device is joining the Zigbee network controlled by the coordinator.
 1. At the Plugin level, where the plugin will do a discovery of the devices capabilities like:
    1. Is that main powered device
    1. Is there a Switch ON/OFF
