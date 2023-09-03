@@ -1,17 +1,17 @@
-# Debuging mode for ZigBeeForDomoticZ Plugin
+# Debugging mode for ZigBeeForDomoticZ Plugin
 
 ## Introduction
 
-The aim of this document is to give you some hints on how to debug and also provide more information to the developper when reporting an issue.
+The aim of this document is to give you some hints on how to debug and also provide more information to the developer when reporting an issue.
 
 This would required a plugin version greater than 4.8
 
 
-## The Debuging options
+## The Debugging options
 
 The debugging options are available from the Web admin interface in the Menu Settings, and you have to enable Advanced
 
-![Debuging Options](../Images/debugingOptions.png)
+![Debugging Options](../Images/debugingOptions.png)
 
 | Option | Purpose |
 | ------- | -------- |
@@ -26,10 +26,10 @@ The debugging options are available from the Web admin interface in the Menu Set
 | Output | All out going messages (to the coordinator) |
 | Cluster | decoding incoming messages. This is where we extract information from the messages payload |
 | Heartbeat | executed every 5s to perform recurring actions |
-| Widget | Updating Domoticz Widgets, usally call from Input or Cluster modules |
+| Widget | Updating Domoticz Widgets, usually call from Input or Cluster modules |
 | Plugin | the plugin program |
 | Database | Managing plugin database |
-| Command | Handling all actions from DomoticZ, usally calling Output to perform cordinator actions |
+| Command | Handling all actions from DomoticZ, usually calling Output to perform coordinator actions |
 
 
 ## Use Cases
