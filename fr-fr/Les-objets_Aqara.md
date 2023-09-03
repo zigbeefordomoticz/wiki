@@ -20,11 +20,11 @@ Ce capteur n'est pas capteur de mouvement mais de presence, il est capable de de
 
 Pas de zone de detection
 
-4 parametres pour ce module
+4 paramètres pour ce module
 
 
-1. Il est imperatif de mettre en parametre : "resetMotiondelay': 0" sinon vous by passer la fonction presence du module
-2. Les autres parametres :
+1. Il est impératif de mettre en paramètre : "resetMotiondelay': 0" sinon vous by passer la fonction presence du module
+2. Les autres paramètres :
 
 * RTCZCGQ11LMMotionSensibility = Sensibilité de mouvement : 1=faible 2=moyenne 3=haute
 * RTCZCGQ11LMApproachDistance =	Sensibilité de Distance de detection :  0=loin 1=moyenne 2=proche
