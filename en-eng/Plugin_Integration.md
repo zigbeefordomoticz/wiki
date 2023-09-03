@@ -23,7 +23,7 @@ __Note :__ Do not use 127.0.0.1 or localhost if you connect to DomoticZ from a r
 
 ## Bonus : Add a menu for the Wiki
 
-Since the release of version 6, the new Wiki format as a web page (WikiUI) is also embeddable in DomoticZ as the WebUI.
+Since the release of version 6, the new Wiki format as a web page (WikiUI) is also available in DomoticZ as the WebUI.
 
 
 1. Go to the folder __domoticz/www/templates__
