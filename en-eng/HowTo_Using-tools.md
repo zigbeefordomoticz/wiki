@@ -1,7 +1,7 @@
 # Web Admin: Tools page
 
 This page give access to a set of REST API to query directly the plugin memory. This page is mainly for developers and for debugging purposes.
-The REST API are mainly developped to be used by the plugin Web Admin interface.
+The REST API are mainly developed to be used by the plugin Web Admin interface.
 
 For troubleshooting purposes you might be asked to do an export.json of the __Plugin Raw devices (json)__
 
@@ -14,7 +14,7 @@ For troubleshooting purposes you might be asked to do an export.json of the __Pl
 | Plugin health (json)        |  /plugin-health | debug | Provide health status |
 | domoticz-env (json)         |  /domoticz-env  | dev   | provide Domoticz UserName/Password and port defined in the plugin Web Ui Settings |
 | Domoticz Widgets (json)     |  /device        | dev   | Provide DomoticZ widgets information |
-| zGroup-lst-devices (json)   |  /zgroup-list-available-device | dev | List the potential devices with their Dz Widget whcih can be managed in a group |
+| zGroup-lst-devices (json)   |  /zgroup-list-available-device | dev | List the potential devices with their Dz Widget which can be managed in a group |
 | Plugin Devices (json)       |  /zdevice       | dev   | Provide information for all plugin devices |
 | Settings (json)             |  /settings      | dev   | Provide the list of plugin settings |
 | Plugin Groups (json)        |  /zgroup        | debug | Provide the group plugin database |
