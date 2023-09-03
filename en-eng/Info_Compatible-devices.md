@@ -57,9 +57,9 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| LED 12W     | ColorControl/Switch/LvlControl | Led controled with RGB+WW, On/Off, Lvl Control | Fully Op.| 4.3 |
-| LED 4 W (GL-B-001Z) | ColorControl/Switch/LvlControl | Led controled with Level Control, On/Off and RGB + WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
-| Spot(GL-S-004Z) | Whitecolor/Switch/LvlControl | Sport controled with Level Control, On/Off and WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
+| LED 12W     | ColorControl/Switch/LvlControl | Led controlled with RGB+WW, On/Off, Lvl Control | Fully Op.| 4.3 |
+| LED 4 W (GL-B-001Z) | ColorControl/Switch/LvlControl | Led controlled with Level Control, On/Off and RGB + WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
+| Spot(GL-S-004Z) | Whitecolor/Switch/LvlControl | Sport controlled with Level Control, On/Off and WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
 | GL-C-009    | LvlControl | Dimable led | Op. | 4.6 |
 
 ## HEIMAN
@@ -74,14 +74,14 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| LED1623G12 | Combied Switch+Level Control |  |   Fully Operationnal | 2.3.5 |
-| LED1649C5 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operationnal | 3.3.2 |
-| LED1536G5 | Combined Switch+Level Control |  | Fully Operationnal | 2.4.0 |
-| LED1624G9 | Combined Switch+Level+Color control | |  Fully Operationnal | 2.4.0 |
-| LED1545G12 | Combined  Switch+Level+Color control | | Fully Operationnal | 2.4.0 |
-| LED1546G12 | Combined  Switch+Level+Color control | |  Fully Operationnal | 2.4.0 |
-| LED 1622G12 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operationnal | 2.3.5 |
-| remote control E1524 | Remote Control | Pair the device, then associate with Ikea devices using touchlink, finaly add Zigate to the group created | Fully Operationnal | 4.10 @ Firm 3.0f |
+| LED1623G12 | Combied Switch+Level Control |  |   Fully Operational | 2.3.5 |
+| LED1649C5 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operational | 3.3.2 |
+| LED1536G5 | Combined Switch+Level Control |  | Fully Operational | 2.4.0 |
+| LED1624G9 | Combined Switch+Level+Color control | |  Fully Operational | 2.4.0 |
+| LED1545G12 | Combined  Switch+Level+Color control | | Fully Operational | 2.4.0 |
+| LED1546G12 | Combined  Switch+Level+Color control | |  Fully Operational | 2.4.0 |
+| LED 1622G12 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operational | 2.3.5 |
+| remote control E1524 | Remote Control | Pair the device, then associate with Ikea devices using touchlink, finally add Zigate to the group created | Fully Operationnal | 4.10 @ Firm 3.0f |
 | TRADFRI motion sensor |  | | Not supported | required Group/Scene |
 | TRADFRI Signal Repeater | Voltage as a placeholder | Zigbee router | Fully Op. | 2.4 |
 | TRADFRI bulb E12 WS opal 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
@@ -108,7 +108,7 @@ Please do not that it seems that GLEDOPTO do not provide LQI information, and du
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| JW-A04-RGBW Led Strip Controler | Switch Light, Level Control, Color Control |  You can switch on/off the lead, managed the LUX via the level control and the LED color, through the Color Seting. | Fully operationnal | 3.1.0 |
+| JW-A04-RGBW Led Strip Controller | Switch Light, Level Control, Color Control |  You can switch on/off the lead, managed the LUX via the level control and the LED color, through the Color Setting. | Fully operational | 3.1.0 |
 
 ## KONKE
 
@@ -137,7 +137,7 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switchn Power and Meter widget | Op. | 2.4.0 |
+| Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switch Power and Meter widget | Op. | 2.4.0 |
 | Celiane with Netatmo switch/Dimmer W/O neutre | Switch, LvlControl | Op. (Dimmer has be enabled via Settings)| Op. | 4.6 & Firmware 3.1b |
 | Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
 | Micro Module | Switch  | Micromodule | Op. | 4.6 |
@@ -175,8 +175,8 @@ Throught the Web GUI Settings, you can configure how the Led should behave, taki
 
 ## Philips
 
-* Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can comman dthe Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
-So there is a risk of latency when using Remote or Group command between the command and geting the status reflected on Domoticz (as it is based on the polling frequency)
+* Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can command the Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
+So there is a risk of latency when using Remote or Group command between the command and getting the status reflected on Domoticz (as it is based on the polling frequency)
 
 * Philips firmware are available here: <https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions#philips-hue>
 
@@ -192,13 +192,13 @@ So there is a risk of latency when using Remote or Group command between the com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| Slim Multisensor PST03-A/B/C | | | Operationnal | 2.4.0 |
+| Slim Multisensor PST03-A/B/C | | | Operational | 2.4.0 |
 
 ## Profalux
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | ----------- | -------------- | ----------- | ------ | -------------- |
-| shutter | Blind percentage inverted switch | can command the shutter from the domoticz switch, but also you can pull shutter status and update the Domoticz device. | Fully operationnal | 2.3.5 |
+| shutter | Blind percentage inverted switch | can command the shutter from the domoticz switch, but also you can pull shutter status and update the Domoticz device. | Fully operational | 2.3.5 |
 
 ## Salus
 
@@ -208,7 +208,7 @@ So there is a risk of latency when using Remote or Group command between the com
 
 ## Schneider
 
-* <https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN> )
+* <https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN>
 
 * [Corner Wiser Setup](Corner_Wiser-Setup.md)
 
@@ -247,24 +247,24 @@ So there is a risk of latency when using Remote or Group command between the com
 
 | Device/Type | Domoticz usage | Description | Status | Plugin Version |
 | -----------| -------------- | ----------- | ------ | -------------- |
-| Aqara RTCGQ11LM Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Lux sensor included doesn't work on master - report false values - To be tested in developement branch | 2.4.0 |
-| Aqara WSDCGQ11LM Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operationnal | 2.4.0 |
+| Aqara RTCGQ11LM Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Lux sensor included doesn't work on master - report false values - To be tested in development branch | 2.4.0 |
+| Aqara WSDCGQ11LM Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operational | 2.4.0 |
 | Aqara DJT11LM Vibration Sensor | Selector Switch |  Take, Tilt, Move, Drop; Vibration Curve widget, Orientation widget | Fully. OP | 4.4 (Orientation Widget needs 4.6 & Firmware 3.1b) |
-| Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operationnal | 2.4.0 |
-| Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cummulative Power and Meter consumption widget | Fully Op. | 4.2 |
-| Aqara MCCGQ11LM Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
-| Aqara WXKG01LM (86sw1) | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operationnal | 3.1.0 |
-| Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operationnal | 3.1.0 |
-| Aqara WXKG11LM Square Device with round Button | Switch Selector | There are 2 versions of that device. The following events are reported to the Domoticz Switch selectors : Original version : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks), New version : 1 Click, 2 Clicks, Long Click (more than 400ms), Release Button | Fully operationnal (both versions) | 3.1.0 |
-| Aqara WXKG03LM Aqara wireless switch single button | Button | The following events are reported to the Domoticz Switch : Clickn Double Click and Long Click | Fully operationnal | 3.3 |
+| Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operational | 2.4.0 |
+| Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cumulative Power and Meter consumption widget | Fully Op. | 4.2 |
+| Aqara MCCGQ11LM Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operational | 2.4.0 |
+| Aqara WXKG01LM (86sw1) | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operational | 3.1.0 |
+| Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operational | 3.1.0 |
+| Aqara WXKG11LM Square Device with round Button | Switch Selector | There are 2 versions of that device. The following events are reported to the Domoticz Switch selectors : Original version : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks), New version : 1 Click, 2 Clicks, Long Click (more than 400ms), Release Button | Fully operational (both versions) | 3.1.0 |
+| Aqara WXKG03LM Aqara wireless switch single button | Button | The following events are reported to the Domoticz Switch : Click Double Click and Long Click | Fully operational | 3.3 |
 | Aqara WXKG12LM | Button with giroscop | Simple and double click, Long Click and Long Release, Shake | Fully Op. | 4.3 |
-| Aqara Cube | Switch Selector | The following events are reported to the Domoticz Switch selectors : Shake, Wakepup, Drop, 90° and 180° rotation, Push, Tab and horizontal Rotation . | Fully operationnal | 2.4.0 |
-| Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Fully operationnal | 2.4.0 |
-| Plug | Plug, Power meter | Can switch on/off the plug and you get Watts consuption | Fully operationnal | 3.1.0 |
+| Aqara Cube | Switch Selector | The following events are reported to the Domoticz Switch selectors : Shake, Wakepup, Drop, 90° and 180° rotation, Push, Tab and horizontal Rotation . | Fully operational | 2.4.0 |
+| Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Fully operational | 2.4.0 |
+| Plug | Plug, Power meter | Can switch on/off the plug and you get Watts consumption | Fully operational | 3.1.0 |
 | Smoke Sensor | Smoke Sensor | Need 3 push on button to run synch| can't be reset from Domoticz | 2.3.5 |
-| Temperature Humidity Sensor | Temp + Humidity | | Fully operationnal | 2.3.5 |
-| Wall Double Switch QBKG12LM | Switch, Power meter | 2 switches with Power meter n each line | Fully operationnal | 3.1.0  |
-| Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operationnal | 2.4.0 |
+| Temperature Humidity Sensor | Temp + Humidity | | Fully operational | 2.3.5 |
+| Wall Double Switch QBKG12LM | Switch, Power meter | 2 switches with Power meter n each line | Fully operational | 3.1.0  |
+| Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operational | 2.4.0 |
 | Smart Wireless Switch Key Built In Gyro Multi-Functional | Switch Selector | Selector Switch: Click, Double Click, Long Click, Release Click, Shake | Fully Op. | 4.2.1 |
 | Aqara mgl01 | Illuminance Measurement | Give a Lux Value | Fully Op. | 4.6.065 |
 
