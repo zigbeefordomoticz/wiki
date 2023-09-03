@@ -103,7 +103,7 @@ __Note :__ Pour Debian 12 Bookworm il faut rajouter __--break-system-packages__ 
 
 __Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
 
-Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md).
+Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas valable pour une installation de la PiZigate (voir les [installations d'une PiZigate](Plugin_Installation.md)).
 
 ### 2.A - Prérequis
 
@@ -146,10 +146,10 @@ DomoticZ doit être installé dans un conteneur Docker __avec un dossier domotic
 Se référer à la page [Installer DomoticZ sur un NAS Synology avec Docker](Info_Installer-Domoticz-NAS-Synology-Docker.md) pour une explication détaillée de l'installation et du paramétrage de Docker nécessaire.
 
 ### 4.C - Procédure
-Il existe deux procédures pour installer le plugin et les librairies nécessaires, une solution via un script automatiquement lancé par domoticz au lancement du docker, celui-ci vérifie si les librairies sont présentes ainsi que le plugin et une dernière solution manuelle.
+Il existe deux procédures pour installer le plugin et les librairies nécessaires, une solution via un script automatiquement lancé par DomoticZ au lancement du docker, celui-ci vérifie si les librairies sont présentes ainsi que le plugin et une dernière solution manuelle.
 
 #### 4.C.1 Procédure par script
-Cette méthode consiste à utiliser un script dans le repertoire userdata de domoticz. Si vous avez suivi la procédure d'installation, cela correspond à `docker/domoticz`.
+Cette méthode consiste à utiliser un script dans le repertoire userdata de DomoticZ. Si vous avez suivi la procédure d'installation, cela correspond à `docker/domoticz`.
 Vous pouvez télécharger directement le script [ici](https://raw.githubusercontent.com/zigbeefordomoticz/Domoticz-Zigbee/dev/Tools/customstart.sh) et l'ajouter dans le répertoire via l'interface graphique ou via terminal :
 
 * Créer un nouveau terminal :
@@ -189,7 +189,7 @@ pip3 install -r requirements.txt
 
 
 ### 4.D Configuration du port du WebUI
-* Stopper le Conteneur. Cliquer sur 'Modifier' et aller dans l'onglet 'Paramètres des ports'. Il faut ajouter le port d'accés au WebUI (par défaut 9440) :
+* Stopper le Conteneur. Cliquer sur 'Modifier' et aller dans l'onglet 'Paramètres des ports'. Il faut ajouter le port d'accès au WebUI (par défaut 9440) :
  ![Port WebUI](Images/FR_Synology_Docker_Install_Plugin_Ports.png)
 
 * Lancer le Conteneur.
@@ -234,7 +234,7 @@ Attention, DomoticZ et ZiGate ont besoin d’écrire des fichiers dans des sous 
 Même en attribuant le maximum de droits autorisés (administrateur, utilisateur avec droits en écriture ...), il m’est arrivé d’obtenir ce message (peut être un oubli…).
 Pour éviter tout problème, j’ai finalement choisi d’installer DomoticZ directement à la racine sous C:\Domoticz et depuis aucun problème. D'autres utilisateurs n'ont pas eu de problèmes en mettant DomoticZ dans le dossier C:\Program files (x86).
 
-#### 5.2.B - Installation des coordinateurs la ZiGate
+#### 5.2.B - Installation des coordinateurs
 
 ##### 5.2.B.1 - La ZiGate
 
@@ -283,7 +283,7 @@ Attendre que l’installation du package soit terminé (vous devez être connect
 
 ##### 5.2.C.2 - Git pour Windows
 
-De nombreux packages de plugin sont disponibles sur GitHub pour DomoticZ. C’est le cas notamment pour pour les clefs Zigbee.
+De nombreux packages de plugin sont disponibles sur GitHub pour DomoticZ. C’est le cas notamment pour pour les clefs ZigBee.
 
 Sous Windows, le plus simple pour gérer ce type de packages est de télécharger et d’installer  un client de téléchargement « git » en allant sur le site officiel : <https://gitforwindows.org/>
 
@@ -498,7 +498,7 @@ Voici un exemple de ce que vous devriez avoir :
   * Un outil est disponible __Tools/Fedora__ pour tester la communication avec la PiZigate. Cet outil est basé sur l'outil PiZiGate_test et n'a pas d'autres fonctionnalités qu'un test de communication.
 
   * Recompiler l'outil `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
-  * Exccuter `./PiZiGate_test-fedora /dev/ttyS1`
+  * Exécuter `./PiZiGate_test-fedora /dev/ttyS1`
 
 ```bahs
    [domoticz@rasp Fedora]$ ./PiZiGate_test-fedora /dev/ttyS1
