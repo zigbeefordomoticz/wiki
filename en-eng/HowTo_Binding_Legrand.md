@@ -9,7 +9,7 @@ Purpose of this page is to document how to bind a "Double gangs remote switch_Le
 
 This will be applicable for most of the devices as soon as they support binding between 2 end devices.
 
-ATTENTION: it will required to have the ZiGate up and running to have the binding operationnal. Do not expect to have binding working while the ZiGate is Off.
+ATTENTION: it will required to have the ZiGate up and running to have the binding operational. Do not expect to have binding working while the ZiGate is Off.
 
 While it is possible to use the Double bang remote switch to bind , the 'Remote Shutter' seems not to accept any bindings.
 
@@ -57,12 +57,12 @@ For such, we are going to use the Web Admin page :
 * Cluster: 0x0006  ( ON and OFF )
 * Cluster: 0x0008  ( Dimmer and Level Control )
 
-It is also possible to to bind several cluster, in that case, you have to do several binding. One with one cluster and then and othe one with the other cluster.
+It is also possible to to bind several cluster, in that case, you have to do several binding. One with one cluster and then and other one with the other cluster.
 
 #### Source
 
 This is basically the device which is going to __trigger__ the action define in the __Cluster selection__.
-In case like the Double Bang remote Legrand where you have 2 actioners, you have to select the correct one. Usally in that case, you have what ZigBee called different EndPoints (EP), this is the 01 or 02 that you can see at the end of the Widget name at provisionning time.
+In case like the Double Bang remote Legrand where you have 2 actionners, you have to select the correct one. Usually in that case, you have what ZigBee called different EndPoints (EP), this is the 01 or 02 that you can see at the end of the Widget name at provisioning time.
 
 #### Target
 
