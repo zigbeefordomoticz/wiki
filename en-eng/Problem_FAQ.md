@@ -5,22 +5,22 @@
 * [Q3. Can I debug myself ?](#q3-can-i-debug-myself-)
 * [Q4. Where can I find the list of supported Coordinators and Devices ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
 * [Q5. Where can I find the coordinator firmwares ?](#q5-where-can-i-find-the-coordinator-firmwares-)
-* [Q6. Can I use several coodinators in the same DomoticZ ?](#q6-can-i-use-several-coodinators-in-the-same-domoticz-)
+* [Q6. Can I use several coordinators in the same DomoticZ ?](#q6-can-i-use-several-coordinators-in-the-same-domoticz-)
 * [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
-* [Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manualy)
+* [Q8. My device is not updated in DomoticZ when interacting via a remote control or manually](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually)
 * [Q9. Can I run Plugin Version 6 on a Windows system ?](#q9-can-i-run-plugin-version-6-on-a-windows-system)
 
 ## Troubleshooting
 
 * [T1. My coordinator is not working](#t1-my-coordinator-is-not-working)
 * [T2. My object can not be paired](#t2-my-object-can-not-be-paired)
-* [T3. My object doen't work as expected](#t3-my-object-doent-work-as-expected)
+* [T3. My object doesn't work as expected](#t3-my-object-doesnt-work-as-expected)
 
 ## Errors
 
 * [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
 * [E2. Log error : `Decode8000`](#e2-log-error--decode8000)
-* [E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
+* [E3. Log error : `Error: (Zigate) Communication error when transmitting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-zigate-communication-error-when-transmitting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 * [E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-log-error--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 * [E5. Missing module Error](#e5-missing-module-error)
 * [E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-error--error-plugins-name--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
@@ -39,7 +39,7 @@ The first source of support is the Wiki :
 
 * [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
 * [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
-* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunately outdated. Please contact us if you are willing to contribute in the udpate of this wiki_)
+* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunately outdated. Please contact us if you are willing to contribute in the update of this wiki_)
 
 You can also get support and ask questions :
 
@@ -54,7 +54,7 @@ You can also get support and ask questions :
 
 Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
-The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you have installed the plugin  before april 2022.
+The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you have installed the plugin  before April 2022.
 
 
 ------------
@@ -78,7 +78,7 @@ Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadde
 
 
 ------------
-## Q6. Can I use several coodinators in the same DomoticZ ?
+## Q6. Can I use several coordinators in the same DomoticZ ?
 
 We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
 
@@ -96,7 +96,7 @@ Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can c
 
 
 ------------
-## Q8. My device is not updated in DomoticZ when interacting via a remote control or manualy
+## Q8. My device is not updated in DomoticZ when interacting via a remote control or manually
 
 For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
 
@@ -133,7 +133,7 @@ This indicate a miss communication between the plugin and the coordinator. You n
 
 * If this is the first time you are using the Coordinator (no device paired yet), you have to initialize it, set the __Initialize Coordinator: True__ in the Domoticz Hardware menu when starting the plugin. Once the first startup is ok, then disable this parameter to prevent erasing all paired devices at the next restart.
 * Ensure that the serial port is the right one.
-* Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy)
+* Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy))
 * Ensure that there is not an other process running on the port
 * If the coordinator is connected on a PI, make sure that you use USB2 (and not the USB3 from the PI4)
 * If you have connected the coordinator on an USB HUB, try to plug it directly to the server
@@ -150,7 +150,7 @@ Please refer to [Dealing with none certified device](https://zigbeefordomoticz.g
 
 
 ------------
-## T3. My object doen't work as expected
+## T3. My object doesn't work as expected
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
@@ -187,7 +187,7 @@ cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/3
 
 
 ------------
-## E3. Log error : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
+## E3. Log error : `Error: (Zigate) Communication error when transmitting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
 Here after is an exemple of errors found in the log file.
 
@@ -243,7 +243,7 @@ sudo pip3 install -r requirements.txt
 
 ATTENTION:
 
-* On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first tipme. If you have run once already without Administrator windows, you must start removing all already installed modules.
+* On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first time. If you have run once already without Administrator windows, you must start removing all already installed modules.
 
 
 ------------
@@ -267,16 +267,16 @@ ERROR: Could not build wheels for cryptography which use PEP 517 and cannot be i
     sudo python3 -m pip install wheel --upgrade
     ````
 
-1. make sure your /tmp is large enought
-1. make sure you have enought swap, if requires , add some filesytem swap
+1. make sure your /tmp is large enough
+1. make sure you have enough swap, if requires , add some filesystem swap
 
 
 ------------
 ## E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`
 
-This error may appear when you change branch from developp to stable6 : the dnspython module level is not the same.
+This error may appear when you change branch from develop to stable6 : the dnspython module level is not the same.
 
-* Do the folowing command from the plugin home directory
+* Do the following command from the plugin home directory
 ``` bash
 sudo python3 -m pip install -r requirements.txt --upgrade
 ```
@@ -310,7 +310,7 @@ Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elel
 ```
 
 This is related to the fact that you are using a recent cryptography module.
-you can solmve this issue by downgrading the crypography module 
+you can solve this issue by downgrading the cryptography module 
 
 `sudo python3 pip install cryptography==40.0.2 --upgrade`
 
@@ -318,7 +318,7 @@ you can solmve this issue by downgrading the crypography module
 ------------
 ## E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`
 
-This error commes with the API modification of DomoticZ 2023.2
+This error comes with the API modification of DomoticZ 2023.2
 
 You need to update to the plugin version 7 following the [instructions](../Release_7.1.md).
 
@@ -337,7 +337,7 @@ Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make sure you have py
 ```
 
 
-Operation under Debian 12 Bookworm needs to modify the instalation command line by default by adding __--break-system-packages__ at the end :
+Operation under Debian 12 Bookworm needs to modify the installation command line by default by adding __--break-system-packages__ at the end :
 
 ``` bash
 sudo pip3 install -r requirements.txt --break-system-packages
