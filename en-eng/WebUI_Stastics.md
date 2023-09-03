@@ -1,6 +1,6 @@
 # The WebUI stastistics
 
-Like most website operators, Zigbee for Domoticz WEBUi collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. We uses [Matomo](https://fr.matomo.org) (prevously Piwik) for this. Zigbee for Domoticz’s purpose in collecting non-personally identifying information is to better understand how Z4D plugin’s visitors use its website. From time to time, we may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage like:
+Like most website operators, Zigbee for Domoticz WEBUi collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. We uses [Matomo](https://fr.matomo.org) (previously Piwik) for this. Zigbee for Domoticz’s purpose in collecting non-personally identifying information is to better understand how Z4D plugin’s visitors use its website. From time to time, we may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage like:
 
 * Coordinator type
 * Plugin version
@@ -35,7 +35,7 @@ The network size statistics can be reported to us in graphical form:
 
 The horizontal axis shows the total number of devices (routers + end devices). The vertical axis shows the number of routers (in blue) and end devices (in orange).
 
-In the example, we see on the far right, a network with 56 deivces, including 19 routers and 37 end devices.
+In the example, we see on the far right, a network with 56 devices, including 19 routers and 37 end devices.
 
 
 ## Why ?
