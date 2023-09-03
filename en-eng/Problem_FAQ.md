@@ -320,3 +320,25 @@ you can solmve this issue by downgrading the crypography module
 This error commes with the API modification of DomoticZ 2023.2
 
 You need to update to the plugin version 7 following the [instructions](../Release_7.1.md).
+
+
+------------
+## E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` 
+
+The full error is :
+
+```
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install python3-xyz, where xyz is the package you are trying to install.
+
+If you wish to install a non-Debian-packaged Python package, create a virtual environment using python3 -m venv path/to/venv.
+Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make sure you have python3-full installed.
+```
+
+
+Operation under Debian 12 Bookworm needs to modify the instalation command line by default by adding __--break-system-packages__ at the end :
+
+``` bash
+sudo pip3 install -r requirements.txt --break-system-packages
+```
+__Reminder :__ This command line is only valid on Debian 12 Bookworm systems.

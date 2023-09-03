@@ -29,7 +29,7 @@
 * [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError-no-module-named-cchardet)
 * [E8. Erreur : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-erreur--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
 * [E10. Erreur : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-erreur--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
-
+* [E11. Erreur à l'instalation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` ](#e11-erreur-à-linstalation-sous-debian-12--×-this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 
 ------------
 ------------
@@ -227,7 +227,6 @@ Cette erreur apparaît lors de l'arrêt du plugin. Ne pas en tenir compte.
 
 ``` bash
 ls -l external/dnspython/
-
 ```
 
 Si la réponse est :
@@ -295,3 +294,24 @@ sudo python3 -m pip install -r requirements.txt --upgrade
 Cette erreur est apparue à la suite de la modification de l'API de DomoticZ dans la version 2023.2. 
 
 Il suffit de mettre à jour le plugin en version 7 en suivant les [recommandations](../en-eng/Release_7.1.md).
+
+
+------------
+## E11. Erreur à l'instalation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` 
+
+L'erreur complète est :
+
+```
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install python3-xyz, where xyz is the package you are trying to install.
+
+If you wish to install a non-Debian-packaged Python package, create a virtual environment using python3 -m venv path/to/venv.
+Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make sure you have python3-full installed.
+```
+
+Le fonctionnement sous Debian 12 Bookworm nécessite de modifier la commande d'instalation par défaut en rajoutant __--break-system-packages__ à la fin soit :
+
+``` bash
+sudo pip3 install -r requirements.txt --break-system-packages
+```
+__Rappel :__ Cette commande n'est valable que pour une installation sous Debian 12 Bookworm.
