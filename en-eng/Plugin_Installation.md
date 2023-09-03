@@ -1,9 +1,9 @@
 # ZigBeeForDomoticZ plugin installation
 
-In every installation methodes, the plugin requires DomoticZ version 2021.1 or greater and Python version 3.8 or higher.
+In every installation methods, the plugin requires DomoticZ version 2021.1 or greater and Python version 3.8 or higher.
 Make sure that you have __python3-dev package__ installed. More informations on [DomoticZ Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
 
-In this first step, there are severals installation methodes depending on your Operating System :
+In this first step, there are severals installation methods depending on your Operating System :
 
 * 1 - [Manual Installation running on Linux](#1---manual-installation-running-on-linux)
 * 2 - [Python Plugin Manager installation running on Linux](#2---python-plugin-manager-installation-running-on-linux)
@@ -25,9 +25,9 @@ __Important :__ This installation method is not valid for an installation of the
 
 ### 1.A - Prerequisite
 
-* DomoticZ version aabove 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+* DomoticZ version above 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
 * Python version above 3.8 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
-* Git packet installated
+* Git packet installed
 
 ### 1.B - Procedure
 
@@ -59,7 +59,7 @@ cd Domoticz-Zigbee/
 sudo pip3 install -r requirements.txt
 ```
 
-__Note :__ With Debian 12 Bookworm, you have to add __--break-system-packages__ at the end of the previous command line. Be careful to take the two dashs at the begining.
+__Note :__ With Debian 12 Bookworm, you have to add __--break-system-packages__ at the end of the previous command line. Be careful to take the two dash at the beginning.
 
 5. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
 
@@ -259,7 +259,7 @@ Like in a normal install, you can add new packages with apt-get
 
 for more information about dockerfile see [here](https://docs.docker.com/engine/reference/builder/)
 
-Then you can build your docker's image localy with this command :
+Then you can build your docker's image locally with this command :
 
 ```
 docker build -t docker-domoticz .
@@ -354,7 +354,7 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
     Put these 5 lines just before the exit 0 line, save and exit
 
-1. If you have a RPi3B+, shutdown bluetooth permanently by editing config.txt:
+1. If you have a RPi3B+, shutdown Bluetooth permanently by editing config.txt:
 
     ```bash
     sudo nano /boot/config.txt
@@ -452,7 +452,7 @@ If you ever have to enter flash mode to update the Pizigate firmware, first type
 gpio write 2 0
 gpio write 0 0
 gpio write 0 1
-````
+```
 
 After flashing the firmware, a sudo reboot will reload defaults from rc.local
 
@@ -460,8 +460,8 @@ After flashing the firmware, a sudo reboot will reload defaults from rc.local
 
 ## 7 - PiZigate Installation on RPi3B+ running on Fedora 29 (Linux)
 
-Fedora is my developpement platform, and I was a bit frustrated when the PiZigate came and was only running on Raspbian.
-Finally after few trials and changes, I have been able to get a Fedora 29 , Domoticz , PiZigate stack fully operationnal
+Fedora is my development platform, and I was a bit frustrated when the PiZigate came and was only running on Raspbian.
+Finally after few trials and changes, I have been able to get a Fedora 29 , Domoticz , PiZigate stack fully operational
 
 ### Fedora configuration
 
