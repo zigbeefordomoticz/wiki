@@ -28,8 +28,8 @@ Dès l'appairage, de 1 à 3 dispositifs sont présentés à DomoticZ :
 | Type                         | Fonction                                      |
 | ---------------------------- | --------------------------------------------- |
 | Switch                       | Permet l'allumage/extinction de l'ampoule     |
-| Level Control (LvlControl)   | Controle le niveau de luminosité de l'ampoule |
-| Color Control (ColorControl) | Controle la coulour d'éclairage               |
+| Level Control (LvlControl)   | Contrôle le niveau de luminosité de l'ampoule |
+| Color Control (ColorControl) | Contrôle la couleur d'éclairage               |
 
 ### Les prises connectées
 
