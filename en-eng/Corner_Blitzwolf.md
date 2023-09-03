@@ -15,7 +15,7 @@ The Temperature & Humidity Sensor share the same model name as [generic one](htt
 
 It's generic name is TS0121.
 
-To pair the device, press the power butto for 5s, a blue light will flash till the pairing process is complete.
+To pair the device, press the power button for 5s, a blue light will flash till the pairing process is complete.
 Five devices are created:
 
 * Plug (On/Off)
@@ -23,9 +23,9 @@ Five devices are created:
 * Power (General kWh and a P1Meter)
 * Ampere
 
-You can remove one on the unsued power device. The cumulated consumption is updated each 0.01 kWh.
+You can remove one on the unused power device. The cumulated consumption is updated each 0.01 kWh.
 
-The power device can also indicate the actual power consuption but you have to activate the polling for this brand.
+The power device can also indicate the actual power consumption but you have to activate the polling for this brand.
 On the dashboard, in the settings menu, activate advanced settings and choose the refresh frequency:
 
 ![](../Images/Settings_polling_bltzwolf.PNG)
