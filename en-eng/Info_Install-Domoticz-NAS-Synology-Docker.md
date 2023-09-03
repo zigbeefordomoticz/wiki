@@ -45,7 +45,7 @@ This part is quite important as it allows to keep outside docker the userdatas (
 ![Add Folder](Images/EN_Synology_Docker_Install_Param_Volume_1.png)
 
 
-Select docker then "Create folder" and name it domotciz.
+Select docker then "Create folder" and name it domoticz.
 ![Add folder docker/domoticz](Images/EN_Synology_Docker_Install_Param_Volume_2.png)
 
 
