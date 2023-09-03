@@ -13,8 +13,8 @@ Here is the __Dashboard__ page of the plugin Web interface :
 #### The 3 top graphics
 
 They shaw the traffic state :
-* Outging
-* Incomming
+* Outgoing
+* Incoming
 * Type and load
 
 #### The 3 bottom graphics
