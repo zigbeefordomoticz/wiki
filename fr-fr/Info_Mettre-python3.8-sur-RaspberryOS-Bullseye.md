@@ -1,6 +1,6 @@
 # Revenir à python3.8 par défaut sur RaspberryOS 11 (bullseye)
 
-Domoticz a des soucis avec python3.9 sur raspberry pi, or c’est désormais la version par défaut de python avec RaspberryOS. Nous allons donc voir comment revenir à la version précédente de python pour permettre à domoticz de fonctionner correctement.
+DomoticZ a des soucis avec python3.9 sur raspberry pi, or c’est désormais la version par défaut de python avec RaspberryOS. Nous allons donc voir comment revenir à la version précédente de python pour permettre à DomoticZ de fonctionner correctement.
 
 On parle ici de changer de version de python pour un serveur domotique. Je pars donc du principe qu’il s’agit d’un serveur sans écran, clavier ou souris et que vous savez vous connecter dessus à distance (pour ma part en SSH) et utiliser un terminal. Avec une interface graphique vous pourrez aussi suivre ces instructions mais je ne parle que de lignes de commande, vous devrez donc tout taper dans un terminal vous aussi.
 
@@ -27,7 +27,7 @@ ii python3.9-dev 3.9.2-1+rpi1 armhf Header files and a static library for Python
 ii python3.9-minimal 3.9.2-1+rpi1 armhf Minimal subset of the Python language (version 3.9)
 ```
 
-Sur ce système relativement propre, on retrouve les packages python standards et les packages « -dev » nécessaires au système de plugins de domoticz.
+Sur ce système relativement propre, on retrouve les packages python standards et les packages « -dev » nécessaires au système de plugins de DomoticZ.
 
 Regardons maintenant ce qui est installé concernant python3.8. Il est possible que quelques packages soit installés soit historiquement, soit en raison de dépendances d’autres packages.
 
@@ -106,7 +106,7 @@ update-alternatives: using /usr/bin/python3.8 to provide /usr/bin/python3 (pytho
 $
 ```
 
-J’ai mis une priorité de 10 à python3.8 et 1 à python3.9, ainsi le choix en mode automatique passe sur l’option à la priorité la plus haute. Il est toujours possible ensuite de changer la priorité (en repassant les commandes précédentes en changeant juste le dernier paramètre) ou séléctionner manuellement l’option de votre choix via l’option –config :
+J’ai mis une priorité de 10 à python3.8 et 1 à python3.9, ainsi le choix en mode automatique passe sur l’option à la priorité la plus haute. Il est toujours possible ensuite de changer la priorité (en repassant les commandes précédentes en changeant juste le dernier paramètre) ou sélectionner manuellement l’option de votre choix via l’option –config :
 
 ```shellsession
 $ sudo update-alternatives --config python
@@ -131,7 +131,7 @@ $ python3 --version
 Python 3.8.7
 ```
 
-Pour finir, il faut retirer les packages -dev liés à python 3.9, sinon domoticz continue d’essayer de démarrer le système de plugins avec python 3.9 sans considérer la configuration système par défaut. Il y a peut-être une solution plus propre que de désinstaller ces packages, si vous la trouvez n’hésitez pas à me le faire savoir dans les commentaires par exemple.
+Pour finir, il faut retirer les packages -dev liés à python 3.9, sinon DomoticZ continue d’essayer de démarrer le système de plugins avec python 3.9 sans considérer la configuration système par défaut. Il y a peut-être une solution plus propre que de désinstaller ces packages, si vous la trouvez n’hésitez pas à me le faire savoir dans les commentaires par exemple.
 
 ```shellsession
 $ sudo apt remove libpython3.9-dev
@@ -155,4 +155,4 @@ Processing triggers for man-db (2.9.4-2) ...
 $
 ```
 
-Il ne reste plus qu’à relancer domoticz Merci de m’avoir lu, j’espère que cet article vous aura été utile !
+Il ne reste plus qu’à relancer DomoticZ Merci de m’avoir lu, j’espère que cet article vous aura été utile !
