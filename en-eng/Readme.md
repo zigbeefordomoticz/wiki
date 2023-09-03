@@ -16,7 +16,7 @@ We are contributing to this project on our spare time. If you do consider that i
 ## Upgrading to Release 7
 
 On __14/07/2023__, we released the __stable7__ version of the plugin. The necessary to follow the following procedure : [Plugin_Version-7](Release_7.1.md). If you are runner Buster, you have to upgrade to Bullseye first, and you must have python3.8 or above.
-The stable7 is also the miminum to run with DomoticZ 2023.2 otherwise you will have some API errors.
+The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will have some API errors.
 
 
 
@@ -43,7 +43,7 @@ The stable7 is also the miminum to run with DomoticZ 2023.2 otherwise you will h
 
 ## Backups
 
-* [Backups to do to be able to restore without loosing crucials informations](Plugin_Backup.md)
+* [Backups to do to be able to restore without loosing crucial informations](Plugin_Backup.md)
 
 
 ## Plugin's web Interface
@@ -116,7 +116,7 @@ The stable7 is also the miminum to run with DomoticZ 2023.2 otherwise you will h
    * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
 
 
-## Developpment
+## Development
 
 * [Technical infos](Technical/Readme.md)
 
@@ -148,4 +148,4 @@ The stable7 is also the miminum to run with DomoticZ 2023.2 otherwise you will h
 
 * [A Guide to Wireless range and Repeater](https://blog.smartthings.com/iot101/a-guide-to-wireless-range-repeaters/)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
-* [Cohexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
+* [Coexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
