@@ -59,7 +59,7 @@ cd Domoticz-Zigbee/
 sudo pip3 install -r requirements.txt
 ```
 
-__Note :__ Pour Debian 12 Bookworm il faut rajouter *--break-system-packages* à la fin de la commande précédente
+__Note :__ With Debian 12 Bookworm, you have to add *--break-system-packages* at the end of the previous command line.
 
 5. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
 

@@ -61,6 +61,8 @@ Ouvrir le terminal.
   ``` bash
   sudo pip3 install -r requirements.txt
   ```
+__Note :__ Pour Debian 12 Bookworm il faut rajouter *--break-system-packages* à la fin de la commande précédente.
+
 
 5. Exécuter la commande en adaptant __pi:pi__ si nécessaire au __user:group__ utilisé. Attention à bien prendre le point à la fin.
 
