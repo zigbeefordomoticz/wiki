@@ -54,7 +54,7 @@ The Certbot packages on your system come with a cron job or systemd timer that w
 sudo certbot renew --dry-run
 ```
 
-If, like me, you always close the port 80, you'll have to run the renew command manualy after opening it.
+If, like me, you always close the port 80, you'll have to run the renew command manually after opening it.
 
 ## Add a Restricting Access with HTTP Basic Authentication
 
