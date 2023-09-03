@@ -309,7 +309,7 @@ If you wish to install a non-Debian-packaged Python package, create a virtual en
 Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make sure you have python3-full installed.
 ```
 
-Le fonctionnement sous Debian 12 Bookworm nécessite de modifier la commande d'installation par défaut en rajoutant __--break-system-packages__ à la fin soit :
+Le fonctionnement sous Debian 12 Bookworm nécessite de modifier la commande d'installation par défaut en rajoutant __--break-system-packages__ à la fin soit la commande complète :
 
 ``` bash
 sudo pip3 install -r requirements.txt --break-system-packages
