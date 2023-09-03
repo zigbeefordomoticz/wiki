@@ -6,7 +6,7 @@ Le Plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 ### Procédure
 
-__ATTENTION:__ si vous n'etes pas encore en Version 6, merci de suivre cette procédure de  mise à jour vers la [version 6](Plugin_Version-6.md)
+__ATTENTION:__ si vous n'êtes pas encore en Version 7, merci de suivre cette procédure de  mise à jour vers la [version 7](Plugin_Version-7.md)
 
 * Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
@@ -39,9 +39,33 @@ Au fur et à mesure des évolutions de DomoticZ, le Plugin se doit d'évoluer et
 
 Les différentes branches sont :
 
+#### stable7 (créée en avril 2023)
+
+C'est la version qui sépare la gestion des objets certifiés des fichiers de fonctionnement du plugin.
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Coordinateurs | ZiGate V1 et V2<br>ELElabs<br>ZZH<br>Sonoff<br>TI CCXXXX |
+| Compatibilité minimale | DomoticZ 2023.1 / Python 3.8 > Debian Bullseye|
+| Compatibilité maximale | Dernière version de DomoticZ |
+
+__Note :__ Le passage à la stable7 nécessite une procédure particulière : voir la page [Migration vers version 7](Plugin_Version-7.md).
+
+
+#### dev (créée en avril 2023)
+
+La branche dev est le canal de développement. __Ne passez pas sur la branche dev sans y avoir été invité.__
+
+Si vous êtes sur la branche __dev__ (suite à un développement), vous pouvez repasser sur la branche __stable7__ à la prochaine mise à jour du canal __stable7__.
+
+| Info  | Compatibilité  |
+| :------------: |:---------------:|
+| Coordinateurs | idem stable7 |
+| Compatibilité minimale | DomoticZ 2023.1 |
+| Compatibilité maximale | Dernière version de DomoticZ |
+
 #### stable6 (créée en avril 2022)
 
-C'est la branche par défaut actuelle.
 C'est la version qui a ouvert le plugin aux coordinateurs TI CCXXXX, Sonoff, Elelabs, ZNP.
 
 | Info  | Compatibilité  |
@@ -51,18 +75,6 @@ C'est la version qui a ouvert le plugin aux coordinateurs TI CCXXXX, Sonoff, Ele
 | Compatibilité maximale | Dernière version de DomoticZ |
 
 __Note :__ Le passage à la stable6 nécessite une procédure particulière : voir la page [Migration vers version 6](Plugin_Version-6.md).
-
-#### beta6/dev (créée en avril 2022)
-
-La branche béta6 est le canal de développement. __Ne passez pas sur la branche beta6/dev sans y avoir été invité.__
-
-Si vous êtes sur la branche __beta6/dev__ (suite à l'ajout d'un nouveau matériel par exemple), vous pouvez repasser sur la branche __stable6/dev__ à la prochaine mise à jour du canal __stable6__.
-
-| Info  | Compatibilité  |
-| :------------: |:---------------:|
-| Coordinateurs | idem stable6 |
-| Compatibilité minimale | DomoticZ 2021.1 |
-| Compatibilité maximale | Dernière version de DomoticZ |
 
 #### stable5 (créée en mai 2021)
 
