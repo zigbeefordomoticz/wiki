@@ -19,14 +19,14 @@ from every where, here is a step approach to follow :
 1. Make sure coordinator is not in "Permit to Join mode", so "Accept new Hardware " is disabled in the WebAdmin UI and the coordinator doesn't blink or have the pairing specific color (depends on the coordinator used).
 1. Reset the end device
 1. you should receive a leave message like that one `Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
-1. Remove all Widets from Domoticz
+1. Remove all Widgets from Domoticz
 
 That's it.
 
 
 ## Removing Router devices ( main powered )
 
-Usally with Main Powered device, you can remove all associated Widgets from DomoticZ, and while removing the last one, (if the "Removal on plugin" parameter is enabled), the plugin will request the device to leave.
+Usually with Main Powered device, you can remove all associated Widgets from DomoticZ, and while removing the last one, (if the "Removal on plugin" parameter is enabled), the plugin will request the device to leave.
 
 
 A message like that should be received by the plugin and visible in the log as a "Status"
