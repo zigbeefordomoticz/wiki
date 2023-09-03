@@ -19,7 +19,7 @@ We will use the Room number to determine which Temp Sensor has to feed the tempe
 Two device parameters have been introduced:
 
 * DanfossRoom: By default set to 0, which will indicate the room number the device (eTRV or Temp sensor) belongs
-* DanfossRoomFreq": By default set to 0 (which stand for disable), indicate the frequency (in seconds) when checking the temperature sensor and pushing teh result to the eTRV of the corresponding room. Danfoss recommend to set the ferquency above 30 minutes ( 1800 seconds)
+* DanfossRoomFreq": By default set to 0 (which stand for disable), indicate the frequency (in seconds) when checking the temperature sensor and pushing teh result to the eTRV of the corresponding room. Danfoss recommend to set the frequency above 30 minutes ( 1800 seconds)
 
 #### Exemple 1:: 1 room  with the following zigbee devices
 
@@ -27,7 +27,7 @@ Two device parameters have been introduced:
 * 3 x eTRV
 
 You will set the device parameter of Lumi Weather to :  `{ "DanfossRoom": 1 }` which will tell the plugin that the Lumi Weather is in Room #1
-You will set the device parameter of the 3 eTRV to :  `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` which will tel the plugin that each of the 3 eTRVs will receive the temperature from the Lumi Weater (and not from the eTRV local temp sensor). This will be refreshed every 30 minutes.
+You will set the device parameter of the 3 eTRV to :  `{ "DanfossRoom": 1 , "DanfossRoomFreq": 1800 }` which will tel the plugin that each of the 3 eTRVs will receive the temperature from the Lumi Weather (and not from the eTRV local temp sensor). This will be refreshed every 30 minutes.
 
 #### Exemple 2: 3 room  with the following zigbee devices
 
@@ -44,6 +44,6 @@ You can refer to [How To Device Parameters](../en-eng/HowTo_Device-parameters.md
 
 ## ATTENTION
 
-* If you put 2 Temperature sensors in the same room, what is going to happen is impredictable and not supported!! You have be warnned, so check your configuration.
+* If you put 2 Temperature sensors in the same room, what is going to happen is unpredictable and not supported!! You have be warned, so check your configuration.
 * While using string could work with the room number we highly recommend the usage of digit/number
 * If you do not use this feature, make sure to leave "DanfossRoomFreq": 0
