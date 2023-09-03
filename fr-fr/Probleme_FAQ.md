@@ -52,7 +52,7 @@ Vous pouvez également obtenir de l'aide et poser des questions : :
 ------------
 ## Q2. Où trouver les logs ?
 
-Depuis la Stable6, les logs sont enregistés dans le fichier : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
+Depuis la Stable6, les logs sont enregistrés dans le fichier : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
 Le dossier __Domoticz-Zigbee__ peut s'appeler __Domoticz-Zigate__ si vous aviez installer le plugin ZiGate avant avril 2022.
 
@@ -112,7 +112,7 @@ Si vous rencontrez des problèmes comme l'exemple ci-dessus, il est fort probabl
 ------------
 ## Q9. Le lien de menu ne s'affiche pas dans DomoticZ
 
-Vérifier que laffichage de l'onglet Personnalisé est bien activé :
+Vérifier que l'affichage de l'onglet Personnalisé est bien activé :
 
 * Pour les versions de DomoticZ jusqu'à la 2022.2, aller dans Configuration / Paramètres / Onglet Système et vérifier la coche de l'onglet Personnalisé tout en bas.
 
@@ -248,7 +248,7 @@ sudo pip3 install -r requirements.txt
 ```
 
 ATTENTION:
-Sur les Windows, il faut lancer les commandes _pip3 install_ en mode administrateur etce, dès la première fois.
+Sur les Windows, il faut lancer les commandes _pip3 install_ en mode administrateur et ce, dès la première fois.
 Si cela n'a pas été fait la première fois, il faut désinstaller les modules existants.
 
 ------------
@@ -259,16 +259,16 @@ Cette erreur apparaît lorsque _API base url_ n'est pas (ou pas bien) paramétr�
 ------------
 ## E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`
 
-Cette erreur apparaît lorsque vous avez plusieurs sessions du plugin et qu'il n'y a pas la bonne version de la dependance charset-normalizer, vous devez etre en 2.0.12 
+Cette erreur apparaît lorsque vous avez plusieurs sessions du plugin et qu'il n'y a pas la bonne version de la dependance charset-normalizer, vous devez être en 2.0.12 
 
-Verifiez votre version avec : 
+Vérifiez votre version avec : 
 - (sudo) pip show charset-normalizer
  
 ou
 
 -(sudo) pip3 show charset-normalizer (si vous avez encore python2 sur votre installation)
 
-Si la réponse ne donne pas la verison 2.0.12 alors : 
+Si la réponse ne donne pas la version 2.0.12 alors : 
 
 - (sudo) pip install --force-reinstall --upgrade charset-normalizer==2.0.12
 
