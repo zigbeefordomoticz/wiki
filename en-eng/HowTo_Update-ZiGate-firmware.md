@@ -6,7 +6,7 @@ Here is described the process to flash a new firmware for ZiGate
 
 ## Where to find the latest Firmware
 
-Usally the latest compatible firmware for ZiGate which is supported with the plugin is available under the plugin directory `Zigate-Firmware`
+Usually the latest compatible firmware for ZiGate which is supported with the plugin is available under the plugin directory `Zigate-Firmware`
 
 ```
 [domoticz@rasp Zigate-Firmware]$ ls -l
@@ -30,7 +30,7 @@ Firmware Version is __031d__
 
 1. Documentation on [zigate.fr](https://zigate.fr)
    * [ZiGate DIN](https://zigate.fr/documentation/mise-a-jour-de-la-zigate-din/)
-   * [ZiGate USB]](https://zigate.fr/documentation/mise-a-jour-de-la-zigate/)
+   * [ZiGate USB](https://zigate.fr/documentation/mise-a-jour-de-la-zigate/)
 
 
 The plugin provides all necessary tools to flash ZiGate.
@@ -70,7 +70,7 @@ __ASSUMPTIONS__
 
    ```
 
-   From now we have the binary to flash the firmwate available on `Tools/JennicModuleProgrammer/Build/JennicModuleProgrammer`
+   From now we have the binary to flash the firmware available on `Tools/JennicModuleProgrammer/Build/JennicModuleProgrammer`
 
 
 
