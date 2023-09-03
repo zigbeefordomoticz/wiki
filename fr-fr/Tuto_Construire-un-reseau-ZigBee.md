@@ -48,7 +48,7 @@ Bien que le maillage ZigBee établira le chemin optimal pour une communication s
 ### Astuce 1 : Positionner votre coordinateur à un emplacement central dans votre logement.
 
 Ceci permettra à votre coordinateur de rayonner sur tout le logement en limitant les interférences avec l'ensemble des objets (routeurs ou terminaux). Éviter les coins extrémité du logement, la cave, le garage ou les endroits avec beaucoup de grosses pièces métalliques (plaques, tuyaux, ...) qui vont générer des interférences.
-Si votre routeur se situe à une extrémité de votre logement, essayer de positionner votre coordinateur sur un emplacement central en utilisant un câble ethernet ou du CPL.
+Si votre routeur se situe à une extrémité de votre logement, essayer de positionner votre coordinateur sur un emplacement central en utilisant un câble Ethernet ou du CPL.
 
 ### Astuce 2 : Appairer vos objets depuis leur emplacement final.
 
