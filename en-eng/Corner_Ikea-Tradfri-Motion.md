@@ -59,4 +59,4 @@ To make them active go to webUI management  Group management and fill the checkm
 
 ## Limitation
 
-This activation of tradfri devices is limited to 5 devices. This is because of limited memoryspace in the Zigatechip. When you add a Zigate to a group for the sixt time the device connection is not established. You get a this error in the domoticz log: We reach the max number of Cycle and didn't succeed in the Group Creation.
+This activation of tradfri devices is limited to 5 devices. This is because of limited memoryspace in the Zigatechip. When you add a Zigate to a group for the sixth time the device connection is not established. You get a this error in the domoticz log: We reach the max number of Cycle and didn't succeed in the Group Creation.
