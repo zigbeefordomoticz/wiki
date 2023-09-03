@@ -14,7 +14,7 @@ This page compile the plugin's overall informations :
 
 * Documentation
 * How to deal with issues and Questions
-* The team : developpers, testers, translaters, writters
+* The team : developers, testers, translators, writers
 
 
 Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
