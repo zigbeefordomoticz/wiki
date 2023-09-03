@@ -1,6 +1,6 @@
 # Coordinators - Les coordinateurs
 
-Click on the chipset links to get to the inforamtions.
+Click on the chipset links to get to the informations.
 Cliquer sur les liens de chipset pour accéder aux informations.
 
 * [Chipset NXP](#coordinators-with-nxp-chipset)
