@@ -39,18 +39,18 @@ The code is available under different branches
 
 In order to provide stability and also provide more recent development, Zigate plugin has the following channels
 
-### stable6
+### stable7
 
 This is considered as a solid , reliable version.
 
 ### develop
 
-This is the developpment channel
+This is the development channel
 
 ## How to switch from one channel to the other
 
 `git pull`
 
-`git checkout stable6 // will move you to the stable6 channel`
+`git checkout stable7 // will move you to the stable7 channel`
 
 `git checkout develop    // will move you to the develop channel`
