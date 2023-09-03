@@ -36,7 +36,7 @@ The backup is save in a simple text file under the Data folder with a name "Coor
 
 ### Network Topology ( TopologyV2 )
 
-Starting this version the Network Topology is created by using the Routing Tables and the Neigbourgh tables, while it was based only on the Neighbourg tables.
+Starting this version the Network Topology is created by using the Routing Tables and the neighbour tables, while it was based only on the Neighbour tables.
 This feature is only available on Texas Instrument, deConz, Silicon Labs based coordinator, as there is a bug in the 321 Zigate firmware which prevent to access Routing Table
 
 In case you are a ZiGate user and when requesting a Topology Report you don't get any result. Check the advanced settings and make sure that 'TopologyV2' is disable.
@@ -47,7 +47,7 @@ In case you are a ZiGate user and when requesting a Topology Report you don't ge
 Configure Reporting is a special Zigbee feature which allows to configure when, with which frequency, with which change sensor informations can be reported.
 From the WebUI > Tools > Configure Reporting you will be able to edit/change the Configure Reporting settings like :
 * Min ( the minimum time laps between 2 reports )
-* Max ( the maximum time laps whithout any report )
+* Max ( the maximum time laps without any report )
 * Change ( the minimum value change to trigger a report)
 
 ### Reverse proxy compatibility with Plugin WebUi
