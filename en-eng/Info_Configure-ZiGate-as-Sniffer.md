@@ -1,8 +1,9 @@
 # Configure ZiGate as sniffer
 
 # ZiGate preparation
+
 ZiGate comes with a CP2102 (red board) usb to ttl converter.
-However the sniffer firmare is configured to 1000000 bps which this board does not support.
+However the sniffer firmware is configured to 1000000 bps which this board does not support.
 Hence you need an another chipset that support this type of not standard speed.
 I only found the FTDI232 that supports it.
 
@@ -41,6 +42,6 @@ JN51xx-802.15.4-Sniffer-Server.exe  -s COM4  -c 25
 
 
 4. Wireshark
-In wireshark, then use Capture->Options->in the list of adpaters, choose "Adapter for loopback traffic capture"
+In wireshark, then use Capture->Options->in the list of adapters, choose "Adapter for loopback traffic capture"
 then click start
 You can filter only zigbee packet with "udp.port == 49999" as a filter
