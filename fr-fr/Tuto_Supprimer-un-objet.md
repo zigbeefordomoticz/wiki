@@ -29,7 +29,7 @@ Il existe plusieurs méthodes en fonction du type d'objet :
 
 Il n'y a pas de suppression automatique : il faut le faire manuellement.
 
-* S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-objet.md) : le bouton "Accepter de nouveaux objets" doit être éteint, la LED du coordinateur ne doit pas indiquer l'appairage.
+* S'assurer que le Plugin n'est pas en mode Appairage (voir [Tuto_Appairage](Tuto_Appairage-objet.md)) : le bouton "Accepter de nouveaux objets" doit être éteint, la LED du coordinateur ne doit pas indiquer l'appairage.
 * Faire un __Reset__ sur l'objet (comme pour l'appairer).
 
 Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
