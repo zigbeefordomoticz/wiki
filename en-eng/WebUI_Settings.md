@@ -2,15 +2,15 @@
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
-Here is the __Seetings__ page of the plugin Web interface :
+Here is the __Settings__ page of the plugin Web interface :
 
-![Seetings](../Images/EN_WebUI-Settings.png)
+![Settings](../Images/EN_WebUI-Settings.png)
 
 *This page may have have changed since this documentation was written.*
 
 ## Contents
 
-This file is used to customized some behaviour of the plugin at run time.
+This file is used to customized some behavior of the plugin at run time.
 
 If you are updating values in PluginConf, we strongly recommend you to make a copy of it in order to avoid any lost when doing an update of the plugin.
 
@@ -34,7 +34,7 @@ Those parameters allow the activation or not of services at plugin start.
 | allowOTA | disable |  manage the Over-the-Air firmware upgrade |
 | pingDevices | enable |  ping every hour each main powered device (see pingDevicesFeq parameter) |
 
-## DomoticZEnvironment
+## DomoticZ Environment
 
 Some of the DomoticZ parameters like on which port DomoticZ listen for getting access to the domoticZ API need to be provided.
 
@@ -47,7 +47,7 @@ Some of the DomoticZ parameters like on which port DomoticZ listen for getting a
 
 | parameter | default | description |
 | --------- | ------- | ----------- |
-| Group is On if one device is On (otherwise needs all devices On) | enable | If you disable it, you will have the same behaviour as on the Philips Hue hub. The group will be on only when ALL devices are On. |
+| Group is On if one device is On (otherwise needs all devices On) | enable | If you disable it, you will have the same behavior as on the Philips Hue hub. The group will be on only when ALL devices are On. |
 | reComputeGroupState | enable | The group state will be regularly computed based on the state of the devices attached to that group. |
 | forceGroupDeviceRefresh | enable | When doing a group action, like On/Off, a request will be made to each device part of the group for their current status |
 
@@ -60,11 +60,11 @@ Those parameters enable smooth transitions from their current status to the desi
 | Transition for Hue           | instantaneous | |
 | Transition for Color Temp    | instantaneous | Transition time in 10th of seconds when changing White color |
 | Transition for RGB color     | instantaneous | Transition time in 10th of seconds when changing the Color |
-| Transition for Move to Level | instantaneous | Transition time in 10th of seconds when diming |
+| Transition for Move to Level | instantaneous | Transition time in 10th of seconds when dimming |
 
 ## Web Interface
 
-Those are parameters which will influence the behaviour of the plugin internal web server. We do recommend to not touch it.
+Those are parameters which will influence the behavior of the plugin internal web server. We do recommend to not touch it.
 
 | parameter | default | description |
 | --------- | ------- | ----------- |
@@ -82,15 +82,15 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | parameter | default | description |
 | --------- | ------- | ----------- |
 | pingDevicesFeq | 3600 | Ping device frequency every hour |
-| pollingPhilips | disable | For Philips you need to enable polling in order to get thei status. We recommend a value of 300 or above which correspond of number of seconds of polling |
-| pollingGledopto | disabled |For Gledopto you need to enable polling in order to get thei status. We recommend a value of 300 or above which correspond of number of seconds of polling |
-| polling0000 | 8600 | retreiving device basic info every day |
-| polling0001 | 86400 | retreving device power info every day |
-| pollingONOFF | 900 | retreving device On/off status every 15' |
-| pollingLvlControl | 900 | retreiving device Level Control every 15' |
+| pollingPhilips | disable | For Philips you need to enable polling in order to get their status. We recommend a value of 300 or above which correspond of number of seconds of polling |
+| pollingGledopto | disabled |For Gledopto you need to enable polling in order to get their status. We recommend a value of 300 or above which correspond of number of seconds of polling |
+| polling0000 | 8600 | retrieving device basic info every day |
+| polling0001 | 86400 | retrieving device power info every day |
+| pollingONOFF | 900 | retrieving device On/off status every 15' |
+| pollingLvlControl | 900 | retrieving device Level Control every 15' |
 | polling000C | 3600 |   |
-| polling0100 | 3600 | retreiving Shade Configuration |
-| polling0102 | 900 | retreiving Window Covering info |
+| polling0100 | 3600 | retrieving Shade Configuration |
+| polling0102 | 900 | retrieving Window Covering info |
 | polling0201 | 900 | Thermostat |
 | polling0204 | 86400 | Fan Control |
 | polling0300 | 900  | Color Control |
@@ -111,13 +111,13 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | parameter | default | description |
 | --------- | ------- | ----------- |
 | forcePollingAfterAction | enable | will request a status update of the device state after an action |
-| forcePassiveWidget | disable | will allow a DomoticZ acion on the widget dispite the fact that the end device cannot receive the command. For exemple you have a Xiaomi battery device. |
+| forcePassiveWidget | disable | will allow a DomoticZ acion on the widget despite the fact that the end device cannot receive the command. For exemple you have a Xiaomi battery device. |
 | allowForceCreationDomoDevice| disable | Will create a Domotciz Widget even if there is already an existing one. |
 | resetPluginDS | disable | will reset the plugin database data structure |
 | resetConfigureReporting| disable | will reset the Configure Reporting info |
 | resetReadAttributes | disable | will reset the polling info |
 | resetMotiondelay | 30 | time before moving the Motion state to Off. You can use the one from the Domotciz Motion widget |
-| allowGroupMembership | enable | will allow the plugin to automaticaly create group membership if known (Legrand) |
+| allowGroupMembership | enable | will allow the plugin to automatically create group membership if known (Legrand) |
 | doUnbindBind | disable | will force an unbind before binding a cluster |
 | allowReBindingClusters | enable | will rebind clusters if the device is coming back |
 
@@ -132,7 +132,7 @@ We do not recommend to enable it as it will increase the load on the Zigate and 
 | resetPermit2Join | enable | will disable permit to join at plugin start |
 | Ping | enable | will ping Zigate every 4' to insure the connectivity |
 | Certification | CE | CE or FCC certifications |
-| channel | 0 | One of those 11, 15, 19, 20, 25 and 26 Zigate channel. 0 means Zigate will select the best one. Channing the channel will require a Soft Reset of Zigate and your already paired devices might need to be repaired |
+| channel | 0 | One of those 11, 15, 19, 20, 25 and 26 Zigate channel. 0 means Zigate will select the best one. Changing the channel will require a Soft Reset of Zigate and your already paired devices might need to be repaired |
 | TXpower_set | 0 | Power attenuation. 0: 0dBM, 1: -9 dBM, 2: -20dBM, 3: -32dBM |
 | extendedPANID | 0 | You can force the Extended PAN Id, this would required a full Erase PDM |
 
@@ -153,15 +153,15 @@ Menu has been moved to the Tool Debug sub menu
 | --------- | ------- | ----------- |
 | logDeviceUpdate | enable | display the Widget update message 'UpdateDevice - (DIN-ZiGate - lumi.sensor_motion.aq2_Motion-00158d0003021601-01) 1:On' |
 | debugMatchId | ffff | coma separated list of short address that you want to trace in the log |
-| debugInput | disable | debuging all incoming messages |
-| debugOutput | disable | debuging all outgoing messages |
-| debugCluster | disable | debuging incoming clusters |
-| debugHeartbeat | disable | debuging recurring activities |
-| debugWidget | disable | debuging widget/DomoticZ management |
-| debugPlugin | disable | debiging main plugin |
-| debugDatabase | disable | debuging plugin database |
-| debugCommand | disable | debuging Command/DomoticZ actions |
-| debugPairing | disable | debuging pairing process |
+| debugInput | disable | debugging all incoming messages |
+| debugOutput | disable | debugging all outgoing messages |
+| debugCluster | disable | debugging incoming clusters |
+| debugHeartbeat | disable | debugging recurring activities |
+| debugWidget | disable | debugging widget/DomoticZ management |
+| debugPlugin | disable | debugging main plugin |
+| debugDatabase | disable | debugging plugin database |
+| debugCommand | disable | debugging Command/DomoticZ actions |
+| debugPairing | disable | debugging pairing process |
 
 
 
