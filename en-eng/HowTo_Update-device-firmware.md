@@ -41,7 +41,7 @@ There is a good list available [here](https://github.com/dresden-elektronik/deco
 
 ### For IKEA TRADFRI
 
-For the IKEA TRADFRI we are providing a script to retreive all Firmware from the IKEA web site.
+For the IKEA TRADFRI we are providing a script to retrieve all Firmware from the IKEA web site.
 
 1. Go to the IKEA Firmware folder
 
@@ -49,13 +49,13 @@ For the IKEA TRADFRI we are providing a script to retreive all Firmware from the
    cd Domoticz-Zigbee\OTAFirmware\IKEA-TRADFRI
    ```
 
-1. Launch the script to retreive the firmware
+1. Launch the script to retrieve the firmware
 
    ```
    ../../Tools/ikea-ota-download.py
    ```
 
-1. Optionaly remove some unecessary firmware file
+1. Optionally remove some unnecessary firmware file
 
    If you are for instance looking to upgrade only your Signal Repeater, or the Ikea Tradfri outlet, remove all files but keep
 
