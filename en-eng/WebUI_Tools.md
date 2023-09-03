@@ -21,7 +21,7 @@ Here is the __Tools__ page of the plugin Web interface :
 
 ### How to use
 
-Use this page to use the differents tools of the plugin.
+Use this page to use the different tools of the plugin.
 
 Refer to the tutorial [Using tools](HowTo_Using-tools.md) for more informations.
 
