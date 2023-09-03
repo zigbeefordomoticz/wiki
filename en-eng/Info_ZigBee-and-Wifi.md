@@ -27,6 +27,6 @@ to avoid Wi-Fi interference where non-overlapping Wi-Fi channels have been alloc
 Ensuring a physical separation of at least 8 m from a Wi-Fi Access Point (AP) will ensure acceptable co-channel IEEE 802.15.4 performance.
 
 ## 3. Mesh Networking
-The ZigBee protocol offers the additional benefits of a self-organising and self-healing dynamic mesh network. In this kind of environment, path diversity offers better channel use. If a chosen path fails as a result of interference, the network will select a different path
+The ZigBee protocol offers the additional benefits of a self-organizing and self-healing dynamic mesh network. In this kind of environment, path diversity offers better channel use. If a chosen path fails as a result of interference, the network will select a different path
 
 Source: https://www.nxp.com/docs/en/application-note/JN-AN-1079.pdf
