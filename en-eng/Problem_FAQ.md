@@ -28,6 +28,7 @@
 * [E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-error--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
 * [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process](#e9-error--ImportError-PyO3-modules-may-only-be-initialized-once-per-interpreter-process)
 * [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
+* [## E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 
 
 ------------
