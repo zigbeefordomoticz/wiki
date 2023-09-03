@@ -1,8 +1,8 @@
 # How To : Device Parameter
 
-A number of parameters are available inside the plugin to customize the behaviour of the plugin or the behaviour of the device.
+A number of parameters are available inside the plugin to customize the behavior of the plugin or the behavior of the device.
 
-By default, a Certified device get default parameters allready initiatialized. If you want to customize, you have to go to the plugin Web Admin page,
+By default, a Certified device get default parameters already initialized. If you want to customize, you have to go to the plugin Web Admin page,
 then go to Management -> Device Management and you will find for each device a Parameters icon ( right column ) > a popup will open :
 
 ![EN_WebUI-Device-management-parametres.png](../Images/EN_WebUI-Device-management-parametres.png)
@@ -52,9 +52,9 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | pingBlackListed | if enable ( 1 ) , never ping the device | all routers |
 | TuyaPing | if enable (1), it will simulate the Tuya Ping done every 5s by the Tuya GW| Tuya routers |
 | TuyaEnergyChildLock | For Tuya DIN Energy Switch, allow to enable Child Lock ( not tested )| Tuya DIN Energy switch |
-| Countdown | when switching On or Off, it will use the countdown. If set to __n__, it will wait __n__ secondes before switching | Walkaround for Tuya DIN Energy |
+| Countdown | when switching On or Off, it will use the countdown. If set to __n__, it will wait __n__ secondes before switching | Workaround for Tuya DIN Energy |
 | WiserRoomNumber | Allow to define a room number per Wiser Thermostat, which monitor the heating demand of Actionners belongings to the same room. So you need to define the WiserRoomNumber parameter with the same room number for each actionners and the thermostat per room (Room Number association between eTRV thermostat and external temperature sensor)| Wiser Thermostat and any Actionners |
-| BatteryPollingFreq | Polling frequency for getting Battery level | Needed for SChneider Wiser Thermostat RTS |
+| BatteryPollingFreq | Polling frequency for getting Battery level | Needed for Schneider Wiser Thermostat RTS |
 | DanfossRoom | Room Number association between eTRV thermostat and external temperature sensor | Danfoss eTRV thermostat and any type of Temperature Sensor both associated in same plugin instance  |
 | DanfossRoomFreq | Polling Frequency in second, 0 disable. Indicates the frequency when refreshing the external temperature. | Danfoss eTRV thermostat  recommendation depends on which mode is set in thermostat: 1800- 10800 in "Auto Offset Mode", 300-1800 in "Room Sensor Mode" |
 | DanfossCovered | 'F' or 'T': 'T' indicates that radiator is covered. | Danfoss eTRV thermostat will be put into "Room Sensor Mode" when radiator is covered, where thermostat will use only external sensor for room temperature  |
