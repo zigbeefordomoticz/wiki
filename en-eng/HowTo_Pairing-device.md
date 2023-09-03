@@ -32,7 +32,7 @@ Purpose is to explain the step process to pair a new device and get it into Domo
 
       ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
 
-   1. Check that the coordinator Led is flashing or has changed of colour (depends on your coordinator).
+   1. Check that the coordinator Led is flashing or has changed of color (depends on your coordinator).
 
    1. Reset your Device to trigger the pairing
 
@@ -52,9 +52,9 @@ You can eventually add a filter to get only the related logs
 
   ![Domoticz Accept New Hardware](../Images/Dashboard_Accept_new_Hardware.png)
 
-  You can easily switch it On, and the coordinator Led, must start flashing or changing colour (depends on your coordinator).
+  You can easily switch it On, and the coordinator Led, must start flashing or changing color (depends on your coordinator).
 
-  1. reset the Device to trgger the pairing.
+  1. reset the Device to trigger the pairing.
 
   1. Watch the DomoticZ log to see what is happening.
 
@@ -64,7 +64,7 @@ You can eventually add a filter to get only the related logs
 
   ## Introduction
 
-  You might want to force the pairing of a specific end device to a dedicated router instead of leaving the Controler to decided.
+  You might want to force the pairing of a specific end device to a dedicated router instead of leaving the Controller to decided.
   Despite the fact that the pairing will be done to a specific router, the system can then later decide to change the route and
   you/we don't have any control to that.
 
