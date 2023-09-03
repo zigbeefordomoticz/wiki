@@ -97,7 +97,7 @@ Ces paramètres vont modifier le fonctionnement interne du plugin. __Il est reco
 | enableGzip | | Activé | | Active la compression gzip |
 | enableDeflate | | Activé | | Active la compression Deflate |
 | enableChunk | | Activé | | Active les gros fichiers |
-| enableKeepalive | | Activé | | Active le maintien de la  session active (|
+| enableKeepalive | | Activé | | Active le maintien de la  session active |
 | enableCache | | Activé | | Active la mise en cache |
 
 
@@ -147,7 +147,7 @@ Pas de paramètre simple dans ce module.
 
 | Paramètre | Unité | Valeur par défaut | Valeurs possibles | Description |
 | --------- | ----- | ----------------- | ----------------- | ----------- |
-| Interogation du statut du device après un ordre | | Activé | | Active une mise à jour de l'état après l'envoi une commande |
+| Interrogation du statut du device après un ordre | | Activé | | Active une mise à jour de l'état après l'envoi une commande |
 | forcePassiveWidget | | Désactivé | | Autorise DomoticZ à envoyer une commande malgré que l'objet terminal ne puisse pas recevoir de commande. Par exemple : les objets Xiaomi sur batterie |
 | resetConfigureReporting | | Désactivé | | Active un Reset de l'information de configuration de suivi |
 | reenforceConfigureReporting | | Désactivé | | ??? |
@@ -236,7 +236,7 @@ Pas de paramètre simple dans ce module.
 | numTopologyReports | | 4 | | Nombre de rapport de topologie à conserver |
 | numEnergyReports | | 4 | | Nombre de rapport d'interférences à conserver |
 | TradfriKelvinStep | | 51 | | ??? |
-| vibrationAqarasensitivity | | Medium | Low, Medium, High| Sensibilité du capteur de vibration Aqara (|
+| vibrationAqarasensitivity | | Medium | Low, Medium, High| Sensibilité du capteur de vibration Aqara |
 
 ### Les paramètres avancés
 
