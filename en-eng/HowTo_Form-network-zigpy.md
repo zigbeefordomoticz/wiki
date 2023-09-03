@@ -2,7 +2,7 @@
 
 ## When using this procedure
 
-Usaly you should initialise the coordinator via the Coordinator Initialisation parameter when starting the plugin from Domoticz Hardware page.
+Usually you should initialise the coordinator via the Coordinator Initialisation parameter when starting the plugin from Domoticz Hardware page.
 However we have found that in case of a new coordinator , you are not able to get it started and you get error logs like that:
 
 ```
