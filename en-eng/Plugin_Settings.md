@@ -14,10 +14,10 @@ You should have finished the [Step 1 Plugin installation](Plugin_Installation.md
 
 | Parameter    | Description | Information |
 | ------------ | ------------------ | ----------- |
-| __Name__                  | Fill a Coordinator's Name  | This is the name you want to set for the instance of the plugin. In case you run several Zigate, you'll have several instance of this Plugin Hardware and so the name will help you to distinguish each of them.<br/><br/>It is advisable not to put any space or special character in the name of the Plugin. This name can be used in a URL and a space or special characters can generate problems. |
+| __Name__                  | Fill a Coordinator's Name  | This is the name you want to set for the instance of the plugin. In case you run several coordinators, you'll have several instance of this Plugin Hardware and so the name will help you to distinguish each of them.<br/><br/>It is advisable not to put any space or special character in the name of the Plugin. This name can be used in a URL and a space or special characters can generate problems. |
 | __Type__                 | Select `ZigBeeForDomoticZ plugin` | If ZigBeeForDomoticZ plugin does not appear at the bottom of the list, it is because the plugin is not properly installed.
 | __Coordinator Model__         | Select the Coordinator's model | - ZiGate (V1)<br/> - ZiGate+ (V2)<br/> - Texas Instruments ZNP<br/> - Silicon Labs EZSP<br/> - ConBee/RasBee|
-| __Coordinator  Type__         | Select the Coordinator's type | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi or ethernet)<br/>- Aucun|
+| __Coordinator  Type__         | Select the Coordinator's type | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi or Ethernet)<br/>- Aucun|
 | __Port série__           | Select the USB port to which the coordinator is plugged | Remember to fix the port of your usb equipment [Persistent USB](https://www.domoticz.com/wiki/PersistentUSBDevices)|
 | __IP__                   | Fill in the coordinator's IP address | For TCPIP mode only<br/>Leave 0.0.0.0 for other modes |
 | __Port__                 | Fill the Coordinator's Port (9999 by default)| For TCPIP mode only<br/>Leave 9999 for other modes |
