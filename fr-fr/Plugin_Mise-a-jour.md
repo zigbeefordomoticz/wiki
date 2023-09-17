@@ -10,7 +10,12 @@ __ATTENTION:__ si vous n'êtes pas encore en Version 7, merci de suivre cette pr
 
 * Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
-* Lancer la commande `git submodule update --init --recursive`
+* Lancer les commandes :
+
+```bash
+  git pull
+  sudo python3 -m pip install -r requirements.txt --upgrade
+ ```
 
 __Note :__ Depuis la version 6, le git pull n'est plus suffisant.
 
