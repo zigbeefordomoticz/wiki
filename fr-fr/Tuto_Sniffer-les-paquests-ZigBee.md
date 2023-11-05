@@ -30,22 +30,20 @@ ZBOSS est un outil permettant d'interfacer votre clé USB avec Wireshark en pré
 * Sélectionnez "Zigbee Page 0" dans "Select Page"
 * Dans le WebUI du plugin, récupérer le canal ZigBee de fonctionnement du coordinateur (menu Outils / Outils / Infos du coordinateur / Channel) Channel 15 dans l'exemple.
 * Positionnez dans channel le canal sur lequel votre coordinateur travail. 
-
+![WikiUI-FR](Images/FR_Wireshark-ConfZBOSS.png)
 
 ### 3 - Lancer Wireshark via ZBOSS
 * Dans l'interface ZBOSS, cliquez sur **Start**. 
 
 Wireshark se lance et les paquets commencent à être capturés mais ils ne sont à ce stade pas encore décodés (on voit dans la partie data qu'il n'est pas possible de "comprendre" le paquet et son contenu).
-
+![WikiUI-FR](Images/FR_Wireshark-NonDecode.png)
 
 ### 4 - Fournir à Wireshark sa clé de réseau ZigBee pour lui permettre de décoder les trames
 * Dans le WebUI du plugin, récupérer la "Network key" (menu Outils / Outils / Infos du coordinateur / Network Key)
 * Dans Wireshark, allez dans Éditer / Préférence / Protocols / ZigBee.
 * Sélectionnez **AES 128 Encryption 32 bits** et cliquez sur **Éditer**.
 * Cliquez sur le petit bouton **+** et collez la "Network Key" puis **Validez** .
+![WikiUI-FR](Images/FR_Wireshark-ConfCleZigBee.png)
 
 Vous pouvez maintenant voir dans Wireshark vos trames correctement décodées.
-
-
-Un exemple d'image : 
-![WikiUI-FR](Images/FR_WikiUI.png)
+![WikiUI-FR](Images/FR_Wireshark-Decode.png)
