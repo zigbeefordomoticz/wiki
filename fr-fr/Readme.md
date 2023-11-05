@@ -74,6 +74,7 @@ Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégre
 * [Gérer les erreurs](Tuto_Gerer-erreurs-plugin.md)
 * [Changer le canal ZigBee](Tuto_Changer-le-canal-ZigBee.md)
 * [Visualiser les interférences en temps réel](Tuto_Visualiser_interferences_temps_reel.md)
+* [Sniffer les paquets ZigBee](Tuto_Sniffer-les-paquests-ZigBee.md)
 * [Mettre à jour le firmware d'un objet](Tuto_Maj-firmware-objet.md)
 * [Mettre à jour le firmware de la ZiGate](Tuto_Maj-firmware-zigate.md)
 * [Remplacer ou ré-initialiser la ZiGate](Tuto_Remplacer-zigate.md)
