@@ -34,7 +34,7 @@ return
 
             if (item.isTimer) then
                 domoticz.openURL({
-                    url = 'http://127.0.0.1:8080/json.htm?type=devices&rid='..DeviceIdx..'',
+                    url = 'http://127.0.0.1:8080/json.htm?type=command&param=getdevices&rid='..DeviceIdx..'',
                     method = 'GET',
                     callback = 'lastUP'
                 })
