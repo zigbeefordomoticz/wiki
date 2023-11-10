@@ -69,7 +69,7 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * [Group Management](HowTo_Group-management.md)
 * [Bindings](HowTo_Binding_Legrand.md)
 * [Deal with errors](HowTo_Dealing-pluging-error.md)
-* [Change the Zigbee Channel](HowTo_Change-ZigBee-channel.md)
+* [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
 * [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md)
 * [Form a ZigPy network](HowTo_Form-network-zigpy.md)
@@ -129,14 +129,9 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
  [Other examples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
 
 
-## ZiGate How-to
-
- * [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
- * [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french
-
-
 ## Informations
 
+* [Understanding a ZigBee network](https://www.blackhillsinfosec.com/understanding-zigbee-and-wireless-mesh-networking/)
 * [Firmware list](Info_Firmware-list.md)
 * [Widgets Switch Selector Mapping](Info_Widgets-Switch-Selector-Mapping)
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
@@ -149,3 +144,5 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * [A Guide to Wireless range and Repeater](https://blog.smartthings.com/iot101/a-guide-to-wireless-range-repeaters/)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
 * [Coexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
+ * [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
+ * [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french

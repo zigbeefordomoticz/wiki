@@ -81,12 +81,6 @@ Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégre
 * [Mettre une authentification sur interface d'administration du Plugin](Tuto_Mettre-une-authentification-sur-interface-web.md)
 
 
-## Tutoriels ZiGate
-
-* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
-* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
-
-
 ## Que faire si un objet ne fonctionne pas correctement ?
 
 * [Regarder notre FAQ](Probleme_FAQ.md)
@@ -128,6 +122,7 @@ Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégre
 
 ## Informations
 
+* [Le fonctionnement d'un réseau ZigBee](https://www.blackhillsinfosec.com/understanding-zigbee-and-wireless-mesh-networking/) en anglais
 * [Les objets compatibles](Info_Accueil.md#presentation)
 * [Les caractéristiques des coordinateurs](Info_Caracteristiques-des-Coordinateurs.md)
 * [Interférences entre Wifi et ZigBee](Info_ZigBee-et-Wifi.md)
@@ -140,6 +135,8 @@ Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégre
 ## Liens utiles
 
 * [Le wiki ZiGate.fr](https://zigate.fr/documentation)
-* [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
+* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
+* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) 
+[A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
 * [Coexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
