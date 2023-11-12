@@ -26,7 +26,7 @@
 * [E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-error--error-plugins-name--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
 * [E7. Error when updating python modules](#e7-error-when-updating-python-module-building-wheel-for-cryptography-pep-517--error)
 * [E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-error--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
-* [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process](#e9-error--ImportError-PyO3-modules-may-only-be-initialized-once-per-interpreter-process)
+* [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process`](#e9-error--ImportError-PyO3-modules-may-only-be-initialized-once-per-interpreter-process)
 * [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 * [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
