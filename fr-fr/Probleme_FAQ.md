@@ -22,15 +22,17 @@
 
 * [E1. Erreur : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`](#e1-erreur--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
 * [E2. Erreur : `Decode8000`](#e2-erreur--decode8000)
-* [E3. Erreur : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-erreur--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
+* [E3. Erreur : `Error: <Nom du plugin> Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-erreur--error-zigate-communication-error-when-transmiting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 * [E4. Erreur : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-erreur--e4-erreur--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
 * [E5. Missing module Error ](#e5-missing-module-error)
 * [E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-erreur--error-nom-du-plugin--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
 * [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError-no-module-named-cchardet)
 * [E8. Erreur : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-erreur--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
-* [# E9. Erreur : `ImportError: PyO3 modules may only be initialized once per interpreter process`](#e9-erreur--importerror-pyo3-modules-may-only-be-initialized-once-per-interpreter-process)
+* [E9. Erreur : `ImportError: PyO3 modules may only be initialized once per interpreter process`](#e9-erreur--importerror-pyo3-modules-may-only-be-initialized-once-per-interpreter-process)
 * [E10. Erreur : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-erreur--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Erreur à l'installation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` ](#e11-erreur-à-linstallation-sous-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
+* [E12. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e12-erreur--error-nom-du-plugin--modulenotfounderror-no-module-named-cchardet)
+
 
 ------------
 ------------
@@ -197,7 +199,7 @@ cc: [Une issue est ouverte](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
 
 ------------
-## E3. Erreur : `Error: (Zigate) Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
+## E3. Erreur : `Error: <Nom du plugin> Communication error when transmiting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
 Voici ci-dessous un exemple d'erreurs trouvées dans le fichier de logs :
 
