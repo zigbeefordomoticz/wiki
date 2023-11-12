@@ -28,6 +28,7 @@
 * [E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-erreur--error-nom-du-plugin--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
 * [E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`](#e7-erreur--error-nom-du-plugin--ModuleNotFoundError-no-module-named-cchardet)
 * [E8. Erreur : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-erreur--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
+* [# E9. Erreur : `ImportError: PyO3 modules may only be initialized once per interpreter process`](#e9-erreur--importerror-pyo3-modules-may-only-be-initialized-once-per-interpreter-process)
 * [E10. Erreur : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-erreur--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Erreur à l'installation sous Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` ](#e11-erreur-à-linstallation-sous-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 
@@ -120,20 +121,21 @@ Vérifier que l'affichage de l'onglet Personnalisé est bien activé :
 
 Vérifier également que le paramètre __Ajouter un lien vers le WebUI dans le Custom Menu de DomoticZ__ est bien activé dans le menu Réglage
 
+
 ------------
 ## T1. Mon coordinateur ne fonctionne pas
 
 Vous avez les messages suivant dans le fichier de [log file](#q2.-ou-trouver-les-logs-) :
 
 ```log
-2022-02-25 00:19:41,006 INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
-2022-02-25 00:19:41,384 INFO    : [       MainThread] Plugin Database: DeviceList-2.txt
-2022-02-25 00:19:41,466 INFO    : [       MainThread] DeviceConf loaded - 23 confs loaded
-2022-02-25 00:19:43,858 INFO    : [       MainThread] DeviceConf loaded - 329 confs loaded
-2022-02-25 00:19:43,875 INFO    : [       MainThread] load ListOfDevice
-2022-02-25 00:19:43,955 INFO    : [       MainThread] Transport mode: ZigpyZNP
-2022-02-25 00:20:45,074 ERROR   : [       MainThread] [ 61] I have hard time to get Coordinator Version. Mostlikly there is a communication issue
-2022-02-25 00:20:45,084 ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
+INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
+INFO    : [       MainThread] Plugin Database: DeviceList-2.txt
+INFO    : [       MainThread] DeviceConf loaded - 23 confs loaded
+INFO    : [       MainThread] DeviceConf loaded - 329 confs loaded
+INFO    : [       MainThread] load ListOfDevice
+INFO    : [       MainThread] Transport mode: ZigpyZNP
+ERROR   : [       MainThread] [ 61] I have hard time to get Coordinator Version. Mostlikly there is a communication issue
+ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
 ```
 
 Cela indique un souci de communication entre le plugin et le coordinateur. Vous devez vérifier les éléments suivants dans la configuration du plugin dans DomoticZ :
@@ -182,10 +184,10 @@ Ne pas s'inquiéter de ce message.
 Si vous voyez des journaux d'erreurs comme ici après, il s'agit très probablement d'un problème avec le matériel ZiGate.
 
 ```log
-2022-02-22 18:03:11.851 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:23.656 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:30.282 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:30.499 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
 ```
 
 * Assurez vous de ne pas utiliser le vieux module USB-TTL __bleu__ (il faut utiliser le rouge).
@@ -200,8 +202,8 @@ cc: [Une issue est ouverte](https://github.com/fairecasoimeme/ZiGate/issues/394)
 Voici ci-dessous un exemple d'erreurs trouvées dans le fichier de logs :
 
 ```log
-Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
-Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
+Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
+Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
 ```
 
 Cela indique que l'objet ```90fd9ffffe31f150``` n'est pas joignable ou que la ZiGate a un problème de communication avec lui.
@@ -211,7 +213,7 @@ Cela indique que l'objet ```90fd9ffffe31f150``` n'est pas joignable ou que la Zi
 ## E4. Erreur : `[E4. Erreur : Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
 
 ```log
-2022-04-09 07:27:25.699 Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
+Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
 ```
 
 Cette erreur apparaît lors de l'arrêt du plugin. Ne pas en tenir compte.
@@ -251,30 +253,32 @@ ATTENTION:
 Sur les Windows, il faut lancer les commandes _pip3 install_ en mode administrateur et ce, dès la première fois.
 Si cela n'a pas été fait la première fois, il faut désinstaller les modules existants.
 
+
 ------------
 ## E6. Erreur : `Error: <Nom du plugin> : You need to setup the URL Base to access the Domoticz JSON/API`
 
 Cette erreur apparaît lorsque _API base url_ n'est pas (ou pas bien) paramétrée dans DomoticZ. Se reporter à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md) pour plus d'infos.
 
+
 ------------
-## E7. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`
+## E7. Erreur lors de la mise à jour des modules python : `Building wheel for cryptography (PEP 517) ... error`
 
-Cette erreur apparaît lorsque vous avez plusieurs sessions du plugin et qu'il n'y a pas la bonne version de la dependance charset-normalizer, vous devez être en 2.0.12 
+Cette erreur peut arriver en exécutant les commandes `pip3 install -r requirements.txt` ou `python3 -m pip install -r requirements.txt --upgrade`.
 
-Vérifiez votre version avec : 
-- (sudo) pip show charset-normalizer
- 
-ou
+```log
+ERROR: Failed building wheel for cryptography
+Failed to build cryptography
+ERROR: Could not build wheels for cryptography which use PEP 517 and cannot be installed directly
+```
 
--(sudo) pip3 show charset-normalizer (si vous avez encore python2 sur votre installation)
+* Mettre à jour le module python wheel
 
-Si la réponse ne donne pas la version 2.0.12 alors : 
+    ```bash
+    sudo python3 -m pip install wheel --upgrade
+    ````
 
-- (sudo) pip install --force-reinstall --upgrade charset-normalizer==2.0.12
-
-ou
-
-- (sudo) pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12 (si vous avez encore python2 sur votre installation)
+* S'assurer que le dossier /tmp dispose de suffisamment d'espace libre
+* S'assurer qu'il y a suffisamment de swap disponible. En rajouter si nécessaire
 
 
 ------------
@@ -285,6 +289,41 @@ Cette erreur peut apparaître lors d'un retour depuis la branche develop vers la
 * Lancer la commande depuis le répertoire du plugin
 ``` bash
 sudo python3 -m pip install -r requirements.txt --upgrade
+```
+
+------------
+## E9. Erreur : `ImportError: PyO3 modules may only be initialized once per interpreter process`
+
+``` log
+Status: Zigpy-Elelabs: Transport mode: ZigpyEZSP
+Error: Zigpy-Elelabs: Call to function 'onStart' failed, exception details:
+Error: Zigpy-Elelabs: Traceback (most recent call last):
+Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 1537, in onStart
+Error: Zigpy-Elelabs:     _plugin.onStart()
+Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 602, in onStart
+Error: Zigpy-Elelabs:     from zigpy.config import (CONF_DEVICE, CONF_DEVICE_PATH,
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/init.py", line 32, in <module>
+Error: Zigpy-Elelabs:     from zigpy.config.validators import (
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/validators.py", line 9, in <module>
+Error: Zigpy-Elelabs:     import zigpy.zdo.types as zdo_t
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/zdo/init.py", line 10, in <module>
+Error: Zigpy-Elelabs:     import zigpy.util
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/util.py", line 14, in <module>
+Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers import Cipher
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/init.py", line 11, in <module>
+Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers.base import (
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/base.py", line 10, in <module>
+Error: Zigpy-Elelabs:     from cryptography.exceptions import (
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/exceptions.py", line 9, in <module>
+Error: Zigpy-Elelabs:     from cryptography.hazmat.bindings.rust import exceptions as rustexceptions
+Error: Zigpy-Elelabs: ImportError: PyO3 modules may only be initialized once per interpreter process
+```
+
+Cette erreur apparaît lors de l'utilisation d'un module python de cryptographie trop récent qui ne sont pas encore compatibles avec le plugin. 
+La commande pour installé une version compatible est :
+
+``` bash
+sudo python3 pip install cryptography==40.0.2 --upgrade`
 ```
 
 
@@ -315,3 +354,32 @@ Le fonctionnement sous Debian 12 Bookworm nécessite de modifier la commande d'i
 sudo pip3 install -r requirements.txt --break-system-packages
 ```
 __Rappel :__ Cette commande n'est valable que pour une installation sous Debian 12 Bookworm.
+
+
+------------
+## E12. Erreur : `Error: <Nom du plugin> : ModuleNotFoundError: No module named 'cchardet'`
+
+Cette erreur apparaît lorsque vous avez plusieurs sessions du plugin et qu'il n'y a pas la bonne version de la dependance charset-normalizer, vous devez être en 2.0.12 
+
+``` bash
+pip show charset-normalizer
+```
+
+ou si python2 est toujours installé
+
+``` bash
+pip3 show charset-normalizer
+```
+
+Si la réponse n'est pas 2.0.12 alors :
+
+``` bash
+pip install --force-reinstall --upgrade charset-normalizer==2.0.12
+```
+
+ou si python2 est toujours installé
+
+``` bash
+pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
+```
+

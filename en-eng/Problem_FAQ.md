@@ -8,7 +8,7 @@
 * [Q6. Can I use several coordinators in the same DomoticZ ?](#q6-can-i-use-several-coordinators-in-the-same-domoticz-)
 * [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manually](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually)
-* [Q9. Can I run Plugin Version 6 on a Windows system ?](#q9-can-i-run-plugin-version-6-on-a-windows-system)
+* [Q9. The plugin menu's link is not showed in DomoticZ](#q9-can-i-run-plugin-version-6-on-a-windows-system)
 
 ## Troubleshooting
 
@@ -29,7 +29,7 @@
 * [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process](#e9-error--ImportError-PyO3-modules-may-only-be-initialized-once-per-interpreter-process)
 * [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
-
+* [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
 
 ------------
 ------------
@@ -110,7 +110,12 @@ The rebinding process will start itself, the status problems should now be fixed
 
 
 ------------
-## Q9. Can I run Plugin Version 6 on a Windows system ?
+## Q9. The plugin menu's link is not showed in DomoticZ
+
+Check that the Custom Tab is activated :
+
+* Before DomoticZ 2022.2, go to Configuration / Parameters / System tab and check that the Custom Tab is activated at the bottom.
+* From DomoticZ 2023.1, go to Configuration / Users and check that the Custom Tab is activated for each user needed.
 
 
 ------------
@@ -119,14 +124,14 @@ The rebinding process will start itself, the status problems should now be fixed
 I can see in the [log file](#q2.-where-are-the-logs) some messages like that
 
 ```log
-2022-02-25 00:19:41,006 INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
-2022-02-25 00:19:41,384 INFO    : [       MainThread] Plugin Database: DeviceList-2.txt
-2022-02-25 00:19:41,466 INFO    : [       MainThread] DeviceConf loaded - 23 confs loaded
-2022-02-25 00:19:43,858 INFO    : [       MainThread] DeviceConf loaded - 329 confs loaded
-2022-02-25 00:19:43,875 INFO    : [       MainThread] load ListOfDevice
-2022-02-25 00:19:43,955 INFO    : [       MainThread] Transport mode: ZigpyZNP
-2022-02-25 00:20:45,074 ERROR   : [       MainThread] [ 61] I have hard time to get Coordinator Version. Mostlikly there is a communication issue
-2022-02-25 00:20:45,084 ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
+INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
+INFO    : [       MainThread] Plugin Database: DeviceList-2.txt
+INFO    : [       MainThread] DeviceConf loaded - 23 confs loaded
+INFO    : [       MainThread] DeviceConf loaded - 329 confs loaded
+INFO    : [       MainThread] load ListOfDevice
+INFO    : [       MainThread] Transport mode: ZigpyZNP
+ERROR   : [       MainThread] [ 61] I have hard time to get Coordinator Version. Mostlikly there is a communication issue
+ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
 ```
 
 This indicate a miss communication between the plugin and the coordinator. You need to cross-check the following pieces in the DomoticZ Hardware menu :
@@ -161,7 +166,7 @@ Please refer to [Dealing with none certified device](https://zigbeefordomoticz.g
 Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
 
 ```log
-Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
+Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
 ```
 
 This error is coming from DomoticZ and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
@@ -174,10 +179,10 @@ You shouldn't worry much of this message.
 if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
 
 ```log
-2022-02-22 18:03:11.851 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:23.656 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:30.282 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
-2022-02-22 18:06:30.499 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52 Status: [ZigBee Error Code Unknown code : 80]
 ```
 
 * Make sure that you don't have the old __blue__ USB-TTL module (it must be a red one )
@@ -192,8 +197,8 @@ cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/3
 Here after is an exemple of errors found in the log file.
 
 ```log
-Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
-Apr 24 11:47:47 pi3 domoticz[23926]: 2019-04-24 11:47:47.697  Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
+Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
+Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
 ```
 
 This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem with it -
@@ -203,7 +208,7 @@ This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate ge
 ## E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
 
 ```log
-2022-04-09 07:27:25.699 Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
+Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
 ```
 
 This error appears when stopping the plugin. Ignore it.
@@ -286,35 +291,37 @@ sudo python3 -m pip install -r requirements.txt --upgrade
 ------------
 ## E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process`
 
-```
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.286  Status: Zigpy-Elelabs: Transport mode: ZigpyEZSP
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.632  Error: Zigpy-Elelabs: Call to function 'onStart' failed, exception details:
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs: Traceback (most recent call last):
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 1537, in onStart
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     _plugin.onStart()
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 602, in onStart
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     from zigpy.config import (CONF_DEVICE, CONF_DEVICE_PATH,
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/init.py", line 32, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     from zigpy.config.validators import (
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/validators.py", line 9, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.646  Error: Zigpy-Elelabs:     import zigpy.zdo.types as zdo_t
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/zdo/init.py", line 10, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     import zigpy.util
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/util.py", line 14, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers import Cipher
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/init.py", line 11, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers.base import (
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/base.py", line 10, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.exceptions import (
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/exceptions.py", line 9, in <module>
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs:     from cryptography.hazmat.bindings.rust import exceptions as rustexceptions
-Jun 02 16:35:43 rasp domoticz[21346]: 2023-06-02 16:35:43.647  Error: Zigpy-Elelabs: ImportError: PyO3 modules may only be initialized once per interpreter process
+``` log
+Status: Zigpy-Elelabs: Transport mode: ZigpyEZSP
+Error: Zigpy-Elelabs: Call to function 'onStart' failed, exception details:
+Error: Zigpy-Elelabs: Traceback (most recent call last):
+Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 1537, in onStart
+Error: Zigpy-Elelabs:     _plugin.onStart()
+Error: Zigpy-Elelabs:   File "/var/lib/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 602, in onStart
+Error: Zigpy-Elelabs:     from zigpy.config import (CONF_DEVICE, CONF_DEVICE_PATH,
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/init.py", line 32, in <module>
+Error: Zigpy-Elelabs:     from zigpy.config.validators import (
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/config/validators.py", line 9, in <module>
+Error: Zigpy-Elelabs:     import zigpy.zdo.types as zdo_t
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/zdo/init.py", line 10, in <module>
+Error: Zigpy-Elelabs:     import zigpy.util
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/zigpy/util.py", line 14, in <module>
+Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers import Cipher
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/init.py", line 11, in <module>
+Error: Zigpy-Elelabs:     from cryptography.hazmat.primitives.ciphers.base import (
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/base.py", line 10, in <module>
+Error: Zigpy-Elelabs:     from cryptography.exceptions import (
+Error: Zigpy-Elelabs:   File "/usr/local/lib/python3.10/site-packages/cryptography/exceptions.py", line 9, in <module>
+Error: Zigpy-Elelabs:     from cryptography.hazmat.bindings.rust import exceptions as rustexceptions
+Error: Zigpy-Elelabs: ImportError: PyO3 modules may only be initialized once per interpreter process
 ```
 
 This is related to the fact that you are using a recent cryptography module.
 you can solve this issue by downgrading the cryptography module 
 
-`sudo python3 pip install cryptography==40.0.2 --upgrade`
+``` bash
+sudo python3 pip install cryptography==40.0.2 --upgrade`
+```
 
 
 ------------
@@ -345,3 +352,33 @@ Operation under Debian 12 Bookworm needs to modify the installation command line
 sudo pip3 install -r requirements.txt --break-system-packages
 ```
 __Reminder :__ This command line is only valid on Debian 12 Bookworm systems.
+
+
+------------
+## E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`
+
+This error appears when you have multiple plugin's sessions and there is not the good charset-normalizer dependency version. It should be 2.0.12.
+
+Check you version with the commande : 
+
+``` bash
+pip show charset-normalizer
+```
+
+or if you still using python2
+
+``` bash
+pip3 show charset-normalizer
+```
+
+If the answer is not 2.0.12 then :
+
+``` bash
+pip install --force-reinstall --upgrade charset-normalizer==2.0.12
+```
+
+or if you still using python2
+
+``` bash
+pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
+```
