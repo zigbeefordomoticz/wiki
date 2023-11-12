@@ -10,11 +10,13 @@
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manually](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually)
 * [Q9. The plugin menu's link is not showed in DomoticZ](#q9-can-i-run-plugin-version-6-on-a-windows-system)
 
+
 ## Troubleshooting
 
 * [T1. My coordinator is not working](#t1-my-coordinator-is-not-working)
 * [T2. My object can not be paired](#t2-my-object-can-not-be-paired)
 * [T3. My object doesn't work as expected](#t3-my-object-doesnt-work-as-expected)
+
 
 ## Errors
 
@@ -30,6 +32,7 @@
 * [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 * [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
+
 
 ------------
 ------------

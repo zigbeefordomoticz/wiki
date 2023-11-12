@@ -106,10 +106,10 @@ Par exemple : Si vous éteignez une ampoule Ikea (avec l'interrupteur physique) 
 
 Si vous rencontrez des problèmes comme l'exemple ci-dessus, il est fort probable que le rapport automatique ne soit pas configuré correctement à partir de l'objet. Veuillez suivre les étapes ci-dessous pour résoudre ce problème :
 
-1. Aller sur la page Réglages du WebUI
-1. Activer les réglages avancés
-1. Activer le paramètre __AllowRebindingClusters__.
-1. Éteignez l'ampoule Ikea avec l'interrupteur physique, attendez 10 secondes, puis rallumez-la. Le processus d'appairage va commencer de lui-même, les problèmes d'état devraient maintenant être résolus.
+* Aller sur la page Réglages du WebUI
+* Activer les réglages avancés
+* Activer le paramètre __AllowRebindingClusters__.
+* Éteignez l'ampoule Ikea avec l'interrupteur physique, attendez 10 secondes, puis rallumez-la. Le processus d'appairage va commencer de lui-même, les problèmes d'état devraient maintenant être résolus.
 
 
 ------------
@@ -173,7 +173,7 @@ Merci de consulter la page [Problèmes d'appairage](Probleme_Appairage.md)
 De temps en temps, il y a le message d'erreur suivant. Est-ce un gros problème ?
 
 ```log
-Apr 02 13:30:23 pi domoticz[1328]: 2022-04-02 13:30:23.327  Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
+Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
 ```
 
 Cette erreur provient de DomoticZ et est liée au fait que vous aviez la page WebUI ouverte depuis un moment et lorsque vous essayez d'actualiser cette page, DomoticZ a détecté qu'il n'y avait plus de communication.
@@ -384,4 +384,3 @@ ou si python2 est toujours installé
 ``` bash
 pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
 ```
-
