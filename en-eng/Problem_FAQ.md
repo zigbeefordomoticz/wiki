@@ -251,6 +251,8 @@ ATTENTION:
 
 This error appears when the DomoticZ parameter _API base url_ is not correctly filled. More infos on [step 2 Plugin settings](Plugin_Settings.md).
 
+
+------------
 ## E7. Error when updating python module: `Building wheel for cryptography (PEP 517) ... error`
 
 When doing the command `pip3 install -r requirements.txt` or `python3 -m pip install -r requirements.txt --upgrade` you get this error.
