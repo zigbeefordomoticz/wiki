@@ -325,7 +325,7 @@ Cette erreur apparaît lors de l'utilisation d'un module python de cryptographie
 La commande pour installé une version compatible est :
 
 ``` bash
-sudo python3 pip install cryptography==40.0.2 --upgrade`
+sudo python3 -m pip install cryptography==40.0.2 --upgrade`
 ```
 
 
