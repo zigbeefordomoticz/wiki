@@ -323,7 +323,7 @@ This is related to the fact that you are using a recent cryptography module.
 you can solve this issue by downgrading the cryptography module 
 
 ``` bash
-sudo python3 pip install cryptography==40.0.2 --upgrade`
+sudo python3 -m pip install cryptography==40.0.2 --upgrade`
 ```
 
 
