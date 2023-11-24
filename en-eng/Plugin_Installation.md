@@ -91,7 +91,7 @@ sudo chmod +x plugin.py
 sudo service domoticz.sh restart
 ```
 
-The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom).
+The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom of the **Type** listbox).
 Move on to [step 2 Plugin settings](Plugin_Settings.md).
 
 ------------
