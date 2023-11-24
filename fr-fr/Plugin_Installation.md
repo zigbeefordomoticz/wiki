@@ -94,7 +94,7 @@ __Note :__ Pour Debian 12 Bookworm il faut rajouter __--break-system-packages__ 
   sudo service domoticz.sh restart
   ```
 
-  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
   Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
@@ -116,7 +116,7 @@ Cette méthode est uniquement valable pour les systèmes Linux. Elle n'est pas v
 * Aller dans le plugin __Python Plugin Manager__ (pp-manager)
 * Rechercher __ZiGate Plugin__ et ajouter le.
 
-  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
@@ -194,7 +194,7 @@ pip3 install -r requirements.txt
 
 * Lancer le Conteneur.
 
-  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ------------
@@ -338,7 +338,7 @@ L’arborescence du plugin est installée:
 
 ![Win10 Installation](../Images/Win10Pic4.png)
 
-  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ### 5.3 - Un PC Windows comme box domotique
@@ -422,7 +422,7 @@ Arrêter le Raspberry Pi : `sudo halt`
 
 * Démarrer la PiZigate: `Tools/pi-zigate.sh run`
 
-  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ### 6.3 - Mise à jour
@@ -511,7 +511,7 @@ Voici un exemple de ce que vous devriez avoir :
    01 80 10 00 05 8f 00 03 03 1a 00 03
 ```
 
-  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+  Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
 Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ## 8 - Installation sous OpenWRT
@@ -574,5 +574,5 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
  dmesg | grep ttyUSB
  ```
 
-   Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installable (tout en bas de la fenêtre déroulante **Type**).
+   Le plugin ZigBee for DomoticZ doit apparaître dans la liste des matériels installables (tout en bas de la fenêtre déroulante **Type**).
  Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
