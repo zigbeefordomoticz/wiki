@@ -58,7 +58,7 @@ Vérifier les logs que le plugin ZigBeeForDomoticZ s'initialise correctement.
 
 ## Les widgets du Plugin
 
-A l'installation, le Plugin créé 2 dispositifs. Une fois activés dans l'onglet *Dispositifs*, les widgets seront visibles dans l'onglet __Mesures__ de DomoticZ.
+A l'installation, le Plugin créé 2 dispositifs. Une fois activés (en cliquant sur la petite flèche verte) dans l'onglet *Dispositifs*, les widgets seront visibles dans l'onglet __Mesures__ de DomoticZ.
 
 ![Administration Widgets](../Images/Widgets_Admin.png)
 
