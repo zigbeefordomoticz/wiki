@@ -56,7 +56,7 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * Section [Settings](WebUI_Settings.md)
 * Section [Tools](WebUI_Tools.md)
 * Section [About](WebUI_About.md)
-* [Statistics](WebUI_Stastics)
+* [Statistics](WebUI_Statistics)
 
 
 ## How-to
