@@ -153,6 +153,51 @@ Cliquer sur les liens de chipset pour accéder aux informations.
     </tbody>
 </table>
 
+* [Deconz](#coordinators-phoscon)
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th style="width:15%">Maker<br>Fabricant</th>
+            <th style="width:20%">Coordinator<br>Coordinateur</th>
+            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
+            <th style="width:15%">Objects in all<br>Objets en tout</th>
+            <th style="width:15%">Direct objects<br>Objets en direct</th>
+            <th style="width:5%">Groups<br>Groupes</th>
+            <th style="width:15%">Comments<br>Commentaires</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=1>Phoscon</td>
+            <td rowspan=1>ConBee2</td>
+            <td>ATSAMR21B18 ARM® Cortex®-M0+</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan=1>Phoscon</td>
+            <td rowspan=1>RaspBee2</td>
+            <td>ATSAMR21B18 ARM® Cortex®-M0+</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan=1>Phoscon</td>
+            <td rowspan=1>ConBee3</td>
+            <td>EFR32MG21 ARM® Cortex®-M33</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 --------------------
 
 ## Some explanations
@@ -277,3 +322,24 @@ Les firmwares installés sur les clefs TI doivent provenir __impérativement__ d
 * CC2531 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
 * CC2530 without has a programmable output power up to +4.5dBm (and down to -?dBm)
 * CC2530 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
+
+
+--------------------
+## Coordinators Phoscon
+
+### Fimwares compatibily
+
+
+#### ConBee2 and RaspBee2
+
+* Plugin 6.1.001
+
+#### ConBee3
+
+* Plugin 7.1.006
+
+### Tutoriels
+
+
+### Puissance Tx
+
