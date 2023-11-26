@@ -7,7 +7,7 @@ L'interface d'administration du plugin (WebUI) est accessible à l'adresse http:
 
 ## Ajout automatique du menu
 
-Par défaut, ce menu est ajouté automatiquement au lancement du plugin et enlever à l'arrêt du plugin.
+Par défaut, ce menu est ajouté automatiquement au lancement du plugin et enlevé à l'arrêt du plugin.
 
 Il faut vérifier que l'onglet Personnalisé est bien activé :
 
