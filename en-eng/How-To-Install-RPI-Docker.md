@@ -23,7 +23,7 @@ When the Domoticz setup is correctly configured, and you have been able to acces
         ```bash
         cd /opt/domoticz/userdata/plugins/
         git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
-        ````
+        ```
 
     1. Edit the Domoticz custom script, so the python modules are correctly installed and up to date
 
