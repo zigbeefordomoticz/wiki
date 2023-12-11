@@ -60,3 +60,49 @@ The idea is to install the plugin inside the container, to prevent having to ins
         cd /opt/domoticz || return
     fi
     ```
+
+1. Provide the Zigbee dongle port to the container.
+
+    1. stop the container
+
+    ```bash
+    docker down
+    ```
+
+    1. Identify the Serial line port
+
+    ```bash
+    ls -l /dev/serial/by-id/
+    total 0
+    lrwxrwxrwx 1 root root 13 Dec 11 22:19 usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0 -> ../../ttyUSB0
+    ```
+
+    In this exemple the Zigbee USB Dongle SonOff P is /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0, that I'll add in the devices section of the docker-compose.yml file
+
+    1. edit the file docker-compose.yml
+
+    ```bash
+    vi /opt/domoticz/docker-compose.yml
+    ```
+
+    this should look similar to that one.
+
+    ```bash
+    version: '3.3'
+
+    services:
+    domoticz:
+        image: domoticz/domoticz:stable
+        container_name: domoticz
+        restart: unless-stopped
+        # Pass devices to container
+        devices:
+            - "/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0"
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./config:/opt/domoticz/userdata
+        environment:
+            - TZ=Europe/Amsterdam
+            #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
+    ```
