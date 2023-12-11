@@ -14,9 +14,7 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
     1. Open a sheel in the container
 
-        ```
-        docker exec -it domoticz /bin/bash
-        ```
+        `docker exec -it domoticz /bin/bash`
 
     1. clone the Z4D plugin
 
