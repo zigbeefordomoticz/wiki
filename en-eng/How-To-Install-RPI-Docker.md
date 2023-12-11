@@ -12,6 +12,8 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
 ## 2. Install plugin & configuration
 
+    The idea is to install the plugin inside the container, to prevent having to install git under the bar metal system.
+
     1. Open a sheel in the container
 
         `docker exec -it domoticz /bin/bash`
