@@ -8,7 +8,9 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
 ## 1. Start domoticz
 
-`docker up -d`
+    ```
+    docker up -d
+    ```
 
 ## 2. Install plugin & configuration
 
@@ -16,7 +18,9 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
     1. Open a sheel in the container
 
-        `docker exec -it domoticz /bin/bash`
+        ```
+        docker exec -it domoticz /bin/bash
+        ```
 
     1. clone the Z4D plugin
 
@@ -27,7 +31,9 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
     1. Edit the Domoticz custom script, so the python modules are correctly installed and up to date
 
-        `vi /opt/domoticz/userdata/customstart.sh`
+        ```
+        vi /opt/domoticz/userdata/customstart.sh
+        ```
 
         ```bash
         #!/bin/bash
