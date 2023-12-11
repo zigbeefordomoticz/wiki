@@ -16,11 +16,7 @@ docker up -d
 
 The idea is to install the plugin inside the container, to prevent having to install git under the bar metal system.
 
-1. Open a sheel in the container
-
-    ```bash
-    docker exec -it domoticz /bin/bash
-    ```
+1. Open a sheel in the container `docker exec -it domoticz /bin/bash`
 
 1. clone the Z4D plugin
 
@@ -63,11 +59,7 @@ The idea is to install the plugin inside the container, to prevent having to ins
 
 1. Provide the Zigbee dongle port to the container.
 
-    1. stop the container
-
-    ```bash
-    docker down
-    ```
+    1. stop the container `docker down`
 
     1. Identify the Serial line port
 
@@ -77,7 +69,12 @@ The idea is to install the plugin inside the container, to prevent having to ins
     lrwxrwxrwx 1 root root 13 Dec 11 22:19 usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0 -> ../../ttyUSB0
     ```
 
-    In this exemple the Zigbee USB Dongle SonOff P is /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0, that I'll add in the devices section of the docker-compose.yml file
+    In this exemple the Zigbee USB Dongle SonOff P is /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0, that I'll add in the devices section of the docker-compose.yml file.
+
+    The syntax to be used is <host port>:<container port>
+
+    * __host port__ is `/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0``
+    * __container port__ is the port name you want to see inside the container, `/dev/ttyUSB0` ( you can choose what ever you want)
 
     1. edit the file docker-compose.yml
 
@@ -97,7 +94,7 @@ The idea is to install the plugin inside the container, to prevent having to ins
         restart: unless-stopped
         # Pass devices to container
         devices:
-            - "/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0"
+            - "/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0:/dev/ttyUSB0"
         ports:
             - "8080:8080"
         volumes:
