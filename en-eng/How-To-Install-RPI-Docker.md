@@ -14,7 +14,9 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
     1. Open a sheel in the container
 
-        `docker exec -it domoticz /bin/bash`
+        ```
+        docker exec -it domoticz /bin/bash
+        ```
 
     1. clone the Z4D plugin
 
@@ -29,22 +31,22 @@ When the Domoticz setup is correctly configured, and you have been able to acces
 
         ```bash
         #!/bin/bash
-    
+
         if [ -f /opt/domoticz/FIRSTRUN ]; then
          true
         else
          echo 'creating FIRSTRUN file so script can check on next run'
          touch /opt/domoticz/FIRSTRUN
-    
+
          echo 'updating packages'
          apt-get -qq update
-    
+
          echo 'installing iputils-ping'
          apt-get -y install iputils-ping
-    
+
          echo 'installing vim editor'
          apt-get -y install vim-ping
-    
+
          if [ -f /opt/domoticz/userdata/plugins/Domoticz-Zigbee/requirements.txt ]; then
           echo 'Install the necessary python3 modules for Zigbee for Domoticz plugin'
                  python3 -m pip install -r /opt/domoticz/userdata/plugins/Domoticz-Zigbee/requirements.txt --upgrade
