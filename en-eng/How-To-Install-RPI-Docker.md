@@ -71,7 +71,7 @@ The idea is to install the plugin inside the container, to prevent having to ins
 
     In this exemple the Zigbee USB Dongle SonOff P is /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0, that I'll add in the devices section of the docker-compose.yml file.
 
-    The syntax to be used is <host port>:<container port>
+    The syntax to be used is `<host port>:<container port>`
 
     * __host port__ is `/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0``
     * __container port__ is the port name you want to see inside the container, `/dev/ttyUSB0` ( you can choose what ever you want)
