@@ -1,19 +1,19 @@
 # Install Zigbee for Domoticz plugin (under Docker on a RPi bare metal)
 
-## Assumptions
+## 1. Assumptions
 
-The here after installation steps are based on the fact that Domoticz is installed and setup as documented [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
-
-When the Domoticz setup is correctly configured, and you have been able to access via a Web browser, you can install the plugin
-
-## 1. Start domoticz
-
-```bash
-docker up -d
-```
+The here after installation steps are based on Domoticz setup as documented [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
+We assumed here , that you you have access to Domoticz UI via a Web browser.
 
 ## 2. Install plugin & configuration
 
+1. Start domoticz if not yet started
+
+    ```bash
+    docker up -d
+    ```
+
+When the container is started, and you have Domoticz access via a browser, we can start the installation procedure.
 The idea is to install the plugin inside the container, to prevent having to install git under the bar metal system.
 
 1. Open a sheel in the container `docker exec -it domoticz /bin/bash`
@@ -103,3 +103,9 @@ The idea is to install the plugin inside the container, to prevent having to ins
             - TZ=Europe/Amsterdam
             #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
     ```
+
+## 3. Sources and References
+
+* [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
+* [Get Docker](https://docs.docker.com/get-docker/)
+* [docker hub](https://hub.docker.com/)
