@@ -1,5 +1,5 @@
-local Alertidx = 126 -- Change to your idx for the Virtual Alert sensor you have created for this script
-local hostWebUI = "192.168.1.68" -- Change to your local ip (127.0.0.1 most of the time)
+local Alertidx = 000 -- Change to your idx for the Virtual Alert sensor you have created for this script
+local hostWebUI = "127.0.0.1" -- Change to your local ip (127.0.0.1 most of the time)
 local portWebUI = "9440"  -- Change WebUI port 
 local protocol = 'http' -- http or https
 local user = ''  -- '' if no user/password
@@ -15,11 +15,11 @@ local devicesUndefined=0
 return {
 	logging = {
 	    level = domoticz.LOG_ERROR,
-		marker = '(Zigate Status)'
+		marker = '(Z4D-Status)'
 	},
 	on = {
 		timer =  {'every 15 minutes'},   
-		httpResponses = {'triggerSA'} -- must match with the callback passed to the openURL command
+		httpResponses = {'Z4D-Status'} -- must match with the callback passed to the openURL command
     	},
 	execute = function(domoticz, item)
 
@@ -33,7 +33,7 @@ return {
 	    domoticz.openURL({
     	    url = fullURL,
 			method = 'GET',
-			callback = 'triggerSA' -- see httpResponses above.
+			callback = 'Z4D-Status' -- see httpResponses above.
 		})
 	end
 

@@ -11,7 +11,7 @@ You can also use the following dzVent code to monitor and trigger notification (
 The here after exemple monitor 'veilleuse' and 'Hue', so you will have to adapt to your own case
 
 
-```
+``` DzVents
 return {
 	on = {
       devices = {'veilleuse','Hue'},
