@@ -126,7 +126,7 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * [How-to check lost devices (version 1)](../Contrib/CheckLastSeen.dzVents) in DzVents
 * [How-to check lost devices (version 2)](../Contrib/CheckDeadDevices.lua) in DzVents
 
- [Other examples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
+ [Other examples](../Contrib/Readme.md)
 
 
 ## Informations
@@ -144,5 +144,5 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * [A Guide to Wireless range and Repeater](https://blog.smartthings.com/iot101/a-guide-to-wireless-range-repeaters/)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
 * [Coexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
- * [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
- * [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french
+* [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate) in french
+* [ZiGate Update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) in french

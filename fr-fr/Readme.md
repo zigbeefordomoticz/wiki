@@ -117,7 +117,7 @@ Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégre
 * [Vérifier la perte d'objets (version 1)](../Contrib/CheckLastSeen.dzVents) en DzVents
 * [Vérifier la perte d'objets (version 2)](../Contrib/CheckDeadDevices.lua) en DzVents
 
-[D'autres exemples](https://github.com/zigbeefordomoticz/wiki/tree/master/Contrib)
+[D'autres exemples](../Contrib/Readme.md)
 
 
 ## Informations
