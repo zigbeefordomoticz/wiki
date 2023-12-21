@@ -14,6 +14,7 @@ Those scripts are provided by their authors. In case of issue, please report to 
 
 ## LUA
 
+* [GetDevicesStatus.lua](GetDevicesStatus.lua)
 * [CheckDeadDevices.lua](CheckDeadDevices.lua)
 * [SwitchWithAqaraDoubleSwitch.lua](SwitchWithAqaraDoubleSwitch.lua)
 * [SwitchZigateGroupByMotionSensor.lua](SwitchZigateGroupByMotionSensor.lua)
