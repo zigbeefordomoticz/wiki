@@ -16,7 +16,7 @@ We assumed here , that you you have access to Domoticz UI via a Web browser.
 When the container is started, and you have Domoticz access via a browser, we can start the installation procedure.
 The idea is to install the plugin inside the container, to prevent having to install git under the bar metal system.
 
-1. Open a sheel in the container `docker exec -it domoticz /bin/bash`
+1. Open a shell in the container `docker exec -it domoticz /bin/bash`
 
 1. clone the Z4D plugin
 
