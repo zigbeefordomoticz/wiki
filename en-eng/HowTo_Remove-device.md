@@ -20,6 +20,8 @@ from every where, here is a step approach to follow :
 1. Reset the end device
 1. you should receive a leave message like that one `Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 1. Remove all Widgets from Domoticz
+1. Go to the Managment -> Device managment menu
+2. Find your device in the list and click on the left trash icon.
 
 That's it.
 
