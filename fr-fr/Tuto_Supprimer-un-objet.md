@@ -37,6 +37,7 @@ Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 `Status: (DIN-Zigbee)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 
 * Supprimer tous les dispositifs de cet objet dans DomoticZ.
+* Aller dans la section [Gestion > Gestion des objets](WebUI-Gestion.md#gestion-des-objets) et recherché l'objet dans la liste. Si elle est présente, cliquer sur la petite icône poublelle à gauche pour retirer l'objet du plugin.
 
 
 ### Supprimer les routeurs
@@ -50,6 +51,9 @@ Un message similaire à celui-ci devrait apparaître dans les logs de DomoticZ :
 `Status: (DIN-Zigbee)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
 
 Si vous ne voyez pas de message similaire, il faut appliquer la procédure pour [Supprimer les objets terminaux](#supprimer-les-objets-terminaux).
+
+* Aller dans la section [Gestion > Gestion des objets](WebUI-Gestion.md#gestion-des-objets) et recherché l'objet dans la liste. Si elle est présente, cliquer sur la petite icône poublelle à gauche pour retirer l'objet du plugin.
+
 
 
 ## Information
