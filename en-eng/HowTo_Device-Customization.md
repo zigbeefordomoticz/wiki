@@ -58,6 +58,7 @@ and for course we are counting on you to make the config file available for othe
 | upd_domo_device         | request an update of the corresponding ClusterType for this value of Cluster |
 | store_specif_attribute  | request to store the value under the hierarchie SpecifStoragelvl1:SpecifStoragelvl2:SpecifStoragelvl3 |
 | basic_model_name        | reserved to handle the attribute 0005 of Basic cluster |
+| update_battery          | request and update of the battery level |
 
 ## evaluation
 
@@ -187,9 +188,9 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
 
 1. Update the attributes
 
-    * __"\_comment":__  _put what ever comment you would like. We are recommending to put at least the Device Product Name and manufacturer_
-    * __"\_blakadder":__  _you can add here the link to the [blakadder](https://zigbee.blakadder.com/) web site, where your device is referenced. If the device is not yet referenced, we strongly recommend you to request to get it in._
-    * __"\_version":__ _this is a version number you can put._
+    * **"\_comment":**  _put what ever comment you would like. We are recommending to put at least the Device Product Name and manufacturer_
+    * **"\_blakadder":**  _you can add here the link to the [blakadder](https://zigbee.blakadder.com/) web site, where your device is referenced. If the device is not yet referenced, we strongly recommend you to request to get it in._
+    * **"\_version":** _this is a version number you can put._
 
 1. Update the "Ep" section
 
@@ -324,6 +325,89 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
     | VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
     | WindowsCoverringInverted    | |
 
+## Widget Type
+
+"Type" is used to define the list of Widget Type (also named Device in domoticz). You can define a list of Widgets to be created by combining several type separated by /
+
+For example
+
+    ```json
+    "Type": "Baro/Temp/Humi"
+    ```
+
+Would create 5 widgets in Domoticz:
+
+* Barometer
+* Temperature
+* Humidity
+* Temperature/humidity (combining Temperature and Humidity)
+* Temperature/humidity/barometer ( combining Temperature, Humidity and Barometer)
+
+| Type              | Description |
+| ----------------- | ----------- |
+| AirPurifierAlarm |     |
+| AirQuality |     |
+| Alarm |     |
+| Ampere |     |
+| Ampere3 |     |
+| Analog |     |
+| Baro |     |
+| Button |     |
+| CarbonDioxyde |     |
+| CarbonMonoxyde |     |
+| CH2O |     |
+| ColorControlFull |     |
+| ColorControlRGB |     |
+| ColorControlRGBW |     |
+| ColorControlRGBWW |     |
+| ColorControlRGBWZ |     |
+| ColorControlWW |     |
+| ConsoMeter |     |
+| Counter |     |
+| Distance |     |
+| Door |     |
+| DoorLock |     |
+| DoorSensor |     |
+| FanSpeed |     |
+| GazMeter |     |
+| HeatingStatus |     |
+| HeatingSwitch |     |
+| Humi |     |
+| Lux |     |
+| LvlControl |     |
+| Meter |     |
+| Motion |     |
+| Notification |     |
+| Orientation |     |
+| P1Meter |     |
+| PAC-SWITCH |     |
+| Plug |     |
+| PM25 |     |
+| Power |     |
+| PowerFactor |     |
+| ProdMeter |     |
+| ProdPower |     |
+| ShutterCalibration |     |
+| Smoke |     |
+| SmokePPM |     |
+| Strength |     |
+| Switch |     |
+| SwitchAlarm |     |
+| SwitchButton |     |
+| Tamper |     |
+| TamperSwitch |     |
+| Temp |     |
+| Temp+Hum |     |
+| Temp+Hum+Baro |     |
+| ThermoOnOff |     |
+| ThermoSetpoint |     |
+| TuyaDoorLock |     |
+| Valve |     |
+| Voc |     |
+| Voltage |     |
+| Water |     |
+| WaterCounter |     |
+
 ## A concreate exemple: lumi Weather
 
 ```json
@@ -371,85 +455,3 @@ In this exemple we can note in addition to what was explain before:
 * For attribute 0x0000 of 0x0403 we are just storing the received info. Usually this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
 
 * For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
-
-## Special case of the Tuya TS0601 model name
-
-Tuya has implemented a manufacturer private cluster documented [Tuya Zigbee Generic Interfaces](https://developer.tuya.com/en/docs/iot/tuya-zigbee-universal-docking-access-standard?id=K9ik6zvofpzql)
-
-For that you need to identify the DataPoint which correspond to the Sensor informations. Based with the Dp, you can create the mapping between Widgets and Actions
-
-1. Sensor type ( mapping to Domoticz widgets)
-    | sensor_type | description |
-    | ----------- | ----------- |
-    | motion | |
-    | illuminance | |
-    | temperature | |
-    | setpoint | |
-    | humidity | |
-    | distance | |
-    | battery | |
-    | batteryState | |
-    | tamper | |
-    | switch | |
-    | door | |
-    | lvl_percentage | |
-    | co2 | |
-    | voc | |
-    | ch20 | |
-    | mp25 | |
-    | current | |
-    | metering | |
-    | power | |
-    | voltage | |
-    | heatingstatus | |
-    | valveposition | |
-    | calibration | |
-    | windowsopened | |
-    | TRV6SystemMode | |
-    | TRV7SystemMode | |
-    | TuyaAlarmDuration | |
-    | TuyaAlarmMelody | |
-    | TuyaAlarmLevel | |
-    | TuyaAlarmSwitch | |
-    | smoke_state | |
-    | smoke_ppm | |
-    | water_consumption | |
-
-1. Action type ( when an action needs to be sent to the device )
-
-    | action_type | description |
-    | ----------- | ----------- |
-    | switch | |
-    | setpoint | |
-    | calibration | |
-    | TRV6SystemMode | |
-    | TRV7SystemMode | |
-    | TuyaAlarmSwitch | |
-
-1. Concret case : ** Tuya TS0601 Radar Presence
-
-    in the here example you'll see only the specific things.
-
-    ```json
-    {
-        "TS0601_DP": {
-            "01": { "sensor_type": "motion", "DomoDeviceFormat": "str"},
-            "09": { "sensor_type": "distance", "EvalExp": "int((value//10)*10)"}, 
-            "68": { "sensor_type": "illuminance"},
-            "02": { "store_tuya_attribute": "sensitivity"},
-            "03": { "store_tuya_attribute": "radar_min_range"},
-            "04": { "store_tuya_attribute": "radar_max_range"},
-            "65": { "store_tuya_attribute": "radar_detection_delay"},
-            "66": { "store_tuya_attribute": "radar_fading_time"}
-
-        },
-        "TUYA_REGISTRATION": 13,
-        ...
-    }
-    ```
-
-    * **TS0601_DP** is the attribute which allow to define the TS0601 properties
-
-        * **0x01** (1) is the DataPoint (DP) reporting Motion/Presence detection. By defining "sensor_type": "motion", the plugin will report this value to the _Motion_ widget in Domoticz. "DomoDeviceFormat": "str" will force to convert the value in string.
-        * **0x09** (9) is the DP reporting the distance . By defining "sensor_type": "distance", the plugin will report this value to the _Distance_ Widget in Domoticz. "EvalExp": "int((value//10)*10)" will round the value to the tenth value.
-        * **0x68** (104) is the DP reporting the illuminance/Lux. By defining "sensor_type": "illuminance", the plugin will report this value to the _Lux_ widget in Domoticz
