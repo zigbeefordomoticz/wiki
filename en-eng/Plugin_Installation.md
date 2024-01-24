@@ -173,7 +173,7 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
 ### 1. Docker Install
 
-[How to install Zigbee4Domoticz on a docker based setup](../en-en/How-To-Install-RPI-Docker.md)
+[How to install Zigbee4Domoticz on a docker based setup](../en-eng/How-To-Install-RPI-Docker.md)
 
 ## 5 - Installation running on Windows 10
 
