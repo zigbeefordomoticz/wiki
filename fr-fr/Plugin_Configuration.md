@@ -19,6 +19,10 @@ Vous pouvez accéder à l'interface web d'administration en allant à la page <h
 
 Si votre DomoticZ est sur un serveur en local et que vous avez laisser le port par défaut, l'adresse de l'interface web est <http://127.0.0.1:9440>
 
+**Note :** Si l'interface d'administration n'est pas accessible :
+* Vérifier que le port est bien celui renseigné dans les paramètres DomoticZ du plugin. 
+* Vérifier que votre parefeu n'en bloque pas l'accès.
+
 **ATTENTION :** Pour des raisons de sécurité, **ne pas présenter le port 9440 sur votre réseau externe** sous peine d'ouvrir à tous la gestion de votre domotique.
 
 Ce tableau de bord vous propose un aperçu rapide, en un coup d’œil, du fonctionnement de votre environnement ZigBee.

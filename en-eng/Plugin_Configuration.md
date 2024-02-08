@@ -20,6 +20,10 @@ You can access to the web administration interface with http://IP-domoticz-serve
 
 If your DomoticZ is on a local server and you leave the port by default, the web interface url is http://127.0.0.1:9440.
 
+**Note :** If the user interface is not reachable :
+* Check that you use the same port as the one in the DomoticZ parameters of the plugin. 
+* Check that your firewall is not blocking the access.
+
 **Caution :** For security reasons, **do not forward the 9440 port outside of your home** otherwise everybody would det access to it.
 
 ![Zigate Web Admin Interface](Images/Dashboard.png)

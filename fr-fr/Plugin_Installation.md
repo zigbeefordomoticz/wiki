@@ -31,6 +31,7 @@ __Important :__ Cette méthode d’installation n'est pas valable pour une insta
 * DomoticZ version supérieur ou égal à 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
 * Python version supérieur ou égal à 3.8 installé (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Le paquet Git doit être installé (voir [Installation de Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git))
+* Le paquet Pip doit être installé. Si besoin : `sudo apt install python3-pip`
 * Sur Raspberry Pi OS, il est déconseillé d'utiliser la version Lite car beaucoup de paquets sont manquants.
 
 ### 1.B - Procédure

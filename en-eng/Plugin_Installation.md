@@ -27,6 +27,7 @@ __Important :__ This installation method is not valid for an installation of the
 * DomoticZ version above 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
 * Python version above 3.8 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Git packet installed
+* Pip packet installed
 * On Raspeberry Pi OS, it is not recommended to use the Lite version because many packages are missing.
 
 ### 1.B - Procedure

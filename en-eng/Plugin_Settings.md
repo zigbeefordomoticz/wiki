@@ -58,7 +58,7 @@ Check the logs that the ZigBeeForDomoticZ plugin initializes correctly.
 
 ### Status Widget
 
-The plugin is providing 2 widgets for administration purposes. Those Widgets are created by the plugin itself at startup phase
+ The plugin is providing 2 widgets for administration purposes. Those Widgets are created by the plugin itself at startup phase if DomoticZ setting **Accept new hardware devices** is activated,
 
 ![Administration Widgets](../Images/Widgets_Admin.png)
 
