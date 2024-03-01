@@ -79,7 +79,7 @@ C'est la version qui a ouvert le plugin aux coordinateurs TI CCXXXX, Sonoff, Ele
 | Compatibilité minimale | DomoticZ 2021.1 |
 | Compatibilité maximale | Dernière version de DomoticZ |
 
-__Note :__ Le passage à la stable6 nécessite une procédure particulière : voir la page [Migration vers version 6](Plugin_Version-6.md).
+__Note :__ Le passage à la stable6 nécessite une procédure particulière : voir la page [Migration vers version 6](Mise-a-jour_6.1.md).
 
 #### stable5 (créée en mai 2021)
 

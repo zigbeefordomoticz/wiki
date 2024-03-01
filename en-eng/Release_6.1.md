@@ -1,7 +1,7 @@
 # How to move from version 5 (stable5) to version 6 (stable6)
 
-<a href="../fr-fr/Plugin_Version-6.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
-[Cette page est disponible en français.](../fr-fr/Plugin_Version-6.md)
+<a href="../fr-fr/Release_6.1.md"><img align="left" width="15" height="15" src="../Images/flag_france.png" alt="Logo"></a>
+[Cette page est disponible en français.](../fr-fr/Release_6.1.md)
 
 To make a __new plugin install__, please follow [the install procedure](Plugin_Installation.md). For the moment, only the manual installation on Linux has been tested and validated.
 
