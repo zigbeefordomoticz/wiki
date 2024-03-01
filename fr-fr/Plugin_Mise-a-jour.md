@@ -64,7 +64,7 @@ C'est la version qui sépare la gestion des objets certifiés des fichiers de fo
 | Compatibilité minimale | DomoticZ 2023.1 / Python 3.8 > Debian Bullseye|
 | Compatibilité maximale | Dernière version de DomoticZ |
 
-__Note :__ Le passage à la stable7 nécessite une procédure particulière : voir la page [Migration vers version 7](Plugin_Version-7.md).
+__Note :__ Le passage à la stable7 nécessite une procédure particulière : voir la page [Migration vers version 7](../en-eng/Release_7.1.md).
 
 
 #### dev (créée en avril 2023)
