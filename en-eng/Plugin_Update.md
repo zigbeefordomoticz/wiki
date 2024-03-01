@@ -9,6 +9,16 @@ The plugin is regularly updated. For bug fixing or enhancement. In order to keep
 
 Since version 6.3, it is now possible to update the plugin form the plugin administration page : Admin > Plugin > Update
 
+* Open the plugin Web Interface
+
+* Go to section [Admin > Plugin](WebUI_Admin.md#plugin).
+
+* Click on the button **Start upgrade**
+
+
+A box will appear above it with the result of the update as if you were launching it from your terminal.
+
+* Once the update is complete, click on the **Restart** button.
 
 ### Manually
 
@@ -21,18 +31,16 @@ Since version 6.3, it is now possible to update the plugin form the plugin admin
   sudo python3 -m pip install -r requirements.txt --upgrade
  ```
 
-__Note :__ Since version 6, the git pull is no longer enough.
+* Restart DomoticZ.
 
-* In case you have edited/updated some of the plugin controlled file, you might get an error message protecting any update. In such situation you can reset those files with the latest version with the following commands
+### In case of error
+
+If you have edited/updated some of the plugin controlled file, you might get an error message protecting any update. In such situation you can reset those files with the latest version with the following commands
 
   ```bash
   git reset --hard
   git pull --force
   ```
-
-* Run: `sudo chmod +x plugin.py`
-* Restart Domoticz.
-
 
 ## Plugin branches
 
