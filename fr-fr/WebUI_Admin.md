@@ -7,9 +7,27 @@ La section __Admin__ comporte les pages :
 * [Plugin](#plugin)
 * [Appairage](#appairage)
 * [Groupe](#groupe)
-* [ZiGate](#zigate)
+* [Coordinateur](#coordinateur)
 * [Firmware](#firmware)
 
+
+------------------------------------------------
+## Plugin
+
+Voici la page __Plugin__ de l'interface Web du plugin :
+
+![FR_WebUI-Admin-Plugin](Images/FR_WebUI-Admin-Plugin.png)
+*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
+
+### Utilisation
+
+Cette page permet de gérer le fonctionnement du plugin ZigBeeForDomoticZ.
+
+Elle permet :
+
+* De faire un redémarrage du plugin.
+
+Se reporter à la section [Tutoriels](Readme.md#tutoriels) pour plus d'informations.
 
 ------------------------------------------------
 ## Appairage
@@ -32,7 +50,6 @@ Elle permet :
 * De recréer les dispositifs dans DomoticZ
 
 Se reporter au tutoriel [Ajouter un nouvel objet](Tuto_Appairage-objet.md) pour plus d'informations.
-
 
 ------------------------------------------------
 ## Groupe
@@ -60,42 +77,26 @@ Se reporter au tutoriel [Gérer les groupes](Tuto_Gerer-les-groupes.md) pour plu
 
 
 ------------------------------------------------
-## ZiGate
+## Coordinateur
 
-Voici la page __ZiGate__ de l'interface Web du plugin :
+Voici la page __Coordinateur__ de l'interface Web du plugin :
 
 ![FR_WebUI-Admin-Zigate](Images/FR_WebUI-Admin-Zigate.png)
 *Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
 
 ### Utilisation
 
-Cette page permet de gérer le fonctionnement du hardware de la ZiGate.
+Cette page permet de gérer le fonctionnement du hardware du coordinateur.
 
 Elle permet :
 
-* De faire un redémarrage logiciel de la ZiGate : cette action n’entraîne **aucune perte des objets appairés**.
-* De modifier le canal de la ZiGate.
+* De faire un redémarrage logiciel du coordinateur : cette action n’entraîne **aucune perte des objets appairés**. (fonctionne uniquement pour les ZiGates)
+* De modifier le canal du coordinateur.
 
 Se reporter à la section [Tutoriels](Readme.md#tutoriels) pour plus d'informations.
 
 
-------------------------------------------------
-## Plugin
 
-Voici la page __Plugin__ de l'interface Web du plugin :
-
-![FR_WebUI-Admin-Plugin](Images/FR_WebUI-Admin-Plugin.png)
-*Cette image est susceptible d'avoir évolué depuis l'écriture de cette documentation.*
-
-### Utilisation
-
-Cette page permet de gérer le fonctionnement du plugin ZigBeeForDomoticZ.
-
-Elle permet :
-
-* De faire un redémarrage du plugin.
-
-Se reporter à la section [Tutoriels](Readme.md#tutoriels) pour plus d'informations.
 
 ------------------------------------------------
 ## Firmware
