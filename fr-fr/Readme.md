@@ -42,6 +42,11 @@ Cette version 7 nécessite au minimum Debian 11 Bullseye car Python 3.7 intégre
 * [Mettre à jour le Plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
 
+* [Mise à jour vers 4.1](../en-eng/Release_4.1.md) en anglais
+* [Mise à jour vers 6.1](Mise-a-jour_6.1.md)
+* [Mise à jour vers 6.3](../en-eng/Release_6.3.md)
+* [Mise à jour vers 7.1](../en-eng/Release_7.1.md)
+
 
 ## Sauvegardes
 
