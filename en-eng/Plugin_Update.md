@@ -50,7 +50,7 @@ The code is available under different branches
 
 ## About release channels
 
-In order to provide stability and also provide more recent development, Zigate plugin has the following channels
+In order to provide stability and also provide more recent development, ZigBeeForDomoticZ plugin has the following channels :
 
 ### stable7
 
