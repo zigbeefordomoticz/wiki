@@ -24,7 +24,7 @@ A box will appear above it with the result of the update as if you were launchin
 
 * Go in your DomoticZ directory using a command line and open the plugins directory then the ZigBeeForDomoticZ-Plugin directory.
 
-* Run the commands :
+* Run the commands (add sudo first if needed):
 
 ```bash
   git pull
