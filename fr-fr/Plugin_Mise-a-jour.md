@@ -18,7 +18,7 @@ Il y a maintenant deux possibilités pour mettre à jour le plugin : Via le WebU
 
 * Cliquer sur le bouton **Mettre à jour le plugin**
 
-Un encadré va apparaître en dessus avec le résulat de la mise à jour comme si vous la lanciez depuis votre terminal.
+Un encadré va apparaître en dessus avec le résultat de la mise à jour comme si vous la lanciez depuis votre terminal.
 
 
 #### Mise à jour via le terminal (Mise à jour manuelle)
