@@ -145,7 +145,7 @@ Il est recommandé des faire une [sauvegarde](Plugin_Sauvegardes.md) avant de fa
 
 * Lancer la commande `git pull`
 
-* Lancer la commande `git checkout stable6` pour aller sur le canal stable6
+* Lancer la commande `git checkout stable7` pour aller sur le canal stable7
 * Lancer la commande `git checkout dev` pour aller sur le canal de developement
 
 __Attention aux compatibilités avec DomoticZ lors du changement de branche.__
