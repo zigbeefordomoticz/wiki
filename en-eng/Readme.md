@@ -40,6 +40,10 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * [Plugin updates](Plugin_Update.md#plugin-update)
 * [Plugin branches](Plugin_Update.md#plugin-branches)
 
+* [Release 4.1](Release_4.1.md)
+* [Release 6.1](Release_6.1.md)
+* [Release 6.3](Release_6.3.md)
+* [Release 7.1](Release_7.1.md)
 
 ## Backups
 
@@ -100,13 +104,6 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 * [Profalux](Corner_Profalux-corner.md)
 * [Schneider Wiser](Corner_Schneider_Wiser.md)
 
-
-## Information about releases
-
-* [Release 4.1](Release_4.1.md)
-* [Release 6.1](Release_6.1.md)
-* [Release 6.3](Release_6.3.md)
-* [Release 7.1](Release_7.1.md)
 
 ## In case of Trouble
 
