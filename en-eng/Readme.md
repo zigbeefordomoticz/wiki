@@ -104,7 +104,9 @@ The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will h
 ## Information about releases
 
 * [Release 4.1](Release_4.1.md)
-
+* [Release 6.1](Release_6.1.md)
+* [Release 6.3](Release_6.3.md)
+* [Release 7.1](Release_7.1.md)
 
 ## In case of Trouble
 
