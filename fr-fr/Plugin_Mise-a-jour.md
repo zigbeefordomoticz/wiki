@@ -8,7 +8,7 @@ Le Plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 __ATTENTION:__ si vous n'êtes pas encore en Version 7, merci de suivre cette procédure de  mise à jour vers la [version 7](Plugin_Version-7.md)
 
-Il y a maintenant deux possibilités pour mettre à jour le plugin : Via le WebUI ou manuellement.
+La version 6.3 a ajouter la possibilité de lancer une mise à jour depuis le WebUI.
 
 #### Mise à jour via le WebUI
 
@@ -19,6 +19,8 @@ Il y a maintenant deux possibilités pour mettre à jour le plugin : Via le WebU
 * Cliquer sur le bouton **Mettre à jour le plugin**
 
 Un encadré va apparaître en dessus avec le résultat de la mise à jour comme si vous la lanciez depuis votre terminal.
+
+* Une fois la mise à jour terminée, **Redémarrer le plugin** en cliquant sur le bouton.
 
 
 #### Mise à jour via le terminal (Mise à jour manuelle)
