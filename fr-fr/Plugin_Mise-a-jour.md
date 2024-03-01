@@ -20,7 +20,7 @@ La version 6.3 a ajouter la possibilité de lancer une mise à jour depuis le We
 
 Un encadré va apparaître en dessus avec le résultat de la mise à jour comme si vous la lanciez depuis votre terminal.
 
-* Une fois la mise à jour terminée, **Redémarrer le plugin** en cliquant sur le bouton.
+* Une fois la mise à jour terminée, cliquer sur le bouton **Redémarrer le plugin**.
 
 
 #### Mise à jour via le terminal (Mise à jour manuelle)
