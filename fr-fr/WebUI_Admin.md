@@ -4,10 +4,10 @@ Pour accéder à l'interface d'administration du plugin, voir l'étape 3 [Config
 
 La section __Admin__ comporte les pages :
 
+* [Plugin](#plugin)
 * [Appairage](#appairage)
 * [Groupe](#groupe)
 * [ZiGate](#zigate)
-* [Plugin](#plugin)
 * [Firmware](#firmware)
 
 

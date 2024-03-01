@@ -8,24 +8,32 @@ Le Plugin est régulièrement mis à jour que ce soit pour de la correction de b
 
 __ATTENTION:__ si vous n'êtes pas encore en Version 7, merci de suivre cette procédure de  mise à jour vers la [version 7](Plugin_Version-7.md)
 
+Il y a maintenant deux possibilités pour mettre à jour le plugin : Via le WebUI ou manuellement.
+
+#### Mise à jour via le WebUI
+
+* Ouvrir l'interface web du plugin
+
+* Aller dans la section [Admin > Plugin](WebUI_Admin.md#plugin).
+
+* Cliquer sur le bouton **Mettre à jour le plugin**
+
+Un encadré va apparaître en dessus avec le résulat de la mise à jour comme si vous la lanciez depuis votre terminal.
+
+
+#### Mise à jour via le terminal (Mise à jour manuelle)
+
 * Ouvrir un terminal et aller jusqu'au répertoire du Plugin ZigBeeForDomoticZ (généralement c'est '/home/pi/domoticz/plugins/Domoticz-Zigbee')
 
-* Lancer les commandes :
+* Lancer les commandes (si besoin en ajoutant sudo):
 
 ```bash
   git pull
   sudo python3 -m pip install -r requirements.txt --upgrade
  ```
 
-__Note :__ Depuis la version 6, le git pull n'est plus suffisant.
-
-Les informations de mise à jour sont affichées comme dans l'exemple  ci-dessous :
-
-![Mise à jour](../Images/Git-Pull.png)
-
-* Exécuter ensuite : `sudo chmod +x plugin.py`
-
 * Redémarrer DomoticZ
+
 
 ### En cas d'erreurs
 
