@@ -8,6 +8,7 @@ The section __Network__ contents the pages :
 * [Interference levels](#interference-level)
 
 ------------------------------------------------
+
 ## Topology
 
 Here is the __Topology__ page of the plugin Web interface :
@@ -20,23 +21,38 @@ At plugin start a report is triggered. It could take up to 15' to get the report
 You can after that manually trigger a scan
 
 All available reports are available in the upper-left list, sorted by date. From the list you can either:
+
 * delete a report
 * display the report
 
 There are 2 graphical representations of the report.
 
-#### Left: Topology wheel
+### Left: Topology wheel
 
 Here are shown on a wheel, all links between 2 devices. If you leave the mouse on a link, you'll see the direction and a number which correspond to the Link Quality ( the worst is 0, the best is 255).
 
-#### Right: Topology graph
+### Right: Topology graph
 
 Here you can see more the hierarchical structure of your ZigBee network.
 
-------------------------------------------------
-## Interference level
+### Additional informations
 
-For Zigate only
+Currently you can find some additional informatons in the Plugin log file when you visualize a particular report.
+This report will show you the following informations extracted from the Neighbors table (and Routing table)
+
+* Node1 (nwkid): current device and its network short address of the 1st node.
+* Node2 (nwkid): neighbor device and its network short address of the 2nd node.
+* LQI: The estimated link quality for RF transmissions from this device.
+* Dev. Type: The type of the neighbor device: ZigBee coordinator, ZigBee router, ZigBee end device, Unknown.
+* Relation: The relationship between the neighbor and the current device:
+  * neighbor is the __parent__
+  * neighbor is a __child__
+  * neighbor is a __sibling__
+* route Flag: the neighbor device is a __destination address__ of the current device
+
+------------------------------------------------
+
+## Interference level
 
 Here is the __Interference level__ page of the plugin Web interface :
 
@@ -51,12 +67,9 @@ In the 10 first minutes after plugin start, a Network Energy Level scan will be 
 The Energy-Level measurement is a value from 0 to 255 given for all coordinator supported channels ( 11, 15, 19, 20, 25 and 26).
 It is given in an arbitrary units (didn't find any more information in the NXP ZigBee documentation).
 
-
-
 ### Graphical presentation
 
 You can get access to the Graphical presentation via the Web Admin Page in the Network Tab and Select Energy Level
-
 
 ![Export Device List raw (json)](../Images/InterferenceLevels2.png)
 
@@ -71,92 +84,44 @@ It is important to know that the Packet filtering implemented is using the LQI v
 | 39 - 40 | 4 |
 | 36 - 38 | 5 |
 
-Source: https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf
+Source: <https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf>
 
 A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded.
 
-### 1. Enable the report
+## Terminology
 
-### 2. Example of report
+1. Neighbor Table:
 
-The report will take a certain time based on the size of the network ( number of devices and especially number of routers). The output will be put in the DomoticZ log in the here after format.
-A raw format is also provided and is analyzed via the Web UI.
+    * The Neighbor Table maintains information about neighboring devices within the radio range of a Zigbee device.
+    * It typically includes details such as the network address, IEEE address (unique identifier), and signal quality of neighboring devices.
+    * The Neighbor Table helps in managing direct communication with nearby devices and is essential for forming and maintaining network connections.
+    * This table aids in tasks such as device discovery, link quality estimation, and neighbor management.
 
-** Graphical using the Web User Interface
-![Network Topology](../Images/Network_Topology.png)
+1. Routing Table:
 
-**(Zigate) LQI Results:**
+    * The Routing Table contains information about the network routes that a Zigbee device can use to reach other devices in the network.
+    * It includes entries for various destination devices along with the next-hop device and the quality of the route.
+    * The Routing Table is crucial for enabling multi-hop communication in Zigbee mesh networks. When a device wants to send a message to a destination that is not within its direct radio range, it uses the Routing Table to determine the best path through intermediate devices (routers) to reach the destination.
+    * Zigbee devices use routing tables to make informed decisions about relaying messages within the mesh network, ensuring efficient and reliable communication across the network.
 
-| Node | Child | Relationship | Type | Depth | LQY | Rx on Idle |
-| -----| ----- | ------------ | ---- | ------ | --- | ------------ |
-|  0000 | 27a3 |   Child |  End Device |  1 |  86 | Rx-Off |
-|  0000 | 9b5f |   Child |  End Device |  1 | 119 | Rx-Off |
-|  0000 | 0000 |  Parent | Coordinator |  0 | 254 |  Rx-On |
-|  0000 | 1d81 |    None |      Router | 15 | 254 |  Rx-On |
-|  0000 | 1df8 |    None |      Router | 15 | 255 |  Rx-On |
-|  a6e8 | 0000 |  Parent | Coordinator |  0 | 254 |  Rx-On |
-|  a6e8 | 1a19 |    None |      Router | 15 | 255 |  Rx-On |
-|  a6e8 | 1d81 |    None |      Router | 15 | 254 |  Rx-On |
-|  b218 | 0000 |  Parent | Coordinator |  0 | 254 |  Rx-On |
-|  b218 | 1a19 |    None |      Router | 15 | 253 |  Rx-On |
-|  b218 | 1d81 |    None |      Router | 15 | 255 |  Rx-On |
-|  1d81 | 0000 |    None | Coordinator |  0 | 254 |  Rx-On |
-|  1d81 | 1a19 |    None |      Router | 15 |  46 |  Rx-On |
-|  1d81 | 1df8 |    None |      Router | 15 | 254 |  Rx-On |
-|  1d81 | 27a3 |   Child |  End Device |  1 |  86 | Rx-Off |
-|  1d81 | 9b5f |   Child |  End Device |  1 | 119 | Rx-Off |
-|  1a19 | 0000 |    None | Coordinator |  0 | 249 |  Rx-On |
-|  1a19 | 1d81 |    None |      Router | 15 |  76 |  Rx-On |
-|  1a19 | 1df8 |    None |      Router | 15 | 254 |  Rx-On |
-|  2657 | 0000 |  Parent | Coordinator |  0 | 254 |  Rx-On |
-|  2657 | 1a19 |    None |      Router | 15 | 254 |  Rx-On |
-|  2657 | 1d81 |    None |      Router | 15 | 152 |  Rx-On |
-|  e86c | 0000 |  Parent | Coordinator |  0 | 254 |  Rx-On |
-|  e86c | 1d81 |    None |      Router | 15 | 252 |  Rx-On |
-|  e86c | 1df8 |    None |      Router | 15 | 254 |  Rx-On |
-|  550f | 0000 |    None | Coordinator |  0 | 254 |  Rx-On |
-|  550f | 1d81 |  Parent |      Router | 15 | 255 |  Rx-On |
-|  550f | 1df8 |    None |      Router | 15 | 254 |  Rx-On |
-|  9ae9 | e86c | Sibling |      Router |  2 |  63 |  Rx-On |
-|  9ae9 | b218 | Sibling |      Router |  2 | 156 |  Rx-On |
-|  ee05 | 0000 | Sibling | Coordinator |  0 | 216 |  Rx-On |
-|  ee05 | 1a19 | Sibling |      Router | 15 |  42 |  Rx-On |
-|  ee05 | 1d81 | Sibling |      Router | 15 |  89 |  Rx-On |
-|  0c1f | 0000 | Sibling | Coordinator |  0 | 255 |  Rx-On |
-|  0c1f | 1a19 | Sibling |      Router | 15 |  46 |  Rx-On |
-|  0c1f | 1d81 | Sibling |      Router | 15 |  52 |  Rx-On |
-|  8bf6 | 27a3 |   Child |  End Device |  1 |  86 | Rx-Off |
-|  8bf6 | 9b5f |   Child |  End Device |  1 | 119 | Rx-Off |
-|  1df8 | 0000 |    None | Coordinator |  0 | 249 |  Rx-On |
-|  1df8 | 1d81 |    None |      Router | 15 |  76 |  Rx-On |
-|  1df8 | 1df8 |    None |      Router | 15 | 254 |  Rx-On |
-|  1df8 | 1a19 | Sibling |      Router | 15 |  46 |  Rx-On |
-|  06f8 | 0000 |    None | Coordinator |  0 | 254 |  Rx-On |
-|  06f8 | 1df8 |    None |      Router | 15 | 252 |  Rx-On |
-|  06f8 | 2657 |    None |      Router | 15 |  58 |  Rx-On |
-|  27a3 | 27a3 |   Child |  End Device |  1 |  86 | Rx-Off |
-|  27a3 | 9b5f |   Child |  End Device |  1 | 119 | Rx-Off |
-|  9b5f | 0000 |    None | Coordinator |  0 | 249 |  Rx-On |
-|  9b5f | 1d81 |    None |      Router | 15 |  76 |  Rx-On |
-|  9b5f | 1df8 |    None |      Router | 15 | 254 |  Rx-On |
-|  2c7f | 0000 |    None | Coordinator |  0 | 254 |  Rx-On |
-|  2c7f | 1df8 |    None |      Router | 15 | 252 |  Rx-On |
-|  2c7f | 2657 |    None |      Router | 15 |  57 |  Rx-On |
+1. LQI stands for Link Quality Indicator.
 
-* Node: the starting point
-  * 0000 is the Zigate itself ( Controller)
-* LQI : is the estimated LQI (link quality) value for radio transmissions from the neighbouring node
-* Depth: is the tree depth of the neighbouring node (where the Coordinator is at depth zero)
-* Relationship: is a 3-bit value representing the neighbouring node’s relationship to the local node:
-  * 0: Neighbour is the parent
-  * 1: Neighbour is a child
-  * 2: Neighbour is a sibling (has same parent)
+    It is a metric used to estimate the quality of the wireless link between two neighboring devices. LQI values are reported in the Neighbor Table of Zigbee devices to provide insight into the reliability of communication with nearby devices. Here's a breakdown of LQI and its significance:
 
+    * Definition: LQI is a value typically represented as a numerical score, ranging from 0 to 255 in Zigbee networks. It quantifies the quality of the link between a device and its neighboring device. Higher LQI values generally indicate better link quality, while lower values suggest poorer link quality.
+
+    * Calculation: The LQI value is calculated based on various factors such as signal strength, signal-to-noise ratio, packet error rate, and other parameters related to the wireless communication channel. Zigbee devices continuously monitor these factors to assess the quality of their links with neighboring devices.
+
+    * Interpretation: LQI values provide an indication of how reliable the communication link is between two devices. A high LQI value implies a strong and reliable link, with minimal interference or packet loss. Conversely, a low LQI value indicates a weaker link, which may be prone to interference or packet loss, potentially affecting the reliability of communication.
+
+    * Usage: In the Neighbor Table, LQI values are reported alongside information about neighboring devices such as their network address, IEEE address, and other parameters. This information helps Zigbee devices make informed decisions regarding communication and neighbor management. Devices may use LQI values to prioritize communication with neighboring devices that offer better link quality, leading to more reliable data transmission.
+
+    * Dynamic Nature: LQI values are dynamic and can fluctuate over time due to changes in environmental conditions, signal interference, device mobility, and other factors. Zigbee devices continuously update LQI values in the Neighbor Table to reflect the current state of their communication links with neighboring devices.
 
 Sources:
-* https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)
-* https://en.wikipedia.org/wiki/Received_signal_strength_indication ( RSSI - Received Signal Strength Indication)
 
+* <https://www.nxp.com/docs/en/user-guide/JN-UG-3101.pdf> ( page 367 - Section 8.2.3.41 ZPS_tsAplZdpMgmtNwkUpdateNotify)
+* <https://en.wikipedia.org/wiki/Received_signal_strength_indication> ( RSSI - Received Signal Strength Indication)
 
 ------------------------------------------------
 Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
