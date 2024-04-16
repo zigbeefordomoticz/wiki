@@ -32,7 +32,7 @@
 * [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 * [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
-* [E13. Error : `AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'`](#E13-Error-AttributeError-module-lib-has-no-attribute-OpenSSL_add_all_algorithms-`
+* [#E13-Error-AttributeError-module-lib-has-no-attribute-OpenSSL_add_all_algorithms-`](e13-error--attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms)
 
 
 ------------
