@@ -32,6 +32,7 @@
 * [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
 * [E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
 * [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
+* [E13. Error : `AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'`](#E13-Error-AttributeError-module-lib-has-no-attribute-OpenSSL_add_all_algorithms-`
 
 
 ------------
@@ -384,4 +385,41 @@ or if you still using python2
 
 ``` bash
 pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
+```
+
+## E13. Error : `AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'`
+
+```log
+2024-04-16 18:31:06.519 Error: zig: (Zigate) failed to load 'plugin.py', Python Path used was '/home/ben/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python310.zip:/usr/lib/python3.10:/usr/lib/python3.10/lib-dynload:/usr/local/lib/python3.10/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.10/dist-packages'.
+2024-04-16 18:31:06.523 Error: zig: Traceback (most recent call last):
+2024-04-16 18:31:06.523 Error: zig: File "/home/ben/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 122, in <module>
+2024-04-16 18:31:06.523 Error: zig: from Modules.checkingUpdate import (checkFirmwareUpdate, checkPluginUpdate,
+2024-04-16 18:31:06.523 Error: zig: File "/home/ben/domoticz/plugins/Domoticz-Zigbee/Modules/checkingUpdate.py", line 14, in <module>
+2024-04-16 18:31:06.523 Error: zig: import dns.resolver
+2024-04-16 18:31:06.523 Error: zig: File "/usr/local/lib/python3.10/dist-packages/dns/resolver.py", line 39, in <module>
+2024-04-16 18:31:06.523 Error: zig: import dns.query
+2024-04-16 18:31:06.523 Error: zig: File "/usr/local/lib/python3.10/dist-packages/dns/query.py", line 48, in <module>
+2024-04-16 18:31:06.523 Error: zig: from requests_toolbelt.adapters.source import SourceAddressAdapter
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/requests_toolbelt/init.py", line 12, in <module>
+2024-04-16 18:31:06.523 Error: zig: from .adapters import SSLAdapter, SourceAddressAdapter
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/requests_toolbelt/adapters/init.py", line 12, in <module>
+2024-04-16 18:31:06.523 Error: zig: from .ssl import SSLAdapter
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/requests_toolbelt/adapters/ssl.py", line 16, in <module>
+2024-04-16 18:31:06.523 Error: zig: from .._compat import poolmanager
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/requests_toolbelt/_compat.py", line 56, in <module>
+2024-04-16 18:31:06.523 Error: zig: from requests.packages.urllib3.contrib.pyopenssl \
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/urllib3/contrib/pyopenssl.py", line 50, in <module>
+2024-04-16 18:31:06.523 Error: zig: import OpenSSL.SSL
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/OpenSSL/init.py", line 8, in <module>
+2024-04-16 18:31:06.523 Error: zig: from OpenSSL import crypto, SSL
+2024-04-16 18:31:06.523 Error: zig: File "/usr/lib/python3/dist-packages/OpenSSL/crypto.py", line 3279, in <module>
+2024-04-16 18:31:06.523 Error: zig: lib.OpenSSLadd_all_algorithms()
+2024-04-16 18:31:06.523 Error: zig: AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'
+2024-04-16 18:32:14.294 Error: zig hardware (35) thread seems to have ended unexpectedly
+```
+
+it seems that the root cause is the conflicts between pyOpenSSL and Cryptography [ref](https://aronhack.com/fix-python-attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms/)
+
+``` bash
+sudo python3 -m pip install cryptography==38.0.4 --upgrade`
 ```
