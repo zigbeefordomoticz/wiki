@@ -421,5 +421,5 @@ pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
 it seems that the root cause is the conflicts between pyOpenSSL and Cryptography [ref](https://aronhack.com/fix-python-attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms/)
 
 ``` bash
-sudo python3 -m pip install cryptography==38.0.4 --upgrade`
+sudo python3 -m pip install cryptography==38.0.4 --upgrade
 ```
