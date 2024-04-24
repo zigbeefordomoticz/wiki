@@ -423,3 +423,43 @@ it seems that the root cause is the conflicts between pyOpenSSL and Cryptography
 ``` bash
 sudo python3 -m pip install cryptography==38.0.4 --upgrade
 ```
+
+## E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK
+
+
+```log
+ 2024-04-24 12:29:41.998 Error: Zigbee: (Zigate) failed to load 'plugin.py', Python Path used was '/home/pi/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python39.zip:/usr/lib/python3.9:/usr/lib/python3.9/lib-dynload:/usr/local/lib/python3.9/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.9/dist-packages'.
+2024-04-24 12:29:42.005 Error: Zigbee: Traceback (most recent call last):
+2024-04-24 12:29:42.005 Error: Zigbee: File "/home/pi/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 131, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from Modules.checkingUpdate import (checkFirmwareUpdate, checkPluginUpdate,
+2024-04-24 12:29:42.005 Error: Zigbee: File "/home/pi/domoticz/plugins/Domoticz-Zigbee/Modules/checkingUpdate.py", line 14, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: import dns.resolver
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/local/lib/python3.9/dist-packages/dns/resolver.py", line 39, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: import dns.query
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/local/lib/python3.9/dist-packages/dns/query.py", line 48, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from requests_toolbelt.adapters.source import SourceAddressAdapter
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/requests_toolbelt/init.py", line 12, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from .adapters import SSLAdapter, SourceAddressAdapter
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/requests_toolbelt/adapters/init.py", line 12, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from .ssl import SSLAdapter
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/requests_toolbelt/adapters/ssl.py", line 16, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from .._compat import poolmanager
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/requests_toolbelt/_compat.py", line 56, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from requests.packages.urllib3.contrib.pyopenssl \
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/urllib3/contrib/pyopenssl.py", line 50, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: import OpenSSL.SSL
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/OpenSSL/init.py", line 8, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: from OpenSSL import crypto, SSL
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/OpenSSL/crypto.py", line 1556, in <module>
+2024-04-24 12:29:42.005 Error: Zigbee: class X509StoreFlags(object):
+2024-04-24 12:29:42.005 Error: Zigbee: File "/usr/lib/python3/dist-packages/OpenSSL/crypto.py", line 1577, in X509StoreFlags
+2024-04-24 12:29:42.005 Error: Zigbee: CB_ISSUER_CHECK = lib.X509V_FLAG_CB_ISSUER_CHECK
+2024-04-24 12:29:42.005 Error: Zigbee: AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK'
+```
+
+It could be related to mix between python module and installed library
+
+
+```bash
+sudo apt remove -y python3-openssl
+```
