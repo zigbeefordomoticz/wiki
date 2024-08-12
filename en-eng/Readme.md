@@ -12,13 +12,10 @@ We are contributing to this project on our spare time. If you do consider that i
 >
 > Come and join our team on [Keybase](https://keybase.io/team/zigateforum) or the [forum](https://www.domoticz.com/forum/viewforum.php?f=68) : the translation is done in an Excel file, there is nothing complicated ;-)
 
+## IMPORTANT
 
-## Upgrading to Release 7
-
-On __14/07/2023__, we released the __stable7__ version of the plugin. The necessary to follow the following procedure : [Plugin_Version-7](Release_7.1.md). If you are runner Buster, you have to upgrade to Bullseye first, and you must have python3.8 or above.
-The stable7 is also the minimum to run with DomoticZ 2023.2 otherwise you will have some API errors.
-
-
+* We recommend Domoticz 2024.2 or higher
+* The Device Widget Replace function is not supported as Domoticz doesn't notify the plugin of such changes
 
 ## Introduction
 
