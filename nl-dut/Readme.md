@@ -16,6 +16,13 @@ Dit open-source project wordt onderhouden door vrijwilligers, dit betekent dus d
 
 [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
+
+## IMPORTANT
+
+* We recommend Domoticz 2024.2 or higher
+* The Device Widget Replace function is not supported as Domoticz doesn't notify the plugin of such changes
+
+
 ## Introductie
 
 Het doel van de plugin is om een koppeling te maken tussen de Zigate (hardware) en de Domoticz GUI. Dit zorgt ervoor dat je alle Zigbee producten kan bedienen via Domoticz. De plugin is volledig geschreven in python en dient los geïnstalleerd te worden.
