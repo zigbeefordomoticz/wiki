@@ -70,7 +70,7 @@ python3.10 -m pip install -r requirements.txt --upgrade -t /home/domoticz/Domoti
 
 Update the script which automaticaly start Domoticz and add the following environment variable
 
-PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH
+export PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH
 
 * If you are using "domoticz.sh" you need to add `PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH` in the first part of the script to define where the python environment is located.
 
