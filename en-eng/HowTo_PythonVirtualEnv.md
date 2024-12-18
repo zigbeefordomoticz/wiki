@@ -75,3 +75,6 @@ export PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH
 * If you are using "domoticz.sh" you need to add `PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH` in the first part of the script to define where the python environment is located.
 
 * if you are using a systemd unit definition you need to add `PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH` to the environment prior launching the domoticz daemon
+
+
+As you are changing a startup script, you might also have to run `systemctl daemon-reload``
