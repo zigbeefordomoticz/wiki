@@ -10,13 +10,11 @@
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manually](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually)
 * [Q9. The plugin menu's link is not showed in DomoticZ](#q9-can-i-run-plugin-version-6-on-a-windows-system)
 
-
 ## Troubleshooting
 
 * [T1. My coordinator is not working](#t1-my-coordinator-is-not-working)
 * [T2. My object can not be paired](#t2-my-object-can-not-be-paired)
 * [T3. My object doesn't work as expected](#t3-my-object-doesnt-work-as-expected)
-
 
 ## Errors
 
@@ -34,10 +32,10 @@
 * [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
 * [E13-Error-AttributeError-module-lib-has-no-attribute-OpenSSL_add_all_algorithms-`](#e13-error--attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms)
 * [E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK](https://github.com/zigbeefordomoticz/wiki/blob/master/en-eng/Problem_FAQ.md#e14-attributeerror-module-lib-has-no-attribute-x509_v_flag_cb_issuer_check)
-
-
+* [E15. error: externally-managed-environment](https://github.com/zigbeefordomoticz/wiki/blob/master/en-eng/Problem_FAQ.md#e15-error-externally-managed-environment)
 ------------
 ------------
+
 ## Q1. Where can I get support ?
 
 The first source of support is the Wiki :
@@ -53,36 +51,36 @@ You can also get support and ask questions :
 * The [Keybase English channel](https://keybase.io/team/zigateforum)
 * The [Keybase French channel](https://keybase.io/team/zigate)
 
-
 ------------
+
 ## Q2. Where are the logs ?
 
 Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
 
 The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you have installed the plugin  before April 2022.
 
-
 ------------
+
 ## Q3. Can I debug myself ?
 
 Please refer to [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
 
-
 ------------
+
 ## Q4. Where can I find the list of supported Coordinators and Devices ?
 
 Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
 
-
 ------------
+
 ## Q5. Where can I find the coordinator firmwares ?
 
 * For __Texas Instrument__, we recommend to use the Z-Stack firmware from @Koenkk available [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator). We do not recommend to use _develop_ branch and rely on the _master_.
 * For __ZiGate__, the firmwares are available [here for Zigate V1](https://github.com/fairecasoimeme/ZiGate/releases) or [here for ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases)
 * For __EZNP (Silicon Labs)__, we recommend to follow the [zigpy recommendations](https://github.com/zigpy/zigpy/wiki/Coordinator-Firmware-Updates)
 
-
 ------------
+
 ## Q6. Can I use several coordinators in the same DomoticZ ?
 
 We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
@@ -90,8 +88,8 @@ We have currently a limitation of the number of instances using Zigpy layer, whi
 If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
 If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want. For more information you can see the progress of that issue on [#1117](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues/1117)
 
-
 ------------
+
 ## Q7. Can I fixe the USB Port number ?
 
 Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number which cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
@@ -99,8 +97,8 @@ Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can c
 * [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
 * [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
 
-
 ------------
+
 ## Q8. My device is not updated in DomoticZ when interacting via a remote control or manually
 
 For example : If you power off an Ikea bulb (with the physical switch) and then switch it on again, the status of the bulb is not updated in DomoticZ. And having the same issue with a remote controller which also doesn't update it's current state to DomoticZ.
@@ -113,8 +111,8 @@ If you encounter problems like the above example, it is most likely the automati
 1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
 The rebinding process will start itself, the status problems should now be fixed.
 
-
 ------------
+
 ## Q9. The plugin menu's link is not showed in DomoticZ
 
 Check that the Custom Tab is activated :
@@ -122,8 +120,8 @@ Check that the Custom Tab is activated :
 * Before DomoticZ 2022.2, go to Configuration / Parameters / System tab and check that the Custom Tab is activated at the bottom.
 * From DomoticZ 2023.1, go to Configuration / Users and check that the Custom Tab is activated for each user needed.
 
-
 ------------
+
 ## T1. My coordinator is not working
 
 I can see in the [log file](#q2.-where-are-the-logs) some messages like that
@@ -150,22 +148,22 @@ This indicate a miss communication between the plugin and the coordinator. You n
 
 If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
 
-
 ------------
+
 ## T2. My object can not be paired
 
 * If the coordinator is plugged directly into a USB port on the server, try deporting it using a USB extension cord (don't use an USB HUB). This will keep it away from interference, especially from SSD disks, wifi chips, etc...
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
-
 ------------
+
 ## T3. My object doesn't work as expected
 
 Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
 
-
 ------------
+
 ## E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`
 
 Time to time I see the following error message. Is that a big issue ? How can I get rid of it ?
@@ -177,8 +175,8 @@ Error: ZigBee: No transport, write directive to 'XXX.XXX.XXX.XXX:8080' ignored.
 This error is coming from DomoticZ and is related to the fact that you had the WebUI page opened and which timeout, at the time you tried to refresh this page, Domoticz detected that they were no transport/communication anymore.
 You shouldn't worry much of this message.
 
-
 ------------
+
 ## E2. Log error : `Decode8000`
 
 if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
@@ -195,8 +193,8 @@ Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 52
 
 cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
 
-
 ------------
+
 ## E3. Log error : `Error: <plugin's name> Communication error when transmitting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`
 
 Here after is an exemple of errors found in the log file.
@@ -208,8 +206,8 @@ Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestE
 
 This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem with it -
 
-
 ------------
+
 ## E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`
 
 ```log
@@ -218,8 +216,8 @@ Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter.
 
 This error appears when stopping the plugin. Ignore it.
 
-
 ------------
+
 ## E5. Missing module error
 
 ### Make sure that you have correctly installed the plugin
@@ -233,9 +231,7 @@ ls -l external/dnspython/
 
 if the response is
 
-```
-total 0
-```
+`total 0`
 
 you need to run
 
@@ -255,14 +251,14 @@ ATTENTION:
 
 * On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first time. If you have run once already without Administrator windows, you must start removing all already installed modules.
 
-
 ------------
+
 ## E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`
 
 This error appears when the DomoticZ parameter _API base url_ is not correctly filled. More infos on [step 2 Plugin settings](Plugin_Settings.md).
 
-
 ------------
+
 ## E7. Error when updating python module: `Building wheel for cryptography (PEP 517) ... error`
 
 When doing the command `pip3 install -r requirements.txt` or `python3 -m pip install -r requirements.txt --upgrade` you get this error.
@@ -282,18 +278,20 @@ ERROR: Could not build wheels for cryptography which use PEP 517 and cannot be i
 1. make sure your /tmp is large enough
 1. make sure you have enough swap, if requires , add some filesystem swap
 
-
 ------------
+
 ## E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`
 
 This error may appear when you change branch from develop to stable6 : the dnspython module level is not the same.
 
 * Do the following command from the plugin home directory
+
 ``` bash
 sudo python3 -m pip install -r requirements.txt --upgrade
 ```
 
 ------------
+
 ## E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process`
 
 ``` log
@@ -322,27 +320,27 @@ Error: Zigpy-Elelabs: ImportError: PyO3 modules may only be initialized once per
 ```
 
 This is related to the fact that you are using a recent cryptography module.
-you can solve this issue by downgrading the cryptography module 
+you can solve this issue by downgrading the cryptography module
 
 ``` bash
 sudo python3 -m pip install cryptography==40.0.2 --upgrade`
 ```
 
-
 ------------
+
 ## E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`
 
 This error comes with the API modification of DomoticZ 2023.2
 
 You need to update to the plugin version 7 following the [instructions](../Release_7.1.md).
 
-
 ------------
-## E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...` 
+
+## E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`
 
 The full error is :
 
-```
+```log
 × This environment is externally managed
 ╰─> To install Python packages system-wide, try apt install python3-xyz, where xyz is the package you are trying to install.
 
@@ -350,21 +348,21 @@ If you wish to install a non-Debian-packaged Python package, create a virtual en
 Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make sure you have python3-full installed.
 ```
 
-
 Operation under Debian 12 Bookworm needs to modify the installation command line by default by adding __--break-system-packages__ at the end :
 
 ``` bash
 sudo pip3 install -r requirements.txt --break-system-packages
 ```
+
 __Reminder :__ This command line is only valid on Debian 12 Bookworm systems.
 
-
 ------------
+
 ## E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`
 
 This error appears when you have multiple plugin's sessions and there is not the good charset-normalizer dependency version. It should be 2.0.12.
 
-Check you version with the commande : 
+Check you version with the commande :
 
 ``` bash
 pip show charset-normalizer
@@ -427,7 +425,6 @@ sudo python3 -m pip install cryptography==38.0.4 --upgrade
 
 ## E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK
 
-
 ```log
  2024-04-24 12:29:41.998 Error: Zigbee: (Zigate) failed to load 'plugin.py', Python Path used was '/home/pi/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python39.zip:/usr/lib/python3.9:/usr/lib/python3.9/lib-dynload:/usr/local/lib/python3.9/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.9/dist-packages'.
 2024-04-24 12:29:42.005 Error: Zigbee: Traceback (most recent call last):
@@ -460,7 +457,29 @@ sudo python3 -m pip install cryptography==38.0.4 --upgrade
 
 It could be related to mix between python module and installed library
 
-
 ```bash
 sudo apt remove -y python3-openssl
 ```
+
+## E15. error: externally-managed-environment
+
+```log
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+
+    For more information visit http://rptl.io/venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+```
+
+The best is to use the Python virtual environment as described in [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md)

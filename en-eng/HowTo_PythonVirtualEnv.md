@@ -68,13 +68,12 @@ python3.10 -m pip install -r requirements.txt --upgrade -t /home/domoticz/Domoti
 
 ### Makes Domoticz started with the Python Environment
 
-Update the script which automaticaly start Domoticz and add the following environment variable
+Update the script which automaticaly start Domoticz and add the following environment variable. For more information you can have a look to [Domoticz Linux wiki page](https://wiki.domoticz.com/Linux) and espacially in the section _Starting Domoticz automatically when the system boots_
 
-export PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH
+If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file  and an extra line such as :
 
-* If you are using "domoticz.sh" you need to add `PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH` in the first part of the script to define where the python environment is located.
+```export PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH```
 
-* if you are using a systemd unit definition you need to add `PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH` to the environment prior launching the domoticz daemon
-
+If your are in __Option 2__ Systemd Alternative (preferred), you can simply add the __EnvironmentFile__ statement as described in the wiki and set PYTHONPATH accordingly in the corresponding file.
 
 As you are changing a startup script, you might also have to run `systemctl daemon-reload``
