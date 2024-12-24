@@ -2,7 +2,7 @@
 
 ## Why ?
 
-It looks like recent linux distribution will prevent using `sudo python3 -m pip` installation. This is mainly driven to prevent any risk of breaking the system by overwriting libraries that where par of tools writen in Python whith the system.
+It looks like recent linux distribution will prevent using `sudo python3 -m pip` installation. This is mainly driven to prevent any risk of breaking the system by overwriting libraries that where part of tools writen in Python whith the system.
 
 To proper install the python libraries and applications required for the Z4D plugin, we need to create a virtual environment dedicated to __Domoticz__ and store all python modules/libraries required for the various python plugins.
 
@@ -66,11 +66,11 @@ or if you have to use a specific version.
 python3.10 -m pip install -r requirements.txt --upgrade -t /home/domoticz/Domoticz_Python_Environment
 ```
 
-### Makes Domoticz started with the Python Environment
+### Make Domoticz start with the Python Environment
 
-Update the script which automaticaly start Domoticz and add the following environment variable. For more information you can have a look to [Domoticz Linux wiki page](https://wiki.domoticz.com/Linux) and espacially in the section _Starting Domoticz automatically when the system boots_
+Update the script which automaticaly start Domoticz and add the following environment variable. For more information you can have a look to [Domoticz Linux wiki page](https://wiki.domoticz.com/Linux) and especially in the section _Starting Domoticz automatically when the system boots_
 
-If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file  and an extra line such as :
+If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file  and add an extra line such as :
 
 ```export PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH```
 
