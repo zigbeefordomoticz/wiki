@@ -38,15 +38,16 @@ Recherchez le message ci-dessous dans le journal Domoticz.
 
 Conclusion : Domoticz exécute python3.10 comme interpréteur Python pour tous les plugins Python.
 
-Vérifiez quelle est la version par défaut de l'interpréteur Python3
+Vérifiez quelle est la version par défaut de l'interpréteur Python3:
 
 `python3 --version`
 
-Si vous obtenez : `Python 3.10.11` en réponse à la commande, alors l'interpréteur python3 par défaut correspondant à celui de Domoticz. Si vous obtenez une réponse différente, comme `Python 3.12.7`, cela signifie que Domoticz exécute un interpréteur python inférieur à celui par défaut sur votre système (ce qui n'est pas un problème). Vous devez donc installer les bibliothèques pour la bonne version d'interpréteur, dans ce cas 3.10 et non 3.12, dans un environnement Python séparé pour Domoticz. Pour ce faire, n'utilisez pas python3 mais python3.10 à la place pour spécifier la version que vous devez utiliser.
+Si vous obtenez : `Python 3.10.11` en réponse à la commande, alors l'interpréteur python3 par défaut correspond à celui de Domoticz.
+Si vous obtenez une réponse différente, comme `Python 3.12.7`, cela signifie que Domoticz exécute un interpréteur python inférieur à celui par défaut sur votre système (ce qui n'est pas un problème). Vous devez donc installer les bibliothèques pour la bonne version d'interpréteur, dans ce cas 3.10 et non 3.12, dans un environnement Python séparé pour Domoticz. Pour ce faire, n'utilisez pas python3 mais python3.10 à la place pour spécifier la version que vous devez utiliser.
 
 ### Création de l'environnement Python
 
-Nous suggérons de créer l'environnement Python Domoticz dans un répertoire personnel de Domoticz tel que __/home/domoticz__ :
+Nous suggérons de créer l'environnement Python Domoticz dans un répertoire personnel de Domoticz tel que __/home/domoticz__:
 
 ```bash
 cd /home/domoticz
@@ -77,4 +78,4 @@ Si vous utilisez l' __Option 1__ , éditez le script  `/etc/init.d/domoticz.sh` 
 
 Si vous utilisez l' __Option 2__ , éditez le fichier domoticz.service et ajoutez le paramètre __EnvironmentFile__  avec le nom d'un fichier de configuration tel que décrit dans le wiki. Ajouter votre définition de PYTHONPATH dans ce fichier de configuration.
 
-Suite aux modifications de domoticz.service le script vous devrez peut-être exécuter la commande `systemctl daemon-reload`.
+Suite aux modifications de domoticz.service vous devrez peut-être exécuter la commande `systemctl daemon-reload`.
