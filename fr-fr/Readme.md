@@ -30,8 +30,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * Étape 2 [Paramétrage du Plugin](Plugin_Parametrage.md)
 * Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
 * Étape 4 [Intégration du Plugin](Plugin_Integration.md)
-
-* [Installer un environnement virtuel Python](Tuto_PythonVirtualEnv.md)
+* Si besoin [Installer un environnement virtuel Python](Tuto_PythonVirtualEnv.md)
 
 ## Mises à jour du Plugin
 
