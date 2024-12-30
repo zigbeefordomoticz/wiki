@@ -31,6 +31,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
 * Étape 4 [Intégration du Plugin](Plugin_Integration.md)
 
+* [Installer un environnement virtuel Python](Tuto_PythonVirtualEnv.md)
 
 ## Mises à jour du Plugin
 
@@ -63,7 +64,6 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Tutoriels
 
-* [Installer un environnement virtuel Python](Tuto_PythonVirtualEnv.md)
 * [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
 * [Ajouter un nouvel objet](Tuto_Appairage-objet.md)
 * [Supprimer un objet appairé](Tuto_Supprimer-un-objet.md)
