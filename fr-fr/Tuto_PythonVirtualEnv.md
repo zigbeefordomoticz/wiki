@@ -55,7 +55,7 @@ mkdir Domoticz_Python_Environment
 ```
 
 ```bash
-cd /home/domoticz/plugins/Domoticz-Zigbee
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
 ````
 
 ```bash
