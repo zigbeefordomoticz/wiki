@@ -9,7 +9,7 @@
 * [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manually](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually)
 * [Q9. The plugin menu's link is not showed in DomoticZ](#q9-can-i-run-plugin-version-6-on-a-windows-system)
-* [10. I'm not able to upgrade above 7.1.018](#q10-stuck-in-7-1-018-)
+* [10. I'm not able to upgrade above 7.1.018](#q10-stuck-in-71018)
 
 ## Troubleshooting
 
