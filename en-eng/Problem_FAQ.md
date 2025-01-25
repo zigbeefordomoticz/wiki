@@ -136,7 +136,9 @@ Despite I'm using the WebUI Plugin upgrade and there is no error, after the plug
 
   and finaly go back to the plugin WebUI, and do a plugin upgrade
 
-  
+ 
+------------
+ 
 
 ## T1. My coordinator is not working
 
