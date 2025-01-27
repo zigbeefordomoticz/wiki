@@ -14,7 +14,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 ## IMPORTANT
 
 * Domoticz 2024.2 ou supérieur est recommendé
-* La fonctionalité de "remplacement" de Domoticz Widgets n'est pas supporté. 
+* La fonctionalité de "remplacement" de Domoticz Widgets n'est pas supporté.
 
 ## Introduction
 
@@ -30,7 +30,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 * Étape 2 [Paramétrage du Plugin](Plugin_Parametrage.md)
 * Étape 3 [Configuration du Plugin](Plugin_Configuration.md)
 * Étape 4 [Intégration du Plugin](Plugin_Integration.md)
-
+* Si besoin [Installer un environnement virtuel Python](Tuto_PythonVirtualEnv.md)
 
 ## Mises à jour du Plugin
 
@@ -63,6 +63,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 ## Tutoriels
 
+* [Installer un environnement virtuel Python](Tuto_PythonVirtualEnv.md)
 * [Construire un réseau ZigBee](Tuto_Construire-un-reseau-ZigBee.md)
 * [Ajouter un nouvel objet](Tuto_Appairage-objet.md)
 * [Supprimer un objet appairé](Tuto_Supprimer-un-objet.md)
@@ -136,7 +137,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 * [Le wiki ZiGate.fr](https://zigate.fr/documentation)
 * [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
-* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate) 
+* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
 * [A Guide to Wireless range and Repeater](https://support.smartthings.com/hc/en-us/articles/209963206-A-guide-to-wireless-range-and-repeaters)
 * [Pairing devices Aqara/Xiaomi](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
 * [Coexistence Xiaomi with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
