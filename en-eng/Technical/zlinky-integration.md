@@ -20,7 +20,7 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 | Historique Tri EJP |              |            |
 | Historique Tri Tempo | WIP        | @jp_keros  |
 | Standard Mono base | Ok           | @pipiche (Elelabs shield)  |
-| Standard Mono HCHP |              |            |
+| Standard Mono HCHP | Ok           | @pipiche (zzh-p)           |
 | Standard Mono EJP |               |            |
 | Standard Mono Tempo | Ok          | @erick31           |
 | Standard Tri base |               |            |
