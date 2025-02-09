@@ -22,7 +22,7 @@ Purpose is to describe the integration of the ZLinky_TIC module in the plugin an
 | Standard Mono base | Ok           | @pipiche (Elelabs shield)  |
 | Standard Mono HCHP |              |            |
 | Standard Mono EJP |               |            |
-| Standard Mono Tempo |             | @erick31           |
+| Standard Mono Tempo | Ok          | @erick31           |
 | Standard Tri base |               |            |
 | Standard Tri HCHP |               |            |
 | Standard Tri EJP |                |            |
