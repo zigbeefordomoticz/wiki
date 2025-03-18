@@ -1,5 +1,12 @@
 
+# Device Specific Parameters
 
+## Overview
+
+Those parameters can be added via the WebUI and can change the behaviour of the device.
+They are found on the "Param": {} section
+
+## Table
 
 | Parameter                        | File where it is found                        | JSON Usage File(s)                     |
 |-----------------------------------|-----------------------------------------------|----------------------------------------|

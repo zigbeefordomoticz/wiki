@@ -1,3 +1,12 @@
+# Device Configuration Attributes
+
+## Overview
+
+Those attributes, are added in the Device Configuration file, when we are Certifying the device with the plugin.
+They can define a particular behaviour.
+
+
+## Table
 
 
 | Parameter                        | File where it is found                        | JSON Usage File(s)                     |
