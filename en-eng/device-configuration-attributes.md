@@ -19,8 +19,6 @@ They can define a particular behaviour.
 | CreateWidgetDomoticz              | ./Modules/pairingProcess.py | WG001-Z01, TRADFRI Signal Repeater, 122-120-12-2, MAI-ZTS, Telecommande-Profalux, DONGLE-E_R, TS0207-extender |                      |
 | DO_NOT_READ_ATTRIBUTE_RSP_CLUSTER_0006 | ./Z4D_decoders/z4d_decoder_Read_Attribute_Rsp.py | TS0505A-HueSaturation |                      |
 | DisableLevelControlPolling        | ./Modules/readAttributes.py | TS110E-SMD-02Z |                      |
-| DisableLevelControlPolling        | ./Modules/readAttributes.py | TS110E-SMD-02Z |                      |
-| DisableOnOffPolling               | ./Modules/readAttributes.py | TS110E-SMD-02Z |                      |
 | DisableOnOffPolling               | ./Modules/readAttributes.py | TS110E-SMD-02Z |                      |
 | DisableTamper                     | ./Z4D_decoders/z4d_decoder_IAS.py | PIR313-E, PIR313, SNZB-04P |                      |
 | DoNotOverWriteOptions             | ./Modules/domoMaj.py | TS0601-PC321-Z-TY |                      |
@@ -28,51 +26,33 @@ They can define a particular behaviour.
 | FORCE_COLOR_COMMAND               | ./Modules/actuators.py | TS0505A-HueSaturation |                      |
 | ForceSwitchOnWithLevel            | ./Modules/command.py | GL-SD-003P |                      |
 | ForceSwitchOnformoveToLevel       | ./Modules/command.py | TS110E-SMD-02Z |                      |
-| HUE_RWL                           | ./Modules/philips.py | RWL021, RWL022 |                      |
-| HUE_RWL                           | ./Modules/philips.py | RWL021, RWL022 |                      |
-| HUE_RWL                           | ./Modules/readClusters.py | RWL021, RWL022 |                      |
-| HUE_RWL                           | ./Z4D_decoders/z4d_decoder_Remotes.py | RWL021, RWL022 |                      |
 | HUE_RWL                           | ./Z4D_decoders/z4d_decoder_Remotes.py | RWL021, RWL022 |                      |
 | HeimanDoorBellButton              | ./Z4D_decoders/z4d_decoder_IAS.py | DoorBell-EF-3.0 |                      |
-| IASAlarmMerge                     | ./Modules/readClusters.py | aeotec-button, aeotec-water, TS0215A-sos |                      |
 | IASAlarmMerge                     | ./Z4D_decoders/z4d_decoder_IAS.py | aeotec-button, aeotec-water, TS0215A-sos |                      |
 | IgnoreWindowsCoverringValue50     | ./Modules/zclClusterHelpers.py | TS0302 |                      |
 | LightingColorControl              | ./Modules/pairingProcess.py | TS0505A |                      |
-| MainPoweredDevice                 | ./Modules/tools.py | lumi.light.aqcn02, lumi.switch.l0agl1, TS0011, TS0011-manufs |                      |
 | MainPoweredDevice                 | ./Modules/tools.py | lumi.light.aqcn02, lumi.switch.l0agl1, TS0011, TS0011-manufs |                      |
 | MaxBatteryVoltage                 | ./Modules/batterieManagement.py | EH-ZB-BMS, EH-ZB-RTS, EH-ZB-VACT |                      |
 | MeteringUnit                      | ./Modules/zclClusterHelpers.py | ZiPulses, TS000F-Power, TS011F-2gang-plug, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din |                      |
 | MinBatteryVoltage                 | ./Modules/batterieManagement.py | EH-ZB-BMS, EH-ZB-RTS, EH-ZB-VACT |                      |
 | MoveWithOnOff                     | ./Modules/command.py | GL-SD-003P |                      |
-| MoveWithOnOff                     | ./Modules/command.py | GL-SD-003P |                      |
-| MoveWithOnOff                     | ./Modules/command.py | GL-SD-003P |                      |
-| MoveWithOnOff                     | ./Modules/command.py | GL-SD-003P |                      |
 | NoColorCapabilitie                | ./Modules/actuators.py | Not Used |                      |
 | PollingEnabled                    | ./Modules/heartbeat.py | MWA1-TIC-historique-mono-base, MWA1-TIC-historique-mono-ejp, MWA1-TIC-historique-mono-hchp, MWA1-TIC-historique-mono-tempo, MWA1-TIC-standard-mono-base, MWA1-TIC, V3-BTZB, RV001, eT093WRG, eT093WRO, eTRV0100, SPZB0001, TICMeter-historique-mono-base, TICMeter-historique-mono-tempo, TICMeter, TICMeter-standard-mono-base, TICMeter-historique-tri-hchp, TICMeter-historique-tri-tempo, TICMeter-historique-mono-hchp, TICMeter-historique-tri-base, ZLinky_TIC-historique-mono, ZLinky_TIC-historique-tri, ZLinky_TIC-standard-mono-prod, ZLinky_TIC-standard-tri-prod, ZLinky_TIC-standard-tri, ZLinky_TIC, ZLinky_TIC-standard-mono, TRV-4-1-00, EH-ZB-RTS, EH-ZB-VACT, TS0201-_TZ3000_qaaysllp, TS0601-BAB-1413Pro-E, TS0601-BLE-YL01, TS0601-eTRV5, TS0601-eTRV6, TS0601-eTRV7, TS0601-ME168 |                      |
-| PowerMeteringDivisor              | ./Modules/lumi.py | SOCKETOUTLET2, SOCKETOUTLET1 |                      |
 | PowerMeteringDivisor              | ./Modules/zclClusterHelpers.py | SOCKETOUTLET2, SOCKETOUTLET1 |                      |
-| PowerMeteringMultiplier           | ./Modules/lumi.py | Not Used |                      |
 | PowerMeteringMultiplier           | ./Modules/zclClusterHelpers.py | Not Used |                      |
 | PowerOnOffStateAttribute8002      | ./Modules/onoff_settings.py | TS0001, TS0002, TS0002_relay_switch, TS0003_relay_switch, TS0004-_TZ3000_excgg5kb, TS0004-_TZ3000_u3oupgdy, TS0004-relay_switch, TS0004, TS000F-Power, TS000F-TYZGTH4CH-D1RF, TS000F, TS0012, TS0013, TS0115, TS011F-2Gang-switches, TS011F-multiprise, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din, TS0012-manufs, TS0013-manufs, TS0011-manufs |                      |
-| PowerOnOffStateAttribute8002      | ./Modules/basicOutputs.py | TS0001, TS0002, TS0002_relay_switch, TS0003_relay_switch, TS0004-_TZ3000_excgg5kb, TS0004-_TZ3000_u3oupgdy, TS0004-relay_switch, TS0004, TS000F-Power, TS000F-TYZGTH4CH-D1RF, TS000F, TS0012, TS0013, TS0115, TS011F-2Gang-switches, TS011F-multiprise, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din, TS0012-manufs, TS0013-manufs, TS0011-manufs |                      |
 | READ_ATTRIBUTE_AFTER_COMMAND      | ./Modules/command.py | TS0601-BAB-1413Pro-E, TS0601-ME168 |                      |
 | RELY_ON_EVAL_EXP                  | ./Modules/tuyaTS0601.py | TS0601-PC311-Z-TY, TS0601-PC321-Z-TY |                      |
-| REMOTE_SCENE_MAPPING              | ./Z4D_decoders/z4d_decoder_Remotes.py | SNZB-01P |                      |
-| REMOTE_SCENE_MAPPING              | ./Z4D_decoders/z4d_decoder_Remotes.py | SNZB-01P |                      |
 | REMOTE_SCENE_MAPPING              | ./Z4D_decoders/z4d_decoder_Remotes.py | SNZB-01P |                      |
 | RMSCurrentDivisor                 | ./Modules/lumi.py | SPLZB-131, SP 120, lumi.plug.maeu01, SOCKETOUTLET2, SOCKETOUTLET1, TS000F-Power, TS011F-2gang-plug, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din |                      |
 | RMSCurrentMultiplier              | ./Modules/lumi.py | Not Used |                      |
 | RMSVoltageDivisor                 | ./Modules/lumi.py | SPLZB-131, SPLZB-132, lumi.plug.maeu01, outletv4 |                      |
 | RMSVoltageMultiplier              | ./Modules/lumi.py | Not Used |                      |
 | StandardZigbeeCommand             | ./Modules/command.py | TS000F-TYZGTH4CH-D1RF |                      |
-| StandardZigbeeCommand             | ./Modules/command.py | TS000F-TYZGTH4CH-D1RF |                      |
-| SummationMeteringDivisor          | ./Modules/lumi.py | lumi.plug.maeu01, ZiPulses, TS000F-Power, TS011F-2gang-plug, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din |                      |
 | SummationMeteringDivisor          | ./Modules/zclClusterHelpers.py | lumi.plug.maeu01, ZiPulses, TS000F-Power, TS011F-2gang-plug, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din |                      |
-| SummationMeteringMultiplier       | ./Modules/lumi.py | lumi.plug.maeu01, ZiPulses, TS000F-Power, TS011F-2gang-plug, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din |                      |
 | SummationMeteringMultiplier       | ./Modules/zclClusterHelpers.py | lumi.plug.maeu01, ZiPulses, TS000F-Power, TS011F-2gang-plug, TS011F-plug-Elivco, TS011F-plug, TS011F-with_threshold, TS0121, TS011F-din |                      |
 | TUYA_CMD_FE                       | ./Modules/tuya.py | Not Used |                      |
 | TUYA_DATA_REQUEST                 | ./Modules/tuya.py | TS0601-BAB-1413Pro-E, TS0601-BLE-YL01, TS0601-ME168 |                      |
-| TUYA_DATA_REQUEST_POLLING         | ./Modules/tuya.py | TS0601-BAB-1413Pro-E, TS0601-BLE-YL01, TS0601-ME168 |                      |
 | TUYA_DATA_REQUEST_POLLING         | ./Modules/pairingProcess.py | TS0601-BAB-1413Pro-E, TS0601-BLE-YL01, TS0601-ME168 |                      |
 | TUYA_DATA_REQUEST_POLLING_ADDITIONAL | ./Modules/tuya.py | Not Used |                      |
 | TUYA_DATA_REQUEST_POLLING_CONSECUTIVE_ELAPSE | ./Modules/tuya.py | Not Used |                      |
@@ -88,6 +68,5 @@ They can define a particular behaviour.
 | WindowsCoverringInverted          | ./Modules/zclClusterHelpers.py | 1GANGSHUTTER1, TS0302 |                      |
 | XIAOMI_METER_EP                   | ./Modules/lumi.py | lumi.plug.maeu01 |                      |
 | XIAOMI_POWER_EP                   | ./Modules/readClusters.py | lumi.plug.maeu01 |                      |
-| attribute                         | ./Modules/tools.py | Not Used |                      |
 | custom_divisor_key                | ./Modules/zclClusterHelpers.py | Not Used |                      |
 | enableZclDuplicatecheck           | ./Zigbee/zclDecoders.py | Not Used |                      |
