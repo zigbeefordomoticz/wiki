@@ -27,3 +27,19 @@ Depending on your Linky setup, some will work, and some others won't.
 | Power_f6                | Puissance soutirée  L3            |     No           |     Yes        |   No       |  Yes      |
 
 For now, in Tri-Phase mode, Power_f4 is not updated, as there is a miss-match in the reporting an Power L1 (SINSTS1) seems to be reported as General Power (SINSTS)
+
+## TIC attributes not available via Widget
+
+All Labels are also stored in the plugin database.  For now, you can get them from teh JSNON API of the plugin `http://<your-domoticz-ip-address>:9440/rest-z4d/1/gamma-troniques-ticmeter` and key parameters are also highlited
+
+```json
+    "Nwkid": "19fd",
+    "ZDeviceName": "TICMeter",
+    "Identifiant": "3________2",
+    "TICMode": "standard",
+    "Mode Electrique": "Monophasé",
+    "Type de contrat": "HCHP 22h-6h",
+    "Période tarifaire en cours": "HEURES PLEINES",
+    "Puissance Max contrat": 9,
+    "UpTime": "0d 08:27:59",
+```
