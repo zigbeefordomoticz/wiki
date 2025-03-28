@@ -21,11 +21,11 @@ Depending on your Linky setup, some will work, and some others won't.
 | LinkyNextDayColor_01    | Next Day Color                    |    Tempo         |     Tempo      |            |           |
 | P1Meter_HPHC_f2         | Index HC/HP Bleu                  |    Tempo         |     Tempo      |            |           |
 | P1Meter_HPHC_f3         | Index HC/HP Rouge                 |    Tempo         |     Tempo      |            |           |
-| Voltage_f4              | Tension                           |      No          |     Yes        |    Yes     |   Yes     |
+| Voltage_f4              | Tension Mono ou L1                |      No          |     Yes        |    Yes     |   Yes     |
 | Power_f4                | Puissance soutirée  L1            |     No           |     Yes        |   No       |  Yes      |
-| Voltage_f5              | Tension                           |      No          |     Yes        |            |           |
+| Voltage_f5              | Tension L2                        |      No          |     Yes        |            |           |
 | Power_f5                | Puissance soutirée  L2            |     No           |     Yes        |   No       |  Yes      |
-| Voltage_f6              | Tension                           |      No          |     Yes        |            |           |
+| Voltage_f6              | Tension L3                        |      No          |     Yes        |            |           |
 | Power_f6                | Puissance soutirée  L3            |     No           |     Yes        |   No       |  Yes      |
 
 For now, in Tri-Phase mode, Power_f4 is not updated, as there is a miss-match in the reporting an Power L1 (SINSTS1) seems to be reported as General Power (SINSTS)
