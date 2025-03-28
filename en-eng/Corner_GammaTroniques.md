@@ -14,10 +14,10 @@ Depending on your Linky setup, some will work, and some others won't.
 | Widget Name             | Information reported              | Linky Historique | Linky Standard | Mono-Phase | Tri-phase |
 | ----------------------- | --------------------------------- | ---------------- | -------------- | ---------- | --------- |
 | Ampere_01               | Intensité                         |      Yes         |     Yes        |            |           |
-| Ampere3_01              | Intensité Phase 1, 2,3            |      Yes         |     Yes        |            |   Yes     |
+| Ampere3_01              | Intensité Phase 1, 2,3            |      Yes         |     Yes        |   Yes      |   Yes     |
 | Voltage_01              | Tension                           |      No          |     Yes        |            |           |
-| Meter_01                | Index Total + Puissance apparente |      Yes         |     Yes        |            |           |
 | Power_01                | Puissance apparente               |      Yes         |     Yes        |            |           |
+| Meter_01                | Index Total + Puissance apparente |      Yes         |     Yes        |            |           |
 | P1Meter_HPHC_01         | Index HC/HP + Puissance apparente |      Yes         |     Yes        |            |           |
 | LinkyCurrentTarif_01    | Current Tarif                     |      Yes         |     Yes        |            |           |
 | LinkyCurrentDayColor_01 | Current Color                     |    Tempo         |     Tempo      |            |           |
