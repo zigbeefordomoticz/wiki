@@ -32,6 +32,12 @@ For now, in Tri-Phase mode, Power_f4 is not updated, as there is a miss-match in
 
 ![ZLinky Widgets on Domoticz](../Images/GammaTroniques-TICMeter.png)
 
+In Orange, theses Widgets are relevant to the Tempo or EJP contract
+In Blue the Widgets are relevant to Tri-phase setup
+
+* In Tempo or EJP contract widgets highlighted ORANGE are used. If you are not in this contract, you can remove them.
+* If your installation is tri-phases, then the BLUE widgets will be used in addition
+
 ## TIC attributes not available via Widget
 
 All Labels are also stored in the plugin database.  For now, you can get them from teh JSNON API of the plugin `http://<your-domoticz-ip-address>:9440/rest-z4d/1/gamma-troniques-ticmeter` and key parameters are also highlited
