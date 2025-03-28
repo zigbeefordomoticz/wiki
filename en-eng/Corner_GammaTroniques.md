@@ -30,6 +30,8 @@ Depending on your Linky setup, some will work, and some others won't.
 
 For now, in Tri-Phase mode, Power_f4 is not updated, as there is a miss-match in the reporting an Power L1 (SINSTS1) seems to be reported as General Power (SINSTS)
 
+![ZLinky Widgets on Domoticz](../Images/GammaTroniques-TICMeter.png)
+
 ## TIC attributes not available via Widget
 
 All Labels are also stored in the plugin database.  For now, you can get them from teh JSNON API of the plugin `http://<your-domoticz-ip-address>:9440/rest-z4d/1/gamma-troniques-ticmeter` and key parameters are also highlited
