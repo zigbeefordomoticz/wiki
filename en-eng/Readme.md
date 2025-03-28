@@ -87,6 +87,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Aqara](Corner_Aqara.md)
 * [BlitzWolf](Corner_Blitzwolf.md)
 * [Eurotronics](Corner_Eurotronics.md)
+* [Gamma Troniques TICMeter](Corner_GammaTroniques.md)
 * [Ikea Tradfri](Corner_Ikea-Tradfri.md)
 * [Legrand Netatmo](Corner_Legrand-Netatmo.md)
 * [Livolo](Corner_Livolo.md)
