@@ -30,7 +30,7 @@ Depending on your Linky setup, some will work, and some others won't.
 
 For now, in Tri-Phase mode, Power_f4 is not updated, as there is a miss-match in the reporting an Power L1 (SINSTS1) seems to be reported as General Power (SINSTS)
 
-![ZLinky Widgets on Domoticz](../Images/GammaTroniques-TICMeter.png)
+![TICMeter Widgets on Domoticz](../Images/GammaTroniques-TICMeter.png)
 
 In Orange, theses Widgets are relevant to the Tempo or EJP contract
 In Blue the Widgets are relevant to Tri-phase setup
@@ -38,18 +38,8 @@ In Blue the Widgets are relevant to Tri-phase setup
 * In Tempo or EJP contract widgets highlighted ORANGE are used. If you are not in this contract, you can remove them.
 * If your installation is tri-phases, then the BLUE widgets will be used in addition
 
-## TIC attributes not available via Widget
+## TIC attributes available via Widget
 
-All Labels are also stored in the plugin database.  For now, you can get them from teh JSNON API of the plugin `http://<your-domoticz-ip-address>:9440/rest-z4d/1/gamma-troniques-ticmeter` and key parameters are also highlited
+You can access to all collected data from the TICMeter via the WebUI > Manufacturer > GammaTroniques page
 
-```json
-    "Nwkid": "19fd",
-    "ZDeviceName": "TICMeter",
-    "Identifiant": "3________2",
-    "TICMode": "standard",
-    "Mode Electrique": "Monophasé",
-    "Type de contrat": "HCHP 22h-6h",
-    "Période tarifaire en cours": "HEURES PLEINES",
-    "Puissance Max contrat": 9,
-    "UpTime": "0d 08:27:59",
-```
+![TICMeter collected data](../Images/TICMetet-WebUI-manufacturer-page.png)
