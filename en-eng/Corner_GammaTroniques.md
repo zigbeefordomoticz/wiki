@@ -30,6 +30,8 @@ Depending on your Linky setup, some will work, and some others won't.
 
 For now, in Tri-Phase mode, Power_f4 is not updated, as there is a miss-match in the reporting an Power L1 (SINSTS1) seems to be reported as General Power (SINSTS)
 
+## TICMeter with Standard, mono, HCHP contract
+
 ![TICMeter Widgets on Domoticz](../Images/GammaTroniques-TICMeter.png)
 
 In Orange, theses Widgets are relevant to the Tempo or EJP contract
@@ -37,6 +39,8 @@ In Blue the Widgets are relevant to Tri-phase setup
 
 * In Tempo or EJP contract widgets highlighted ORANGE are used. If you are not in this contract, you can remove them.
 * If your installation is tri-phases, then the BLUE widgets will be used in addition
+
+## TICMeter with Historique, Mono, Base contract
 
 Here after an other exemple where you have all widgets after Pairing. We have here a Historique Mono Base contract and only the Blue widgets are relevants and all others can be  removed.
 
