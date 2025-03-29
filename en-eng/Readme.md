@@ -1,4 +1,4 @@
-# Welcome to the plugin ZigBeeForDomoticZ wiki !
+# Welcome to the plugin ZigBeeForDomoticZ wiki
 
 [Lien vers le Wiki en français](../fr-fr/Readme.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Readme.md)
 
