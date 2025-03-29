@@ -38,6 +38,10 @@ In Blue the Widgets are relevant to Tri-phase setup
 * In Tempo or EJP contract widgets highlighted ORANGE are used. If you are not in this contract, you can remove them.
 * If your installation is tri-phases, then the BLUE widgets will be used in addition
 
+Here after an other exemple where you have all widgets after Pairing. We have here a Historique Mono Base contract and only the Blue widgets are relevants and all others can be  removed.
+
+![TICMeter Widgets on Domoticz Historique Mono Base Contract](../Images/TIC-Meter-Widgets-Linky-Historique-Mono.png)
+
 ## TIC attributes available via Widget
 
 You can access to all collected data from the TICMeter via the WebUI > Manufacturer > GammaTroniques page
