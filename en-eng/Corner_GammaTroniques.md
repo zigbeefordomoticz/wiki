@@ -42,4 +42,4 @@ In Blue the Widgets are relevant to Tri-phase setup
 
 You can access to all collected data from the TICMeter via the WebUI > Manufacturer > GammaTroniques page
 
-![TICMeter collected data](../Images/TICMetet-WebUI-manufacturer-page.png)
+![TICMeter collected data](../Images/TICMeter-WebUI-manufacturer-page.png)
