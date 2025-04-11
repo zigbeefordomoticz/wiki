@@ -19,6 +19,8 @@ Depending on your Linky setup, some will work, and some others won't.
 | LinkyCurrentTarif_01    | Current Tarif                     |      Yes         |     Yes        |            |           |
 | LinkyCurrentDayColor_01 | Current Color                     |    Tempo         |     Tempo      |            |           |
 | LinkyNextDayColor_01    | Next Day Color                    |    Tempo         |     Tempo      |            |           |
+| ProdPower_01            | Puissance Injecté                 |     No           |     Yes        |            |           |
+| ProdMeter_01            | Puissance Injectée Totale         |     No           |     Yes        |            |           |
 | P1Meter_HPHC_f2         | Index HC/HP Bleu                  |    Tempo         |     Tempo      |            |           |
 | P1Meter_HPHC_f3         | Index HC/HP Rouge                 |    Tempo         |     Tempo      |            |           |
 | Voltage_f4              | Tension Mono ou L1                |      No          |     Yes        |    Yes     |   Yes     |
