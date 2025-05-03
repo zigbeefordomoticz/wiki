@@ -178,7 +178,7 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
 ## 5 - Installation running on Windows 10
 
-__This procedure is not yet updated to be compatible with version 6 of the plugin.__
+__This procedure is not yet updated to be compatible with version 6 of the plugin. If you are willing to contribute to the project and help  us to support the plugin on Win11 let us know__
 
 [Refer to french page](../fr-fr/Plugin_Installation.md#5---installation-sous-windows-10)
 

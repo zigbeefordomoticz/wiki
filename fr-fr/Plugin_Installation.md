@@ -203,11 +203,9 @@ Passer à l'[étape 2 Paramétrage du plugin](Plugin_Parametrage.md).
 
 ## 5 - Installation sous Windows 10
 
-Rédaction par [@Pipiche38](https://github.com/pipiche38)
+Rédaction par [@Pipiche38](https://github.com/pipiche38) __Cette procédure a été développé avec le plugin version 6__
 
-__Cette procédure n'est pas encore mise à jour pour être compatible avec la version 6 du plugin.__
-
-Cette méthode est uniquement valable pour les systèmes Windows 10.
+Ne disposant pas de système windows, il m'est impossible de faire des tests. Par contre nous vous aiderons avec plaisir.
 
 ### 5.1 - Avant-propos
 
