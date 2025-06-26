@@ -45,10 +45,12 @@ If you get : `Python 3.10.11` in response to the command, then you have the defa
 
 ### Create the python environment
 
-We are suggesting to create the Domoticz Python Environment in the Domoticz home directory such as __/home/domoticz__
+assuming that you have a user __pi__ with the home directory __/home/pi__
+
+We are suggesting to create the Domoticz Python Environment in the Domoticz home directory such as __/home/pi__
 
 ```bash
-cd /home/domoticz
+cd /home/pi
 mkdir Domoticz_Python_Environment
 ```
 
@@ -57,13 +59,13 @@ cd /home/pi/domoticz/plugins/Domoticz-Zigbee
 ````
 
 ```bash
-python3 -m pip install -r requirements.txt --upgrade -t /home/domoticz/Domoticz_Python_Environment
+python3 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
 ```
 
 or if you have to use a specific version:
 
 ```bash
-python3.10 -m pip install -r requirements.txt --upgrade -t /home/domoticz/Domoticz_Python_Environment
+python3.10 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
 ```
 
 ### Make Domoticz start with the Python Environment
@@ -72,7 +74,7 @@ Add the definition for the PYTHONPATH environment variable in the script which a
 
 If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file and add an extra line such as:
 
-```export PYTHONPATH=/home/domoticz/Domoticz_Python_Environment:$PYTHONPATH```
+```export PYTHONPATH=/home/pi/Domoticz_Python_Environment:$PYTHONPATH```
 
 If your are in __Option 2__ Systemd Alternative (preferred), you can simply add the __EnvironmentFile__ statement as described in the wiki and set PYTHONPATH accordingly in the corresponding file.
 
