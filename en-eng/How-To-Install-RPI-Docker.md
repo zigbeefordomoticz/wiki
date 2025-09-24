@@ -1,16 +1,22 @@
 # Install Zigbee for Domoticz plugin (under Docker on a RPi bare metal)
 
-## 1. Assumptions
+## 1. Assumptions & Prerequisites
 
 The here after installation steps are based on Domoticz setup as documented [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
 We assumed here , that you you have access to Domoticz UI via a Web browser.
+
+Docker and docker-compose installed.
+
+User must be part of the docker group (so they don’t need sudo everywhere)
+
+In the here documentation, the guide assumes the container name = domoticz
 
 ## 2. Install plugin & configuration
 
 1. Start domoticz if not yet started
 
     ```bash
-    docker up -d
+    docker-compose up -d
     ```
 
 When the container is started, and you have Domoticz access via a browser, we can start the installation procedure.
@@ -25,41 +31,9 @@ The idea is to install the plugin inside the container, to prevent having to ins
     git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
     ```
 
-1. Edit the Domoticz custom script, so the python modules are correctly installed and up to date
-
-    ```bash
-    vi /opt/domoticz/userdata/customstart.sh
-    ```
-
-    ```bash
-    #!/bin/bash
-
-    if [ -f /opt/domoticz/FIRSTRUN ]; then
-        true
-    else
-        echo 'creating FIRSTRUN file so script can check on next run'
-        touch /opt/domoticz/FIRSTRUN
-
-        echo 'updating packages'
-        apt-get -qq update
-
-        echo 'installing iputils-ping'
-        apt-get -y install iputils-ping
-
-        echo 'installing vim editor'
-        apt-get -y install vim-ping
-
-        if [ -f /opt/domoticz/userdata/plugins/Domoticz-Zigbee/requirements.txt ]; then
-        echo 'Install the necessary python3 modules for Zigbee for Domoticz plugin'
-                python3 -m pip install -r /opt/domoticz/userdata/plugins/Domoticz-Zigbee/requirements.txt --upgrade
-        fi
-        cd /opt/domoticz || return
-    fi
-    ```
-
 1. Provide the Zigbee dongle port to the container.
 
-    1. stop the container `docker down`
+    1. stop the container `docker-compose down`
 
     1. Identify the Serial line port
 
@@ -73,10 +47,13 @@ The idea is to install the plugin inside the container, to prevent having to ins
 
     The syntax to be used is `<host port>:<container port>`
 
-    * __host port__ is `/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0``
+    * __host port__ is `/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0`
     * __container port__ is the port name you want to see inside the container, `/dev/ttyUSB0` ( you can choose what ever you want)
 
     1. edit the file docker-compose.yml
+
+    userdata must be mapped as a volume for plugins & DB persistence.
+    Otherwise everything installed in /opt/domoticz/userdata inside the container will vanish after a rebuild.
 
     ```bash
     vi /opt/domoticz/docker-compose.yml
@@ -85,26 +62,55 @@ The idea is to install the plugin inside the container, to prevent having to ins
     this should look similar to that one.
 
     ```bash
-    version: '3.3'
-
     services:
-    domoticz:
+      domoticz:
         image: domoticz/domoticz:stable
         container_name: domoticz
         restart: unless-stopped
         # Pass devices to container
         devices:
-            - "/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0:/dev/ttyUSB0"
+           - "/dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20220715103321-if00:/dev/ttyUSB-zigbee"
+
         ports:
-            - "8080:8080"
+          - "8080:8080"
+          - "9440:9440"
+
         volumes:
-            - ./config:/opt/domoticz/userdata
+          # This is where customstart.sh will be as well as the domoticz Database, domoticz scripts as well as the plugins
+          - /opt/domoticz/userdata:/opt/domoticz/userdata
+          # This is where the Python3 environment will be installed
+          - /opt/domoticz/Domoticz_Python_Environment:/opt/domoticz/Domoticz_Python_Environment
+
+        logging:
+          driver: "journald"
+
         environment:
-            - TZ=Europe/Amsterdam
-            #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
+          - TZ=Europe/Paris
+          # PYTHONPATH is use to set Domoticz to use a dedicated python environment instead of the system wide.
+          - PYTHONPATH=/opt/domoticz/Domoticz_Python_Environment:$PYTHONPATH
+          #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
+
     ```
 
-## 3. Sources and References
+1. Domoticz custom script.
+
+    When starting the Domoticz container, it will trigger automatically the `/opt/domoticz/userdata/customstart.sh`.
+    As part of the Zigbee. for Domoticz plugin we provide a custom version which fit for plugin. If you don't need anything special we do recommend to use it as such. The best is to do a symbolic link , so any update provided via the Z4D plugin update will be integrated immediatly
+
+    ```bash
+    sudo ln -s /opt/domoticz/userdata/plugins/Domoticz-Zigbee/Tools/customstart.sh /opt/domoticz/userdata/customstart.sh
+    ```
+
+## 3. Start Domoticz with plugin
+
+```bash
+docker-compose up -d
+```
+
+This will start the docker container, which then will trigger the customstart.sh which is going to set the Python environment.
+Depending of the system and performance of it, it could take a while. Just have a look to the system log to monitor the progress.
+
+## 4. Sources and References
 
 * [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
 * [Get Docker](https://docs.docker.com/get-docker/)
