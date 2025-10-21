@@ -51,15 +51,3 @@ A switch Selector used to send response to keypad
 1. your logic (script) should validate the PIN Code or Reject it
    1. to reject you have to use KeypadFeedback (a switch selector) level "50", this will send a Invalid Code to Keypad
    1. to approve you have to use KeypadFeedback (a switch selector) level "10", this will send a Disarm state to Keypad
-
-
-
-10: ("Disarm", ias_
-20: ("ArmAllZones",
-30: ("ArmNight", ia
-40: ("ArmHome", ias
-50: ("InvalidCode",
-60: ("NotReady", ia
-70: ("ExitDelay", i
-80: ("EntryDelay", 
-90: ("InAlarm", ias
