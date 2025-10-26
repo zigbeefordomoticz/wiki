@@ -32,14 +32,9 @@ hostnamectl set-hostname dusun-pipiche
 echo "127.0.0.1 dusun-pipiche" >> /etc/hosts
 ```
 
-Modify option hostname 'dusun-pipiche' in the /etc/config/system
-
-```bash
-vi /etc/config/system
-```
+edit the file /etc/config/system with the command `vi /etc/config/system`and modify option hostname 'dusun-pipiche'
 
 Then reboot the system with the command
-
 
 ```bash
 reboot
