@@ -108,4 +108,4 @@ reboot
 ```bash
 cd /opt/domoticz
 docker-compose up -d
-    ```
+```
