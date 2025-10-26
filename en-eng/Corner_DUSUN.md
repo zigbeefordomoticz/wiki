@@ -105,7 +105,7 @@ reboot
 
 ## Start Domoticz
 
-    ```bash
-    cd /opt/domoticz
-    docker-compose up -d
+```bash
+cd /opt/domoticz
+docker-compose up -d
     ```
