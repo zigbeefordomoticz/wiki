@@ -22,7 +22,7 @@ systemctl disable rc-local
 mv /etc/rc.local /etc/rc.local-dusun-disabled
 ```
 
-## Configure the host hanme
+## Configure the host name
 
 In this example, I wanted to change hostname 'DUSUN' into 'dusun-pipiche'
 
