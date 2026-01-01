@@ -100,6 +100,7 @@ reboot
 
     ```bash
     cd userdata
+    mkdir plugins
     git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
     ```
 
