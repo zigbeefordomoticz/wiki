@@ -40,7 +40,7 @@ Open the terminal
 cd domoticz/plugins/
 ```
 
-2. Run the command :
+1. Run the command :
 
 ``` bash
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
@@ -48,13 +48,13 @@ git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 
 The folder __Domoticz-Zigbee__ will be created in the plugins folder.
 
-3. Go to the __Domoticz-Zigbee__ folder. The command is usually :
+1. Go to the __Domoticz-Zigbee__ folder. The command is usually :
 
 ``` bash
 cd Domoticz-Zigbee/
 ```
 
-4. Install the needed Python packet with the command :
+1. Install the needed Python packet with the command :
 
 ``` bash
 sudo pip3 install -r requirements.txt
@@ -62,32 +62,19 @@ sudo pip3 install -r requirements.txt
 
 __Note :__  Starting Debian 12 (Bookworm), we recommend to use python venv setup to dedicate python modules for Domoticz environment. (check [Python Virtual Environment](HowTo_PythonVirtualEnv.md))
 
-
-5. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
+1. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
 
 ``` bash
 sudo chown -R pi:pi .
 ```
 
-6. Run the command :
-
-``` bash
-git config --add submodule.recurse true
-```
-
-7. Install the missing Python libraries with the command :
-
-``` bash
-git submodule update --init --recursive
-```
-
-8. Make the __plugin.py__ file executable with the command :
+1. Make the __plugin.py__ file executable with the command :
 
 ``` bash
 sudo chmod +x plugin.py
 ```
 
-9. Restart DomoticZ. The command is usually :
+1. Restart DomoticZ. The command is usually :
 
 ``` bash
 sudo service domoticz.sh restart
@@ -170,8 +157,6 @@ the best is to add it in the middle of the file, so you don't break the all file
 ------------
 
 ## 4 - Installation running on Docker
-
-__This procedure is not yet updated to be compatible with version 6 of the plugin.__
 
 ### 1. Docker Install
 
@@ -371,14 +356,13 @@ Platform: RPI3 B+
 
      Here is an exemple of what you should have
 
-     ```
-     label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
+    ```grub
+    label Fedora (5.4.17-200.fc31.armv7hl) 31 (Thirty One)
     kernel /vmlinuz-5.4.17-200.fc31.armv7hl
     append ro root=UUID=2161061e-8612-4e18-a4e1-0e95aca6d2ff LANG=en_US.UTF-8 selinux=0 audit=0 rd.driver.blacklist=nouveau iomem=relaxed
     fdtdir /dtb-5.4.17-200.fc31.armv7hl/
     initrd /initramfs-5.4.17-200.fc31.armv7hl.img
-
-     ```
+    ```
 
    * You can use the pi-zigate-fedora.py tool provided under Tools/Fedora to switch the PiZigate
    to RUN or FLASH mode. For now you must be root when executing this module
@@ -392,7 +376,7 @@ Platform: RPI3 B+
    * recompile the tool `gcc -o PiZiGate_test-fedora PiZiGate_test-fedora.c`
    * excute it `./PiZiGate_test-fedora /dev/ttyS1`
 
-   ```
+   ```bash
    [domoticz@rasp Fedora]$ ./PiZiGate_test-fedora /dev/ttyS1
    Opening : /dev/ttyS1 ...
    + /dev/ttyS1 opened --> OK
@@ -409,35 +393,35 @@ Platform: RPI3 B+
 
  1. OpenWRT provides a number of prebuilt python packages via opkg that must be installed instead of the normal dependencies :
 
- ```
+ ```bash
  opkg install kmod-usb-serial kmod-usb-serial-cp210x shadow-usermod python3 python3-pip python3-voluptuous python3-cryptodome python3-attrs python3-aiohttp python3-jsonschema domoticz curl
  pip install aiosqlite crccheck pyusb pyserial-asyncio coloredlogs
  ```
 
- 2. The domoticz package provided by opkg has slightly different installation paths:
+ 1. The domoticz package provided by opkg has slightly different installation paths:
 
- ```
+ ```bash
  cd /etc/domoticz/plugins
  git clone --recurse-submodules --depth 1 -b beta6 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
  chmod +x Domoticz-Zigbee/plugin.py
  ```
 
- 3. Domoticz is automatically configured to run under the 'domoticz' user and group, permissions must be granted to any resources it needs:
+ 1. Domoticz is automatically configured to run under the 'domoticz' user and group, permissions must be granted to any resources it needs:
 
- ```
+ ```bash
  chown -R domoticz:domoticz /etc/domoticz/plugins/Domoticz-Zigbee
  usermod -a -G dialout domoticz
  ```
 
- 4. Finally, restart domoticz to apply all changes:
+ 1. Finally, restart domoticz to apply all changes:
 
- ```
+ ```bash
  service domoticz restart
  ```
 
- 5. You can verify that your Zigbee USB dongle was detected via:
+ 1. You can verify that your Zigbee USB dongle was detected via:
 
- ```
+ ```bash
  lsusb
  dmesg | grep ttyUSB
  ```

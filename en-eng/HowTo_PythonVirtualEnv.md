@@ -49,24 +49,40 @@ assuming that you have a user __pi__ with the home directory __/home/pi__
 
 We are suggesting to create the Domoticz Python Environment in the Domoticz home directory such as __/home/pi__
 
+__note__ if you have to use a specific version use `python3.xx` instead of `python3`
+
+1. setup venv
+
+assuming :
+
+- user: pi
+- user home directory: /home/pi
+- Setup the venv directory: /home/pi/Domoticz_Python_Environment
+- Domoticz is installed under: /home/pi/domoticz
+
 ```bash
 cd /home/pi
 mkdir Domoticz_Python_Environment
-```
-
-```bash
-cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+python3 -m venv Domoticz_Python_Environment
+source Domoticz_Python_Environment/bin/activate
+pip install --upgrade pip
 ````
 
-```bash
-python3 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
-```
+Install Z4D required python modules
 
-or if you have to use a specific version:
+1. prior Stable8:
 
-```bash
-python3.10 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
-```
+    ```bash
+    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+    python3 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
+    ```
+
+2. From stable8 ownward:
+
+    ```bash
+    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+    python3 -m pip install -r requirements.txt --upgrade 
+    ```
 
 ### Make Domoticz start with the Python Environment
 
@@ -74,7 +90,13 @@ Add the definition for the PYTHONPATH environment variable in the script which a
 
 If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file and add an extra line such as:
 
+1. prior Stable8:
+
 ```export PYTHONPATH=/home/pi/Domoticz_Python_Environment:$PYTHONPATH```
+
+1. from Stable8 onward:
+
+```export PYTHONPATH=/home/pi/Domoticz_Python_Environment/lib/python3.11/site-packages/:$PYTHONPATH```
 
 If your are in __Option 2__ Systemd Alternative (preferred), you can simply add the __EnvironmentFile__ statement as described in the wiki and set PYTHONPATH accordingly in the corresponding file.
 
