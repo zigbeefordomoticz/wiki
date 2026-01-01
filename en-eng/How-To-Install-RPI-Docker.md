@@ -87,7 +87,8 @@ The idea is to install the plugin inside the container, to prevent having to ins
         environment:
           - TZ=Europe/Paris
           # PYTHONPATH is use to set Domoticz to use a dedicated python environment instead of the system wide.
-          - PYTHONPATH=/opt/domoticz/Domoticz_Python_Environment:$PYTHONPATH
+          - PYTHONPATH=/opt/domoticz/Domoticz_Python_Environment:$PYTHONPATH. # For below stable8
+          #- PYTHONPATH=/home/pi/Domoticz_Python_Environment/lib/python3.11/site-packages/  # for stable8 and above
           #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
 
     ```
