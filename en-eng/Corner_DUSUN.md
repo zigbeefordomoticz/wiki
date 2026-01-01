@@ -22,6 +22,14 @@
     mv /etc/rc.local /etc/rc.local-dusun-disabled
     ```
 
+1. Remove unnecessary users
+
+    ```
+    userdel admin
+    userdel gnats
+    userdel games
+    ```
+
 ## Configure the host name
 
 In this example, I wanted to change hostname 'DUSUN' into 'dusun-pipiche'
