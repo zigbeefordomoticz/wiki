@@ -24,8 +24,11 @@ __Important :__ This installation method is not valid for an installation of the
 
 ### 1.A - Prerequisite
 
-* DomoticZ version above 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-* Python version above 3.8 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+* Starting stable8, Domoticz 2025.2 or above is required, and requires python3.11 or above.
+
+* Below stable8:
+  * DomoticZ version above 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
+  * Python version above 3.8 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Git packet installed
 * Pip packet installed
 * On Raspeberry Pi OS, it is not recommended to use the Lite version because many packages are missing.
@@ -83,7 +86,6 @@ sudo service domoticz.sh restart
 The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom of the __Type__ listbox).
 Move on to [step 2 Plugin settings](Plugin_Settings.md).
 
-------------
 
 ## 2 - Python Plugin Manager installation running on Linux
 
@@ -92,7 +94,6 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
 * Just search for "Zigbee for domoticz Plugin" entry and add it.
 
-------------
 
 ## 3 - Installation running on Synology NAS
 
@@ -128,7 +129,6 @@ sudo git clone <https://github.com/zigbeefordomoticz/Domoticz-Zigbee> Zigbee
 
 Stop and start domoticz from package manager.
 
---------------------------------------------------------
 
 In domoticz navigate to Settings -> Hardware
 
@@ -158,9 +158,11 @@ the best is to add it in the middle of the file, so you don't break the all file
 
 ## 4 - Installation running on Docker
 
-### 1. Docker Install
+1. Docker Install
 
 [How to install Zigbee4Domoticz on a docker based setup](../en-eng/How-To-Install-RPI-Docker.md)
+
+For other docker install we recommend the use of the Domoticz custom script, that you can find on `Domoticz-Zigbee/Tools/customstart.sh`
 
 ## 5 - Installation running on Windows 10
 

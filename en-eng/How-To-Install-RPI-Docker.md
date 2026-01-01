@@ -11,6 +11,16 @@ User must be part of the docker group (so they don’t need sudo everywhere)
 
 In the here documentation, the guide assumes the container name = domoticz
 
+It is highly recommended to setup a python venv
+
+1. create folder to host the python virtual environment
+
+```bash
+mkdir /opt/domoticz/Domoticz_Python_Environment
+```
+
+Nothing else to be done, as the provided customstart.sh will do the proper setup.
+
 ## 2. Install plugin & configuration
 
 1. Start domoticz if not yet started
