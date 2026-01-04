@@ -33,59 +33,64 @@ __Important :__ This installation method is not valid for an installation of the
 * Pip packet installed
 * On Raspeberry Pi OS, it is not recommended to use the Lite version because many packages are missing.
 
+* assuming :
+  * user: pi
+  * user home directory: /home/pi
+  * Domoticz is installed under: /home/pi/domoticz
+
 ### 1.B - Procedure
 
 Open the terminal
 
 1. Go in your DomoticZ directory and inside the __plugins__ folder. The command is usually :
 
-``` bash
-cd domoticz/plugins/
-```
+   ```bash
+   cd domoticz/plugins/
+    ```
 
 1. Run the command :
 
-``` bash
-git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
-```
+   ```bash
+   git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+   ```
 
 The folder __Domoticz-Zigbee__ will be created in the plugins folder.
 
+1. prepare a Python VENV to hosts all python modules requires for the plugin
+
+   we recommend to use python venv setup to dedicate python modules for Domoticz environment. [check Python Virtual Environment](HowTo_PythonVirtualEnv.md#create-your-python-environment-for-domoticz)
+
+    ATTENTION: If you have several python3 version installed, you must check what python3 Domoticz is going to use.
+    Check domoticz logs such as:
+
+    `Jan 04 15:56:31 rasp domoticz[154147]: 2026-01-04 15:56:31.811  Status: PluginSystem: Started, Python version '3.12.12', 12 plugin definitions loaded.`
+
 1. Go to the __Domoticz-Zigbee__ folder. The command is usually :
 
-``` bash
-cd Domoticz-Zigbee/
-```
-
-1. Install the needed Python packet with the command :
-
-``` bash
-sudo pip3 install -r requirements.txt
-```
-
-__Note :__  Starting Debian 12 (Bookworm), we recommend to use python venv setup to dedicate python modules for Domoticz environment. (check [Python Virtual Environment](HowTo_PythonVirtualEnv.md))
+    ```bash
+    cd Domoticz-Zigbee/
+    ```
 
 1. Execute the command by adapting __pi:pi__ if necessary to the __user:group__ used. Be careful to take the point at the end.
 
-``` bash
-sudo chown -R pi:pi .
-```
+  ```bash
+  sudo chown -R pi:pi .
+  ```
 
 1. Make the __plugin.py__ file executable with the command :
 
-``` bash
-sudo chmod +x plugin.py
-```
+  ```bash
+  sudo chmod +x plugin.py
+  ```
 
 1. Restart DomoticZ. The command is usually :
 
-``` bash
-sudo service domoticz.sh restart
-```
+  ``` bash
+  sudo service domoticz.sh restart
+  ```
 
 The ZigBee for DomoticZ plugin should appear in the hardware list (at the very bottom of the __Type__ listbox).
 Move on to [step 2 Plugin settings](Plugin_Settings.md).
-
 
 ## 2 - Python Plugin Manager installation running on Linux
 
@@ -93,7 +98,6 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
 * Just search for "Zigbee for domoticz Plugin" entry and add it.
-
 
 ## 3 - Installation running on Synology NAS
 
@@ -128,7 +132,6 @@ GIT clone Zigbee for Domoticz plugin to new folder Zigbee:
 sudo git clone <https://github.com/zigbeefordomoticz/Domoticz-Zigbee> Zigbee
 
 Stop and start domoticz from package manager.
-
 
 In domoticz navigate to Settings -> Hardware
 
