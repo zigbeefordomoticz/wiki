@@ -11,14 +11,6 @@ User must be part of the docker group (so they don’t need sudo everywhere)
 
 In the here documentation, the guide assumes the container name = domoticz
 
-It is highly recommended to setup a python venv
-
-1. create folder to host the python virtual environment
-
-```bash
-mkdir /opt/domoticz/Domoticz_Python_Environment
-```
-
 Nothing else to be done, as the provided customstart.sh will do the proper setup.
 
 ## 2. Install plugin & configuration
@@ -79,31 +71,26 @@ The idea is to install the plugin inside the container, to prevent having to ins
         restart: unless-stopped
         # Pass devices to container
         devices:
-           - "/dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20220715103321-if00:/dev/ttyUSB-zigbee"
+            - "/dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20220715103321-if00:/dev/ttyUSB-zigbee"
 
         ports:
-          - "8080:8080"
-          - "9440:9440"
+            - "8080:8080"
+            - "9440:9440"
 
         volumes:
-          # This is where customstart.sh will be as well as the domoticz Database, domoticz scripts as well as the plugins
-          - /opt/domoticz/userdata:/opt/domoticz/userdata
-          # This is where the Python3 environment will be installed
-          - /opt/domoticz/Domoticz_Python_Environment:/opt/domoticz/Domoticz_Python_Environment
+            # This is where customstart.sh will be as well as the domoticz Database, domoticz scripts as well as the plugins
+            - /opt/domoticz/userdata:/opt/domoticz/userdata
 
         logging:
-          driver: "journald"
+            driver: "journald"
 
         environment:
-          - TZ=Europe/Paris
-          # PYTHONPATH is use to set Domoticz to use a dedicated python environment instead of the system wide.
-          - PYTHONPATH=/opt/domoticz/Domoticz_Python_Environment:$PYTHONPATH. # For below stable8
-          #- PYTHONPATH=/home/pi/Domoticz_Python_Environment/lib/python3.11/site-packages/  # for stable8 and above
-          #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
+            - TZ=Europe/Paris
+            #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
 
     ```
 
-1. Domoticz custom script.
+1. Domoticz custom script. IMPORTANT
 
     When starting the Domoticz container, it will trigger automatically the `/opt/domoticz/userdata/customstart.sh`.
     As part of the Zigbee. for Domoticz plugin we provide a custom version which fit for plugin. If you don't need anything special we do recommend to use it as such. The best is to do a symbolic link , so any update provided via the Z4D plugin update will be integrated immediatly
@@ -120,6 +107,13 @@ docker-compose up -d
 
 This will start the docker container, which then will trigger the customstart.sh which is going to set the Python environment.
 Depending of the system and performance of it, it could take a while. Just have a look to the system log to monitor the progress.
+
+You can run `docker exec -it domoticz /bin/bash`to get a bash inside the container
+
+- the python environment will be developped under /opt/venv
+- Domoticz environment will be under /opt/domoticz
+-       - Domoticz Database: /opt/domoticz/userdata/domoticz.db
+-       - Plugin Z4D: /opt/domoticz/userdata/plugins/Domoticz-Zigbee
 
 ## 4. Sources and References
 
