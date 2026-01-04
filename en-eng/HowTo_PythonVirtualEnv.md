@@ -53,51 +53,97 @@ __note__ if you have to use a specific version use `python3.xx` instead of `pyth
 
 1. setup venv
 
-assuming :
+    assuming :
 
-- user: pi
-- user home directory: /home/pi
-- Setup the venv directory: /home/pi/Domoticz_Python_Environment
-- Domoticz is installed under: /home/pi/domoticz
+    - user: pi
+    - user home directory: /home/pi
+    - Setup the venv directory: /home/pi/Domoticz_Python_Environment
+    - Domoticz is installed under: /home/pi/domoticz
+
+    ```bash
+    cd /home/pi
+    mkdir Domoticz_Python_Environment
+    python3 -m venv Domoticz_Python_Environment
+    source Domoticz_Python_Environment/bin/activate
+    pip install --upgrade pip
+    ````
+
+### Prior Stable8
+
+We relied on PYTHONPATH to find the path to the python3 modules
+
+1. Install Z4D required python modules
 
 ```bash
-cd /home/pi
-mkdir Domoticz_Python_Environment
-python3 -m venv Domoticz_Python_Environment
-source Domoticz_Python_Environment/bin/activate
-pip install --upgrade pip
-````
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+python3 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
+```
 
-Install Z4D required python modules
+1. Add the definition for the PYTHONPATH environment variable in the script which automaticaly start Domoticz.
 
-1. prior Stable8:
-
-    ```bash
-    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
-    python3 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
-    ```
-
-2. From stable8 ownward:
-
-    ```bash
-    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
-    python3 -m pip install -r requirements.txt --upgrade 
-    ```
-
-### Make Domoticz start with the Python Environment
-
-Add the definition for the PYTHONPATH environment variable in the script which automaticaly start Domoticz. For more information you can have a look to [Domoticz Linux wiki page](https://wiki.domoticz.com/Linux) and especially in the section _Starting Domoticz automatically when the system boots_ .
+ For more information you can have a look to [Domoticz Linux wiki page](https://wiki.domoticz.com/Linux) and especially in the section _Starting Domoticz automatically when the system boots_ .
 
 If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file and add an extra line such as:
 
-1. prior Stable8:
-
 ```export PYTHONPATH=/home/pi/Domoticz_Python_Environment:$PYTHONPATH```
 
-1. from Stable8 onward:
+### From Stable8
 
-```export PYTHONPATH=/home/pi/Domoticz_Python_Environment/lib/python3.11/site-packages/:$PYTHONPATH```
+We rely on the standard VENV root via VIRTUAL_ENV
 
-If your are in __Option 2__ Systemd Alternative (preferred), you can simply add the __EnvironmentFile__ statement as described in the wiki and set PYTHONPATH accordingly in the corresponding file.
+1. Install Z4D required python modules
 
-As you are changing a startup script, you might also have to run `systemctl daemon-reload`.
+if not yet done `source Domoticz_Python_Environment/bin/activate`, to use the venv.
+
+```bash
+
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+python3 -m pip install -r requirements.txt --upgrade 
+```
+
+Finaly we need to arrange the way to start Domoticz
+
+1. using systemd: domoticz.service
+
+    ```systemd
+    [Unit]
+          Description=domoticz_service
+    [Service]
+          #User=pi
+          #Group=users
+          ExecStart=/home/pi/domoticz/domoticz -www 8080 -sslwww 443
+          Environment=VIRTUAL_ENV=/opt/domoticz/Domoticz_Python_Environment
+          Environment=PATH=/opt/domoticz/Domoticz_Python_Environment/bin:/usr/bin:/bin
+          #EnvironmentFile=/home/pi/domoticz.env
+          WorkingDirectory=/home/pi/domoticz
+          ExecStartPre=setcap 'cap_net_bind_service=+ep' /home/pi/domoticz/domoticz
+          Restart=on-failure
+          RestartSec=1m
+          #StandardOutput=null
+    [Install]
+          WantedBy=multi-user.target
+    ```
+
+    In case you are using `EnvironmentFile=/home/pi/domoticz.env` just add the 2 following lines in the `/home/pi/domoticz.env`file
+
+    ```bash
+    VIRTUAL_ENV=/opt/domoticz/Domoticz_Python_Environment
+    PATH=/opt/domoticz/Domoticz_Python_Environment/bin:/usr/bin:/bin
+    ```
+
+    Reload and start
+
+    ```bash
+    sudo systemctl daemon-reexec
+    sudo systemctl daemon-reload
+    sudo systemctl restart domoticz
+    ```
+
+1. using domoticz.sh
+
+    Place the following line before `start-stop-daemon --chuid $USERNAME --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1` dans la fonction do_start()
+
+    ```bash
+    export VIRTUAL_ENV=/opt/domoticz/Domoticz_Python_Environment
+    export PATH="$VIRTUAL_ENV/bin:$PATH"
+    ```
