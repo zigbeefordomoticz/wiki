@@ -17,6 +17,7 @@ Nothing else to be done, as the provided customstart.sh will do the proper setup
 
 Under the folder `/opt/domoticz`we recommand to have the following setup, slightly different from the recommended domoticz one. The benefit is to speedup the startup.
 
+All configuration files provided here after are based on the image domoticz/domoticz:stable (meaning the stable/master domoticz version and not the beta/development branche)
 1. Configure the dockerfile
 
 This help you to build a single docker image.
@@ -52,7 +53,7 @@ This help you to build a single docker image.
 #   - ./userdata                                      (host directory mapped to userdata)
 #
 # Build Command:
-#   docker build -t domoticz-custom:latest .
+#   docker build -t domoticz-custom:stable .
 #
 # Notes:
 #   - pip notices about upgrades are suppressed by installing dependencies
@@ -60,7 +61,7 @@ This help you to build a single docker image.
 #   - SSH known hosts are pre-populated to allow git access from the container
 ###############################################################################
 # Base image
-FROM domoticz/domoticz:latest
+FROM domoticz/domoticz:stable
 
 # Set timezone
 ENV TZ=Europe/Paris
@@ -117,7 +118,7 @@ services:
     build:
         context: .
         dockerfile: dockerfile
-    image: domoticz-custom:latest
+    image: domoticz-custom:stable
     container_name: domoticz
     restart: unless-stopped
 
