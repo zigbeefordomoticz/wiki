@@ -171,5 +171,5 @@ If you want to move to the new setup (which is the proper setup), here is the st
 
 ```bash
 export VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
-export PATH=""/home/pi/Domoticz_Python_Environment/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH="/home/pi/Domoticz_Python_Environment/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ```
