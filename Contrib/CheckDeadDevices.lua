@@ -72,9 +72,9 @@ return {
 				URLString = URLString .. 's'
 			end
 			if (cdd_password == nil or cdd_username == nil) then
-				URLString = URLString .. "://127.0.0.1:"..cdd_port.."/json.htm?type=devices&used=true"
+				URLString = URLString .. "://127.0.0.1:"..cdd_port.."/json.htm?type=command&param=getdevices&used=true"
 			else
-				URLString = URLString .. "://127.0.0.1:"..cdd_port.."/json.htm?type=devices&used=true&username="..cdd_username.."&password="..cdd_password
+				URLString = URLString .. "://127.0.0.1:"..cdd_port.."/json.htm?type=command&param=getdevices&used=true&username="..cdd_username.."&password="..cdd_password
 			end
             		dz.openURL({    url = URLString,
                             method = "GET",
