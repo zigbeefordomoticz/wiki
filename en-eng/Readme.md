@@ -75,6 +75,10 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Use a Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
 * [Use a Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
 
+## How-to add/certified/custom new devices
+
+* [Integrate Tuya TS0601 Devices with the Plugin](HowTo_Device-Customization-TS0601.html)
+
 ## What to do if the device doesn't behave correctly
 
 * [Dealing with not-optimized devices](Problem_Dealing-with-none-optimized-device.md)
