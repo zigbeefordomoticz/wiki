@@ -1,9 +1,9 @@
 # ZigBeeForDomoticZ plugin installation
 
-In every installation methods, the plugin requires DomoticZ version 2021.1 or greater and Python version 3.8 or higher.
-Make sure that you have __python3-dev package__ installed. More informations on [DomoticZ Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
+In every installation method, the plugin requires Domoticz 2025.2 or greater and Python 3.11 or higher (stable8).
+Make sure that you have __python3-dev package__ installed. More information on [Domoticz Python page](https://www.domoticz.com/wiki/Using_Python_plugins).
 
-In this first step, there are severals installation methods depending on your Operating System :
+In this first step, there are several installation methods depending on your Operating System :
 
 * 1 - [Manual Installation running on Linux](#1---manual-installation-running-on-linux)
 * 2 - [Python Plugin Manager installation running on Linux](#2---python-plugin-manager-installation-running-on-linux)
@@ -27,8 +27,8 @@ __Important :__ This installation method is not valid for an installation of the
 * Starting stable8, Domoticz 2025.2 or above is required, and requires python3.11 or above.
 
 * Below stable8:
-  * DomoticZ version above 2021.1 (voir [Wiki DomoticZ](https://www.domoticz.com/wiki))
-  * Python version above 3.8 (voir [DomoticZ Python](https://www.domoticz.com/wiki/Using_Python_plugins))
+  * DomoticZ version above 2021.1 (see [Domoticz wiki](https://www.domoticz.com/wiki))
+  * Python version above 3.8 (see [Domoticz Python](https://www.domoticz.com/wiki/Using_Python_plugins))
 * Git packet installed
 * Pip packet installed
 * On Raspeberry Pi OS, it is not recommended to use the Lite version because many packages are missing.
@@ -94,16 +94,16 @@ Move on to [step 2 Plugin settings](Plugin_Settings.md).
 
 ## 2 - Python Plugin Manager installation running on Linux
 
-__This procedure is not yet updated to be compatible with version 6 of the plugin.__
+__This procedure has not been updated for stable8 and may not reflect current installation steps. Community contributions are welcome.__
 
 * If you have [pp-manager](https://github.com/ycahome/pp-manager) installed on your system
 * Just search for "Zigbee for domoticz Plugin" entry and add it.
 
 ## 3 - Installation running on Synology NAS
 
-__This procedure is not yet updated to be compatible with version 6 of the plugin.__
+__This procedure has not been updated for stable8 and may not reflect current installation steps. Community contributions are welcome.__
 
-The purpose of this document is to help you in the installation of the Zigate plugin on a Synlology platform
+The purpose of this document is to help you in the installation of the Zigate plugin on a Synology platform
 
 ### Pre-requisites
 
@@ -135,9 +135,9 @@ Stop and start domoticz from package manager.
 
 In domoticz navigate to Settings -> Hardware
 
-Pick Zigate Plugin from the list, name it and set the wright USB port.
+Pick Zigate Plugin from the list, name it and set the right USB port.
 
-At the first boot you have to set “Erase Persistent Data” to True to build a new network.
+At the first boot you have to set "Erase Persistent Data" to True to build a new network.
 
 Set Permit Join to value 255 to search for a unlimited time for new devices
 
@@ -169,7 +169,7 @@ For other docker install we recommend the use of the Domoticz custom script, tha
 
 ## 5 - Installation running on Windows 10
 
-__This procedure is not yet updated to be compatible with version 6 of the plugin. If you are willing to contribute to the project and help  us to support the plugin on Win11 let us know__
+__This procedure has not been updated for stable8 and may not reflect current installation steps. If you are willing to contribute to the project and help us to support the plugin on Windows, please let us know.__
 
 [Refer to french page](../fr-fr/Plugin_Installation.md#5---installation-sous-windows-10)
 
@@ -177,7 +177,7 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
 ## 6 - PiZigate Installation on RPi3B+ running on Raspbian (Linux)
 
-1. Make sure you have all the latest software and pyhon-dev is installed:
+1. Make sure you have all the latest software and python3-dev is installed:
 
     ```bash
     sudo apt-get update
@@ -249,7 +249,7 @@ __This procedure is not yet updated to be compatible with version 6 of the plugi
 
 1. Power off the RPi, plug the Pizigate card in the gpio slot and power up.
 
-1. Set the accessability of the serial adapter to 'No' using raspi-config option P6 (Interfacing options / serial):
+1. Set the accessibility of the serial adapter to 'No' using raspi-config option P6 (Interfacing options / serial):
 
     ```bash
     sudo raspi-config
