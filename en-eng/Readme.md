@@ -13,14 +13,14 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## IMPORTANT
 
-* We recommend Domoticz 2024.2 or higher
+* We recommend Domoticz 2025.2 or higher (stable8 requires Python 3.11+)
 * The Device Widget Replace function is not supported as Domoticz doesn't notify the plugin of such changes
 
 ## Introduction
 
 * [Start](Info_Home.md) for beginners
-* [Compatibles coordinators](Coordinators.md)
-* [Compatibles objects](Objects.md)
+* [Compatible coordinators](Coordinators.md)
+* [Compatible objects](Objects.md)
 
 ## Installation
 
@@ -41,7 +41,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Backups
 
-* [Backups to do to be able to restore without loosing crucial informations](Plugin_Backup.md)
+* [Backups to do to be able to restore without losing crucial information](Plugin_Backup.md)
 
 ## Plugin's web Interface
 
@@ -53,13 +53,13 @@ We are contributing to this project on our spare time. If you do consider that i
 * Section [Settings](WebUI_Settings.md)
 * Section [Tools](WebUI_Tools.md)
 * Section [About](WebUI_About.md)
-* [Statistics](WebUI_Statistics)
+* [Statistics](WebUI_Statistics.md)
 
 ## How-to
 
 * [How To use Python Virtual Environment](HowTo_PythonVirtualEnv.md)
 * [Build a ZigBee mesh network](HowTo_Build-a-ZigBee-network.md)
-* [Add a new devices](HowTo_Pairing-device.md)
+* [Add a new device](HowTo_Pairing-device.md)
 * [Remove a Device](HowTo_Remove-device.md)
 * [Device parameters](HowTo_Device-parameters.md)
 * [Use the plugin tools](HowTo_Using-tools.md)
@@ -104,7 +104,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
 
-1. Watch the log, you should fine some information if something is going wrong.
+1. Watch the log, you should find some information if something is going wrong.
 1. Use one of the forum channels
    * [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
    * [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
@@ -125,7 +125,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [Understanding a ZigBee network](https://www.blackhillsinfosec.com/understanding-zigbee-and-wireless-mesh-networking/)
 * [Firmware list](Info_Firmware-list.md)
-* [Widgets Switch Selector Mapping](Info_Widgets-Switch-Selector-Mapping)
+* [Widgets Switch Selector Mapping](Info_Widgets-Switch-Selector-Mapping.md)
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
 * [How-to Configure ZiGate in ZigBbee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)

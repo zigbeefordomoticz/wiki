@@ -66,7 +66,7 @@ __note__ if you have to use a specific version use `python3.xx` instead of `pyth
   python3 -m venv Domoticz_Python_Environment
   source Domoticz_Python_Environment/bin/activate
   pip install --upgrade pip
-  ````
+  ```
 
 ### Prior Stable8 ( version stable7)
 
@@ -87,7 +87,7 @@ We relied on PYTHONPATH to find the path to the python3 modules
 
     ```export PYTHONPATH=/home/pi/Domoticz_Python_Environment:$PYTHONPATH```
 
-### From Stable8 ( WIP / DRAFT ) - The proper way
+### From Stable8 — The recommended way
 
 We rely on the standard VENV root via VIRTUAL_ENV
 
@@ -95,7 +95,7 @@ We rely on the standard VENV root via VIRTUAL_ENV
 
 You are done ! nothing special to do as the domoticz container is properly configured
 
-No need to add PYTHONPATH, VIRTUAL_ENV, PATH in your docker commpose file, as Domoticz already setup a VIRTUAL_ENV !
+No need to add PYTHONPATH, VIRTUAL_ENV, PATH in your docker compose file, as Domoticz already setup a VIRTUAL_ENV !
 
 1. if not yet done, [Create the python environment](#create-the-python-environment)
 
@@ -104,10 +104,10 @@ No need to add PYTHONPATH, VIRTUAL_ENV, PATH in your docker commpose file, as Do
     ```bash
     source Domoticz_Python_Environment/bin/activate
     cd /home/pi/domoticz/plugins/Domoticz-Zigbee
-    python3 -m pip install -r requirements.txt --upgrade 
+    python3 -m pip install -r requirements.txt --upgrade
     ```
 
-Finaly we need to arrange the way to start Domoticz
+Finally we need to arrange the way to start Domoticz
 
 1. using systemd: domoticz.service
 
@@ -144,7 +144,7 @@ Finaly we need to arrange the way to start Domoticz
 
 1. using domoticz.sh
 
-    Place the following line before `start-stop-daemon --chuid $USERNAME --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1` dans la fonction do_start()
+    Place the following line before `start-stop-daemon --chuid $USERNAME --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1` in the do_start() function
 
     ```bash
     export VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
@@ -155,7 +155,7 @@ Finaly we need to arrange the way to start Domoticz
 
 You can leave the stable7 venv setup as is, it will remain working
 
-If you want to move to the new setup (which is the proper setup), here is the steps
+If you want to move to the new setup (which is the proper setup), here are the steps
 
 1. Create a proper venv as described [Create the python environment](#create-the-python-environment)
 
@@ -167,7 +167,7 @@ If you want to move to the new setup (which is the proper setup), here is the st
   python3 -m pip install -r requirements.txt --upgrade
   ```
 
-1. Finaly update your Domoticz startup script and remove PYTHONPATH set and replace by
+1. Finally update your Domoticz startup script and remove PYTHONPATH set and replace by
 
 ```bash
 export VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
