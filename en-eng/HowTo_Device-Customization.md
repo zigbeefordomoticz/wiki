@@ -26,7 +26,7 @@ and of course we are counting on you to make the config file available for other
 | attribute  | xxxx                     |         |  Object describing attribute xxxx of ClusterId |
 | attribute  | Enabled                  |         |  Is this attribute definition enabled or not |
 | attribute  | Name                     |         |  Name of the attribute |
-| attribute  | DataType                 |         |  Attribute data type in hexa |
+| attribute  | DataType                 |         |  Attribute data type in hexa (see the DataType reference) |
 | attribute  | Range                    |         |  Attribute value ranges in hexa |
 | attribute  | Acc                      |         |  Attribute access right (RP: Reporting, R: read, W: write) |
 | attribute  | Default                  |         |  Attribute default value |
@@ -41,6 +41,7 @@ and of course we are counting on you to make the config file available for other
 | attribute  | DomoDeviceFormat         | result of eval |  format on how the value should be formatted before being sent to majDomoDevice ( str, float, int ) |
 | attribute  | UpdDomoDeviceWithCluster |         |  Force to do the majDomoDevice on a specified Cluster, despite the current cluster |
 | attribute  | UpdDomoDeviceWithAttribute| none   |  Force to do the majDomoDevice on a specific attribute |
+| attribute  | UpdDomoDeviceWithEp      | none    |  Force to do the majDomoDevice on a specific endpoint, despite the current endpoint |
 | attribute  | ValueOverwrite           |         |  Overwrite the value, by the one given here |
 | attribute  | EvalExpCustomVariables   |         |  list of variables to be retrieved in the device.  `{"yyy": { "ClusterId": "0403", "AttributeId": "0014"}}` |
 | EvalExpCustomVariables | yyyy       |         |  variable name to be used in the EvalExp string |
@@ -54,13 +55,16 @@ and of course we are counting on you to make the config file available for other
 
 ## ActionList
 
-| name                    | function |
-| ----                    | -------- |
-| check_store_value       | store the value to the corresponding Ep, Cluster, Attribute |
-| upd_domo_device         | request an update of the corresponding ClusterType for this value of Cluster |
-| store_specif_attribute  | request to store the value under the hierarchy SpecifStoragelvl1:SpecifStoragelvl2:SpecifStoragelvl3 |
-| basic_model_name        | reserved to handle the attribute 0005 of Basic cluster |
-| update_battery          | request an update of the battery level |
+| name                       | function |
+| ----                       | -------- |
+| check_store_value          | check the value and store it to the corresponding Ep, Cluster, Attribute |
+| check_store_raw_value      | same as check_store_value but stores the raw (undecoded) value |
+| upd_domo_device            | request an update of the corresponding ClusterType for this value of Cluster |
+| store_specif_attribute     | request to store the value under the hierarchy SpecifStoragelvl1:SpecifStoragelvl2:SpecifStoragelvl3 |
+| basic_model_name           | reserved to handle the attribute 0005 of Basic cluster |
+| update_battery             | request an update of the battery level |
+| update_battery_voltage     | request an update of the battery level from a voltage value (uses MinBatteryVoltage / MaxBatteryVoltage) |
+| update_battery_percentage  | request an update of the battery level from a percentage value |
 
 ## evaluation
 
@@ -90,6 +94,72 @@ and of course we are counting on you to make the config file available for other
      "EvalExp": "round(int(value) * pow( 10, scale), 1)"
     }
     ```
+
+## Value decoding and validation
+
+In addition to `EvalExp`, several attribute properties let you decode, validate or remap the received value. They are applied in this order: **SpecialValues → Range → DecodedValueList / ManufSpecificFunc / EvalExp+EvalFunc → ActionList**.
+
+### DecodedValueList
+
+Maps a raw received value to a decoded value (typically a human-readable string). If the received value matches a key in the list, it is replaced by the corresponding value before being stored or sent to Domoticz.
+
+```json
+"0000": {
+    "Enabled": true,
+    "Name": "Contact",
+    "DataType": "10",
+    "DecodedValueList": { "0": "Closed", "1": "Open" },
+    "ActionList": [ "check_store_value", "upd_domo_device" ]
+}
+```
+
+### Range
+
+Defines the valid range for the attribute value. **A value outside the declared range is considered invalid and is silently dropped** (no store, no Domoticz update). This is useful to filter out erratic readings. Out-of-range values are logged as warnings only when the `TrackingEraticValue` plugin option is enabled.
+
+### SpecialValues
+
+Declares values that need a special handling (for example a "no data" / "invalid" sentinel sent by the device) so they are not treated as a regular measurement.
+
+### EvalFunc
+
+When a transformation is too complex for a single `EvalExp` expression, reference a helper function instead. `EvalFunc` points to a key declared in the `FUNCTION_MODULE` dictionary of `DevicesModules/__init__.py` (see the Device module section). The helper receives the value and returns the computed value (returning `None` skips the update). Unlike `ManufSpecificFunc`, an `EvalFunc` only computes a value and does not trigger its own actions.
+
+```json
+"0400": {
+    "Enabled": true,
+    "Name": "InstantPower",
+    "DataType": "23",
+    "EvalFunc": "compute_metering_conso",
+    "ActionList": [ "check_store_value", "upd_domo_device" ]
+}
+```
+
+## DataType reference
+
+`DataType` is the Zigbee ZCL data type of the attribute, expressed in hexadecimal (without the `0x` prefix). The most commonly used values are:
+
+| DataType | ZCL type | Notes |
+| -------- | -------- | ----- |
+| `10` | Boolean | 0 / 1 |
+| `18` | 8-bit bitmap | |
+| `19` | 16-bit bitmap | |
+| `20` | unsigned int 8-bit | |
+| `21` | unsigned int 16-bit | |
+| `22` | unsigned int 24-bit | |
+| `23` | unsigned int 32-bit | |
+| `25` | unsigned int 48-bit | |
+| `28` | signed int 8-bit | |
+| `29` | signed int 16-bit | most temperature / humidity / pressure attributes |
+| `2a` | signed int 24-bit | |
+| `2b` | signed int 32-bit | |
+| `30` | 8-bit enumeration | |
+| `31` | 16-bit enumeration | |
+| `39` | single precision float | |
+| `41` | octet string | |
+| `42` | character string | |
+| `48` | array | |
+| `4c` | structure | e.g. Lumi/Xiaomi private attribute 0xff02 |
 
 ## Device module
 
@@ -138,6 +208,8 @@ If returning None, no action will be taken.
     }
 
     ```
+
+> `FUNCTION_MODULE` holds helpers referenced by **EvalFunc** (compute and return a value). `FUNCTION_WITH_ACTIONS_MODULE` holds helpers referenced by **ManufSpecificFunc** (handle the value and trigger their own actions, e.g. the Lumi private cluster).
 
 ### Optimize a non-yet optimized device
 
@@ -450,3 +522,21 @@ In this example we can note in addition to what was explained before:
 * For attribute 0x0000 of 0x0403 we are just storing the received info. Usually this attribute is used to provide the Pressure, but in the case of Lumi, we are using attribute 0x0010.
 
 * For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device` call. But prior to that we are performing a calculation `round(int(value) / 10, 1)`.
+
+## Testing your configuration
+
+1. Copy your JSON file to the plugin's local config folder (`Conf/Certified/00Local`) for your own devices, or to the matching `Certified/<Manufacturer>` folder of the z4d-certified-devices module when contributing.
+2. Restart the plugin (or re-pair the device) so it re-reads the configuration files.
+3. Check the plugin logs for the device pairing/import messages and confirm the configuration was loaded for your Model.
+4. Trigger each sensor or action on the physical device and verify the corresponding Domoticz widget updates correctly.
+5. If an attribute is received but nothing happens, double-check the `Enabled` flag, the `DataType`, the `ActionList`, and (if used) the `Range` — an out-of-range value is dropped silently.
+6. Enable the `TrackingEraticValue` plugin option if you suspect values are being filtered by `Range`; out-of-range values will then be logged as warnings.
+
+## Contributing
+
+Once your configuration works, please share it so other users benefit:
+
+* Open a Pull Request on [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices) with your JSON file under the appropriate `z4d_certified_devices/Certified/<Manufacturer>/` folder.
+* Make sure the device is referenced on [blakadder](https://zigbee.blakadder.com/) and fill the `_blakadder` field.
+* Populate `_comment` (device product name and manufacturer) and `_version`.
+* If you need help, use the [Discussions forum](https://github.com/zigbeefordomoticz/z4d-certified-devices/discussions/).
