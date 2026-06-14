@@ -2,15 +2,17 @@
 
 ## Overview
 
-It might happen that your device is well paired with the coordinator and the plugin, but do not behave has expected.
-The plugin is providing a way to overwrite the Zigbee standard behavior by adding specifics to the device plugin configuration.
+It might happen that your device is well paired with the coordinator and the plugin, but does not behave as expected.
+The plugin provides a way to overwrite the Zigbee standard behavior by adding specifics to the device plugin configuration.
 
-Since plugin version 6.4.4xx, the device config files have moved out of the plugin core engine to a specific python module ( z4d-certified-devices ). This will allow to have more regular update of config files without touching the plugin core engine.
+Since plugin version 6.4.4xx, the device config files have moved out of the plugin core engine to a specific python module ( z4d-certified-devices ). This allows more frequent updates of config files without touching the plugin core engine.
 
 The source code of the [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified) can be used as reference or examples.
 
-if you need some support/help to build your own config file, the best is to use the [Discussions forum](https://github.com/zigbeefordomoticz/z4d-certified-devices/discussions/),
-and for course we are counting on you to make the config file available for others.
+If you need some support/help to build your own config file, the best is to use the [Discussions forum](https://github.com/zigbeefordomoticz/z4d-certified-devices/discussions/),
+and of course we are counting on you to make the config file available for others.
+
+> **Tuya TS0601 devices:** devices using the Zigbee model `TS0601` communicate through a manufacturer-private cluster (`0xEF00`) and Data Points (DPs) instead of standard cluster attributes. They have their own dedicated guide: [Integrate Tuya TS0601 Devices with the Plugin](HowTo_Device-Customization-TS0601.md).
 
 ## Properties
 
@@ -19,88 +21,93 @@ and for course we are counting on you to make the config file available for othe
 | main       | ClusterId                |         |  Cluster ID defined in this json file |
 | main       | Description              |         |  Description of the Cluster ID |
 | main       | Version                  |         |  Version number of this cluster definition |
-| main       | Enabled                  |         |  Is this Cluster definition is enabled or not |
+| main       | Enabled                  |         |  Is this Cluster definition enabled or not |
 | main       | Attributes               |         |  list of Attribute and their definition |
 | attribute  | xxxx                     |         |  Object describing attribute xxxx of ClusterId |
-| attribute  | Enabled                  |         |  Is this attribute definition enabled or nor |
+| attribute  | Enabled                  |         |  Is this attribute definition enabled or not |
 | attribute  | Name                     |         |  Name of the attribute |
 | attribute  | DataType                 |         |  Attribute data type in hexa |
 | attribute  | Range                    |         |  Attribute value ranges in hexa |
-| attribute  | Acc                      |         |  Attribute access right (RP: Reporting, R: read, W, write) |
+| attribute  | Acc                      |         |  Attribute access right (RP: Reporting, R: read, W: write) |
 | attribute  | Default                  |         |  Attribute default value |
 | attribute  | Mandatory                |         |  Attribute mandatory flag. |
 | attribute  | DomoClusterType          |         |  Plugin ClusterType info ( Lux, Switch, Motion, ...) |
-| attribute  | EvalExp                  |  value  |  string containing a formula to compute the attribute value. Based on python3 eval() function|
-| attribute  | EvalFunc                 |         |  Function name define in a module in the DevicesModules (see Devices modules for more info.) |
-| attribute  | ActionList               |         |  List of action(s) to be triggered
+| attribute  | EvalExp                  |  value  |  string containing a formula to compute the attribute value. Based on the python3 eval() function |
+| attribute  | EvalFunc                 |         |  Function name defined in a module in the DevicesModules (see Device module for more info.) |
+| attribute  | ActionList               |         |  List of action(s) to be triggered |
 | attribute  | DecodedValueList         |         |  List of values with a decoded value in string |
 | attribute  | SpecialValues            |         |  List of special values |
-| attribute  | ValidValuesDomoDevices  | True    | Evaluation which should return True or False, and which will condition the MajDomoDevice call |
-| attribute  | DomoDeviceFormat        | result of eval |  format on how the value should be formated before sent to majDomoDevice ( str, float, int ) |
-| attribute  | UpdDomoDeviceWithCluster |         |  Force to do the majDomoDevice on a specified Cluster , despite the current clsuter |
-| attribute  | UpdDomoDeviceWithAttribute| none    |  Force to do the majDomoDevice on a specific attribute |
+| attribute  | ValidValuesDomoDevices   | True    | Evaluation which should return True or False, and which will condition the MajDomoDevice call |
+| attribute  | DomoDeviceFormat         | result of eval |  format on how the value should be formatted before being sent to majDomoDevice ( str, float, int ) |
+| attribute  | UpdDomoDeviceWithCluster |         |  Force to do the majDomoDevice on a specified Cluster, despite the current cluster |
+| attribute  | UpdDomoDeviceWithAttribute| none   |  Force to do the majDomoDevice on a specific attribute |
 | attribute  | ValueOverwrite           |         |  Overwrite the value, by the one given here |
-| attribute  | EvalExpCustomVariables   |         |  list of variables to be retrieved in the device.  {"yyy": { "Cluster": "0403", "Attribute": "0014"}} |
-| evalInputs | yyyy                     |         |  variable name to be used in the eval string |
-| evalInputs | ClusterId                |         |  cluster from which the variable value should be retrieved |
-| evalInputs | AttributeId              |         |  attribute from which the variable should be retrieved |
-| attribute  | ManufRawData             |         | Use in conjonction with **ManufSpecificFunc** and indicates that we must use the raw value and not the decoded one|
+| attribute  | EvalExpCustomVariables   |         |  list of variables to be retrieved in the device.  `{"yyy": { "ClusterId": "0403", "AttributeId": "0014"}}` |
+| EvalExpCustomVariables | yyyy       |         |  variable name to be used in the EvalExp string |
+| EvalExpCustomVariables | ClusterId  |         |  cluster from which the variable value should be retrieved |
+| EvalExpCustomVariables | AttributeId|         |  attribute from which the variable should be retrieved |
+| attribute  | ManufRawData             |         | Use in conjunction with **ManufSpecificFunc** and indicates that we must use the raw value and not the decoded one |
 | attribute  | ManufSpecificFunc        |         | Define a function from the device module to be called |
-| attribute  | SpecifStoragelvl1        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
-| attribute  | SpecifStoragelvl2        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
-| attribute  | SpecifStoragelvl3        |         | Use in conjonction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
+| attribute  | SpecifStoragelvl1        |         | Use in conjunction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
+| attribute  | SpecifStoragelvl2        |         | Use in conjunction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
+| attribute  | SpecifStoragelvl3        |         | Use in conjunction of the action **store_specif_attribute** and define the Name of the corresponding level in the data structure |
 
 ## ActionList
 
 | name                    | function |
 | ----                    | -------- |
-| check_store_value       | store the value to the corresponding Ep, Cluster,Attribute |
+| check_store_value       | store the value to the corresponding Ep, Cluster, Attribute |
 | upd_domo_device         | request an update of the corresponding ClusterType for this value of Cluster |
-| store_specif_attribute  | request to store the value under the hierarchie SpecifStoragelvl1:SpecifStoragelvl2:SpecifStoragelvl3 |
+| store_specif_attribute  | request to store the value under the hierarchy SpecifStoragelvl1:SpecifStoragelvl2:SpecifStoragelvl3 |
 | basic_model_name        | reserved to handle the attribute 0005 of Basic cluster |
-| update_battery          | request and update of the battery level |
+| update_battery          | request an update of the battery level |
 
 ## evaluation
 
-* _value_ is a special variable which contained the zigbee device value
+* _value_ is a special variable which contains the zigbee device value
+* the formula is provided through the **EvalExp** attribute
 
 1. Transform a centi-degree _value_ into degree
 
-    ``` "eval": "round(int(value) / 100, 1)", ```
+    ```json
+    "EvalExp": "round(int(value) / 100, 1)"
+    ```
 
 2. transform the received data ( _value_ ) into the Atmo Pressure as per the Zigbee standard
 
-    ``` "eval": "round(int(value) * pow( 10, scale), 1)", ```
+    ```json
+    "EvalExp": "round(int(value) * pow( 10, scale), 1)"
+    ```
 
 3. transform the Scaled Pressure measurement.
 
    1. retrieve the _scale_ in attribute 0x0014 of cluster 0x0403
-   2. evaluate the the formula with the retrieved _scale_ information
+   2. evaluate the formula with the retrieved _scale_ information
 
     ```json
     {
-     "evalInputs": {"scale": { "Cluster": "0403", "Attribute": "0014"}},
-     "eval": "round(int(value) * pow( 10, scale), 1)",
+     "EvalExpCustomVariables": {"scale": { "ClusterId": "0403", "AttributeId": "0014"}},
+     "EvalExp": "round(int(value) * pow( 10, scale), 1)"
     }
-     ```
+    ```
 
 ## Device module
 
 ### overview
 
-instead of using eval which is limited to simple expression, you can implement a full python function to handle the value as an input and return the result.
-If returning None, no action will be taken
+instead of using EvalExp which is limited to simple expressions, you can implement a full python function to handle the value as an input and return the result.
+If returning None, no action will be taken.
 
 ### How-to
 
-1. Create your python3 module file in the  `DevicesModules`folder
+1. Create your python3 module file in the  `DevicesModules` folder
 1. Code your custom function in the \<manufacturer\>.py module
 
     * The function can take only 2 parameters `self` and `value`
     * The function must return something
 
     ```python
-    def custom_<manufactuer>_function(self, value):
+    def custom_<manufacturer>_function(self, value):
 
         return value
     ```
@@ -136,33 +143,32 @@ If returning None, no action will be taken
 
 It is likely that your device - if fully Zigbee 3.0 compliant - works well with the plugin. It means that you have paired the device, and automatically the plugin made a discovery of the device features and created the corresponding domoticz widgets.
 
-In that case, it might be efficient to get the plugin fully aware of what the device is and is not capable.
+In that case, it might be efficient to get the plugin fully aware of what the device is and is not capable of.
 
-To do so, you have to create a 'config' file under the `Local-Devices` folder.
+To do so, you have to create a 'config' file under the `Conf/Certified/00Local` folder.
 
-1. First you need to extract raw device informations from the plugin.
+1. First you need to extract raw device information from the plugin.
 
    1. open the WebUI and go to the Device Management section
 
     ![WebUI:Device Management](Images/EN_WebUI_Device-Management-Not_Optimized.png)
 
-   1. as shown on the here above screenshot you'll see a list of device, and the one with the yellow icon refer to devices for which there is no associated config file for the plugin and their behavior might not be optimum.
+   1. as shown on the screenshot here above you'll see a list of devices, and the ones with the yellow icon refer to devices for which there is no associated config file for the plugin and their behavior might not be optimum.
 
-   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste in the Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer). You will see a result like this one
+   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste it in a Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer) ). You will see a result like this one
 
-    ![JsonViewer Exemple](../Images/jsonviewer.png)
+    ![JsonViewer Example](../Images/jsonviewer.png)
 
 1. Create the configuration file for this device
 
     1. You have to create the file under the `Conf/Certified/00Local` folder
     1. You have to create the file with a specific name. The name is based on the Zigbee Model identifier you can get in the json file, look at attribute `Model`, and create the file as _modelname_.json.
 
-    for exemple if we look after the Json file above, the Zigbee model identifier is **lumi.weather**, so you will create a file name **Conf/Certified/00Local/lumi.weather.json**
+    for example if we look at the Json file above, the Zigbee model identifier is **lumi.weather**, so you will create a file named **Conf/Certified/00Local/lumi.weather.json**
 
     you can initialize the file with the following content, that we will show how to update in the next steps
 
     ```json
-
     {
         "_comment": "",
         "_blakadder": "",
@@ -174,39 +180,34 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
             }
         },
         "Type": "",
-        
-        ,
-        "ConfigureReporting": {
-        },
-        "ReadAttributes": {
-        },
-        "Param": {
-        },
+        "ClusterToBind": [],
+        "ConfigureReporting": {},
+        "ReadAttributes": {},
+        "Param": {}
     }
-
     ```
 
 1. Update the attributes
 
-    * **"\_comment":**  _put what ever comment you would like. We are recommending to put at least the Device Product Name and manufacturer_
+    * **"\_comment":**  _put whatever comment you would like. We recommend to put at least the Device Product Name and manufacturer._
     * **"\_blakadder":**  _you can add here the link to the [blakadder](https://zigbee.blakadder.com/) web site, where your device is referenced. If the device is not yet referenced, we strongly recommend you to request to get it in._
     * **"\_version":** _this is a version number you can put._
 
 1. Update the "Ep" section
 
-    Here we have to declare what are the Endpoint (EP) the device has and what are the Clusters available on each of the EP. for more information on Ep and Clusters I suggest you to look after the [Zigbee technical presentation](https://csa-iot.org/wp-content/uploads/2021/12/zigbee-technical-presentation.zip)
+    Here we have to declare what are the Endpoints (EP) the device has and what are the Clusters available on each of the EP. For more information on Ep and Clusters I suggest you look at the [Zigbee technical presentation](https://csa-iot.org/wp-content/uploads/2021/12/zigbee-technical-presentation.zip)
 
-    During pairing, the plugin started a discovery process and interviewed the device for the list of endpoints, and the supported clusters for each of the endpoint. This information will be found on the Json.
+    During pairing, the plugin started a discovery process and interviewed the device for the list of endpoints, and the supported clusters for each of the endpoints. This information will be found in the Json.
 
-    In the here after exemple you can see a somehow complex device which has 3 endpoints.
+    In the example here after you can see a somehow complex device which has 3 endpoints.
 
     ![Json Complex EndPoint Device CMS323](../Images/Json_Endoint.png)
 
-    We can see :
+    We can see:
 
     3 Endpoints : 0x01, 0x02 and 0x04 and we see for each of the ep the associated cluster.
 
-    This will result in the following config file where fo each Endpoint we have listed the available cluster and we have also define what are the associated Domoticz Widgets.
+    This will result in the following config file where for each Endpoint we have listed the available cluster and we have also defined what are the associated Domoticz Widgets.
 
     ```json
     {
@@ -236,15 +237,15 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
     | Ep | Widget | Cluster source of information |
     | -- | ------ | ----------------------------- |
     | 01 | Motion | The motion detection will come from the Cluster 0x0500 ( IAS ), Domoticz will switch the Motion widget from On to Off depending on the notification |
-    |    | Voltage| The device will send voltage information via the cluster 0x0001 ( Power ), and domoticz will displayed the voltage value |
+    |    | Voltage| The device will send voltage information via the cluster 0x0001 ( Power ), and domoticz will display the voltage value |
     | 02 | Temperature | The device will send Temperature information via cluster 0x0402 |
     |    | Humidity | Humidity info will be provided from cluster 0x0405 |
-    | 04 | Switch | The device offer the possibility to detect vibration on cluster 04 and the cluster 0500 will be used for |
+    | 04 | Switch | The device offers the possibility to detect vibration on cluster 04 and the cluster 0500 will be used for it |
 
-    if you look to the Json you could say that there is less clusters than the reality discovered by the plugin.
-    Indeed, cluster 0x0000 is mentioned only one on the Ep 01, which we consider suffisant and there is no need to get the same information across several Ep.
+    if you look at the Json you could say that there are fewer clusters than the reality discovered by the plugin.
+    Indeed, cluster 0x0000 is mentioned only once on the Ep 01, which we consider sufficient and there is no need to get the same information across several Ep.
 
-    In summary **Type** is corresponding to the Domoticz Widget to be created and used to display sensor information as well as handling actions
+    In summary **Type** corresponds to the Domoticz Widget to be created and used to display sensor information as well as handling actions
 
     More information on the [Cluster -> Widget](Technical/Clusters_Widget.md)
 
@@ -252,34 +253,30 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
 
     A **Binding** is the creation of a unidirectional logical link between a source endpoint/cluster identifier pair and a destination endpoint.
 
-    It might be needed to established a binding between the device and the coordinator in order to receive automatic report such as sensor information.
+    It might be needed to establish a binding between the device and the coordinator in order to receive automatic reports such as sensor information.
 
-    In `"ClusterToBind": [ ]` you will be able to list the clusters to be bound with the coordinator. By default , the plugin is looking after the Endpoint list (Ep) and will established a bind for each of the Ep/Cluster existing.
+    In `"ClusterToBind": [ ]` you will be able to list the clusters to be bound with the coordinator. By default, the plugin looks at the Endpoint list (Ep) and will establish a bind for each of the Ep/Cluster existing.
 
-    In case you have a multiple Ep device which serve same cluster, you might want to restrict the binding to only a specific Ep. In such case you can use `"bindEp": [ ]`
+    In case you have a multiple Ep device which serves the same cluster, you might want to restrict the binding to only a specific Ep. In such case you can use `"bindEp": [ ]`
 
-    If we follow the **CMS323**  device, we need to bind 01/0001, 02/0001, 04/001, 02/0402, 04/0405
+    If we follow the **CMS323** device, we need to bind 01/0001, 02/0001, 04/0001, 02/0402, 02/0405
 
     ```json
-
     "ClusterToBind": [ "0001", "0402", "0405" ],
-
     ```
 
 1. Update the ConfigureReporting section
 
     The Configure Reporting command is used to configure the reporting mechanism for one or more of the attributes of a cluster.
-    Usually in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well
+    Usually in order to put in place a Configure Reporting command, a corresponding binding needs to be done as well.
 
     ```json
-
     "ConfigureReporting": {
         "0001": { "Attributes": { "0021": { "DataType": "20", "MinInterval": "0E10", "MaxInterval": "A8C0", "TimeOut": "0000", "Change": "01" } }},
         "0402": { "Attributes": { "0000": { "DataType": "29", "MinInterval": "003C", "MaxInterval": "0384", "TimeOut": "0000", "Change": "0032" } } },
         "0405": { "Attributes": { "0000": { "DataType": "21", "MinInterval": "003C", "MaxInterval": "0384", "TimeOut": "0000", "Change": "0032" } } }
     },
-
-    ````
+    ```
 
 1. Update the ReadAttributes section
 
@@ -287,7 +284,6 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
     In this section we are going to indicate to the plugin which Cluster/Attributes are valid and can be queried.
 
     ```json
-    
     "ReadAttributes": {
         "0000": ["0004","0005","0006","0007"],
         "0001": [ "0020" ],
@@ -296,7 +292,6 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
         "0405": [ "0000" ],
         "0500": [ "0000", "0001", "0002", "0010", "0011" ]
     },
-    
     ```
 
 1. Additional parameters
@@ -305,14 +300,14 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
     | ---------                   | ----------- |
     | ActivePowerDivisor          | Divisor to be used when receiving Active Power via Cluster 0x0b04 and Attribute 0x050b |
     | BatteryDevice               | specify that the device is a battery based device and must be treated as such |
-    | BatteryPercentageConverter  | the value will be used to device the value send byt the device. eg. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
-    | BatteryPoweredDevice        | Used to indicate despite what the device tell, it is a Battery powered device |
+    | BatteryPercentageConverter  | the value will be used to divide the value sent by the device. e.g. if we receive 156, and we set `BatteryPercentageConverter = 2`, this will convert into 78% |
+    | BatteryPoweredDevice        | Used to indicate despite what the device tells, it is a Battery powered device |
     | CreateWidgetDomoticz        | |
     | IgnoreWindowsCoverringValue50 | |
-    | MainPoweredDevice           | Used to indicate despite what the device tell, it is a Main powered device |
-    | MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the coming info |
-    | MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz, `Unitless` (means that we have Watts and we can send it like that) |
-    | MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the coming info |
+    | MainPoweredDevice           | Used to indicate despite what the device tells, it is a Main powered device |
+    | MaxBatteryVoltage           | define the max battery voltage, which has to be expressed with the same unit as the incoming info |
+    | MeteringUnit                | Unit of measure on the Metering cluster `kW` (means that we have to x 1000 to send to Domoticz), `Unitless` (means that we have Watts and we can send it like that) |
+    | MinBatteryVoltage           | define the min battery voltage, which has to be expressed with the same unit as the incoming info |
     | PowerMeteringDivisor        | Divisor to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
     | PowerMeteringMultiplier     | Multiplier to be used when receiving Instant Power via Cluster 0x0702 and Attribute 0x0400 |
     | PowerOnOffStateAttribute8002 | |
@@ -322,18 +317,18 @@ To do so, you have to create a 'config' file under the `Local-Devices` folder.
     | SummationMeteringMultiplier | Multiplier to be used when receiving Summation Power via Cluster 0x0702 and Attribute 0x0000 |
     | TUYA_REGISTRATION           | |
     | TUYA_REMOTE                 | |
-    | VoltageConverter            | the value will be used to device the value send byt the device. eg. if we receive 22450, and we put `VoltageCOnvert = 100`, this will convert into 224.5 Volts |
+    | VoltageConverter            | the value will be used to divide the value sent by the device. e.g. if we receive 22450, and we set `VoltageConverter = 100`, this will convert into 224.5 Volts |
     | WindowsCoverringInverted    | |
 
 ## Widget Type
 
-"Type" is used to define the list of Widget Type (also named Device in domoticz). You can define a list of Widgets to be created by combining several type separated by /
+"Type" is used to define the list of Widget Type (also named Device in domoticz). You can define a list of Widgets to be created by combining several types separated by /
 
 For example
 
-    ```json
-    "Type": "Baro/Temp/Humi"
-    ```
+```json
+"Type": "Baro/Temp/Humi"
+```
 
 Would create 5 widgets in Domoticz:
 
@@ -408,17 +403,17 @@ Would create 5 widgets in Domoticz:
 | Water |     |
 | WaterCounter |     |
 
-## A concreate exemple: lumi Weather
+## A concrete example: lumi Weather
 
 ```json
 {
     "Ep": {
         "01": {
-            "0000": { 
+            "0000": {
                 "Attributes": {
                     "fff0": { "Enabled": true, "Name": "Aqara_0000_fff0", "DataType": "42" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]},
                     "ff01": { "Enabled": true, "Name": "Aqara_0000_ff01", "DataType": "42" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]},
-                    "ff02": { "Enabled": true, "Name": "Aqara_0000_ff02", "DataType": "42" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]}  
+                    "ff02": { "Enabled": true, "Name": "Aqara_0000_ff02", "DataType": "4c" , "ManufRawData": true, "ManufSpecificFunc": "Lumi_fcc0", "ActionList": [ "check_store_value"]}
                 }
             },
             "0003": "",
@@ -447,11 +442,11 @@ Would create 5 widgets in Domoticz:
 }
 ```
 
-In this exemple we can note in addition to what was explain before:
+In this example we can note in addition to what was explained before:
 
 * For attributes 0xfff0, 0xff01, 0xff02 of Cluster 0x0000 we are delegating the handling to a specific function `Lumi_fcc0`.
-    The reason is that Lumi is using those attributs to pass various informations like Battery level, On/Off state for Door sensor and plenty of other infos.
+    The reason is that Lumi uses those attributes to pass various information like Battery level, On/Off state for Door sensor and plenty of other infos.
 
-* For attribute 0x0000 of 0x0403 we are just storing the received info. Usually this attribut is used to provide the Pressure, but in case of Lumi, we are using attribut 0x0010.
+* For attribute 0x0000 of 0x0403 we are just storing the received info. Usually this attribute is used to provide the Pressure, but in the case of Lumi, we are using attribute 0x0010.
 
-* For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device`call. But prior to that we are performing a calculation `round(int(value) / 10, 1)``
+* For attribute 0x0010 of 0x0403, we are going to send this value to domoticz via the `upd_domo_device` call. But prior to that we are performing a calculation `round(int(value) / 10, 1)`.
