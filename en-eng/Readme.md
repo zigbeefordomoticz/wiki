@@ -77,6 +77,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## How-to add/certified/custom new devices
 
+* [Get devices well integrated with the plugin (device customization)](HowTo_Device-Customization.md)
 * [Integrate Tuya TS0601 Devices with the Plugin](HowTo_Device-Customization-TS0601.html)
 
 ## What to do if the device doesn't behave correctly
