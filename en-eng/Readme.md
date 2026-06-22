@@ -14,7 +14,7 @@ We are contributing to this project on our spare time. If you do consider that i
 ## IMPORTANT
 
 * We recommend Domoticz 2025.2 or higher (stable8 requires Python 3.11+)
-* The Device Widget Replace function is not supported as Domoticz doesn't notify the plugin of such changes
+* Replacing a device's widget via Domoticz isn't supported (Domoticz doesn't notify the plugin), but you can keep the old device's history with [Replace a Device](HowTo_Replace_Device.md)
 
 ## Introduction
 
@@ -61,6 +61,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Build a ZigBee mesh network](HowTo_Build-a-ZigBee-network.md)
 * [Add a new device](HowTo_Pairing-device.md)
 * [Remove a Device](HowTo_Remove-device.md)
+* [Replace a Device while keeping its Domoticz history](HowTo_Replace_Device.md)
 * [Device parameters](HowTo_Device-parameters.md)
 * [Use the plugin tools](HowTo_Using-tools.md)
 * [Group Management](HowTo_Group-management.md)
