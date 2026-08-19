@@ -36,6 +36,7 @@ Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est
 
 * [Mettre à jour le Plugin](Plugin_Mise-a-jour.md#mettre-à-jour-le-plugin)
 * [Les branches de mises à jour](Plugin_Mise-a-jour.md#les-branches-de-mise-à-jour)
+* [Migrer de stable8 vers stable9](Tuto_Migrer-stable8-vers-stable9.md)
 
 * [Mise à jour vers 4.1](../en-eng/Release_4.1.md) en anglais
 * [Mise à jour vers 6.1](Mise-a-jour_6.1.md)
