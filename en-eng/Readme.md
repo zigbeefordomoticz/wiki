@@ -31,16 +31,8 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Plugin updates
 
-* [Plugin updates](Plugin_Update.md#plugin-update)
-* [Plugin branches](Plugin_Update.md#plugin-branches)
-* [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md)
-
-### Release history (past major-version migrations)
-
-* [Release 4.1](Release_4.1.md)
-* [Release 6.1](Release_6.1.md)
-* [Release 6.3](Release_6.3.md)
-* [Release 7.1](Release_7.1.md)
+* [Plugin update](Plugin_Update.md) — routine updates, and the stable8/stable9 branches
+* [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) — one-way branch switch procedure
 
 ## Backups
 

@@ -350,7 +350,7 @@ sudo python3 -m pip install cryptography==40.0.2 --upgrade`
 
 This error comes with the API modification of DomoticZ 2023.2
 
-You need to update to the plugin version 7 following the [instructions](../Release_7.1.md).
+You need to update the plugin to a current version — see [Plugin Update](Plugin_Update.md).
 
 ------------
 
