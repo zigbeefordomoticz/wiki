@@ -1,8 +1,13 @@
 ## Plugin Update
 
-The plugin is regularly updated, for bug fixing or enhancement. This page describes how to keep the plugin up to date while staying on the same branch (`stable8` or `stable9`).
+"Update" can mean two different things — make sure you're following the right one:
 
-__Moving from `stable8` to `stable9`__ is a separate, one-way operation with its own procedure — see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) rather than the steps below.
+* __Routine update__ — bug fixes and enhancements, staying on the branch you're already on (`stable8` or `stable9`). This is what this page covers.
+* __Moving from `stable8` to `stable9`__ — a one-time, one-way switch to the new Domoticz Extended Framework branch. This is *not* a routine update and has its own procedure : see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md).
+
+## Routine update
+
+The plugin is regularly updated, for bug fixing or enhancement, without changing branch.
 
 ### From the WebUI
 
