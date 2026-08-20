@@ -3,6 +3,8 @@
 | <img src="Images/flag_france.png" width="55" height="40">   | [__Cliquer ici pour accéder au wiki en français__](fr-fr/Readme.md) |
 | <img src="Images/flag_netherlands.png" width="55" height="40">     | [__Klik hier om Nederland Wiki te opene__](nl-dut/Readme.md) |
 
+__Only the English wiki is kept (mostly) up to date. The French and Dutch versions lag behind — when in doubt, refer to the English wiki.__
+
 # About
 
 This repository aim to centralize all ZigBeeForDomoticZ plugin's documentation.
