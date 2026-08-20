@@ -2,6 +2,8 @@
 
 [Link to the English Wiki](../en-eng/Readme.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Readme.md)
 
+__Ce wiki en français n'est pas toujours tenu à jour. En cas de doute, préférez la [version anglaise](../en-eng/Readme.md), qui est la plus à jour.__
+
 Nous développons ce projet sur notre temps libre. Si vous appréciez ce qui est fait, vous pouvez contribuer par un don PayPal; ce don permettra notamment l'achat d’équipements afin d'augmenter la liste de matériels certifiés compatibles avec le Plugin ZigBeeforDomoticZ. [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
 
 
