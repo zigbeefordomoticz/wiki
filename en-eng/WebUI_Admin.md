@@ -76,10 +76,9 @@ Refer to the section [How to](Readme.md#how-to) for more informations.
 ------------------------------------------------
 ## Plugin
 
-Here is the __Plugin__ page of the plugin Web interface :
+This is the __Plugin__ page of the plugin Web interface.
 
-![FR_WebUI-Admin-Plugin](Images/FR_WebUI-Admin-Plugin.png)
-*This page may have have changed since this documentation was written.*
+*(No English screenshot is available yet for this page — contributions welcome.)*
 
 ### How to use
 
