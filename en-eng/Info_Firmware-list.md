@@ -5,9 +5,11 @@ This page covers OTA (Over-The-Air) firmware files that can be used with the plu
 ## How OTA Firmware Updates Work
 
 1. Download the firmware file for your device (see sources below)
-2. Place the file in the plugin's `OTA/` directory (`Domoticz-Zigbee/OTA/`)
-3. The plugin automatically offers the update to the device the next time it communicates
-4. Monitor progress in the WebUI under **Admin → OTA**
+2. Place the file in the plugin's firmware directory, in the folder for that
+   manufacturer (`Domoticz-Zigbee/OTAFirmware/<MANUFACTURER>/`)
+3. Restart the plugin — firmware folders are only read at startup
+4. Start the update from the WebUI under **Admin → Firmware**, then wait: the transfer
+   begins the next time the device asks for an image, which can take hours
 
 For a step-by-step walkthrough, see [Upgrading device firmware](HowTo_Update-device-firmware.md).
 
