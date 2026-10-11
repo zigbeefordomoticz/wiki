@@ -1,6 +1,6 @@
 # Model name resolution and `Conf/Local-Devices` precedence
 
-> This page describes plugin **9.1.008** with **z4d-certified-devices 9.607** or later.
+> This page describes plugin **9.1.008** with **z4d-certified-devices 10.xxx** or later.
 > Two behaviours differ in earlier versions; both are called out in place below.
 
 ## Why this page exists
