@@ -75,6 +75,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [Get devices well integrated with the plugin (device customization)](HowTo_Device-Customization.md)
 * [Integrate Tuya TS0601 Devices with the Plugin](HowTo_Device-Customization-TS0601.html)
+* [Model name resolution and `Conf/Local-Devices` precedence](Technical/Model-name-resolution.md)
 
 ## What to do if the device doesn't behave correctly
 

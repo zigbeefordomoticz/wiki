@@ -3,6 +3,7 @@
 * [Plugin directory structure](Plugin-directory-structure.md)
 * [Enrolement process](Enrolment-process.md)
 * [Manufacturer codes](Manufacturer-codes.md)
+* [Model name resolution and Conf/Local-Devices precedence](Model-name-resolution.md)
 * [Aqara Cube decoding](Aqara-Cube-decoding.md)
 * [Device Configuration_file](Device_Configuration_file.md)
 * [NXP ZFCG Zigate](NXP-ZFCG-Zigate.md)

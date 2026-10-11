@@ -12,6 +12,11 @@ The source code of the [z4d-certified-devices](https://github.com/zigbeefordomot
 If you need some support/help to build your own config file, the best is to use the [Discussions forum](https://github.com/zigbeefordomoticz/z4d-certified-devices/discussions/),
 and of course we are counting on you to make the config file available for others.
 
+> **Naming your file matters:** the plugin rewrites the model name reported by the device before
+> looking it up, so a file dropped in `Conf/Local-Devices` only takes effect if its name matches
+> what the resolution chain produces. See
+> [Model name resolution and `Conf/Local-Devices` precedence](Technical/Model-name-resolution.md).
+
 > **Tuya TS0601 devices:** devices using the Zigbee model `TS0601` communicate through a manufacturer-private cluster (`0xEF00`) and Data Points (DPs) instead of standard cluster attributes. They have their own dedicated guide: [Integrate Tuya TS0601 Devices with the Plugin](HowTo_Device-Customization-TS0601.md).
 
 ## Properties
