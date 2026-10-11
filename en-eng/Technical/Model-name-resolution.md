@@ -102,14 +102,14 @@ To change that outcome from `Conf/Local-Devices`:
 | `TS011F-_TZ3000_cehuw1lw.json` | ✅ **Wins at step 1.** Model becomes `TS011F-_TZ3000_cehuw1lw`, your config is used, the matrix is never reached. |
 | `TS011F_TZ3000_cehuw1lw.json` | ✅ Wins at step 2. Same effect, less readable — prefer the dashed form. |
 | `TS011F-plug.json` | ✅ The name is still rewritten to `TS011F-plug`, but **your file supplies the configuration** (the certified one is skipped at load time). Use this to patch the shared `TS011F-plug` profile for *all* 45 manufacturers listed in it. |
-| `MyPlug.json` with `"Identifier": [["TS011F", "_TZ3000_cehuw1lw"]]` | ✅ Wins at step 3. Before z4d-certified-devices 9.607 this was silently overridden — see the caveat below. |
+| `MyPlug.json` with `"Identifier": [["TS011F", "_TZ3000_cehuw1lw"]]` | ✅ Wins at step 3. Before z4d-certified-devices 10.607 this was silently overridden — see the caveat below. |
 | `TS011F.json` | ❌ No effect for this device. The bare model name is not part of the lookup chain. |
 
 **Recommendation:** to give one manufacturer its own behaviour, name the file
 `<ReportedModel>-<ManufacturerName>.json`. To change a whole shared profile, name the file exactly
 like the certified one.
 
-### Before z4d-certified-devices 9.607: a local `Identifier` list could be overwritten
+### Before z4d-certified-devices 10.607: a local `Identifier` list could be overwritten
 
 `import_local_device_conf()` registers your `Identifier` tuples into `ModelManufMapping`, and the
 certified loader used to write its own identifiers **unconditionally**:
@@ -124,7 +124,7 @@ identifier key. So if your local file was called `MyPlug.json` and a certified f
 file was loaded and your mapping was replaced. Identifier-based overrides only survived when the
 local file carried the **same name** as the certified file that would otherwise claim the tuple.
 
-Since 9.607 the loader snapshots the mappings that exist before the certified import starts — which
+Since 10.607 the loader snapshots the mappings that exist before the certified import starts — which
 can only come from `Conf/Local-Devices` — and leaves them alone. Note that identifiers claimed twice
 *inside* the certified database still follow last-one-wins; a dozen pairs are in that situation, and
 that is a data question for the JSON files, not for the loader.
