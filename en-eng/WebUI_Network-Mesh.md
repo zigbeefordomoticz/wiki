@@ -10,10 +10,11 @@ The page is reached from the WebUI menu: **Network > Mesh graph** (`/network/mes
 
 ![The Mesh graph page](Images/EN_WebUI-Network-Mesh-overview.png)
 
-*The screenshots on this page are rendered from a real 28-node report, so what they show is a real
-mesh rather than a mock-up. The devices appear under their network id because the report carries no
-device names; on your own installation each node is labelled with the name you gave it. These
-pictures may have changed since this documentation was written.*
+*The screenshots on this page are rendered from one real scan of a 62-device ZNP network - 25 of
+the 30 nodes that could answer did - so what they show is a real mesh rather than a mock-up. Each
+node carries the name you gave the device and its network id underneath; a device you never named
+is labelled with its network id alone. These pictures may have changed since this documentation was
+written.*
 
 Contents:
 
@@ -481,9 +482,10 @@ collection of its own - see [Refreshing the associated devices alone](#refreshin
 
 ![The associated devices view](Images/EN_WebUI-Network-Mesh-tree.png)
 
-*Each router declares the devices attached to it, and nothing in this table places the routers
-themselves - which is why it reads as a row of routers with their devices under them rather than as
-one hierarchy under the coordinator.*
+*Part of the associated devices view of the same scan, in the breadthfirst layout and zoomed in far
+enough to read the names: thirteen routers declared twenty-five devices between them. Nothing in
+this table places the routers themselves, which is why it reads as a row of routers with their
+devices under them rather than as one hierarchy under the coordinator.*
 
 ### It is not a record of how you paired the device
 
@@ -547,20 +549,19 @@ same nodes and the same links, arranged differently. Changing it recomputes the 
 | Layout | What it does | Best for |
 | ------ | ------------ | -------- |
 | **cose** *(default)* | Force-directed: links behave like springs, nodes repel each other, and the graph settles into its natural shape | **The general-purpose view, and the one to start from.** Clusters emerge on their own, so a group of devices that only hangs together through one router becomes visible as a lobe with a thin neck - which is exactly the fragile part of a mesh |
-| **concentric** | Rings around the coordinator, placed by how many links each node has | **Finding the hubs.** The most connected nodes land in the inner rings, the leaves on the outside. Good for answering "which repeaters is this network actually leaning on?" |
+| **concentric** | Rings around the coordinator, placed by how many links each node has | **Finding the hubs.** The most connected nodes land in the inner rings, the leaves on the outside. Good for answering "which repeaters is this network actually leaning on?" - but on a backbone where the routers all have a similar number of links, those inner rings hold one or two nodes each and the middle of the picture reads as a column rather than as rings |
 | **breadthfirst** | A hierarchy, rooted at the coordinator, level by level | **The associated devices view** - it is what that view is meant to be read in - and for seeing hop distance from the coordinator at a glance. It is the least useful on a densely meshed backbone, where it has to draw a hierarchy that does not really exist |
 | **circle** | Every node on one circle, in order | **Small networks, and auditing a single node.** Nothing is hidden behind anything else, and every link is a visible chord. It becomes unreadable past a few dozen nodes |
 | **grid** | Regular rows and columns | **Inventory rather than topology.** Every node occupies the same amount of space, so it is the easiest layout in which to confirm that a particular device is present, or to spot the isolated ones |
 
-The same mesh, in the two layouts that answer the most questions - **cose**, which lets the shape
-settle on its own:
+The neighbour tables of the same scan in **cose**, which lets the shape settle on its own, with
+*Hide nodes with no visible link* switched on so the layout has the canvas to itself:
 
 ![The neighbour view in the cose layout](Images/EN_WebUI-Network-Mesh-neighbours.png)
 
-and **concentric**, which rings the nodes by how connected they are, so the hubs the network leans
-on land in the middle:
-
-![The neighbour view in the concentric layout](Images/EN_WebUI-Network-Mesh-concentric.png)
+The routers in the middle are the backbone, every leaf around them hangs off one of those, and the
+thickness of the knot in the centre is itself the finding: on this network most routers hear most
+other routers.
 
 Practical sequence that works well:
 
