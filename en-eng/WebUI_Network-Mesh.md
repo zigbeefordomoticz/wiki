@@ -8,6 +8,13 @@
 
 The page is reached from the WebUI menu: **Network > Mesh graph** (`/network/mesh`).
 
+![The Mesh graph page](Images/EN_WebUI-Network-Mesh-overview.png)
+
+*The screenshots on this page are rendered from a real 28-node report, so what they show is a real
+mesh rather than a mock-up. The devices appear under their network id because the report carries no
+device names; on your own installation each node is labelled with the name you gave it. These
+pictures may have changed since this documentation was written.*
+
 Contents:
 
 * [What "mesh" means](#what-mesh-means)
@@ -176,6 +183,8 @@ One is the map of the roads, the other is the signposting.
 | Symmetric | usually, but not always | no: the return path can be different |
 | Survives a reboot | rebuilt as the radio hears traffic | discovered on demand, ages out |
 
+![The routing view](Images/EN_WebUI-Network-Mesh-routes.png)
+
 In **Routing tables** mode the graph draws one arrow per `(reporter, next hop)` pair, not one per
 routing row: a router typically reaches a dozen destinations through the same neighbour, and a dozen
 parallel arrows say nothing one does not. Click an arrow and the panel lists the destinations it
@@ -329,6 +338,12 @@ goes away or a better one appears, and that happens far more often than the main
 shape. The page therefore offers the tree as a collection of its own - see
 [Refreshing the tree alone](#refreshing-the-tree-alone).
 
+![The parent/child tree](Images/EN_WebUI-Network-Mesh-tree.png)
+
+*Each router declares its own children, and nothing in this table places the routers themselves -
+which is why the tree reads as a row of parents with their children under them rather than as one
+hierarchy under the coordinator.*
+
 ### Contested children
 
 When **two parents both declare the same child**, the graph draws both edges in red and flags the
@@ -364,6 +379,16 @@ same nodes and the same links, arranged differently. Changing it recomputes the 
 | **breadthfirst** | A hierarchy, rooted at the coordinator, level by level | **The parent/child tree** - it is what that view is meant to be read in - and for seeing hop distance from the coordinator at a glance. It is the least useful on a densely meshed backbone, where it has to draw a hierarchy that does not really exist |
 | **circle** | Every node on one circle, in order | **Small networks, and auditing a single node.** Nothing is hidden behind anything else, and every link is a visible chord. It becomes unreadable past a few dozen nodes |
 | **grid** | Regular rows and columns | **Inventory rather than topology.** Every node occupies the same amount of space, so it is the easiest layout in which to confirm that a particular device is present, or to spot the isolated ones |
+
+The same mesh, in the two layouts that answer the most questions - **cose**, which lets the shape
+settle on its own:
+
+![The neighbour view in the cose layout](Images/EN_WebUI-Network-Mesh-neighbours.png)
+
+and **concentric**, which rings the nodes by how connected they are, so the hubs the network leans
+on land in the middle:
+
+![The neighbour view in the concentric layout](Images/EN_WebUI-Network-Mesh-concentric.png)
 
 Practical sequence that works well:
 
