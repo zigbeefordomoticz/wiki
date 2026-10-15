@@ -22,6 +22,7 @@ Contents:
 * [The relationships](#the-relationships)
 * [Routing versus Neighbours](#routing-versus-neighbours)
 * [Depth: how to read it, and what it is worth](#depth-how-to-read-it-and-what-it-is-worth)
+* [Computed routes](#computed-routes)
 * [The parent/child tree](#the-parentchild-tree)
 * [Layouts: what is best for what](#layouts-what-is-best-for-what)
 * [Filters and what they act on](#filters-and-what-they-act-on)
@@ -301,6 +302,93 @@ computed from the links in front of you, and neither reads the depth column.
 > **In short: do not lay a tree out with `depth`, and do not colour nodes by it.** Read it in the
 > node panel, in the context of the whole column it came from, and treat a disagreement between two
 > reporters as the finding it is rather than as noise.
+
+------------------------------------------------
+
+## Computed routes
+
+> Available with the WebUI release that follows plugin 9.1.008.
+
+The three tables say what each node knows. The question most people actually
+bring to a mesh diagram is the one that spans them: **how does this device reach the
+coordinator, and what does it go through on the way?** The **Routes for** control answers it.
+
+One control, and the direction follows from what is picked, because the question is not
+symmetrical:
+
+* **the coordinator** - the view the page opens on - shows **one route per device**: how the
+  controller reaches each of them. The table under the graph lists every device with its hop count,
+  its first hop, and where the answer came from.
+* **any other device** shows **that device's route out to the coordinator**, hop by hop.
+
+Clicking a device in the table, or the button in its node panel, switches to that device's route.
+
+### How a route is worked out
+
+Nothing extra is asked of the mesh: the route is assembled from the scan already on screen.
+
+1. **Follow the routing tables.** The route starts at the source and reads its routing row for the
+   destination. That row gives the **next hop**, so the next node's table is read in turn, and so
+   on. This is a reconstruction of what the radios actually decided.
+2. **A row is only followed when it is `active`.** `discovery_underway`, `validation_underway` and
+   `inactive` are not decisions the radio has committed to, and treating one as a fact would
+   present a route that may never exist as an observation.
+3. **A destination in the current node's neighbour table is delivered directly**, in one hop - no
+   routing row is needed.
+4. **A sleepy end device is always reached through its parent**, the router that declared it in the
+   Associated Devices table. It is the last hop, and it is the only way a battery device can be
+   placed at all.
+5. **Where the chain breaks, the rest is estimated.** Zigbee's route discovery picks the path of
+   lowest total cost, and a link's cost comes from its delivery probability: `cost = min(7, 1/p⁴)`,
+   with `p` estimated from the LQI. The graph takes the **worse of a link's two directions**, as a
+   stack's own link status exchange does, and runs Dijkstra. That reproduces what route discovery
+   *would* choose.
+
+Every hop is labelled with which of the two produced it, and that distinction is the point:
+
+| On the graph | In the panel | Meaning |
+| ------------ | ------------ | ------- |
+| solid purple | `routing table`, `direct neighbour`, `through its parent` | the radios stated this hop |
+| **dashed** purple | `estimated` | this page worked the hop out |
+
+### What this is worth, and what it is not
+
+**A computed route is not an observed one.** This is worth being blunt about, and the page prints
+it under every route it draws:
+
+* **It is a reconstruction from one snapshot.** The routing rows are as they stood at the moment
+  the tables were read, which on a zigpy scan is minutes of collection, not an instant.
+* **Routes are sticky, then they are not.** A route stays in use until it fails, and then the mesh
+  rediscovers one - possibly a different one. A frame sent now may take a path that is in no table
+  this scan read.
+* **Anything that has changed since invalidates it.** A device that has woken, reparented, been
+  moved or been switched off changes the answer, and the scan knows nothing about it.
+* **The LQI-to-cost curve is not standardised.** Every vendor maps LQI to a delivery probability
+  its own way - Silicon Labs, TI and NXP all differ, and NXP's own published table (reproduced
+  under [Interference level](WebUI_Network.md#interference-level)) treats an LQI of 51 as a cost of
+  1 where the curve used here would call it the worst possible. So the estimated hops are a
+  plausible path, not the radio's arithmetic.
+* **Estimated hops are a prediction.** Dashed means *this page's guess*, not the radios'. On a real
+  mesh the estimate agrees with the tables wherever both exist, which is reassuring - but agreement
+  on the cases that can be checked is not proof of the cases that cannot.
+* **The route to the coordinator is usually the estimate.** Most meshes use **many-to-one**
+  routing towards the coordinator: instead of every node discovering its own route, the
+  coordinator floods one request and the nodes answer with route records. Those records live in the
+  concentrator, and a topology scan cannot read them - so for the destination people ask about most,
+  there is frequently no per-destination row to follow. The page says so when it applies.
+
+Read a computed route as **the most likely path**, useful for *"what is this slow device going
+through, and does that look sensible?"* - and not as a packet capture.
+
+### Where it is most useful
+
+* A device that is slow or drops commands: see whether it is going through three hops, or through a
+  router with a poor link.
+* Checking what a new repeater actually changed: run a scan before and after and compare the routes.
+* Spotting a chokepoint: in the coordinator's view, the first hop column shows how many devices
+  depend on one router.
+* A route that is wholly estimated tells you something in itself - no router on the way had a
+  settled row for that destination when the scan ran.
 
 ------------------------------------------------
 
