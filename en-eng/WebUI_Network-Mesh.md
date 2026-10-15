@@ -23,7 +23,7 @@ Contents:
 * [Routing versus Neighbours](#routing-versus-neighbours)
 * [Depth: how to read it, and what it is worth](#depth-how-to-read-it-and-what-it-is-worth)
 * [Computed routes](#computed-routes)
-* [The parent/child tree](#the-parentchild-tree)
+* [Associated devices: a router and what is attached to it](#associated-devices-a-router-and-what-is-attached-to-it)
 * [Layouts: what is best for what](#layouts-what-is-best-for-what)
 * [Filters and what they act on](#filters-and-what-they-act-on)
 * [Reading the picture](#reading-the-picture)
@@ -426,11 +426,18 @@ through, and does that look sensible?"* - and not as a packet capture.
 
 ------------------------------------------------
 
-## The parent/child tree
+## Associated devices: a router and what is attached to it
+
+> **On the name.** The WebUI calls this view **Parent/child tree**, and the words *parent* and
+> *child* are the Zigbee specification's own. They are used here for what a neighbour row reports -
+> the `parent`/`child` relationship of
+> [The relationships](#the-relationships) - and that is a *different* table from this one. What
+> this view draws is the **associated device list**: for each router, the devices attached to it.
+> Where the two could be confused below, the table is named rather than the relationship.
 
 ### What the source of the information is
 
-The tree does **not** come from a `Mgmt_*` table. It comes from the **extended address request**:
+It does **not** come from a `Mgmt_*` table. It comes from the **extended address request**:
 `NWK_addr_req` (or `IEEE_addr_req`) with `RequestType 0x01`, which a coordinator or a router answers
 with `NumAssocDev`, `StartIndex` and `NWKAddrAssocDevList` - the list of devices associated *to it*.
 
@@ -441,30 +448,61 @@ Three things follow from that:
    plugin collects this third table itself, with its own request and its own paging, and files it
    with the scan it belongs to (see [How a scan is performed](#how-a-scan-is-performed)).
 3. **A row is a declaration and nothing else.** No LQI, no relationship, no depth - unlike a
-   neighbour row. The tree view's edges are therefore all one colour.
+   neighbour row. The edges of this view are therefore all one colour.
 
 ### What it is worth
 
 It is the **only** table that places a sleepy end device in the network.
 
 A battery sensor answers no scan: it is asleep, it has no neighbour table, and asking it costs a
-timeout. In the neighbour and routing views it is either absent or an isolated dot. But its *parent*
-knows about it and answers for it - so in the parent/child view a Lumi/Aqara sensor, a door contact,
-a remote or a valve appears under the router it is actually attached to.
+timeout. In the neighbour and routing views it is either absent or an isolated dot. But the router
+it is attached to knows about it and answers for it - so in this view a Lumi/Aqara sensor, a door
+contact, a remote or a valve appears under the router it is actually attached to.
 
 That is the question most people are really asking of a mesh diagram: *which repeater is this sensor
 going through, and is that the one I expected?*
 
-It is also the fastest-changing part of a mesh. A battery device **reparents** whenever its parent
-goes away or a better one appears, and that happens far more often than the mains backbone changes
-shape. The page therefore offers the tree as a collection of its own - see
-[Refreshing the tree alone](#refreshing-the-tree-alone).
+It is also the fastest-changing part of a mesh. A battery device **reparents** - attaches itself to
+another router - whenever the one it is on goes away or a better one appears, and that happens far
+more often than the mains backbone changes shape. The page therefore offers this table as a
+collection of its own - see [Refreshing the tree alone](#refreshing-the-tree-alone).
 
 ![The parent/child tree](Images/EN_WebUI-Network-Mesh-tree.png)
 
-*Each router declares its own children, and nothing in this table places the routers themselves -
-which is why the tree reads as a row of parents with their children under them rather than as one
-hierarchy under the coordinator.*
+*Each router declares the devices attached to it, and nothing in this table places the routers
+themselves - which is why it reads as a row of routers with their devices under them rather than as
+one hierarchy under the coordinator.*
+
+### It is not a record of how you paired the device
+
+This is the question this table attracts most, so it is worth answering plainly: **no, the
+associated device list is not a record of where or how you paired a device.** It is where that
+device is attached **now**.
+
+What actually happens when a device joins:
+
+1. The device sends a **beacon request**. Every router in range whose network is open answers.
+2. **The joining device picks one of them**, by its own stack's criteria - signal, depth, spare
+   child capacity. The choice is the device's, not yours and not the coordinator's.
+3. It associates with that router, which from then on holds the frames addressed to it. That is the
+   entry you see in this table.
+
+Three consequences:
+
+* **Opening the network opens it everywhere.** Z4D's *Accept new hardware* sends the permit-join
+  request to the broadcast address `0xFFFC` - every router, plus the coordinator - so in normal use
+  you are not pairing "on" a particular router at all. Standing next to one biases the device's
+  choice, because that router's beacon is the strongest; it does not dictate it.
+* **Even a deliberate choice does not stick.** A device **reparents** on its own whenever its
+  router disappears or a better one turns up. A sensor paired next to a given repeater can be
+  somewhere else entirely a week later - and seeing that is precisely what this table is for.
+* **For a router, the entry barely matters.** A router that joined through another router is listed
+  as attached to it, but Zigbee PRO routes by cost and next hop, not down the association tree. So
+  for a router the row records *who it joined through*, not how its traffic flows. For an end
+  device it is the real thing: its frames genuinely go through that router.
+
+So read an entry as *"this is where the device is attached as of this scan"*, and a change between
+two scans as the device having moved - never as a pairing you did or did not do correctly.
 
 ### Contested children
 
