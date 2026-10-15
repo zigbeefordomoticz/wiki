@@ -258,8 +258,9 @@ coordinator, capped at 15 (`nwkMaxDepth`). Read that way, every node that descri
 give X the same depth.
 
 **In practice it does not work like that**, and the field is the one part of a report that is
-routinely misread. What follows is measured on a real 28-node ZNP network, over 7 consecutive scans
-of roughly 400 neighbour rows each.
+routinely misread. What follows is measured on the network in the screenshots above - a ZNP
+coordinator and 62 devices, of which 30 could be asked for a neighbour table and 28 were reached -
+over the eight scans of a single day, of between 380 and 460 neighbour rows each.
 
 ### Depth is a property of the reporting radio, not of the neighbour
 
@@ -268,34 +269,37 @@ fixed trait of the device's stack, not a reading that moves with the mesh:
 
 | Class | What the reporter's depth column looks like | Share of the measured network |
 | ----- | ------------------------------------------- | ----------------------------- |
-| **No depth** | `15` on every row (or `255` from the coordinator), except the coordinator row, which is always `0` | 7 of 22 answering nodes |
-| **Constant stamp** | *one* value on every row whatever the neighbour - almost certainly the reporter's own depth, stamped on each entry | 13 of 22 |
-| **Genuine per-neighbour** | varies across the table, consistently with a tree | 2 of 22, plus the coordinator for its own children |
+| **No depth** | `15` on every row, except the coordinator row, which is always `0` | 9 of the 25 nodes that answered |
+| **Constant stamp** | *one* value on every row whatever the neighbour - almost certainly the reporter's own depth, stamped on each entry | 14 of 25, the coordinator among them |
+| **Genuine per-neighbour** | more than one real value across the table | 2 of 25 |
 
-The proof is that reporters contradict each other. In the scan measured here, **21 of 51 nodes are
-given two or three different depths by different neighbours**. One router is depth 1 to one
-reporter, 2 to another and 3 to a third. It cannot be all three, so the number is not a property of
-that router.
+The proof is that reporters contradict each other. In the scan measured here, 50 nodes are given a
+depth by somebody, and **23 of them are given two or three different ones**. Two routers in the
+screenshots above, *Switch Buanderie* and *Led Télé*, are each depth 1 to one neighbour and depth 2
+to another; a node cannot be both, so the number is not a property of that node.
 
-Over 394 rows of one scan:
+Over the 462 rows of one scan:
 
 | Value | Rows | |
 | ----- | ---- | --- |
-| `15` | 260 (66%) | legal, but used as a sentinel by most stacks here |
-| `255` | 20 (5%) | out of range; the plugin reports it as unknown |
-| `0`-`14` | 114 (29%) | plausible - but most come from a constant stamp |
-| of which, from a reporter that varies depth per neighbour | **37 (9%)** | the rows actually worth reading |
+| `15` | 319 (69%) | legal, but used as a sentinel by most stacks here |
+| `255` | 22 (5%) | out of range; the plugin reports it as unknown, and the graph shows no depth at all |
+| `0`-`14` | 121 (26%) | plausible - but most come from a constant stamp |
+| of which, from a reporter that varies depth per neighbour | **34 (7%)** | the rows actually worth reading |
 
-### Where it is genuine, it is excellent
+### Where it is genuine, it is still only partly arithmetic
 
-The two reporters that do vary their depth are internally perfect:
+The two reporters that do vary their depth are right about the part of the tree they are in:
 
-* one reports its parent at depth 1 - so it is itself at 2 - and both of its children come back at
-  exactly 3, including the sleepy end device its Associated Devices table also declares;
-* the other reports its four declared children at depth 3, and two independent neighbours put that
-  router itself at depth 2.
+* *Switch Buanderie* reports its parent at depth 1 - so it is itself at 2 - and the two devices it
+  declares as its own, a router and a sleepy end device, come back at exactly 3. Its nine *sibling*
+  rows, though, all read 1, which cannot be true of a sibling of a node at depth 2;
+* *Led Télé* stamps 2 on every router it hears and 3 on the four devices its Associated Devices
+  table declares. That is its own depth and its children's, which is the useful half of a tree and
+  says nothing about the fifteen routers it stamped.
 
-So the data is good. It is just rare, and nothing in the row says which kind of row you are holding.
+So where the column moves at all, the parent and child rows hold up. The rest of the column does
+not, and nothing in a row says which kind of row you are holding.
 
 ### How to read it
 
@@ -316,8 +320,9 @@ So the data is good. It is just rare, and nothing in the row says which kind of 
 
 * **Anchoring a fragment of the real association tree.** The `parent` and `child` rows of a genuine
   reporter are the only part of the tree the scan can actually prove. The Associated Devices table
-  gives router→device edges but cannot rank them - on the measured network it yields 13 separate
-  stars of a router and its devices, with nothing placing the routers themselves.
+  gives router→device edges but cannot rank them - on the measured network thirteen routers
+  declared twenty-five devices between them, which is thirteen separate stars with nothing placing
+  the routers themselves.
 * **Catching a reparenting.** A child's depth should be its parent's plus one. When a genuine
   reporter's arithmetic stops working, something has moved.
 * **Recognising a stack.** The depth signature is stable per device, so it effectively identifies
@@ -327,8 +332,10 @@ So the data is good. It is just rare, and nothing in the row says which kind of 
 
 For the question people actually ask of this field - *how far is this device from the coordinator?* -
 use **hop distance over the links the scan reports**, not depth. On the measured network that gives
-a complete and unambiguous answer, one coordinator, 23 nodes one hop away and 27 two hops away, all
-51 placed - where depth gives 51 nodes with contradictory claims.
+one unambiguous answer per node: the coordinator, 25 nodes one hop away and 25 two hops away. The
+eleven it cannot place are the honest part of the answer - nine battery devices no router reported
+hearing, a router that timed out, and one node the scan never reached - where depth offers 50 nodes
+with contradictory claims and no way to tell which claim to keep.
 
 The graph already draws that: the **concentric** layout rings nodes by how connected they are, and
 **breadthfirst** roots the graph at the coordinator and lays out levels away from it. Both are
