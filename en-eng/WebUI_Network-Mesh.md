@@ -52,16 +52,41 @@ Three roles make that possible ([Zigbee specification][zigbee-spec], and
 
 * The **coordinator** is your Zigbee key/dongle. There is exactly one, it formed the network and it
   holds the keys.
-* A **router** is any mains-powered device: a bulb, a plug, a wall switch, a repeater. Routers *are*
-  the mesh - they are what a frame hops through.
-* An **end device** is almost always battery-powered: a motion sensor, a door contact, a remote,
+* A **router** is usually a mains-powered device: a bulb, a plug, a wall switch, a repeater.
+  Routers *are* the mesh - they are what a frame hops through.
+* An **end device** is usually battery-powered: a motion sensor, a door contact, a remote,
   a thermostatic valve. It has no neighbour table, relays nothing, and spends most of its life with
   its radio off. It talks to the network through exactly one router, **its parent**, which keeps
   the frames addressed to it until it wakes up and polls.
 
+### Mains-powered does not always mean router
+
+The word "usually" above is doing real work, and it is the first thing to check when a device is
+not where you expect it in the graph.
+
+A device is a router because **it says it is** - in the MAC capability it announces when it joins -
+not because of how it is powered. Several common families are mains-powered and still announce
+themselves as reduced-function, so they relay nothing and keep no neighbour table:
+
+* **Switches wired without neutral.** They power themselves through the load, with very little
+  current to spare, and a good number of them are built not to route. Mechanically they are a wall
+  switch like any other; in the mesh they are a leaf.
+* **Models that are simply built that way**, whatever their wiring - Livolo switches and the
+  Aqara Opple remotes are the two the plugin deals with by name, and both announce
+  reduced-function.
+
+The plugin believes the device's own announcement, which is the right call: it gets these models
+right without a list of exceptions. For the graph this means such a device is drawn as an **end
+device**, is reported as **"No neighbour table"** on a scan, and - like any end device - appears in
+the parent/child tree under the router it is attached to rather than as part of the backbone.
+
+So a room whose only "mains-powered" device is a no-neutral switch has **no relay in it**, however
+many Zigbee devices are on the wall. That is worth knowing before blaming the radio.
+
 Two consequences run through the whole of this page:
 
-1. **The backbone is made of mains-powered devices only.** Every battery device hangs off it.
+1. **The backbone is made of routers only** - mains-powered, and announcing themselves as routers.
+   Every battery device, and every mains device that does not route, hangs off it.
 2. **A sleepy end device cannot be asked anything.** Whatever you learn about it, you learn from the
    router that answers on its behalf.
 
@@ -89,6 +114,11 @@ parent/child tree is in neither.
 The **Links to draw** control on the page selects which of them is drawn. They are exclusive modes
 rather than overlays, because a pair of nodes can appear in all three at once and the picture would
 say nothing.
+
+> Every control this page mentions - what it acts on, and what it is set to when the page opens -
+> is listed together under [Filters and what they act on](#filters-and-what-they-act-on). The
+> plugin settings that decide what a scan collects in the first place are under
+> [Settings](#settings).
 
 A mode is only offered when the selected scan actually carries that table. The scan listing says
 what each one holds, and a control for a table that is absent is greyed out rather than drawing an
@@ -120,6 +150,10 @@ The graph groups the six into four, because three of them answer the same questi
 | **Sibling** | `sibling` | on by default |
 | **Other relationships** | `none_of_above`, `previous_child` | **off** by default |
 | **Unknown relationship** | `unknown` | on by default |
+
+These four are the **Relationship** checkboxes on the page, and "by default" means how they are set
+when the page opens - see [Filters and what they act on](#filters-and-what-they-act-on). Nothing is
+remembered between visits: every control is back at its default each time the page is opened.
 
 `none_of_above` is the most common value on a healthy mesh of mains-powered devices and it is not a
 fault - it is two routers that hear each other without one having joined through the other. It is
@@ -494,14 +528,30 @@ question about one specific device on a large mesh.
 
 ## Filters and what they act on
 
-| Control | Acts on | Notes |
-| ------- | ------- | ----- |
-| **Links to draw** | which table is drawn | Neighbour tables / Routing tables / Both / Parent/child tree. Greyed out for a table the scan does not carry |
-| **Relationship** checkboxes | neighbour links only | see [The relationships](#the-relationships) |
-| **LQI window** | neighbour links only | both bounds inclusive. A link neither end measured has no LQI, so it is outside *every* window - it is not hidden by narrowing the range, it is simply not a value |
-| **Hide end devices** | nodes | removes the leaves to leave the backbone |
-| **Hide nodes with no visible link** | nodes | hides whatever the current filters have left isolated. Useful after narrowing the LQI window |
-| **Device icons** | drawing only | turns the per-device icons on or off; nothing is added or removed |
+Every control on the page, what it acts on, and where it starts:
+
+| Control | Acts on | When the page opens | Notes |
+| ------- | ------- | ------------------- | ----- |
+| **Focus a node** | the view | nothing focused | centres the graph on one device and fades the rest |
+| **Links to draw** | which table is drawn | Neighbour tables | Neighbour tables / Routing tables / Both / Parent/child tree. Greyed out for a table the scan does not carry, and a scan that carries only the tree opens on the tree |
+| **Layout** | positions only | cose | see [Layouts](#layouts-what-is-best-for-what) |
+| **Routes for** | the computed route | the coordinator | see [Computed routes](#computed-routes) |
+| **Relationship: Parent / child** | neighbour links only | **on** | see [The relationships](#the-relationships) |
+| **Relationship: Sibling** | neighbour links only | **on** | |
+| **Relationship: Other relationships** | neighbour links only | **off** | `none_of_above` and `previous_child`; they can double the number of edges on a large mesh |
+| **Relationship: Unknown relationship** | neighbour links only | **on** | |
+| **LQI window** | neighbour links only | 0 - 255, so nothing is excluded | both bounds inclusive. A link neither end measured has no LQI, so it is outside *every* window - it is not hidden by narrowing the range, it is simply not a value |
+| **Hide end devices** | nodes | **off** | removes the leaves to leave the backbone |
+| **Hide nodes with no visible link** | nodes | **off** | hides whatever the current filters have left isolated. Useful after narrowing the LQI window |
+| **Device icons** | drawing only | **on** | turns the per-device icons on or off; nothing is added or removed |
+
+The relationship filters and the LQI window are greyed out in the routing and parent/child views,
+because neither a routing row nor a parent/child row carries a relationship or an LQI for them to
+act on.
+
+Nothing is remembered between visits: the controls are back at the settings above every time the
+page is opened. Changing the selected scan does **not** reset them, so two scans can be compared
+under the same filters.
 
 The counters under the graph always read *visible / total*, so a filter never hides the fact that it
 is hiding something.
