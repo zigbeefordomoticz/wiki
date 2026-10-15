@@ -14,6 +14,7 @@ Contents:
 * [Three tables, three different questions](#three-tables-three-different-questions)
 * [The relationships](#the-relationships)
 * [Routing versus Neighbours](#routing-versus-neighbours)
+* [Depth: how to read it, and what it is worth](#depth-how-to-read-it-and-what-it-is-worth)
 * [The parent/child tree](#the-parentchild-tree)
 * [Layouts: what is best for what](#layouts-what-is-best-for-what)
 * [Filters and what they act on](#filters-and-what-they-act-on)
@@ -139,13 +140,7 @@ The graph collapses the two rows into one drawn link, and keeps both readings:
 This asymmetry is one of the more useful things in the report: a device that hears the mesh well but
 is not heard back will drop commands while looking perfectly healthy in a signal-strength reading.
 
-### A note on `depth`, and on LQI
-
-**Depth** - the node's distance from the coordinator in the tree - is reported by some radios and
-faked by others. Zigbee caps tree depth at 15, and a radio with no depth for a row tends to answer
-with a sentinel (`15`, or `255`) rather than omitting the field. The plugin reports a value outside
-0-15 as unknown, but cannot tell a genuine `15` from a sentinel. **Do not read a hierarchy out of
-the depth column**, and treat a depth on a `sibling` row with particular suspicion.
+### A note on LQI
 
 **LQI** is a 0-255 link quality estimate, described in [Network section > Terminology](WebUI_Network.md#terminology).
 It is not an RSSI and is not a dBm: a neighbour table carries LQI only. The graph bands it as:
@@ -207,6 +202,96 @@ What to look for in the routing view:
 A link in the neighbour view with no route over it is perfectly normal: no traffic has needed that
 path. A route over a pair that is not in the neighbour view is more interesting - usually it means
 one of the two did not answer the scan.
+
+------------------------------------------------
+
+## Depth: how to read it, and what it is worth
+
+Every neighbour row carries a **depth** field. In the Zigbee specification (§2.4.4.3.2) it is the
+*neighbour's* tree depth - its distance from the coordinator in the association tree, `0` for the
+coordinator, capped at 15 (`nwkMaxDepth`). Read that way, every node that describes device X should
+give X the same depth.
+
+**In practice it does not work like that**, and the field is the one part of a report that is
+routinely misread. What follows is measured on a real 28-node ZNP network, over 7 consecutive scans
+of roughly 400 neighbour rows each.
+
+### Depth is a property of the reporting radio, not of the neighbour
+
+Each radio behaves in one of three ways, and it behaves the same way in every scan - this is a
+fixed trait of the device's stack, not a reading that moves with the mesh:
+
+| Class | What the reporter's depth column looks like | Share of the measured network |
+| ----- | ------------------------------------------- | ----------------------------- |
+| **No depth** | `15` on every row (or `255` from the coordinator), except the coordinator row, which is always `0` | 7 of 22 answering nodes |
+| **Constant stamp** | *one* value on every row whatever the neighbour - almost certainly the reporter's own depth, stamped on each entry | 13 of 22 |
+| **Genuine per-neighbour** | varies across the table, consistently with a tree | 2 of 22, plus the coordinator for its own children |
+
+The proof is that reporters contradict each other. In the scan measured here, **21 of 51 nodes are
+given two or three different depths by different neighbours**. One router is depth 1 to one
+reporter, 2 to another and 3 to a third. It cannot be all three, so the number is not a property of
+that router.
+
+Over 394 rows of one scan:
+
+| Value | Rows | |
+| ----- | ---- | --- |
+| `15` | 260 (66%) | legal, but used as a sentinel by most stacks here |
+| `255` | 20 (5%) | out of range; the plugin reports it as unknown |
+| `0`-`14` | 114 (29%) | plausible - but most come from a constant stamp |
+| of which, from a reporter that varies depth per neighbour | **37 (9%)** | the rows actually worth reading |
+
+### Where it is genuine, it is excellent
+
+The two reporters that do vary their depth are internally perfect:
+
+* one reports its parent at depth 1 - so it is itself at 2 - and both of its children come back at
+  exactly 3, including the sleepy end device its Associated Devices table also declares;
+* the other reports its four declared children at depth 3, and two independent neighbours put that
+  router itself at depth 2.
+
+So the data is good. It is just rare, and nothing in the row says which kind of row you are holding.
+
+### How to read it
+
+1. **Never read a depth off a single row.** Look at the whole column of the node that reported it:
+   that is what says whether the number means anything. The node panel lists a node's neighbour rows
+   together, which is what makes this possible.
+2. **A constant column is the reporter talking about itself.** Treat it as unknown for the
+   neighbour.
+3. **`0` is always the coordinator.** Every stack gets that one right, and it carries no
+   information.
+4. **A column that varies is trustworthy.**
+5. **Depth is not hop count.** Tree depth says which node you *joined through*; hop distance says
+   who you can *hear*. In a Zigbee PRO mesh, routing is mesh routing, not tree routing, so the
+   association tree barely participates in how a frame actually travels. A router that stamps depth
+   4 can be a single radio hop from the coordinator, and both statements are true.
+
+### What it is good for
+
+* **Anchoring a fragment of the real association tree.** The `parent` and `child` rows of a genuine
+  reporter are the only part of the tree the scan can actually prove. The Associated Devices table
+  gives parent→child edges but cannot rank them - on the measured network it yields 13 separate
+  parent/child stars with nothing placing the parents themselves.
+* **Catching a reparenting.** A child's depth should be its parent's plus one. When a genuine
+  reporter's arithmetic stops working, something has moved.
+* **Recognising a stack.** The depth signature is stable per device, so it effectively identifies
+  which firmware family a router runs.
+
+### What to use instead
+
+For the question people actually ask of this field - *how far is this device from the coordinator?* -
+use **hop distance over the links the scan reports**, not depth. On the measured network that gives
+a complete and unambiguous answer, one coordinator, 23 nodes one hop away and 27 two hops away, all
+51 placed - where depth gives 51 nodes with contradictory claims.
+
+The graph already draws that: the **concentric** layout rings nodes by how connected they are, and
+**breadthfirst** roots the graph at the coordinator and lays out levels away from it. Both are
+computed from the links in front of you, and neither reads the depth column.
+
+> **In short: do not lay a tree out with `depth`, and do not colour nodes by it.** Read it in the
+> node panel, in the context of the whole column it came from, and treat a disagreement between two
+> reporters as the finding it is rather than as noise.
 
 ------------------------------------------------
 
