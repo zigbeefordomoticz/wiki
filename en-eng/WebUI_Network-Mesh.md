@@ -78,7 +78,7 @@ themselves as reduced-function, so they relay nothing and keep no neighbour tabl
 The plugin believes the device's own announcement, which is the right call: it gets these models
 right without a list of exceptions. For the graph this means such a device is drawn as an **end
 device**, is reported as **"No neighbour table"** on a scan, and - like any end device - appears in
-the parent/child tree under the router it is attached to rather than as part of the backbone.
+the associated devices view under the router it is attached to rather than as part of the backbone.
 
 So a room whose only "mains-powered" device is a no-neutral switch has **no relay in it**, however
 many Zigbee devices are on the wall. That is worth knowing before blaming the radio.
@@ -109,7 +109,7 @@ draw three of them, and they answer three genuinely different questions:
 
 They overlap, but none of them is a substitute for another: two nodes can be neighbours with no
 route between them, a route can exist through a node that is not in the neighbour table, and the
-parent/child tree is in neither.
+the associated device list is in neither.
 
 The **Links to draw** control on the page selects which of them is drawn. They are exclusive modes
 rather than overlays, because a pair of nodes can appear in all three at once and the picture would
@@ -315,8 +315,8 @@ So the data is good. It is just rare, and nothing in the row says which kind of 
 
 * **Anchoring a fragment of the real association tree.** The `parent` and `child` rows of a genuine
   reporter are the only part of the tree the scan can actually prove. The Associated Devices table
-  gives parent→child edges but cannot rank them - on the measured network it yields 13 separate
-  parent/child stars with nothing placing the parents themselves.
+  gives router→device edges but cannot rank them - on the measured network it yields 13 separate
+  stars of a router and its devices, with nothing placing the routers themselves.
 * **Catching a reparenting.** A child's depth should be its parent's plus one. When a genuine
   reporter's arithmetic stops working, something has moved.
 * **Recognising a stack.** The depth signature is stable per device, so it effectively identifies
@@ -353,7 +353,16 @@ symmetrical:
 * **the coordinator** - the view the page opens on - shows **one route per device**: how the
   controller reaches each of them. The table under the graph lists every device with its hop count,
   its first hop, and where the answer came from.
+
+![Routes from the coordinator to every device](Images/EN_WebUI-Network-Mesh-route-coordinator.png)
+
 * **any other device** shows **that device's route out to the coordinator**, hop by hop.
+
+![The route of one device out to the coordinator](Images/EN_WebUI-Network-Mesh-route-device.png)
+
+*A battery sensor two hops from the controller. Both hops are dashed - no router on the way had a
+settled routing row for the coordinator, so the whole route is the LQI estimate, and the note says
+why: this mesh uses many-to-one routing, whose route records a topology scan cannot read.*
 
 Clicking a device in the table, or the button in its node panel, switches to that device's route.
 
@@ -428,12 +437,15 @@ through, and does that look sensible?"* - and not as a packet capture.
 
 ## Associated devices: a router and what is attached to it
 
-> **On the name.** The WebUI calls this view **Parent/child tree**, and the words *parent* and
-> *child* are the Zigbee specification's own. They are used here for what a neighbour row reports -
-> the `parent`/`child` relationship of
-> [The relationships](#the-relationships) - and that is a *different* table from this one. What
-> this view draws is the **associated device list**: for each router, the devices attached to it.
-> Where the two could be confused below, the table is named rather than the relationship.
+> **On the name.** This view is called **Associated devices** in the WebUI, after the table it
+> draws: for each router, the devices attached to it.
+>
+> The words *parent* and *child* are the Zigbee specification's own and are still used on this page,
+> but for something else - the `parent`/`child` value a **neighbour** row reports, under
+> [The relationships](#the-relationships). That is a different table, gathered by a different
+> request, and this view used to carry the same name, which is why it no longer does. For an end
+> device the two coincide in practice: the router it is associated with *is* its parent, and holds
+> its frames for it.
 
 ### What the source of the information is
 
@@ -465,9 +477,9 @@ going through, and is that the one I expected?*
 It is also the fastest-changing part of a mesh. A battery device **reparents** - attaches itself to
 another router - whenever the one it is on goes away or a better one appears, and that happens far
 more often than the mains backbone changes shape. The page therefore offers this table as a
-collection of its own - see [Refreshing the tree alone](#refreshing-the-tree-alone).
+collection of its own - see [Refreshing the associated devices alone](#refreshing-the-associated-devices-alone).
 
-![The parent/child tree](Images/EN_WebUI-Network-Mesh-tree.png)
+![The associated devices view](Images/EN_WebUI-Network-Mesh-tree.png)
 
 *Each router declares the devices attached to it, and nothing in this table places the routers
 themselves - which is why it reads as a row of routers with their devices under them rather than as
@@ -504,7 +516,7 @@ Three consequences:
 So read an entry as *"this is where the device is attached as of this scan"*, and a change between
 two scans as the device having moved - never as a pairing you did or did not do correctly.
 
-### Contested children
+### Contested devices
 
 When **two parents both declare the same child**, the graph draws both edges in red and flags the
 device.
@@ -516,13 +528,13 @@ a device has moved, and which way.
 ### Caveats
 
 * **An empty list is ambiguous on a full scan.** The table is flat - `{node: [children]}` - so a
-  router that was asked for its children and timed out reads exactly like a router that has none.
+  router that was asked for its associated devices and timed out reads exactly like a router with none.
   On a *standalone* tree collection there is no such ambiguity: the per-node scan status then
   reports that collection's own outcome.
 * **The rows lag the rest of the scan.** A scan is timestamped when zigpy's neighbour and route
-  tables were read; the children are collected over the minutes that follow. A device that joined in
+  tables were read; the associated devices are collected over the minutes that follow. A device that joined in
   between can appear as a child of a router whose neighbour rows predate it.
-* **"No children" from a router is normal.** Plenty of routers parent nobody.
+* **A router with nothing attached to it is normal.** Plenty of routers carry no device at all.
 
 ------------------------------------------------
 
@@ -536,7 +548,7 @@ same nodes and the same links, arranged differently. Changing it recomputes the 
 | ------ | ------------ | -------- |
 | **cose** *(default)* | Force-directed: links behave like springs, nodes repel each other, and the graph settles into its natural shape | **The general-purpose view, and the one to start from.** Clusters emerge on their own, so a group of devices that only hangs together through one router becomes visible as a lobe with a thin neck - which is exactly the fragile part of a mesh |
 | **concentric** | Rings around the coordinator, placed by how many links each node has | **Finding the hubs.** The most connected nodes land in the inner rings, the leaves on the outside. Good for answering "which repeaters is this network actually leaning on?" |
-| **breadthfirst** | A hierarchy, rooted at the coordinator, level by level | **The parent/child tree** - it is what that view is meant to be read in - and for seeing hop distance from the coordinator at a glance. It is the least useful on a densely meshed backbone, where it has to draw a hierarchy that does not really exist |
+| **breadthfirst** | A hierarchy, rooted at the coordinator, level by level | **The associated devices view** - it is what that view is meant to be read in - and for seeing hop distance from the coordinator at a glance. It is the least useful on a densely meshed backbone, where it has to draw a hierarchy that does not really exist |
 | **circle** | Every node on one circle, in order | **Small networks, and auditing a single node.** Nothing is hidden behind anything else, and every link is a visible chord. It becomes unreadable past a few dozen nodes |
 | **grid** | Regular rows and columns | **Inventory rather than topology.** Every node occupies the same amount of space, so it is the easiest layout in which to confirm that a particular device is present, or to spot the isolated ones |
 
@@ -554,7 +566,7 @@ Practical sequence that works well:
 
 1. Start in **cose** with **Neighbour tables** to see the shape of the backbone.
 2. Switch to **concentric** to identify the hubs the mesh depends on.
-3. Switch to **Parent/child tree** with **breadthfirst** to see where the battery devices sit.
+3. Switch to **Associated devices** with **breadthfirst** to see where the battery devices sit.
 4. Switch to **Routing tables** (any layout, **cose** is fine) when you have a slow device and want
    to see what it is going through.
 
@@ -571,7 +583,7 @@ Every control on the page, what it acts on, and where it starts:
 | Control | Acts on | When the page opens | Notes |
 | ------- | ------- | ------------------- | ----- |
 | **Focus a node** | the view | nothing focused | centres the graph on one device and fades the rest |
-| **Links to draw** | which table is drawn | Neighbour tables | Neighbour tables / Routing tables / Both / Parent/child tree. Greyed out for a table the scan does not carry, and a scan that carries only the tree opens on the tree |
+| **Links to draw** | which table is drawn | Neighbour tables | Neighbour tables / Routing tables / Both / Associated devices. Greyed out for a table the scan does not carry, and a scan that carries only the tree opens on the tree |
 | **Layout** | positions only | cose | see [Layouts](#layouts-what-is-best-for-what) |
 | **Routes for** | the computed route | the coordinator | see [Computed routes](#computed-routes) |
 | **Relationship: Parent / child** | neighbour links only | **on** | see [The relationships](#the-relationships) |
@@ -583,8 +595,9 @@ Every control on the page, what it acts on, and where it starts:
 | **Hide nodes with no visible link** | nodes | **off** | hides whatever the current filters have left isolated. Useful after narrowing the LQI window |
 | **Device icons** | drawing only | **on** | turns the per-device icons on or off; nothing is added or removed |
 
-The relationship filters and the LQI window are greyed out in the routing and parent/child views,
-because neither a routing row nor a parent/child row carries a relationship or an LQI for them to
+The relationship filters and the LQI window are greyed out in the routing and associated-devices
+views,
+because neither a routing row nor an association row carries a relationship or an LQI for them to
 act on.
 
 Nothing is remembered between visits: the controls are back at the settings above every time the
@@ -618,7 +631,7 @@ Being able to tell *timed out* from *has no neighbours* is the single most usefu
 does that the older charts could not: before, both were drawn as a dot with no links.
 
 **Click anything.** A node opens a panel with its identity (network id, IEEE address, model, type,
-health, battery, LQI/RSSI), its scan status, its parent and its children, and every neighbour and
+health, battery, LQI/RSSI), its scan status, what it is attached to and what is attached to it, and every neighbour and
 routing row that mentions it. A link opens the two LQI readings. An arrow opens the destinations it
 carries.
 
@@ -637,7 +650,7 @@ this scan"*, the picture below is a picture of those 4 nodes. See the next secti
 The **Topology scan** card at the bottom of the Mesh page has two buttons:
 
 * **Scan** - a full topology scan. The same `/req-topologie` the Topology page has always used.
-* **Parent/child tree** - the children collection on its own (zigpy coordinators only).
+* **Associated devices** - that collection on its own (zigpy coordinators only).
 
 Both answer immediately: the scan itself runs in the background and takes **minutes**. A scan appears
 in the list only once it has finished - there is no half-written report. While one runs, the WebUI
@@ -672,7 +685,7 @@ seconds.
 
 ### The plugin half: associated devices
 
-When `ZigpyTopologyAssociatedDevices` is enabled, the plugin then collects the parent/child table
+When `ZigpyTopologyAssociatedDevices` is enabled, the plugin then collects the associated device table
 itself, because zigpy does not:
 
 * it runs **after** zigpy's half, never alongside it - two scanners interrogating the same routers
@@ -687,16 +700,16 @@ Both halves are filed as **one scan under one timestamp**, which is the moment z
 read.
 
 If the radio restarts mid-collection, the scan is filed with what it has - zigpy's two tables and no
-children section. An absent section is how the report says "this table was not collected", which is
+associated devices section. An absent section is how the report says "this table was not collected", which is
 a different statement from "collected and found nothing".
 
-### Refreshing the tree alone
+### Refreshing the associated devices alone
 
-**Parent/child tree** runs that second half on its own, without a full scan. One request per router
+**Associated devices** runs that second half on its own, without a full scan. One request per router
 instead of two paginated tables - much cheaper - and it refreshes exactly the part of the mesh that
 changes most often.
 
-It is filed as a scan of its own, carrying the children table alone. Its neighbour and route counts
+It is filed as a scan of its own, carrying the associated device table alone. Its neighbour and route counts
 are zero *because they were never asked for*, and the page labels it as such rather than drawing an
 empty mesh. It is refused while any other scan is in progress, and it needs a zigpy coordinator.
 
@@ -729,7 +742,7 @@ to answer. What follows:
   remove it from the plugin properly instead.
 * **It shows as `timeout`** - thick dashed orange border - and the coverage banner counts it. That is
   the honest answer: *asked, said nothing*.
-* **Its children reparent.** The battery devices that were attached to it move to another router,
+* **The devices on it reparent.** The battery devices that were attached to it move to another router,
   usually within minutes to hours. The old parent's declaration may survive in a stale table, which
   is what the red *contested child* edges show.
 * **Routes through it break.** Routes are rediscovered on demand, so a routing view taken right after
@@ -759,7 +772,7 @@ removed a relay from the backbone. On a mesh where a room hangs off one bulb, th
 everything behind it goes quiet or slows down while routes are rediscovered.
 
 In the graph it reads as: one node timed out, a lobe of the network suddenly attached by a single
-thin link or not attached at all, and a handful of contested children in the next tree collection.
+thin link or not attached at all, and a handful of contested devices in the next collection.
 
 This is the single most common cause of "my Zigbee network is unreliable in the evening".
 
@@ -770,8 +783,8 @@ is not counted against the scan's coverage. It appears:
 
 * in the **node list**, always;
 * in the **neighbour view**, only if a router reported hearing it;
-* in the **parent/child tree**, under the router that declared it - which is the view to use for
-  battery devices.
+* in the **associated devices** view, under the router that declared it - which is the view to
+  use for battery devices.
 
 ### A device the scan never reached
 
@@ -794,7 +807,7 @@ banner exists to prevent.
 2. **Restart the plugin first** if you want a true snapshot rather than an accumulation.
 3. **Remove devices you have really removed**, rather than leaving them to time out forever.
 4. **Read the coverage banner before the graph.**
-5. **Refresh the parent/child tree on its own** when the question is about battery devices - it is
+5. **Refresh the associated devices on its own** when the question is about battery devices - it is
    minutes instead of a full scan, and it is the part that moves.
 
 ------------------------------------------------
@@ -808,7 +821,7 @@ All of these live in the WebUI under **Settings**, in the advanced section.
 | `ZigpyTopologyReport` | **on** | Use the zigpy topology report. With it off, `/req-topologie` falls back to the legacy NetworkMap scan |
 | `ZigpyAutoTopology` | **off** | Let zigpy run its own periodic scan (every 12 hours). Only effective when a zigpy persistent database is enabled |
 | `ZigpyTopologyReportAutoBackup` | **off** | Keep the report of a scan nobody asked for. With it off, only a scan you requested is filed |
-| `ZigpyTopologyAssociatedDevices` | **off** | Collect the parent/child table as the second half of a full scan. Not required for the standalone **Parent/child tree** button - asking for the table there *is* the request |
+| `ZigpyTopologyAssociatedDevices` | **off** | Collect the associated device table as the second half of a full scan. Not required for the standalone **Associated devices** button - asking for the table there *is* the request |
 | `numTopologyReports` | **4** | How many reports are kept before the oldest is dropped |
 | `TopologyV2` | **on** | The non-zigpy (native ZiGate) collection path |
 
