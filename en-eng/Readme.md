@@ -44,6 +44,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * Section [Dashboard](WebUI_Dashboard.md)
 * Section [Management](WebUI_Management.md)
 * Section [Network](WebUI_Network.md)
+  * [Mesh graph](WebUI_Network-Mesh.md) — the Zigbee mesh, its relationships, routes and parent/child tree
 * Section [Admin](WebUI_Admin.md)
 * Section [Settings](WebUI_Settings.md)
 * Section [Tools](WebUI_Tools.md)

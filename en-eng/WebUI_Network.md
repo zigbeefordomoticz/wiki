@@ -5,6 +5,7 @@ Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get ac
 The section __Network__ contents the pages :
 
 * [Topology](#topology)
+* [Mesh graph](WebUI_Network-Mesh.md) — from plugin 9.1.008, a new interactive view of the same mesh
 * [Interference levels](#interference-level)
 
 ------------------------------------------------
@@ -34,6 +35,14 @@ Here are shown on a wheel, all links between 2 devices. If you leave the mouse o
 ### Right: Topology graph
 
 Here you can see more the hierarchical structure of your ZigBee network.
+
+### See also: the Mesh graph
+
+From plugin version 9.1.008 a third representation is available, on its own page:
+[Mesh graph](WebUI_Network-Mesh.md). It is an interactive graph of the same network, and it adds the
+routing tables and the parent/child tree to the neighbour relationships drawn here — together with
+what a mesh is, what each relationship means, how a scan is actually performed, and why a device
+that is switched off changes what you see.
 
 ### Additional informations
 
