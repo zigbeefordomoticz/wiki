@@ -355,22 +355,31 @@ The three tables say what each node knows. The question most people actually
 bring to a mesh diagram is the one that spans them: **how does this device reach the
 coordinator, and what does it go through on the way?** The **Routes for** control answers it.
 
-One control, and the direction follows from what is picked, because the question is not
-symmetrical:
+Nothing is worked out until you pick a device, and the direction then follows from what you
+picked, because the question is not symmetrical:
 
-* **the coordinator** - the view the page opens on - shows **one route per device**: how the
-  controller reaches each of them. The table under the graph lists every device with its hop count,
-  its first hop, and where the answer came from.
+* **the coordinator** shows **one route per device**: how the controller reaches each of them. The
+  table under the graph lists every device with its hop count, its first hop, and where the answer
+  came from. On the scan in the screenshots that is 51 rows out of 61 devices; the ten missing
+  ones are devices this scan connects to nothing at all, and a device with no route is left out of
+  the table rather than listed with an empty one.
 
 ![Routes from the coordinator to every device](Images/EN_WebUI-Network-Mesh-route-coordinator.png)
+
+*Every route the coordinator has to the devices around it, drawn at once over the mesh underneath:
+solid purple where the radios stated the hop, dashed purple where this page worked it out. It is a
+star over the whole mesh, which is why the page does not open on it - and clearing the field takes
+it off again.*
 
 * **any other device** shows **that device's route out to the coordinator**, hop by hop.
 
 ![The route of one device out to the coordinator](Images/EN_WebUI-Network-Mesh-route-device.png)
 
-*A battery sensor two hops from the controller. Both hops are dashed - no router on the way had a
-settled routing row for the coordinator, so the whole route is the LQI estimate, and the note says
-why: this mesh uses many-to-one routing, whose route records a topology scan cannot read.*
+*A battery motion sensor two hops from the controller, by way of the plug that declares it as one
+of its associated devices. Both hops are dashed - no router on the way had a settled routing row
+for the coordinator, so the whole route is the LQI estimate, and the note under it says why: this
+mesh uses many-to-one routing towards the coordinator, and those route records are held by the
+concentrator, where a topology scan cannot read them.*
 
 Clicking a device in the table, or the button in its node panel, switches to that device's route.
 
@@ -392,8 +401,9 @@ Nothing extra is asked of the mesh: the route is assembled from the scan already
 5. **Where the chain breaks, the rest is estimated.** Zigbee's route discovery picks the path of
    lowest total cost, and a link's cost comes from its delivery probability: `cost = min(7, 1/p⁴)`,
    with `p` estimated from the LQI. The graph takes the **worse of a link's two directions**, as a
-   stack's own link status exchange does, and runs Dijkstra. That reproduces what route discovery
-   *would* choose.
+   stack's own link status exchange does, and runs Dijkstra. That is the rule route discovery is
+   supposed to follow - which, as the measurements below show, is not the same as what the radios
+   in a given house were seen to do.
 
 Every hop is labelled with which of the two produced it, and that distinction is the point:
 
@@ -419,9 +429,14 @@ it under every route it draws:
   under [Interference level](WebUI_Network.md#interference-level)) treats an LQI of 51 as a cost of
   1 where the curve used here would call it the worst possible. So the estimated hops are a
   plausible path, not the radio's arithmetic.
-* **Estimated hops are a prediction.** Dashed means *this page's guess*, not the radios'. On a real
-  mesh the estimate agrees with the tables wherever both exist, which is reassuring - but agreement
-  on the cases that can be checked is not proof of the cases that cannot.
+* **Estimated hops are a prediction, and where it can be checked it is often wrong.** Dashed means
+  *this page's guess*, not the radios'. On the network measured here there are 31 router pairs
+  whose path was assembled by genuinely following a chain of routing rows, so the estimate can be
+  run beside a real decision: it picks the same path in 5 of them. In 16 of the 31 it prefers a
+  path it considers cheaper than the one the radios are actually using - usually a detour around a
+  weak direct link the radios keep using anyway. The curve is part of the reason: of the 280 links
+  in that scan, 210 sit at the maximum cost of 7 and 39 at 1, so `1/p⁴` has very little to say
+  between *fine* and *hopeless*. Read a dashed hop as *about here*, not as the path.
 * **The route to the coordinator is usually the estimate.** Most meshes use **many-to-one**
   routing towards the coordinator: instead of every node discovering its own route, the
   coordinator floods one request and the nodes answer with route records. Those records live in the
@@ -430,6 +445,25 @@ it under every route it draws:
 
 Read a computed route as **the most likely path**, useful for *"what is this slow device going
 through, and does that look sensible?"* - and not as a packet capture.
+
+### What it comes to on a real scan
+
+The numbers from the scan in the screenshots, which is an ordinary house rather than a difficult
+network, say what to expect:
+
+| Of the 61 devices beside the coordinator | |
+| --- | --- |
+| the coordinator reaches, every hop read from a table | 31 |
+| the coordinator reaches, wholly estimated | 19 - 38 estimated hops in all |
+| nothing in the scan connects | 11 - battery devices no router reported, and two dead nodes |
+| whose route **out** to the coordinator is read from the tables | 25 |
+| whose route out is wholly estimated | 25 |
+| Routers carrying a many-to-one row for the coordinator | 17, and 23 rows ask for a route record |
+
+The direction matters, and the asymmetry in that table is the many-to-one mechanism showing
+through: the coordinator mostly knows how to reach a device, while the device's own way back lives
+in a route record the scan cannot read. A route **out** to the coordinator is therefore the one
+most likely to be drawn entirely dashed, which is why the page prints that note under it.
 
 ### Where it is most useful
 
