@@ -627,7 +627,7 @@ Every control on the page, what it acts on, and where it starts:
 | **Focus a node** | the view | nothing focused | centres the graph on one device and fades the rest |
 | **Links to draw** | which table is drawn | Neighbour tables | Neighbour tables / Routing tables / Both / Associated devices. Greyed out for a table the scan does not carry, and a scan that carries only the tree opens on the tree |
 | **Layout** | positions only | cose | see [Layouts](#layouts-what-is-best-for-what) |
-| **Routes for** | the computed route | the coordinator | see [Computed routes](#computed-routes) |
+| **Routes for** | the computed route | empty, so no route is worked out | pick the coordinator for how it reaches every device, or any device for its route out; clearing the field takes the route off the graph again - see [Computed routes](#computed-routes) |
 | **Relationship: Parent / child** | neighbour links only | **on** | see [The relationships](#the-relationships) |
 | **Relationship: Sibling** | neighbour links only | **on** | |
 | **Relationship: Other relationships** | neighbour links only | **off** | `none_of_above` and `previous_child`; they can double the number of edges on a large mesh |
@@ -682,6 +682,13 @@ carries.
 
 **The coverage banner** above the graph is not decoration. When it says *"4 of 32 nodes answered
 this scan"*, the picture below is a picture of those 4 nodes. See the next section.
+
+**A line under the graph counts the rows that could not be drawn**, when there are any: *"1 report
+row(s) name a node this scan does not list, and were not drawn"*. A table can name a network
+address the scan has no node for - a device that has since left, an address reused, or in the scan
+used throughout this page a device the coordinator still declares as attached to it. Those rows are
+counted rather than invented into a node, and the count is worth a glance: several of them at once
+usually means the report and the device list have drifted apart.
 
 ------------------------------------------------
 
