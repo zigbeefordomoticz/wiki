@@ -661,8 +661,8 @@ Common `Param` keys:
 
 ## Step 7 — Testing Your Configuration
 
-1. Copy your JSON file to the plugin's certified devices folder.
-2. Re-pair the device (or force a plugin restart so it re-reads configs).
+1. Copy your JSON file to the `Conf/Local-Devices` folder of the plugin (for example `/home/pi/domoticz/plugins/Domoticz-Zigbee/Conf/Local-Devices/TS0601-MyDevice.json`). Don't use the certified devices folder: it lives inside the `z4d-certified-devices` Python module and is replaced at each update. The file name and the `Identifier` list decide which devices the file applies to: see [Model name resolution and `Conf/Local-Devices` precedence](Technical/Model-name-resolution.md).
+2. Restart the plugin so it reads the file (configuration files are loaded at plugin start), then re-pair the device.
 3. Check the plugin logs for the device pairing messages. Look for lines mentioning `TS0601_DP` to confirm the mapping was loaded.
 4. Trigger each sensor on the physical device and verify the corresponding Domoticz widget updates correctly.
 5. If a DP appears in the logs with an unknown type, add a `store_tuya_attribute` entry for it to capture its value for investigation.

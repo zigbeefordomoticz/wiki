@@ -222,7 +222,7 @@ It is likely that your device - if fully Zigbee 3.0 compliant - works well with 
 
 In that case, it might be efficient to get the plugin fully aware of what the device is and is not capable of.
 
-To do so, you have to create a 'config' file under the `Conf/Certified/00Local` folder.
+To do so, you have to create a 'config' file under the `Conf/Local-Devices` folder of the plugin (for example `/home/pi/domoticz/plugins/Domoticz-Zigbee/Conf/Local-Devices`). This folder is yours: plugin and certified-devices updates don't touch it, and a file there takes precedence over the certified database. Don't put your files in the certified devices folder: it lives inside the `z4d-certified-devices` Python module and is replaced at each update.
 
 1. First you need to extract raw device information from the plugin.
 
@@ -238,10 +238,12 @@ To do so, you have to create a 'config' file under the `Conf/Certified/00Local` 
 
 1. Create the configuration file for this device
 
-    1. You have to create the file under the `Conf/Certified/00Local` folder
+    1. You have to create the file under the `Conf/Local-Devices` folder
     1. You have to create the file with a specific name. The name is based on the Zigbee Model identifier you can get in the json file, look at attribute `Model`, and create the file as _modelname_.json.
 
-    for example if we look at the Json file above, the Zigbee model identifier is **lumi.weather**, so you will create a file named **Conf/Certified/00Local/lumi.weather.json**
+    for example if we look at the Json file above, the Zigbee model identifier is **lumi.weather**, so you will create a file named **Conf/Local-Devices/lumi.weather.json**
+
+    The file name must match the model name the plugin uses for the device, which is not always the raw Zigbee model (Tuya devices like `TS011F` or `TS0601` are renamed). See [Model name resolution and `Conf/Local-Devices` precedence](Technical/Model-name-resolution.md) for the naming rules.
 
     you can initialize the file with the following content, that we will show how to update in the next steps
 
@@ -530,9 +532,9 @@ In this example we can note in addition to what was explained before:
 
 ## Testing your configuration
 
-1. Copy your JSON file to the plugin's local config folder (`Conf/Certified/00Local`) for your own devices, or to the matching `Certified/<Manufacturer>` folder of the z4d-certified-devices module when contributing.
-2. Restart the plugin (or re-pair the device) so it re-reads the configuration files.
-3. Check the plugin logs for the device pairing/import messages and confirm the configuration was loaded for your Model.
+1. Copy your JSON file to the `Conf/Local-Devices` folder of the plugin. Only `.json` files are read, and the file name (without `.json`) is the model name it applies to.
+2. Restart the plugin so it reads the configuration files (they are loaded at plugin start). Re-pair the device if its widgets have to be created again.
+3. Check the plugin log: at startup you should see `++ Overwrite standard configuration model <model> with .../Conf/Local-Devices/<model>.json`. A JSON syntax error is logged as `JSON ConfFile: ... load failed` and the file is skipped. Then check the pairing messages for your device. If your file is not picked up, see [How to verify what the plugin decided](Technical/Model-name-resolution.md#how-to-verify-what-the-plugin-decided).
 4. Trigger each sensor or action on the physical device and verify the corresponding Domoticz widget updates correctly.
 5. If an attribute is received but nothing happens, double-check the `Enabled` flag, the `DataType`, the `ActionList`, and (if used) the `Range` — an out-of-range value is dropped silently.
 6. Enable the `TrackingEraticValue` plugin option if you suspect values are being filtered by `Range`; out-of-range values will then be logged as warnings.

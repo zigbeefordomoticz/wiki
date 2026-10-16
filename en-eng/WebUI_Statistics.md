@@ -1,49 +1,76 @@
-# The WebUI stastistics
+# Plugin statistics
 
-Like most website operators, Zigbee for Domoticz WEBUi collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. We uses [Matomo](https://fr.matomo.org) (previously Piwik) for this. Zigbee for Domoticz’s purpose in collecting non-personally identifying information is to better understand how Z4D plugin’s visitors use its website. From time to time, we may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage like:
+To understand how the plugin is used, the plugin sends anonymous usage statistics to the project's own [Matomo](https://matomo.org) server (`https://z4d.pipiche.net`). This page describes exactly what is sent, when, and how to stop it.
 
-* Coordinator type
-* Plugin version
-* Network size.
+## How to opt out
 
+The statistics are controlled by the __MatomoOptIn__ setting ("Enable the plugin to collect informations for analytics purposes..."), in the WebUI [Settings](WebUI_Settings.md) page, __Available services__ section. It is **enabled by default**.
 
-## cookies
+**At any time**, uncheck __MatomoOptIn__ and save: the plugin stops sending statistics immediately, no restart needed. Check it again to opt back in.
 
-As the WebUI is a mini website, we use the cookie functionality placed in your browser. When you first open the WebUI, a banner at the bottom asks for your permission to collect this data.
+At each start, the plugin log reminds you that the statistics are on:
 
-**At any time**, it is possible to change your choice to send us your data using the __PluginAnalytics__ setting in the WebUI settings page.
+`Z4D sends analytics information. (if you need to disable, disable the MatomoOptIn parameter via the WebUI - Settings)`
 
+Note that the __Allow Internet access__ (`internetAccess`) setting doesn't control the statistics: use __MatomoOptIn__.
 
-## Transparency
+## What is sent
 
-In addition to the traditional information collected on websites (browser, operating system, display resolution, etc...), we collect the following information :
+The statistics are sent by the plugin itself, from your Domoticz host. The WebUI doesn't track you: it has no tracking code and sets no cookie.
 
-* the coordinator model
+### How your installation is identified
 
-* the coordinator's firmware version
+Each plugin instance is identified by a SHA-256 hash of the IEEE address of its coordinator. The hash lets us count installations without knowing the address itself: the coordinator IEEE address never leaves your host.
 
-* the version of the Plugin
+There is one exception: on RoneLabs hardware (detected with the `/etc/modelinfo` file), the raw coordinator IEEE address is sent too, for hardware-specific support.
 
-* the size of the ZigBee network
+As with any request over the Internet, the Matomo server sees the public IP address of your connection.
 
+### Installation information
 
-## Example of network size
+Every 6 hours, and when the plugin starts and stops, the plugin sends:
 
-The network size statistics can be reported to us in graphical form:
+| Information | Example |
+| :--- | :--- |
+| Domoticz version | `2026.3` |
+| Coordinator model (radio type) | |
+| Coordinator firmware version | |
+| Plugin version | `9.1.007` |
+| Version of the certified devices database (z4d-certified-devices) | |
+| Network size, as a category | see below |
+| Operating system distribution and version | `Debian GNU/Linux 12` |
+| Python version and CPU architecture | `python 3.13.5 arch 64bit machine aarch64` |
+| Time since the plugin started, as a category | `1 day`, `2 weeks`, ..., `Beyond 6 months` |
+| Raspberry Pi model, if any | `Raspberry Pi 4 Model B Rev 1.4` |
+| RoneLabs model and raw coordinator IEEE address, only on RoneLabs hardware | |
 
-![Exemple réseau](../fr-fr/Images/FR_Statistiques-reseau.png)
+The network size is the total number of devices (routers and end devices), sent as one of these categories only:
 
-The horizontal axis shows the total number of devices (routers + end devices). The vertical axis shows the number of routers (in blue) and end devices (in orange).
+| Category | Devices |
+| :--- | :--- |
+| unknown | 0 |
+| Micro | 1 to 4 |
+| Small | 5 to 9 |
+| Medium | 10 to 24 |
+| Large | 25 to 49 |
+| Very Large | 50 to 74 |
+| Xtra Large | 75 or more |
 
-In the example, we see on the far right, a network with 56 devices, including 19 routers and 37 end devices.
+The plugin sends nothing about your devices themselves: no device model, name, address, or value.
 
+### Events
 
-## Why ?
+The plugin also reports these events:
+
+* plugin started, restarted, stopped;
+* the coordinator formed a new Zigbee network;
+* plugin upgrade from the WebUI, successful or with errors;
+* you enabled or disabled __MatomoOptIn__ (the opt-out itself is the last thing sent).
+
+## Why?
 
 We are a small team of volunteers who share our time to develop this plugin.
 
-With this little feedback, you allow us to know the use you make of it.
-
-This way we can concentrate our efforts where it is most needed.
+With this little feedback, you tell us which coordinators, firmware, Domoticz and Python versions and platforms are really in use, so we can test on them and concentrate our efforts where they are most needed. From time to time, we may publish aggregated trends (for example the share of each coordinator type or plugin version).
 
 Thank you.
