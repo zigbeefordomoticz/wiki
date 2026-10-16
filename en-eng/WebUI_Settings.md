@@ -208,7 +208,7 @@ Here are all settings related to the coordinator hardware.
 | `resetPermit2Join` | Reset permit to join at startup | on |  |  |  |
 | `Ping` | Enable Ping | on |  |  |  |
 | `channel` | Coordinator chanel (default 0) | default | default, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 | coordinator reset | **Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md). |
-| `TXpower_set` | Coordinator transmission power level | 0dbM | 0dbM, -9 dbM, -20dbM, -32dbM | plugin restart |  |
+| `TXpower_set` | Coordinator transmission power level | `0` | dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm | zigpy: none. ZiGate: plugin restart | On zigpy coordinators, a new value is sent to the coordinator immediately. The allowed range depends on the coordinator and its firmware. |
 | `extendedPANID` | Zigbee Extended PAN Identifier | `0000` |  | erase network | **Changing it erases the network: all devices must be paired again.** |
 | `forceClosingAllNodes` | Enable to close Pairing mode in each router | off |  | plugin restart | When pairing mode is switched off, the plugin also closes it on every router. |
 

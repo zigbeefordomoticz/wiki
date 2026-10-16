@@ -64,6 +64,7 @@ NOTES = {
     "allowReBindingClusters": "See [FAQ Q8](Problem_FAQ.md#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually).",
     "channel": "**Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md).",
     "extendedPANID": "**Changing it erases the network: all devices must be paired again.**",
+    "TXpower_set": "On zigpy coordinators, a new value is sent to the coordinator immediately. The allowed range depends on the coordinator and its firmware.",
     "forceClosingAllNodes": "When pairing mode is switched off, the plugin also closes it on every router.",
     "storeDomoticzDb": "See [Plugin Backup](Plugin_Backup.md).",
     "useDomoticzDb": "See [Plugin Backup](Plugin_Backup.md).",
@@ -76,6 +77,16 @@ NOTES = {
     "pluginLogs": "Empty means the `Logs` folder of the plugin.",
     "SSLCertificate": "Empty means `server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https.",
     "SSLPrivateKey": "Empty means `server.key` in the plugin folder. See `SSLCertificate`.",
+}
+
+# Settings whose definition depends on the coordinator family. SETTINGS holds the ZiGate
+# definition; zigpy_setup() in PluginConf.py replaces it at startup on zigpy coordinators.
+# These override the Unit / values and Restart columns.
+COORDINATOR_DEPENDENT = {
+    "TXpower_set": {
+        "unit": "dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm",
+        "restart": "zigpy: none. ZiGate: plugin restart",
+    },
 }
 
 SKIP = ("Reserved", "PluginTransport", "VerboseLogging")
@@ -113,7 +124,12 @@ def table(params):
     for name, p in params:
         label = LABELS.get(name, "").replace("|", "\\|")
         unit = UNITS.get(name, values(p))
-        rows.append(f"| `{name}` | {label} | {fmt_default(p)} | {unit} | {fmt_restart(p['restart'])} | {NOTES.get(name, '')} |")
+        restart = fmt_restart(p["restart"])
+        if name in COORDINATOR_DEPENDENT:
+            unit = COORDINATOR_DEPENDENT[name]["unit"]
+            restart = COORDINATOR_DEPENDENT[name]["restart"]
+        default = "`0`" if name in COORDINATOR_DEPENDENT else fmt_default(p)
+        rows.append(f"| `{name}` | {label} | {default} | {unit} | {restart} | {NOTES.get(name, '')} |")
     return "\n".join(rows)
 
 
