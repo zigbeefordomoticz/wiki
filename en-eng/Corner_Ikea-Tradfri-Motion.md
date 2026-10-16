@@ -1,62 +1,49 @@
-# Using the tradfri Motion Sensor with an ikea device (bulb or Outlet) and Stand alone with Zigate
+# Using the Tradfri Motion Sensor with an Ikea device (bulb or Outlet) and Stand alone
 
 ## 1. Prerequisites
 
-1. Before you start these are the necessities.
-1. One tradfri motion sensor (MS)
-1. One tradfri bulb or wall outlet (WO)
-1. Zigate domoticz plugin with atleast fw version 3.0f and domoticz version (beta) 4.10900 or higher
+1. One Tradfri motion sensor (MS)
+1. One Tradfri bulb or wall outlet (WO)
+1. The group management enabled in the plugin: in the WebUI [Settings](WebUI_Settings.md), check __Enable Groups__ (`enablegroupmanagement`), validate, and restart the plugin.
 
-Acces to the WebUI: `http://<yourdomoticzIP>:9440`
+## 2. Pairing the devices with the coordinator
 
-## 2. Pairing devices with Zigate
+* Put the plugin in pairing mode (see [Add a new device](HowTo_Pairing-device.md)).
+* Pair the devices with the coordinator, by holding them close to it.
+* Pair the Motion Sensor (MS) by pressing the pairing button on the back 4 times, and the bulb (switching it off and on 6 times) or the WO (pressing the pin underneath for a few seconds).
 
-* In the WebUI switch “accept new hardware” to on.
-* Pair the devices with Zigate, by holding them close to the Zigate.
-* Pair the Motion Sensor (MS) by pressing the pair button on the back 4 times and the bulb (switching it off 6 times) or WO (pressing the pin underneath for few seconds).
+After pairing, you should see the devices in DomoticZ, **Setup > Devices**.
 
-After pairing you should see the devices in the Domoticz Settings  devices. There you should see the paired devices.  
+## 3. Pairing the devices with each other
 
-## 3. Pairing devices with each other
+Next, pair the bulb and the MS:
 
-Next thing to do pair the bulb and the MS. This can be done by
+* Hold the MS near the bulb or wall outlet, and press the pairing button on the back for 10 seconds.
 
-* holding MS near the bulb or walloutlet. And press the pair button on the back 10 seconds.
+When finished, the red light in the MS switches, the bulb flashes, and the WO makes a clicking sound or its led flashes.
 
-When finished the red light in the MS will switch and the bulb will flash and the WO will make a clicking sound or the led will flash.
+## 4. Getting the group and adding the coordinator
 
-## 4. Making a group
+The MS sends its commands to a Zigbee group, created when you paired it with the bulb or WO. To get the motion events in DomoticZ, the coordinator must be a member of that group.
 
-* First enable the groupmanagement in settings in the WebUI ; and then restart the plugin
+1. In the WebUI, go to **Admin > Group** and run a **Full scan** (or a **Scan** of the bulb or WO only). The plugin finds the new group and creates a group widget in DomoticZ.
+1. Go to **Management > Group Management**: the new group is in the list.
+1. Check **Coordinator (in the group)** for this group and click **Validate**.
 
-1. Automatically:
-   When a bulb or WO is paired with the MS,
-   * webUI and got to Admin -> Group , and do Rescan Groups
-   * After that restart the plugin.
-
-   After some time the new group will be added to the devices tab in Setting.
-
-   Check the unused devices for a Zigate group.
-   * Open the webUI and go to the management tab of the WebUI and open Groupmanagement there you will find the new group. The new group will be in the overview.
-
-1. To make the MS widget active you need to add Zigate to the group. This will show the On /Off status of the widget. Otherwise the widget won’t give status info.
-   To make it active put check mark behind the group line. After that, press Validate en restart the plugin in the admin menu.  When startup of groupmanagement is ready you will see you’re Zigate IEEE in the domoticz log. The checkmark is shown in the groupmanagement page in the WebUI.
-
-Whenever movement is detected by the MS will trigger the bulb or WO to switch on. The Status of the bulb, WO and the MS widget change. Depending on the settings on the MS it will switch of after after the set time.
+Whenever movement is detected, the MS switches on the bulb or WO. The status of the bulb, the WO and the MS widget change. Depending on the settings of the MS, it switches off after the set time.
 
 ## 5. Making the Motion Sensor a standalone device
 
-The MS can be made standalone by deleting the devices in the group in the groupmanagement page. After validating and restarting the plugin the group will still exist without any devices. The motion sensor is connected to this group in the background. Status changes can be seen in the domoticz log and in the MS Widget.
+The MS can be made standalone by removing the bulb or WO from the group in **Management > Group Management**, keeping **Coordinator (in the group)** checked. After validating, the group still exists, with only the coordinator in it. The motion sensor still sends to this group in the background: its status changes can be seen in the MS widget.
 
-Now it is possible to use the MS in a script (LUA, Dzvent or Blockly). This way you are not bound to Zigbee products and you can use it with other devices who run on other protocols like (Zwave, wifi, mqtt or 433mhz).
+Now it is possible to use the MS in a script (Lua, dzVents or Blockly). This way you are not bound to Zigbee products and you can use it with devices running other protocols (Z-Wave, wifi, mqtt or 433MHz).
 
 ## Remarks
 
-### Groupmanagement with active Ikea tradfri remotes and motion sensors
+### Group management with Ikea Tradfri remotes and motion sensors
 
-When using tradfri devices like the Ikea 5 button round remote or the Ikea motion sensor the created widgets are not active after pairing. After paring the device widgets are added to DomoticZ but actions can not be seen in DomoticZ. There you to add those devices to a group. See [Corner_Ikea-Remote](Corner_Ikea-Remote.md)
-To make them active go to webUI management  Group management and fill the checkmark behind the group where the remote or motion sensor is part of, to make active. After validating, a group rescan and plugin restart the remote or motion sensor will be active. This way you get statusupdate in the widgets and the remote will be capable of using the left and right button.
+When using Tradfri devices like the Ikea 5 button round remote or the Ikea motion sensor, the widgets are not active after pairing: they are added to DomoticZ, but the actions can't be seen in DomoticZ until the coordinator is a member of their group. See [Ikea remote control as a pure remote](Corner_Ikea-Remote.md).
 
-## Limitation
+## Limitation (ZiGate only)
 
-This activation of tradfri devices is limited to 5 devices. This is because of limited memoryspace in the Zigatechip. When you add a Zigate to a group for the sixth time the device connection is not established. You get a this error in the domoticz log: We reach the max number of Cycle and didn't succeed in the Group Creation.
+With a ZiGate coordinator, the coordinator can only be a member of 5 groups, because of the limited memory of the ZiGate chip. When you add the ZiGate to a group for the sixth time, the membership is not established, and you get this error in the DomoticZ log: `We reach the max number of Cycle and didn't succeed in the Group Creation.`
