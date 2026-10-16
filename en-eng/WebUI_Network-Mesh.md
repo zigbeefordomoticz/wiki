@@ -18,6 +18,7 @@ written.*
 
 ## Contents:
 
+* [The screen at a glance](#the-screen-at-a-glance)
 * [What "mesh" means](#what-mesh-means)
 * [Three tables, three different questions](#three-tables-three-different-questions)
 * [The relationships](#the-relationships)
@@ -32,6 +33,137 @@ written.*
 * [Devices that are switched off, and other gaps](#devices-that-are-switched-off-and-other-gaps)
 * [Settings](#settings)
 * [References](#references)
+
+------------------------------------------------
+
+## The screen at a glance
+
+The page is three blocks, top to bottom:
+
+* the **Topology scans** list, beside the **Topology scan** card that starts a new one - pick a
+  scan in the list to draw it (see [How a scan is performed](#how-a-scan-is-performed));
+* the **coverage banner**, which says how many of the nodes that could answer this scan did - read
+  it before the graph (see [Reading the coverage banner](#reading-the-coverage-banner));
+* the **Mesh graph** card, shown below with a node selected.
+
+![The Mesh graph card with a node selected](Images/EN_WebUI-Network-Mesh-Node-Selected.png)
+
+*The Mesh graph card with the router Led #2 Bureau clicked. The LQI window has been narrowed to
+50 - 215 and Hide nodes with no visible link switched on, so this is not how the page opens.*
+
+The card reads from top to bottom. Each area is described in detail further down this page; this
+section says what is where.
+
+### 1. The controls
+
+| Area | What it does | More |
+| ---- | ------------ | ---- |
+| **Focus a node** | Type a name or a network id: the graph centres on that device and fades the rest. The quickest way to find one device on a large mesh | [Layouts](#layouts-what-is-best-for-what) |
+| **Links to draw** | Which table is drawn: *Neighbour tables*, *Routing tables*, *Both* or *Associated devices*. A table the scan does not carry is greyed out | [Three tables](#three-tables-three-different-questions) |
+| **Layout** | How the nodes are placed - cose, concentric, breadthfirst, circle, grid. Positions only; the data is the same | [Layouts](#layouts-what-is-best-for-what) |
+| **LQI window** | Keeps only the neighbour links whose LQI falls inside the two handles. The badge shows the current window | [A note on LQI](#a-note-on-lqi) |
+| **Routes for** | Pick a device to see a computed route: the coordinator for how it reaches every device, any other device for its route out to the coordinator. Empty when the page opens, so nothing is drawn until you pick | [Computed routes](#computed-routes) |
+| **Work the routes out again** | Works the route for the device in *Routes for* out again, against the scan on screen. Greyed out while the field is empty. The text beside it says what the route on screen is | [Computed routes](#computed-routes) |
+| **Back to the coordinator** | Shown only while one device's route is on screen: puts the coordinator back in *Routes for*, so the graph shows how it reaches every device | [Computed routes](#computed-routes) |
+| **Relationship** checkboxes | *Parent / child*, *Sibling*, *Other relationships*, *Unknown relationship*: which neighbour links are drawn, by what the reporting node says the neighbour is to it | [The relationships](#the-relationships) |
+| **Hide end devices** | Removes the leaves, to leave the backbone of routers | [Filters](#filters-and-what-they-act-on) |
+| **Hide nodes with no visible link** | Removes whatever the other filters have left isolated | [Filters](#filters-and-what-they-act-on) |
+| **Device icons** | Draws each node with the icon of what the device is, or as a plain shape | [Reading the picture](#reading-the-picture) |
+
+### 2. The toolbar
+
+The five buttons at the right, above the graph, from left to right:
+
+| Button | What it does |
+| ------ | ------------ |
+| **Zoom in** / **Zoom out** | The same as the mouse wheel |
+| **Fit to view** | Brings the whole graph back into the frame after zooming or panning |
+| **Recompute layout** | Runs the current layout again - useful after dragging nodes around, or when a layout settled badly |
+| **Fill the screen** | Puts the graph fullscreen. The same buttons stay available there, the last one becoming **Leave fullscreen** |
+
+### 3. The legend and the counters
+
+* **The legend** on the left says how to read a node and a link: the **colour** of a node is its
+  role (coordinator, router, end device, unknown type), its **border** how it is doing (not
+  reachable, timed out, not scanned, not seen recently), the **colour** of a link its LQI band, and
+  its **line style** its relationship. The line underneath lists the **device icons**. See
+  [Reading the picture](#reading-the-picture).
+* **The counters** on the right always read *visible / total*: in the screenshot, *36/62 nodes ·
+  110/280 links*, then what the current mode does not draw - *167 routing hops not drawn in this
+  mode · 24 association links not drawn in this mode*. A filter never hides the fact that it is
+  hiding something.
+
+### 4. The graph
+
+Zoom, pan and drag it. Each node carries its name and its network id; a node with no name carries
+its network id alone. **Click** something to open its panel underneath:
+
+* a **node** - the node panel described below;
+* a **link** - the LQI each end reported, and whether only one end reported it
+  ([Direction](#direction-and-why-both-are-drawn-as-one-link));
+* an **arrow**, in the routing view - the destinations that hop carries.
+
+The node clicked is drawn with a thick dark border, and its links stand out from the rest of the
+mesh. In the screenshot Led #2 Bureau is the selected node; the red square is a different thing, a
+device that is **not reachable**.
+
+Under the graph, a line reminds how nodes are labelled, and an amber line counts the report rows
+that **could not be drawn** because they name a node the scan does not list - see
+[Reading the picture](#reading-the-picture).
+
+### 5. The node panel
+
+Clicking a node opens a panel under the graph, titled with its name and its network id. Two buttons
+sit in its title bar:
+
+* **Routes for this device** puts this device into *Routes for* and draws its route out to the
+  coordinator - see [Computed routes](#computed-routes);
+* **×** closes the panel and clears the selection.
+
+The panel has three parts.
+
+**The identity block.** Network id and IEEE address, the type the node plays in the mesh and its
+model, the **ZDeviceID** with the icon, family and endpoint it was resolved from, the **Scan status**
+(the ⓘ beside it explains the value - *Answered*, *Timed out*, *No neighbour table*, *Not scanned*),
+*Rx on when idle*, *Health*, *Battery*, *LQI* and *RSSI*. Then the association, from the
+[Associated devices](#associated-devices-a-router-and-what-is-attached-to-it) table:
+
+* **Attached to** - the router that declares this device as one of its own, or a line saying none
+  does, or a warning when more than one does ([Contested devices](#contested-devices));
+* **Associated devices** - the devices this router declares, or *Declared no associated device*.
+
+The note under the block matters: health, model, LQI, RSSI and battery are this device's values
+**now**, not at the time of the scan, and the LQI there is the one the coordinator recorded for the
+device - a link's own LQI is on the link.
+
+**Neighbour table rows.** Every neighbour row that mentions this node, in either direction:
+
+| Column | What it holds |
+| ------ | ------------- |
+| **Reading** | who measured what: *"Volet Fifi hears Led #2 Bureau"*. The same pair can appear twice, once per end - *Led #2 Bureau hears Led #1 Bureau* and *Led #1 Bureau hears Led #2 Bureau* |
+| **Neighbour** | the node at the other end |
+| **Relationship** | what the reporter says the neighbour is to it |
+| **LQI** | the reporter's reading, with its colour band |
+| **Reported type**, **Depth**, **Rx on idle**, **Permit joining** | the rest of the row, as the reporter gave it |
+
+*Neighbour*, *Relationship* and *LQI* can be sorted by clicking their header. Ten rows are shown at
+a time, and the selector beside the pager offers 10, 25 or 50. Read the **Depth** column as a whole
+rather than row by row: a column of 15 is a radio with no depth to give - see
+[Depth](#depth-how-to-read-it-and-what-it-is-worth).
+
+**Routing table rows.** Every routing row in which this node plays a part, and the **Role**
+column says which part:
+
+| Role | Meaning |
+| ---- | ------- |
+| **Reports the route** | this node's own routing table: *to reach that destination, I hand the frame to that next hop* |
+| **Is the next hop** | another node hands frames to this one - in the screenshot, the coordinator reaches Prise RPI, Prise Info (Mac) and others through Led #2 Bureau |
+| **Is the destination** | another node holds a route to this one |
+
+Then *Reporter*, *Destination*, *Next hop*, the route **Status**, and the **Flags** - *many-to-one*,
+*memory constrained*, *route record required*. See
+[Routing versus Neighbours](#routing-versus-neighbours) for what they mean, and why a routing row
+carries no LQI.
 
 ------------------------------------------------
 
@@ -694,7 +826,7 @@ usually means the report and the device list have drifted apart.
 
 ### Starting one
 
-The **Topology scan** card at the bottom of the Mesh page has two buttons:
+The **Topology scan** card at the top right of the Mesh page has two buttons:
 
 * **Scan** - a full topology scan. The same `/req-topologie` the Topology page has always used.
 * **Associated devices** - that collection on its own (zigpy coordinators only).
