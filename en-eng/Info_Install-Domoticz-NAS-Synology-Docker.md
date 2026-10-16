@@ -2,7 +2,7 @@
 
 This tutorial explains how to install Domoticz with the embedded Docker application on a Synology NAS.
 
-These are the first steps before [Installing the plugin on Synology](Plugin_Installation.md#3---installation-running-on-synology-nas)
+These are the first steps before [Installing the plugin on a Synology NAS (Docker)](Plugin_Installation.md#3---installation-on-a-synology-nas-docker)
 * 1 - [DomoticZ installation](#DomoticZ-installation)
 * 2 - [USB drivers installation](#USB-drivers-installation)
 
@@ -71,7 +71,7 @@ DomoticZ is now operational and you can access it.
 A plugins folder is created in the directory __docker/domoticz__.
 
 
-You can continue the installation of the Plugin by following:  [Installing the plugin on Synology](Plugin_Installation.md#3---installation-running-on-synology-nas)
+You can continue the installation of the Plugin by following:  [Installing the plugin on a Synology NAS (Docker)](Plugin_Installation.md#3---installation-on-a-synology-nas-docker)
 
 
 # USB drivers installation

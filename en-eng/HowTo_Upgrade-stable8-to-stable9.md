@@ -1,6 +1,6 @@
 # Upgrading from stable8 to stable9
 
-`stable8` is now closed for new features and only receives critical bug fixes. All new development continues on `stable9`, which is built exclusively on the **Domoticz Extended Framework** (`DomoticzEx`), available since Domoticz 2025.1.
+`stable9` is the current production branch of the plugin. `stable8` is out of support and locked: it receives no more updates, not even bug fixes. All development continues on `stable9`, which is built exclusively on the **Domoticz Extended Framework** (`DomoticzEx`), available since Domoticz 2025.1.
 
 The switch is done with a single tool provided in the plugin itself: `Tools/plugin-switch-stable9.sh`. Do not switch branch manually with `git checkout stable9` — this script checks your Domoticz version, shows you the migration notice, and only proceeds once you've explicitly acknowledged it.
 
@@ -14,7 +14,7 @@ Only run the switch once you're ready to commit to `stable9`.
 
 ## Prerequisites
 
-* Domoticz **2025.1 or newer**, with the Extended Framework available. `plugin-switch-stable9.sh` verifies this automatically by querying Domoticz's own JSON API — you don't need to check it manually. **Domoticz 2026.2 or newer is highly recommended** for the best experience with the Extended Framework — if you're still on an older 2025.x release, consider upgrading Domoticz itself at the same time.
+* Domoticz **2025.1 or newer**, with the Extended Framework available. `plugin-switch-stable9.sh` verifies this automatically by querying Domoticz's own JSON API — you don't need to check it manually. **Domoticz 2026.3 is the recommended version** for the best experience with the Extended Framework — if you're still on an older release, consider upgrading Domoticz itself at the same time.
 * Your plugin checkout must currently be on `stable8`, with no uncommitted local changes (`git status` clean). Commit or stash anything pending first.
 
 ## Step 1 — Back up Domoticz and the plugin first

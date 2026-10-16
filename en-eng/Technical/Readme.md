@@ -19,6 +19,7 @@
 * [Xiaomi Smart Plug](Xiaomi-Smart-Plug.md)
 * [ZiGate PDMonHost](ZiGate-PDMonHost.md)
 * [zlinky integration](zlinky-integration.md)
+* [TICMeter integration](ticmeter-integration.md)
 * [ProfileID ZDeviceID](ProfileID---ZDeviceID.md)
 * [Transport](Transport.pptx)
 * [Plugin Architecture Diagram](Plugin Architecture Diagram.pptx)
