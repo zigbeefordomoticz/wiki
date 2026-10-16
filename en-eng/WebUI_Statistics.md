@@ -24,7 +24,7 @@ Each plugin instance is identified by a SHA-256 hash of the IEEE address of its 
 
 There is one exception: on RoneLabs hardware (detected with the `/etc/modelinfo` file), the raw coordinator IEEE address is sent too, for hardware-specific support.
 
-As with any request over the Internet, the Matomo server sees the public IP address of your connection.
+As with any request over the Internet, the request reaches the Matomo server from the public IP address of your connection. Matomo anonymizes this IP address: the full address is not stored.
 
 ### Installation information
 
