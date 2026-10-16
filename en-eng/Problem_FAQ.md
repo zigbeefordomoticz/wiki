@@ -1,15 +1,14 @@
 # Frequently Asked Questions
 
-* [Q1. Where can I get support ?](#q1-where-can-i-get-support)
+* [Q1. Where can I get support ?](#q1-where-can-i-get-support-)
 * [Q2. Where are the logs ?](#q2-where-are-the-logs-)
 * [Q3. Can I debug myself ?](#q3-can-i-debug-myself-)
 * [Q4. Where can I find the list of supported Coordinators and Devices ?](#q4-where-can-i-find-the-list-of-supported-coordinators-and-devices-)
 * [Q5. Where can I find the coordinator firmwares ?](#q5-where-can-i-find-the-coordinator-firmwares-)
 * [Q6. Can I use several coordinators in the same DomoticZ ?](#q6-can-i-use-several-coordinators-in-the-same-domoticz-)
-* [Q7. Can I fixe the USB Port number ?](#q7-can-i-fixe-the-usb-port-number-)
+* [Q7. Can I fix the USB Port number ?](#q7-can-i-fix-the-usb-port-number-)
 * [Q8. My device is not updated in DomoticZ when interacting via a remote control or manually](#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually)
-* [Q9. The plugin menu's link is not showed in DomoticZ](#q9-can-i-run-plugin-version-6-on-a-windows-system)
-* [10. I'm not able to upgrade above 7.1.018](#q10-stuck-in-71018)
+* [Q9. The plugin menu's link is not showed in DomoticZ](#q9-the-plugin-menus-link-is-not-showed-in-domoticz)
 
 ## Troubleshooting
 
@@ -20,58 +19,56 @@
 ## Errors
 
 * [E1. Log error : `No transport, write directive to XXX.XXX.XXX.XXX:8080' ignored`](#e1-log-error--no-transport-write-directive-to-xxxxxxxxxxxx8080-ignored)
-* [E2. Log error : `Decode8000`](#e2-log-error--decode8000)
+* [E2. Log error : `Decode8000` (ZiGate)](#e2-log-error--decode8000-zigate)
 * [E3. Log error : `Error: <plugin's name> Communication error when transmitting a previous command to XXXX ieee XXXXXXXXXXXXXXXX`](#e3-log-error--error-plugins-name-communication-error-when-transmitting-a-previous-command-to-xxxx-ieee-xxxxxxxxxxxxxxxx)
 * [E4. Log Error : `Error: (FindModule) Domoticz/DomoticzEx modules not found in interpreter`](#e4-log-error--error-findmodule-domoticzdomoticzex-modules-not-found-in-interpreter)
-* [E5. Missing module Error](#e5-missing-module-error)
+* [E5. Missing module error](#e5-missing-module-error)
 * [E6. Error : `Error: <plugin's name> : You need to setup the URL Base to access the Domoticz JSON/API`](#e6-error--error-plugins-name--you-need-to-setup-the-url-base-to-access-the-domoticz-jsonapi)
-* [E7. Error when updating python modules](#e7-error-when-updating-python-module-building-wheel-for-cryptography-pep-517--error)
-* [E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`](#e8-error--pkg_resourcesversionconflict-dnspython-230-usrlocallibpython310site-packages-requirementparsednspython221)
+* [E7. Error when updating python modules: `Building wheel for cryptography (PEP 517) ... error`](#e7-error-when-updating-python-module-building-wheel-for-cryptography-pep-517--error)
 * [E9. Error : `ImportError: PyO3 modules may only be initialized once per interpreter process`](#e9-error--importerror-pyo3-modules-may-only-be-initialized-once-per-interpreter-process)
-* [E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`](#e10-error--webserver-deprecated-rtype-devices-for-api-request-handled-via-fallback-getdevices-please-use-correct-api-command)
-* [E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`](#e11-error-on-installation-under-debian-12--this-environment-is-externally-managed-to-install-python-packages-system-wide-try-apt-install-python3-xyz)
+* [E11. Error on installation under Debian 12 or newer : `This environment is externally managed...`](#e11-error-on-installation-under-debian-12-or-newer--this-environment-is-externally-managed)
 * [E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`](#e12-error--error-plugins-name--modulenotfounderror-no-module-named-cchardet)
-* [E13-Error-AttributeError-module-lib-has-no-attribute-OpenSSL_add_all_algorithms-`](#e13-error--attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms)
-* [E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK](#e14-attributeerror-module-lib-has-no-attribute-x509_v_flag_cb_issuer_check)
+* [E13. Error : `AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'`](#e13-error--attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms)
+* [E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK'](#e14-attributeerror-module-lib-has-no-attribute-x509_v_flag_cb_issuer_check)
 * [E15. error: externally-managed-environment](#e15-error-externally-managed-environment)
+* [E16. Error : `Cannot run the event loop while another loop is running` with several plugin instances](#e16-error--cannot-run-the-event-loop-while-another-loop-is-running-with-several-plugin-instances)
+* [E17. `ModuleNotFoundError` although the modules are installed](#e17-modulenotfounderror-although-the-modules-are-installed)
+* [E18. Error : `Z4D requires Python 3.11` or `Domoticz version ... not supported`](#e18-error--z4d-requires-python-311-or-domoticz-version--not-supported)
 
 ------------
 ------------
 
 ## Q1. Where can I get support ?
 
-The first source of support is the Wiki :
-
-* [English Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng)
-* [French Wiki](https://zigbeefordomoticz.github.io/wiki/fr-fr)
-* [Dutch Wiki](https://zigbeefordomoticz.github.io/wiki/nl-dut) ( _Unfortunately outdated. Please contact us if you are willing to contribute in the update of this wiki_)
+The first source of support is this [Wiki](https://zigbeefordomoticz.github.io/wiki/en-eng).
 
 You can also get support and ask questions :
 
 * The [English Forum](https://www.domoticz.com/forum/viewforum.php?f=68)
 * The [French Forum](https://easydomoticz.com/forum/viewforum.php?f=28)
-* The [Keybase English channel](https://keybase.io/team/zigateforum)
-* The [Keybase French channel](https://keybase.io/team/zigate)
+* The [GitHub issues](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues) of the plugin, to report a bug
+* The [discussions of z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices/discussions), for device configuration files
 
 ------------
 
 ## Q2. Where are the logs ?
 
-Since Stable6, the logs are saved in a file : `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee-XX.log`
+By default, the plugin writes its logs in its own file: `domoticz/plugins/Domoticz-Zigbee/Logs/PluginZigbee_XX.log`, where XX is the hardware idx of the plugin in DomoticZ (for example `PluginZigbee_05.log`). A new file is started every night, and the last 7 are kept.
 
-The folder __Domoticz-Zigbee__ can also be __Domoticz-Zigate__ if you have installed the plugin  before April 2022.
+Errors, warnings and status messages also go to the DomoticZ log; debug messages only go to the plugin log file. See [Debug mode](Problem_Debuging-mode.md#where-are-the-plugin-logs) for the details and the related settings.
 
 ------------
 
 ## Q3. Can I debug myself ?
 
-Please refer to [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
+Yes: see [Debug mode](Problem_Debuging-mode.md) to enable the debug messages of the part of the plugin you are interested in, for one device or for all. For pairing and connection difficulties, see also [Troubleshooting pairing or connection](Troubleshooting_Pairing.md).
 
 ------------
 
 ## Q4. Where can I find the list of supported Coordinators and Devices ?
 
-Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
+* Coordinators: [Compatible coordinators](Coordinators.md)
+* Devices: [Compatible objects](Objects.md), and the [Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
 
 ------------
 
@@ -85,19 +82,19 @@ Please refer to [Zigbee Device Compatibility Repository](https://zigbee.blakadde
 
 ## Q6. Can I use several coordinators in the same DomoticZ ?
 
-We have currently a limitation of the number of instances using Zigpy layer, which prevent having several instances of zigpy based communication.
+Yes: add one instance of the plugin (one DomoticZ hardware) per coordinator. Each instance has its own Zigbee network, its own WebUI port and its own files.
 
-If you use ZiGate hardware, you can run as many plugin instances ( one instance per ZiGate ) as you wish.
-If you use non-ZiGate hardware, like TI CCxxxx or Silicon Labs, you can run only one instance of those 2, but still can mix with as many ZiGate as you want. For more information you can see the progress of that issue on [#1117](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues/1117)
+There is one known problem: with DomoticZ 2026.x and **Python 3.11** (for example Debian 12 / Raspberry Pi OS Bookworm), the second instance fails to start with `Cannot run the event loop while another loop is running`. Use Python 3.13 or newer: see [E16](#e16-error--cannot-run-the-event-loop-while-another-loop-is-running-with-several-plugin-instances).
 
 ------------
 
-## Q7. Can I fixe the USB Port number ?
+## Q7. Can I fix the USB Port number ?
 
 Some times, when you reboot your system, the USB Port (like _dev/ttyUSB0_) can change its number which cases a communication error with the coordinator. This is more an OS issue, but there are few hints :
 
 * [Assign fixed device name to USB port](https://www.domoticz.com/wiki/Assign_fixed_device_name_to_USB_port)
 * [Persistent USB Devices](https://www.domoticz.com/wiki/PersistentUSBDevices)
+* The simplest is to use the `/dev/serial/by-id/...` path of the coordinator as __Serial Port__ in the plugin settings: it doesn't change between reboots.
 
 ------------
 
@@ -107,78 +104,69 @@ For example : If you power off an Ikea bulb (with the physical switch) and then 
 
 If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
 
-1. Go to the settings page on the WebUI
-1. Activate the advanced settings
-1. Please check if the parameter __AllowRebindingClusters__.
-1. Switch off the Ikea bulb with the physical switch, wait for 10 seconds, then turn it on again.
-The rebinding process will start itself, the status problems should now be fixed.
+1. Go to the Settings page of the WebUI.
+1. Activate the advanced settings.
+1. Check that the parameter __allowReBindingClusters__ is enabled (it is by default).
+1. Switch off the bulb with the physical switch, wait for 10 seconds, then turn it on again.
+The rebinding process starts by itself, and the status problems should be fixed.
+
+Some brands (Philips, Gledopto) don't report their status at all: the plugin polls them, see [Philips Gledopto](Corner_Philips-Gledopto.md). Ikea remote controls must have the coordinator in their group, see [Ikea Tradfri](Corner_Ikea-Tradfri.md#remote-controls-and-motion-sensor-how-the-events-reach-domoticz).
 
 ------------
 
 ## Q9. The plugin menu's link is not showed in DomoticZ
 
-Check that the Custom Tab is activated :
+The plugin adds its entry to the DomoticZ __Custom__ menu itself when it starts (setting __Enable Plugin WebUI from Domoticz Custom menu__, enabled by default). If you don't see it:
 
-* Before DomoticZ 2022.2, go to Configuration / Parameters / System tab and check that the Custom Tab is activated at the bottom.
-* From DomoticZ 2023.1, go to Configuration / Users and check that the Custom Tab is activated for each user needed.
+* Check that the Custom Tab is activated: in DomoticZ, go to __Setup > Users__ and check that the Custom Tab is activated for each user needed.
+* Check that the setting is enabled in the WebUI Settings page.
+
+See [Plugin integration](Plugin_Integration.md) for the details, including the cases where the automatic entry doesn't work (DomoticZ over https, reverse proxy).
 
 ------------
-
-## Q10. Stuck in 7.1.018
-
-Despite I'm using the WebUI Plugin upgrade and there is no error, after the plugin restarted I'm still on 7.1.018
-
-* git to the plugin home folder ( ..../plugins/Domoticz-Zigbee ), and run the following command
-
-  ```bash
-  git pull
-  ```
-
-  and finaly go back to the plugin WebUI, and do a plugin upgrade
-
- 
-------------
- 
 
 ## T1. My coordinator is not working
 
-I can see in the [log file](#q2.-where-are-the-logs) some messages like that
+I can see in the [log file](#q2-where-are-the-logs-) some messages like that
 
 ```log
-INFO    : [       MainThread] Zigate plugin beta6-6.0.114 started
-INFO    : [       MainThread] Plugin Database: DeviceList-2.txt
-INFO    : [       MainThread] DeviceConf loaded - 23 confs loaded
-INFO    : [       MainThread] DeviceConf loaded - 329 confs loaded
-INFO    : [       MainThread] load ListOfDevice
-INFO    : [       MainThread] Transport mode: ZigpyZNP
-ERROR   : [       MainThread] [ 61] I have hard time to get Coordinator Version. Mostlikly there is a communication issue
-ERROR   : [       MainThread] [   ] Stop the plugin and check the Coordinator connectivity.
+Error: Zigbee: [ 70] Hard time getting Coordinator Version — likely a communication issue
 ```
 
-This indicate a miss communication between the plugin and the coordinator. You need to cross-check the following pieces in the DomoticZ Hardware menu :
+or, after the plugin had started:
 
-* If this is the first time you are using the Coordinator (no device paired yet), you have to initialize it, set the __Initialize Coordinator: True__ in the Domoticz Hardware menu when starting the plugin. Once the first startup is ok, then disable this parameter to prevent erasing all paired devices at the next restart.
-* Ensure that the serial port is the right one.
-* Ensure that the Coordinator Model matchs your dongle (in that case it must be Texas Instrument ZNP (via zigpy))
-* Ensure that there is not an other process running on the port
-* If the coordinator is connected on a PI, make sure that you use USB2 (and not the USB3 from the PI4)
-* If you have connected the coordinator on an USB HUB, try to plug it directly to the server
+```log
+Error: Zigbee: Connection to coordinator lost, OSError (device disconnected or in use by another process), plugin restart might be required
+```
 
-If it still don't work, you can try to test the coordinator with [making Real time topology](HowTo_Have-a-real-time-topology.md). This test will be done without Domoticz and the plugin. It is only working with TI CCxxx.
+This indicates a communication problem between the plugin and the coordinator. If the coordinator still doesn't answer after a while, the plugin restarts itself and tries again. Cross-check the following in the DomoticZ Hardware settings of the plugin (see [Plugin settings](Plugin_Settings.md)):
+
+* If this is the first time you are using the Coordinator (no device paired yet), you have to initialize it: set __Initialize Coordinator: True__ when starting the plugin. Once the first startup is ok, set it back to False, otherwise all paired devices are erased at the next restart.
+* Ensure that the serial port is the right one (prefer the `/dev/serial/by-id/...` path).
+* Ensure that the __Coordinator Model__ matches your dongle (Texas Instruments ZNP, Silicon Labs EZSP, ConBee/RaspBee or Bouffalo Lab).
+* Ensure that no other process is using the port (another home automation software, a second plugin instance, ModemManager...).
+* If you have connected the coordinator on a USB hub, try to plug it directly into the server, ideally with a USB extension cable.
+
+If it still doesn't work, test the coordinator without DomoticZ and the plugin, with the `zigpy` command line tool installed with the plugin. Stop the plugin, activate the Python virtual environment of DomoticZ, then run an energy scan, for example for a Texas Instruments coordinator on `/dev/ttyUSB0`:
+
+```bash
+zigpy radio znp /dev/ttyUSB0 energy-scan
+```
+
+Use `ezsp` for Silicon Labs and `deconz` for ConBee/RaspBee. If this doesn't work either, the problem is between the system and the dongle (port, rights, firmware). See also [Real time topology](HowTo_Have-a-real-time-topology.md).
 
 ------------
 
 ## T2. My object can not be paired
 
-* If the coordinator is plugged directly into a USB port on the server, try deporting it using a USB extension cord (don't use an USB HUB). This will keep it away from interference, especially from SSD disks, wifi chips, etc...
-
-Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
+* If the coordinator is plugged directly into a USB port on the server, try moving it away with a USB extension cable (don't use a USB HUB). This keeps it away from interference, especially from SSD disks, wifi chips, etc...
+* See [Troubleshooting pairing or connection](Troubleshooting_Pairing.md) and [Add a new device](HowTo_Pairing-device.md).
 
 ------------
 
 ## T3. My object doesn't work as expected
 
-Please refer to [Dealing with none certified device](https://zigbeefordomoticz.github.io/wiki/en-eng/Problem_Dealing-with-none-certified-device.html)
+Please refer to [Dealing with not-optimized devices](Problem_Dealing-with-none-optimized-device.md) and, to write a configuration file for it, [device customization](HowTo_Device-Customization.md).
 
 ------------
 
@@ -195,9 +183,9 @@ You shouldn't worry much of this message.
 
 ------------
 
-## E2. Log error : `Decode8000`
+## E2. Log error : `Decode8000` (ZiGate)
 
-if you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
+This only applies to ZiGate coordinators, which are no longer supported. If you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
 
 ```log
 Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
@@ -238,36 +226,17 @@ This error appears when stopping the plugin. Ignore it.
 
 ## E5. Missing module error
 
-### Make sure that you have correctly installed the plugin
+A `ModuleNotFoundError` or `No module named ...` error at startup means that the Python modules of the plugin are not installed in the Python environment DomoticZ uses.
 
-from the plugin home directory _Domoticz-Zigbee_ or _Domoticz-Zigate_ do the following command
-
-``` bash
-ls -l external/dnspython/
-
-```
-
-if the response is
-
-`total 0`
-
-you need to run
+Install them in the Python virtual environment of DomoticZ, from the plugin folder (see [Plugin installation](Plugin_Installation.md#1c---procedure)):
 
 ``` bash
-git config --add submodule.recurse true
-git submodule update --init --recursive
-
+source /home/pi/Domoticz_Python_Environment/bin/activate
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+python3 -m pip install -r requirements.txt --upgrade
 ```
 
-#### Make sure that all dependencies have been installed
-
-``` bash
-sudo pip3 install -r requirements.txt
-```
-
-ATTENTION:
-
-* On windows system, it is a must that the pip3 install command is run from a CMD Administrator window, and it must be the first time. If you have run once already without Administrator windows, you must start removing all already installed modules.
+If the modules are installed but still not found, see [E17](#e17-modulenotfounderror-although-the-modules-are-installed).
 
 ------------
 
@@ -287,26 +256,14 @@ Failed to build cryptography
 ERROR: Could not build wheels for cryptography which use PEP 517 and cannot be installed directly
 ```
 
-1. upgrade or install the python module wheel
+1. upgrade or install the python module wheel, in the Python virtual environment of DomoticZ
 
     ```bash
-    sudo python3 -m pip install wheel --upgrade
-    ````
+    python3 -m pip install wheel --upgrade
+    ```
 
 1. make sure your /tmp is large enough
 1. make sure you have enough swap, if requires , add some filesystem swap
-
-------------
-
-## E8. Error : `pkg_resources.VersionConflict: (dnspython 2.3.0 (/usr/local/lib/python3.10/site-packages), Requirement.parse('dnspython==2.2.1'))`
-
-This error may appear when you change branch from develop to stable6 : the dnspython module level is not the same.
-
-* Do the following command from the plugin home directory
-
-``` bash
-sudo python3 -m pip install -r requirements.txt --upgrade
-```
 
 ------------
 
@@ -337,24 +294,17 @@ Error: Zigpy-Elelabs:     from cryptography.hazmat.bindings.rust import exceptio
 Error: Zigpy-Elelabs: ImportError: PyO3 modules may only be initialized once per interpreter process
 ```
 
-This is related to the fact that you are using a recent cryptography module.
-you can solve this issue by downgrading the cryptography module
+This is related to a cryptography module more recent than the plugin supports. The plugin pins the versions it needs in `constraints.txt` (`cryptography<=40.0.2`), which `requirements.txt` applies. Reinstall the modules in the Python virtual environment of DomoticZ, from the plugin folder:
 
 ``` bash
-sudo python3 -m pip install cryptography==40.0.2 --upgrade`
+python3 -m pip install -r requirements.txt --upgrade
 ```
 
-------------
-
-## E10. Error : `[WebServer] Deprecated RType (devices) for API request. Handled via fallback (getdevices), please use correct API Command!`
-
-This error comes with the API modification of DomoticZ 2023.2
-
-You need to update the plugin to a current version — see [Plugin Update](Plugin_Update.md).
+If the error persists, a more recent cryptography is probably installed system wide and found first: use a Python virtual environment, see [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md).
 
 ------------
 
-## E11. Error on installation under Debian 12 : `This environment is externally managed. To install Python packages system-wide, try apt install python3-xyz...`
+## E11. Error on installation under Debian 12 or newer : `This environment is externally managed...`
 
 The full error is :
 
@@ -366,43 +316,27 @@ If you wish to install a non-Debian-packaged Python package, create a virtual en
 Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make sure you have python3-full installed.
 ```
 
-Operation under Debian 12 Bookworm needs to modify the installation command line by default by adding __--break-system-packages__ at the end :
-
-``` bash
-sudo pip3 install -r requirements.txt --break-system-packages
-```
-
-__Reminder :__ This command line is only valid on Debian 12 Bookworm systems.
+Debian 12 (Bookworm) and newer, and the matching Raspberry Pi OS releases, refuse `pip install` on the system Python. Don't use `--break-system-packages`: install the modules in a Python virtual environment for DomoticZ, as described in [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md) and [Plugin installation](Plugin_Installation.md#1c---procedure).
 
 ------------
 
 ## E12. Error : `Error: <plugin's name> : ModuleNotFoundError: No module named 'cchardet'`
 
-This error appears when you have multiple plugin's sessions and there is not the good charset-normalizer dependency version. It should be 2.0.12.
+This error appears when you have several plugin instances and the charset-normalizer module is not the version the plugin expects. The plugin pins it in `constraints.txt` (currently `charset-normalizer==2.0.11`).
 
-Check you version with the commande :
-
-``` bash
-pip show charset-normalizer
-```
-
-or if you still using python2
+Check your version, in the Python virtual environment of DomoticZ:
 
 ``` bash
-pip3 show charset-normalizer
+python3 -m pip show charset-normalizer
 ```
 
-If the answer is not 2.0.12 then :
+If it is not the pinned version, reinstall the modules of the plugin, from the plugin folder (`requirements.txt` applies `constraints.txt`):
 
 ``` bash
-pip install --force-reinstall --upgrade charset-normalizer==2.0.12
+python3 -m pip install -r requirements.txt --upgrade
 ```
 
-or if you still using python2
-
-``` bash
-pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
-```
+------------
 
 ## E13. Error : `AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'`
 
@@ -435,11 +369,11 @@ pip3 install --force-reinstall --upgrade charset-normalizer==2.0.12
 2024-04-16 18:32:14.294 Error: zig hardware (35) thread seems to have ended unexpectedly
 ```
 
-it seems that the root cause is the conflicts between pyOpenSSL and Cryptography [ref](https://aronhack.com/fix-python-attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms/)
+The root cause is a conflict between the pyOpenSSL of the system (`/usr/lib/python3/dist-packages/OpenSSL`) and the cryptography module installed for the plugin [ref](https://aronhack.com/fix-python-attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms/).
 
-``` bash
-sudo python3 -m pip install cryptography==38.0.4 --upgrade
-```
+Use a Python virtual environment for DomoticZ, so that the plugin doesn't load the system modules, and install the modules of the plugin in it (`requirements.txt` applies the `cryptography<=40.0.2` pin of `constraints.txt`): see [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md).
+
+------------
 
 ## E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK
 
@@ -473,11 +407,13 @@ sudo python3 -m pip install cryptography==38.0.4 --upgrade
 2024-04-24 12:29:42.005 Error: Zigbee: AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK'
 ```
 
-It could be related to mix between python module and installed library
+It is the same kind of conflict as [E13](#e13-error--attributeerror-module-lib-has-no-attribute-openssl_add_all_algorithms), between the pyOpenSSL of the system and the modules installed for the plugin. The best fix is a Python virtual environment for DomoticZ (see [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md)). Removing the system package also works, if no other software needs it:
 
 ```bash
 sudo apt remove -y python3-openssl
 ```
+
+------------
 
 ## E15. error: externally-managed-environment
 
@@ -501,3 +437,38 @@ hint: See PEP 668 for the detailed specification.
 ```
 
 The best is to use the Python virtual environment as described in [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md)
+
+------------
+
+## E16. Error : `Cannot run the event loop while another loop is running` with several plugin instances
+
+```log
+encountered a runtime error: Cannot run the event loop while another loop is running
+```
+
+With DomoticZ 2026.x and **Python 3.11** (for example Debian 12 / Raspberry Pi OS Bookworm), the second instance of the plugin fails to start with this error. It is a Python 3.11 problem, reported to DomoticZ in [domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763). Restarting the failed instance (or waiting for it to restart by itself) usually gets both instances running.
+
+The fix is to run DomoticZ with Python 3.13 or newer (for example Debian 13 Trixie), with the Python modules of the plugin installed for that version.
+
+------------
+
+## E17. `ModuleNotFoundError` although the modules are installed
+
+The modules were installed for another Python than the one DomoticZ uses: another Python version, or the system Python instead of the virtual environment.
+
+1. Look for the Python version used by DomoticZ in the DomoticZ log: `PluginSystem: Started, Python version '3.13.5'`.
+1. Check that your virtual environment was created with the same version (`<venv>/bin/python3 --version`). If not, create it again with `python3.xx -m venv` and reinstall the modules.
+1. Check that DomoticZ is started with this virtual environment (`VIRTUAL_ENV` and `PATH` in the service).
+
+See [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md).
+
+------------
+
+## E18. Error : `Z4D requires Python 3.11` or `Domoticz version ... not supported`
+
+The plugin (`stable9`) requires Python 3.11 or newer and DomoticZ 2025.1 or newer, with the Extended Framework. **DomoticZ 2026.3 is the recommended version.**
+
+* `Z4D requires Python 3.11, found 3.x`: DomoticZ runs an older Python. Upgrade your system, or install a newer Python and make DomoticZ use it.
+* `Domoticz version ... not supported, please upgrade to a more recent`: upgrade DomoticZ (check your version in __Setup > About__).
+
+See [Plugin installation](Plugin_Installation.md#requirements).
