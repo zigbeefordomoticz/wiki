@@ -1,194 +1,276 @@
-# The Web interface - Settings page
+# WebUI : Settings
 
-Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
+The __Settings__ menu of the WebUI lets you view and change the plugin settings.
 
-Here is the __Settings__ page of the plugin Web interface :
+## How the page works
 
-![Settings](../Images/EN_WebUI-Settings.png)
+* The settings are grouped by theme, in the sections below.
+* By default, only the main settings are shown. Enable the **Advanced settings** switch to see all of them (the *Advanced parameters* tables below).
+* Change the values, then click **Validate** to save them. **Settings (default)** puts all settings back to their default value.
+* Some settings only take effect after a restart. After **Validate**, a pop-up tells you what is needed:
+  * **Plugin Reload**: restart the plugin (**Admin > Plugin > Restart**). The WebUI header also shows that a restart is pending.
+  * **Coordinator Reset**: the coordinator must be reset (for example after a channel change).
+  * **Erase PDM**: the Zigbee network must be created again, and all devices paired again.
+* A few settings only appear with a given coordinator family (for example Silicon Labs EZSP or Texas Instruments ZNP); they are noted below.
+* The debug and logging options are not on this page: they are in **Tools > Debug**, see [Debug mode](Problem_Debuging-mode.md).
+* The settings are saved in `Conf/PluginConf-XX.json` in the plugin folder (XX is the hardware idx of the plugin in DomoticZ), with a copy in the DomoticZ database.
+* The hardware parameters of the plugin (coordinator model, serial port, WebUI port...) are not here: they are in the DomoticZ hardware page, see [Plugin settings](Plugin_Settings.md).
 
-*This page may have have changed since this documentation was written.*
+The tables below list every setting visible in the WebUI, with its name in the plugin and the text shown in the WebUI. The *Restart* column tells what a change requires (empty: the change applies immediately).
 
-## Contents
+## Available services
 
-This file is used to customized some behavior of the plugin at run time.
+Enable the services you want to be active
 
-If you are updating values in PluginConf, we strongly recommend you to make a copy of it in order to avoid any lost when doing an update of the plugin.
+### Parameters
 
-The file is edited directly from the Web Admin page.
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `MatomoOptIn` | Enable the plugin to collect informations for analyticz purposes such as Coordinator model, version... | on |  |  | See [Plugin statistics](WebUI_Statistics.md) for what is sent. |
+| `enablegroupmanagement` | Enable Groups | off |  | plugin restart | See [Group Management](HowTo_Group-management.md). |
+| `internetAccess` | Allow Internet access | on |  | plugin restart | Used to check for plugin and firmware updates, to update the certified devices database and for OTA firmware repositories. It doesn't control the [statistics](WebUI_Statistics.md). |
+| `CheckSSLCertificateValidity` | Check the validity of SSL certificates | off |  | plugin restart |  |
+| `DomoticzCustomMenu` | Enable Plugin WebUI from Domoticz Custom menu | on |  | plugin restart | See [Plugin integration](Plugin_Integration.md). |
+| `NightShift` | Push background activity from 11PM to 6AM | off |  |  |  |
 
-ATTENTION: Starting Version 4.5 the Configuration File Name is : PluginConf-xx.json and not '.txt', and respect the json syntax.
+### Advanced parameters
 
-The .txt' one is not more used and can be removed
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `pingDevices` | Ping main-powered devices regularly to vérify their health | on |  | plugin restart | See also `pingDevicesFeq` (Coordinator settings). |
 
+## Group management settings
 
-## Services
+Here are all setting to enable and configure the Group management feature.
 
-Those parameters allow the activation or not of services at plugin start.
+### Parameters
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| enablegroupmanagement | disable | manage the Groups |
-| enableReadAttributes | disable | manage the polling service |
-| enableWebServer |  |  manage the Web Admin page |
-| internetAccess | enable | Allow plugin to access Internet and check for latest version of Firmware and Plugin |
-| allowOTA | disable |  manage the Over-the-Air firmware upgrade |
-| pingDevices | enable |  ping every hour each main powered device (see pingDevicesFeq parameter) |
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `GroupOnBattery` | Enable group creation to a battery devices | off |  |  |  |
+| `OnIfOneOn` | Group is On if one device is On (otherwise needs all devices On) | on |  |  |  |
+| `TradfriKelvinStep` | Kelvin step for Tradfri remote | `51` | K |  |  |
+| `pingViaGroup` | Group address used to ping devices (0 to disable) | `0000` |  |  |  |
 
-## DomoticZ Environment
+### Advanced parameters
 
-Some of the DomoticZ parameters like on which port DomoticZ listen for getting access to the domoticZ API need to be provided.
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `forceGroupDeviceRefresh` | Refresh the widgets of all group members after a group command | on |  |  |  |
+| `reComputeGroupState` | Recompute the group state regularly | on |  |  |  |
+| `allowGroupMembership` | Add newly paired devices to their group membership | on |  | plugin restart |  |
+| `zigatePartOfGroupTint` | Add the coordinator to the Tint remote group | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. See [Muller Licht / Tint](Corner_Tint.md). |
+| `zigatePartOfGroup0000` | Create Group 0000 | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. Group 0000 is used by Ikea and Xiaomi switches, see [Ikea Tradfri](Corner_Ikea-Tradfri.md). |
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| port      | 8080    | on which port DomoticZ listen to accept API requests |
+## Zigpy CIE specific configuration
 
+Specific to some CIE as ConBeeII and RasBeeII it might required to enable some CIE specific item for some brand
 
-## Group Management
+### Parameters
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| Group is On if one device is On (otherwise needs all devices On) | enable | If you disable it, you will have the same behavior as on the Philips Hue hub. The group will be on only when ALL devices are On. |
-| reComputeGroupState | enable | The group state will be regularly computed based on the state of the devices attached to that group. |
-| forceGroupDeviceRefresh | enable | When doing a group action, like On/Off, a request will be made to each device part of the group for their current status |
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `autoBackup` | Automatic backup of coordinator | on |  |  | See [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md) and [Plugin Backup](Plugin_Backup.md). |
+| `MonitorLoopLatency` | Monitor the zigpy event loop latency | off |  |  |  |
+| `BackupFullDevices` | backup device information | off |  |  | Shown with Texas Instruments (ZNP) coordinators only. |
 
-## Command transitions for Lights
+### Advanced parameters
 
-Those parameters enable smooth transitions from their current status to the desire one. This is applicable to all Bulbs and Groups.
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `Konke` | Enable the Konke specific endpoint | off |  | plugin restart |  |
+| `Livolo` | Enable the Livolo specific endpoint | off |  | plugin restart | See [Livolo](Corner_Livolo.md). |
+| `Orvibo` | Enable the Orvibo specific endpoint | off |  | plugin restart |  |
+| `Terncy` | Enable the Terncy specific endpoint | off |  | plugin restart |  |
+| `Wiser` | Enable the Schneider Wiser specific endpoint | off |  | plugin restart | See [Schneider Wiser](Corner_Schneider_Wiser.md). |
+| `Wiser2` | Enable the Schneider Wiser 2 specific endpoint | off |  | plugin restart | See [Schneider Wiser](Corner_Schneider_Wiser.md). |
+| `OverWriteCoordinatorIEEEOnlyOnce` | Overwrite the coordinator IEEE only once (EZSP) | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. |
+| `autoRestore` | Automaticaly apply the most recent coordinator backup when a clean coordinator is found | on |  |  | Used when you replace the coordinator by a new one of the same family. |
+| `ZigpyTopologyReport` | Enable the use of zigpy Topology Scanner | on |  |  |  |
+| `ZigpyTopologyReportAutoBackup` | Automaticaly backup auto-triggered Topology scan | off |  |  |  |
+| `ZigpyAutoTopology` | Automatic topology scan by zigpy (every 12 hours) | off |  |  |  |
+| `CaptureRxFrames` | Capture received frames | off |  | plugin restart |  |
+| `CaptureTxFrames` | Capture transmitted frames | off |  | plugin restart |  |
+| `enableZclDuplicatecheck` | Discard duplicated ZCL messages | off |  |  |  |
+| `EzspAllowUnsecuredRejoins` | Allow unsecured rejoins (EZSP) | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. |
+| `BellowsNoMoreEndDeviceChildren` | Disable direct pairing on Coordinator | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. End devices then pair through a router. |
+| `zigpySourceRouting` | Enable Zigbee Source routing (plugin) | off |  | plugin restart |  |
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| Transition for Hue           | instantaneous | |
-| Transition for Color Temp    | instantaneous | Transition time in 10th of seconds when changing White color |
-| Transition for RGB color     | instantaneous | Transition time in 10th of seconds when changing the Color |
-| Transition for Move to Level | instantaneous | Transition time in 10th of seconds when dimming |
+## Device firmware update Over-The-Air
 
-## Web Interface
+Parameters which allow to configure how the plugin Over-The-Air upgrade would behave.
 
-Those are parameters which will influence the behavior of the plugin internal web server. We do recommend to not touch it.
+### Parameters
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| enableGzip | enable | gzip compression |
-| enableDeflate |enable | deflate compression |
-| enableChunk | enable | allow file to be chunk |
-| enableKeepalive | enable | Keep a live session |
-| enableCache | enable | caching |
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `autoServeOTA` | Allow automatic update when firmware found | off |  |  | See [Upgrading device firmware](HowTo_Update-device-firmware.md). |
+| `checkFirmwareAgainstZigbeeOTARepository` | Check if there is a firmware available in one of the repository | on |  |  | See [Upgrading device firmware](HowTo_Update-device-firmware.md). |
 
-## Polling
+### Advanced parameters
 
-Those parameter manage the Polling activities (if enabled).
-We do not recommend to enable it as it will increase the load on the Zigate and on the network. Please do note that reducing the timing will increase the frequency of polling information from the device and can generate bottleneck and even impact async commands.
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `EnableOTATracing` | Enable detailed tracing of the Over-The-Air process | off |  |  |  |
+| `ZigbeeOTA_Repository` | Zigbee OTA firmware (build by Internet community) | `https://raw.githubusercontent.com/Koenkk/zigbee-OTA/master/index.json` |  | plugin restart |  |
+| `IkeaTradfri_Repository` | IKEA-TRADFRI Official repository | `http://fw.ota.homesmart.ikea.net/feed/version_info.json` |  | plugin restart |  |
+| `Sonoff_Repository` | SONOFF firmware repository URL | `https://zigbee-ota.sonoff.tech/releases/upgrade.json` |  | plugin restart |  |
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| pingDevicesFeq | 3600 | Ping device frequency every hour |
-| pollingPhilips | disable | For Philips you need to enable polling in order to get their status. We recommend a value of 300 or above which correspond of number of seconds of polling |
-| pollingGledopto | disabled |For Gledopto you need to enable polling in order to get their status. We recommend a value of 300 or above which correspond of number of seconds of polling |
-| polling0000 | 8600 | retrieving device basic info every day |
-| polling0001 | 86400 | retrieving device power info every day |
-| pollingONOFF | 900 | retrieving device On/off status every 15' |
-| pollingLvlControl | 900 | retrieving device Level Control every 15' |
-| polling000C | 3600 |   |
-| polling0100 | 3600 | retrieving Shade Configuration |
-| polling0102 | 900 | retrieving Window Covering info |
-| polling0201 | 900 | Thermostat |
-| polling0204 | 86400 | Fan Control |
-| polling0300 | 900  | Color Control |
-| polling0400 | 900 | Illuminance measurement |
-| polling0402 | 900 | Temperature measurement |
-| polling0403 | 900 | Pressure measurement |
-| polling0405 | 900 | Relative Humidity |
-| polling0406 | 900 | Occupancy sensing |
-| polling0500 | 86400 | |
-| polling0502 | 86400 | |
-| polling0702 | 900 | Power measure |
-| polling000f | 900 | |
-| pollingfc01 | 900 | |
+## Pairing settings
 
+Special settings for special devices or special conditions
 
-## Device Management
+### Parameters
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| forcePollingAfterAction | enable | will request a status update of the device state after an action |
-| forcePassiveWidget | disable | will allow a DomoticZ acion on the widget despite the fact that the end device cannot receive the command. For exemple you have a Xiaomi battery device. |
-| allowForceCreationDomoDevice| disable | Will create a Domotciz Widget even if there is already an existing one. |
-| resetPluginDS | disable | will reset the plugin database data structure |
-| resetConfigureReporting| disable | will reset the Configure Reporting info |
-| resetReadAttributes | disable | will reset the polling info |
-| resetMotiondelay | 30 | time before moving the Motion state to Off. You can use the one from the Domotciz Motion widget |
-| allowGroupMembership | enable | will allow the plugin to automatically create group membership if known (Legrand) |
-| doUnbindBind | disable | will force an unbind before binding a cluster |
-| allowReBindingClusters | enable | will rebind clusters if the device is coming back |
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `LegrandCompatibilityMode` | Enable to simulate a Legrand Netamo Hub | off |  |  | See [Legrand Netatmo](Corner_Legrand-Netatmo.md). |
+| `enableSchneiderWiser` | Enable if you have Legacy Wiser devices | off |  |  | See [Schneider Wiser](Corner_Schneider_Wiser.md). |
 
+### Advanced parameters
 
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `TuyaMagicRead` | Send the Tuya magic read command when pairing | on |  |  |  |
+| `ConfigureReportingChunk` | Max number of attributes when Configure Reporting | `3` |  |  |  |
+| `AqaraOppleBulbMode` | Enable to have Aqara Opple remote commanding directly devices | off |  |  |  |
+| `reenforcementWiser` | Enable reenforcement messages (legacy Wiser only) | `300` | s |  |  |
+| `ReadAttributeChunk` | Max number of attributes when Read Attributes | `10` |  |  |  |
+| `ReadAttributeChunkWhenPairing` | Max number of attributes per Read Attributes while pairing | `3` |  |  |  |
+| `ZiGateConfigureReporting` | Let the ZiGate firmware handle Configure Reporting | on |  |  | ZiGate coordinators only. |
+| `bindingDelay` | Delay in sec after each binding command | `0.75` | s |  |  |
+| `pairingCommandsDelay` | Delay in sec between commands sent during pairing | `0` | s |  |  |
 
-## ZiGate Configuration
+## Web Interface settings
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| allowRemoveZigateDevice | disable | If enable when removing a device, a request will be done also to Zigate |
-| blueLedOnOff | enable | manage the Zigate blue led. |
-| resetPermit2Join | enable | will disable permit to join at plugin start |
-| Ping | enable | will ping Zigate every 4' to insure the connectivity |
-| Certification | CE | CE or FCC certifications |
-| channel | 0 | One of those 11, 15, 19, 20, 25 and 26 Zigate channel. 0 means Zigate will select the best one. Changing the channel will require a Soft Reset of Zigate and your already paired devices might need to be repaired |
-| TXpower_set | 0 | Power attenuation. 0: 0dBM, 1: -9 dBM, 2: -20dBM, 3: -32dBM |
-| extendedPANID | 0 | You can force the Extended PAN Id, this would required a full Erase PDM |
+Allows to enable/disable Web UI
 
-## Over The Air Upgrade
+### Parameters
 
-* Works currently for LEDVANCE and TRADFRI products
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `Lang` | Web UI language | `en-US` | en-US, fr-FR, de-DE, es-ES, it-IT, nl-NL |  | Also the language of the selector levels of some widgets created after the change. |
+| `numTopologyReports` | Number of Topology reports saved | `4` |  |  |  |
+| `numEnergyReports` | Number of Interference reports saved | `4` |  |  |  |
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| batteryOTA | disable | enable battery upgrade |
-| waitingOTA | 3600 | delay in second before starting the Over-the-Air upgrade |
+### Advanced parameters
 
-## Verbose
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `TopologyV2` | Network Topology based on routing and neighbourghs tables | on |  |  |  |
 
-Menu has been moved to the Tool Debug sub menu
+## Device Management settings
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| logDeviceUpdate | enable | display the Widget update message 'UpdateDevice - (DIN-ZiGate - lumi.sensor_motion.aq2_Motion-00158d0003021601-01) 1:On' |
-| debugMatchId | ffff | coma separated list of short address that you want to trace in the log |
-| debugInput | disable | debugging all incoming messages |
-| debugOutput | disable | debugging all outgoing messages |
-| debugCluster | disable | debugging incoming clusters |
-| debugHeartbeat | disable | debugging recurring activities |
-| debugWidget | disable | debugging widget/DomoticZ management |
-| debugPlugin | disable | debugging main plugin |
-| debugDatabase | disable | debugging plugin database |
-| debugCommand | disable | debugging Command/DomoticZ actions |
-| debugPairing | disable | debugging pairing process |
+Here are all settings related to Devices and how the coordinator interact with them
 
+### Parameters
 
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `resetMotiondelay` | Delay in sec to reset motion detection | `30` | s |  |  |
+| `resetSwitchSelectorPushButton` | Number of sec after the Selector is reset to Off | `0` | s |  |  |
+| `forceSwitchSelectorPushButton` | Workaround Domoticz issue #4143 | off |  |  | See [domoticz/domoticz#4143](https://github.com/domoticz/domoticz/issues/4143). |
+| `TrackingEraticValue` | Log attribute values received out of the expected range | off |  |  | Useful when [writing a device configuration](HowTo_Device-Customization.md) with a `Range`. |
 
-## Legrand Specific
+### Advanced parameters
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| EnableLedIfOn | enable | blue led if On |
-| EnableLedInDark | disable | blue led if Off |
-| EnableDimmer | disable | enable dimmer |
-| LegrandFilPilote | enable | enable fil pilote |
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `deviceOffWhenTimeOut` | Switch device to Off when network Timeout | off |  |  |  |
+| `forcePollingAfterAction` | Get device status after action | on |  |  |  |
+| `forcePassiveWidget` | Allow Domoticz actions on Widgets from remote devices | off |  |  |  |
+| `ForceDeviceTimedOut_afterXhours` | Mark device as Timed Out after X hours without traffic (0 to disable) | `0` | h |  | 0 disables. |
+| `resetConfigureReporting` | Reset all existing Configure Reporting | off |  | plugin restart | One shot: the plugin clears it after the restart. |
+| `checkConfigurationReporting` | Check the device Report configuration regularly | `75600` | s |  | 75600 s = 21 hours. 0 disables. |
+| `resetReadAttributes` | Reset all read attributes | off |  | plugin restart | One shot: the plugin clears it after the restart. |
+| `resetOTAUpdate` | Reset the OTA update status of all devices at startup | off |  | plugin restart |  |
+| `doUnbindBind` | Unbind and then bind, when doing a binding operation | off |  |  |  |
+| `allowReBindingClusters` | Enable re-binding clusters during configure reporting operations | on |  |  | See [FAQ Q8](Problem_FAQ.md#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually). |
 
-## Schneider Specific
+## Coordinator settings
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| enableSchneiderWiser | disable | Must be enable to pair Schneider Wiser devices |
+Here are all settings related to the coordinator hardware.
 
+### Parameters
 
-## Others
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `blueLedOnOff` | Enable Coordinator Blue Led | on |  |  |  |
+| `Certification` | Certification ( FCC or CE ) | CE regulation | CE regulation, FCC regulation | plugin restart |  |
 
-| parameter | default | description |
-| --------- | ------- | ----------- |
-| alarmDuration | 1 | 1s by default, this is the alarm duration |
-| enableSchneiderWiser | disable | mainly allow to make the difference between Livolo and Schneider IEEE |
-| numTopologyReports | number of Topology reports you want to keep |
-| numEnergyReports | number of Energy reports you want to keep |
-| PowerOn_OnOff |
-| TradfriKelvinStep | 51 | when binding the Ikea Remote with plugin and Zigate you can control
-| vibrationAqarasensitivity | medium | low, medium, high for Aqara vibration sensitivity |
+### Advanced parameters
+
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `pingDevicesFeq` | Frequency of regular ping main-powered devices | `3600` | s |  |  |
+| `resetPermit2Join` | Reset permit to join at startup | on |  |  |  |
+| `Ping` | Enable Ping | on |  |  |  |
+| `channel` | Coordinator chanel (default 0) | default | default, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 | coordinator reset | **Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md). |
+| `TXpower_set` | Coordinator transmission power level | 0dbM | 0dbM, -9 dbM, -20dbM, -32dbM | plugin restart |  |
+| `extendedPANID` | Zigbee Extended PAN Identifier | `0000` |  | erase network | **Changing it erases the network: all devices must be paired again.** |
+| `forceClosingAllNodes` | Enable to close Pairing mode in each router | off |  | plugin restart | When pairing mode is switched off, the plugin also closes it on every router. |
+
+## Command transitions for Lights in Groups
+
+For Groups only. You can specify the transition time in 10th of seconds with which the transition from current to target stage. For example how many 10th of second it will take to move from the current Color to the Color I requested via Domoticz. Color temp is used for White Color
+
+### Parameters
+
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `GrpfadingOff` | Fadding mode | default | default, 50% fade, 12s to off, 20% dim up, 1s off, No fade |  |  |
+| `GrpmoveToColourTemp` | Transition time for TEMP move color | `0` | 1/10 s |  |  |
+| `GrpmoveToColourRGB` | Transition time for RGB move color | `0` | 1/10 s |  |  |
+| `GrpmoveToLevel` | Transition time for one dim position to an other one | `0` | 1/10 s |  |  |
+| `GroupLevelWithOnOff` | Send Move to Level with On/Off for groups | on |  |  |  |
+
+## Plugin environment settings
+
+Here are all Plugin environements settings
+
+### Parameters
+
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `numDeviceListVersion` | Number of DeviceList history | `12` |  |  | Number of old copies of `Data/DeviceList-XX.txt` (and of the coordinator backup) kept. |
+
+### Advanced parameters
+
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `storeDomoticzDb` | Store the plugin device list in the Domoticz database | on |  |  | See [Plugin Backup](Plugin_Backup.md). |
+| `useDomoticzDb` | Read the plugin device list from the Domoticz database | on |  |  | See [Plugin Backup](Plugin_Backup.md). |
+| `PluginLogMode` | File permissions applied to the plugin log files | system default | system default, 0600, 0640, 0644 | plugin restart |  |
+| `pluginData` | Plugin data folder | (empty) |  | plugin restart | Empty means the `Data` folder of the plugin. |
+| `pluginConfig` | Plugin configuration folder | (empty) |  | plugin restart | Empty means the `Conf` folder of the plugin. |
+| `pluginOTAFirmware` | OTA firmware folder | (empty) |  | plugin restart | Empty means the `OTAFirmware` folder of the plugin. |
+| `pluginReports` | Plugin reports folder | (empty) |  | plugin restart | Empty means the `Reports` folder of the plugin. |
+| `pluginWWW` | Web UI files folder | (empty) |  | plugin restart | Empty means the `www` folder of the plugin. |
+| `pluginLogs` | Plugin logs folder | (empty) |  | plugin restart | Empty means the `Logs` folder of the plugin. |
+| `SSLCertificate` | Path to the SSL certificate used by the Web UI | (empty) |  | plugin restart | Empty means `server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https. |
+| `SSLPrivateKey` | Path to the SSL private key used by the Web UI | (empty) |  | plugin restart | Empty means `server.key` in the plugin folder. See `SSLCertificate`. |
+
+## Device patches and workarounds
+
+Enable a corrective patch for a known device issue. Use it only if you have been asked to.
+
+### Advanced parameters
+
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `Bug566` | Apply the issue #566 fix on TRADFRI control outlet | off |  |  |  |
+
+## Experimental parameters
+
+Use it only if you have been asked to
+
+### Advanced parameters
+
+| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
+| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
+| `ControllerInRawMode` | Use the coordinator in raw mode | off |  |  |  |
+| `enableZigpyPersistentInMemory` | Keep the zigpy database in memory instead of a file | on |  | plugin restart |  |
+| `EventLoopInstrumentation` | Instrument the zigpy event loop | on |  | plugin restart |  |
+| `DomoticzDB_Stats` | Collect statistics on Domoticz database accesses | on |  |  |  |
+| `ZigpyTransport_Stats` | Collect statistics on the zigpy transport | on |  |  |  |
+| `EnableTraceMalloc` | Enable memory allocation tracing (tracemalloc) | off |  |  |  |
