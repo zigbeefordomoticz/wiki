@@ -13,7 +13,7 @@ The Temperature & Humidity Sensor share the same model name as [generic one](htt
 
 ## Electricity Metering 16A EU Plug (BW-SHP13)
 
-It's generic name is TS0121.
+Its generic name is TS0121.
 
 To pair the device, press the power button for 5s, a blue light will flash till the pairing process is complete.
 Five devices are created:
@@ -25,12 +25,9 @@ Five devices are created:
 
 You can remove one on the unused power device. The cumulated consumption is updated each 0.01 kWh.
 
-The power device can also indicate the actual power consumption but you have to activate the polling for this brand.
-On the dashboard, in the settings menu, activate advanced settings and choose the refresh frequency:
+The power device also shows the instant power consumption. The plug doesn't report it by itself, so the plugin polls it: this is the [device parameter](HowTo_Device-parameters.md) `PowerPollingFreq`, in seconds. The certified configuration of the plug (`TS0121`) sets it to **300** (every 5 minutes) when the device is paired; `0` disables the polling.
 
-![](../Images/Settings_polling_bltzwolf.PNG)
-
-I choose 120s for a washer, it's enough to know when the machine starts and finishes.
+To change it, open the plugin WebUI, go to **Management > Device Management**, click on the **Parameters** icon of the plug and change the value, for example `{'PowerPollingFreq': 120}`. 120 seconds is enough for a washer, to know when the machine starts and finishes.
 
 ## Bonus
 

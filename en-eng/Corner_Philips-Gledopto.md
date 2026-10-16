@@ -1,19 +1,24 @@
-# Polling for On/Off and Level Control
+# Polling for On/Off and Level Control (Philips, Gledopto)
 
 ## Introduction
 
-Because some brand as of Philips or Gledopto do not provide instant status in case of async changes (like changes done via a remote),
-we have implemented a light polling mecanism to retreive only the On/Off and Dim Level of those brand.
+Some brands, such as Philips (Hue) and Gledopto, don't report their status when it changes in another way than through the plugin (for example with a remote control or the Hue app). To keep DomoticZ up to date, the plugin can poll these lights: it reads the On/Off state and the dimming level at a regular interval.
 
-## What to Do ?
+## How polling is configured
 
-From the plugin Web Admin page, go to the settings
+Polling is a **per-device** setting: the [device parameter](HowTo_Device-parameters.md) `OnOffPollingFreq`, in seconds.
 
-1. Select Advanced Settings
-1. Make sure to disable the general polling
-1. Enable the Philips polling. By default it is disable __0__, if you put a value this is the polling frequency in second.
-we recommend not go below 45 secondes in order to not overload the Zigate. In fact it will really depends on how-many devices
-of this type Zigate will have to managed
+* The certified configurations of the Philips and Gledopto lights set `OnOffPollingFreq` to **300** (every 5 minutes) when the device is paired.
+* `0` disables the polling for this device.
 
+To change it for a light:
 
-![Philips Poling](../Images/Philips_Polling.png)
+1. Open the plugin WebUI and go to **Management > Device Management**.
+1. Click on the **Parameters** icon of the light (right column).
+1. Change the value, for example `{'OnOffPollingFreq': 120}` to poll every 2 minutes, and save. Keep the other parameters of the device as they are.
+
+## Which interval to choose?
+
+Each poll sends two read requests to the light. With many lights, a short interval loads the Zigbee network: we recommend not to go below 45 seconds, and to keep a longer interval if you have many lights of these brands. The plugin skips a poll when the coordinator is busy.
+
+If you only need the status when you look at DomoticZ, the default 300 seconds is usually enough.
