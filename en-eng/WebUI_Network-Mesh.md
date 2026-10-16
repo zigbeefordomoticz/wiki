@@ -8,7 +8,7 @@
 
 The page is reached from the WebUI menu: **Network > Mesh graph** (`/network/mesh`).
 
-![The Mesh graph page](Images/EN_WebUI-Network-Mesh-overview.png)
+![The Mesh graph page](Images/EN_WebUI-Main-Network-Mesh-Overview.png)
 
 *The screenshots on this page are rendered from one real scan of a 62-device ZNP network - 25 of
 the 30 nodes that could answer did - so what they show is a real mesh rather than a mock-up. Each
@@ -16,7 +16,7 @@ node carries the name you gave the device and its network id underneath; a devic
 is labelled with its network id alone. These pictures may have changed since this documentation was
 written.*
 
-Contents:
+## Contents:
 
 * [What "mesh" means](#what-mesh-means)
 * [Three tables, three different questions](#three-tables-three-different-questions)
@@ -348,8 +348,6 @@ computed from the links in front of you, and neither reads the depth column.
 ------------------------------------------------
 
 ## Computed routes
-
-> Available with the WebUI release that follows plugin 9.1.008.
 
 The three tables say what each node knows. The question most people actually
 bring to a mesh diagram is the one that spans them: **how does this device reach the
