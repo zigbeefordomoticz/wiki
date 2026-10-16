@@ -653,10 +653,12 @@ collection of its own - see [Refreshing the associated devices alone](#refreshin
 
 ![The associated devices view](Images/EN_WebUI-Network-Mesh-tree.png)
 
-*Part of the associated devices view of the same scan, in the breadthfirst layout and zoomed in far
-enough to read the names: thirteen routers declared twenty-five devices between them. Nothing in
-this table places the routers themselves, which is why it reads as a row of routers with their
-devices under them rather than as one hierarchy under the coordinator.*
+*The associated devices view of the same scan, whole, in the breadthfirst layout: twelve routers
+along the top and the twenty-four devices they declare along the bottom, each link drawn as one
+router → device line. The counters read 24/24 association links, and the line under the graph
+counts the one row that names a node this scan does not list. Nothing in this table places the
+routers themselves, which is why it reads as a row of routers with their devices under them rather
+than as one hierarchy under the coordinator. Zoom in, or click a node, to read the names.*
 
 ### It is not a record of how you paired the device
 
