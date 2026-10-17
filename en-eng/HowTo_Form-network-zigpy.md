@@ -1,60 +1,46 @@
-# How to form a network for coordinators using zigpyradio libarries
+# Form a network with a zigpy coordinator
 
-## When using this procedure
+## When to use this
 
-Usually you should initialise the coordinator via the Coordinator Initialisation parameter when starting the plugin from Domoticz Hardware page.
-However we have found that in case of a new coordinator , you are not able to get it started and you get error logs like that:
+Normally, a new network is formed by the plugin itself: set *Initialize Coordinator* to *True* in the plugin hardware and restart it (see [Plugin settings](Plugin_Settings.md)).
 
-```
+If that fails, for example with a new coordinator that never had a network, the plugin keeps restarting and the log shows errors while forming the network. This was seen in 2022 with a Silicon Labs (EZSP) module:
+
+```log
 2022-09-01 17:31:33,251 DEBUG   :Using selector: EpollSelector
 2022-09-01 17:31:33,252 INFO    : [     ZigpyCom_5 0] Started radio ezsp port: /dev/ttyAMA0
 2022-09-01 17:31:33,254 INFO    : [     ZigpyCom_5 0] Form a New Network with Channel: 0(0x00) ExtendedPanId: 0x0000000000000000
 2022-09-01 17:31:34,396 WARNING :Couldn't set EzspConfigId.CONFIG_MULTICAST_TABLE_SIZE=16 configuration value: EzspStatus.ERROR_OUT_OF_MEMORY
-2022-09-01 17:31:34,503 ERROR   :Couldn't start application
-Traceback (most recent call last):
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/Classes/ZigpyTransport/AppBellows.py", line 61, in initialize
-    await self.load_network_info(load_devices=False)
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/bellows/zigbee/application.py", line 215, in load_network_info
-    await self._ensure_network_running()
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/bellows/zigbee/application.py", line 165, in _ensure_network_running
-    raise NetworkNotFormed(f"Failed to init network: {init_status!r}")
-zigpy.exceptions.NetworkNotFormed: Failed to init network: <EmberStatus.NOT_JOINED: 147>
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/Classes/ZigpyTransport/AppBellows.py", line 108, in startup
-    await self.initialize(auto_form=True)
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/Classes/ZigpyTransport/AppBellows.py", line 78, in initialize
-    await self.load_network_info(load_devices=False)
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/bellows/zigbee/application.py", line 215, in load_network_info
-    await self._ensure_network_running()
-  File "/home/pi/domoticz/plugins/Domoticz-Zigbee/bellows/zigbee/application.py", line 165, in _ensure_network_running
-    raise NetworkNotFormed(f"Failed to init network: {init_status!r}")
+...
 zigpy.exceptions.NetworkNotFormed: Failed to init network: <EmberStatus.NOT_JOINED: 147>
 ```
 
-PS/ We currently are investigating what the issue is, but in between you can use the following steps
+You can then form the network by hand with `zigpy`, the zigpy command-line tool installed with the plugin, and start the plugin on it.
 
-## The here after procedure is described for EZSP Coordinators like Elelabs, SonOff E
+## Procedure
 
-0. Assumption
+1. **Stop the plugin** (or Domoticz): only one program can use the coordinator.
+1. Activate the Python virtual environment of Domoticz (see [Python virtual environment](HowTo_PythonVirtualEnv.md)); with Docker, open a shell in the container. Don't install zigpy-cli with `pip install --user`: it is already there.
+1. Check that the coordinator answers. Replace `ezsp` with `znp` (Texas Instruments) or `deconz` (ConBee/RaspBee), and `/dev/ttyAMA0` with the serial port of your coordinator (or `socket://<ip>:<port>`):
 
-The coordinator is accessible via the /dev/ttyAMA0 ( elelabs shield)
+   ```bash
+   zigpy radio --baudrate 115200 ezsp /dev/ttyAMA0 info
+   ```
 
-1. Install zigpy cli
+   If this fails too, the problem is between the system and the coordinator (port, access rights, firmware), not in the plugin.
 
-`pip install git+https://github.com/zigpy/zigpy-cli.git`
+1. Form the network:
 
-as expressed during the pip installation
+   ```bash
+   zigpy radio --baudrate 115200 ezsp /dev/ttyAMA0 form
+   ```
 
-`export PATH=/home/pi/.local/bin:$PATH`
+1. In Domoticz, check that *Initialize Coordinator* is *False* on the plugin hardware, and start the plugin.
 
-2. Check the access to the Coordinator
+zigpy-cli doesn't support Bouffalo Lab coordinators: with one of them, use *Initialize Coordinator*.
 
-`zigpy radio --baudrate 115200 ezsp /dev/ttyAMA0 info`
+The `channel` and `extendedPANID` settings of the plugin are not used by `zigpy … form`, which picks a channel itself. To get a specific channel, change it afterwards (see [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md)); for a specific extended PAN ID (legacy Wiser), use *Initialize Coordinator*.
 
+## References
 
-3. Form a network
-
-`zigpy radio --baudrate 115200 ezsp /dev/ttyAMA0 form`
+* [zigpy-cli](https://github.com/zigpy/zigpy-cli)
