@@ -25,5 +25,6 @@
 * [ProfileID ZDeviceID](ProfileID---ZDeviceID.md)
 * [Transport](Transport.pptx)
 * [Plugin Architecture Diagram](Plugin%20Architecture%20Diagram.pptx)
+* [Developing a Python plugin (Domoticz wiki)](https://wiki.domoticz.com/Developing_a_Python_plugin)
 
 ![Zigpytransport](ZigpyTransport.png)
