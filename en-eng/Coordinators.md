@@ -1,345 +1,71 @@
-# Coordinators - Les coordinateurs
+# Compatible coordinators
 
-Click on the chipset links to get to the informations.
-Cliquer sur les liens de chipset pour accéder aux informations.
+The coordinator is the Zigbee radio (USB dongle, module or network device) that creates and manages your Zigbee network. The plugin talks to it through the [zigpy](https://github.com/zigpy/zigpy) libraries, which support several coordinator families.
 
-* [Chipset NXP](#coordinators-with-nxp-chipset)
+## Supported coordinators
 
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th style="width:15%">Maker<br>Fabricant</th>
-            <th style="width:20%">Coordinator<br>Coordinateur</th>
-            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
-            <th style="width:15%">Objects in all<br>Objets en tout</th>
-            <th style="width:15%">Direct objects<br>Objets en direct</th>
-            <th style="width:5%">Groups<br>Groupes</th>
-            <th style="width:15%">Comments<br>Commentaires</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=3>Lixee</td>
-            <td rowspan=2>ZiGate V1<br>(USB, PiZiGate, Wiifi, Ethernet)</td>
-            <td>Legacy</td>
-            <td>40</td>
-            <td>?</td>
-            <td>5</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>OptiPDM</td>
-            <td>70</td>
-            <td>20</td>
-            <td>5</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1>ZiGate V2<br>(USB, PiZiGate, Wiifi, Ethernet)</td>
-            <td></td>
-            <td>200</td>
-            <td>20</td>
-            <td>15</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+| Family | *Coordinator Model* to select | Example hardware | Firmware | Notes |
+| ------ | ----------------------------- | ---------------- | -------- | ----- |
+| **Texas Instruments** (zigpy-znp) | *Texas Instruments ZNP (via zigpy)* | CC2652P/R/RB and CC1352P/R based: Sonoff ZBDongle-P, SMLIGHT SLZB-06, Electrolama zzh… | Z-Stack coordinator firmware from [Koenkk/Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator) only | CC2531 and CC2530 are obsolete: not recommended. [Hardware list](https://github.com/zigpy/zigpy-znp#hardware-requirements) |
+| **Silicon Labs** (bellows) | *Silicon Labs EZSP (via zigpy)* | EFR32MG21 / MG24 based: Sonoff ZBDongle-E, SMLIGHT SLZB-06M / SLZB-07, Home Assistant SkyConnect / Connect ZBT-1, Elelabs ELU013 / ELU023… | EmberZNet NCP (EZSP) firmware, from the hardware maker | [Hardware list](https://github.com/zigpy/bellows#hardware-requirement) |
+| **deCONZ** (zigpy-deconz) | *Conbee/Rasbee I, II, III (via zigpy)* | Phoscon ConBee II, RaspBee II | deCONZ firmware from Phoscon | ConBee III support is deprecated in the plugin because of instability. [Hardware list](https://github.com/zigpy/zigpy-deconz) |
+| **Bouffalo Lab** (zigpy-blz) | *Bouffalo Lab Zigbee (via zigpy)* | Bouffalo Lab based coordinators | See [zigpy-blz](https://github.com/bouffalolab/zigpy-blz) | |
+| **ZiGate** | *ZiGate* / *ZiGate+* | ZiGate V1, ZiGate+ V2 | | **No longer supported**: see [ZiGate (legacy)](#zigate-legacy). |
 
+Prefer a recent Texas Instruments (CC2652/CC1352) or Silicon Labs (EFR32MG21/MG24) coordinator, with an up-to-date firmware.
 
-* [Chipset scilabs](#coordinators-with-scilabs-chipset)
+### USB or network coordinator
 
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th style="width:15%">Maker<br>Fabricant</th>
-            <th style="width:20%">Coordinator<br>Coordinateur</th>
-            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
-            <th style="width:15%">Objects in all<br>Objets en tout</th>
-            <th style="width:15%">Direct objects<br>Objets en direct</th>
-            <th style="width:5%">Groups<br>Groupes</th>
-            <th style="width:15%">Comments<br>Commentaires</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=2>ELElabs</td>
-            <td rowspan=1>ELU013 (USB)</td>
-            <td></td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1>ELU023 (Pi)</td>
-            <td></td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+* A **USB** coordinator (or a module on a serial port) is connected with the *USB* connection type and its serial port.
+* A **network** coordinator (Ethernet or Wi-Fi, such as the SMLIGHT SLZB-06 family) is connected with the *Socket* connection type, its IP address and its port.
 
-* [Chipset Texas Instruments](#coordinators-with-texas-instruments-chipset)
-
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th style="width:15%">Maker<br>Fabricant</th>
-            <th style="width:20%">Coordinator<br>Coordinateur</th>
-            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
-            <th style="width:15%">Objects in all<br>Objets en tout</th>
-            <th style="width:15%">Direct objects<br>Objets en direct</th>
-            <th style="width:5%">Groups<br>Groupes</th>
-            <th style="width:15%">Comments<br>Commentaires</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=1>Electrolama</td>
-            <td rowspan=1>ZZH RF Stick</td>
-            <td>TI CC2652R1</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1>Sonoff</td>
-            <td rowspan=1>USB Dongle Plus</td>
-            <td>TI CC2652P + CP2102N</td>
-            <td>40</td>
-            <td>21</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1></td>
-            <td rowspan=1></td>
-            <td>TI CC1352P/CC1352R</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1></td>
-            <td rowspan=1></td>
-            <td>TI CC2531</td>
-            <td>20</td>
-            <td>?</td>
-            <td>?</td>
-            <td>Non recommandé</td>
-        </tr>
-        <tr>
-            <td rowspan=1></td>
-            <td rowspan=1></td>
-            <td>TI CC2530 + CC2591/CC2592</td>
-            <td>20</td>
-            <td>?</td>
-            <td>?</td>
-            <td>Non recommandé</td>
-        </tr>
-        <tr>
-            <td rowspan=1></td>
-            <td rowspan=1></td>
-            <td>TI CC2652P/ CC2652R/ CC2652RB</td>
-            <td>20</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-* [Deconz](#coordinators-phoscon)
-
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th style="width:15%">Maker<br>Fabricant</th>
-            <th style="width:20%">Coordinator<br>Coordinateur</th>
-            <th style="width:15%">Firmware or chip<br>Firmware ou puce</th>
-            <th style="width:15%">Objects in all<br>Objets en tout</th>
-            <th style="width:15%">Direct objects<br>Objets en direct</th>
-            <th style="width:5%">Groups<br>Groupes</th>
-            <th style="width:15%">Comments<br>Commentaires</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan=1>Phoscon</td>
-            <td rowspan=1>ConBee2</td>
-            <td>ATSAMR21B18 ARM® Cortex®-M0+</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1>Phoscon</td>
-            <td rowspan=1>RaspBee2</td>
-            <td>ATSAMR21B18 ARM® Cortex®-M0+</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td rowspan=1>Phoscon</td>
-            <td rowspan=1>ConBee3</td>
-            <td>EFR32MG21 ARM® Cortex®-M33</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
---------------------
+See [Plugin settings](Plugin_Settings.md). Plug a USB coordinator on a USB extension cable, away from the computer and from USB 3 ports, which disturb the 2.4 GHz band.
 
 ## Some explanations
 
-### Limited number of objects
+### Limited number of devices
 
-The number of objects managed by a coordinator is limited. There is a total number of objects (Objects in all) but also a maximum number of live objects on the coordinator (Direct Objects). The rest of the objects will have to go through routers.
+A coordinator can only have a limited number of devices attached directly to it (its *children*); the others join through routers (mains-powered devices). The limits depend on the coordinator and its firmware: build your network with enough routers (see [Build a Zigbee network](HowTo_Build-a-ZigBee-network.md)).
 
-In any case, **DomoticZ limits the number of devices per plugin to 255**.
-
-__Info:__ A Xiaomi / Aqara temperature sensor object occupies 5 devices : Temperature, Hygrometry, Pressure, Temperature + Hygrometry and Temperature + Hygrometry + Pressure. It is possible at any time to remove unused devices (DomoticZ) and thus gain in number.
-
+On the Domoticz side, the plugin uses the Domoticz *extended* plugin framework: each Zigbee device can have up to 254 widgets, and there is no limit on the number of widgets of the plugin as a whole. You no longer need to delete widgets to stay under a limit.
 
 ### Limited number of groups
 
-There is a limit to the number of groups to which a coordinator can belong.
+The coordinator, like any device, can only belong to a limited number of groups, depending on the coordinator and its firmware. This matters when the coordinator must receive the commands of remotes bound to groups (see [Manage Zigbee groups](HowTo_Group-management.md)).
 
-__Info:__ The number of groups to which an object can belong is limited. Typically, an object can belong to 5 different groups. As a reminder, it is the object that knows in which group it belongs. The exact number will depend on each object.
+Each device knows the groups it belongs to, and can usually belong to a few groups only (often 5); the exact number depends on the device.
 
+### Transmit power
 
-## Quelques explications
+The transmit power can be set with the `TXpower_set` setting (WebUI *Settings*, *Coordinator settings*); the allowed range depends on the chip and the firmware, and on the regulation (`Certification` setting: CE or FCC). Maximum output power of common chips:
 
-### Nombre d'objets limité
+| Chip | Maximum output power |
+| ---- | -------------------- |
+| TI CC2652P, CC1352P (embedded power amplifier) | +20 dBm |
+| TI CC2652R, CC2652RB, CC1352R | +5 dBm |
+| TI CC2538 / CC2531 / CC2530 + CC2591 or CC2592 amplifier | +19 dBm |
+| TI CC2538 | +7 dBm |
+| TI CC2531, CC2530 | +4.5 dBm |
+| Silicon Labs EFR32MG24A420 | +19.5 dBm |
+| Silicon Labs EFR32MG24A410 | +10 dBm |
+| Silicon Labs EFR32MG21A020, EFR32MG21B020 | +20 dBm |
+| Silicon Labs EFR32MG21A010 | +10 dBm |
+| Silicon Labs EFR32MG21B010 | +10.5 dBm |
+| Silicon Labs MGM210P | +20 dBm |
+| Silicon Labs MGM210L | +12.5 dBm |
+| Silicon Labs MGM13P | +19 dBm |
+| Silicon Labs MGM13S, EFR32MG13P732, EFR32MG13P632 | +10 dBm |
 
-Le nombre d'objets gérés par un coordinateur est limité. Il y a un nombre total d'objets (Objets en tout) mais aussi un nombre maximal d'objets en direct sur le coordinateur (Objets en direct). Le reste des objets devra passer par des routeurs.
+More power is not always better: in Europe the CE regulation limits it, and a strong coordinator doesn't help battery devices that answer with low power.
 
-Dans tous les cas, **DomoticZ limite le nombre de dispositifs par plugin à 255**.
+## ZiGate (legacy)
 
-__Info :__ Un objet capteur de température Xiaomi / Aqara occupe 5 dispositifs : Température, Hygrométrie, Pression, Température + Hygrométrie et Température + Hygrométrie + Pression. Il est possible à tout instant de supprimer les dispositifs (DomoticZ) non utilisés et ainsi gagner en nombre. [Voir le paragraphe Gestion des Dispositifs](Tuto_Appairage-objet.md#gestion-des-dispositifs).
+ZiGate coordinators are no longer supported by the plugin: we advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator. For existing users:
 
-### Nombre de groupes limité
+| Coordinator | Firmware | Devices in all | Devices attached directly | Groups of the coordinator | Minimum firmware |
+| ----------- | -------- | -------------- | ------------------------- | ------------------------- | ---------------- |
+| ZiGate V1 (USB, PiZiGate, Wi-Fi, Ethernet) | Legacy | 40 | | 5 | 3.1e |
+| ZiGate V1 | OptiPDM | 70 | 20 | 5 | 3.1e |
+| ZiGate+ V2 (USB, PiZiGate, Wi-Fi, Ethernet) | | 200 | 20 | 15 | 3.1f |
 
-Le nombre de groupes auxquels un coordinateur peut appartenir est limité.
-
-__Info :__ Le nombre de groupes auxquels un objet peut appartenir est limité. Généralement, un objet peut appartenir à 5 groupes différents. Pour rappel, c'est l'objet qui sait dans quel groupe il appartient. Le nombre exact va dépendre de chaque objet.
-
---------------------
-## Coordinators with NXP chipset
-
-### Fimwares compatibily
-
-#### ZiGate V1 Legacy
-
-* Plugin 5.1.017 : firmware 3.1e minimum
-* Plugin 4.9.1   : firmware 3.1c minimum
-
-#### ZiGate V1 OptiPDM
-
-* Plugin 5.1.017 : firmware 3.1e minimum
-
-#### ZiGate V2
-
-* Plugin 5.1.01 : firmware 3.1f minimum
-
-### Tutoriels
-
-* [Sauvegarder / Restaurer la ZiGate](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate)
-* [Mettre à jour la ZiGate](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
-
-
---------------------
-## Coordinators with SCIlabs chipset
-
-### Fimwares compatibily
-
-#### ELU013 (dongle USB)
-
-*
-
-#### ELU023 (shield Pi)
-
-*
-
-### Tutoriels
-
-### Infos
-
-Exemple hack de la gateway Lidl : https://paulbanks.org/projects/lidl-zigbee/.<br>
-Pour plus d'infos sur les coordinateurs possible https://github.com/zigpy/bellows#hardware-requirement.
-
-### Puissance Tx
-
-* EFR32MG24A420xxxxxxxx has a programmable output power up to +19.5dBm and down to -19.5dBm ?
-* EFR32MG24A410xxxxxxxx has a programmable output power up to +10dBm and down to -19.5dBm ?
-* MGM210P ("P" for embedded Power-Amplifier) has a programmable output power up to +20dBm and down to -30dBm
-* MGM210L has a programmable output power up to +12.5dBm and down to -30dBm
-* EFR32MG21A020xxxxxxxxx has a programmable output power up to +20dBm and down to -20dBm
-* EFR32MG21A010xxxxxxxxx has a programmable output power up to +10dBm and down to -20dBm
-* EFR32MG21B020xxxxxxxxx has a programmable output power up to +20dBm and down to -20dBm
-* EFR32MG21B010xxxxxxxxx has a programmable output power up to +10.5dBm and down to -20dBm
-* MGM13P ("P" for embedded Power-Amplifier) has a programmable output power up to +19dBm and down to -30dBm
-* MGM13S has a programmable output power up to +10dBm and down to -30dBm
-* EFR32MG13P732xxxxxxxx has a programmable output power up to +10dBm and down to -30dBm
-* EFR32MG13P632xxxxxxxx has a programmable output power up to +10dBm and down to -30dBm
-
-
---------------------
-## Coordinators with Texas Instruments chipset
-
-### Fimwares compatibily
-
-The firmwares installed on the TI keys must __imperatively__ come from https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator.<br>
-Les firmwares installés sur les clefs TI doivent provenir __impérativement__ de https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator.
-
-####
-
-*
-
-### Tutoriels
-
-
-### Puissance Tx
-
-* CC1352P ("P" for embedded Power-Amplifier) has a programmable output power up to +20dBm (and down to -?dBm).
-* CC1352R has a maximum TX power configuration of +5dBm (and down to -?dBm unknown)
-* CC2652P ("P" for embedded Power-Amplifier) has programmable output power up to +20dBm (and down to -?dBm)
-* CC2652R has a programmable output power up to +5dBm (and down to -?dBm unknown)
-* CC2652RB has a programmable output power up to +5dBm (and down to -?dBm unknown)
-* CC2538 without a power amplifier chip has a programmable output power up to +7dBm (and down to -?dBm)
-* CC2538 + CC2591 or CC2592 power amplifier chip has a programmable output power up to +19dBm (and down to -?dBm)
-* CC2531 without has a programmable output power up to +4.5dBm (and down to -?dBm unknown)
-* CC2531 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
-* CC2530 without has a programmable output power up to +4.5dBm (and down to -?dBm)
-* CC2530 with a CC2591 or CC2592 power amplifier chip has programmable output power up to +19dBm (and down to -?dBm)
-
-
---------------------
-## Coordinators Phoscon
-
-### Fimwares compatibily
-
-
-#### ConBee2 and RaspBee2
-
-* Plugin 6.1.001
-
-#### ConBee3
-
-* Plugin 7.1.006
-
-### Tutoriels
-
-
-### Puissance Tx
-
+See the [Legacy ZiGate](Readme.md#legacy-zigate) pages, and on zigate.fr (in French): [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate), [ZiGate firmware update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate).
