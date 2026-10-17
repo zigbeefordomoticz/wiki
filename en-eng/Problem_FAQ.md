@@ -141,7 +141,7 @@ Error: Zigbee: Connection to coordinator lost, OSError (device disconnected or i
 
 This indicates a communication problem between the plugin and the coordinator. If the coordinator still doesn't answer after a while, the plugin restarts itself and tries again. Cross-check the following in the DomoticZ Hardware settings of the plugin (see [Plugin settings](Plugin_Settings.md)):
 
-* If this is the first time you are using the Coordinator (no device paired yet), you have to initialize it: set __Initialize Coordinator: True__ when starting the plugin. Once the first startup is ok, set it back to False, otherwise all paired devices are erased at the next restart.
+* A blank zigpy coordinator gets a network at the first start (restored from a coordinator backup if there is one, new otherwise). To start a new network on a coordinator that already has one, see [First start and new networks](Plugin_Settings.md#first-start-and-new-networks); if the network can't be formed, see [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md).
 * Ensure that the serial port is the right one (prefer the `/dev/serial/by-id/...` path).
 * Ensure that the __Coordinator Model__ matches your dongle (Texas Instruments ZNP, Silicon Labs EZSP, ConBee/RaspBee or Bouffalo Lab).
 * Ensure that no other process is using the port (another home automation software, a second plugin instance, ModemManager...).

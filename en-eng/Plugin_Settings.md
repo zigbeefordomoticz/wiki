@@ -22,18 +22,21 @@ This is step 2 of the installation: declare the plugin hardware in Domoticz. You
 | **Socket or TCPIP Port** | The port of a network coordinator. | For example `6638` for SMLIGHT SLZB coordinators; check your coordinator's documentation. Leave `9999` otherwise. |
 | **API base url** | The Domoticz address, as seen from the plugin: `http://127.0.0.1:8080` by default. | Change the port if Domoticz doesn't listen on 8080. If Domoticz asks for a login for local connections, use `http://username:password@127.0.0.1:8080`. |
 | **Plugin WebUI port** | The port of the plugin WebUI, `9440` by default. | Use another port for each plugin instance. `127.0.0.1:9440` restricts the WebUI to the local machine (for use behind a reverse proxy); `None` disables it. |
-| **Initialize Coordinator** | *False*, except the very first time with a new coordinator, or to form a new network. | **True erases the coordinator: all paired devices are lost and must be paired again.** It doesn't remove anything from Domoticz or from the plugin database. See below. |
+| **Initialize Coordinator** | *False*, except to start a new network on a coordinator. | With a zigpy coordinator, if `autoRestore` is on (default) and a coordinator backup exists, the plugin **restores that backup** instead of forming a new network. Otherwise **the coordinator is erased and a new network is formed: all paired devices must be paired again.** It doesn't remove anything from Domoticz or from the plugin database. See below. |
 | **Debugging** | *None* | The debug options are now in the WebUI, *Tools > Debug* (see [Debug mode](Problem_Debuging-mode.md)). |
 
-## First start with a new coordinator
+## First start and new networks
 
-A new coordinator (or one you want to start from scratch) must form a Zigbee network:
+A **blank** zigpy coordinator (a new one, or one reset to factory settings) gets a network at the first start, with *Initialize Coordinator* left to *False*: the plugin restores the most recent coordinator backup if `autoRestore` is on (default) and a backup exists, and forms a new network otherwise. See [Replace or migrate the coordinator](HowTo_Replace-coordinator.md).
 
-1. Set **Initialize Coordinator** to *True* and click **Add** (or **Update** if the hardware already exists).
-1. Check in the Domoticz log (*Setup > Log*) that the plugin starts and forms the network.
-1. Click the plugin line in the hardware list, set **Initialize Coordinator** back to *False* and click **Update**. Otherwise the network is erased again at the next start.
+**Initialize Coordinator** is only needed to start a new network on a coordinator that already has one:
 
-With a coordinator that already has a network (for example a coordinator restored from a backup), leave **Initialize Coordinator** to *False*.
+1. If a coordinator backup exists (`Data/Coordinator-<hardware id>.backup`), turn the `autoRestore` setting off in the WebUI *Settings* (*Zigpy CIE specific configuration*, advanced): otherwise the plugin restores that backup instead of forming a new network.
+1. Set **Initialize Coordinator** to *True* and click **Update**.
+1. The plugin forms the new network, then sets **Initialize Coordinator** back to *False* and restarts by itself. Check it in the hardware list, and set it back to *False* yourself if it isn't (otherwise the network is formed again at each start).
+1. Pair the devices again, then turn `autoRestore` back on.
+
+With a ZiGate, *Initialize Coordinator* erases the ZiGate and forms a new network.
 
 If the network isn't formed, see [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md).
 

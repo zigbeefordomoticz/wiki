@@ -72,8 +72,9 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Deal with errors](HowTo_Dealing-plugin-errors.md)
 * [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
-* [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md)
-* [Form a ZigPy network](HowTo_Form-network-zigpy.md)
+* [Back up a zigpy coordinator](HowTo_Backup-zigpy-coordinators.md) — automatic backups, zigpy-cli
+* [Replace or migrate the coordinator](HowTo_Replace-coordinator.md)
+* [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md) — when *Initialize Coordinator* fails
 * [Expose the dashboard with basic authentication on a https link](HowTo_Dashboard-Access-Basic-Auth.md)
 * [Use a Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
 * [Use a Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
@@ -149,7 +150,7 @@ ZiGate coordinators are no longer supported by the plugin: we advise moving to a
 
 * [FAQ ZiGate](FAQ_ZiGate.md)
 * [ZiGate limitations](Info_ZiGate-Limitations.md)
-* [Upgrading the ZiGate firmware](HowTo_Update-ZiGate-firmware.md)
+* [Upgrading the ZiGate firmware](HowTo_Update-ZiGate-firmware.md) (archived)
 * [Configure a ZiGate as a Zigbee sniffer](Info_Configure-ZiGate-as-Sniffer.md)
 * [PiZigate installation](Legacy_PiZigate-Installation.md)
 * [ZiGate internals](Technical/Readme.md#legacy-zigate)

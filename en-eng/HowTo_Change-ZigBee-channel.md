@@ -39,8 +39,9 @@ The `channel` setting (WebUI *Settings*, *Coordinator settings*, advanced) is on
 
    ![Channel setting](../Images/Channel_setting.png)
 
-1. Form a new network: in Domoticz, *Setup > Hardware*, set *Initialize Coordinator* to *True* on the plugin hardware and click *Update* (see [Plugin settings](Plugin_Settings.md)).
-1. Once the plugin has started, set *Initialize Coordinator* back to *False*, otherwise the network is erased again at the next start.
+1. Turn the `autoRestore` setting off (*Zigpy CIE specific configuration*, advanced): otherwise the plugin restores the last coordinator backup, on the old channel, instead of forming a new network.
+1. Form a new network: in Domoticz, *Setup > Hardware*, set *Initialize Coordinator* to *True* on the plugin hardware and click *Update* (see [Plugin settings](Plugin_Settings.md#first-start-and-new-networks)). The plugin sets it back to *False* and restarts by itself once the network is formed.
+1. Pair the devices again, then turn `autoRestore` back on.
 
 With a ZiGate, the `channel` setting is applied with a coordinator restart (*Admin > Coordinator*, *Soft reset*) instead.
 
