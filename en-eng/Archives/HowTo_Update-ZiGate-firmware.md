@@ -1,6 +1,6 @@
 # Update the ZiGate firmware
 
-> **Legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin. This page is kept for existing ZiGate users only and is not maintained. We advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator: see [Compatible coordinators](Coordinators.md).
+> **Archived — legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin, and this page is not maintained. It refers to a `Zigate-Firmware` folder and to `Tools/flash_ZiGate-DIN` / `Tools/flash_PiZiGate.py` scripts that are no longer shipped with the plugin. Get the firmware and the flashing instructions from the ZiGate releases: [ZiGate V1](https://github.com/fairecasoimeme/ZiGate/releases), [ZiGate+ V2](https://github.com/fairecasoimeme/ZiGateV2/releases), and [zigate.fr (in French)](https://zigate.fr/documentation/mise-a-jour-de-la-zigate). We advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator: see [Compatible coordinators](../Coordinators.md).
 
 ## Overview
 
@@ -26,7 +26,7 @@ This is available on the Web Admin page . On the hereafter exemple , you can see
 Plugin Version is __4.8.008__
 Firmware Version is __031d__
 
-![Dashboard](../Images/Dashboard.png)
+![Dashboard](../../Images/Dashboard.png)
 
 ## How to Upgrade the firmware of ZiGate
 
@@ -91,7 +91,6 @@ __ASSUMPTIONS__
    ```
 
    1. Finally unplug/plug the ZiGate once more to switch back to normal mode.
-S
 1. case: ZiGate DIN
 
    1. Stop the plugin (or Domoticz)
