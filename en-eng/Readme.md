@@ -68,7 +68,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Use the plugin tools](HowTo_Using-tools.md)
 * [Group Management](HowTo_Group-management.md)
 * [Bind two devices](HowTo_Binding.md)
-* [Deal with errors](HowTo_Dealing-pluging-error.md)
+* [Deal with errors](HowTo_Dealing-plugin-errors.md)
 * [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
 * [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md)

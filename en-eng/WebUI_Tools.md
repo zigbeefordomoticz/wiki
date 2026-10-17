@@ -91,7 +91,7 @@ The __Error(s)__ page (*Tools > Error(s)*) lists the errors recorded by the plug
 
 Either button turns the red triangle off until a new error is recorded.
 
-Refer to the tutorial [Deal with plugin errors](HowTo_Dealing-pluging-error.md) for more information.
+Refer to the tutorial [Deal with plugin errors](HowTo_Dealing-plugin-errors.md) for more information.
 
 
 ------------------------------------------------

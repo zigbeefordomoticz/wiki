@@ -36,7 +36,7 @@ On the right of the menu bar:
 * **Accept new hardware**: a switch that opens the network for pairing for 4 minutes, then closes it again. See [Add a new device](HowTo_Pairing-device.md).
 * **Language**: a flag selects the interface language (English, French, Dutch, Spanish, German, Italian).
 * **Restart needed** (blinking exclamation mark): a change is waiting for a plugin restart. Click it to go to *Admin > Plugin*, where the plugin can be restarted.
-* **Error(s) detected** (blinking red triangle): the plugin has recorded errors. Click it to go to *Tools > Error(s)*. See [Deal with errors](HowTo_Dealing-pluging-error.md).
+* **Error(s) detected** (blinking red triangle): the plugin has recorded errors. Click it to go to *Tools > Error(s)*. See [Deal with errors](HowTo_Dealing-plugin-errors.md).
 
 On a narrow screen the menu collapses behind a ☰ button, and the *Accept new hardware* switch and the language flag move to the bottom of that menu.
 
