@@ -1,97 +1,75 @@
 # Plugin settings
 
-This is the second step of the ZigBeeForDomoticZ Plugin installation process.
+This is step 2 of the installation: declare the plugin hardware in Domoticz. You should have finished [Step 1: Plugin installation](Plugin_Installation.md).
 
-You should have finished the [Step 1 Plugin installation](Plugin_Installation.md)
+## Add the plugin hardware
 
-## Seetings
+1. Open Domoticz in your browser.
+1. Go to *Setup > Hardware*.
+1. Fill in the parameters below, then click **Add**.
 
-* Open __DomoticZ__ in your navigator.
+![Domoticz hardware page for the plugin](Images/FR_Plugin-Parametrage.png)
+*French screenshot, an English one will replace it. The page may have changed since it was taken.*
 
-* Go to then __Configuration__ menu then __Hardware__
+| Parameter | What to set | Notes |
+| --------- | ----------- | ----- |
+| **Name** | A name for this plugin instance, for example `Zigbee`. | It prefixes the name of every widget the plugin creates. With several coordinators, there is one plugin hardware per coordinator: the name tells them apart. Avoid spaces and special characters: the name can end up in URLs. |
+| **Type** | *Zigbee for domoticz plugin (zigpy enabled)* | If it isn't in the list, the plugin is not installed correctly (see [Plugin installation](Plugin_Installation.md)). |
+| **Coordinator Model** | The coordinator family: *Texas Instruments ZNP (via zigpy)*, *Silicon Labs EZSP (via zigpy)*, *Conbee/Rasbee I, II, III (via zigpy)*, *Bouffalo Lab Zigbee (via zigpy)*, or *ZiGate* / *ZiGate+* (no longer supported). | See [Compatible coordinators](Coordinators.md). |
+| **Coordinator connection type** | How the coordinator is connected: **USB** for a USB dongle (or a module on a serial port); **Socket** for a network coordinator (Ethernet or Wi-Fi) with a zigpy coordinator model; *DIN*, *PI* and *TCPIP* are for ZiGate; *None* is a test mode without coordinator. | *USB* uses 115200 baud and no flow control. If your coordinator needs other values, pick the matching *USB, \<baudrate\>, \<flow control\>* entry (for example *USB, 115200, hardware*). |
+| **Serial Port** | The serial port of the coordinator (USB connection). | Prefer the persistent name under `/dev/serial/by-id/…`: `/dev/ttyUSB0` can change after a reboot (see [Persistent USB devices](https://wiki.domoticz.com/PersistentUSBDevices)). |
+| **Socket or TCPIP IP** | The IP address of a network coordinator (*Socket* or *TCPIP*). | Leave `0.0.0.0` otherwise. |
+| **Socket or TCPIP Port** | The port of a network coordinator. | For example `6638` for SMLIGHT SLZB coordinators; check your coordinator's documentation. Leave `9999` otherwise. |
+| **API base url** | The Domoticz address, as seen from the plugin: `http://127.0.0.1:8080` by default. | Change the port if Domoticz doesn't listen on 8080. If Domoticz asks for a login for local connections, use `http://username:password@127.0.0.1:8080`. |
+| **Plugin WebUI port** | The port of the plugin WebUI, `9440` by default. | Use another port for each plugin instance. `127.0.0.1:9440` restricts the WebUI to the local machine (for use behind a reverse proxy); `None` disables it. |
+| **Initialize Coordinator** | *False*, except the very first time with a new coordinator, or to form a new network. | **True erases the coordinator: all paired devices are lost and must be paired again.** It doesn't remove anything from Domoticz or from the plugin database. See below. |
+| **Debugging** | *None* | The debug options are now in the WebUI, *Tools > Debug* (see [Debug mode](Problem_Debuging-mode.md)). |
 
-* To add the ZigBeeForDomoticZ Plugin, fill the following informations  :
+## First start with a new coordinator
 
-| Parameter    | Description | Information |
-| ------------ | ------------------ | ----------- |
-| __Name__                  | Fill a Coordinator's Name  | This is the name you want to set for the instance of the plugin. In case you run several coordinators, you'll have several instance of this Plugin Hardware and so the name will help you to distinguish each of them.<br/><br/>It is advisable not to put any space or special character in the name of the Plugin. This name can be used in a URL and a space or special characters can generate problems. |
-| __Type__                 | Select `ZigBeeForDomoticZ plugin` | If ZigBeeForDomoticZ plugin does not appear at the bottom of the list, it is because the plugin is not properly installed.
-| __Coordinator Model__         | Select the Coordinator's model | - ZiGate (V1)<br/> - ZiGate+ (V2)<br/> - Texas Instruments ZNP<br/> - Silicon Labs EZSP<br/> - ConBee/RasBee|
-| __Coordinator  Type__         | Select the Coordinator's type | -  USB<br/>-  DIN<br/>- PI<br/>- TCPIP (wifi or Ethernet)<br/>- Aucun|
-| __Port série__           | Select the USB port to which the coordinator is plugged | Remember to fix the port of your usb equipment [Persistent USB](https://www.domoticz.com/wiki/PersistentUSBDevices)|
-| __IP__                   | Fill in the coordinator's IP address | For TCPIP mode only<br/>Leave 0.0.0.0 for other modes |
-| __Port__                 | Fill the Coordinator's Port (9999 by default)| For TCPIP mode only<br/>Leave 9999 for other modes |
-| __API base url__ | Fill the address of the DomoticZ server | Address form <http://username:password@127.0.0.1:port> <br/>By default : <http://127.0.0.1:8080> |
-| __WebUI Port__| Fill in the port to access the web administration of the Plugin (9440 by default). | To be modified when using several instances of the Plugin.. |
-| __Initialize Coordinator__ | Select True to initialize the coordinator with the plugin settings (False by default). <br/>__Must be activated__ during initial configuration (ou after an Erase EEPROM of a ZiGate). | __ATTENTION :__ Activation will erase all pairing information from the coordinator.<br/> Restart the Plugin to start initialization. Verify that the setting is in a False state after reboot. |
-| __Debugging__ | Leave empty |
+A new coordinator (or one you want to start from scratch) must form a Zigbee network:
 
-* If it is for a first installation of the Plugin with a new coordinator, set Initialize Coordinator to __True__, otherwise always leave to __False__ (this parameter erases the coordinator's information).
+1. Set **Initialize Coordinator** to *True* and click **Add** (or **Update** if the hardware already exists).
+1. Check in the Domoticz log (*Setup > Log*) that the plugin starts and forms the network.
+1. Click the plugin line in the hardware list, set **Initialize Coordinator** back to *False* and click **Update**. Otherwise the network is erased again at the next start.
 
-* Click on __Add__.
+With a coordinator that already has a network (for example a coordinator restored from a backup), leave **Initialize Coordinator** to *False*.
 
-The line corresponding to your ZigBeeForDomoticZ plugin (with the name defined) normally appeared in the hardware list.
+If the network isn't formed, see [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md).
 
-* Click on the line of your ZigBeeForDomoticZ plugin.
+## Changing a parameter later
 
-__ATTENTION :__ From now on, you should not click on the __Add__ button at the bottom: this would have the effect of duplicating the plugin. Always go up to the top of the settings to use the __Modify__.
+Click the plugin line in the hardware list, change the parameter and click **Update**: the plugin restarts with the new value. **Don't click Add**, which would create a second plugin instance.
 
-* Set __Initialize ZCoordinator (Erase Memory)__ to __False__.
+Most of the plugin behaviour is not set here but in the WebUI *Settings* page: see [Step 3: Plugin configuration](Plugin_Configuration.md).
 
-* Unchecked __Activate__ to disable the plugin.
+## The plugin's administration widgets
 
-* Click on __Modify__ (do not click Add as this will duplicate the plugin).
+At start-up, the plugin creates two widgets of its own, in the Domoticz *Utility* tab (`xx` is the Domoticz hardware ID of the plugin):
 
-* Reclick on the plugin ZigBeeForDomoticZ line.
+![Administration widgets](../Images/Widgets_Admin.png)
 
-* Recheck __Activate__ to reactivate the Plugin.
+Like all the plugin widgets, they can only be created while the Domoticz setting *Accept new Hardware Devices* is on (*Setup > Settings > System*, see [Add a new device](HowTo_Pairing-device.md#before-you-start-let-domoticz-accept-new-devices)).
 
-* Click on __Modifier__ to relaunch the Plugin.
+### Z4D Status xx
 
-Check the logs that the ZigBeeForDomoticZ plugin initializes correctly.
+An alert widget showing the state of the plugin. Its log keeps the history of the states.
 
-![Domoticz Hardware Menu for Plugin](Images/FR_Plugin-Parametrage.png)
+| State | Color | Meaning |
+| ----- | ----- | ------- |
+| *Startup* | grey | The plugin is starting. |
+| *Ready* | green | Normal state: the plugin handles messages and commands. |
+| *Enrollment* | orange | A device is being paired. |
+| *Busy* | orange | Many commands are waiting to be sent to the coordinator: you may notice delays. |
+| *No Communication* | red | The plugin can't talk to the coordinator. |
 
-*This page may have have changed since this documentation was written.*
+### Z4D Notifications xx
 
-## The Plugin's Widgets
+A text widget showing the last plugin notification. Its log keeps the history. For example:
 
-### Status Widget
+* a device paired, or a pairing that failed;
+* a device that left the network, or was removed;
+* a topology or interference report available;
+* the coordinator channel, or a network problem.
 
- The plugin is providing 2 widgets for administration purposes. Those Widgets are created by the plugin itself at startup phase if DomoticZ setting **Accept new hardware devices** is activated,
-
-![Administration Widgets](../Images/Widgets_Admin.png)
-
-In domoticz you will find a Widget name 'Zigbee Status xx' (in the Measurement dashboard) where 'xx is the HardwareID of the plugin
-This status widget will give you information on the current state of the plugin. You can even see in the Log of the widget what have been the different states in the past
-
-1. Off (Red)
-The plugin set the status to Off when it is going Off, or there is a communication problem identified
-
-1. Startup (grey)
-The plugin set the status to Startup, when starting up
-
-1. Ready (green)
-This is a normal state, where the plug-in is ready to handle messages and commands
-
-1. Enrolment (amber)
-The plugin switch to this mode, when an object is currently in pairing/enrolment process.
-
-1. Busy (amber)
-The plugin switch to this mode, when the number of commands to Coordinator is exceeding a certain threshold. In that state, you can experiment delays.
-
-### Text Widget
-
-Here is a non-exhaustive list of notifications:
-
-* Enrolment Success
-* Enrolment not successful
-* Leave notification from an object
-* Network Topology (LQI) report available
-* Network Scan (Interferences) report available
-* Network down
-* Zigbee Channel
-
-Here is an example of the Notifications Widget Logs
-
-![Notification Widgets](../Images/Widget_Notifications.png)
+![Notifications widget log](../Images/Widget_Notifications.png)
