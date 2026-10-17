@@ -1,92 +1,91 @@
-# How To : Group management
+# Manage Zigbee groups
 
-## 1. Purpose
-The purpose is to offer the possibility to use the ZigBee group functionality.
-Starting Plugin 4.7 and the Plugin Web Admin Interface, the group management is much user friendly, but still need further development to reach a nice User Experience.
-With Plugin 4.9, we have made a great move by removing the "batch" mode.
+This how-to explains how to create and use Zigbee groups with the plugin.
 
-## 2. Pre-requisites
+## How Zigbee groups work
 
-* Firmware above 3.0f
-* Plugin above 4.
-* DomoticZ above 4.10901 (in order to have the Web Admin interface enabled)
+A Zigbee group puts several devices behind a single widget in Domoticz: an action on the group widget is applied by all the devices of the group, at the same time.
 
-## 2. Approach
-The group will be managed through DomoticZ Device widgets (not in the group section, but in the switch). Basically for each ZigBee group, you will be creating you will have a corresponding DomoticZ Switch.
+* **The membership is stored in the devices**, not in the coordinator: each device remembers which groups it belongs to (usually a few groups at most, depending on the device).
+* A command to a group is **broadcast** to the whole network with the group address (for example `1001`): every device receives it, and the devices that belong to that group apply it.
+* To apply a group command, a device must be listening to the network. End devices (battery) sleep most of the time, so they **can't follow group commands**: only routers (mains-powered devices) can be put in a group. The `GroupOnBattery` setting lets you select battery devices anyway, for devices that do listen.
+* Zigbee groups are **independent from Domoticz groups** (*Setup > More Options > Scenes/Groups*).
 
+In Domoticz, each Zigbee group is a switch widget, whatever the number of devices in the group.
 
-## How to proceed
+## Enable group management
 
-### 4.1. How to enable it
+1. In the WebUI, go to *Settings* and enable __Enable Groups__ (`enablegroupmanagement`).
 
-![Settings for Group Management](../Images/SettingsGroup.png)
+   ![Settings for Group Management](../Images/SettingsGroup.png)
 
-Enable the Group Management feature (which is disabled by default)
+1. Click *Validate* and restart the plugin.
+1. Scan the groups (see below).
 
-You need to restart the plugin after enabling Group Management.
+## Scan the groups
 
-### 4.2 Group Initialisation
+Since the groups are stored in the devices, the plugin must ask the devices which groups they belong to. Do it after enabling group management, and whenever groups were created outside the plugin (for example by pairing an Ikea remote with a bulb).
 
-After the first activation of Group Management, it is import to query each device for group membership.
-To do so you can go to the Admin Group sub menu and then request a Full scan.
-
-![Group Management](../Images/GroupManagementMenu.png)
-
-This will consist in quering each main powered devices for the group membership.
-
+1. Make sure all the devices are connected to the network.
+1. Go to *Admin > Group* (see [WebUI Admin](WebUI_Admin.md#group)).
+1. Click *Full scan* to ask every router, or select some routers and click *Scan*.
 
 ![Group Management](../Images/GroupManagementMenu.png)
 
+The plugin creates a widget for every group found.
 
-### 4.3 Creating a Group
+## Create a group
 
-![Adding Group Management](../Images/AddingGroup.png)
+1. Go to *Management > Group Management* (see [WebUI Management](WebUI_Management.md#group-management)).
 
-You can specify the Name of the group, and then you can select from the list the devices you want to get into that group.
+   ![Adding Group Management](../Images/AddingGroup.png)
 
-You have also the possibility to add the coordinator to that group. This is required for instance if you want to retrieve the status of an Ikea Remote.
+1. Click *Add a new Group*.
+1. Enter the name of the group: it becomes the name of the Domoticz widget.
+1. Select the devices (endpoints) of the group from the list. Use the small cross to remove one.
+1. If needed, tick *Coordinator (in the group)* (see below).
+1. Click *Validate*.
 
-Save the work and the group membership request will be sent to each device listed. This could takes few seconds, so in case you don't see it, just do a refresh of the page.
+The plugin sends the membership request to each device and creates the group widget in Domoticz. It can take a few seconds: refresh the page if the group doesn't show.
 
-### 4.4 Updating a Group
+### Adding the coordinator to a group
 
-Just use the Group Management and add / remove devices from that group.
+Tick *Coordinator (in the group)* when the coordinator must receive the commands sent to the group, so that the plugin sees them and updates the widgets. This is needed, for example, to receive the commands of an Ikea remote: see [Ikea remote](Corner_Ikea-Remote.md).
 
-Save the work, and the update will be triggered and will be visible after a while.
+The coordinator can only belong to a limited number of groups: see [Coordinators](Coordinators.md#limited-number-of-groups).
 
-### 4.5 Remove a Group
+## Update a group
 
-You can either remove the group from DomoticZ by removing the corresponding widget, or use the Group Management and remove the group you want to.
+1. Make sure all the devices of the group are connected to the network.
+1. Go to *Management > Group Management*.
+1. Add or remove devices of the group.
+1. Click *Validate*.
 
-Save the work, it will trigger to request group membership removal to the corresponding devices.
+As for the creation, the requests are sent to the devices and the change takes a few seconds.
 
-## 5 Special cases ( IKEA REMOTES)
+## Delete a group
 
-## 5.1. Using a Remote Controller (Pairing a remote control)
+Either:
 
-In order to use an IKEA/Tradfri:
-1. Pair/Commission each single object to the coordinator (including the remote controller)
-1. Pair the Remote Control with each Bulb you want to be part of such group
-1. Request a Scan from Admin -> Group and select the Bulb you have paired the remote with
-1. The group created will be then visible under the Group Management
+* delete the group widget in Domoticz;
+* or, in *Management > Group Management*, click the trash icon of the group and click *Validate*.
 
-### 5.2. Retrieving Remote command events
+The plugin asks each device of the group to leave the group.
 
-From that stage, you can eventually add the coordinator to this group. It will make each remote controller event seen in the plugin.
+## Group settings
 
-Additionally, you can also enable the Left/Right commands of the Tradfri 5 buttons remote controller.
-![](https://user-images.githubusercontent.com/4406440/54182600-3ec50200-44a2-11e9-8be7-c2e6b15b4deb.png)
+The group settings are in the *Group management* section of the WebUI *Settings* (see [Group management settings](WebUI_Settings.md#group-management-settings)):
 
-For that you need to edit the Group and add the Tradfri 5 buttons to that group.
+| Setting | Use |
+| ------- | --- |
+| `GroupOnBattery` | Allow battery devices in groups. Off by default, since most battery devices can't receive group commands. |
+| `OnIfOneOn` | The group widget shows *On* when at least one device of the group is on. When off, all the devices must be on. |
+| `pingViaGroup` | When set to a group address, the plugin checks that the devices are alive through that group instead of pinging each device; `0` (default) pings each device. |
+| `zigatePartOfGroupTint` | Adds the coordinator to the group of the Müller Licht Tint remote (Silicon Labs coordinators). See [Müller Licht / Tint](Corner_Tint.md). |
+| `zigatePartOfGroup0000` | Creates group `0000`, used by some Ikea and Xiaomi switches (Silicon Labs coordinators). |
+| `GroupLevelWithOnOff` | Send the *Move to Level with On/Off* command to groups, so that setting a level also switches the lights on. |
 
+## Warnings
 
-### 5.3. Creating Group 0000
-
-If you need to have the group '0000' created, you can enable it via the Settings Advanced.
-
-
-![Adding Group Management](../Images/SettingsGroup0000.png)
-
-## 6 Warning
-
-* Make sure that all devices which belongs to the group are up and running.
+* Make sure all the devices of a group are connected to the network before you scan, create or change a group: a device that is not reachable doesn't get the change.
+* During a scan the plugin waits for each device to answer before moving to the next one. If some devices are not reachable, the scan takes longer, and the other commands you send meanwhile are queued.
