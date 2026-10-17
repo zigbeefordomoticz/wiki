@@ -1,40 +1,45 @@
-## Overview
+# Schneider Wiser: how to set up
 
-The purpose is to give you a cookbook to pair Schneider Wiser devices to Zigate and the Domoticz plugin.
+How to prepare the plugin for Schneider Wiser devices. See [Schneider Wiser](Corner_Schneider_Wiser.md) for the devices and their protocol notes.
 
-## Domoticz - initial setup
+## Which Wiser are you using?
 
-If not yet done, you have to create a plugin instance in domoticz for the Zigate hardware ( USB, DIN, PiZigate)
+Schneider has two Wiser families, which need a different setup:
 
-1. go in domoticz->setup->hardware
-1.  Create the hardware device in domoticz of type "zigate plugin"
-1. select the correct type of zigate and its connection details.
-<br />
+| Family | Devices (Zigbee models) | IEEE starts with |
+| ------ | ----------------------- | ---------------- |
+| **Legacy Wiser** | Thermostat `EH-ZB-RTS`, radiator valve `EH-ZB-VACT`, actuators `EH-ZB-HACT` / `EH-ZB-LMACT`, smart plugs `EH-ZB-SPD` / `EH-ZB-SPD-V2`, energy meter `EH-ZB-BMS` | `00124b` |
+| **Wiser Home** and other recent Schneider devices | Thermostat CCTFR6400 (`Wiser2-Thermostat`), radiator valve CCTFR6100 (`iTRV`), micromodules (`PUCK…`), shutter switches, socket outlets… | `588e81` and others |
 
-## Zigate admin - wiser specific config
+The recent devices are standard Zigbee 3.0 devices: pair them as usual (see [Add a new device](HowTo_Pairing-device.md)). If the Wiser Home thermostat doesn't talk to the plugin, enable the `Wiser2` setting (see below).
 
-There are 2 important parameters/settings to be addressed in order to get the devices correctly paired and functional with the Zigate environment.
+The **legacy Wiser** devices only work on a network with a specific *extended PAN ID*, and with the settings below.
 
-* Channel: We have tested the Schneider Wiser devices on channels 11, 15 and 25 (currently, zigate only supports channel 11, 15, 19, 20, 25, 26)
-* ExtendedPANId: The Schneider Wiser seem to be supported on a particular range of ExtendedPANId ( Zigbee network ). For now, this is the only brand that we know of that needs this specific ExtendedPANId and from our experience it stays compatible with other brands like Ikea, Philips, Xiaomi, Tuya ...
+## Settings for legacy Wiser
 
-1. go in http://[domoticz_server_hostname]:[default)port _is_9440]/settings
-1. select "settings" in the top bar
-1. put the toggle "Advanced settings" to ON
-1. find the menu zigate settings and you should find "zigate channel" and "extendedPANID" under it
-1. for zigate channel , select 11, 15 or 25 (as explained above)
-1. for extendedPANID, select a numer between 1000 and FFFF and concatenate 484504015e10
-eg : randomly select 2141, your extendedPANID will be 2141484504015e10
-1. enable the parameter in  Schneider Wiser settings called enableSchneiderWiser
-1. click "Validate" at the top right
-<br />
+All these settings are in the WebUI *Settings* page, with *Advanced settings* switched on (see [WebUI Settings](WebUI_Settings.md)).
 
-## Domoticz 
+| Setting | Section | Value | Why |
+| ------- | ------- | ----- | --- |
+| `enableSchneiderWiser` | *Pairing settings* | on | The plugin asks the legacy Wiser devices for their model during pairing. |
+| `Wiser` | *Zigpy CIE specific configuration* (zigpy coordinators) | on | Adds the endpoint `0x0b` the legacy Wiser devices talk to. Needs a plugin restart. |
+| `extendedPANID` | *Coordinator settings* | `xxxx484504015e10` | The legacy Wiser devices only join a network whose extended PAN ID ends with `484504015e10`. Replace `xxxx` with any 4 hexadecimal digits, for example `2141484504015e10`. |
 
-In order to apply those settings, you need to re-format the Zigate. It will remove all currently paired devices.
+For a Wiser Home thermostat (CCTFR6400) that doesn't communicate, enable `Wiser2` in *Zigpy CIE specific configuration* instead: it adds the endpoint `0x03` used by these devices.
 
-1. go back to domoticz->setup->hardware
-1. Select your "zigate plugin" hardware
-1. switch "Erase Persistent Data ( !!! full devices setup need !!! )" to TRUE
-1. click update
-1. switch "Erase Persistent Data ( !!! full devices setup need !!! )" to FALSE
+### The extended PAN ID requires a new network
+
+The extended PAN ID is only applied when the coordinator forms a new network. **Changing it erases the network: all the devices already paired must be paired again**, whatever their brand. The other brands (Ikea, Philips, Xiaomi, Tuya…) work fine on a network with a Wiser extended PAN ID, so if you plan to use legacy Wiser devices, set it before pairing anything.
+
+1. Set `extendedPANID` (and the other settings above) and click *Validate*.
+1. Form a new network: in Domoticz, *Setup > Hardware*, select the plugin hardware, set *Initialize Coordinator* to *True* and click *Update* (see [Plugin settings](Plugin_Settings.md); if the network isn't formed, see [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md)).
+1. Once the plugin has started, set *Initialize Coordinator* back to *False* and click *Update*, otherwise the network is erased again at the next start.
+1. Pair the devices.
+
+## Channel
+
+The legacy Wiser devices were tested on channels 11, 15 and 25. See [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
+
+## Device parameters
+
+Some Wiser devices have device parameters (room number, lock, open-window detection, shutter travel time…): see [Device parameters](HowTo_Device-parameters.md#schneider-wiser).

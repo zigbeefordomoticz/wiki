@@ -1,6 +1,6 @@
-# Schneider WISER system ( big thanks to @hairv and @badz)
+# Schneider Wiser (big thanks to @hairv and @badz)
 
-* [Schneider Wiser: How to Setup](Corner_Wiser-Setup.md)
+* [Schneider Wiser: how to set up](Corner_Wiser-Setup.md)
 
 ## Purpose
 
@@ -16,18 +16,11 @@ Work in progress, so only validated informations are written
 
 ## Pairing
 
-* Channel: 15, 11
-* Extended PANID:
-  * 0x6734484504015e10
-  * 0x7996484504015e10
-  * 0x6734484504015e10
-  * 0x1234484504015e10
-  * 0x5678484504015e10
-  * 0xFefe484504015e10
+The legacy Wiser devices (models `EH-ZB-…`) need specific settings and a network with an extended PAN ID ending with `484504015e10`; the Wiser Home devices pair as usual. See [Schneider Wiser: how to set up](Corner_Wiser-Setup.md).
 
-In short your extended PANID must looks like : 0x----484504015e10, where the 1st 4 digits can be any hex digit
+The device parameters of the Wiser devices (room number, thermostat lock, open-window detection, shutter travel time, override) are listed in [Device parameters](HowTo_Device-parameters.md#schneider-wiser).
 
-
+The rest of this page gathers the protocol findings made in 2020-2021, with a ZiGate coordinator, while integrating the legacy Wiser devices.
 
 ## Wiser Smeter
 
@@ -514,7 +507,7 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 201_e031_1_normal_reportable_change=1
 ```
 
-# Attribut Thermostat
+### Thermostat attributes
 | cluster | cluster name | Attribut | purpose | value | type|Read / Write |
 |---|---|---|---|---|---|---|
 |0x0000 | Basic | 0x0005 | Mode Identifier |EH-ZB-RTS |0x42| Read|
@@ -539,7 +532,7 @@ ATTRIBUTE_THERMOSTAT_HACT_CONFIG
 |0x0402 | Thermostat Measurement | 0x0000 | Measure Value  | Temperature |0x29| Read|
 
 
-# thermostat commands
+### Thermostat commands
 
 | cluster | cluster name | command | purpose | payload |
 |---|---|---|---|---|

@@ -354,7 +354,7 @@ Keep `fail_safe` at least as long as the irrigation, or the valve closes before 
 | --------- | -------------------------- | ------------------ |
 | WiserLockThermostat | Lock the thermostat from user changes: 0 unlock, 1 lock | Wiser2-Thermostat, iTRV, EH-ZB-RTS |
 | WiseriTrvWindowOpen | Open-window detection: 0 disabled, 1 enabled | Schneider iTRV |
-| WiserShutterDuration | Shutter movement duration *(value mapping to be confirmed)* | Schneider shutter devices |
+| WiserShutterDuration | Time the shutter takes to fully open or close, in seconds (1-299) | Schneider shutter switches and Wiser shades control |
 | WiserRoomNumber | Room number per Wiser thermostat; actionners and the thermostat sharing a room use the same number so heating demand is monitored together | Wiser thermostat and any actionners |
 | OverrideTempInDegree | Temperature offset applied during a setpoint override/boost (°C; clamped 7-30 °C) | Schneider Wiser thermostats |
 | OverrideDurationInMinutes | Duration of a setpoint override/boost (minutes) | Schneider Wiser thermostats |
