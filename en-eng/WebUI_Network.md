@@ -2,39 +2,38 @@
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
-The section __Network__ contents the pages :
+The __Network__ menu contains the pages:
 
 * [Topology](#topology)
 * [Mesh graph](WebUI_Network-Mesh.md) — from plugin 9.1.008, a new interactive view of the same mesh
-* [Interference levels](#interference-level)
+* [Interference level](#interference-level)
 
 ------------------------------------------------
 
 ## Topology
 
-Here is the __Topology__ page of the plugin Web interface :
+The __Topology__ page (*Network > Topology*) shows the reports of the topology scans: for each router, the neighbours it hears and the link quality (LQI) it measures.
 
 ![Network Topology](Images/EN_WebUI-Network-Topology.png)
 
-*This picture may have have changed since this documentation was written.*
+*This picture may have changed since this documentation was written.*
 
-At plugin start a report is triggered. It could take up to 15' to get the report extracted.
-You can after that manually trigger a scan
+### Running a scan
 
-All available reports are available in the upper-left list, sorted by date. From the list you can either:
+The **Topology scan** panel launches a scan with *Scan*. The scan runs in the background and asks every router for its neighbour table (and, with zigpy, its routing table); it can take several minutes on a large network, and the report only appears in the list once it is complete.
 
-* delete a report
-* display the report
+From plugin 9.1.008, with a zigpy coordinator, the *Associated devices* button collects only the devices attached to each router. It is quicker than a full scan (one request per router) and shows where battery devices are attached; the result appears in the list as a scan of its own.
 
-There are 2 graphical representations of the report.
+Scans are not run automatically, unless the `ZigpyAutoTopology` setting is enabled (a scan every 12 hours).
 
-### Left: Topology wheel
+### The reports
 
-Here are shown on a wheel, all links between 2 devices. If you leave the mouse on a link, you'll see the direction and a number which correspond to the Link Quality ( the worst is 0, the best is 255).
+**Topology reports** lists the stored reports, newest first. Click a report to display it, or delete it. The plugin keeps the last `numTopologyReports` reports (4 by default).
 
-### Right: Topology graph
+A report is displayed in two ways:
 
-Here you can see more the hierarchical structure of your ZigBee network.
+* **Topology diagram**: a wheel showing every link between two devices. Leave the mouse on a link to see its direction and the link quality (from 0 to 255, the best).
+* **Network graph**: the hierarchical structure of the network. Type a name to filter the nodes; click a device to list, below the graph, the devices linked to it with their LQI, model, status, health and battery.
 
 ### See also: the Mesh graph
 
@@ -44,46 +43,31 @@ routing tables and the parent/child tree to the neighbour relationships drawn he
 what a mesh is, what each relationship means, how a scan is actually performed, and why a device
 that is switched off changes what you see.
 
-### Additional informations
-
-Currently you can find some additional informatons in the Plugin log file when you visualize a particular report.
-This report will show you the following informations extracted from the Neighbors table (and Routing table)
-
-* Node1 (nwkid): current device and its network short address of the 1st node.
-* Node2 (nwkid): neighbor device and its network short address of the 2nd node.
-* LQI: The estimated link quality for RF transmissions from this device.
-* Dev. Type: The type of the neighbor device: ZigBee coordinator, ZigBee router, ZigBee end device, Unknown.
-* Relation: The relationship between the neighbor and the current device:
-  * neighbor is the __parent__
-  * neighbor is a __child__
-  * neighbor is a __sibling__
-* route Flag: the neighbor device is a __destination address__ of the current device
-
 ------------------------------------------------
 
 ## Interference level
 
-Here is the __Interference level__ page of the plugin Web interface :
+The __Interference level__ page (*Network > Interference level*) shows the energy measured on each Zigbee channel: the higher the value (0 to 255), the more radio activity — Wi-Fi, other Zigbee networks, Bluetooth… — on that channel. Use it to check that the network's channel is a quiet one; see [ZigBee and Wi-Fi](Info_ZigBee-and-Wifi.md) and [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
 
-![Network Energy ](Images/EN_WebUI-Network-Interference-level.png)
+![Network Energy](Images/EN_WebUI-Network-Interference-level.png)
 
-*This picture may have have changed since this documentation was written.*
+*This picture may have changed since this documentation was written.*
 
-Starting Plugin Version: > 4.4, the plugin queries the coordinator to get informations on the Energy level per channel.
+### Running a scan
 
-In the 10 first minutes after plugin start, a Network Energy Level scan will be executed.
+The **Short Interference scan** panel launches a scan with *scan*. With a zigpy coordinator, the coordinator measures the energy on all the channels, 11 to 26.
 
-The Energy-Level measurement is a value from 0 to 255 given for all coordinator supported channels ( 11, 15, 19, 20, 25 and 26).
-It is given in an arbitrary units (didn't find any more information in the NXP ZigBee documentation).
+The energy is measured on all the traffic heard, so on a busy network the network's own traffic shows on its channel; it is not only noise.
 
-### Graphical presentation
+With a ZiGate coordinator, a **Full Interference scan** panel is also shown: every router measures the energy, and the report also gives the number of messages sent (*Tx*) and failed (*Fail*). It takes longer as the number of routers grows.
 
-You can get access to the Graphical presentation via the Web Admin Page in the Network Tab and Select Energy Level
+### The reports
 
-![Export Device List raw (json)](../Images/InterferenceLevels2.png)
+**Interference level reports** lists the stored reports, newest first. Click a report to display it, or delete it. The chart shows one bar per channel for each device that measured, and the average. The plugin keeps the last `numTopologyReports` reports (4 by default).
 
-The plugin allow to generate a Network Topology report based on the LQI ( Detected signal strength ).
-It is important to know that the Packet filtering implemented is using the LQI value
+### LQI and packet filtering (ZiGate only)
+
+On ZiGate (NXP) coordinators, the link cost used for routing is derived from the LQI, and packets over a link of cost 5 or more might be discarded:
 
 | LQI range | Cost |
 | ---------| -----|
@@ -94,8 +78,6 @@ It is important to know that the Packet filtering implemented is using the LQI v
 | 36 - 38 | 5 |
 
 Source: <https://www.nxp.com/docs/en/user-guide/JN-UG-3113.pdf>
-
-A cost of 5 is used as the packet filtering threshold, which means that above that level packets might be discarded.
 
 ## Terminology
 
