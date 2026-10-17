@@ -1,46 +1,44 @@
-# Dealing with pairing issues
+# Dealing with a non-optimized device
 
-The plugin is developed in a way that it is capable to handle devices which respects ZigBee specifications.
-For instance if the plugin see an unknown device type, it will try to create widgets based on the Device capabilities.
+## Optimized and non-optimized devices
 
-## Introduction
+A device is **optimized** (or *certified*) when the plugin has a configuration file for its model, in the [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices) database: the widgets to create, the reporting to set up, the device-specific decoding are known and tested.
 
-The pairing is done at 2 levels.
+A device is **non-optimized** when no work has been done yet to integrate its model. The plugin then relies on the Zigbee standard: during pairing it discovers what the device offers (endpoints and clusters: on/off, level, color, window covering, temperature…) and creates widgets from that.
 
-1. At the coordinator level, where we have the fact that the device is joining the Zigbee network controlled by the coordinator.
-1. At the Plugin level, where the plugin will do a discovery of the devices capabilities like:
-   1. Is that main powered device
-   1. Is there a Switch ON/OFF
-   1. Is there a Dimmer
-   1. Is there a Color RGB, WW possibility
-   1. Is that Window convering device
-   ...
+You can see which devices are optimized:
 
+* on the *Dashboard*, in the **Optimized devices** chart (see [WebUI Dashboard](WebUI_Dashboard.md));
+* in *Management > Device Management*, in the **Optimized** column: green icon for optimized, orange icon for non-optimized (see [WebUI Management](WebUI_Management.md#device-management));
+* in *Tools > Tools*, with the **Non-optimized devices** button, which lists the discovery data of every non-optimized device (see [Use the plugin tools](HowTo_Using-tools.md)).
 
-## What type of issues could you encounter after the pairing
+## After pairing a non-optimized device
 
-* At the end of the pairing process, I do not see any widget in Domoticz
-* The Widget created in Domoticz is not correct like:
-  * I got a Switch and Level control, but I don't get anything to change the color
+Two cases:
 
+1. **The device doesn't work, or only partly**: no widget is created, a widget is missing (for example a switch and a level but no color), or the values are wrong. An integration work is needed to make it work, if the device is compatible.
+1. **The device works as expected**: it is still worth checking that the discovery went well, and whether there is something to improve (reporting, widgets, battery…). Non-optimized devices may also generate unexpected traffic.
 
-## What to do
+In both cases, sharing the device data helps get the device optimized, for you and for the other users.
 
-Starting Plugin 4.7, there are some tools which allow to share all information collected during the pairing/discovery process.
+## Ask for the device to be optimized
 
+1. Go to *Management > Device Management* and click the orange icon of the device in the *Optimized* column. Its discovery data (what the plugin learned during pairing) is copied to the clipboard. This is the minimum needed to work on the device.
+1. Create an issue on GitHub: [request a certified device model](https://github.com/zigbeefordomoticz/z4d-certified-devices/issues/new?assignees=&labels=Device+Integration&projects=&template=certified-device-model.md&title=%5BModel+Certification%5D+-+).
+1. Paste the discovery data, and add:
+   * the product name and brand;
+   * a link to the product page, or where you bought it;
+   * what works, what doesn't, and what you expect;
+   * the Domoticz log of the pairing, if you have it.
 
-![Export Device List raw (json)](../Images/ExportDevicesRaw.png)
+If asked, also export the full device data: *Tools > Tools*, *Plugin Raw Devices*, then *Export* (it saves an `export.json` file).
 
-1. Got to the Tools Menu
-1. Select Plugin Raw Devices (json)
-1. Export
+## Fix it yourself
 
-This will create an export.json file that you can save.
+You can write the configuration file of the device yourself and put it in the `Conf/Local-Devices` folder of the plugin, where updates don't touch it. See:
 
-* Product Name
-* Brand
-* URL on a web site
-* What do you expect
-* The logs from the pairing process
+* [Get devices well integrated with the plugin (device customization)](HowTo_Device-Customization.md);
+* [Integrate Tuya TS0601 devices with the plugin](HowTo_Device-Customization-TS0601.md);
+* [Model name resolution and `Conf/Local-Devices` precedence](Technical/Model-name-resolution.md).
 
-Please create an issue here on GitHub: [Create a Github Issue](https://github.com/zigbeefordomoticz/z4d-certified-devices/issues/new?assignees=&labels=Device+Integration&projects=&template=certified-device-model.md&title=%5BModel+Certification%5D+-+) with the here above informations
+Please share the file in the issue, so that it can be added to the certified database for everyone.

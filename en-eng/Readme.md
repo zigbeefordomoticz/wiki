@@ -86,7 +86,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## What to do if the device doesn't behave correctly
 
-* [Dealing with not-optimized devices](Problem_Dealing-with-none-optimized-device.md)
+* [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md)
 * [Debug mode](Problem_Debuging-mode.md)
 * [FAQ ZiGate](FAQ_ZiGate.md)
 * [FAQ plugin](Problem_FAQ.md)
