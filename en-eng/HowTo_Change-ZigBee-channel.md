@@ -1,48 +1,49 @@
-# Setting Coordinator Channel
+# Change the Zigbee channel
 
 ## Introduction
 
-By default, at initialisation, the coordinator will look for the best possible channel, based on level of interferences around.
-However you might want to fix the Channel, because some devices would required a specific one.
+A Zigbee network uses one channel of the 2.4 GHz band, from 11 to 26. Choose a channel away from your Wi-Fi: see [Zigbee and Wi-Fi](Info_ZigBee-and-Wifi.md), and measure the radio activity with [Network > Interference level](WebUI_Network.md#interference-level) or a [real-time interference scan](HowTo_Real-time-interference-scan.md).
 
-* Konke requires channel 15
-* Livolo requires channel 26
-* Legrand requires channel 11
+When a zigpy coordinator (Texas Instruments, Silicon Labs, ConBee/RaspBee…) forms a new network with the `channel` setting left to `default`, it runs an energy scan and picks the quietest of the channels 11, 15, 20 and 25.
 
-## Method 1, live channel change ( ZiGate, TI CCxxxx, SiliconLabs)
+Some devices were reported to need a specific channel (findings from the ZiGate era):
 
-In this approach __the most appropriate one__ you will change the coordinator channel, and at the same time you will inform all routers of the channel change. This should allow to have your all network equipments moving to this new channel.
-That is a ZigBee 3.0 feature, and that is quiet important for End Devices (battery based), as they won't be notified of such change. If they are ZB 3.0 compliant the next time they wake up they should detect the new channel and change. If that is not happening you'll have to re-pair them.
+* Konke: channel 15
+* Livolo: channel 26 (see [Livolo](Corner_Livolo.md))
+* Legrand: channel 11 for some devices (see [Legrand](Corner_Legrand-Netatmo.md))
 
-1. Go in the Admin > Coordinator section
-1. In the "Coordinator change channel" menu, select the targeted channel
-1. Click Change channel to apply
+There are two ways to change the channel.
 
-![HowTo Change ZigBee Channel](Images/EN_Channel_change.png)
+## Method 1: live channel change (recommended)
 
-## Method 2, via channel setting ( ZiGate only)
+The coordinator moves to the new channel and broadcasts the change to the whole network. The paired devices are kept.
 
-__That is valid for ZiGate Coordinator only__ If you have a Texas Instrument, Silicon Labs you need to use the first method
+1. Go to *Admin > Coordinator* (see [WebUI Admin](WebUI_Admin.md#zigate)).
+1. In the **Coordinator change channel** panel, select the new channel.
+1. Click *Change channel*.
 
-### Step 1: Set the channel
+![Change the Zigbee channel](Images/EN_Channel_change.png)
 
-![Settings channel](../Images/Channel_setting.png)
+The routers (mains-powered devices) receive the broadcast and follow. End devices (battery devices) sleep and miss it:
 
-Set the channel you want.
+* Zigbee 3.0 end devices look for the network on the other channels when they wake up and no longer reach their parent, and rejoin it;
+* older end devices don't: **reset them** to make them rejoin the network on the new channel (see [Add a new device](HowTo_Pairing-device.md)).
 
-### Step 2: Apply the changes to the coordinator
+Wait a while, then check in *Management > Device Management* which devices don't report any more.
 
-In order to get the coordinator taking into account this new channel, you need to use the `restart` mecanishm.
+## Method 2: form a new network on the chosen channel
 
-![Restart Zigate](../Images/Restart_Zigate.png)
+The `channel` setting (WebUI *Settings*, *Coordinator settings*, advanced) is only applied when the coordinator forms a new network. **Forming a new network erases it: all the devices must be paired again.** Use this method only when you start a network from scratch.
 
-And voila! The coordinator should be on the right channel.
+1. Set `channel` to the channel you want and click *Validate*.
 
-### Step 3: Check the coordinator channel
+   ![Channel setting](../Images/Channel_setting.png)
 
-1. Go to Tools -> and select `Infos zigate (json)`
+1. Form a new network: in Domoticz, *Setup > Hardware*, set *Initialize Coordinator* to *True* on the plugin hardware and click *Update* (see [Plugin settings](Plugin_Settings.md)).
+1. Once the plugin has started, set *Initialize Coordinator* back to *False*, otherwise the network is erased again at the next start.
 
-    ![Zigate Infos](../Images/Zigate_Infos.png)
+With a ZiGate, the `channel` setting is applied with a coordinator restart (*Admin > Coordinator*, *Soft reset*) instead.
 
-1. You'll find the coordinator Information, and the Channel.
-    The Channel value is expressed here in Hexa, so 0x0b means 11
+## Check the channel
+
+Go to *Tools > Tools* and click **Coordinator info**: the `Channel` field gives the current channel. See [Use the plugin tools](HowTo_Using-tools.md).

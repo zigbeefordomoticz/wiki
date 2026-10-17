@@ -1,10 +1,13 @@
-# ZigBee and Wifi
+# Zigbee and Wi-Fi
 
-## Plugin Configuration
+## Choosing the channel in the plugin
 
-The choice of 2.4-GHz band channel for the network is pre-configured as either a fixed channel (in the range 11-26) or a set of channels from which the best channel will be selected by the Coordinator. In the latter case, the Coordinator performs an energy scan of the possible channels and chooses the quietest channel.
+Zigbee and Wi-Fi share the 2.4 GHz band. The Zigbee channel is set with the `channel` setting of the WebUI (*Settings*, *Coordinator settings*, advanced): `default`, or a fixed channel from 11 to 26.
 
-The channel is set with the `channel` setting of the WebUI (*Settings*, *Coordinator settings*, advanced): `default` lets the coordinator choose, or pick a fixed channel from 11 to 26. Changing it on a running network is described in [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
+* With `default`, a zigpy coordinator that forms a new network runs an energy scan and picks the quietest of the channels 11, 15, 20 and 25.
+* The setting is only applied when a new network is formed. To move an existing network to another channel, see [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
+
+The tips below, from NXP's application note on Zigbee and Wi-Fi coexistence, help choose a channel.
 
 ## 1. Channel Selection
 The channels 25 and 26 can be used in North America for operation clear of Wi-Fi interference.
