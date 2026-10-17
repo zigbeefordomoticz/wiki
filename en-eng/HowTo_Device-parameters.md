@@ -11,7 +11,9 @@ You can edit this field, by adding, removing or updating attributes. Please make
 
 { 'parameter1': value, 'parameter2': value .... }
 
-> **Note:** the parameter names below must be used exactly as written, including the few that are misspelled in the engine (e.g. `KeybadLockout`, `ZG204Z_MotionSensivity`, `TS011F_overCurrentBreeaker`, `SonOffTRVWindowDectection`). Using the corrected spelling would have no effect.
+> **Note:** the parameter names below must be used exactly as written, including the few that are misspelled in the engine (e.g. `KeybadLockout`, `ZG204Z_MotionSensivity`, `SonOffTRVWindowDectection`). Using the corrected spelling would have no effect.
+
+> **Note:** the `Disabled` parameter is set by the *Device enabled* switch of the parameter editor (see [WebUI Management](WebUI_Management.md#parameters)); don't edit it by hand.
 
 ## On/Off and power-cycle behaviour
 
@@ -54,6 +56,7 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | UltrasonicOccupiedToUnoccupiedDelay | Time delay, in seconds, before an ultrasonic sensor returns to its unoccupied state. uint16 (seconds) | Ultrasonic occupancy sensors |
 | UltrasonicOccupancySensibility | Ultrasonic sensitivity level: 0 default, 1 High, 2 Max | Ultrasonic occupancy sensors |
 | resetMotiondelay | When the device's OnOff delay cannot be configured, overrides the default 30-second auto-reset (On->Off) delay. Value in seconds | Aqara and other motion devices |
+| MotionViaIASAlarm1 | 1: the IAS Zone alarm of the device is shown as motion (Motion widget) instead of an alarm | IAS motion sensors (Konke, Tuya TS0202, Develco MOSZB-140, Aurora…) |
 | resetSwitchSelectorPushButton | For a Switch-Selector used as a push button, time before it returns to the Off position. Value in seconds (e.g. 30 = 30 seconds) | Scene controllers / push-button selectors |
 
 ## IAS Zone / sirens (generic)
@@ -70,6 +73,7 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | strobeLevel | Strobe level used in the IAS Warning command | IAS WD / siren devices |
 | strobeDutyCycle | Strobe duty-cycle used in the IAS Warning command | IAS WD / siren devices |
 | ForceIASRegistrationEp | Forces IAS CIE registration on the given endpoint (string, e.g. '01'); the parameter is removed after first use | IAS devices needing forced CIE registration (e.g. Lidl PIR) |
+| AlarmDuration | Duration of the alarm, in seconds (default 10) | Develco SMSZB-120 smoke alarm (siren) |
 | ARM_EXIT_DELAY | Exit delay (seconds) for IAS ACE keypad arm commands. 0-255 (default 255 if unset) | IAS ACE keypads (e.g. Develco KEYZB-110) |
 
 ## Thermostat (generic)
@@ -109,9 +113,19 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | --------- | -------------------------- | ------------------ |
 | ConfigurationReportChunk | Per-device override of the number of attributes per Configure Reporting request (global default 3) | Devices supporting Configure Reporting |
 | ReadAttributeChunk | Per-device override of the number of attributes per Read Attributes request (default 3; IKEA 3, Tuya 6) | All devices |
+| ReadAttributeChunkWhenPairing | Number of attributes per Read Attributes request while the device is being paired (default 3) | All devices |
 | BindingTableRequest | If set to 0, skip requesting the device's binding table | Devices supporting binding |
 | disableBinaryInputCluster | If set, the plugin ignores Binary Input cluster (0x000f) data | Devices exposing a Binary Input cluster |
 | AcquisitionFrequency | Minimum interval (seconds) between successive attribute updates to avoid flooding the DB; 0/absent disables throttling | Frequently-reporting Tuya devices (e.g. air-quality sensors) |
+
+## Electricity meters (Linky / P1Meter)
+
+| Parameter | Description / valid values | Applicable devices |
+| --------- | -------------------------- | ------------------ |
+| LINKY_IDX_HC | Metering attribute that counts the off-peak (HC) index on your meter: `'0100'` (EASF01) or `'0102'` (EASF02). Must be set together with `LINKY_IDX_HP`. Default `'0100'` | ZLinky and Linky TIC readers with a P1Meter widget |
+| LINKY_IDX_HP | Metering attribute that counts the peak (HP) index: `'0100'` or `'0102'`. Must be set together with `LINKY_IDX_HC`. Default `'0102'` | ZLinky and Linky TIC readers with a P1Meter widget |
+| LINKY_HPHC_ORDER | `'HC_HP'` (default): HC in Usage1 (T1) and HP in Usage2 (T2) of the P1Meter widget. `'HP_HC'`: the other way round | ZLinky and Linky TIC readers with a P1Meter widget |
+| P1METER_IMPORT_EXPORT | 1: the P1Meter widget is a single-tariff import/export meter: Usage1 = energy delivered, Return1 = energy returned, and a negative power is shown as production. Not used for ZLinky | Energy meters with a P1Meter widget (e.g. solar installations) |
 
 ## Sensor calibration / compensation
 
@@ -208,7 +222,8 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | TuyaSwitchMode | External switch mode *(value mapping to be confirmed)* | Tuya switches |
 | SmartSwitchBackLight | Smart-switch backlight control *(value mapping to be confirmed)* | Tuya TS0004 smart switches |
 | SmartSwitchIndicateLight | Smart-switch indicator light *(value mapping to be confirmed)* | Tuya TS0004 smart switches |
-| SmartRelayStatus01 / 02 / 03 / 04 | Per-relay power-on status *(value mapping to be confirmed)* | Tuya multi-relay devices |
+| SmartRelayStatus01 / 02 / 03 / 04 | Per-relay power-on status. In plugin 9.1.007 the values 0, 1 and 2 are ignored, so this parameter has no effect: use `TuyaE001PowerOnBehavior01` … `04` instead | Tuya multi-relay devices |
+| TuyaE001PowerOnBehavior01 / 02 / 03 / 04 | State of relay 1 (2, 3, 4) after a power cut: `'off'`, `'on'` or `'previous'` (or 0, 1, 2) | Tuya multi-relay devices with the `e001` cluster (e.g. TS0004 `_TZ3000_u3oupgdy`) |
 | TuyaPIRKeepTime | PIR keep/hold time *(value mapping to be confirmed)* | Tuya PIR motion sensors |
 | ZG204Z_MotionSensivity | Motion sensitivity: 0 low, 1 medium, 2 high (engine key spelled "Sensivity") | Tuya PIR ZG-204Z |
 | ZG204Z_MotionOccupancyTime | Occupancy keep time: 0 10s, 1 30s, 2 60s, 3 120s | Tuya PIR ZG-204Z |
@@ -232,7 +247,7 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | TS011F_overTemperatureThreshold | Over-temperature threshold (°C) | Tuya TS011F plugs |
 | TS011F_overPowerBreaker | Enable the over-power breaker (used with `TS011F_overPowerThreshold`) | Tuya TS011F plugs |
 | TS011F_overPowerThreshold | Over-power threshold (W) | Tuya TS011F plugs |
-| TS011F_overCurrentBreeaker | Enable the over-current breaker (engine key spelled "Breeaker"; used with `TS011F_overCurrentThreshold`) | Tuya TS011F plugs |
+| TS011F_overCurrentBreaker | Enable the over-current breaker (used with `TS011F_overCurrentThreshold`). The value is read under this spelling, as in the certified configuration; the misspelled `TS011F_overCurrentBreeaker` only triggers sending the settings | Tuya TS011F plugs |
 | TS011F_overCurrentThreshold | Over-current threshold (A) | Tuya TS011F plugs |
 | TS011F_overVoltageBreaker | Enable the over-voltage breaker (used with `TS011F_overVoltageThreshold`) | Tuya TS011F plugs |
 | TS011F_overVoltageThreshold | Over-voltage threshold (V) | Tuya TS011F plugs |
@@ -277,7 +292,50 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | SONOFF_REALTIME_IRRIGATION_VOLUME | Real-time irrigation volume (litres, uint32) | Sonoff SWV smart valve |
 | SONOFF_DAILY_IRRIGATION_VOLUME | Daily irrigation volume (litres, uint32) | Sonoff SWV smart valve |
 | SONOFF_SWV_WATER_CLOSE_VALVE_TIMEOUT | Auto-close timeout on water shortage (minutes, uint16) | Sonoff SWV smart valve |
+| SONOFF_CHILD_LOCK | Child lock of the device buttons: 0 off, 1 on | Sonoff SWV-ZFE / SWV-ZFU water valves |
 | SONOFF_ZBMICRO_RADIO_POWER_TURBO_MODE | Radio power mode: "Normal" (0x09) or "Turbo" (0x14) | Sonoff ZBMicro |
+
+## Sonoff water valve SWV-ZFE / SWV-ZFU
+
+A manual *On* from Domoticz starts one irrigation session, which the valve ends by itself. These parameters set that session, the alarms and the irrigation plans. All the `SONOFF_SWV_MANUAL_*` parameters are sent together, as are all the `SONOFF_SWV_ALARM_*` ones.
+
+| Parameter | Description / valid values | Applicable devices |
+| --------- | -------------------------- | ------------------ |
+| SONOFF_SWV_MANUAL_IRRIGATION_MODE | Manual session mode: `'duration'` (default), `'capacity'` (stop after an amount of water) or `'duration_with_interval'` (water in bursts) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_MANUAL_IRRIGATION_DURATION | Duration of the session in minutes, 1-719 (device default 2). In `duration_with_interval` mode, duration of each burst, 3-60 | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_MANUAL_IRRIGATION_TOTAL_DURATION | `duration_with_interval` mode only: total duration of the session in minutes, up to 719 (default: the burst duration) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_MANUAL_IRRIGATION_INTERVAL | `duration_with_interval` mode only: pause between two bursts in minutes, 1-60 (default 10) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_MANUAL_IRRIGATION_AMOUNT | `capacity` mode: amount of water, 0-10000 | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_MANUAL_IRRIGATION_AMOUNT_UNIT | Unit of the amount: `'liter'` (default) or `'us_gallon'` | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_MANUAL_FAIL_SAFE | Safety timeout in minutes, 0-719: the valve closes after this time whatever happens (default: the session duration) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_ALARM_WATER_SHORTAGE | 1: enable the water shortage alarm | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_ALARM_WATER_SHORTAGE_DURATION | Minutes without water flow before the shortage alarm, 1-10 (default 5) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_WATER_SHORTAGE_AUTO_CLOSE | 1: close the valve on a water shortage | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_ALARM_WATER_LEAK | 1: enable the water leak alarm | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_ALARM_WATER_LEAK_DURATION | Minutes of abnormal flow before the leak alarm, 1-3 (default 1) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_WATER_FLOW_UNIT | Unit of the flow values reported by the valve: `'liter'`, `'us_gallon'` or `'imperial_gallon'` (valve firmware 1.1.0 or later) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_STATUS_REPORT_INTERVAL | While watering, the irrigation status is logged and shown on the status widget at every change, and otherwise at most every this many seconds, 0-86400 (default 300) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_FLOW_RATE_INTERVAL | Time window in seconds, 10-3600, over which the flow (L/min) is computed (default 60). Longer is more accurate, shorter reacts faster | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_IRRIGATION_PLAN | One irrigation plan, or a list of plans, stored in the valve (see below) | Sonoff SWV-ZFE / SWV-ZFU |
+| SONOFF_SWV_IRRIGATION_PLAN_REMOVE | Index of the plan to remove (0-5), or a list of indexes | Sonoff SWV-ZFE / SWV-ZFU |
+
+An irrigation plan is a dictionary with these keys (only `start_time` is required):
+
+* `plan_index`: 0-5 (default 0); `enable`: true/false (default true);
+* `loop_type_mode`: `'odd_days'` (default), `'even_days'`, `'day_interval'` (with `loop_type_interval_days`, 1-30) or `'weekdays'` (with `loop_type_week_days`, a list of day names);
+* `enable_date`: `'YYYY-MM-DD'` (default today); `start_time`: `'HH:MM'`;
+* `irrigation_mode`: `'duration'` (default), `'capacity'` or `'duration_with_interval'`;
+* `irrigation_total_duration`: 0-719 minutes (default 10); `irrigation_duration`: 3-60 minutes (default 3; the valve silently drops a plan with a shorter duration); `interval_duration`: 1-60 minutes (default 3);
+* `irrigation_amount`: 1-10000 (default 30); `irrigation_amount_unit`: `'liter'` (default) or `'us_gallon'`;
+* `fail_safe`: 0-719 minutes (default 10).
+
+For example, a plan 0 starting at 6:30 every Monday, Wednesday and Friday, with the other values left to their defaults:
+
+```text
+'SONOFF_SWV_IRRIGATION_PLAN': {'plan_index': 0, 'start_time': '06:30', 'loop_type_mode': 'weekdays', 'loop_type_week_days': ['monday', 'wednesday', 'friday']}
+```
+
+Keep `fail_safe` at least as long as the irrigation, or the valve closes before the end.
 
 ## Sunricher
 
