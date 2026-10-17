@@ -20,3 +20,13 @@ If you would like to translate a part or the totality of the Wiki into an other 
 If you find some issues, mistakes ... feel free to submit a change via the GitHub PR mechanism.
 
 The ZigBeeForDomoticZ plugin code is available at https://github.com/zigbeefordomoticz/Domoticz-Zigbee 
+
+# Support the project
+
+The ZigBeeForDomoticZ plugin is developed by [@pipiche38](https://github.com/pipiche38) on spare time. Any help is welcome and really appreciated:
+
+* **Improve the wiki**: report a mistake or a missing page in the [wiki issues](https://github.com/zigbeefordomoticz/wiki/issues), or propose a change with a pull request.
+* **Contribute to the code**: report bugs, test new versions, or propose changes on the [plugin repository](https://github.com/zigbeefordomoticz/Domoticz-Zigbee).
+* **Fund the project**: even 5 € helps to buy new devices to test, integrate and certify. Donations can be made via [PayPal](https://paypal.me/pipiche).
+
+Thank you!
