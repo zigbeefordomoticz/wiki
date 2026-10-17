@@ -26,7 +26,7 @@ The menu bar at the top of every page gives access to the following sections:
 | [Admin](WebUI_Admin.md) | Plugin, Provisionning, Group, Coordinator, Firmware | *Plugin*: upgrade and restart the plugin. *Provisionning*: open the network for pairing, full-reset pairing, recreate widgets. *Group*: rescan the groups. *Coordinator*: software reset, change the Zigbee channel. *Firmware*: device firmware updates (OTA). |
 | [Settings](WebUI_Settings.md) | — | The plugin settings |
 | [Tools](WebUI_Tools.md) | Tools, Command, Reporting, Binding, Debug, Error(s) | *Tools*: buttons that display (and export) plugin data — plugin and coordinator info, devices, groups, battery state, traffic, plugin health, plugin logs… *Command*: send raw Zigbee commands. *Reporting*: attribute reporting configuration (only shown with a zigpy coordinator). *Binding*: bind clusters between devices. *Debug*: the debug logging settings. *Error(s)*: the errors recorded by the plugin. |
-| Manufacturer | CASA.iA, ZLinky, TICmeter, Chameleon | Pages dedicated to some devices. The menu only appears when at least one of these devices is paired, and only lists the ones you have. |
+| [Manufacturer](WebUI_Manufacturer.md) | CASA.iA, ZLinky, TICmeter, Chameleon | Pages dedicated to some devices. The menu only appears when at least one of these devices is paired, and only lists the ones you have. |
 | [About](WebUI_About.md) | — | Plugin version, where to find help (wiki, Domoticz forum, Keybase) and acknowledgements |
 
 ## Header elements

@@ -53,6 +53,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * Section [Admin](WebUI_Admin.md)
 * Section [Settings](WebUI_Settings.md)
 * Section [Tools](WebUI_Tools.md)
+* Section [Manufacturer](WebUI_Manufacturer.md) — only shown when a CASA.iA, ZLinky, TICmeter or Chameleon device is paired
 * Section [About](WebUI_About.md)
 * [Statistics](WebUI_Statistics.md)
 

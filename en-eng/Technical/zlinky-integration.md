@@ -4,6 +4,8 @@
 
 Purpose is to describe the integration of the ZLinky_TIC module in the plugin and Domoticz
 
+The data collected by the ZLinky can be displayed in the WebUI, *Manufacturer > ZLinky* (see [Manufacturer section](../WebUI_Manufacturer.md#zlinky)).
+
 ## Integration status
 
 * Minimum ZLinky version is V5.

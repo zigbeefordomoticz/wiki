@@ -4,6 +4,8 @@
 
 Purpose is to describe the integration of the TICMeter device in the plugin and Domoticz
 
+The data collected by the TICMeter can be displayed in the WebUI, *Manufacturer > TICmeter* (see [Manufacturer section](../WebUI_Manufacturer.md#ticmeter)).
+
 ## Configurations
 
 Linky Mode : (0xFF42, 0x002c )

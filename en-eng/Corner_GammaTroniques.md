@@ -50,6 +50,6 @@ Here after an other exemple where you have all widgets after Pairing. We have he
 
 ## TIC attributes available via Widget
 
-You can access to all collected data from the TICMeter via the WebUI > Manufacturer > GammaTroniques page
+You can access to all collected data from the TICMeter via the WebUI *Manufacturer > TICmeter* page (see [Manufacturer section](WebUI_Manufacturer.md#ticmeter))
 
 ![TICMeter collected data](../Images/TICMeter-WebUI-manufacturer-page.png)
