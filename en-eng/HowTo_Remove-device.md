@@ -1,40 +1,52 @@
-# How to remove Zigbee Devices
+# Remove a device
 
 ## Principle
 
-When a device is paired this imply that the device is known in several locations:
+A paired device is known in three places:
 
-1. known by the coordinator
-1. known by the plugin ( one entry by device )
-1. known by DomoticZ ( one or multiple widgets are related to the same device)
+1. the coordinator (the Zigbee network);
+1. the plugin (one entry per device);
+1. Domoticz (one or more widgets per device).
 
-In order to get a device fully removed, you need to make sure that device is removed on all 3 locations.
+To remove a device completely, it must be removed from all three.
 
+**Removing a device deletes its widgets, and with them their history.** If you are replacing a device by a new one and want to keep the history, use [Replace a device](HowTo_Replace_Device.md) instead.
 
-## Removing End devices ( battery )
+## What the plugin does when you delete the widgets
 
-There is no automatic way to get most of the end devices removed from the locations. To make sure you get the device removed
-from every where, here is a step approach to follow :
+When you delete **the last** Domoticz widget of a device, the plugin:
 
-1. Make sure coordinator is not in "Permit to Join mode", so "Accept new Hardware " is disabled in the WebAdmin UI and the coordinator doesn't blink or have the pairing specific color (depends on the coordinator used).
-1. Reset the end device
-1. you should receive a leave message like that one `Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0`
-1. Remove all Widgets from Domoticz
-1. Go to the Managment -> Device managment menu
-2. Find your device in the list and click on the left trash icon.
+* removes the device from its groups;
+* sends the device a *Leave* request, asking it to leave the network;
+* asks the coordinator to remove the device;
+* marks the device as removed. It is dropped from the plugin database at the next plugin restart.
 
-That's it.
+The Domoticz log shows `Device <name> with IEEE: <ieee> fully removed from the system.` and `Request device <name> -> <ieee> to be removed from coordinator`.
 
+When the device actually leaves, the log shows:
 
-## Removing Router devices ( main powered )
+`<name> (d009/00158d0002722c67) sent a Leave indication and will be outside of the network. LQI: 0`
 
-Usually with Main Powered device, you can remove all associated Widgets from DomoticZ, and while removing the last one, (if the "Removal on plugin" parameter is enabled), the plugin will request the device to leave.
+Deleting only some of the widgets doesn't remove the device. See [Managing the widgets of a device](HowTo_Pairing-device.md#managing-the-widgets-of-a-device).
 
+## Remove a router (mains powered)
 
-A message like that should be received by the plugin and visible in the log as a "Status"
+1. Delete all the widgets of the device in Domoticz.
+1. Check the Domoticz log for the *Leave indication* message above.
 
-```
-Status: (DIN-ZiGate)  (d009/00158d0002722c67) send a Leave indication and will be outside of the network. LQI: 0
-```
+A router listens to the network all the time, so it normally receives the *Leave* request and leaves. If you don't see the *Leave indication*, follow the procedure for end devices.
 
-If you don't get such message, you just need to apply the same procedure as the one presented for the End Devices
+## Remove an end device (battery)
+
+An end device sleeps most of the time and only wakes up to send its data. It usually never receives the *Leave* request the plugin sends, so it doesn't leave the network by itself: you have to reset it by hand.
+
+1. Make sure the network is not open for pairing: the *Accept new hardware* switch of the WebUI menu bar is off, and the coordinator LED doesn't show the pairing mode. Otherwise the device joins again right after the reset.
+1. Reset the device (as for pairing it, see the device documentation).
+1. Check the Domoticz log for the *Leave indication* message above.
+1. Delete all the widgets of the device in Domoticz.
+
+If the device is not reset, it stays in the network and keeps sending its data to the coordinator, and it can come back in the plugin later.
+
+## A device the plugin still lists
+
+If the device still appears in *Management > Device Management* (for example a device whose widgets were deleted while the plugin was stopped, or whose pairing never completed), click the trash icon in the *Del.* column and confirm. The trash icon only appears for a device that has no working widget in Domoticz. See [WebUI Management](WebUI_Management.md#device-management).
