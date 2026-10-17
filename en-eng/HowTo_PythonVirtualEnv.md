@@ -1,12 +1,8 @@
-# Using Python Virtual Environment with Domoticz and Zigbee 4 Domoticz Plugin
+# Use a Python virtual environment for Domoticz
 
-## Why ?
+## Why
 
-It looks like recent linux distribution will prevent using `sudo python3 -m pip` installation. This is mainly driven to prevent any risk of breaking the system by overwriting libraries that where part of tools writen in Python with the system.
-
-To proper install the python libraries and applications required for the Z4D plugin, we need to create a virtual environment dedicated to __Domoticz__ and store all python modules/libraries required for the various python plugins.
-
-This would prevent error messages like that one:
+The plugin needs Python modules (zigpy and its radio libraries…) that are not part of your Linux distribution. Recent distributions (Debian 12, Raspberry Pi OS Bookworm and later) refuse `sudo pip install` into the system Python:
 
 ```log
 error: externally-managed-environment
@@ -15,161 +11,118 @@ error: externally-managed-environment
 ╰─> To install Python packages system-wide, try apt install
     python3-xyz, where xyz is the package you are trying to
     install.
-
-    If you wish to install a non-Debian-packaged Python package,
-    create a virtual environment using python3 -m venv path/to/venv.
-    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-    sure you have python3-full installed.
-
-    For more information visit http://rptl.io/venv
-
-note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-hint: See PEP 668 for the detailed specification.
+    ...
 ```
 
-## Create your python environment for Domoticz
+The clean way is a Python **virtual environment** (venv) dedicated to Domoticz, in which you install the modules of the plugin (and of your other Python plugins), and which Domoticz uses when it starts.
 
-### What is the python version running under Domoticz
+**With the official Domoticz Docker image, there is nothing to do:** the image already runs Domoticz with a virtual environment (`/opt/venv`), and the plugin installs its modules there. See [Installation with Docker](How-To-Install-RPI-Docker.md).
 
-Search for below the message in the Domoticz log:
+## 1. Find the Python version of Domoticz
 
-`Status: PluginSystem: Started, Python version '3.10.11', 10 plugin definitions loaded.`
+The plugin needs **Python 3.11 or newer**. The virtual environment must be built with **the same Python version** (major and minor) as the one Domoticz embeds. Look for this line in the Domoticz log, at start-up:
 
-Conclusion: Domoticz is running python3.10 as the python interpreter for all python plugins.
+`Status: PluginSystem: Started, Python version '3.13.5', 10 plugin definitions loaded.`
 
-Check what is the default python3 interpreter version.
+Here Domoticz uses Python 3.13. Then check the default Python of your system:
 
-`python3 --version`
+```bash
+python3 --version
+```
 
-If you get : `Python 3.10.11` in response to the command, then you have the default python3 interpreter matching the Domoticz one. If you get a different answer like `Python 3.12.7` it means that Domoticz is running a lower python interpreter than the default on your system (which is not a problem), and therefore you must install the libraries for the right interpreter version, in this case 3.10 and not 3.12, in a separate Python environment for Domoticz. To do so, don't use python3 but python3.10 instead to specify the version you need to use.
+If it gives the same minor version (here `3.13.x`), use `python3` below. Otherwise use the matching interpreter explicitly, for example `python3.13`.
 
-### Create the python environment
+> **Several plugin instances and Python 3.11:** running several instances of the plugin (several coordinators) with Domoticz 2026.x and Python 3.11 doesn't work because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)). If you build a new installation, prefer Python 3.13 or newer.
 
-assuming that you have a user __pi__ with the home directory __/home/pi__
+## 2. Install the prerequisites
 
-We are suggesting to create the Domoticz Python Environment in the Domoticz home directory such as __/home/pi__
+```bash
+sudo apt install python3-venv python3-dev
+```
 
-__note__ if you have to use a specific version use `python3.xx` instead of `python3`
+(or `python3-full`). With a specific version, install the matching packages, for example `python3.13-venv python3.13-dev`.
 
-* setup venv
+## 3. Create the virtual environment
 
-  assuming :
+In the examples below, Domoticz runs as the user `pi`, is installed in `/home/pi/domoticz`, and the virtual environment is `/home/pi/Domoticz_Python_Environment`. Adapt them to your installation.
 
-  * user: pi
-  * user home directory: /home/pi
-  * Setup the venv directory: /home/pi/Domoticz_Python_Environment
-  * Domoticz is installed under: /home/pi/domoticz
+```bash
+cd /home/pi
+python3 -m venv Domoticz_Python_Environment
+source Domoticz_Python_Environment/bin/activate
+pip install --upgrade pip
+```
 
-  ```bash
-  cd /home/pi
-  mkdir Domoticz_Python_Environment
-  python3 -m venv Domoticz_Python_Environment
-  source Domoticz_Python_Environment/bin/activate
-  pip install --upgrade pip
-  ```
+## 4. Install the plugin modules
 
-### Prior Stable8 ( version stable7)
+With the virtual environment activated:
 
-We relied on PYTHONPATH to find the path to the python3 modules
+```bash
+source /home/pi/Domoticz_Python_Environment/bin/activate
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+python3 -m pip install -r requirements.txt --upgrade
+```
 
-1. Install Z4D required python modules
+Later, the plugin upgrade from the WebUI (*Admin > Plugin*) detects the virtual environment Domoticz runs with (`VIRTUAL_ENV`) and updates the modules there. See [Plugin update](Plugin_Update.md).
 
-  ```bash
-  cd /home/pi/domoticz/plugins/Domoticz-Zigbee
-  python3 -m pip install -r requirements.txt --upgrade -t /home/pi/Domoticz_Python_Environment
-  ```
+## 5. Start Domoticz with the virtual environment
 
-1. Add the definition for the PYTHONPATH environment variable in the script which automaticaly start Domoticz.
+Domoticz uses the virtual environment when it is started with the `VIRTUAL_ENV` and `PATH` environment variables pointing to it.
 
-    For more information you can have a look to [Domoticz Linux wiki page](https://wiki.domoticz.com/Linux) and especially in  the section _Starting Domoticz automatically when the system boots_ .
+### With systemd (`domoticz.service`)
 
-    If you are in __Option 1__ , you can simply edit the `/etc/init.d/domoticz.sh` file and add an extra line such as:
+Add the two `Environment=` lines to the `[Service]` section:
 
-    ```export PYTHONPATH=/home/pi/Domoticz_Python_Environment:$PYTHONPATH```
+```ini
+[Unit]
+Description=domoticz_service
 
-### From Stable8 — The recommended way
+[Service]
+ExecStart=/home/pi/domoticz/domoticz -www 8080 -sslwww 443
+Environment=VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
+Environment=PATH=/home/pi/Domoticz_Python_Environment/bin:/usr/bin:/bin
+WorkingDirectory=/home/pi/domoticz
+ExecStartPre=setcap 'cap_net_bind_service=+ep' /home/pi/domoticz/domoticz
+Restart=on-failure
+RestartSec=1m
 
-We rely on the standard VENV root via VIRTUAL_ENV
+[Install]
+WantedBy=multi-user.target
+```
 
-1. in case you are running Domoticz with Docker
+If the service uses an `EnvironmentFile=` (for example `/home/pi/domoticz.env`), add the two variables to that file instead:
 
-You are done ! nothing special to do as the domoticz container is properly configured
+```bash
+VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
+PATH=/home/pi/Domoticz_Python_Environment/bin:/usr/bin:/bin
+```
 
-No need to add PYTHONPATH, VIRTUAL_ENV, PATH in your docker compose file, as Domoticz already setup a VIRTUAL_ENV !
+Then reload and restart:
 
-1. if not yet done, [Create the python environment](#create-the-python-environment)
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart domoticz
+```
 
-1. Install Z4D required python modules
+### With the `domoticz.sh` init script
 
-    ```bash
-    source Domoticz_Python_Environment/bin/activate
-    cd /home/pi/domoticz/plugins/Domoticz-Zigbee
-    python3 -m pip install -r requirements.txt --upgrade
-    ```
-
-Finally we need to arrange the way to start Domoticz
-
-1. using systemd: domoticz.service
-
-    ```systemd
-    [Unit]
-          Description=domoticz_service
-    [Service]
-          ExecStart=/home/pi/domoticz/domoticz -www 8080 -sslwww 443
-          Environment=VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
-          Environment=PATH=/home/pi/Domoticz_Python_Environment/bin:/usr/bin:/bin
-          WorkingDirectory=/home/pi/domoticz
-          ExecStartPre=setcap 'cap_net_bind_service=+ep' /home/pi/domoticz/domoticz
-          Restart=on-failure
-          RestartSec=1m
-          #StandardOutput=null
-    [Install]
-          WantedBy=multi-user.target
-    ```
-
-    In case you are using `EnvironmentFile=/home/pi/domoticz.env` just add the 2 following lines in the `/home/pi/domoticz.env`file
-
-    ```bash
-    VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
-    PATH=/home/pi/Domoticz_Python_Environment/bin:/usr/bin:/bin
-    ```
-
-    Reload and start
-
-    ```bash
-    sudo systemctl daemon-reexec
-    sudo systemctl daemon-reload
-    sudo systemctl restart domoticz
-    ```
-
-1. using domoticz.sh
-
-    Place the following line before `start-stop-daemon --chuid $USERNAME --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1` in the do_start() function
-
-    ```bash
-    export VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
-    export PATH="$VIRTUAL_ENV/bin:$PATH"
-    ```
-
-### What to do on venv when moving from stable7 to stable8
-
-You can leave the stable7 venv setup as is, it will remain working
-
-If you want to move to the new setup (which is the proper setup), here are the steps
-
-1. Create a proper venv as described [Create the python environment](#create-the-python-environment)
-
-1. Install the required python3 modules
-
-  ```bash
-  source Domoticz_Python_Environment/bin/activate
-  cd /home/pi/domoticz/plugins/Domoticz-Zigbee
-  python3 -m pip install -r requirements.txt --upgrade
-  ```
-
-1. Finally update your Domoticz startup script and remove PYTHONPATH set and replace by
+In the `do_start()` function, before the line `start-stop-daemon --chuid $USERNAME --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1`, add:
 
 ```bash
 export VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
-export PATH="/home/pi/Domoticz_Python_Environment/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH="$VIRTUAL_ENV/bin:$PATH"
 ```
+
+## 6. Check
+
+At start-up, the plugin writes `VIRTUAL_ENV is set to: /home/pi/Domoticz_Python_Environment` in the Domoticz log. If it writes `VIRTUAL_ENV is not set`, Domoticz was not started with the virtual environment.
+
+The official Docker image is the exception: it enables `/opt/venv` through `PATH` only, so the log says `VIRTUAL_ENV is not set` although the virtual environment is used.
+
+## Older setups with PYTHONPATH
+
+Before `stable8`, the modules were installed with `pip install -t <folder>` and found through a `PYTHONPATH` variable set in the Domoticz start script. This still works, but it is not the recommended setup any more. To move to a virtual environment:
+
+1. Create the virtual environment and install the modules (steps 3 and 4).
+1. In the Domoticz start script, remove the `PYTHONPATH` line and set `VIRTUAL_ENV` and `PATH` instead (step 5).
+1. Restart Domoticz.
