@@ -2,112 +2,84 @@
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
-The section __Admin__ contents the pages :
+The __Admin__ menu contains the pages:
 
-* [Pairing](#pairing)
-* [Group](#group)
-* [ZiGate](#zigate)
-* [Plugin](#plugin)
-* [Firmware](#firmware)
-
+* [Provisionning](#pairing) — pair devices
+* [Group](#group) — scan the groups
+* [Coordinator](#zigate) — restart the coordinator, change the Zigbee channel
+* [Plugin](#plugin) — upgrade and restart the plugin
+* [Firmware](#firmware) — update the firmware of your devices
 
 ------------------------------------------------
 ## Pairing
 
-Here is the __Pairing__ page of the plugin Web interface :
+The __Provisionning__ page (*Admin > Provisionning*) is used to pair your devices with the coordinator and Domoticz.
 
-![FR_WebUI-Admin-Dispositif.png](Images/FR_WebUI-Admin-Appairage.png)
-*This page may have have changed since this documentation was written.*
+![FR_WebUI-Admin-Appairage](Images/FR_WebUI-Admin-Appairage.png)
+*French screenshot, an English one will replace it. The page may have changed since it was taken.*
 
-### How to use
+It has five panels:
 
-Use this page to pair your devices with the coordinator and DomoticZ.
+* **Pairing a new device with the assistant**: click *Pairing* to open the network, then reset the device (see its documentation). The assistant shows, for each device that joins, its pairing status, short address (NwkId), IEEE, profile, device type, model, whether the plugin certifies it, its endpoints and clusters, and the widgets created. Click *Exit* to close the assistant.
+* **Pairing a new device for a period of time**: *4 minutes* opens the network for pairing for 4 minutes; *Stop* closes it. This is the same as the *Accept new hardware* switch of the menu bar.
+* **Pairing a new device on a router**: select a router and click *4 minutes* to let a device join through that router only (useful when the device is far from the coordinator); *Stop* closes it.
+* **Preparing device for full reset**: if you are going to factory-reset a device that is already paired, select it and click *Reset mode* first. The plugin forgets what it learnt about the device (bindings, reporting configuration, neighbours…) and, when the device rejoins, redoes a full discovery and configuration as for a first pairing.
+* **Recreate widget(s) of existing device**: select a device and click *Recreate widget* to create its Domoticz widgets again, using the latest device configuration. You may end up with duplicate widgets in Domoticz: delete the ones you don't need.
 
-You can :
-
-* Add a device with the assistant
-* Activate the pairing mode (full time or 4 minutes)
-* Add a device to a specific routeur
-
-Refer to the tutorial [Add new device](HowTo_Pairing-device.md) for more informations.
+Refer to the tutorial [Add a new device](HowTo_Pairing-device.md) for more information.
 
 ------------------------------------------------
 ## Group
 
-Here is the __Group__ page of the plugin Web interface :
+The __Group__ page (*Admin > Group*) scans the group memberships of your devices, so that the plugin knows which device is in which group:
+
+* **Complete analysis of the groups**: *Full scan* asks every device for its groups.
+* **Selective analysis of the groups**: select one or more routers and click *Scan* to scan only those.
 
 ![FR_WebUI-Admin-Groupe](Images/FR_WebUI-Admin-Groupe.png)
-*This page may have have changed since this documentation was written.*
+*French screenshot, an English one will replace it. The page may have changed since it was taken.*
 
-The groups created via the plugin are seen in DomoticZ as an unique switch Widget (whichever the number of devices in that group). The action on the switch (DomoticZ) will be sent to all the devices of this group.
+The groups created via the plugin are seen in Domoticz as a single switch widget, whatever the number of devices in the group. An action on that switch is sent to all the devices of the group.
 
-### How to use
+Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)). Groups themselves are created and edited in *Management > Group Management* (see [Group Management](WebUI_Management.md#group-management)).
 
-Use this page to manage the groups in your devices.
-
-You can :
-
-* Make a complete scan of the groups
-* Make a selective scan
-
-Before using the Group Management, you need to activate it in the section [Settings](WebUI_Settings.md).
-
-Refer to the tutorial [Add new device](HowTo_Group-management.md) for more informations.
-
+Refer to the tutorial [Group Management](HowTo_Group-management.md) for more information.
 
 ------------------------------------------------
-## ZiGate
+<a name="zigate"></a>
+## Coordinator
 
-Here is the __ZiGate__ page of the plugin Web interface :
+The __Coordinator__ page (*Admin > Coordinator*) has two panels:
+
+* **Coordinator Soft reset**: *Soft reset* restarts the coordinator. **Paired devices are kept.**
+* **Coordinator change channel**: select a Zigbee channel (11 to 26) and click *Change channel*. The coordinator moves to the new channel and broadcasts the change to the network. Routers usually follow; end devices that are not Zigbee 3.0 may not, and then need to be reset to rejoin the network on the new channel. See [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
 
 ![FR_WebUI-Admin-Zigate](Images/FR_WebUI-Admin-Zigate.png)
-*This page may have have changed since this documentation was written.*
-
-### How to use
-
-Use this page to manage the ZiGate hardware.
-
-You can :
-
-* Make a soft reset : **this action will not loose any paired device**.
-
-Refer to the section [How to](Readme.md#how-to) for more informations.
+*French screenshot of the former ZiGate page, an English one will replace it.*
 
 ------------------------------------------------
 ## Plugin
 
-This is the __Plugin__ page of the plugin Web interface.
+The __Plugin__ page (*Admin > Plugin*) has two panels:
+
+* **Plugin Upgrade**: *Start upgrade* upgrades the plugin to the latest version of the branch you are on (it runs the plugin's `Tools/plugin-auto-upgrade.sh` script, and can take several minutes). The script output is displayed. If the upgrade succeeds, restart the plugin; if it fails, check the log and upgrade manually as described in [Plugin update](Plugin_Update.md).
+* **Restart plugin**: *Restart* restarts the plugin (a confirmation is asked). Use it after a setting that needs a restart, when the *Restart needed* indicator blinks in the menu bar.
 
 *(No English screenshot is available yet for this page — contributions welcome.)*
-
-### How to use
-
-Use this page to manage the plugin.
-
-You can :
-
-* Make a restart of the plugin
-
-Refer to the section [How to](Readme.md#how-to) for more informations.
 
 ------------------------------------------------
 ## Firmware
 
-Here is the __Firmware__ page of the plugin Web interface :
+The __Firmware__ page (*Admin > Firmware*) updates the firmware of your paired devices over the air (OTA):
 
-![FR_WebUI-Admin-Firmware](Images/FR_WebUI-Admin-Firmware.png)
-*This page may have have changed since this documentation was written.*
+1. Select the manufacturer.
+2. Select the firmware file.
+3. Select the device(s) to update. Tick *force update* to send the image even if the device is not on an older version (to re-flash it, or go back to an earlier version).
+4. Click *Update* and confirm.
 
-### How to use
+![Firmware Update](../Images/Firmware_Update.png)
 
-Use this page to update your device's firmware.
-
-You can :
-
-* Make an update of your paired device
-
-Refer to the section [How to](Readme.md#how-to) for more informations.
-
+Refer to [Update device firmware](HowTo_Update-device-firmware.md) for where to put the firmware files and how the update runs.
 
 ------------------------------------------------
 Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
