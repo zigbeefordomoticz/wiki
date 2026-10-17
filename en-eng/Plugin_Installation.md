@@ -55,7 +55,7 @@ If you have several Python 3 versions installed, the Python modules must be inst
 
 `Status: PluginSystem: Started, Python version '3.13.5', 12 plugin definitions loaded.`
 
-See [What is the python version running under Domoticz](HowTo_PythonVirtualEnv.md#what-is-the-python-version-running-under-domoticz) for details.
+See [What is the python version running under Domoticz](HowTo_PythonVirtualEnv.md#1-find-the-python-version-of-domoticz) for details.
 
 ### 1.C - Procedure
 
@@ -90,7 +90,7 @@ See [What is the python version running under Domoticz](HowTo_PythonVirtualEnv.m
    python3 -m pip install -r requirements.txt --upgrade
    ```
 
-1. Make Domoticz start with this virtual environment (`VIRTUAL_ENV` and `PATH` in the systemd service or in `domoticz.sh`). This is a one-time setup, described in [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md#from-stable8--the-recommended-way).
+1. Make Domoticz start with this virtual environment (`VIRTUAL_ENV` and `PATH` in the systemd service or in `domoticz.sh`). This is a one-time setup, described in [Using Python Virtual Environment](HowTo_PythonVirtualEnv.md#5-start-domoticz-with-the-virtual-environment).
 
 1. Give the plugin files to the user running Domoticz (adapt __pi:pi__ to your __user:group__; mind the dot at the end) and make __plugin.py__ executable:
 
