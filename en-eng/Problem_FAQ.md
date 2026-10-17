@@ -22,6 +22,7 @@
 * [T4. The update from the WebUI says it succeeded, but the plugin version didn't change](#t4-the-update-from-the-webui-says-it-succeeded-but-the-plugin-version-didnt-change)
 * [T5. My battery devices lose the connection, and raising the transmit power doesn't help](#t5-my-battery-devices-lose-the-connection-and-raising-the-transmit-power-doesnt-help)
 * [T6. The WebUI shows `Unknown error` right after a plugin restart](#t6-the-webui-shows-unknown-error-right-after-a-plugin-restart)
+* [T7. The topology shows only the coordinator, or the routers disappear after a restart](#t7-the-topology-shows-only-the-coordinator-or-the-routers-disappear-after-a-restart)
 
 ## Errors
 
@@ -99,7 +100,7 @@ Yes: see [Debug mode](Problem_Debuging-mode.md) to enable the debug messages of 
 
 Yes: add one instance of the plugin (one DomoticZ hardware) per coordinator. Each instance has its own Zigbee network, its own WebUI port and its own files. One instance manages all the devices paired to its coordinator: don't create one DomoticZ hardware per device.
 
-There is one known problem: with DomoticZ 2026.x and **Python 3.11** (for example Debian 12 / Raspberry Pi OS Bookworm), the second instance fails to start with `Cannot run the event loop while another loop is running`. Use Python 3.13 or newer: see [E16](#e16-error--cannot-run-the-event-loop-while-another-loop-is-running-with-several-plugin-instances).
+There is one known problem: with DomoticZ 2026.x and **Python 3.11** (for example Debian 12 / Raspberry Pi OS Bookworm), the second instance fails to start with `Cannot run the event loop while another loop is running`. Use Python 3.12 or newer: see [E16](#e16-error--cannot-run-the-event-loop-while-another-loop-is-running-with-several-plugin-instances).
 
 ------------
 
@@ -230,7 +231,7 @@ The WebUI shows `Plugin Upgrade process completed without errors.`, but after th
   From 9.1.006 on, the WebUI update works again.
 
 * __You are on an older branch (`stable7`, `stable8`).__ The WebUI updates the branch you are on, but can't switch to another one: the question `[y/N]` of the switch script gets no answer and ends with `Aborted by user. No changes made.`. Switch branches on the command line: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md), and [Know your branch](Plugin_Update.md#know-your-branch).
-* __You restarted only the plugin.__ With DomoticZ 2026.1, restarting the plugin (from the DomoticZ hardware page or from the WebUI) doesn't load the new code: restart DomoticZ.
+* __You are on DomoticZ 2026.1 and restarted only the plugin.__ This is a DomoticZ 2026.1 bug: restarting the plugin (from the DomoticZ hardware page or from the WebUI) doesn't load the new code. Restart DomoticZ itself after each plugin update, or upgrade DomoticZ (2026.3 is recommended).
 * __The update failed on a git error__ (`dubious ownership`, `uncommitted changes`): see [E19](#e19-error-during-an-update--detected-dubious-ownership-in-repository-or-you-have-uncommitted-changes).
 
 See [Plugin update](Plugin_Update.md) for the manual update.
@@ -255,6 +256,22 @@ See [Build a good ZigBee mesh network](HowTo_Build-a-ZigBee-network.md), [Real-t
 The WebUI is served by the plugin: while the plugin restarts, the WebUI can't get any answer, and shows errors. Wait a minute or two after a restart before using the WebUI again.
 
 If the error stays, check that the plugin is running in the [logs](#q2-where-are-the-logs-). To investigate, enable the __WebServer__ debug in __WebUI > Tools > Debug__ (see [Debug mode](Problem_Debuging-mode.md)), reproduce the problem and look at the plugin log.
+
+------------
+
+## T7. The topology shows only the coordinator, or the routers disappear after a restart
+
+This answer applies to plugin **9.1.008 and above**, with a zigpy coordinator (Texas Instruments, Silicon Labs, ConBee/RaspBee, Bouffalo Lab).
+
+Before 9.1.008, the zigpy topology scan had a bug: each scan kept the readings of the first one, so the reports could show all the devices linked to the coordinator only, or links to devices that had left the network. If you are on an older version, [update the plugin](Plugin_Update.md) first.
+
+From 9.1.008:
+
+1. Check in the WebUI __Settings__ page (advanced settings) that __ZigpyTopologyReport__ and __TopologyV2__ (*Network Topology based on routing and neighbourghs tables*) are enabled. They are by default.
+1. In [WebUI > Network > Topology](WebUI_Network.md#the-reports), delete the reports made by the older versions: they were built the old way and give wrong results.
+1. Start a new scan and wait for it to complete: on a large network it takes several minutes, and the report only appears in the list once it is complete.
+
+A battery device doesn't route: it appears only through the router it is attached to, its parent. To see where the battery devices are attached, use the *Associated devices* button of the topology panel, and the [Mesh graph](WebUI_Network-Mesh.md).
 
 ------------
 
@@ -427,7 +444,13 @@ encountered a runtime error: Cannot run the event loop while another loop is run
 
 With DomoticZ 2026.x and **Python 3.11** (for example Debian 12 / Raspberry Pi OS Bookworm), the second instance of the plugin fails to start with this error. It is a Python 3.11 problem, reported to DomoticZ in [domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763). Restarting the failed instance (or waiting for it to restart by itself) usually gets both instances running.
 
-The fix is to run DomoticZ with Python 3.13 or newer (for example Debian 13 Trixie), with the Python modules of the plugin installed for that version.
+DomoticZ itself writes a note about it at start-up on Python 3.11:
+
+```log
+Status: Zigbee: Note: Python 3.11 detected. Plugins using asyncio inside sub-interpreters (shared="true" not set) can leak event-loop state between plugins on Python < 3.12 due to a global cache in CPython's _asyncio extension. If multiple asyncio-based plugins are active, prefer Python 3.12+ or set shared="true" in the plugin's XML manifest.
+```
+
+The fix is to run DomoticZ with Python 3.12 or newer (for example Debian 13 Trixie, which comes with Python 3.13), with the Python modules of the plugin installed for that version.
 
 ------------
 

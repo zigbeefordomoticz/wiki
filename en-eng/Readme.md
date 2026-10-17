@@ -10,7 +10,7 @@ What the current plugin requires. Check this before installing or upgrading.
 
 * `stable9` (9.1.xxx) is the production branch of the plugin. `stable8` and older branches are out of support: if you are still on one of them, [upgrade to stable9](HowTo_Upgrade-stable8-to-stable9.md).
 * We recommend **Domoticz 2026.3**. `stable9` requires Domoticz 2025.1 or newer and Python 3.11 or newer.
-* Running several instances of the plugin (several coordinators) with Domoticz 2026.x and Python 3.11 doesn't work because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)): use Python 3.13 or newer.
+* Running several instances of the plugin (several coordinators) with Domoticz 2026.x and Python 3.11 doesn't work because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)): use Python 3.12 or newer.
 
 ## 1. Getting started
 

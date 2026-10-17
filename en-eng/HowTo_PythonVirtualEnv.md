@@ -32,7 +32,7 @@ python3 --version
 
 If it gives the same minor version (here `3.13.x`), use `python3` below. Otherwise use the matching interpreter explicitly, for example `python3.13`.
 
-> **Several plugin instances and Python 3.11:** running several instances of the plugin (several coordinators) with Domoticz 2026.x and Python 3.11 doesn't work because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)). If you build a new installation, prefer Python 3.13 or newer.
+> **Several plugin instances and Python 3.11:** running several instances of the plugin (several coordinators) with Domoticz 2026.x and Python 3.11 doesn't work because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)). If you build a new installation, prefer Python 3.12 or newer.
 
 ## 2. Install the prerequisites
 
