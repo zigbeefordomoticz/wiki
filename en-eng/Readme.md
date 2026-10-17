@@ -30,9 +30,10 @@ We are contributing to this project on our spare time. If you do consider that i
   * [Installation with Docker on a Raspberry Pi](How-To-Install-RPI-Docker.md)
   * [Installation with Docker on a Synology NAS](Info_Install-Domoticz-NAS-Synology-Docker.md)
   * [Installation on a DUSUN IoT gateway](Corner_DUSUN.md)
-* Step 2 [Plugin settings](Plugin_Settings.md)
-* Step 3 [Plugin configuration](Plugin_Configuration.md)
-* Step 4 [Plugin integration](Plugin_Integration.md)
+* Step 2 [Plugin settings](Plugin_Settings.md) — declare the plugin hardware in Domoticz
+* Step 3 [Plugin configuration](Plugin_Configuration.md) — open the WebUI and check the settings
+* Step 4 [Plugin integration](Plugin_Integration.md) — open the WebUI from the Domoticz menu
+* Then [add your devices](HowTo_Pairing-device.md)
 
 ## Plugin updates
 
