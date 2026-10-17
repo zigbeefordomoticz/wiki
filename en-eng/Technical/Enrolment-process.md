@@ -1,51 +1,34 @@
-## Enrolment : Discovery process
-1. End Device send a Device Announcement by sending 0x004d
-1. When the plugin receive Device Announcement, it will send a 0x0045 Active Endpoint request, this will give information on the number of EndPoints available on the End Device
-1. End Device at reception of 0x0045 will send 0x8045 Active Endpoint request with the list of Endpoints
-1. The Plugin will then 
-   1. send 0x0043 for each EndPoint
-   1. If at that stage the Model Name is unknown it will send a Read Attribute Request on cluster 0x0000
-   1. If at that stage the Manufacturer is unknown it will send a 0x0042 to get a Node Descriptor
-1. When the Plugin will receive 0x8043 in response to 0x0043 with the list of Clusters per EndPoint, all necessary informations are available to create the corresponding widgets in Domoticz. In addition we could also get the response to Read Attribute Request to get the Model Name.
+# Enrolment process
 
-## Enrolment : Domoticz Widget creation
+What the plugin does when a new device joins the network. See [Add a new device](../HowTo_Pairing-device.md) for the user side.
 
-The Domoticz widgets creation is based on two type of information
+## Discovery
 
-1. If the Model name is known, the plugin will search for the Model name in the DeviceConf.txt database where are listed the certified objects and their definition. The widgets will be created based on that.
-1. If the Model name is not found in deviceConf.txt or if the Model Name is not defined, the widgets will be created based on the Clusters found during the discovery phase.
+1. The device joins and sends a **Device Announcement** with its short address (NwkId), IEEE address and capabilities (router or end device, mains or battery powered).
+1. The plugin creates the device in its database and asks the device for its model name (Basic cluster `0x0000`, attribute `0x0005`) and for its **active endpoints** (*Active Endpoint Request*).
+1. For each endpoint, the plugin sends a **Simple Descriptor Request**, which returns the profile, the device type and the list of clusters of the endpoint.
+1. The plugin also asks for the **Node Descriptor** (manufacturer code, power and receiver capabilities).
 
-| Cluster | Widget |
-| ------- | ------ |
-[ 0x0006 | switch On/Of |
-| 0x0008 | Switch Level Control |
-| 0x0101 | Vibration |
-| 0x0300 | Switch Color Control |
-| 0x0400 | Lux |
-| 0x0402 | Temp |
-| 0x0403 | Baro |
-| 0x0405 | Humi |
-| 0x0406 | Motion |
-| 0x0702 | Power and Meter |
-| 0x0500 | Door switch |
-| 0x0001 | Voltage |
+When the model name is found in a device configuration file (certified or local, see [Device configuration files](Device_Configuration_file.md)), the plugin can skip part of the discovery and use the configuration file directly.
 
-## Enrolment : dealing with Issues
+## Provisioning and widget creation
 
-### Nothing happen or it failed
+Once the plugin knows enough about the device:
 
-There are quiet a number of reason why the Enrolment would not go through a positive end, but here are few elements:
+1. It binds the clusters that must report to the coordinator, configures the attribute reporting, and reads the initial attribute values.
+1. It creates the Domoticz widgets:
+   * from the device configuration file when the model is known (*optimized* device);
+   * otherwise from the clusters found during the discovery (*non-optimized* device), following [the standard cluster / widget association](Clusters_Widget.md).
 
-* The main reason is that the plugin has not ben able to collect enough information to be in a situation to create the corresponding widget. Either because:
-  * The object is not compatible with Zigate
-  * They were some communication issues during the enrolment and the plugin has not been able to collect the required information.
-  * The object is a Zigate compatible object , but the plugin doesn't manage it for now.
+## When the enrolment fails
 
-### What to do:
- * Check if the object is Zigbee compatible and Zigate compatible ( you can cross-check http://zigate.fr/le-materiel-compatible-zigate/ )
- * Try once more time the enrolment process
- * Check the Log file, you might get some useful information
- * Use the forum 
+The enrolment can stop when the plugin couldn't collect enough information to create the widgets:
 
+* communication problems during the pairing (the device is far, or sleeps before answering);
+* the device doesn't follow the Zigbee standard, or isn't supported yet.
 
+What to do:
 
+* pair the device again, close to its final location, and keep a battery device awake during the pairing (press a button every few seconds);
+* check the Domoticz log;
+* see [Troubleshooting pairing or connection](../Troubleshooting_Pairing.md) and [Dealing with a non-optimized device](../Problem_Dealing-with-none-optimized-device.md).

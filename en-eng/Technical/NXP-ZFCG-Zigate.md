@@ -1,5 +1,6 @@
 # Collection of information around the NXP Firmware for JN516X
 
+> **Legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin; we advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator. This page is kept for reference.
 
 ## ZiGate technical Specs
 

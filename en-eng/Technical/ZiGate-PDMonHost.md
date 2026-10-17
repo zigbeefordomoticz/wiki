@@ -1,5 +1,7 @@
 # ZiGate PDM on host
 
+> **Legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin; we advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator. This page is kept for reference.
+
 ## Preamble
 
 The purpose is to externalize the ZiGate Permanent Data Memory (PDM) which is usally store on the EEPROM. 

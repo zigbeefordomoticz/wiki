@@ -1,12 +1,18 @@
+# Xiaomi corner
 
-## what are the different widgets created for the 'lumi.ctrl_ln2' Xiaomi QBKG12LM Double Switch
-1. Widget switch aligned with left button ( EP 01 )
-1. Widgets Power/Meter aligned with left button ( EP 02 )
-1. Widget switch aligned with right button (EP 03 )
-1. Widgets Power/Meter aligned with right button ( EP 04 )
+See also [Aqara corner](../Corner_Aqara.md).
 
-## Why is my Xiaomi sensor changing network address
-This is part of the behaviour of those devices. This is a possibility of the ZigBee protocol. No worries
+## Widgets of the Xiaomi QBKG12LM double switch (`lumi.ctrl_ln2`)
 
-## Vibration - How to change the sensitivity
-If you want to adjust the sensitivity of the Aqara Vibration you can do so , by update the parameter vibrationAqarasensitivity. It can be set to 'high', 'medium' or 'low'. You'll have to change the [settings](../WebUI_Settings.md) and then restart the plugin/domoticz, and then delete the existing Vibration device, in order to re-do the pairing process .
+1. Switch for the left button (endpoint 01)
+1. Power/Meter for the left button (endpoint 02)
+1. Switch for the right button (endpoint 03)
+1. Power/Meter for the right button (endpoint 04)
+
+## Why does my Xiaomi sensor change network address?
+
+This is how these devices behave: when they rejoin the network, they may get a new short address. The Zigbee protocol allows it, and the plugin follows the device by its IEEE address. No worries.
+
+## Aqara vibration sensor: change the sensitivity
+
+Set the `vibrationAqarasensitivity` device parameter to `'high'`, `'medium'` or `'low'` in *Management > Device Management*, parameter editor (see [Device parameters](../HowTo_Device-parameters.md)).
