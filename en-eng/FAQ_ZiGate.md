@@ -39,3 +39,45 @@ dmesg | grep tty
 [89963.008376] cp210x ttyUSB0: cp210x converter now disconnected from ttyUSB0
 [89995.620182] usb 1-1.3: cp210x converter now attached to ttyUSB0
 ```
+
+## ZiGate log messages
+
+### `Decode8000`
+
+If you see error logs like here after, this is most-likely an issue with the ZiGate hardware.
+
+```log
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 22 Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 4d Status: [ZigBee Error Code Unknown code : 80]
+Error: ZiGate: Decode8000 - PacketType: 0030 TypeSqn: 02 sqn_app: 00 sqn_aps: 51 Status: [ZigBee Error Code Unknown code : 80]
+```
+
+* Make sure that you don't have the old __blue__ USB-TTL module (it must be a red one, see [above](#usb-ttl-zigate-converter--usb-to-uart-bridge-))
+* Try to power off the ZiGate by stopping the plugin, removing ZiGate, wait for 1 minute, plug-in back and restart the plugin
+
+cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/394)
+
+### `Communication error when transmiting a previous command`
+
+```log
+Error: (Zigbee) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
+Error: (Zigbee) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
+```
+
+The device `90fd9ffffe31f150` is not reachable, or the ZiGate has a communication problem with it.
+
+### `No DNS record configured for Zigate model 'None'`
+
+```log
+Error: Zigbee: No DNS record configured for Zigate model 'None'.
+```
+
+This message comes back every 12 hours, when the plugin checks for a new version: there is no version information published for the ZiGate any more. It is harmless, but the plugin can't tell you that a new version is available: look at [Plugin update](Plugin_Update.md).
+
+### `no decoder registered for MsgType`
+
+```log
+Error: Zigbee: _decode_message - no decoder registered for MsgType 8703
+```
+
+A recent ZiGate firmware sends a message the plugin doesn't know. It is harmless: the message is ignored.
