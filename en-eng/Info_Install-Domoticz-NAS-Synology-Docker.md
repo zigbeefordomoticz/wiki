@@ -76,7 +76,7 @@ You can continue the installation of the Plugin by following:  [Installing the p
 
 # USB drivers installation
 Following the coordinator model, the USB drivers differ:
-* For the first zigate version, the Elelabs dongle, the SonOff dongle version P, you need the driver __cp210x.ko__, you can find it on this [github](https://github.com/robertklep/dsm7-usb-serial-drivers). To choose the right file, you need to know the CPU name of your [Synology NAS](https://kb.synology.com/fr-fr/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
+* For the first zigate version, the Elelabs dongle, the SonOff dongle version P, you need the driver __cp210x.ko__, you can find it on this [github](https://github.com/robertklep/dsm7-usb-serial-drivers). To choose the right file, you need to know the CPU name of your [Synology NAS](https://kb.synology.com/en-global/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have).
 * For the zigate v2 or the conbee 2, you need the file __ftdi_sio.ko__. From DSM7.0, it's already existing in modules folder.
 * For the conbee 2 or the SonOff dongle version E (Silabs chipset), you also need to load __cdc-acm.ko__ (also existing).
 * For the Electrolama Zzh, you need the driver __ch341.ko__ available on the [github](https://github.com/robertklep/dsm7-usb-serial-drivers) with the same method as for cp210x.ko.
