@@ -1,6 +1,6 @@
 # Welcome to the plugin ZigBeeForDomoticZ wiki
 
-[Lien vers le Wiki en français](../fr-fr/Readme.md) - [Link naar de Wiki in het Nederlands](../nl-dut/Readme.md)
+> This English wiki is under review (October 2026) and is the only maintained version. The [French](../fr-fr/Readme.md) and [Dutch](../nl-dut/Readme.md) wikis are obsolete.
 
 We are contributing to this project on our spare time. If you do consider that it fit your needs, you would like to get more devices certified or tested, please feel free to donate, the amount will be dedicated to purchase new equipments and increase the list of compatible/certified devices.
 [![PayPal donate](https://camo.githubusercontent.com/d5d24e33e2f4b6fe53987419a21b203c03789a8f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://paypal.me/pipiche)
