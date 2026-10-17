@@ -1,29 +1,39 @@
 # Web Admin: Tools page
 
-This page give access to a set of REST API to query directly the plugin memory. This page is mainly for developers and for debugging purposes.
-The REST API are mainly developed to be used by the plugin Web Admin interface.
+The *Tools > Tools* page of the WebUI gives access to a set of REST APIs that query the plugin's memory directly. It is mainly for developers and for troubleshooting: click a button to display the data as JSON, then *Export* to download it as `export.json`.
 
-For troubleshooting purposes you might be asked to do an export.json of the __Plugin Raw devices (json)__
+For troubleshooting you might be asked to export the __Plugin Raw Devices__ data.
 
-| Tools                       | REST API        | Usage | Description |
-| -----                       | --------------- | ----- | ----------- |
-| Infos plugin (json)         |  /plugin        | dev   | Domoticz plugin parameters |
-| Plugin Raw devices (json)   |  /zdevice-raw   | debug | Plugin database in memory |
-| zDevice-name (json)         |  /zdevice-name  | dev   |
-| Infos zigate (json)         |  /zigate        | debug | Provide ZiGate related information as Channel, Firmware version ... |
-| Plugin health (json)        |  /plugin-health | debug | Provide health status |
-| domoticz-env (json)         |  /domoticz-env  | dev   | provide Domoticz UserName/Password and port defined in the plugin Web Ui Settings |
-| Domoticz Widgets (json)     |  /device        | dev   | Provide DomoticZ widgets information |
-| zGroup-lst-devices (json)   |  /zgroup-list-available-device | dev | List the potential devices with their Dz Widget which can be managed in a group |
-| Plugin Devices (json)       |  /zdevice       | dev   | Provide information for all plugin devices |
-| Settings (json)             |  /settings      | dev   | Provide the list of plugin settings |
-| Plugin Groups (json)        |  /zgroup        | debug | Provide the group plugin database |
-| Traffic (json)              |  /plugin-stat   | debug | dump all plugin statistics |
-| Battery State (json)        |  /battery-state | debug | dump all battery information by level and update time |
+## The buttons
 
+| Button | REST API | Returns |
+| ------ | -------- | ------- |
+| Plugin Raw Devices | `/zdevice-raw` | The plugin's device database in memory: everything the plugin knows about each device. |
+| Non-optimized devices | `/non-optmize-device-configuration/<NwkId>` | The discovery data of each device the plugin has no certified configuration for (see [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md)). |
+| Plugin Groups | `/zgroup` | The plugin's group database. |
+| Traffic | `/plugin-stat` | The plugin statistics: messages sent and received, load… |
+| Coordinator info | `/coordinator` | Coordinator information: firmware version, channel… |
+| Plugin Logs | `/plugin-log` | Downloads the current plugin log file. Only shown when the plugin writes its own log file (`enablePluginLogging`). |
+| Plugin info | `/plugin` | The Domoticz plugin parameters. |
+| Plugin health | `/plugin-health` | The plugin health status. |
+| Settings | `/setting` | The plugin settings and their values. |
+| domoticz-env | `/domoticz-env` | **The Domoticz user name and password configured in the plugin settings.** Don't paste this output into a public issue or forum post. |
+| Battery State | `/battery-state` | Battery information of the devices, by level and update time. |
+| zDevice-name | `/zdevice-name` | The data of the *Device Management* page (names, model, health…). |
+| zGroup-lst-devices | `/zgroup-list-available-device` | The devices and widgets that can be put in a group. |
+| OTA Firmware Available | `/ota-firmware-available` | The firmware images loaded by the plugin for over-the-air updates. |
+| IEEE to NWK Raw | `/ieee2nwk-raw` | The table matching each device's IEEE address to its short address (NwkId). |
+| Help | `/help` | The list of all REST API commands and the HTTP verbs each accepts. |
+| Zlinky | `/zlinky` | The data of the ZLinky TIC devices. |
+| Gamma-Troniques TICmeter | `/gamma-troniques-ticmeter` | The data of the Gamma-Troniques TICmeter devices. |
+| Chameleon TICmeter | `/chameleon-ticmeter` | The data of the Chameleon Technology TICmeter devices. |
 
 ## How to use the REST API
 
-  If you want to call /plugin-health in order to check the plugin health
+The WebUI calls the plugin's REST API under the `/rest-z4d/1/` prefix (the older `/rest-zigate/1/` prefix is still accepted). You can call it yourself, for example to check the plugin health:
 
-  `curl http://127.0.0.1:9440/rest-zigate/1/plugin-stat`
+`curl http://127.0.0.1:9440/rest-z4d/1/plugin-health`
+
+Replace `9440` with the port set in the plugin hardware parameters if you changed it.
+
+See [REST API](Technical/REST-API.md) for the full list of endpoints.
