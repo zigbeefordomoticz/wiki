@@ -70,7 +70,7 @@ return {
 				domoticz.devices(Alertidx).updateAlertSensor(level, AlertText)
 			end
 		else
-			domoticz.log('There was a problem handling the request' .. url, domoticz.LOG_ERROR)
+			domoticz.log('There was a problem handling the request, status: ' .. tostring(item.statusCode), domoticz.LOG_ERROR)
             domoticz.devices(Alertidx).updateAlertSensor(domoticz.ALERTLEVEL_RED, "Unable to retrieve devices status ... check plugin and settings")
 		end
 

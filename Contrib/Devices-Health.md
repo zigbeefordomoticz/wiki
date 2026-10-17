@@ -1,53 +1,32 @@
-# Device Health
+# Device health
 
-Starting Zigate plugin 4.7, device health is provided and reported also to Domoticz "last seen" status.
-In addition, the plugin is automatically "pinging" main powered devices to check if they are still alive.
+The plugin follows the health of each device: *Live*, *Not Reachable* (the device doesn't answer), *Not seen last 24hours*, *Disabled*… It is shown in the WebUI (*Dashboard* and *Management > Device Management*) and reported to Domoticz: a device that stops answering is marked as *timed out* (red header on its widgets). The plugin also pings the mains-powered devices regularly to check that they are still alive.
 
+## Monitoring the health of your devices with dzVents
 
-## Use Case: Monitoring the health of your devices
+dzVents gives the last update time of a widget (`lastUpdate`) and whether Domoticz considers it timed out (`timedOut`) directly, without calling the Domoticz JSON API.
 
-You can also use the following dzVent code to monitor and trigger notification (thanks to @benp / https://easydomoticz.com/forum/viewtopic.php?f=28&t=8251&start=70#p69018 )
+The example below checks a list of devices every 30 minutes and sends a notification for each device that is timed out or hasn't been updated for more than its threshold. Replace the device names and thresholds (in minutes) with yours.
 
-The here after exemple monitor 'veilleuse' and 'Hue', so you will have to adapt to your own case
+```lua
+local devicesToCheck = {
+    { name = 'veilleuse', threshold = 120 },
+    { name = 'Hue',       threshold = 120 },
+}
 
-
-``` DzVents
 return {
-	on = {
-      devices = {'veilleuse','Hue'},
-      httpResponses = {'lastUP' }
-	},  
-    execute = function(domoticz, item)
-        print('trigger:' .. tostring(item.isDevice) .. ' / ' .. tostring(item.isTimer) .. '/' .. tostring(item.isHTTPResponse))
-
-        if (item.name=='veilleuse') then
-            domoticz.openURL({
-                url = 'http://127.0.0.1:8080/json.htm?type=devices&rid=139'
-                callback = 'lastUP'
-             })
-        end
-        
-        if (item.name=='Hue') then
-            domoticz.openURL({
-                url = 'http://127.0.0.1:8080/json.htm?type=devices&rid=143'
-                callback = 'lastUP'
-             })
-        end
-        
-        if (item.isHTTPResponse and item.ok) then
-            local last =item.json.result[1]['LastUpdate']
-            local name=item.json.result[1]['Name']
-            local HTimeout=item.json.result[1]['HaveTimeout']
-            print('------------------http reponse name: ' .. name.. ' last update: ' .. last .. ' Have timeout:' .. tostring(HTimeout))
-
-            if (domoticz.devices(name .. 'T').state=='Off' and not HTimeout) then
-                domoticz.devices(name .. 'T'). switchOn()
-            end
-            if (domoticz.devices(name .. 'T').state=='On' and  HTimeout) then
-                domoticz.devices(name .. 'T'). switchOff()
+    on = { timer = { 'every 30 minutes' } },
+    execute = function(domoticz)
+        for _, d in ipairs(devicesToCheck) do
+            local device = domoticz.devices(d.name)
+            local minutes = device.lastUpdate.minutesAgo
+            if device.timedOut or minutes > d.threshold then
+                domoticz.notify('Device check',
+                    device.name .. ' has not been seen for ' .. minutes .. ' minutes')
             end
         end
     end
 }
-
 ```
+
+For more complete scripts, see [CheckDeadDevices.lua](CheckDeadDevices.lua), and [GetDevicesStatus.lua](GetDevicesStatus.lua), which reads the health from the plugin REST API. Other scripts are listed in [Scripts](Readme.md).

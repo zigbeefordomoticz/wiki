@@ -14,7 +14,7 @@ return {
     if (item.isTimer) then
     -- at half past midnight call the webservice
       domoticz.openURL({
-          url = 'https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&date="..today.."&country=nld',
+          url = 'https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&date=' .. today .. '&country=nld',
           method = 'GET',
           callback = 'holidayretrieved'
       })

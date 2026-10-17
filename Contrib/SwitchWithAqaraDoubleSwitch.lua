@@ -14,7 +14,7 @@ return {
 	    },
 
 	execute = function(domoticz, item)
-    if (item.isDevice) 
+    if (item.isDevice) then
       if ( item.levelName == 'Left Click') then
           if (domoticz.data.PondOn == 'Off') then
               domoticz.devices('ShellyPond').switchOn()

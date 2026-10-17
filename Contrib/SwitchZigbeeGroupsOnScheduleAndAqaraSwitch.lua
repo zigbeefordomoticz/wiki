@@ -11,7 +11,7 @@ function RoomOn(domoticz)
 	domoticz.devices('GrpLedsLivingRoom').switchOn().checkFirst().afterSec(0)
 	domoticz.devices('GrpPlugsLivingRoom').switchOn().checkFirst().afterSec(1)
 	domoticz.devices('GrpBulbsLivingRoom').switchOff().afterSec(2)
-	domoticz.data.RoomOnUit = 'On'
+	domoticz.data.RoomOnOff = 'On'
 end
 
 function RoomOff(domoticz)
@@ -19,7 +19,7 @@ function RoomOff(domoticz)
 	domoticz.devices('GrpLedsLivingRoom').switchOff().checkFirst().afterSec(0)
 	domoticz.devices('GrpPlugsLivingRoom').switchOff().checkFirst().afterSec(1)
 	domoticz.devices('GrpBulbsLivingRoom').switchOff().afterSec(2)
-	domoticz.data.RoomOnUit = 'Off'
+	domoticz.data.RoomOnOff = 'Off'
 end
 
 -- script is triggered by switch or timer.

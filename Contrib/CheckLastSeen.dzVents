@@ -2,7 +2,7 @@
 -- It is based on the script written by Benp:
 -- https://easydomoticz.com/forum/viewtopic.php?f=28&t=8251&start=80#p69239
 -- You can find a more complete script from Deufo here :
--- https://github.com/pipiche38/Domoticz-Zigbee-Wiki/blob/master/Contrib/CheckDeadDevices.lua
+-- https://github.com/zigbeefordomoticz/wiki/blob/master/Contrib/CheckDeadDevices.lua
 
 
 
