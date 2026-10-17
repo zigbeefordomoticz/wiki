@@ -8,8 +8,8 @@ This is step 2 of the installation: declare the plugin hardware in Domoticz. You
 1. Go to *Setup > Hardware*.
 1. Fill in the parameters below, then click **Add**.
 
-![Domoticz hardware page for the plugin](Images/FR_Plugin-Parametrage.png)
-*French screenshot, an English one will replace it. The page may have changed since it was taken.*
+![Domoticz hardware page for the plugin](Images/EN_Domoticz-Hardware.png)
+*This picture may have changed since this documentation was written.*
 
 | Parameter | What to set | Notes |
 | --------- | ----------- | ----- |

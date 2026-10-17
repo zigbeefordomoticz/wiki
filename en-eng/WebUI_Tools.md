@@ -50,6 +50,9 @@ With a ZiGate coordinator this panel is replaced by **ZiGate command (raw)**, wh
 
 The __Reporting__ page (*Tools > Reporting*) is only shown with a zigpy coordinator. It sets which attributes a device reports on its own, and how often.
 
+![Tools > Reporting](Images/EN_WebUI-Tools-Reporting.png)
+*This picture may have changed since this documentation was written.*
+
 Select a device: its clusters and attributes are listed with their *Datatype*, *Timeout*, *min interval* and *max interval* (in seconds) and *Change* (the minimum change that triggers a report). The device sends a report when the value has changed by at least *Change*, but not more often than every *min interval*, and at least every *max interval* even if nothing changed.
 
 * *Validate* saves your values for this device.
