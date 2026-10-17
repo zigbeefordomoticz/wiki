@@ -1,74 +1,71 @@
-# Legrand corner & faq
+# Legrand / Netatmo corner
 
-[Update Legrand firmware](Corner_Retreiving-Legrand-Firmware.md)
+Tips for the Legrand devices "with Netatmo" (Céliane, Mosaic, Dooxie…).
 
-## Overview
+A big thanks to @fgrimaldi, who contributed heavily to this work, and to @Thorgal789. Most of what is known comes from sniffing the Zigbee traffic between the Legrand hub and the devices, and from trial and error.
 
-Purpose is to present the finding around pairing Legrand/Netatmo devices (Celiane, Mosaic, dooxie to Zigate and Domoticz
-A big thanks to @fgrimaldi who contributes heaviliy to this, a big thanks also to @Thorgal789
+## Before you start
 
-Quiet a lot of work have been done throught sniffing of the Zigbee traffic between the Legrand Hub and the devices as well as Try and Test approach.
+* Some devices come with a basic firmware that doesn't offer all the features (for example the instant power of the plugs, or the dimmer of the switch without neutral). Updating them with the Legrand hub before moving them to the plugin is worth it: see [Update Legrand firmware](Corner_Retreiving-Legrand-Firmware.md). The plugin can also update them over the air when the firmware file is available (see [Update device firmware](HowTo_Update-device-firmware.md)).
+* **If you have a starter pack, don't reset it.** It is factory-paired with its remote, and a reset makes it unusable: it must then be returned to Legrand.
 
-## Preamble
+## Devices
 
-By default some of the Legrand/Netamoi devices come with a basic firmware, which do not provide all features.
-In that context, I still feel that having the Legrand Hub is a good investement for upgrading your device, and then switching to Zigate to avoid Legrand cloud.
+Known to work:
 
-## WARNING
+* Smart plug, with instant power (after a firmware update via the Legrand hub)
+* Switch without neutral, with dimmer (after a firmware update via the Legrand hub)
+* Shutter switch with neutral: open, close, stop
+* Micromodule switch: on and off
+* Double gang remote switch and single gang remote switch: on, off, dimmer
+* Mobile outlet: on, off, power (instant power after a firmware update via the Legrand hub)
 
-If you have the starter pack, do not reset it. It is factory preset with the corresponding remote and any reset will make it unusable and must be return to Legrand.
+Not working:
 
-## Validated devices
+* The *Home/Away* master remote provided with the hub: no Zigbee traffic seen.
+* The scene devices can join the network, but they only broadcast group + scene commands.
 
-* Smart plug - with instant power feedback (if upgraded via the Legrand Hub)
-* Switch w/o neutral - with dimmer (if upgraded via Legrand Hub)
-* Shutter switch with neutral - Open, Close and Stop
-* Micromodule switch - On and Off
-* Double gangs remote switch - On/Off/Dimmer
-* Simple gang remote switch - On/Off/Dimmer
-* Mobile outlet - On/Off/Power (instant power feedback if upgraded via the Legrand Hub)
+## Pairing
 
-## Not Validated
-* The Home/Away remote which is provided with the Legrand Hub and which in addition of Home/Away scene allow to switch the Legrand Hub in pairing mode, do not show any Zigbee traffic .
-* For the other Scenes related devices, they can be connected to the Zigate, but the only send Group+Scene commands in broadcast mode.
+1. Remove the device cover to reach the factory-reset hole or button (don't confuse it with the LED).
+1. Open the network for pairing (see [Add a new device](HowTo_Pairing-device.md)).
+1. Press and hold the reset button:
+   * after a few seconds the LED flashes **green/red** (keep pressing);
+   * after about 8 seconds it flashes **red**: release, and click the reset button once more;
+   * when the LED turns **green**, the pairing is done.
 
-## Prerequisites
+Alternative: when the LED is red (not paired), press the reset button until the LED flashes green 3 times; when the LED comes back to red, click the reset button once.
 
-* In order to enable the Dimmer feature on the Switch w/o neutral, you must have Zigate firmware 3.1b
+While the network is open for pairing, the LED of the Legrand devices is green.
 
+If a device has trouble joining, enable the `LegrandCompatibilityMode` setting (*Settings > Pairing settings*): the plugin then answers the Legrand devices like the Legrand hub does (operating time, attribute `0x0000/0xf000`, see [How the pairing works](#how-the-pairing-works)).
 
-## Add on
+## Device parameters
 
-Some specific Legrand settings are accessible via the Web GUI settings page.
+The Legrand options are **device parameters**, set per device in *Management > Device Management*, parameter editor (see [Device parameters](HowTo_Device-parameters.md#legrand--netatmo)). They replace the old global settings `EnableLedIfOn`, `EnableLedInDark`, `EnableDimmer`…
 
-* __EnableLedIfOn__ By enabling this setting, the device Led will be on ( blue ) when the device is On
-* __EnableLedInDark__ By enabling this setting, the device Led will be on ( blue ) when the device is Off
-* __EnableDimmer__ By enabling this setting, the Switch w/o neutral will get dimmer enable.
+| Parameter | Use | Devices |
+| --------- | --- | ------- |
+| `netatmoLedIfOn` | 1: the LED is on (blue) when the device is on | Connected outlet, mobile outlet, dimmer switch without neutral, shutter switch with neutral, micromodule switch |
+| `netatmoLedInDark` | 1: the LED is on when the device is off, to find it in the dark | Same as above |
+| `netatmoLedShutter` | 1: LED of the shutter switch | Shutter switch with neutral |
+| `netatmoEnableDimmer` | 1: enable the dimmer of the switch without neutral | Dimmer switch without neutral |
+| `netatmoInvertShutter` | 1: invert open and close | Shutter switch |
+| `netatmoReleaseButton` | 1: report the button release of the remotes | Remote switches |
 
-## Channels
+## Commanding devices directly
 
-* Channel 11 , pair all devices
-* Channel 13, able to pair switch W/O neutral.
-* Channel 15, able to pair micromodule and switch W/O Neutral
+A Legrand remote switch can command a micromodule or a switch directly, without Domoticz: see [Bind two devices](HowTo_Binding.md), which uses the double gang remote and the micromodule as its example. The *Remote Shutter* doesn't accept bindings.
 
-## Pairing process
+## Notes from the ZiGate era
 
-1. Remove the device cover in order to get access to the Factory Reset hole (or button). Do not mix the factory reset hole/button with the led.
+These findings were made with a ZiGate coordinator and haven't been checked with other coordinators:
 
-1. Enable the Zigate pairing mode and make sure that Domoticz accept new hardware is also on
-1. Press the factory reset
-   * after few seconds it should be flashing __green/red__ (stay pressing)
-   * after around 8 seconds it should be flashing __red__ (the pairing process should be starting)
-   * click immediatly on the factory reset once more
-   * when turning the led is __green__ the pairing process is completed.
+* The dimmer of the switch without neutral needed ZiGate firmware 3.1b.
+* Pairing on channel 11 worked for all devices; on channel 13 only the switch without neutral paired, on channel 15 the micromodule and the switch without neutral.
+* Group membership was easy to add just after pairing, but failed later. Workaround: power the device off and on, open the network for pairing, then add the group membership.
 
-Alternative is :
-
-When the led is red (not paired):
-* press the reset button until it flash green 3 times
-* when the led comes back to red, click once on the reset button
-
-## Internals
+## Internals (protocol notes)
 
 ### How the Pairing works
 
@@ -339,17 +336,13 @@ __ATTENTION WIP / UNDER INVESTIGATIONS __
 
 More informations/scripts .... can be found here: https://github.com/pipiche38/Capture-OTA-from-Wireshark
 
-## Pairing Mecansism
+## Pairing mechanism
 
 The HUB seems in addition of having Time Server, seems to store in the 0x0000/0xf000 the time since the HUB has been powered on. This attribute server as of time of operation.
 At Pairing, the HUB is broadcasting this value to other devices, and the up coming devices is requesting this attribute also from the oher already connected devices. The Operating time ( 0x0000/0xf000) is reset to 0 after Power Off/On
 
 
 
-## Other matters
-
-* When Zigate is in pairing mode, then the Legrand device led is Green.
-* When you just did the pairing, it is easy to add groupmembership to the device? However after a while I had issues to add new group membership. The workaround I found was. Power Off/On of the device, putting the Zigate in Pairing mode, and then I was able to add groupmembership.
 ## Reference
 
 * https://faire-ca-soi-meme.fr/domotique/2018/09/24/test-legrand-celiane-by-netatmo-zigate/
