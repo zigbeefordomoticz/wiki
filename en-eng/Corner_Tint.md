@@ -1,33 +1,35 @@
-# Tint by Muller Licht
+# Tint by Müller Licht
 
-## Overview
+Tips for the Tint devices that need a specific setup with the plugin.
 
-The purpose is to give tips and hints on the Tint devices confirmed working with the plugin
+## Remote Control White (404022)
 
-## Remote Control White ( 404022)
+The Tint white remote control (model `tint-Remote-white`) controls dimmable bulbs and the white temperature of white/white-ambiance bulbs. **It can't control the color of RGB bulbs.**
 
-The tint-remote-white remote control is designed to control bulb diming and bulb white/white+ambiance.
+The remote controls 4 groups, `4003`, `4004`, `4005` and `4006`: use its group selector to move from one group to the other, then act on the selected group with:
 
-The remote can allow to control 4 different groups. you'll be using the group selector to move from one group to the other and you'll be able to act on thos group with
-
-* On/Off
-* Dim up and down
-* Scene color
+* On/Off;
+* dim up and down;
+* white temperature scenes.
 
 ### Plugin integration
 
-When pairing the tint remote control device, the plugin will create :
+Group management must be enabled (see [Manage Zigbee groups](HowTo_Group-management.md)). When the remote is paired, the plugin adds the remote and the coordinator to the 4 groups, and Domoticz gets 5 widgets:
 
-1. A "tint remote white' widget to reflect the actions done on the remote - despite the group selected -
-1. 4 groups ( 4003, 4004, 4005, 4006 ) where the ZiGate will belong too (which will allow to get the remote event on the Domoticz widget created )
+* one widget per group (4 in all), to dim the group and choose its white temperature. A color choice is shown, but it has no effect;
+* one widget for the remote itself, showing the last command done on the remote. It is a selector with 18 values, for information only: changing it in Domoticz does nothing.
 
-Then it will be up to the user to associate White color diming bulb to the 4 groups created by using the Group Management menu.
+Then add your bulbs to the 4 groups in *Management > Group Management*.
 
-### Tips
+### Coordinator membership
 
-In case the 4 groups doesn't exist, or have been removed, you can simply enable via the plugin Settings the parameter `zigatePartOfGroupTint`and restart the plugin. It will automatically re-create the groups.
+The coordinator is a member of the 4 groups so that it receives the remote commands and the plugin can update the Domoticz widgets.
 
-### Important
+* A coordinator can only belong to a limited number of groups, depending on the coordinator (see [Coordinators](Coordinators.md#limited-number-of-groups)). The remote uses 4 of them.
+* If you don't use the Domoticz widgets, you can remove the coordinator from the 4 groups in *Management > Group Management*: the remote still controls the bulbs of the groups, but Domoticz no longer sees its commands. A group that has no device left is deleted when the coordinator is removed from it.
 
-* a ZiGate can only belongs to a maximum of 5 groups. The Tint remote will require 4 if you want to get the remote event reported to Domoticz Widget
-* If you don't plan to use the Domoticz Widget , we recommend you to remove the ZiGate membership of those 4 groups, it will not impact the remote functionnality to command the 4 groups. ( in case there is no device - bulb - attached to the group and you remove the ZiGate membership, the group will autoamtically be removed ).
+### If the groups are missing
+
+If the 4 groups don't exist any more, or were removed, pair the remote again (open the network for pairing and reset the remote, see [Add a new device](HowTo_Pairing-device.md)): the plugin adds the coordinator to the 4 groups again. Then add your bulbs back in *Management > Group Management*.
+
+With a Silicon Labs (EZSP) coordinator, you can instead enable the `zigatePartOfGroupTint` setting (*Settings*, *Group management*, advanced) and restart the plugin: the coordinator is then added to the 4 groups at every start.
