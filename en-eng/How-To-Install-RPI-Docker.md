@@ -1,237 +1,121 @@
-# Install Zigbee for Domoticz plugin (under Docker on a RPi bare metal)
+# Install the plugin with Docker
 
-## 1. Assumptions & Prerequisites
+This page installs Domoticz and the plugin with Docker, for example on a Raspberry Pi. It builds a custom Domoticz image, based on the official [domoticz/domoticz](https://hub.docker.com/r/domoticz/domoticz) `stable` image, with the Python modules of the plugin already installed, so the container starts quickly.
 
-The here after installation steps are based on Domoticz setup as documented [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
-We assumed here , that you you have access to Domoticz UI via a Web browser.
+The plugin, the Domoticz database and the scripts live in a host folder mapped into the container, so they survive container rebuilds and restarts.
 
-Docker and docker-compose installed.
+## 1. Prerequisites
 
-User must be part of the docker group (so they don’t need sudo everywhere)
+* Docker with the Compose plugin (`docker compose`), see [Get Docker](https://docs.docker.com/get-docker/).
+* Your user in the `docker` group, so you don't need `sudo` for every command.
+* The container is named `domoticz` and everything lives under `/opt/domoticz` on the host; adapt if you use other names.
 
-In the here documentation, the guide assumes the container name = domoticz
+## 2. Get the plugin
 
-Nothing else to be done, as the provided customstart.sh will do the proper setup.
-
-## 2. Docker domoticz optimization
-
-Under the folder `/opt/domoticz`we recommand to have the following setup, slightly different from the recommended domoticz one. The benefit is to speedup the startup.
-
-All configuration files provided here after are based on the image domoticz/domoticz:stable (meaning the stable/master domoticz version and not the beta/development branche)
-1. Configure the dockerfile
-
-This help you to build a single docker image.
+The image build needs the plugin, so clone it first, into the `userdata/plugins` folder that will be mapped into the container:
 
 ```bash
-###############################################################################
-# Dockerfile for Domoticz Zigbee4Domoticz Plugin
-#
-# Purpose:
-#   This Dockerfile builds a custom Domoticz image with pre-installed Python
-#   dependencies required by the Zigbee4Domoticz plugin. It is designed to work
-#   with a persistent plugin folder mounted from the host, so plugin updates
-#   survive container restarts and system reboots.
-#
-# Features:
-#   - Based on the official domoticz/domoticz:latest image
-#   - Sets timezone to Europe/Paris
-#   - Installs essential system packages for plugin operation and management
-#   - Pre-installs Python dependencies from the plugin's requirements.txt
-#     to speed up first container start
-#   - Ensures persistent plugin folder exists under /opt/domoticz/userdata/plugins
-#   - Copies the plugin-auto-upgrade.sh script for optional first-start updates
-#   - Keeps container image clean by removing temporary files after build
-#
-# Usage Notes:
-#   - The actual plugin files should live in a Docker volume, typically mapped
-#     from the host: ./userdata/plugins/Domoticz-Zigbee:/opt/domoticz/userdata/plugins/Domoticz-Zigbee
-#   - Plugin auto-upgrades can be executed inside the container without rebuilding
-#   - Rebuild the image only when Python dependencies change
-#
-# Volumes:
-#   - /opt/domoticz/userdata/plugins/Domoticz-Zigbee  (plugin directory, persistent)
-#   - ./userdata                                      (host directory mapped to userdata)
-#
-# Build Command:
-#   docker build -t domoticz-custom:stable .
-#
-# Notes:
-#   - pip notices about upgrades are suppressed by installing dependencies
-#     during image build
-#   - SSH known hosts are pre-populated to allow git access from the container
-###############################################################################
-# Base image
-FROM domoticz/domoticz:stable
-
-# Set timezone
-ENV TZ=Europe/Paris
-
-# Install required system packages
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        iputils-ping \
-        vim \
-        openssh-client \
-        python3-venv \
-        python3-pip \
-    && rm -rf /var/lib/apt/lists/*
-
-# Ensure plugin folder exists in the userdata volume
-RUN mkdir -p /opt/domoticz/userdata/plugins/Domoticz-Zigbee \
-    && mkdir -p /root/.ssh \
-    && ssh-keyscan github.com >> /root/.ssh/known_hosts
-
-# Copy only requirements.txt and plugin-auto-upgrade script to install dependencies
-# This will speed up first start
-COPY userdata/plugins/Domoticz-Zigbee/requirements.txt /tmp/plugin-requirements.txt
-COPY userdata/plugins/Domoticz-Zigbee/constraints.txt /tmp/constraints.txt
-COPY userdata/plugins/Domoticz-Zigbee/Tools/plugin-auto-upgrade.sh /tmp/plugin-auto-upgrade.sh
-
-# Check pip version and update
-RUN pip3 install pip --upgrade
-
-# Install Python dependencies during image build
-RUN if [ -f /tmp/plugin-requirements.txt ]; then \
-        pip3 install --no-cache-dir -r /tmp/plugin-requirements.txt; \
-    fi
-
-# Make the auto-upgrade script executable (optional, can be run inside container)
-RUN chmod +x /tmp/plugin-auto-upgrade.sh
-
-# Cleanup temporary files
-RUN rm -f /tmp/plugin-requirements.txt
-# Keep plugin-auto-upgrade.sh in /tmp for first-start usage if needed
-```
-
-1. Configure the docker-compose.yml
-
-Defines how to run one or more containers together.
-
-* It orchestrates services (containers), networks, volumes, and other runtime options.
-* Can either pull an image from a registry, or build it using a Dockerfile.
-* Handles relationships between services (e.g., depends_on, networks).
-* Great for multi-container setups like Domoticz + Zigbee plugin + database.
-
-```bash
-services:
-    domoticz:
-    build:
-        context: .
-        dockerfile: dockerfile
-    image: domoticz-custom:stable
-    container_name: domoticz
-    restart: unless-stopped
-
-    # Pass devices to container
-    devices:
-        - "<physical serial port on host>:<serial port in container to be used by domoticz>"
-
-    ports:
-        - "<HOST domoticz port>:<CONTAINER domoticz port>"
-        - "<HOST Z4D WebUI port>:<CONTAINER Z4D WebUI port>"
-
-    volumes:
-        # This is where customstart.sh will be as well as the domoticz Database, domoticz scripts as well as the plugins
-        - /opt/domoticz/userdata:/opt/domoticz/userdata
-
-    logging:
-        driver: "journald"
-```
-
-## 2. Install plugin & configuration
-
-1. clone the Z4D plugin
-
-```bash
-cd /opt/domoticz/userdata/plugins/
+mkdir -p /opt/domoticz/userdata/plugins
+cd /opt/domoticz/userdata/plugins
 git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 
-1. Identify the Serial line port of the Zigbee Dongle
+## 3. The Dockerfile and the compose file
+
+The plugin ships both files in its `Docker` folder. Copy them to `/opt/domoticz`:
+
+```bash
+cd /opt/domoticz
+cp userdata/plugins/Domoticz-Zigbee/Docker/dockerfile .
+cp userdata/plugins/Domoticz-Zigbee/Docker/docker-compose.yml .
+```
+
+The **dockerfile** builds the custom image: it starts from `domoticz/domoticz:stable`, sets the time zone (`TZ=Europe/Paris`, change it if needed), installs a few tools (`ping`, `vim`, `ssh` for `git pull`), and installs the Python modules listed in the plugin `requirements.txt` into the Domoticz virtual environment of the image (`/opt/venv`). Use the file of the plugin as is; you only need to rebuild the image when the plugin's Python requirements change.
+
+The **docker-compose.yml** runs the container. Adapt it to your installation; it should look like this:
+
+```yaml
+services:
+  domoticz:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: domoticz/domoticz:stable-custom
+    container_name: domoticz
+    restart: unless-stopped
+
+    # Pass devices to container
+    devices:
+       - "/dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20220715103321-if00:/dev/ttyUSB-zigbee"
+
+    ports:
+      - "8080:8080"
+      - "9440:9440"
+
+    volumes:
+      - ./userdata:/opt/domoticz/userdata
+
+    logging:
+      driver: "journald"
+```
+
+* `devices`: maps the coordinator into the container, as `<path on the host>:<path in the container>` (see step 4). Not needed for a network coordinator.
+* `ports`: `8080` is the Domoticz web interface, `9440` the plugin WebUI. Add `443:443` if you use Domoticz over https, and one port per additional plugin instance.
+* `volumes`: `./userdata` (that is `/opt/domoticz/userdata`) holds the Domoticz database, scripts and plugins. Without it, everything would be lost when the container is rebuilt.
+
+## 4. Find the serial port of the coordinator
 
 ```bash
 ls -l /dev/serial/by-id/
-total 0
-lrwxrwxrwx 1 root root 13 Dec 11 22:19 usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0 -> ../../ttyUSB0
+lrwxrwxrwx 1 root root 13 Dec 11 22:19 usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20220715103321-if00 -> ../../ttyUSB0
 ```
 
-In this exemple the Zigbee USB Dongle SonOff P is /dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0.
+Use this `/dev/serial/by-id/…` path, which doesn't change after a reboot, on the host side of `devices`. The container side is a name of your choice, for example `/dev/ttyUSB-zigbee`: this is the *Serial Port* you will give to the plugin.
 
-1. Update docker-compose.yml file.
+## 5. Use the plugin start script
 
-The syntax to be used is `<host port>:<container port>`
-
-* __host port__ is `/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0`
-* __container port__ is the port name you want to see inside the container, `/dev/ttyUSB0` ( you can choose what ever you want)
-
-1. edit the file docker-compose.yml
-
-* userdata must be mapped as a volume for plugins & DB persistence. Otherwise everything installed in /opt/domoticz/userdata inside the container will vanish after a rebuild.
+When the container starts, the Domoticz image runs `/opt/domoticz/userdata/customstart.sh` if it exists. The plugin provides one, which, the first time a new container starts, reinstalls the tools and the plugin Python modules (through `Tools/plugin-auto-upgrade.sh`). Link it, so that plugin updates bring its updates too:
 
 ```bash
-vi /opt/domoticz/docker-compose.yml
+ln -s /opt/domoticz/userdata/plugins/Domoticz-Zigbee/Tools/customstart.sh /opt/domoticz/userdata/customstart.sh
 ```
 
-* this should look similar to that one.
+## 6. Build and start
 
 ```bash
-services:
-    domoticz:
-    image: domoticz/domoticz:stable
-    container_name: domoticz
-    restart: unless-stopped
-    # Pass devices to container
-    devices:
-        - "/dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20220715103321-if00:/dev/ttyUSB-zigbee"
-
-    ports:
-        - "8080:8080"
-        - "9440:9440"
-
-    volumes:
-        # This is where customstart.sh will be as well as the domoticz Database, domoticz scripts as well as the plugins
-        - /opt/domoticz/userdata:/opt/domoticz/userdata
-
-    logging:
-        driver: "journald"
-
-    environment:
-        - TZ=Europe/Paris
-        #- LOG_PATH=/opt/domoticz/userdata/domoticz.log
+cd /opt/domoticz
+docker compose build
+docker compose up -d
 ```
 
-1. Domoticz custom script. IMPORTANT
+Domoticz is then available at `http://<host>:8080`.
 
-When starting the Domoticz container, it will trigger automatically the `/opt/domoticz/userdata/customstart.sh`.
-As part of the Zigbee. for Domoticz plugin we provide a custom version which fit for plugin. If you don't need anything special we do recommend to use it as such. The best is to do a symbolic link , so any update provided via the Z4D plugin update will be integrated immediatly
+## 7. Add the plugin in Domoticz
 
-```bash
-sudo ln -s /opt/domoticz/userdata/plugins/Domoticz-Zigbee/Tools/customstart.sh /opt/domoticz/userdata/customstart.sh
-```
+Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial Port* is the container path chosen in step 4 (`/dev/ttyUSB-zigbee` in the example). Then open the WebUI at `http://<host>:9440/z4d/`.
 
-1. Build a Domoticz with Z4D plugin image
+## Updating
 
-```bash
-docker-compose build
-````
+* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again.
+* **Domoticz, or the plugin's Python requirements**: rebuild the image and recreate the container:
 
-From that, Domoticz is ready to start with the plugin
+  ```bash
+  cd /opt/domoticz
+  docker compose build --pull
+  docker compose up -d
+  ```
 
-## 3. Start Domoticz with plugin
+* The plugin also provides `Tools/update_domoticz_docker_container.sh`, which rebuilds the image (`--rebuild`), restarts the container and checks for plugin updates. Its defaults (image `domoticz-custom:latest`, plugin folder `/opt/domoticz/plugins/Domoticz-Zigbee`) differ from this page: use `--image` and `--plugin-dir` to match your setup, and `--dry-run` to see what it would do. Run it with `--help` for all the options.
 
-```bash
-docker-compose up -d
-```
+## Troubleshooting
 
-## 4. Troubleshooting
+* List the running containers: `docker ps`
+* Open a shell inside the container: `docker exec -it domoticz /bin/bash`
+* See the container log: `docker logs domoticz` (or `journalctl` with the `journald` logging driver)
+* Inside the container, the Python modules are in the virtual environment `/opt/venv` (see [Python virtual environment](HowTo_PythonVirtualEnv.md)).
 
-* list running containers: `docker ps``
-* get a bash inside the container: `docker exec -it domoticz /bin/bash`
+## References
 
-* Inside the container, the python environment will be developped under /opt/venv
-
-## 4. Sources and References
-
-* [domoticz/domoticz - Docker](https://hub.docker.com/r/domoticz/domoticz)
+* [domoticz/domoticz on Docker Hub](https://hub.docker.com/r/domoticz/domoticz)
 * [Get Docker](https://docs.docker.com/get-docker/)
-* [docker hub](https://hub.docker.com/)
+* [Backup and restore](Plugin_Backup.md), for the Docker paths of the database and the plugin
