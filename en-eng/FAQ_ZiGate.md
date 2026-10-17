@@ -1,5 +1,7 @@
 # FAQ for ZiGate
 
+> **Legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin. This page is kept for existing ZiGate users only and is not maintained. We advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator: see [Compatible coordinators](Coordinators.md).
+
 ### How to reset a ZiGate Wifi
 
 If you are not able to reach the ZiGate Wifi, there is a tip in order to reset the Wifi module.

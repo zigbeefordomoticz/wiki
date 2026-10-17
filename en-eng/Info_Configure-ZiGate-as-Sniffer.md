@@ -1,5 +1,7 @@
 # Configure ZiGate as sniffer
 
+> **Legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin. This page is kept for existing ZiGate users only and is not maintained. We advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator: see [Compatible coordinators](Coordinators.md).
+
 # ZiGate preparation
 
 ZiGate comes with a CP2102 (red board) usb to ttl converter.

@@ -1,3 +1,4 @@
+> **Archived:** this page describes an old ZiGate-era procedure and is not maintained. For the current procedure, see [Upgrading device firmware](../HowTo_Update-device-firmware.md).
 
 Require to be updated accoridngly to the Web GUI interface for Group Management
 

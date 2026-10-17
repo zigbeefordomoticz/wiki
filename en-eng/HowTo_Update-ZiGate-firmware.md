@@ -1,4 +1,6 @@
-# How to flash a new firmware toward ZiGZate
+# Update the ZiGate firmware
+
+> **Legacy ZiGate:** ZiGate coordinators are no longer supported by the plugin. This page is kept for existing ZiGate users only and is not maintained. We advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator: see [Compatible coordinators](Coordinators.md).
 
 ## Overview
 

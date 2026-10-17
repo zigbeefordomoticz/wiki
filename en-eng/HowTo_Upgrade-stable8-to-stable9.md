@@ -100,7 +100,7 @@ along with the same one-way reminder from the notice above.
 
 * Open the plugin Web Interface.
 * Go to [Admin > Plugin](WebUI_Admin.md#plugin).
-* Click **Start upgrade**. This installs/upgrades everything listed in `requirements.txt` for the `stable9` code now checked out (see [Plugin Update](Plugin_Update.md#from-the-webui)), using whichever Python environment the plugin itself is configured to run under — including a venv, if you use one.
+* Click **Start upgrade**. This installs/upgrades everything listed in `requirements.txt` for the `stable9` code now checked out (see [Plugin Update](Plugin_Update.md#from-the-webui-recommended)), using whichever Python environment the plugin itself is configured to run under — including a venv, if you use one.
 * Once it completes, click **Restart**.
 
 Use the WebUI action rather than running `pip install` yourself from a terminal: a manual `pip install` targets whatever `python3` resolves to in your shell, which may not be the same interpreter/venv Domoticz actually runs the plugin with.

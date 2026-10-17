@@ -73,7 +73,6 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
 * [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md)
 * [Form a ZigPy network](HowTo_Form-network-zigpy.md)
-* [Upgrading Firmware of ZiGate](HowTo_Update-ZiGate-firmware.md)
 * [Expose the dashboard with basic authentication on a https link](HowTo_Dashboard-Access-Basic-Auth.md)
 * [Use a Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
 * [Use a Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
@@ -88,7 +87,6 @@ We are contributing to this project on our spare time. If you do consider that i
 
 * [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md)
 * [Debug mode](Problem_Debuging-mode.md)
-* [FAQ ZiGate](FAQ_ZiGate.md)
 * [FAQ plugin](Problem_FAQ.md)
 
 ## Devices specifics
@@ -137,13 +135,21 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Understanding a ZigBee network](https://www.blackhillsinfosec.com/understanding-zigbee-and-wireless-mesh-networking/)
 * [Firmware list](Info_Firmware-list.md)
 * [Widgets Switch Selector Mapping](Info_Widgets-Switch-Selector-Mapping.md)
-* [ZiGate limitations](Info_ZiGate-Limitations.md)
 * [Coexistence between Wifi and ZigBee](Info_ZigBee-and-Wifi.md)
-* [How-to Configure ZiGate in ZigBee Sniffer](Info_Configure-ZiGate-as-Sniffer.md)
-* [Legacy - PiZigate installation](Legacy_PiZigate-Installation.md) (ZiGate is no longer supported)
 
 ## More
 
 * [A Guide to Wireless range and Repeater](https://blog.smartthings.com/smartthings-updates/a-guide-to-wireless-range-repeaters/)
 * [Pairing Aqara/Xiaomi devices and keeping them connected, including with other brands](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623)
-* ZiGate only (in French): [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate), [ZiGate firmware update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)
+
+## Legacy ZiGate
+
+ZiGate coordinators are no longer supported by the plugin: we advise moving to a Texas Instruments, Silicon Labs or deCONZ coordinator (see [Compatible coordinators](Coordinators.md)). These pages are kept for existing ZiGate users and are not maintained.
+
+* [FAQ ZiGate](FAQ_ZiGate.md)
+* [ZiGate limitations](Info_ZiGate-Limitations.md)
+* [Upgrading the ZiGate firmware](HowTo_Update-ZiGate-firmware.md)
+* [Configure a ZiGate as a Zigbee sniffer](Info_Configure-ZiGate-as-Sniffer.md)
+* [PiZigate installation](Legacy_PiZigate-Installation.md)
+* [ZiGate internals](Technical/Readme.md#legacy-zigate)
+* In French, on zigate.fr: [ZiGate backup & restore](https://zigate.fr/documentation/sauvegardez-et-restaurez-votre-zigate), [ZiGate firmware update](https://zigate.fr/documentation/mise-a-jour-de-la-zigate)

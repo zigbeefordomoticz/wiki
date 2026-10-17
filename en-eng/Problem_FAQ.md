@@ -206,11 +206,11 @@ cc: [Issue reported on ZiGate](https://github.com/fairecasoimeme/ZiGate/issues/3
 Here after is an exemple of errors found in the log file.
 
 ```log
-Error: (Zigate) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
-Error: (Zigate) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
+Error: (Zigbee) Communication error when transmiting a previous command to 9d58 ieee 90fd9ffffe31f150
+Error: (Zigbee) Decode8702 - SQN: bc AddrMode: 02 DestAddr: 9d58 SrcEP: 01 DestEP: 01 Status: d4 - Unicast frame does not have a route available but it is buffered for automatic resend
 ```
 
-This indicates that device ```90fd9ffffe31f150```is not reachable or - Zigate get a communication problem with it -
+This indicates that the device `90fd9ffffe31f150` is not reachable, or that the coordinator has a communication problem with it.
 
 ------------
 
@@ -341,7 +341,7 @@ python3 -m pip install -r requirements.txt --upgrade
 ## E13. Error : `AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms'`
 
 ```log
-2024-04-16 18:31:06.519 Error: zig: (Zigate) failed to load 'plugin.py', Python Path used was '/home/ben/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python310.zip:/usr/lib/python3.10:/usr/lib/python3.10/lib-dynload:/usr/local/lib/python3.10/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.10/dist-packages'.
+2024-04-16 18:31:06.519 Error: zig: (Zigbee) failed to load 'plugin.py', Python Path used was '/home/ben/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python310.zip:/usr/lib/python3.10:/usr/lib/python3.10/lib-dynload:/usr/local/lib/python3.10/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.10/dist-packages'.
 2024-04-16 18:31:06.523 Error: zig: Traceback (most recent call last):
 2024-04-16 18:31:06.523 Error: zig: File "/home/ben/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 122, in <module>
 2024-04-16 18:31:06.523 Error: zig: from Modules.checkingUpdate import (checkFirmwareUpdate, checkPluginUpdate,
@@ -378,7 +378,7 @@ Use a Python virtual environment for DomoticZ, so that the plugin doesn't load t
 ## E14. AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK
 
 ```log
- 2024-04-24 12:29:41.998 Error: Zigbee: (Zigate) failed to load 'plugin.py', Python Path used was '/home/pi/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python39.zip:/usr/lib/python3.9:/usr/lib/python3.9/lib-dynload:/usr/local/lib/python3.9/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.9/dist-packages'.
+ 2024-04-24 12:29:41.998 Error: Zigbee: (Zigbee) failed to load 'plugin.py', Python Path used was '/home/pi/domoticz/plugins/Domoticz-Zigbee/:/usr/lib/python39.zip:/usr/lib/python3.9:/usr/lib/python3.9/lib-dynload:/usr/local/lib/python3.9/dist-packages:/usr/lib/python3/dist-packages:/usr/lib/python3.9/dist-packages'.
 2024-04-24 12:29:42.005 Error: Zigbee: Traceback (most recent call last):
 2024-04-24 12:29:42.005 Error: Zigbee: File "/home/pi/domoticz/plugins/Domoticz-Zigbee/plugin.py", line 131, in <module>
 2024-04-24 12:29:42.005 Error: Zigbee: from Modules.checkingUpdate import (checkFirmwareUpdate, checkPluginUpdate,

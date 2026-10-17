@@ -4,15 +4,7 @@
 
 The choice of 2.4-GHz band channel for the network is pre-configured as either a fixed channel (in the range 11-26) or a set of channels from which the best channel will be selected by the Coordinator. In the latter case, the Coordinator performs an energy scan of the possible channels and chooses the quietest channel.
 
-There is a parameter in the PluginConf.txt file
-
-`'channel':'0',` ( Default and is used for ALL channels between 11 to 26 )
-
-`'channel':'21',` will configure the network to the 21 as a fixed channel
-
-`'channel':'11,15,16,21,22',`will configure the network with a set of channels from which the Zigate will be able to choose the quietest
-
-**In order to take a Channel change in consideration, the coordinator requires a Software Reset** ( currently done at Plugin start in the options)
+The channel is set with the `channel` setting of the WebUI (*Settings*, *Coordinator settings*, advanced): `default` lets the coordinator choose, or pick a fixed channel from 11 to 26. Changing it on a running network is described in [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
 
 ## 1. Channel Selection
 The channels 25 and 26 can be used in North America for operation clear of Wi-Fi interference.

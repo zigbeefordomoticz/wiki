@@ -8,10 +8,10 @@ ZigBeeForDomoticZ bridges a Zigbee coordinator (USB dongle or module) to [Domoti
 
 The plugin supports several Zigbee coordinator hardware types:
 
-* **ZiGate** (V1 and V2 — USB, PiZiGate, WiFi, Ethernet)
 * **Texas Instruments** (CC2652P/R/RB, CC1352P/R via zigpy-znp)
 * **Silicon Labs / EZSP** (EFR32MGxx series via zigpy-bellows)
 * **deCONZ** (ConBee II/III, RaspBee II via zigpy-deconz)
+* **ZiGate** (V1 and V2): no longer supported, see [Legacy ZiGate](Readme.md#legacy-zigate)
 
 See [Compatible coordinators](Coordinators.md) for the full list and firmware requirements.
 
