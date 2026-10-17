@@ -42,7 +42,7 @@ We are contributing to this project on our spare time. If you do consider that i
 
 ## Backups
 
-* [Backups to do to be able to restore without losing crucial information](Plugin_Backup.md)
+* [Backup and restore](Plugin_Backup.md) — what to back up (plugin files and the Domoticz database), the backup scripts, reinstalling the plugin
 
 ## Plugin's web Interface
 
