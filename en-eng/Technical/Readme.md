@@ -6,6 +6,8 @@
 * [Model name resolution and Conf/Local-Devices precedence](Model-name-resolution.md)
 * [Aqara Cube decoding](Aqara-Cube-decoding.md)
 * [Device Configuration_file](Device_Configuration_file.md)
+  * [Device configuration attributes](device-configuration-attributes.md)
+  * [Device specific parameters ("Param" section)](device_specific-parameters.md)
 * [NXP ZFCG Zigate](NXP-ZFCG-Zigate.md)
 * [Orvibo](Orvibo.md)
 * [Plugin ListOfDevices](Plugin_ListOfDevices.md)
