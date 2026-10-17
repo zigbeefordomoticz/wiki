@@ -66,7 +66,7 @@ The __Binding__ page (*Tools > Binding*) binds a cluster between two devices, so
 
 Select the cluster, the source device (and endpoint) and the target device (and endpoint), then click *Binding* (or *Unbinding* to remove the binding). For example, to bind a temperature sensor to an actuator, the source is the sensor, the target is the actuator and the cluster is `0402` (Temperature Measurement).
 
-Refer to the tutorial [Bind two devices](HowTo_Binding_Legrand.md) for more information.
+Refer to the tutorial [Bind two devices](HowTo_Binding.md) for more information.
 
 ------------------------------------------------
 ## Debug

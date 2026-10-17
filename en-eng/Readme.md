@@ -67,7 +67,7 @@ We are contributing to this project on our spare time. If you do consider that i
 * [Device parameters](HowTo_Device-parameters.md)
 * [Use the plugin tools](HowTo_Using-tools.md)
 * [Group Management](HowTo_Group-management.md)
-* [Bindings](HowTo_Binding_Legrand.md)
+* [Bind two devices](HowTo_Binding.md)
 * [Deal with errors](HowTo_Dealing-pluging-error.md)
 * [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md)
 * [Upgrading device firmware](HowTo_Update-device-firmware.md)
