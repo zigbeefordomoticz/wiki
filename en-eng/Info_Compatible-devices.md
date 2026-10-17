@@ -1,288 +1,83 @@
-# Compatible devices
-
-## English
-
-Purpose is to document the list of Hardware devices **tested** with the ZiGate USB/WiFi and the ZigBeeForDomoticZ plugin.
-
-Either the information is coming from one of the plugin user (through direct communication, Domoticz forum), or from the plugin developers whom have make it working.
-
-You can also check [ZiGate Zigbee Compatibility web site](https://zigbee.blakadder.com/z4d.html)
-
-## Français
-
-Ce document est une liste des objets "certifiés" qui fonctionnent avec une ZiGate et le plugin ZigBeeForDomoticZ.
-
-Les informations ci-dessous proviennent soit d'un utilisateur (via GitHub ou l'un des forums de discussions) soit du développeur qui rendu paramétrer l'objet pour qu'il fonctionne.
-
-La liste des objets compatibles avec la ZiGate est disponible sur le site [ZiGate ZigGee Compatibility](https://zigbee.blakadder.com/z4d.html)
-
-Le reste de la page est en anglais afin de ne faire vivre qu'une seule version.
-
-## BITRON HOME
-
-<https://www.conrad.com/o/bitron-home-2805047>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Smartplug (902010/28) | Plug   | Switch On/Off | Full Op. | 4.6 |
-| Door/Windows contact (902010/121A) | Door | Door sensor Open/Closed | Fully Op. | 4.6 |
-| Motion Sensor (902010/22A) | Motion | Motion | Full Op. | 4.6 |
-
-## Centralite Micro
-
-<https://centralite.com/>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Door/Windows |  Door         | Open/Closed |        |                |
-
-## ELKO
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Thermostat  | Setpoint+ Temp | Setpoint/ Temp | Operational. Currently investigating the Thermostat Mode capability | 4.1    |
-| Dimmer      | Switch / LvlControl | Dimmer | Full Op. | 4.1.0 |
-
-## EUROTRONIC
-
-<https://eurotronic.org/produkte/zigbee-heizkoerperthermostat/>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Thermostat | Setpoint + Temp | Setpoint to configure the target temperature, and you can get the local temperature | Operational | 4.1.0 & Firm 3.0f|
-
-## GLEDOPTO
-
-Please do not that it seems that GLEDOPTO do not provide LQI information, and due to that would probably behave as a very bad router. Controller and other routers won't have any clue on the LQI quality they have with such devices.
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| LED 12W     | ColorControl/Switch/LvlControl | Led controlled with RGB+WW, On/Off, Lvl Control | Fully Op.| 4.3 |
-| LED 4 W (GL-B-001Z) | ColorControl/Switch/LvlControl | Led controlled with Level Control, On/Off and RGB + WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
-| Spot(GL-S-004Z) | Whitecolor/Switch/LvlControl | Sport controlled with Level Control, On/Off and WW. Can be reset with Philips Remote Hue | Fully Op. | 4.1 |
-| GL-C-009    | LvlControl | Dimable led | Op. | 4.6 |
-
-## HEIMAN
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| HS2WD-E     | Switch Selector Off/Alarm/Siren/Strobe | Siren and Strobe | Fully Op. | 4.4 with Firm 3.1a |
-| HS1SA-E     | Smoke Detector   | | Fully Op. | 4.10 with Firm 3.1c|
-| HS1CA-M     | CO Detector    | | Fully Op. | 4.10 with Firm 3.1c|
-
-## IKEA Tradfri
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| LED1623G12 | Combied Switch+Level Control |  |   Fully Operational | 2.3.5 |
-| LED1649C5 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operational | 3.3.2 |
-| LED1536G5 | Combined Switch+Level Control |  | Fully Operational | 2.4.0 |
-| LED1624G9 | Combined Switch+Level+Color control | |  Fully Operational | 2.4.0 |
-| LED1545G12 | Combined  Switch+Level+Color control | | Fully Operational | 2.4.0 |
-| LED1546G12 | Combined  Switch+Level+Color control | |  Fully Operational | 2.4.0 |
-| LED 1622G12 | Switch Light, Level Control | You can switch on/off the lead, managed the LUX via the level control. | Fully operational | 2.3.5 |
-| remote control E1524 | Remote Control | Pair the device, then associate with Ikea devices using touchlink, finally add Zigate to the group created | Fully Operationnal | 4.10 @ Firm 3.0f |
-| TRADFRI motion sensor |  | | Not supported | required Group/Scene |
-| TRADFRI Signal Repeater | Voltage as a placeholder | Zigbee router | Fully Op. | 2.4 |
-| TRADFRI bulb E12 WS opal 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E14 WS opal 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E26 WS clear 950lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E26 WS opal 980lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E27 WS clear 950lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E27 WS opal 1000lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E27 WS opal 950lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb E27 WS opal 980lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-| TRADFRI bulb GU10 WS 400lm | Switch+Level Control and WW Control |  | Fully OP. | 4.7.004 |
-
-## Innr
-
-* In order to reset the RC 110, press On and Program for about 5s until the led blink
-* In order to pair the RC 110, press - and program for about 3s until the led blink
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| BY 265      | Light White    |             | Fully Op. | 4.1.0       |
-| RC 110      | 1 x Selector switch for scene mode, 6 x Selectors for Light mode | In Scene mode, the Remote broadcast command to ALL On/Off/LvlControl devices ( Bulb, Shutter, Plug ..); In Light mode, you have to press a Number first and then you press the command On/Off Up/Down which will be send to the corresponding widget | Under Dev. | 4.6 |
-
-## Jiawen
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| JW-A04-RGBW Led Strip Controller | Switch Light, Level Control, Color Control |  You can switch on/off the lead, managed the LUX via the level control and the LED color, through the Color Setting. | Fully operational | 3.1.0 |
-
-## KONKE
-
-* Channels: 15, 20,25
-
-### Attention
-
-1. for now there is no reporting of Battery level ( under investigation )
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Entry Sensor| Door contact   | Door contact| Op. with 4.5, Fully Op. with 4.6 | 4.5 |
-| Button      | Switch Selector | 1 Click and 2 Click and long Click (Long click was difficult to get, maye an issue with the gear) | Fully Op. 4.6 | 4.6 |
-| Temp Humi   | Temp & Humi    | Temp et Humi| Op. with 4.5, Fully Op. with 4.6 | 4.6 |
-| Motion      | Motion         | Motion      | Fully Op.| 4.6 |
-
-## Legrand
-
-* Channels: 11
-
-### Attention
-
-* [Corner Legrand Netatmo](Corner_Legrand-Netatmo.md)
-
-Throught the Web GUI Settings, you can configure how the Led should behave, taking in consideration that the Led will be green as soon as the Zigate is in Pairing mode
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Celiane with Netatmo Plug | Switch and Power Meter | Plug with Switch Power and Meter widget | Op. | 2.4.0 |
-| Celiane with Netatmo switch/Dimmer W/O neutre | Switch, LvlControl | Op. (Dimmer has be enabled via Settings)| Op. | 4.6 & Firmware 3.1b |
-| Switch for rolling shutter with neutral| Switch/LvlControl | On/Off/Stop | Op. | 4.1 & Firm 3.0f |
-| Micro Module | Switch  | Micromodule | Op. | 4.6 |
-| Legrand Double gang wireless switch | 2 x Switchs | Switch Selector Off/On/Move Up/Move Down/Stop | Op. | 4.6 |
-
-## LIVOLO
-
-* Channel: 26 (with a possibility to move to 11)
-
-### Attention
-
-* [Corner Livolo](Corner_Livolo.md)
-* Be aware that Livolo switches seems not to act as a router. In such they won't participate in the mesh and will not help in extending the network.
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| One Gang C701SZ-11 | Switch | On/Off       | Under Dev | 4.6 & Firm 3.1b |
-
-## OSRAM / LEDVANCE
-
-* I have noticed some auto-reset when devices are paired on a channel different than 11.
-* LEDVANCE firmware are available here <https://update.ledvance.com/firmware-overview>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Smart Plug  | Plug (On/off)  |             |  Fully Op. |            |
-| Smart+ Indoor Plug | Plug (On/Off) |       | Fully Op. |             |
-| Mini Switch | Switch Selector | 5 states selector | Fully Op. | 4.6  |
-
-## Paulmann
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Paulmann LED dimmer 300.43 | Switch/LvlControl | Switch and Dimmer | Fully Op. | 4.5 |
-
-## Philips
-
-* Philips bulbs don't have Configure Reporting working. Due to that and in order to get their states (if you can command the Bulb outside of Domoticz , like with a remote), you must set a regular polling. So you MUST enable 'enableReadAttributes' parameter.
-So there is a risk of latency when using Remote or Group command between the command and getting the status reflected on Domoticz (as it is based on the polling frequency)
-
-* Philips firmware are available here: <https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions#philips-hue>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| LCT001 |  Color Switch RGBWW | Hue bulb A19 | Full Op. |   4.1.0        |
-| LST002 |  Color Switch RGBWW | Hue LightStrips Plus | Full Op. |   4.1.0        |
-| LCT007 |  Color Switch RGBWW | Hue bulb A19 | Full Op. |   4.1.0        |
-| RWL021 | Remote Control | Remote Control with On/Off/DIM+/DIM- |  | 4.1.0 & Firm 3.0f |
-| SML001 | Motion Sensor | Temperature, Lux and Motion detection | Fully Op. | 4.1.0 |
-
-## Philio Technology Corporation
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| Slim Multisensor PST03-A/B/C | | | Operational | 2.4.0 |
-
-## Profalux
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| shutter | Blind percentage inverted switch | can command the shutter from the domoticz switch, but also you can pull shutter status and update the Domoticz device. | Fully operational | 2.3.5 |
-
-## Salus
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| SP600 | Plug, Power Meter Voltage | Can switch on/off the plug | Power and Meter required a firmware upgrade of Zigate > 3.0e | 3.1.0 |
-
-## Schneider
-
-* <https://download.schneider-electric.com/files?p_enDocType=Catalog&p_File_Name=LSB02758EN.pdf&p_Doc_Ref=LSB02758EN>
-
-* [Corner Wiser Setup](Corner_Wiser-Setup.md)
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| EER40020  Smart Plug  | Switch/Power/meter | Smart Plug | Op. | 4.6            |
-| EER5100x Thermostat | Temperature | Work as a Temperature sensor (for now) | Work as Temp | 4.6 |
-| EER50000 Actionneur | Thermostat, Instant Power and Consumption Usage Fil Pilot, or conventional mode | Work | 4.6 |
-| EER3300x S Meter | 6 lines Power / Meter and Voltage of Battery| allow to get instant power as well as summation for each of the 6 lines | Work |  4.6 |
-| EER5300x Radiator Thermostat | Thermostat Mode, Setpoint, Local Temp | Full control of the radiator | Op. | 4.7 & 3.1c|
-
-## TUYATEC
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| TYZDS-02    | Door Contact   | Door contact | Op with 4.5 , Fully Op. with 4.6| 4.5        |
-| TS0011    | Switch   | 1 Switch Line Only| Op 4.6| 4.6        |
-| TS0012    | Switch   | 2 Switch Line Only| Op 4.6| 4.6        |
-| TS0013    | Switch   | 3 Switch Line Only| Op 4.6| 4.6        |
-| TS0001    | Switch   | 1 Switch | Op 4.6| 4.6        |
-| TS0002    | Switch   | 2 Switch | Op 4.6| 4.6        |
-| TS0003    | Switch   | 3 Switch | Op 4.6| 4.6        |
-| TS0201    | Temp + Humidity |Temp / Humidity / Temp + Humidity | Op 4.6| 4.6        |
-
-## Trust.com
-
-* <https://www.trust.com/fr/zigbee>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| ----------- | -------------- | ----------- | ------ | -------------- |
-| ZLED-EC2206 | Switch/Lvl Control | Warm Color, 470lm/6w, Dimable | Op. | 4.5 |
-
-## Xiaomi / Aqara
-
-* <https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623>
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| -----------| -------------- | ----------- | ------ | -------------- |
-| Aqara RTCGQ11LM Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Lux sensor included doesn't work on master - report false values - To be tested in development branch | 2.4.0 |
-| Aqara WSDCGQ11LM Temperature Humidity Pressure Sensor | Temp + Humidity + Barometer | | Fully operational | 2.4.0 |
-| Aqara DJT11LM Vibration Sensor | Selector Switch |  Take, Tilt, Move, Drop; Vibration Curve widget, Orientation widget | Fully. OP | 4.4 (Orientation Widget needs 4.6 & Firmware 3.1b) |
-| Aqara Water sensor | Water sensor | Sensor turns on when it is under water | Fully operational | 2.4.0 |
-| Aqara Aqara Smart Light Wall Switch ( QBKG12LM) | 2 switches , Power, Meter | 2 independents switches with a cumulative Power and Meter consumption widget | Fully Op. | 4.2 |
-| Aqara MCCGQ11LM Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operational | 2.4.0 |
-| Aqara WXKG01LM (86sw1) | Switch Selector | The following events are reported to the Domoticz Switch selectors : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks)| Fully operational | 3.1.0 |
-| Aqara WXKG02LM (86sw2) | Switch Selector | The following events are reported to the Domoticz Switch selectors : Right Click, Left Click, Both Click | Fully operational | 3.1.0 |
-| Aqara WXKG11LM Square Device with round Button | Switch Selector | There are 2 versions of that device. The following events are reported to the Domoticz Switch selectors : Original version : 1 Click, 2 Clicks, 3 Clicks, 4 Clicks (more than 4 clicks got to 4 clicks), New version : 1 Click, 2 Clicks, Long Click (more than 400ms), Release Button | Fully operational (both versions) | 3.1.0 |
-| Aqara WXKG03LM Aqara wireless switch single button | Button | The following events are reported to the Domoticz Switch : Click Double Click and Long Click | Fully operational | 3.3 |
-| Aqara WXKG12LM | Button with giroscop | Simple and double click, Long Click and Long Release, Shake | Fully Op. | 4.3 |
-| Aqara Cube | Switch Selector | The following events are reported to the Domoticz Switch selectors : Shake, Wakepup, Drop, 90° and 180° rotation, Push, Tab and horizontal Rotation . | Fully operational | 2.4.0 |
-| Human Motion Sensor | Human Motion Sensor | Switch turns on when a movement is detected | Fully operational | 2.4.0 |
-| Plug | Plug, Power meter | Can switch on/off the plug and you get Watts consumption | Fully operational | 3.1.0 |
-| Smoke Sensor | Smoke Sensor | Need 3 push on button to run synch| can't be reset from Domoticz | 2.3.5 |
-| Temperature Humidity Sensor | Temp + Humidity | | Fully operational | 2.3.5 |
-| Wall Double Switch QBKG12LM | Switch, Power meter | 2 switches with Power meter n each line | Fully operational | 3.1.0  |
-| Window Door switch | Window Door switch | Switch turns on when the door is open | Fully operational | 2.4.0 |
-| Smart Wireless Switch Key Built In Gyro Multi-Functional | Switch Selector | Selector Switch: Click, Double Click, Long Click, Release Click, Shake | Fully Op. | 4.2.1 |
-| Aqara mgl01 | Illuminance Measurement | Give a Lux Value | Fully Op. | 4.6.065 |
-
-## Zemismart
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| -----------| -------------- | ----------- | ------ | -------------- |
-| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 1 Gang | 1 Switch | 1 Switch | Fully Op. | 4.1.0 |
-| Zemismart FNB56-ZSW01LX2.0 Zigbee On/Off 2 Gang| 2 Switch | 2 Switch | Fully Op. | 4.1.0 |
-| Zemismart NUET56-DL27LX1.1 Zigbee RGBW Downlight | Color Switch RGBWW | Color Switch RGBWW | Fully Op. | 4.1.0 |
-| Zemismart ZM-CSW002 | EU Curtain Wall Switch | Venetian Blind EU or Blind | Op. | 4.6 |
-
-## Other
-
-| Device/Type | Domoticz usage | Description | Status | Plugin Version |
-| -----------| -------------- | ----------- | ------ | -------------- |
-| KSEntry KS-SM001 Zigbee On/Off | Switch | Switch | Fully Op. | 4.1.0 |
-| FB56-ZCW08KU1.1 | Strip Light WRGB | Switch/LvlControl/ColorControl | Fully Op. | 4.2.0 |
-| Müller-Licht 44062|  Color Switch RGBWW | "tint white + color" (LED E27 9,5W 806lm 1.800-6.500K RGB) | Fully Op. | 4.4 |
-| DIY CC2531 based router | Switch | Zigbee CC2531 based router with a test button to test connection | Fully Op. | 4.1  |
-| SONOFF BASICZBR3 | Switch | Zigbee Switch module | Fully Op. | 4.1 |
+# Certified devices
+
+A **certified** (or *optimized*) device is a device model for which the plugin has a configuration file: its widgets, reporting and specific handling are known and tested. See [Compatible objects](Objects.md) for what this means for you.
+
+## Where to look
+
+* **[zigbee.blakadder.com](https://zigbee.blakadder.com/z4d.html)** lists the devices known to work with the plugin (gateway *Zigbee for Domoticz*), with pictures and pairing tips. Search it first.
+* **The [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices) repository** holds the configuration files the plugin uses, one per Zigbee model, under `z4d_certified_devices/Certified/<brand>/<model>.json`. It is installed with the plugin's Python requirements, and updated when you upgrade the plugin (see [Plugin update](Plugin_Update.md)). A model is certified when a file with its Zigbee model name exists there (see [Model name resolution](Technical/Model-name-resolution.md)).
+
+To find out whether your device is certified, look for its Zigbee model name (shown in *Management > Device Management*, *Model* column) in the repository, or check the *Optimized* column of Device Management once it is paired.
+
+## Certified models by brand
+
+693 configuration files in z4d-certified-devices 10.607 (October 2026). The folder names are those of the repository; some brands are filed under the name of the manufacturer that makes the device (for example `LUMI` for Aqara/Xiaomi, `TDURM0D01` for Müller Licht Tint), and `Others` gathers single models of small brands.
+
+| Brand (folder) | Models |
+| -------------- | ------ |
+| [Adeo](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Adeo) | 13 |
+| [Aeotec](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Aeotec) | 2 |
+| [Airzone](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Airzone) | 1 |
+| [Aotec](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Aotec) | 1 |
+| [Awox](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Awox) | 2 |
+| [Bitron](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Bitron) | 7 |
+| [Bituo](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Bituo) | 1 |
+| [Candeo](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Candeo) | 2 |
+| [Casa.ia](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Casa.ia) | 18 |
+| [Chameleon](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Chameleon) | 7 |
+| [CLEODE](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/CLEODE) | 3 |
+| [Custom](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Custom) | 1 |
+| [Danalock](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Danalock) | 1 |
+| [Danfoss](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Danfoss) | 4 |
+| [Develco](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Develco) | 12 |
+| [EcoDim](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/EcoDim) | 3 |
+| [ENKI-LEXMAN](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/ENKI-LEXMAN) | 3 |
+| [Eurotronics](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Eurotronics) | 1 |
+| [eWeLink](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/eWeLink) | 5 |
+| [Excellux](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Excellux) | 1 |
+| [GammaTroniques](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/GammaTroniques) | 1 |
+| [Gledopto](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Gledopto) | 17 |
+| [Heiman](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Heiman) | 27 |
+| [Hobeian](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Hobeian) | 10 |
+| [Icasa](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Icasa) | 2 |
+| [Idinio](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Idinio) | 1 |
+| [Ikea](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Ikea) | 63 |
+| [Iluminize](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Iluminize) | 2 |
+| [Innr](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Innr) | 8 |
+| [Konke](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Konke) | 5 |
+| [Legrand](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Legrand) | 15 |
+| [LIVOLO](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/LIVOLO) | 1 |
+| [Lixee](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Lixee) | 10 |
+| [LS-Deutschland-GmbH](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/LS-Deutschland-GmbH) | 1 |
+| [LUMI](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/LUMI) | 70 |
+| [Namron](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Namron) | 1 |
+| [Nexturn](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Nexturn) | 1 |
+| [Nodon](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Nodon) | 8 |
+| [Orvibo](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Orvibo) | 5 |
+| [OSRAM](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/OSRAM) | 10 |
+| [Others](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Others) | 18 |
+| [Owon](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Owon) | 23 |
+| [Philips](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Philips) | 48 |
+| [Profalux](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Profalux) | 8 |
+| [Robb-Smarrt](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Robb-Smarrt) | 2 |
+| [SALUS](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/SALUS) | 1 |
+| [Samotech](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Samotech) | 1 |
+| [Schneider](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Schneider) | 18 |
+| [SmartThings](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/SmartThings) | 1 |
+| [Somfy](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Somfy) | 1 |
+| [Sonoff](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Sonoff) | 38 |
+| [Sunricher](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Sunricher) | 5 |
+| [TDURM0D01](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/TDURM0D01) | 3 |
+| [Tuya](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Tuya) | 165 |
+| [TUYATEC](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/TUYATEC) | 3 |
+| [Woolley](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Woolley) | 2 |
+| [Ynoa](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Ynoa) | 2 |
+| [Ysrai](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Ysrai) | 5 |
+| [Zbeacon](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Zbeacon) | 1 |
+| [Zehnder](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Zehnder) | 1 |
+| [Zemismart](https://github.com/zigbeefordomoticz/z4d-certified-devices/tree/main/z4d_certified_devices/Certified/Zemismart) | 1 |
+
+## My device is not in the list
+
+* Many Zigbee 3.0 devices work without a configuration file: the plugin creates the widgets from what the device reports. See [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md).
+* You can write the configuration file yourself in `Conf/Local-Devices`: see [Get devices well integrated with the plugin](HowTo_Device-Customization.md).

@@ -27,7 +27,7 @@ See [Compatible coordinators](Coordinators.md) for the full list and firmware re
 ## Compatible Devices
 
 * [Certified device list — Zigbee Device Compatibility Repository](https://zigbee.blakadder.com/z4d.html)
-* [Locally certified devices](Info_Compatible-devices.md)
+* [Certified devices](Info_Compatible-devices.md)
 
 ## Where to Start
 
