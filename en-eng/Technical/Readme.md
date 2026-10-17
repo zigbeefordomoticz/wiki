@@ -22,6 +22,6 @@
 * [TICMeter integration](ticmeter-integration.md)
 * [ProfileID ZDeviceID](ProfileID---ZDeviceID.md)
 * [Transport](Transport.pptx)
-* [Plugin Architecture Diagram](Plugin Architecture Diagram.pptx)
+* [Plugin Architecture Diagram](Plugin%20Architecture%20Diagram.pptx)
 
 ![Zigpytransport](ZigpyTransport.png)

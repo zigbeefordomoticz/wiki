@@ -7,9 +7,9 @@ However the sniffer firmware is configured to 1000000 bps which this board does 
 Hence you need an another chipset that support this type of not standard speed.
 I only found the FTDI232 that supports it.
 
-![Zigate pinout](/Images/zigate_pinout.jpg)
+![Zigate pinout](../Images/zigate_pinout.jpg)
 
-![FTDI32](/Images/FTDI232.jpg)
+![FTDI32](../Images/FTDI232.jpg)
 
 | Color |Zigate  | FTDI232   |
 |---|---|---|
