@@ -6,12 +6,14 @@ The plugin records its errors, with their context, so that you can see them in t
 
 When the plugin records an error, a blinking red triangle, **Error(s) detected**, appears in the WebUI menu bar. Click it to open *Tools > Error(s)*.
 
-![Error indicator](Images/FR_WebUI-Tableau-de-bord-erreur.png)
-*French screenshot, an English one will replace it.*
 
 ## The Error(s) page
 
 *Tools > Error(s)* (see [WebUI Tools](WebUI_Tools.md#error)) has two buttons:
+
+![Tools > Error(s)](Images/EN_WebUI-Tools-Errors.png)
+*This picture may have changed since this documentation was written.*
+
 
 * **Log Error History (json)** displays the recorded errors. *Export* downloads them as a JSON file.
 * **Clear Error History** empties the list.

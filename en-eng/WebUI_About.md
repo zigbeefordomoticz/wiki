@@ -4,7 +4,7 @@ Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get ac
 
 Here is the __About__ page of the plugin Web interface :
 
-![About](Images/FR_WebUI-A-propos.png)
+![About](Images/EN_WebUI-About.png)
 
 *This page may have have changed since this documentation was written.*
 

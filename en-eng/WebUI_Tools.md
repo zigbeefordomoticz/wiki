@@ -83,7 +83,7 @@ Refer to [Debugging mode](Problem_Debuging-mode.md) for what each setting and mo
 
 The __Error(s)__ page (*Tools > Error(s)*) lists the errors recorded by the plugin. It is also where the *Error(s) detected* indicator of the menu bar (blinking red triangle) leads.
 
-![WebUI-Tools-error.png](../Images/WebUI-Tools-error.png)
+![Tools > Error(s)](Images/EN_WebUI-Tools-Errors.png)
 *This page may have changed since this documentation was written.*
 
 * *Log Error History (json)* displays the recorded errors, with their context; *Export* downloads them as a JSON file, for example to attach to an issue.

@@ -15,8 +15,8 @@ The __Admin__ menu contains the pages:
 
 The __Provisionning__ page (*Admin > Provisionning*) is used to pair your devices with the coordinator and Domoticz.
 
-![FR_WebUI-Admin-Appairage](Images/FR_WebUI-Admin-Appairage.png)
-*French screenshot, an English one will replace it. The page may have changed since it was taken.*
+![Admin > Provisionning](Images/EN_WebUI-Admin-Provisioning.png)
+*This picture may have changed since this documentation was written.*
 
 It has five panels:
 
@@ -36,8 +36,8 @@ The __Group__ page (*Admin > Group*) scans the group memberships of your devices
 * **Complete analysis of the groups**: *Full scan* asks every device for its groups.
 * **Selective analysis of the groups**: select one or more routers and click *Scan* to scan only those.
 
-![FR_WebUI-Admin-Groupe](Images/FR_WebUI-Admin-Groupe.png)
-*French screenshot, an English one will replace it. The page may have changed since it was taken.*
+![Admin > Group](Images/EN_WebUI-Admin-Group.png)
+*This picture may have changed since this documentation was written.*
 
 The groups created via the plugin are seen in Domoticz as a single switch widget, whatever the number of devices in the group. An action on that switch is sent to all the devices of the group.
 
@@ -54,8 +54,8 @@ The __Coordinator__ page (*Admin > Coordinator*) has two panels:
 * **Coordinator Soft reset**: *Soft reset* restarts the coordinator. **Paired devices are kept.**
 * **Coordinator change channel**: select a Zigbee channel (11 to 26) and click *Change channel*. The coordinator moves to the new channel and broadcasts the change to the network. Routers usually follow; end devices that are not Zigbee 3.0 may not, and then need to be reset to rejoin the network on the new channel. See [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md).
 
-![FR_WebUI-Admin-Zigate](Images/FR_WebUI-Admin-Zigate.png)
-*French screenshot of the former ZiGate page, an English one will replace it.*
+![Admin > Coordinator](Images/EN_WebUI-Admin-Coordinator.png)
+*This picture may have changed since this documentation was written.*
 
 ------------------------------------------------
 ## Plugin
@@ -65,7 +65,8 @@ The __Plugin__ page (*Admin > Plugin*) has two panels:
 * **Plugin Upgrade**: *Start upgrade* upgrades the plugin to the latest version of the branch you are on (it runs the plugin's `Tools/plugin-auto-upgrade.sh` script, and can take several minutes). The script output is displayed. If the upgrade succeeds, restart the plugin; if it fails, check the log and upgrade manually as described in [Plugin update](Plugin_Update.md).
 * **Restart plugin**: *Restart* restarts the plugin (a confirmation is asked). Use it after a setting that needs a restart, when the *Restart needed* indicator blinks in the menu bar.
 
-*(No English screenshot is available yet for this page — contributions welcome.)*
+![Admin > Plugin](Images/EN_WebUI-Admin-Plugin.png)
+*This picture may have changed since this documentation was written.*
 
 ------------------------------------------------
 ## Firmware
@@ -77,7 +78,8 @@ The __Firmware__ page (*Admin > Firmware*) updates the firmware of your paired d
 3. Select the device(s) to update. Tick *force update* to send the image even if the device is not on an older version (to re-flash it, or go back to an earlier version).
 4. Click *Update* and confirm.
 
-![Firmware Update](../Images/Firmware_Update.png)
+![Admin > Firmware](Images/EN_WebUI-Admin-Firmware.png)
+*This picture may have changed since this documentation was written.*
 
 Refer to [Update device firmware](HowTo_Update-device-firmware.md) for where to put the firmware files and how the update runs.
 

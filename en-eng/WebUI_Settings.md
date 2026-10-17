@@ -4,6 +4,9 @@ The __Settings__ menu of the WebUI lets you view and change the plugin settings.
 
 ## How the page works
 
+![Settings](Images/EN_WebUI-Settings.png)
+*This picture may have changed since this documentation was written.*
+
 * The settings are grouped by theme, in the sections below.
 * By default, only the main settings are shown. Enable the **Advanced settings** switch to see all of them (the *Advanced parameters* tables below).
 * Change the values, then click **Validate** to save them. **Settings (default)** puts all settings back to their default value.

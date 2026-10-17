@@ -33,7 +33,7 @@ More advice in [Build a Zigbee network](HowTo_Build-a-ZigBee-network.md).
 
 All the methods are on the *Admin > Provisionning* page of the WebUI (see [WebUI Admin](WebUI_Admin.md#pairing)):
 
-![Admin > Provisionning](../Images/Provisionning_1.png)
+![Admin > Provisionning](Images/EN_WebUI-Admin-Provisioning.png)
 
 There are three ways to pair:
 
