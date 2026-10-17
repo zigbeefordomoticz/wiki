@@ -153,7 +153,7 @@ If it still doesn't work, test the coordinator without DomoticZ and the plugin, 
 zigpy radio znp /dev/ttyUSB0 energy-scan
 ```
 
-Use `ezsp` for Silicon Labs and `deconz` for ConBee/RaspBee. If this doesn't work either, the problem is between the system and the dongle (port, rights, firmware). See also [Real time topology](HowTo_Have-a-real-time-topology.md).
+Use `ezsp` for Silicon Labs and `deconz` for ConBee/RaspBee. If this doesn't work either, the problem is between the system and the dongle (port, rights, firmware). See also [Real-time interference scan](HowTo_Real-time-interference-scan.md).
 
 ------------
 
