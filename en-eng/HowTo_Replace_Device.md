@@ -19,7 +19,7 @@ and removes the duplicate widgets that were just created.
 > **In short:** old hardware gone, new hardware paired, but you want to keep using
 > the *old* widgets and their graphs.
 
-> **In principle:** You would like to do it via DOmoticz, but unfortunatly the Ùpdate`function from Domoticz doesn't tell the plugin that he has done such action, and we loose the synchronisation between plugin and domoticz.
+> **In principle:** You would like to do it via Domoticz, but unfortunately the Update function from Domoticz doesn't tell the plugin that he has done such action, and we loose the synchronisation between plugin and domoticz.
 
 ---
 
@@ -97,7 +97,7 @@ When the plan looks correct, **stop Domoticz** and re-run with `--apply`:
 ```bash
 # Stop Domoticz (or its Docker container) first!
 service domoticz stop
-````
+```
 
 ```bash
 python3 Tools/replace_device.py \
