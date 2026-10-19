@@ -57,6 +57,28 @@ The Legrand options are **device parameters**, set per device in *Management > D
 
 A Legrand remote switch can command a micromodule or a switch directly, without Domoticz: see [Bind two devices](HowTo_Binding.md), which uses the double gang remote and the micromodule as its example. The *Remote Shutter* doesn't accept bindings.
 
+## Using a remote with a group
+
+A Legrand remote switch is never a *member* of a Zigbee group: it has no Groups cluster, and it sends commands rather than receiving them. So it doesn't appear in *Management > Group Management*, even with `GroupOnBattery` enabled. Instead, the remote is given a group address, and it sends its on, off and dimming commands to that group.
+
+The plugin does this when the remote is paired. The remote asks for a group, and the plugin gives it one from a reserved range, starting at `fefe` and going down (`fefd`, `fefc`…). A double gang remote gets one group per gang. The plugin also creates the group widget in Domoticz, named `Zigate Group fefe` (with the group's own address).
+
+To have the remote command your lights:
+
+1. Pair the remote (see [Pairing](#pairing)).
+1. Go to *Management > Group Management* (see [Manage Zigbee groups](HowTo_Group-management.md#update-a-group)). The group `Zigate Group fefe` is listed with no device selected: the remote itself isn't shown, which is expected.
+1. Add the lights or switches the remote must command, and rename the group if you want.
+1. Click *Validate*.
+
+The devices of the group now follow the remote directly, without going through Domoticz.
+
+Notes:
+
+* The group is given once, at pairing. Pairing the remote again keeps the same group.
+* Double gang remotes paired before plugin 9.1.008 recorded both groups on the first gang, so pressing the second gang doesn't refresh its group widget. See [issue #2096](https://github.com/zigbeefordomoticz/Domoticz-Zigbee/issues/2096).
+* From plugin 9.1.008, the plugin rebuilds a remote's groups at start-up if they are missing from the group list.
+* To use a group you created yourself instead, bind the remote to it: see [Bind to a group](HowTo_Binding.md#bind-to-a-group). Press a button of the remote just before, so that it is awake.
+
 ## Notes from the ZiGate era
 
 These findings were made with a ZiGate coordinator and haven't been checked with other coordinators:
