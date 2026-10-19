@@ -67,7 +67,7 @@ To restore:
                        --domoticz-db-target /home/pi/domoticz/domoticz.db --stop-service
 ```
 
-Run `./Tools/backup_z4d.sh --help` and `./Tools/restore_z4d.sh --help` for all the options. You can run the backup every night with `cron`.
+Run `./Tools/backup_z4d.sh --help` and `./Tools/restore_z4d.sh --help` for all the options. You can run the backup every night with `cron`. The other scripts of the plugin are described in [The scripts of the Tools folder](Plugin_Tools-folder.md).
 
 With Docker, the paths are usually `/opt/domoticz/userdata/domoticz.db` and `/opt/domoticz/userdata/plugins/Domoticz-Zigbee`.
 
