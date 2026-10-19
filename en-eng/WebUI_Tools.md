@@ -41,7 +41,60 @@ Interact with a device using the actions its capabilities allow:
 
 ### ZigBee command
 
-A raw Zigbee command for advanced users: select the target device and fill in *GroupAddressFlag*, *AckMode*, *ProfileId*, *ClusterId*, *SourceEp*, *TargetEp*, *Sqn* and the payload (*Data*), then *Submit*.
+With a zigpy coordinator (ZNP, EZSP/Bellows, deCONZ, BLZ), this panel sends a raw Zigbee frame to a device. It is meant for advanced users who know the Zigbee Cluster Library (ZCL): the plugin does not check or build anything, and sends the payload exactly as typed.
+
+![Tools > Command, ZigBee command (zigpy)](Images/EN_WebUI-Tools-Command-zigpy.png)
+*This picture may have changed since this documentation was written.*
+
+All values are hexadecimal, without `0x`.
+
+| Field | What to enter |
+| ----- | ------------- |
+| *(device)* | The target device. The list shows each device's name and short address (NwkId). |
+| *GroupAddressFlag* | `False` to send to the device. `True` sends the frame as a group (multicast) request. |
+| *AckMode* | `True` asks the device for an APS acknowledgement; `False` sends without it. |
+| *ProfileId* | `0104` (Home Automation) for ZCL commands, `0000` for ZDO/ZDP requests. |
+| *ClusterId* | The cluster, for example `0000` (Basic), `0006` (On/Off), `0008` (Level Control). |
+| *SourceEp* | The coordinator's endpoint, usually `01` (`00` for ZDO/ZDP). |
+| *TargetEp* | The device endpoint that holds the cluster (`00` for ZDO/ZDP). |
+| *Sqn* | The sequence number of the request, for example `55`. Use the same value as the sequence number inside the payload. |
+| *Data* | The payload: the complete ZCL frame, header included (see below). |
+
+Click *Submit*. The WebUI only confirms that the command was sent; it does not show the device's answer. The plugin processes the answer like any other message from the device, so look at the plugin log to follow it.
+
+#### Building the payload
+
+The *Data* field is the complete ZCL frame, written as one string of hexadecimal bytes:
+
+| Bytes | Content |
+| ----- | ------- |
+| 1 | Frame control: `00` for a general (profile-wide) command such as Read Attributes, `01` for a command specific to the cluster. Add `04` for a manufacturer-specific command (`04` or `05`). |
+| 2 | Manufacturer code, **only** for a manufacturer-specific command. |
+| 1 | Transaction sequence number, the same as *Sqn*. |
+| 1 | Command identifier, for example `00` Read Attributes, `02` Write Attributes. |
+| n | The command's fields. |
+
+> **Endianness:** Zigbee sends every value longer than one byte in **little-endian** order, least significant byte first. You must reverse the bytes yourself in *Data*: attribute `0x0005` is typed `0500`, the manufacturer code `0x115F` is typed `5F11`, and a 16-bit value `0x012C` is typed `2C01`.
+>
+> This only applies to *Data*. The other fields (*ProfileId*, *ClusterId*, *Sqn*…) are typed the normal way, as in the picture: `0104`, `0000`.
+
+The payload of the picture, `0055000500`, reads the *Model Identifier* of the device:
+
+| Bytes | Meaning |
+| ----- | ------- |
+| `00` | Frame control: general command, from client to server |
+| `55` | Transaction sequence number (same as *Sqn*) |
+| `00` | Command Read Attributes |
+| `0500` | Attribute `0x0005` (Model Identifier), little-endian |
+
+More examples:
+
+| Goal | ClusterId | Data |
+| ---- | --------- | ---- |
+| Read the Manufacturer Name and Model Identifier (attributes `0x0004` and `0x0005`) | `0000` | `00550004000500` |
+| Switch on | `0006` | `015501` |
+| Switch off | `0006` | `015500` |
+| Toggle | `0006` | `015502` |
 
 With a ZiGate coordinator this panel is replaced by **ZiGate command (raw)**, which sends a raw command to the ZiGate following the ZiGate protocol.
 

@@ -252,8 +252,8 @@ Here are all Plugin environements settings
 | `pluginReports` | Plugin reports folder | (empty) |  | plugin restart | Empty means the `Reports` folder of the plugin. |
 | `pluginWWW` | Web UI files folder | (empty) |  | plugin restart | Empty means the `www` folder of the plugin. |
 | `pluginLogs` | Plugin logs folder | (empty) |  | plugin restart | Empty means the `Logs` folder of the plugin. |
-| `SSLCertificate` | Path to the SSL certificate used by the Web UI | (empty) |  | plugin restart | Empty means `server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https. |
-| `SSLPrivateKey` | Path to the SSL private key used by the Web UI | (empty) |  | plugin restart | Empty means `server.key` in the plugin folder. See `SSLCertificate`. |
+| `SSLCertificate` | Path to the SSL certificate used by the Web UI | (empty) |  | plugin restart | Empty means `certs/server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https. `Tools/generate_z4d_certificates.py` creates a self-signed pair there: see [Tools folder](Plugin_Tools-folder.md#generate_z4d_certificatespy). |
+| `SSLPrivateKey` | Path to the SSL private key used by the Web UI | (empty) |  | plugin restart | Empty means `certs/server.key` in the plugin folder. See `SSLCertificate`. |
 
 ## Device patches and workarounds
 

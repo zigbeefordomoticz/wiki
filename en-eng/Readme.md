@@ -71,6 +71,7 @@ Updates, backups, and what to do when the coordinator changes.
 * [Plugin update](Plugin_Update.md) — routine updates of `stable9`, going back to a previous release, the plugin branches
 * [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) — one-way switch for users still on `stable8` or older
 * [Backup and restore](Plugin_Backup.md) — what to back up (plugin files and the Domoticz database), the backup scripts, reinstalling the plugin
+* [The scripts of the Tools folder](Plugin_Tools-folder.md) — upgrade, clean-up, repair, watchdog, https certificate, OTA file checks
 * [Back up a zigpy coordinator](HowTo_Backup-zigpy-coordinators.md) — automatic backups, zigpy-cli
 * [Replace or migrate the coordinator](HowTo_Replace-coordinator.md)
 * [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md) — when *Initialize Coordinator* fails
