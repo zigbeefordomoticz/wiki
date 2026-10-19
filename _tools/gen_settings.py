@@ -75,8 +75,8 @@ NOTES = {
     "pluginReports": "Empty means the `Reports` folder of the plugin.",
     "pluginWWW": "Empty means the `www` folder of the plugin.",
     "pluginLogs": "Empty means the `Logs` folder of the plugin.",
-    "SSLCertificate": "Empty means `server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https.",
-    "SSLPrivateKey": "Empty means `server.key` in the plugin folder. See `SSLCertificate`.",
+    "SSLCertificate": "Empty means `certs/server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https. `Tools/generate_z4d_certificates.py` creates a self-signed pair there: see [Tools folder](Plugin_Tools-folder.md#generate_z4d_certificatespy).",
+    "SSLPrivateKey": "Empty means `certs/server.key` in the plugin folder. See `SSLCertificate`.",
 }
 
 # Settings whose definition depends on the coordinator family. SETTINGS holds the ZiGate
