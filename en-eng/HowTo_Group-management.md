@@ -54,6 +54,14 @@ Tick *Coordinator (in the group)* when the coordinator must receive the commands
 
 The coordinator can only belong to a limited number of groups: see [Coordinators](Coordinators.md#limited-number-of-groups).
 
+### Remotes
+
+A remote sends commands to a group; it isn't a member of it. So most remotes don't appear in the device list, even with `GroupOnBattery` enabled:
+
+* Legrand remote switches get their own group when they are paired: see [Using a remote with a group](Corner_Legrand-Netatmo.md#using-a-remote-with-a-group).
+* Ikea remotes: see [Ikea remote](Corner_Ikea-Remote.md).
+* Other remotes: bind the remote to the group, see [Bind to a group](HowTo_Binding.md#bind-to-a-group).
+
 ## Update a group
 
 1. Make sure all the devices of the group are connected to the network.
@@ -78,7 +86,7 @@ The group settings are in the *Group management* section of the WebUI *Settings*
 
 | Setting | Use |
 | ------- | --- |
-| `GroupOnBattery` | Allow battery devices in groups. Off by default, since most battery devices can't receive group commands. |
+| `GroupOnBattery` | Allow battery devices in groups. Off by default, since most battery devices can't receive group commands. It doesn't make remotes appear: see [Remotes](#remotes). |
 | `OnIfOneOn` | The group widget shows *On* when at least one device of the group is on. When off, all the devices must be on. |
 | `pingViaGroup` | When set to a group address, the plugin checks that the devices are alive through that group instead of pinging each device; `0` (default) pings each device. |
 | `zigatePartOfGroupTint` | Adds the coordinator to the group of the Müller Licht Tint remote (Silicon Labs coordinators). See [Müller Licht / Tint](Corner_Tint.md). |
