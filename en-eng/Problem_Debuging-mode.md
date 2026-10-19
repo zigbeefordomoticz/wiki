@@ -4,6 +4,8 @@
 
 The aim of this document is to give you some hints on how to debug and also provide more information to the developer when reporting an issue.
 
+To know where to report a problem, and what the logs look like when everything is fine, see [Getting help and reporting a problem](Troubleshooting_Reporting-a-problem.md).
+
 ## Where are the plugin logs?
 
 By default (`enablePluginLogging` enabled), the plugin writes its logs in its own file, in the `Logs` folder of the plugin:

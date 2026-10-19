@@ -109,6 +109,7 @@ A device doesn't pair, doesn't report, or the plugin shows errors: start here.
 * [Deal with plugin errors](HowTo_Dealing-plugin-errors.md)
 * [Debug mode](Problem_Debuging-mode.md)
 * [Plugin FAQ](Problem_FAQ.md)
+* [Getting help and reporting a problem](Troubleshooting_Reporting-a-problem.md) — where to ask, expected logs, debug parameters, what to attach
 * Ask on the [English forum](https://www.domoticz.com/forum/viewforum.php?f=68) or the [French forum](https://easydomoticz.com/forum/viewforum.php?f=28), with the relevant part of the Domoticz log.
 
 ## 8. Advanced
