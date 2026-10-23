@@ -23,6 +23,7 @@
 * [T5. My battery devices lose the connection, and raising the transmit power doesn't help](#t5-my-battery-devices-lose-the-connection-and-raising-the-transmit-power-doesnt-help)
 * [T6. The WebUI shows `Unknown error` right after a plugin restart](#t6-the-webui-shows-unknown-error-right-after-a-plugin-restart)
 * [T7. The topology shows only the coordinator, or the routers disappear after a restart](#t7-the-topology-shows-only-the-coordinator-or-the-routers-disappear-after-a-restart)
+* [T8. With a Texas Instruments coordinator, new devices leave and join again in a loop](#t8-with-a-texas-instruments-coordinator-new-devices-leave-and-join-again-in-a-loop)
 
 ## Errors
 
@@ -272,6 +273,25 @@ From 9.1.008:
 1. Start a new scan and wait for it to complete: on a large network it takes several minutes, and the report only appears in the list once it is complete.
 
 A battery device doesn't route: it appears only through the router it is attached to, its parent. To see where the battery devices are attached, use the *Associated devices* button of the topology panel, and the [Mesh graph](WebUI_Network-Mesh.md).
+
+------------
+
+## T8. With a Texas Instruments coordinator, new devices leave and join again in a loop
+
+You pair a device: it joins, leaves a few seconds later, joins again, and so on. Pairing never completes, even close to the coordinator. The devices already paired keep working. This happens on networks where many devices have been paired and removed over time.
+
+__The cause: the coordinator's link key table is full.__ A Texas Instruments coordinator (Z-Stack) keeps one *Trust Center Link Key* (TCLK) entry for each Zigbee 3.0 device it has let into the network. The table has a fixed size, set when the firmware is built. With the [Koenkk Z-Stack firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator) it holds __200__ entries (__400__ on a CC2674P10). Removing a device from the plugin doesn't free its entry, and neither does a device leaving the network. When the table is full, the coordinator can't give a new device its key: the device gives up, leaves, and tries again.
+
+__The fix: rewrite the table without the devices that no longer exist.__ Restoring a coordinator backup rewrites the whole table from the backup's device list, so remove the old devices from the backup and restore it:
+
+1. Make a backup of the coordinator with zigpy-cli, as described in [Manual backup and restore with zigpy-cli](HowTo_Backup-zigpy-coordinators.md#manual-backup-and-restore-with-zigpy-cli). Stop the plugin first, and keep an untouched copy of the file.
+1. Open the JSON file. Each entry of the `devices` list has an `ieee_address` (16 hex characters, as the plugin shows it). The entries that have a `link_key` are the table entries: if there are close to 200, the table is full.
+1. Delete the entries whose `ieee_address` is not one of your current devices (see the device list in the WebUI). Keep the JSON valid (watch the commas).
+1. Restore the edited file onto the same coordinator, then start the plugin and pair the device again.
+
+Be careful in step 3: a device that still exists and that you removed from the file loses its link key, and must be paired again.
+
+The table fills up again over time if you pair and remove many devices. Repeat the cleanup when it happens.
 
 ------------
 
