@@ -64,7 +64,7 @@ NOTES = {
     "allowReBindingClusters": "See [FAQ Q8](Problem_FAQ.md#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually).",
     "channel": "**Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md).",
     "extendedPANID": "**Only applied when a new network is formed** (*Initialize Coordinator* with `autoRestore` off): all devices must then be paired again. See [Schneider Wiser setup](Corner_Wiser-Setup.md).",
-    "TXpower_set": "On zigpy coordinators, a new value is sent to the coordinator immediately. The allowed range depends on the coordinator and its firmware.",
+    "TXpower_set": "On Texas Instruments and Silicon Labs, `0` keeps the coordinator's own power. When a change applies, and the allowed range, depend on the coordinator: see [Change the coordinator transmit power](HowTo_Change-TX-Power.md).",
     "forceClosingAllNodes": "When pairing mode is switched off, the plugin also closes it on every router.",
     "storeDomoticzDb": "See [Plugin Backup](Plugin_Backup.md).",
     "useDomoticzDb": "See [Plugin Backup](Plugin_Backup.md).",
@@ -85,7 +85,7 @@ NOTES = {
 COORDINATOR_DEPENDENT = {
     "TXpower_set": {
         "unit": "dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm",
-        "restart": "zigpy: none. ZiGate: plugin restart",
+        "restart": "Texas Instruments: none. Silicon Labs, ZiGate V1: plugin restart",
     },
 }
 

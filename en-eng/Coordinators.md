@@ -37,26 +37,7 @@ Each device knows the groups it belongs to, and can usually belong to a few grou
 
 ### Transmit power
 
-The transmit power can be set with the `TXpower_set` setting (WebUI *Settings*, *Coordinator settings*); the allowed range depends on the chip and the firmware, and on the regulation (`Certification` setting: CE or FCC). Maximum output power of common chips:
-
-| Chip | Maximum output power |
-| ---- | -------------------- |
-| TI CC2652P, CC1352P (embedded power amplifier) | +20 dBm |
-| TI CC2652R, CC2652RB, CC1352R | +5 dBm |
-| TI CC2538 / CC2531 / CC2530 + CC2591 or CC2592 amplifier | +19 dBm |
-| TI CC2538 | +7 dBm |
-| TI CC2531, CC2530 | +4.5 dBm |
-| Silicon Labs EFR32MG24A420 | +19.5 dBm |
-| Silicon Labs EFR32MG24A410 | +10 dBm |
-| Silicon Labs EFR32MG21A020, EFR32MG21B020 | +20 dBm |
-| Silicon Labs EFR32MG21A010 | +10 dBm |
-| Silicon Labs EFR32MG21B010 | +10.5 dBm |
-| Silicon Labs MGM210P | +20 dBm |
-| Silicon Labs MGM210L | +12.5 dBm |
-| Silicon Labs MGM13P | +19 dBm |
-| Silicon Labs MGM13S, EFR32MG13P732, EFR32MG13P632 | +10 dBm |
-
-More power is not always better: in Europe the CE regulation limits it, and a strong coordinator doesn't help battery devices that answer with low power.
+The transmit power can be raised or lowered with the `TXpower_set` setting (WebUI *Settings*, *Coordinator settings*). More power is not always better: a strong coordinator doesn't help battery devices that answer with low power. See [Change the coordinator transmit power](HowTo_Change-TX-Power.md) for what each coordinator supports and the maximum power of common chips.
 
 ## ZiGate (legacy)
 
