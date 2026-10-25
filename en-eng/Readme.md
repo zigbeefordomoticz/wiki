@@ -45,6 +45,7 @@ Everyday tasks: add and remove devices, set them up, use groups and bindings.
 * [Manage Zigbee groups](HowTo_Group-management.md)
 * [Bind two devices](HowTo_Binding.md) — let a switch command a light directly
 * [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md)
+* [Change the coordinator transmit power](HowTo_Change-TX-Power.md)
 * [Update device firmware](HowTo_Update-device-firmware.md) — over-the-air updates
 
 <a name="plugins-web-interface"></a>

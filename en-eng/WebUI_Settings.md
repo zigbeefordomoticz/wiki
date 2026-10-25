@@ -211,7 +211,7 @@ Here are all settings related to the coordinator hardware.
 | `resetPermit2Join` | Reset permit to join at startup | on |  |  |  |
 | `Ping` | Enable Ping | on |  |  |  |
 | `channel` | Coordinator chanel (default 0) | default | default, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 | coordinator reset | **Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md). |
-| `TXpower_set` | Coordinator transmission power level | `0` | dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm | zigpy: none. ZiGate: plugin restart | On zigpy coordinators, a new value is sent to the coordinator immediately. The allowed range depends on the coordinator and its firmware. |
+| `TXpower_set` | Coordinator transmission power level | `0` | dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm | Texas Instruments: none. Silicon Labs, ZiGate V1: plugin restart | On Texas Instruments and Silicon Labs, `0` keeps the coordinator's own power. When a change applies, and the allowed range, depend on the coordinator: see [Change the coordinator transmit power](HowTo_Change-TX-Power.md). |
 | `extendedPANID` | Zigbee Extended PAN Identifier | `0000` |  | erase network | **Only applied when a new network is formed** (*Initialize Coordinator* with `autoRestore` off): all devices must then be paired again. See [Schneider Wiser setup](Corner_Wiser-Setup.md). |
 | `forceClosingAllNodes` | Enable to close Pairing mode in each router | off |  | plugin restart | When pairing mode is switched off, the plugin also closes it on every router. |
 
