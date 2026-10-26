@@ -237,7 +237,7 @@ together they load the network about as much as a single transfer.
 The **Transfers** column of the Firmware page lists every update, whatever brand and
 firmware are selected:
 
-![Three transfers in progress](Images/WebUI-Admin-Firmware-transfers.png)
+![Three transfers in progress and one queued, also listed in the footer](Images/WebUI-Admin-Firmware-transfers.png)
 
 The header counts the updates holding a transfer slot (`active`) and the others
 (`queued`). Each update shows its device, its file and its state:
