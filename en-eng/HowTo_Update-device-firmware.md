@@ -16,6 +16,12 @@ keeps the update ready for it.
 An update is slow by design: about 35 minutes for a 250 KB image on a busy network
 (see [What to expect](#what-to-expect)).
 
+> **Note:** updating several devices at once (the [queue](#several-devices-the-queue)),
+> the Status lines described on this page and the refusal reasons are available from
+> plugin version **9.1.009**. Earlier versions update one device at a time: a request
+> for several devices, or made while another update runs, is refused with a Warning in
+> the log.
+
 You also have to obtain the firmware yourself. Some manufacturers publish their
 images, many do not, and the plugin never downloads an image for you.
 
@@ -30,7 +36,7 @@ images, many do not, and the plugin never downloads an image for you.
    image block by block until the device reports *Upgrade End*. The device then
    reboots on its new firmware.
 4. If it has a matching, newer image but no update is planned for that device, it says
-   so once in the log:
+   so once in the log (from plugin version **9.1.009**):
 
    ```
    Firmware 1021-0013-003f45ff-NLV.zigbee (version 0x003F45FF) is available for NLV Legrand [d841], which runs version 0x00234203: start the update from the WebUI
@@ -158,6 +164,8 @@ offered an image strictly newer than what it runs.
 
 ### Several devices: the queue
 
+> **Note:** available from plugin version **9.1.009**.
+
 The plugin upgrades **two devices at a time**. Each update you start takes a
 *transfer slot* if one is free, otherwise it waits in the queue:
 
@@ -196,6 +204,8 @@ image type and version of its last completed update.
 
 ### What you see in the log
 
+> **Note:** available from plugin version **9.1.009**.
+
 Each update you start gets one Status line saying whether it took a slot, followed by
 the state of the queue:
 
@@ -218,6 +228,8 @@ Progress is logged once per 5% step. A device that asks on its own (battery devi
 or one that missed its notifications) gets `…: the device asked for it (…)`.
 
 ### When an update is refused
+
+> **Note:** available from plugin version **9.1.009**.
 
 Some requests are refused straight away, with a Warning or Status line in the log:
 
@@ -258,7 +270,7 @@ Enabling `autoServeOTA` makes the plugin serve any matching image to any device 
 asks for one, without going through the Firmware page. Convenient if you keep a
 curated set of images; be aware it will update every device matching an image you have
 placed in the folders. The queue applies: a device that asks while both slots are taken
-is queued and notified when its turn comes.
+is queued and notified when its turn comes (from plugin version **9.1.009**).
 
 ## Settings
 
