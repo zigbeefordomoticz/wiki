@@ -21,7 +21,7 @@ An update is slow by design: about 35 minutes for a 250 KB image on a busy netwo
 > * updating several devices at once (the [queue](#several-devices-the-queue));
 > * the four-column Firmware page with its live **Transfers** column;
 > * [cancelling an update](#cancelling-an-update);
-> * loading a new firmware file without restarting the plugin;
+> * new firmware files picked up automatically, **without restarting the plugin**;
 > * the Status lines and refusal reasons described on this page.
 >
 > Earlier versions update one device at a time and read the firmware folders only at
@@ -124,6 +124,10 @@ A few things worth knowing:
 - **The root is configurable.** `pluginOTAFirmware` (an advanced setting) can point
   the whole tree somewhere else, for instance to keep large images off an SD card.
 
+> **No plugin restart is needed** (plugin version **9.1.009** and later): a file added,
+> replaced or removed in these folders is picked up automatically the next time you open
+> or reload **Admin → Firmware**. With earlier versions, restart the plugin.
+
 ### Why some folders are named `GENERIC-<code>`
 
 A Zigbee manufacturer code is not unique to a company. `0x1037` is used by Eurotronic,
@@ -138,8 +142,8 @@ already put there keeps working and nothing needs moving.
 
 ## Step 3 — Load the image and check it
 
-**From plugin version 9.1.009, no restart is needed.** Open, or reload, **Admin →
-Firmware** in the WebUI. When the page asks for the firmware list, the plugin checks
+**From plugin version 9.1.009, the folders are refreshed automatically and no plugin
+restart is needed.** Open, or reload, **Admin → Firmware** in the WebUI. When the page asks for the firmware list, the plugin checks
 whether a file was added, removed or replaced in the firmware folders, and if so reads
 them again. The new file then shows up in the Firmware column, and the log lists what
 was loaded:
