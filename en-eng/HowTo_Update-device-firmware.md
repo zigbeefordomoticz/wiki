@@ -166,15 +166,16 @@ offered an image strictly newer than what it runs.
 
 > **Note:** available from plugin version **9.1.009**.
 
-The plugin upgrades **two devices at a time**. Each update you start takes a
+The plugin upgrades **three devices at a time**. Each update you start takes a
 *transfer slot* if one is free, otherwise it waits in the queue:
 
 * A device with a slot is notified at once and is served when it asks.
 * The other devices wait, oldest request first. When a transfer ends (success, failure,
   or no block requested for 5 minutes), the next device in the queue gets the slot
   and is notified.
-* A **battery-powered** device that asks on its own while both slots are taken gets a
-  third slot: it might not ask again for hours. Mains-powered devices never use it.
+* A **battery-powered** device that asks on its own while the three slots are taken
+  gets a fourth slot: it might not ask again for hours. Mains-powered devices never use
+  it.
 * A device that does not answer its notifications (10 tries, 5 seconds apart) gives its
   slot back so the queue keeps moving, but stays authorised for **24 hours**. If it
   asks within that time it is served; after that the request is dropped and the
@@ -184,8 +185,8 @@ With a ZiGate in native mode, the coordinator holds one image at a time: one tra
 at a time.
 
 While several transfers run, the plugin spaces the blocks of each device by the number
-of transfers (twice as much for two, up to one second), so that together they load the
-network about as much as a single transfer.
+of transfers (twice as much for two, four times for four, up to one second), so that
+together they load the network about as much as a single transfer.
 
 ### What you see in the WebUI
 
@@ -212,7 +213,8 @@ the state of the queue:
 ```
 Firmware update started for 4333 with 1021-0010-004445ff-NLM.zigbee: the device is notified (active: 4333 - queued: none)
 Firmware update started for b1b7 with 1021-000e-004e45ff-NLF.zigbee: the device is notified (active: 4333, b1b7 - queued: none)
-Firmware update queued for d841 with 1021-0013-003f45ff-NLV.zigbee: waits for a free transfer slot (active: 4333, b1b7 - queued: d841)
+Firmware update started for d841 with 1021-0013-003f45ff-NLV.zigbee: the device is notified (active: 4333, b1b7, d841 - queued: none)
+Firmware update queued for 9a9a with 1021-0013-003f45ff-NLV.zigbee: waits for a free transfer slot (active: 4333, b1b7, d841 - queued: 9a9a)
 ```
 
 Then, while it runs:
@@ -221,7 +223,7 @@ Then, while it runs:
 Firmware transfer for b1b7/01 - Progress:  5.0%
 ...
 OTA upgrade completed with success - b1b7/01 0019 Version: 0x004e45ff Type: 0x000e Code: 0x1021 Status: 00
-Firmware update started for d841 with 1021-0013-003f45ff-NLV.zigbee: the device is notified (active: 4333, d841 - queued: none)
+Firmware update started for 9a9a with 1021-0013-003f45ff-NLV.zigbee: the device is notified (active: 4333, d841, 9a9a - queued: none)
 ```
 
 Progress is logged once per 5% step. A device that asks on its own (battery device,
@@ -255,6 +257,7 @@ Field measurements on an EZSP coordinator, Legrand devices, 250 KB images:
 | --- | --- | --- |
 | One transfer | about 220 bytes/s | about 20 minutes |
 | Two transfers at the same time | about 115 bytes/s each | about 35 minutes each |
+| Three or four transfers | the same total, shared: about 75 or 55 bytes/s each (estimate) | about 55 or 75 minutes each (estimate) |
 
 After *Upgrade End* the device reboots on its new firmware (about one minute for these
 devices), announces itself again, and reports its new version the next time it asks.
@@ -269,7 +272,7 @@ continued where they stopped, but started again from the beginning after a power
 Enabling `autoServeOTA` makes the plugin serve any matching image to any device that
 asks for one, without going through the Firmware page. Convenient if you keep a
 curated set of images; be aware it will update every device matching an image you have
-placed in the folders. The queue applies: a device that asks while both slots are taken
+placed in the folders. The queue applies: a device that asks while the slots are taken
 is queued and notified when its turn comes (from plugin version **9.1.009**).
 
 ## Settings
@@ -332,7 +335,7 @@ Two images declare the same image type. Only one can be kept; remove the one you
 not need.
 
 **The device never starts the transfer.**
-Check the log first: the update may be queued behind two others (`waits for a free
+Check the log first: the update may be queued behind three others (`waits for a free
 transfer slot`). Otherwise, a battery device starts when it next asks, which can be
 hours; it stays authorised for 24 hours. Some mains-powered devices ignore the
 notification too and only ask at power-on: switching the device off and on makes it
