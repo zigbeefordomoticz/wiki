@@ -5,12 +5,16 @@
 The plugin can update the firmware of a Zigbee device over the air (OTA), for any
 manufacturer that follows the Zigbee OTA Upgrade cluster.
 
-The important thing to understand first: **the plugin is an OTA server, not a
-pusher.** It never interrupts a device. A device asks, on its own schedule, whether a
-newer image exists, and the plugin answers with what it has. That schedule belongs to
-the device's firmware and is typically hours, sometimes a day or more. So an update
-you start in the WebUI does not begin immediately — it begins the next time the device
-asks.
+The important thing to understand first: **the plugin is an OTA server.** The device
+downloads its new firmware; the plugin answers its requests. When you start an update
+from the WebUI, the plugin sends the device an *Image Notify* ("a new image is ready
+for you"). A mains-powered device usually asks for the image within a second. A
+battery-powered device sleeps, misses the notification, and asks on its own schedule,
+which belongs to its firmware: typically hours, sometimes a day or more. The plugin
+keeps the update ready for it.
+
+An update is slow by design: about 35 minutes for a 250 KB image on a busy network
+(see [What to expect](#what-to-expect)).
 
 You also have to obtain the firmware yourself. Some manufacturers publish their
 images, many do not, and the plugin never downloads an image for you.
@@ -23,11 +27,18 @@ images, many do not, and the plugin never downloads an image for you.
    **manufacturer code and image type**. The brand name and the folder play no part in
    this match — both come from the image's own header.
 3. If it has a matching, newer image *and* you authorised the update, it serves the
-   image block by block until the device reports *Upgrade End*.
-4. If it has no matching image, it can look the device up in an online firmware index
+   image block by block until the device reports *Upgrade End*. The device then
+   reboots on its new firmware.
+4. If it has a matching, newer image but no update is planned for that device, it says
+   so once in the log:
+
+   ```
+   Firmware 1021-0013-003f45ff-NLV.zigbee (version 0x003F45FF) is available for NLV Legrand [d841], which runs version 0x00234203: start the update from the WebUI
+   ```
+5. If it has no matching image, it can look the device up in an online firmware index
    and tell you in the log that an update exists and where to put it.
 
-Step 4 is usually how you find out an update is available at all.
+Step 5 is usually how you find out an update is available at all.
 
 ## Step 1 — Find out that a firmware exists
 
@@ -138,20 +149,116 @@ Select:
 * the **firmware image** to use
 * the **devices** to send it to
 
+You can select **several devices at once**, and start more updates while others are
+running, even with different firmware images.
+
 `force update` lets the image be served to a device that is not on an older version —
 use it to re-flash or to go back to an earlier version. Without it, a device is only
 offered an image strictly newer than what it runs.
 
-Then wait. The transfer starts when the device next asks, and progress is reported in
-the log and in the WebUI. A large image over a weak link can take a long while; this
-is normal.
+### Several devices: the queue
+
+The plugin upgrades **two devices at a time**. Each update you start takes a
+*transfer slot* if one is free, otherwise it waits in the queue:
+
+* A device with a slot is notified at once and is served when it asks.
+* The other devices wait, oldest request first. When a transfer ends (success, failure,
+  or no block requested for 5 minutes), the next device in the queue gets the slot
+  and is notified.
+* A **battery-powered** device that asks on its own while both slots are taken gets a
+  third slot: it might not ask again for hours. Mains-powered devices never use it.
+* A device that does not answer its notifications (10 tries, 5 seconds apart) gives its
+  slot back so the queue keeps moving, but stays authorised for **24 hours**. If it
+  asks within that time it is served; after that the request is dropped and the
+  notification widget says so.
+
+With a ZiGate in native mode, the coordinator holds one image at a time: one transfer
+at a time.
+
+While several transfers run, the plugin spaces the blocks of each device by the number
+of transfers (twice as much for two, up to one second), so that together they load the
+network about as much as a single transfer.
+
+### What you see in the WebUI
+
+The footer shows the devices holding a slot, then their progress, in the same order:
+
+![Two transfers in progress](Images/WebUI-Admin-Firmware-two-transfers.png)
+
+`OTA: 4333, b1b7 30%, 35%` reads: `4333` at 30%, `b1b7` at 35%. A device that was
+notified but has not asked yet shows `Notified`. Devices waiting in the queue are not
+shown in the footer: the log says which ones wait.
+
+When the last transfer ends, the footer keeps its outcome (`Success`, `Timeout`, …).
+
+On the Firmware page, the device list shows for each device the date (`OTALastTime`),
+image type and version of its last completed update.
+
+### What you see in the log
+
+Each update you start gets one Status line saying whether it took a slot, followed by
+the state of the queue:
+
+```
+Firmware update started for 4333 with 1021-0010-004445ff-NLM.zigbee: the device is notified (active: 4333 - queued: none)
+Firmware update started for b1b7 with 1021-000e-004e45ff-NLF.zigbee: the device is notified (active: 4333, b1b7 - queued: none)
+Firmware update queued for d841 with 1021-0013-003f45ff-NLV.zigbee: waits for a free transfer slot (active: 4333, b1b7 - queued: d841)
+```
+
+Then, while it runs:
+
+```
+Firmware transfer for b1b7/01 - Progress:  5.0%
+...
+OTA upgrade completed with success - b1b7/01 0019 Version: 0x004e45ff Type: 0x000e Code: 0x1021 Status: 00
+Firmware update started for d841 with 1021-0013-003f45ff-NLV.zigbee: the device is notified (active: 4333, d841 - queued: none)
+```
+
+Progress is logged once per 5% step. A device that asks on its own (battery device,
+or one that missed its notifications) gets `…: the device asked for it (…)`.
+
+### When an update is refused
+
+Some requests are refused straight away, with a Warning or Status line in the log:
+
+| Reason | What to do |
+| --- | --- |
+| Unknown brand / Unknown firmware file | The file is not loaded. Most often it was removed or renamed after the plugin started, or the WebUI page shows a list from before a restart: reload the page. |
+| Unknown device / Unknown endpoint | The device was removed or re-paired; reload the page. |
+| A firmware update is already queued or in progress for this device | Nothing to do: it is on its way. |
+| The device already runs this firmware version or a newer one | The device reported that version the last time it asked. Use `force update` to install it anyway. |
+
+A device that asks and turns out to run that version already, or whose hardware
+version the image does not support, has its request dropped with the reason in the
+log and in the notification widget.
+
+> The Firmware page shows its "update requested" message even when the request is
+> refused. Check the log.
+
+### What to expect
+
+Field measurements on an EZSP coordinator, Legrand devices, 250 KB images:
+
+| Situation | Speed | 250 KB image |
+| --- | --- | --- |
+| One transfer | about 220 bytes/s | about 20 minutes |
+| Two transfers at the same time | about 115 bytes/s each | about 35 minutes each |
+
+After *Upgrade End* the device reboots on its new firmware (about one minute for these
+devices), announces itself again, and reports its new version the next time it asks.
+
+**Stopping or restarting the plugin forgets the queue and the transfers in
+progress.** Start the update again from the Firmware page afterwards. Whether the
+device continues its download depends on the device: the Legrand devices tested
+continued where they stopped, but started again from the beginning after a power cut.
 
 ### Updating without picking devices by hand
 
 Enabling `autoServeOTA` makes the plugin serve any matching image to any device that
 asks for one, without going through the Firmware page. Convenient if you keep a
 curated set of images; be aware it will update every device matching an image you have
-placed in the folders.
+placed in the folders. The queue applies: a device that asks while both slots are taken
+is queued and notified when its turn comes.
 
 ## Settings
 
@@ -213,9 +320,11 @@ Two images declare the same image type. Only one can be kept; remove the one you
 not need.
 
 **The device never starts the transfer.**
-Expected for a while — it starts when the device next asks, which can be hours. Battery
-devices ask far less often than mains-powered ones. Check the device is awake and
-reachable, and that the update is still listed as pending in the WebUI.
+Check the log first: the update may be queued behind two others (`waits for a free
+transfer slot`). Otherwise, a battery device starts when it next asks, which can be
+hours; it stays authorised for 24 hours. Some mains-powered devices ignore the
+notification too and only ask at power-on: switching the device off and on makes it
+ask within a few seconds.
 
 **The transfer starts and stalls.**
 Usually a mesh problem: move the device closer to a router, or retry when the network
@@ -224,7 +333,12 @@ retries); if a particular manufacturer stalls consistently, report it with
 `EnableOTATracing` turned on so the timing can be adjusted.
 
 **The device reports a version that does not change after a successful update.**
-Some devices only report the new version after a power cycle.
+Some devices only report the new version after a power cycle. After a `force update`
+of the same file, the device reports the same version as before: that is expected.
+
+**The progress goes back to 0%.**
+The device restarted its download, usually after a power cut. The plugin serves it
+again from the beginning.
 
 ## See also
 
