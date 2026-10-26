@@ -266,9 +266,11 @@ every 30 seconds otherwise.
 The footer of every page shows the devices holding a slot, then their progress, in the
 same order:
 
-![Two transfers in progress](Images/WebUI-Admin-Firmware-two-transfers.png)
+![Footer with three transfers in progress](Images/WebUI-Admin-Firmware-footer.png)
 
-`OTA: 4333, b1b7 30%, 35%` reads: `4333` at 30%, `b1b7` at 35%. A device that was
+`OTA: 7865, e0c1, 687b 0%, 0%, 0%` reads: `7865`, `e0c1` and `687b` are each at 0%. The
+footer moves in steps of 5%, so it shows 0% until a device reaches 5%; the Transfers
+column above shows the exact percentage (1%, 1% and 2% here). A device that was
 notified but has not asked yet shows `Notified`. Devices waiting in the queue are not
 shown in the footer. When the last transfer ends, the footer keeps its outcome
 (`Success`, `Timeout`, …).
