@@ -16,11 +16,17 @@ keeps the update ready for it.
 An update is slow by design: about 35 minutes for a 250 KB image on a busy network
 (see [What to expect](#what-to-expect)).
 
-> **Note:** updating several devices at once (the [queue](#several-devices-the-queue)),
-> the Status lines described on this page and the refusal reasons are available from
-> plugin version **9.1.009**. Earlier versions update one device at a time: a request
-> for several devices, or made while another update runs, is refused with a Warning in
-> the log.
+> **Note:** the following are available from plugin version **9.1.009**:
+>
+> * updating several devices at once (the [queue](#several-devices-the-queue));
+> * the four-column Firmware page with its live **Transfers** column;
+> * [cancelling an update](#cancelling-an-update);
+> * loading a new firmware file without restarting the plugin;
+> * the Status lines and refusal reasons described on this page.
+>
+> Earlier versions update one device at a time and read the firmware folders only at
+> startup. A request for several devices, or made while another update runs, is refused
+> with a Warning in the log.
 
 You also have to obtain the firmware yourself. Some manufacturers publish their
 images, many do not, and the plugin never downloads an image for you.
@@ -29,8 +35,9 @@ images, many do not, and the plugin never downloads an image for you.
 
 1. The device sends a *Query Next Image Request* carrying its manufacturer code, its
    image type and its current version.
-2. The plugin looks through the images it loaded **at startup** for one matching that
-   **manufacturer code and image type**. The brand name and the folder play no part in
+2. The plugin looks through the images it has loaded (at startup, and again when the
+   firmware folders change: see [Step 3](#step-3--load-the-image-and-check-it)) for one
+   matching that **manufacturer code and image type**. The brand name and the folder play no part in
    this match — both come from the image's own header.
 3. If it has a matching, newer image *and* you authorised the update, it serves the
    image block by block until the device reports *Upgrade End*. The device then
@@ -129,34 +136,65 @@ Those codes therefore have a single entry covering all of their vendors, with a
 (`EUROTRONICS/`, `LIXEE/`, `LUMI/`, `DEVELCO/`) are still read, so firmware you
 already put there keeps working and nothing needs moving.
 
-## Step 3 — Restart the plugin and check the image was loaded
+## Step 3 — Load the image and check it
 
-**Firmware folders are read once, when the plugin starts.** Dropping a file in while
-the plugin is running has no effect until you restart it.
-
-After the restart, the log lists everything it loaded:
+**From plugin version 9.1.009, no restart is needed.** Open, or reload, **Admin →
+Firmware** in the WebUI. When the page asks for the firmware list, the plugin checks
+whether a file was added, removed or replaced in the firmware folders, and if so reads
+them again. The new file then shows up in the Firmware column, and the log lists what
+was loaded:
 
 ```
+The OTA firmware folders changed: firmware images reloaded
 Z4D loads the firmware images
- --> Brand: Innr Image File: 1166-01b0-19403685-rb282c-1.9.64.ota
+ --> Brand: Legrand Image File: 1021-0013-003f45ff-NLV.zigbee
 ```
+
+Nothing is reread, and nothing is logged, when the folders did not change. Updates in
+progress are not affected: each keeps serving the image it started with, even if you
+replace or delete its file.
+
+**With earlier versions, the firmware folders are read once, when the plugin
+starts.** Restart the plugin after adding a file; the same lines appear in the log at
+startup.
 
 If your file is not listed, see [Troubleshooting](#troubleshooting).
 
 ## Step 4 — Run the update
 
-Go to **Admin → Firmware** in the WebUI:
+Go to **Admin → Firmware** in the WebUI. From plugin version **9.1.009** the page has
+four columns, from left to right:
 
-![Firmware Update](../Images/Firmware_Update.png)
+![Firmware page: brands, firmware, devices and transfers](Images/WebUI-Admin-Firmware-columns.png)
 
-Select:
+1. **Brands**, as spelled in the table above, with the number of firmware files loaded
+   for each.
+2. **Firmware**: the files of that brand, with their image type and version.
+3. **Devices**: the devices of that manufacturer, each compared with the selected
+   firmware, using what the device reported the last time it asked for an image:
 
-* the **brand**, as spelled in the table above
-* the **firmware image** to use
-* the **devices** to send it to
+   | Badge | Meaning | Can be selected |
+   | --- | --- | --- |
+   | `update available` | The device runs an older version | Yes |
+   | `up to date (Force update)` | The device already runs this version | Only with `force update` |
+   | `runs a newer version (Force update)` | The device runs a newer version | Only with `force update` |
+   | `version unknown until the device asks` | The plugin has not yet seen the device ask for an image, so it does not know its version | Yes: the plugin checks when the device asks |
+   | `Queued`, `Notified`, `Waiting…`, `Transfer` | An update is already planned or running for it | No |
+
+   Devices that reported another image type are folded under **Other image types
+   (N)**: this firmware is not for them.
+4. **Transfers**: every update queued or in progress, and the last ones that ended. See
+   [What you see in the WebUI](#what-you-see-in-the-webui).
+
+Tick the devices, then click **Update (N)** and confirm. Each device gets its own
+message: *Firmware update queued for …* or, in orange, *Firmware update rejected for
+…* with the reason (see [When an update is refused](#when-an-update-is-refused)).
 
 You can select **several devices at once**, and start more updates while others are
 running, even with different firmware images.
+
+With earlier versions, the page has three drop-down lists (brand, firmware, devices)
+instead.
 
 `force update` lets the image be served to a device that is not on an older version —
 use it to re-flash or to go back to an earlier version. Without it, a device is only
@@ -190,18 +228,46 @@ together they load the network about as much as a single transfer.
 
 ### What you see in the WebUI
 
-The footer shows the devices holding a slot, then their progress, in the same order:
+> **Note:** available from plugin version **9.1.009**.
+
+The **Transfers** column of the Firmware page lists every update, whatever brand and
+firmware are selected:
+
+![Three transfers in progress](Images/WebUI-Admin-Firmware-transfers.png)
+
+The header counts the updates holding a transfer slot (`active`) and the others
+(`queued`). Each update shows its device, its file and its state:
+
+| State | Meaning |
+| --- | --- |
+| `Queued` | Waits for a free transfer slot, since the time shown |
+| `Notified` | Holds a slot; the device was notified and has not asked yet |
+| `Waiting for the device to ask` | Did not answer its notifications: no slot, but still authorised for 24 hours |
+| `Transfer` | Being downloaded: progress bar, percentage, KB downloaded of the image size, speed and estimated time left |
+
+The speed is measured since the transfer started, so the first minutes are rough. The
+time left assumes the speed stays the same: it grows when more transfers start, since
+the blocks of each device are then spaced further apart.
+
+Below, **Finished** lists the last 10 updates that ended, newest first, with their
+outcome: `Success`, `Failed`, `Aborted`, `Transfer stalled` (no block requested for 5
+minutes), `Device never asked` (24 hours), `Not needed` (the device already runs it, or
+its hardware is not supported), `Cancelled`, or `Success, another image needed`. The
+list is kept in memory: a plugin restart empties it.
+
+Updates of the selected firmware are highlighted; clicking one selects its brand and
+firmware. The column refreshes every 5 seconds while an update is queued or running,
+every 30 seconds otherwise.
+
+The footer of every page shows the devices holding a slot, then their progress, in the
+same order:
 
 ![Two transfers in progress](Images/WebUI-Admin-Firmware-two-transfers.png)
 
 `OTA: 4333, b1b7 30%, 35%` reads: `4333` at 30%, `b1b7` at 35%. A device that was
 notified but has not asked yet shows `Notified`. Devices waiting in the queue are not
-shown in the footer: the log says which ones wait.
-
-When the last transfer ends, the footer keeps its outcome (`Success`, `Timeout`, …).
-
-On the Firmware page, the device list shows for each device the date (`OTALastTime`),
-image type and version of its last completed update.
+shown in the footer. When the last transfer ends, the footer keeps its outcome
+(`Success`, `Timeout`, …).
 
 ### What you see in the log
 
@@ -229,15 +295,40 @@ Firmware update started for 9a9a with 1021-0013-003f45ff-NLV.zigbee: the device 
 Progress is logged once per 5% step. A device that asks on its own (battery device,
 or one that missed its notifications) gets `…: the device asked for it (…)`.
 
+### Cancelling an update
+
+> **Note:** available from plugin version **9.1.009**.
+
+Click the red **✕** of the update in the Transfers column, then **Cancel the update**:
+
+| State when cancelled | What happens |
+| --- | --- |
+| `Queued`, `Waiting for the device to ask` | The update leaves the queue |
+| `Notified` | The update leaves the queue; its transfer slot goes to the next device |
+| `Transfer` | The plugin answers the device's next block request with *ABORT*: the device stops the download at once and keeps its current firmware. Its slot goes to the next device |
+
+The log shows it, here for a device in transfer:
+
+```
+Firmware update of d841 with 1021-0013-003f45ff-NLV.zigbee cancelled (it was Transfer)
+Firmware transfer of d841 was cancelled: ABORT sent to its request
+Firmware transfer of d841 stopped after the cancel: the device discarded the download (Upgrade End status 0x96)
+```
+
+The update then shows in **Finished** as `Cancelled`. With `autoServeOTA`, a cancelled
+device is not updated automatically again until the plugin restarts or you pick it
+again on the Firmware page.
+
 ### When an update is refused
 
 > **Note:** available from plugin version **9.1.009**.
 
-Some requests are refused straight away, with a Warning or Status line in the log:
+Some requests are refused straight away. The Firmware page shows the reason in an orange
+message for that device, and the log has a Warning or Status line:
 
 | Reason | What to do |
 | --- | --- |
-| Unknown brand / Unknown firmware file | The file is not loaded. Most often it was removed or renamed after the plugin started, or the WebUI page shows a list from before a restart: reload the page. |
+| Unknown brand / Unknown firmware file | The file is not loaded any more: it was removed or renamed after the page was opened. Reload the page: the plugin reads the folders again. |
 | Unknown device / Unknown endpoint | The device was removed or re-paired; reload the page. |
 | A firmware update is already queued or in progress for this device | Nothing to do: it is on its way. |
 | The device already runs this firmware version or a newer one | The device reported that version the last time it asked. Use `force update` to install it anyway. |
@@ -245,9 +336,6 @@ Some requests are refused straight away, with a Warning or Status line in the lo
 A device that asks and turns out to run that version already, or whose hardware
 version the image does not support, has its request dropped with the reason in the
 log and in the notification widget.
-
-> The Firmware page shows its "update requested" message even when the request is
-> refused. Check the log.
 
 ### What to expect
 
@@ -263,7 +351,8 @@ After *Upgrade End* the device reboots on its new firmware (about one minute for
 devices), announces itself again, and reports its new version the next time it asks.
 
 **Stopping or restarting the plugin forgets the queue and the transfers in
-progress.** Start the update again from the Firmware page afterwards. Whether the
+progress.** Start the update again from the Firmware page afterwards. To stop a single
+update, [cancel it](#cancelling-an-update) instead. Whether the
 device continues its download depends on the device: the Legrand devices tested
 continued where they stopped, but started again from the beginning after a power cut.
 
@@ -273,7 +362,8 @@ Enabling `autoServeOTA` makes the plugin serve any matching image to any device 
 asks for one, without going through the Firmware page. Convenient if you keep a
 curated set of images; be aware it will update every device matching an image you have
 placed in the folders. The queue applies: a device that asks while the slots are taken
-is queued and notified when its turn comes (from plugin version **9.1.009**).
+is queued and notified when its turn comes, and a device whose update you cancelled is
+left alone until the plugin restarts (both from plugin version **9.1.009**).
 
 ## Settings
 
@@ -324,9 +414,9 @@ scan.
 
 ## Troubleshooting
 
-**The image is not listed at startup.**
-Check in order: it is in a folder from the table above; the plugin was restarted after
-you put it there; the file is a real `.ota`/`.zigbee` image rather than an HTML error
+**The image is not listed.**
+Check in order: it is in a folder from the table above; you reopened the Firmware page
+after putting it there (with versions before 9.1.009: you restarted the plugin); the file is a real `.ota`/`.zigbee` image rather than an HTML error
 page saved under the wrong name; and the folder contains nothing but `README.md` and
 images.
 
@@ -335,8 +425,8 @@ Two images declare the same image type. Only one can be kept; remove the one you
 not need.
 
 **The device never starts the transfer.**
-Check the log first: the update may be queued behind three others (`waits for a free
-transfer slot`). Otherwise, a battery device starts when it next asks, which can be
+Check the Transfers column, or the log, first: the update may be `Queued` behind three
+others (`waits for a free transfer slot`). If it shows `Waiting for the device to ask`, a battery device starts when it next asks, which can be
 hours; it stays authorised for 24 hours. Some mains-powered devices ignore the
 notification too and only ask at power-on: switching the device off and on makes it
 ask within a few seconds.

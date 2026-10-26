@@ -71,15 +71,17 @@ The __Plugin__ page (*Admin > Plugin*) has two panels:
 ------------------------------------------------
 ## Firmware
 
-The __Firmware__ page (*Admin > Firmware*) updates the firmware of your paired devices over the air (OTA):
+The __Firmware__ page (*Admin > Firmware*) updates the firmware of your paired devices over the air (OTA). From plugin version 9.1.009 it has four columns, from left to right:
 
-1. Select the manufacturer.
-2. Select the firmware file.
-3. Select the device(s) to update. Tick *force update* to send the image even if the device is not on an older version (to re-flash it, or go back to an earlier version).
-4. Click *Update* and confirm.
+1. **Brands**: the manufacturers, with the number of firmware files loaded for each.
+2. **Firmware**: the files of the selected brand, with their image type and version.
+3. **Devices**: the devices of that manufacturer, each compared with the selected firmware (update available, up to date, version unknown, already in progress). Tick the device(s) to update. Tick *force update* to send the image even if the device is not on an older version (to re-flash it, or go back to an earlier version). Click *Update* and confirm.
+4. **Transfers**: every update queued or in progress, with its progress, speed and time left, and the last ones that ended. The red **✕** cancels an update.
 
-![Admin > Firmware](Images/EN_WebUI-Admin-Firmware.png)
+![Admin > Firmware](Images/WebUI-Admin-Firmware-columns.png)
 *This picture may have changed since this documentation was written.*
+
+A firmware file copied into the plugin's `OTAFirmware/` folders shows up when you open or reload this page, without restarting the plugin. With earlier plugin versions, the page has three drop-down lists (manufacturer, firmware file, device(s)) and a new file needs a plugin restart.
 
 Refer to [Update device firmware](HowTo_Update-device-firmware.md) for where to put the firmware files and how the update runs.
 
