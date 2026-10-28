@@ -8,7 +8,7 @@ The Zigbee for Domoticz plugin (ZigBeeForDomoticZ, Z4D) connects a Zigbee coordi
 
 What the current plugin requires. Check this before installing or upgrading.
 
-* `stable9` (9.1.xxx) is the production branch of the plugin. `stable8` and older branches are out of support: if you are still on one of them, [upgrade to stable9](HowTo_Upgrade-stable8-to-stable9.md).
+* `stable9` (9.1.xxx) is the production branch of the plugin. `stable8` and older branches are out of support: if you are still on one of them, upgrade to stable9: [from stable8](HowTo_Upgrade-stable8-to-stable9.md) or [from stable7](HowTo_Upgrade-stable7-to-stable9.md).
 * We recommend **Domoticz 2026.3**. `stable9` requires Domoticz 2025.1 or newer and Python 3.11 or newer.
 * Running several instances of the plugin (several coordinators) with Domoticz 2026.x and Python 3.11 doesn't work because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)): use Python 3.12 or newer.
 
@@ -70,7 +70,8 @@ The plugin's own web interface, at `http://<Domoticz server>:9440/z4d/`: one pag
 Updates, backups, and what to do when the coordinator changes.
 
 * [Plugin update](Plugin_Update.md) — routine updates of `stable9`, going back to a previous release, the plugin branches
-* [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) — one-way switch for users still on `stable8` or older
+* [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) — one-way switch for users still on `stable8`
+* [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md) — for users still on `stable7`, including old distributions and the move to a Python virtual environment
 * [Backup and restore](Plugin_Backup.md) — what to back up (plugin files and the Domoticz database), the backup scripts, reinstalling the plugin
 * [The scripts of the Tools folder](Plugin_Tools-folder.md) — upgrade, clean-up, repair, watchdog, https certificate, OTA file checks
 * [Back up a zigpy coordinator](HowTo_Backup-zigpy-coordinators.md) — automatic backups, zigpy-cli

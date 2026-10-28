@@ -12,6 +12,8 @@ The switch is done with a single tool provided in the plugin itself: `Tools/plug
 
 Only run the switch once you're ready to commit to `stable9`.
 
+Still on `stable7`? Follow [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md) instead: it goes straight to `stable9`.
+
 ## Prerequisites
 
 * Domoticz **2025.1 or newer**, with the Extended Framework available. `plugin-switch-stable9.sh` verifies this automatically by querying Domoticz's own JSON API — you don't need to check it manually. **Domoticz 2026.3 is the recommended version** for the best experience with the Extended Framework — if you're still on an older release, consider upgrading Domoticz itself at the same time.

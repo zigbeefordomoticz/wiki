@@ -3,7 +3,7 @@
 "Update" can mean two different things — make sure you're following the right one:
 
 * __Routine update__ — bug fixes and enhancements, staying on `stable9`. This is what this page covers.
-* __Moving from `stable8` (or older) to `stable9`__ — a one-time, one-way switch to the Domoticz Extended Framework branch. This is *not* a routine update and has its own procedure: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md).
+* __Moving from `stable8` (or older) to `stable9`__ — a one-time, one-way switch to the Domoticz Extended Framework branch. This is *not* a routine update and has its own procedure: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) or [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md).
 
 Not sure which branch you are on? See [Know your branch](#know-your-branch).
 
@@ -106,14 +106,14 @@ The plugin is under constant development in order to bug fix and add new feature
 | :----- | :----- | :------- | :----------- |
 | `stable9` | **Current production branch** | 9.1.xxx | Domoticz 2025.1 minimum, **2026.3 recommended**; Python 3.11+ |
 | `stable8` | Out of support, locked | 8.1.xxx | Domoticz 2025.2+, Python 3.11+ |
-| `stable7` | Out of support, locked | 7.1.xxx | Domoticz 2023.1+, Python 3.8+ |
+| `stable7` | Out of support, locked | 7.1.xxx | Domoticz 2023.1+, Python 3.9+ |
 | `stable6` and older | Out of support | | |
 
 ### stable9
 
 This is the default branch, and the one every user should be on. It is built exclusively on the **Domoticz Extended Framework** (`DomoticzEx`), available since Domoticz 2025.1.
 
-If you are still on `stable8` or older, move to `stable9` with the dedicated tool, not with `git checkout`: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md).
+If you are still on `stable8` or older, move to `stable9` with the dedicated tool, not with `git checkout`: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) or [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md).
 
 ### stable8 and older
 
