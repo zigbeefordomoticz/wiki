@@ -126,3 +126,5 @@ Before `stable8`, the modules were installed with `pip install -t <folder>` and 
 1. Create the virtual environment and install the modules (steps 3 and 4).
 1. In the Domoticz start script, remove the `PYTHONPATH` line and set `VIRTUAL_ENV` and `PATH` instead (step 5).
 1. Restart Domoticz.
+
+Coming from `stable7`: [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md) covers this move together with the branch switch.

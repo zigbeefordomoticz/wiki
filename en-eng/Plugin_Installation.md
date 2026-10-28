@@ -11,7 +11,7 @@
 
 > **Several instances of the plugin on Python 3.11:** with Domoticz 2026.x and Python 3.11 (for example Debian/Raspberry Pi OS Bookworm), the second instance of the plugin fails to start because of a Python 3.11 problem ([domoticz/domoticz#6763](https://github.com/domoticz/domoticz/issues/6763)). If you need more than one coordinator, use Python 3.12 or newer.
 
-You are on an older branch (`stable8` or below)? Don't reinstall: follow [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md).
+You are on an older branch? Don't reinstall: follow [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) or [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md).
 
 ## Installation methods
 

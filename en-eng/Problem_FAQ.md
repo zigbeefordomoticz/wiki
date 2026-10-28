@@ -231,7 +231,7 @@ The WebUI shows `Plugin Upgrade process completed without errors.`, but after th
 
   From 9.1.006 on, the WebUI update works again.
 
-* __You are on an older branch (`stable7`, `stable8`).__ The WebUI updates the branch you are on, but can't switch to another one: the question `[y/N]` of the switch script gets no answer and ends with `Aborted by user. No changes made.`. Switch branches on the command line: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md), and [Know your branch](Plugin_Update.md#know-your-branch).
+* __You are on an older branch (`stable7`, `stable8`).__ The WebUI updates the branch you are on, but can't switch to another one: the question `[y/N]` of the switch script gets no answer and ends with `Aborted by user. No changes made.`. Switch branches on the command line: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) or [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md), and [Know your branch](Plugin_Update.md#know-your-branch).
 * __You are on DomoticZ 2026.1 and restarted only the plugin.__ This is a DomoticZ 2026.1 bug: restarting the plugin (from the DomoticZ hardware page or from the WebUI) doesn't load the new code. Restart DomoticZ itself after each plugin update, or upgrade DomoticZ (2026.3 is recommended).
 * __The update failed on a git error__ (`dubious ownership`, `uncommitted changes`): see [E19](#e19-error-during-an-update--detected-dubious-ownership-in-repository-or-you-have-uncommitted-changes).
 
