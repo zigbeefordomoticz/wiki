@@ -798,7 +798,7 @@ the device's own descriptors. A device that reported none is drawn as a plain sh
 | thick red | **Not reachable** - the plugin's own health for this device |
 | thick dashed orange | **Timed out** - it was asked for its tables and never answered. This is a *finding*, not a leaf with no neighbours |
 | dashed grey | **Not scanned** - it has a neighbour table in principle, but this scan never reached it |
-| amber | **Not seen recently** - no traffic from this device in the last 24 hours |
+| amber | **Not seen recently** - no traffic from this device for the `HealthTimeOut` delay (about 6 hours by default; a device can have its own delay) |
 | plain | fine |
 
 Being able to tell *timed out* from *has no neighbours* is the single most useful thing this page

@@ -10,7 +10,7 @@ The __Dashboard__ is the home page of the WebUI (the first item of the menu bar,
 
 ## Plugin Status (top row)
 
-* **Plugin devices**: the devices known to the plugin by health — *live*, *lost* (away from the network), *no news* (not seen in the last 24 hours), *disabled*, *unknown*.
+* **Plugin devices**: the devices known to the plugin by health — *live*, *lost* (away from the network), *no news* (no message received for the `HealthTimeOut` delay, about 6 hours by default, see [Settings](WebUI_Settings.md)), *disabled*, *unknown*.
 * **Send & Receive**: the number of messages sent (*Tx*) and received (*Rx*) since the plugin started.
 * **Statistics**: messages sent and received per second (*Tx/s*, *Rx/s*) and the *Load*, the number of messages waiting to be sent by the coordinator, as its current and peak value.
 
