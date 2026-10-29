@@ -63,6 +63,7 @@ They can define a particular behaviour.
 | TWO_COMPLEMENT_VAL | ./Modules/tuyaTS0601.py | TS0601-PC311-Z-TY, TS0601-PC321-Z-TY, TS0601-Ronelabs-SEM101, TS0601-Ronelabs-SEM301 |
 | TY_DEFAULT_RESPONSE | ./Modules/tuya.py | TS0601-BLE-YL01 |
 | TuyaCommandF0 | ./Modules/pairingProcess.py | TS0505A-HueSaturation |
+| TuyaOnOffCountdown | ./Modules/onoff_settings.py | TS0004-_TZ3000_u3oupgdy (see [On With Timed Off](OnOff-timed-off.md)) |
 | WSRangeForTradfri | ./Modules/actuators.py | FLOALT panel WS 30x90, FLOALT panel WS 60x60, TRADFRI bulb E12 WS opal 400lm, TRADFRI bulb E14 WS 470lm, TRADFRI bulb E14 WS opal 400lm, TRADFRI bulb E14 WS opal 600lm, TRADFRI bulb E26 WS clear 950lm, TRADFRI bulb E26 WS opal 980lm, TRADFRI bulb E27 W opal 470lm, TRADFRI bulb E27 WS clear 806lm, TRADFRI bulb E27 WS clear 950lm, TRADFRI bulb E27 WS globe 1055lm, TRADFRI bulb E27 WS opal 1000lm, TRADFRI bulb E27 WS opal 950lm, TRADFRI bulb E27 WS opal 980lm, TRADFRI bulb E27 opal 470lm, TRADFRI bulb GU10 WS 345lm, TRADFRI bulb GU10 WS 400lm, TRADFRIbulbE14WScandleopal470lm, TRADFRIbulbE14WSglobeopal470lm, TRADFRIbulbE27WSglobeopal1055lm, TRADFRIbulbGU10WS345lm, TRADFRIbulbT120E27WSopal470lm, TRADFRI bulb E14 WS globe 470lm |
 | WindowsCoverringInverted | ./Modules/zclClusterHelpers.py | 1GANGSHUTTER1, TS0302 |
 | XIAOMI_METER_EP | ./Modules/lumi.py | lumi.plug.maeu01 |
