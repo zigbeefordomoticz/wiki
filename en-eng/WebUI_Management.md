@@ -27,7 +27,7 @@ The __Device Management__ page (*Management > Device Management*) lists all the 
 | Model | The model name reported by the device, and below it *Optimized* (in green) when the plugin has a certified configuration for this model, or *Not optimized* (in orange) when it hasn't (see [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md)). |
 | Address | The network address (short id, NwkId), which can change when the device rejoins, and below it the IEEE, the unique and permanent address of the device. |
 | Power | *Mains*, or the battery level (in red at 15 % and below), and the role of the device in the mesh: *Router* or *End device*. |
-| LQI | The last link quality seen from this device (0 to 255), with a bar: green from 100, orange from 40, red below. When the coordinator reports it, the RSSI is shown below. |
+| LQI | The link quality (0 to 255) of the last message received from this device, with a bar: green from 100, orange from 40, red below. When the coordinator reports it, the RSSI is shown below. Both are measured on the **last hop** only (see [What the LQI and RSSI measure](#what-the-lqi-and-rssi-measure)). |
 | Health | *Live*, *Not seen recently*, *Not reachable*, *Timed out*, *Disabled*, *Unknown*. A device whose pairing is not complete shows a warning below: *Pairing failed*, *Not in Domoticz*, or *Status:* followed by the pairing state of the plugin. |
 | Parameters | The number of parameters set for the device (*None* when there is none). An orange dot means the last saved parameters wait for the device's next heartbeat. Click it to open the parameter panel (see below). |
 
@@ -76,7 +76,7 @@ Click anywhere else on a row (or press `Enter` on a selected row) to open the de
 
 * **From the device configuration**: the description and the comment of the device configuration, and a *Blakadder* line: a link to the device page on [zigbee.blakadder.com](https://zigbee.blakadder.com) or, when there is none yet, a *Please create the device info* link to add it.
 * **The device**: name, network id (short id), IEEE, model, manufacturer (code and name), Profile ID and Device ID with their meaning, health.
-* **Signal**: the last readings of the signal strength (RSSI, in dBm) when the coordinator reports it, else of the link quality (LQI), with the latest, lowest and highest values.
+* **Signal**: the last readings (up to 10) of the signal strength (RSSI, in dBm) when the coordinator reports it, else of the link quality (LQI), with the latest, lowest and highest values. See [What the LQI and RSSI measure](#what-the-lqi-and-rssi-measure).
 * **Domoticz widgets**: the widgets created for this device.
 * **Node descriptor**: what the device announced about itself, decoded: logical type (coordinator, router, end device), frequency band, MAC capability (full- or reduced-function device, mains or battery powered, receiver on when idle…), manufacturer code, buffer and transfer sizes, server mask, stack compliance revision.
 
@@ -86,6 +86,34 @@ The buttons at the bottom:
 * **Copy device info**: copies the discovery data of the device (what the plugin learned during pairing) to the clipboard, ready to paste into a request for support or for the optimization of the device (see [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md)).
 * **Parameters**: opens the [parameter panel](#parameters).
 * **Close**.
+
+### What the LQI and RSSI measure
+
+The *LQI* column and the *Signal* readings are **not** a measure of the whole route from the device to the coordinator. They describe only the **last hop**: the radio link between the coordinator and the node it received the message from.
+
+**How Zigbee measures them.** The radio (the IEEE 802.15.4 layer) of a node measures the LQI, and often the RSSI, of each frame it receives, and only for that frame. When a router relays a message, it sends a new frame, and the next node measures that new frame. Zigbee does not add the hops up: the network layer passes the LQI of the received frame unchanged to the application (*NLDE-DATA.indication* and *APSDE-DATA.indication* in the Zigbee specification). So the value the coordinator reports is the quality of the frame its own radio heard. Silicon Labs radios name it accordingly: *last hop LQI* and *last hop RSSI*.
+
+**How the plugin files them.** The plugin records the value under the device that **sent** the message (its network source address), not under the router that relayed it:
+
+* A device that talks **directly** to the coordinator: the LQI is its own link with the coordinator.
+* A device reached **through one or more routers**, including an end device whose parent is a router: the LQI is the link between the **last router** and the coordinator. It says nothing about the device's own radio, nor about the hops before the last one. A sensor behind a router next to the coordinator can show an excellent LQI while its own link to that router is poor.
+
+To see the quality of each link in the mesh, including the device's own link to its parent, use the neighbour tables of a topology scan: [Network > Mesh](WebUI_Network-Mesh.md#a-note-on-lqi). For the path a device's messages take, see [Computed routes](WebUI_Network-Mesh.md#computed-routes).
+
+**Where the values come from.**
+
+| Coordinator | LQI | RSSI |
+|-------------|-----|------|
+| ZiGate | yes, from the ZiGate firmware | no |
+| Texas Instruments (zigpy-znp) | yes | no |
+| Silicon Labs (bellows) | yes | yes |
+| deCONZ (zigpy-deconz) | yes | yes |
+| Bouffalo Lab (zigpy-blz) | yes | no |
+
+* **LQI** (*RollingLQI*): taken from the messages received from the device. The plugin keeps the last 10. An LQI of `0` is not recorded.
+* **RSSI** (*RollingRSSI*, in dBm): the RSSI zigpy holds for the device, read each time the plugin processes a cluster (ZCL) message from it. The plugin keeps the last 10. zigpy refreshes that value only from the messages it handles itself (ZDO messages, for example), so consecutive readings often repeat the same value, and a reading can be older than the message it is stored with.
+
+**Comparing values.** How the LQI is computed is left to the radio maker: some derive it from the signal strength, others from the error rate on the received frame. A value from one coordinator family can't be compared with a value from another, and the colour bands of the list are a rough guide only. The RSSI, in dBm, is a physical measure and compares better across radios, though not exactly.
 
 ------------------------------------------------
 ## Group Management
