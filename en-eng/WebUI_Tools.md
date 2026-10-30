@@ -151,4 +151,4 @@ Refer to the tutorial [Deal with plugin errors](HowTo_Dealing-plugin-errors.md) 
 
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).

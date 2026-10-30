@@ -72,4 +72,4 @@ The __Group Management__ page (*Management > Group Management*) is where you cre
 Refer to the section [How to manage groups](HowTo_Group-management.md) for more information.
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).
