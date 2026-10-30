@@ -7,7 +7,7 @@ A **certified** (or *optimized*) device is a device model for which the plugin h
 * **[zigbee.blakadder.com](https://zigbee.blakadder.com/z4d.html)** lists the devices known to work with the plugin (gateway *Zigbee for Domoticz*), with pictures and pairing tips. Search it first.
 * **The [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices) repository** holds the configuration files the plugin uses, one per Zigbee model, under `z4d_certified_devices/Certified/<brand>/<model>.json`. It is installed with the plugin's Python requirements, and updated when you upgrade the plugin (see [Plugin update](Plugin_Update.md)). A model is certified when a file with its Zigbee model name exists there (see [Model name resolution](Technical/Model-name-resolution.md)).
 
-To find out whether your device is certified, look for its Zigbee model name (shown in *Management > Device Management*, *Model* column) in the repository, or check the *Optimized* column of Device Management once it is paired.
+To find out whether your device is certified, look for its Zigbee model name (shown in *Management > Device Management*, *Model* column) in the repository, or check whether Device Management shows it as *Optimized* once it is paired.
 
 ## Certified models by brand
 

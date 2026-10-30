@@ -27,7 +27,7 @@ You can remove one on the unused power device. The cumulated consumption is upda
 
 The power device also shows the instant power consumption. The plug doesn't report it by itself, so the plugin polls it: this is the [device parameter](HowTo_Device-parameters.md) `PowerPollingFreq`, in seconds. The certified configuration of the plug (`TS0121`) sets it to **300** (every 5 minutes) when the device is paired; `0` disables the polling.
 
-To change it, open the plugin WebUI, go to **Management > Device Management**, click on the **Parameters** icon of the plug and change the value, for example `{'PowerPollingFreq': 120}`. 120 seconds is enough for a washer, to know when the machine starts and finishes.
+To change it, open the plugin WebUI, go to **Management > Device Management**, click the **Parameters** button of the plug and set `PowerPollingFreq` to the value you want, for example `120`, then **Save parameters**. 120 seconds is enough for a washer, to know when the machine starts and finishes.
 
 ## Bonus
 

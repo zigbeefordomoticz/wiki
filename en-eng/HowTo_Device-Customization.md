@@ -226,13 +226,11 @@ To do so, you have to create a 'config' file under the `Conf/Local-Devices` fold
 
 1. First you need to extract raw device information from the plugin.
 
-   1. open the WebUI and go to the Device Management section
+   1. open the WebUI and go to *Management > Device Management* (see [WebUI Management](WebUI_Management.md#device-management)).
 
-    ![WebUI:Device Management](Images/EN_WebUI_Device-Management-Not_Optimized.png)
+   1. the devices shown as *Not optimized* (in orange, under the model) have no configuration file for the plugin, and their behavior might not be optimum. The *Not optimized* filter lists them.
 
-   1. as shown on the screenshot here above you'll see a list of devices, and the ones with the yellow icon refer to devices for which there is no associated config file for the plugin and their behavior might not be optimum.
-
-   1. Click on the yellow icon, it will copy immediately the necessary information to the Clipboard. You can then paste it in a Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer) ). You will see a result like this one
+   1. Click the row of the device to open its details, then click *Copy device info*: the necessary information is copied to the clipboard (before plugin 9.1.009: click the orange icon of the *Optimized* column). You can then paste it in a Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer) ). You will see a result like this one
 
     ![JsonViewer Example](../Images/jsonviewer.png)
 

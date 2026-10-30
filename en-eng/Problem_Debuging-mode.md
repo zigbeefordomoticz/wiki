@@ -97,7 +97,7 @@ See also [Dealing with not-optimized devices](Problem_Dealing-with-none-optimize
 ## Short Address and IEEE
 
 * You can get the Short Address and/or the IEEE of the Device:
-  * via the Plugin Web Interface in the **Management > Device Management** menu (short address and IEEE columns)
+  * via the Plugin Web Interface in the **Management > Device Management** menu (*Address* column: short address, and the IEEE below it)
   * via DomoticZ, in **Setup > Devices**: the IEEE can be found in the ID column
 
 The short address can change when a device leaves and joins the network again: check it again if a device is re-paired.
