@@ -72,11 +72,19 @@ If the parameters stored by the plugin can't be read, the panel opens on the *JS
 
 Click anywhere else on a row (or press `Enter` on a selected row) to open the details of the device:
 
-![Device details](Images/EN_WebUI-Management-Device-Details.png)
+![Device details, LQI and RSSI](Images/EN_WebUI-Management-Device-Details.png)
+
+*A router with RSSI readings: both charts are shown.*
+
+![Device details, LQI only](Images/EN_WebUI-Management-Device-Details-LQI-only.png)
+
+*A battery device with no RSSI reading: only the LQI chart is shown.*
 
 * **From the device configuration**: the description and the comment of the device configuration, and a *Blakadder* line: a link to the device page on [zigbee.blakadder.com](https://zigbee.blakadder.com) or, when there is none yet, a *Please create the device info* link to add it.
 * **The device**: name, network id (short id), IEEE, model, manufacturer (code and name), Profile ID and Device ID with their meaning, health.
-* **Signal**: the last readings (up to 10) of the signal strength (RSSI, in dBm) when the coordinator reports it, else of the link quality (LQI), with the latest, lowest and highest values. See [What the LQI and RSSI measure](#what-the-lqi-and-rssi-measure).
+* **Link quality (LQI), last readings**: one bar per message for the last 10 messages received from the device, oldest on the left, on the 0–255 scale. As in the list, a bar is green from 100, orange from 40 and red below, and the two dashed lines mark these limits. Below the chart: the latest, lowest and highest values. The LQI is measured on the **last hop** only: for a device that goes through a router, it is the link between that router and the coordinator.
+* **Signal strength (RSSI), last readings**: the same chart for the RSSI, in dBm, on a −100 to 0 dBm scale: green from −65 dBm, orange from −80 dBm, red below. The RSSI is the signal strength of the last frame the coordinator received from the device, also measured on the **last hop** only. It is shown only when the coordinator reports it: Silicon Labs (EZSP) and deCONZ coordinators.
+* **Messages received since plugin start**: the number of *ZDO* messages (network management, discovery) and *ZCL* messages (attribute reports, commands) the plugin received from this device. The counters start at 0 each time the plugin starts and are not saved. Every message is counted, a repeated one included. See [ZDO and ZCL messages](#zdo-and-zcl-messages).
 * **Domoticz widgets**: the widgets created for this device.
 * **Node descriptor**: what the device announced about itself, decoded: logical type (coordinator, router, end device), frequency band, MAC capability (full- or reduced-function device, mains or battery powered, receiver on when idle…), manufacturer code, buffer and transfer sizes, server mask, stack compliance revision.
 
@@ -89,7 +97,14 @@ The buttons at the bottom:
 
 ### What the LQI and RSSI measure
 
-The *LQI* column and the *Signal* readings are **not** a measure of the whole route from the device to the coordinator. They describe only the **last hop**: the radio link between the coordinator and the node it received the message from.
+**Two different measures.** The LQI and the RSSI both describe a received frame, but they don't measure the same thing:
+
+* The **RSSI** (*Received Signal Strength Indicator*) is the power of the radio signal received, in dBm. It is a negative number: −40 dBm is a strong signal, −90 dBm a weak one, close to what most Zigbee radios can still receive. It says how loud the frame was, not whether it arrived clean: in a noisy channel (Wi-Fi, another Zigbee network, a microwave oven), a strong signal can still come with errors.
+* The **LQI** (*Link Quality Indicator*) is a score from 0 to 255 that the radio gives to the frame it received, 255 being the best. It tells how well the frame was received. The IEEE 802.15.4 standard leaves the way to compute it to the radio maker: some derive it from the signal strength, others from the errors on the received frame, others from both.
+
+So a link can show a good RSSI and a poor LQI (a strong but disturbed signal), and the two numbers don't convert into each other.
+
+**Only the last hop.** The *LQI* column and the charts of the [device details](#device-details) are **not** a measure of the whole route from the device to the coordinator. They describe only the **last hop**: the radio link between the coordinator and the node it received the message from.
 
 **How Zigbee measures them.** The radio (the IEEE 802.15.4 layer) of a node measures the LQI, and often the RSSI, of each frame it receives, and only for that frame. When a router relays a message, it sends a new frame, and the next node measures that new frame. Zigbee does not add the hops up: the network layer passes the LQI of the received frame unchanged to the application (*NLDE-DATA.indication* and *APSDE-DATA.indication* in the Zigbee specification). So the value the coordinator reports is the quality of the frame its own radio heard. Silicon Labs radios name it accordingly: *last hop LQI* and *last hop RSSI*.
 
@@ -111,9 +126,24 @@ To see the quality of each link in the mesh, including the device's own link to 
 | Bouffalo Lab (zigpy-blz) | yes | no |
 
 * **LQI** (*RollingLQI*): taken from the messages received from the device. The plugin keeps the last 10. An LQI of `0` is not recorded.
-* **RSSI** (*RollingRSSI*, in dBm): the RSSI zigpy holds for the device, read each time the plugin processes a cluster (ZCL) message from it. The plugin keeps the last 10. zigpy refreshes that value only from the messages it handles itself (ZDO messages, for example), so consecutive readings often repeat the same value, and a reading can be older than the message it is stored with.
+* **RSSI** (*RollingRSSI*, in dBm): the signal strength of the frame the coordinator received, recorded with each cluster (ZCL) message from the device. The plugin keeps the last 10. Only the Silicon Labs (EZSP) and deCONZ coordinators report it.
 
-**Comparing values.** How the LQI is computed is left to the radio maker: some derive it from the signal strength, others from the error rate on the received frame. A value from one coordinator family can't be compared with a value from another, and the colour bands of the list are a rough guide only. The RSSI, in dBm, is a physical measure and compares better across radios, though not exactly.
+**Comparing values.** Because each radio maker computes the LQI its own way, an LQI from one coordinator family can't be compared with an LQI from another, and the colour bands of the list are a rough guide only. The RSSI, in dBm, is a physical measure and compares better across radios, though not exactly.
+
+### ZDO and ZCL messages
+
+The *Messages received since plugin start* counters of the [device details](#device-details) sort the messages of a device into two kinds:
+
+* **ZDO** (*Zigbee Device Object*, profile `0x0000`): the messages about the device and the network, not about what the device does. For example the *Device Announce* a device sends when it joins or rejoins the network, its answers during pairing (node descriptor, active endpoints, simple descriptors), its answers to bind requests, and its neighbour and routing tables when the plugin reads them for a topology scan.
+* **ZCL** (*Zigbee Cluster Library*): the messages about what the device does, through its clusters (On/Off, Temperature Measurement, Electrical Measurement…, and the manufacturer clusters such as Tuya's): attribute reports (a temperature, a switch state, a power reading), answers to the plugin's attribute reads (polling), commands the device sends (a remote's button press), and the device's responses to the plugin's commands. The plugin counts every message that is not ZDO as ZCL.
+
+What to look at:
+
+* A device in normal use sends mostly ZCL messages. A ZCL counter that stays at 0, or does not move for a long time, means the device has sent no report and no answer.
+* A battery device sends a message only when it has something to report, or when its reporting interval is due: a low count is normal for it.
+* ZDO messages come mostly at pairing, at each rejoin, and during a topology scan. A ZDO counter that grows without a scan can mean that the device rejoins the network often.
+
+The counters count what the plugin received, repeats included (a device that retries a message because it did not get the acknowledgement counts twice). The *Mgmt Permit Join* and *Mgmt Leave* responses are not counted. With a ZiGate, only the messages the firmware forwards as raw data (*0x8002*) are counted.
 
 ------------------------------------------------
 ## Group Management
