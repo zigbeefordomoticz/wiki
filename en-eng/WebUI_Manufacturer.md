@@ -44,4 +44,4 @@ See [Gamma-Troniques corner](Corner_GammaTroniques.md) and [TICmeter integration
 The __Chameleon__ page displays the data collected by a Chameleon Technology TIC reader. Select the device: the page shows the device name, the contract identifier, the contract type, the current tariff period and the subscribed power, followed by the list of all the values read.
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).

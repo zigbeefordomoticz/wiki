@@ -39,4 +39,4 @@ The bar at the bottom of every WebUI page gives, from left to right:
 * **Firmware**: the coordinator firmware version, shown in red when a newer firmware is available (click it for more information).
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).
