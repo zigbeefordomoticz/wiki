@@ -230,7 +230,13 @@ To do so, you have to create a 'config' file under the `Conf/Local-Devices` fold
 
    1. the devices shown as *Not optimized* (in orange, under the model) have no configuration file for the plugin, and their behavior might not be optimum. The *Not optimized* filter lists them.
 
-   1. Click the row of the device to open its details, then click *Copy device info*: the necessary information is copied to the clipboard (before plugin 9.1.009: click the orange icon of the *Optimized* column). You can then paste it in a Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer) ). You will see a result like this one
+    ![Device Management, Not optimized filter](Images/EN_WebUI-Management-Device-Not-Optimized.png)
+
+   1. Click the row of the device to open its details, then click *Copy device info*: the necessary information is copied to the clipboard (before plugin 9.1.009: click the orange icon of the *Optimized* column).
+
+    ![Device details, Copy device info](Images/EN_WebUI-Management-Device-Details-Not-Optimized.png)
+
+    You can then paste it in a Json viewer ( like that one [JsonViewer](https://countwordsfree.com/jsonviewer) ). You will see a result like this one
 
     ![JsonViewer Example](../Images/jsonviewer.png)
 

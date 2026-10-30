@@ -12,6 +12,8 @@ You can see which devices are optimized:
 * in *Management > Device Management*, under the model of each device: *Optimized* in green, *Not optimized* in orange; the *Not optimized* filter lists them (see [WebUI Management](WebUI_Management.md#device-management)). Before plugin 9.1.009: the green or orange icon of the **Optimized** column;
 * in *Tools > Tools*, with the **Non-optimized devices** button, which lists the discovery data of every non-optimized device (see [Use the plugin tools](HowTo_Using-tools.md)).
 
+![Device Management, Not optimized filter](Images/EN_WebUI-Management-Device-Not-Optimized.png)
+
 ## After pairing a non-optimized device
 
 Two cases:
@@ -24,6 +26,10 @@ In both cases, sharing the device data helps get the device optimized, for you a
 ## Ask for the device to be optimized
 
 1. Go to *Management > Device Management*, click the device row to open its details, and click *Copy device info* (before plugin 9.1.009: click the orange icon of the device in the *Optimized* column). Its discovery data (what the plugin learned during pairing) is copied to the clipboard. This is the minimum needed to work on the device.
+
+   ![Device details, Copy device info](Images/EN_WebUI-Management-Device-Details-Not-Optimized.png)
+
+   If the details show *Please create the device info* on the *Blakadder* line, you can also add the device to [zigbee.blakadder.com](https://zigbee.blakadder.com).
 1. Create an issue on GitHub: [request a certified device model](https://github.com/zigbeefordomoticz/z4d-certified-devices/issues/new?assignees=&labels=Device+Integration&projects=&template=certified-device-model.md&title=%5BModel+Certification%5D+-+).
 1. Paste the discovery data, and add:
    * the product name and brand;
