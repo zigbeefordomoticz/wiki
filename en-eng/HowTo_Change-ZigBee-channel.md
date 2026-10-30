@@ -18,7 +18,7 @@ There are two ways to change the channel.
 
 The coordinator moves to the new channel and broadcasts the change to the whole network. The paired devices are kept.
 
-1. Go to *Admin > Coordinator* (see [WebUI Admin](WebUI_Admin.md#zigate)).
+1. Go to *Admin > Coordinator* (see [WebUI Admin](WebUI_Admin.md#coordinator)).
 1. In the **Coordinator change channel** panel, select the new channel.
 1. Click *Change channel*.
 

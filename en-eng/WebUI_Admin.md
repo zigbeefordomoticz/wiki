@@ -6,7 +6,7 @@ The __Admin__ menu contains the pages:
 
 * [Provisionning](#pairing) — pair devices
 * [Group](#group) — scan the groups
-* [Coordinator](#zigate) — restart the coordinator, change the Zigbee channel
+* [Coordinator](#coordinator) — restart the coordinator, change the Zigbee channel
 * [Plugin](#plugin) — upgrade and restart the plugin
 * [Firmware](#firmware) — update the firmware of your devices
 
@@ -46,6 +46,7 @@ Groups must be enabled first with the `enablegroupmanagement` setting (see [Grou
 Refer to the tutorial [Group Management](HowTo_Group-management.md) for more information.
 
 ------------------------------------------------
+<!-- Old anchor, still used by the WebUI help links -->
 <a name="zigate"></a>
 ## Coordinator
 
