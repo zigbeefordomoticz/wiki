@@ -99,9 +99,9 @@ This is not an error: it is an invitation to open an issue on z4d-certified-devi
 
 ## 4. Use the debug parameters
 
-By default, the plugin doesn't write debug messages. To understand a problem, or to send useful logs, you enable the debug modules of the part of the plugin concerned, in **WebUI > Tools > Debug** (enable **Advanced settings** to see all of them, then **Validate**). They take effect immediately, without restart. The full list is in [Debug mode](Problem_Debuging-mode.md#the-debugging-options).
+By default, the plugin doesn't write debug messages. To understand a problem, or to send useful logs, you enable the debug modules of the part of the plugin concerned, in **WebUI > Tools > Debug**: switch them on, or start from one of the *What are you looking into?* cards, then **Save** (before plugin 9.1.009: enable **Advanced settings** to see them, then **Validate**). They take effect immediately, without restart. The full list is in [Debug mode](Problem_Debuging-mode.md#the-debugging-options).
 
-1. **Limit to one device**: set `MatchingNwkId` to the short address of the device (for example `a1b2`), or several separated by commas. Keep `ffff` (all devices) when you pair a new device, as its short address is not known yet.
+1. **Limit to one device**: in *Only these devices* (`MatchingNwkId`), pick the device, or several (before plugin 9.1.009: type its short address, for example `a1b2`, or several separated by commas). Leave it empty (all devices, `ffff`) when you pair a new device, as its short address is not known yet.
 1. **Enable the modules** that match the problem:
 
    | Problem | Modules |
@@ -117,7 +117,7 @@ By default, the plugin doesn't write debug messages. To understand a problem, or
 1. **Enable `logThreadName`** when you will send the logs: each line then shows the thread, the module and the device short address, which makes the analysis much easier.
 1. **Reproduce the problem**, and note the time when it happens.
 1. **Collect** the part of the plugin log file around that time.
-1. **Disable the debug modules** when you are done (**Settings (default)** turns everything back to the defaults): some modules are very verbose and make the log file grow fast.
+1. **Disable the debug modules** when you are done (*Turn all off*, then **Save**; before plugin 9.1.009, **Settings (default)**): some modules are very verbose and make the log file grow fast.
 
 The `Python/zigpy...` modules show the messages of the zigpy library itself. They are very verbose: enable them only when asked.
 
@@ -130,8 +130,7 @@ The `Python/zigpy...` modules show the messages of the zigpy library itself. The
 * The Domoticz version, the Python version and the operating system.
 * What you did, what you expected, and what happened instead, step by step so that it can be reproduced.
 * The plugin log file excerpt around the problem, with the relevant debug modules enabled (see [above](#4-use-the-debug-parameters)). As a text file attachment, not a screenshot.
-* The exported error history: *Tools > Error(s) > Log Error History (json)*, then *Export* (see [Deal with plugin errors](HowTo_Dealing-plugin-errors.md)).
-* For a problem linked to a device: the device data, from *Tools > Tools*, **Plugin Raw Devices**, then *Export* (see [Use the plugin tools](HowTo_Using-tools.md)).
+* The support bundle: *Tools > Data*, **Download bundle**. It holds the plugin information, health and statistics, the coordinator information, the settings and the error history; for a problem linked to a device, also tick **Devices (raw)** (see [Use the plugin tools](HowTo_Using-tools.md)). Before plugin 9.1.009: the error history from *Tools > Error(s) > Log Error History (json)*, then *Export* (see [Deal with plugin errors](HowTo_Dealing-plugin-errors.md)), and the device data from *Tools > Tools*, **Plugin Raw Devices**, then *Export*.
 
 ### A device on z4d-certified-devices
 
@@ -139,7 +138,7 @@ The `Python/zigpy...` modules show the messages of the zigpy library itself. The
 * The discovery data: in *Management > Device Management*, click the device row, then *Copy device info* in its details (before plugin 9.1.009: click the orange icon of the device in the *Optimized* column). It is copied to the clipboard.
 * What works, what doesn't, and what you expect.
 * The pairing log, with the `Pairing` debug modules enabled (see [above](#4-use-the-debug-parameters)).
-* If asked: the device data, from *Tools > Tools*, **Plugin Raw Devices**, then *Export* (`export.json`).
+* If asked: the device data, from *Tools > Data*, **Devices (raw)**, *Download* (`z4d-zdevice-raw.json`; before plugin 9.1.009: *Tools > Tools*, **Plugin Raw Devices**, then *Export*, `export.json`).
 
 ### Before posting
 

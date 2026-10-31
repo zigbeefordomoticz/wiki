@@ -18,11 +18,19 @@ At startup, the DomoticZ log tells you which file is used: `Z4D Please watch plu
 * The file is rotated every night at midnight, and the last 7 files are kept (`loggingBackupCount`). If you set `loggingMaxMegaBytes` to a value above 0, the file is rotated when it reaches that size instead.
 * If you disable `enablePluginLogging` (restart needed), there is no file: all messages, including debug, go to the DomoticZ log (`Z4D Plugin logs are redirected to Domoticz log`).
 
-The errors are also kept in `Logs/PluginZigbee_log_error_history_<hardware id>.json`, with their context. You can download it from **WebUI > Tools > Error(s) > Log Error History (json)**, and attach it when you report an issue.
+The errors are also kept in `Logs/PluginZigbee_log_error_history_<hardware id>.json`, with their context. You can download it from **WebUI > Tools > Errors > Download .json** (before plugin 9.1.009: *Tools > Error(s) > Log Error History (json)*), and attach it when you report an issue.
 
 ## The Debugging options
 
-The debugging options are in the WebUI, menu **Tools > Debug**. Enable the **Advanced settings** switch to see the debug modules, check the ones you need and click **Validate**. They take effect immediately, no restart needed (except `enablePluginLogging`, `loggingBackupCount` and `loggingMaxMegaBytes`). **Settings (default)** turns everything back to the defaults.
+The debugging options are in the WebUI, **Tools > Debug** (see [WebUI Tools](WebUI_Tools.md#debug)):
+
+* **What are you looking into?** turns on a starting set of modules for a type of problem (a device does not pair, a device does not update, radio or coordinator, firmware update);
+* **Limit the log** holds `MatchingNwkId` (*Only these devices*: pick the devices in the list), `LQIthreshold`, `loggingBackupCount` and `loggingMaxMegaBytes`;
+* **Modules** holds the switches, grouped by what they cover, with a search and *Turn all off*.
+
+Switch on the modules you need and click **Save**. They take effect immediately, no restart needed (except `enablePluginLogging`, `loggingBackupCount` and `loggingMaxMegaBytes`).
+
+Before plugin 9.1.009, enable the **Advanced settings** switch to see the debug modules, check the ones you need and click **Validate**; **Settings (default)** turns everything back to the defaults.
 
 Don't forget to disable the debug modules once you are done: some of them are very verbose.
 
@@ -30,7 +38,8 @@ Don't forget to disable the debug modules once you are done: some of them are ve
 
 | Option | Purpose |
 | ------- | -------- |
-| `MatchingNwkId` | Limits the debug messages linked to a device to the devices you list here: one short address (Nwkid, for example `a1b2`) or several separated by commas (`a1b2,3c4d`). `ffff` (default) means all devices. Messages that are not linked to a device are always logged. |
+| `MatchingNwkId` | Limits the debug messages linked to a device to the devices you choose in *Only these devices*; none chosen means all devices. The plugin stores their short addresses (Nwkid) separated by commas (`a1b2,3c4d`), `ffff` for all devices (before plugin 9.1.009, you type them). Messages that are not linked to a device are always logged. |
+| `LQIthreshold` | Logs every report received from a device with an LQI at or under this value, to spot devices with a weak link. 0 (default) turns it off. |
 | `enablePluginLogging` | Enabled by default: the plugin logs go to the plugin log file (see above). Disabled: they go to the DomoticZ log. Requires a plugin restart. |
 | `loggingBackupCount` | Number of old log files kept (default 7). Requires a plugin restart. |
 | `loggingMaxMegaBytes` | 0 (default): new log file every day. Above 0: new log file when the file reaches this size in MB. Requires a plugin restart. |

@@ -10,7 +10,7 @@ You can see which devices are optimized:
 
 * on the *Dashboard*, in the **Optimized devices** chart (see [WebUI Dashboard](WebUI_Dashboard.md));
 * in *Management > Device Management*, under the model of each device: *Optimized* in green, *Not optimized* in orange; the *Not optimized* filter lists them (see [WebUI Management](WebUI_Management.md#device-management)). Before plugin 9.1.009: the green or orange icon of the **Optimized** column;
-* in *Tools > Tools*, with the **Non-optimized devices** button, which lists the discovery data of every non-optimized device (see [Use the plugin tools](HowTo_Using-tools.md)).
+* in *Tools > Data*, with **Non-optimised devices** (*Tools > Tools*, **Non-optimized devices** before plugin 9.1.009), which lists the discovery data of every non-optimized device (see [Use the plugin tools](HowTo_Using-tools.md)).
 
 ![Device Management, Not optimized filter](Images/EN_WebUI-Management-Device-Not-Optimized.png)
 
@@ -37,7 +37,7 @@ In both cases, sharing the device data helps get the device optimized, for you a
    * what works, what doesn't, and what you expect;
    * the Domoticz log of the pairing, if you have it.
 
-If asked, also export the full device data: *Tools > Tools*, *Plugin Raw Devices*, then *Export* (it saves an `export.json` file).
+If asked, also download the full device data: *Tools > Data*, **Devices (raw)**, *Download* (it saves a `z4d-zdevice-raw.json` file; before plugin 9.1.009: *Tools > Tools*, *Plugin Raw Devices*, then *Export*, which saves `export.json`).
 
 ## Fix it yourself
 

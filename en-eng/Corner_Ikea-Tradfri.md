@@ -32,7 +32,7 @@ The Ikea remote controls and the motion sensor don't send their commands to the 
 1. Enable the group management, if not yet done (__Enable Groups__ in the WebUI [Settings](WebUI_Settings.md), restart needed).
 1. Pair the bulb (or outlet) and the remote (or motion sensor) with the coordinator.
 1. Pair the remote (or motion sensor) with the bulb (see below). This creates the group.
-1. In **Admin > Group**, run a **Full scan** (or a **Scan** of the bulb only): the plugin asks the routers which groups they belong to, and finds the new group. The group gets its own widget in DomoticZ.
+1. In **Admin > Group**, click **Scan all** (or tick the bulb and click **Scan N selected**; **Full scan** or **Scan** before plugin 9.1.009): the plugin asks the routers which groups they belong to, and finds the new group. The group gets its own widget in DomoticZ.
 1. In **Management > Group Management**, check **Coordinator (in the group)** for this group and click **Validate**.
 
 From then on, each action on the remote or the motion sensor is visible on its widget, and you can use it in Blockly, dzVents or Lua scripts.

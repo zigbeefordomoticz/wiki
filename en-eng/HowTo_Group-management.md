@@ -15,11 +15,11 @@ In Domoticz, each Zigbee group is a switch widget, whatever the number of device
 
 ## Enable group management
 
-1. In the WebUI, go to *Settings* and enable __Enable Groups__ (`enablegroupmanagement`).
+1. In the WebUI, go to *Settings*, *Available services*, and enable __Enable Groups__ (`enablegroupmanagement`).
 
    ![Settings for Group Management](../Images/SettingsGroup.png)
 
-1. Click *Validate* and restart the plugin.
+1. Click *Save* (*Validate* before plugin 9.1.009) and restart the plugin.
 1. Scan the groups (see below).
 
 ## Scan the groups
@@ -28,9 +28,10 @@ Since the groups are stored in the devices, the plugin must ask the devices whic
 
 1. Make sure all the devices are connected to the network.
 1. Go to *Admin > Group* (see [WebUI Admin](WebUI_Admin.md#group)).
-1. Click *Full scan* to ask every router, or select some routers and click *Scan*.
+1. Click *Scan all* to ask every router, or tick some routers and click *Scan N selected* (before plugin 9.1.009: *Full scan*, or *Scan* of the selected routers).
+1. The routers answer over the next minutes: click *Refresh* to see their groups in the *Member of* column.
 
-![Group Management](../Images/GroupManagementMenu.png)
+![Admin > Group](Images/EN_WebUI-Admin-Group.png)
 
 The plugin creates a widget for every group found.
 

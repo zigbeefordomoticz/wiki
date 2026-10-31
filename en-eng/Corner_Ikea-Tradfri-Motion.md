@@ -26,7 +26,7 @@ When finished, the red light in the MS switches, the bulb flashes, and the WO ma
 
 The MS sends its commands to a Zigbee group, created when you paired it with the bulb or WO. To get the motion events in DomoticZ, the coordinator must be a member of that group.
 
-1. In the WebUI, go to **Admin > Group** and run a **Full scan** (or a **Scan** of the bulb or WO only). The plugin finds the new group and creates a group widget in DomoticZ.
+1. In the WebUI, go to **Admin > Group** and click **Scan all** (or tick the bulb or WO and click **Scan N selected**; **Full scan** or **Scan** before plugin 9.1.009). The routers answer over the next minutes. The plugin finds the new group and creates a group widget in DomoticZ.
 1. Go to **Management > Group Management**: the new group is in the list.
 1. Check **Coordinator (in the group)** for this group and click **Validate**.
 

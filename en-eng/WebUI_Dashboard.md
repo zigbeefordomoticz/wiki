@@ -38,7 +38,7 @@ This list gathers what may need an action. Only the items that apply are shown; 
 
 Each item has two buttons:
 
-* the **eye** opens the list of the devices concerned (for the log errors, it opens *Tools > Error*, see [WebUI Tools](WebUI_Tools.md#error));
+* the **eye** opens the list of the devices concerned (for the log errors, it opens *Tools > Errors*, see [WebUI Tools](WebUI_Tools.md#error));
 * the **download** button saves the item as a JSON file (`z4d-<item>.json`).
 
 *Export all* saves every item in one file, `z4d-needs-attention.json`. Each file also carries the plugin version, branch and commit, and the coordinator model, firmware and channel: it is ready to attach to a request for support (see [Reporting a problem](Troubleshooting_Reporting-a-problem.md)). It contains no network key or password.

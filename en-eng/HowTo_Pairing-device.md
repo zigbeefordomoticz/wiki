@@ -31,69 +31,58 @@ More advice in [Build a Zigbee network](HowTo_Build-a-ZigBee-network.md).
 
 ## Pairing methods
 
-All the methods are on the *Admin > Provisionning* page of the WebUI (see [WebUI Admin](WebUI_Admin.md#pairing)):
+Pairing is done on the *Admin > Provisionning* tab of the WebUI (see [WebUI Admin](WebUI_Admin.md#pairing)). The steps below are for plugin 9.1.009 and later; the [older page](#before-plugin-91009) is described at the end of this section.
 
 ![Admin > Provisionning](Images/EN_WebUI-Admin-Provisioning.png)
 
-There are three ways to pair:
+In the **Pair a new device** card, choose where the device may join:
 
-1. [With the assistant](#1-with-the-assistant): you see the device join in the WebUI.
-2. [For a period of time](#2-for-a-period-of-time): you follow the pairing in the Domoticz log.
-3. [On a specific router](#3-on-a-specific-router): the device joins through the router you choose.
+1. [Anywhere on the network](#1-anywhere-on-the-network): the usual way.
+2. [Through one router](#2-through-one-router): the device joins through the router you choose.
 
 ------------------------------------------------
-### 1. With the assistant
+### 1. Anywhere on the network
 
-1. In the **Pairing a new device with the assistant** panel, click *Pairing*. The network is open for 4 minutes.
-
-   ![Assisted Provisioning: Start](../Images/Provisionning_2.png)
-
+1. Select **Anywhere on the network** and click *Open for 4 minutes*. The card shows *Accepting new devices* and the time left. The *Accept new hardware* switch of the WebUI menu bar does the same.
 1. Check that the coordinator LED blinks or changes color (depending on the coordinator).
 1. Reset the device to start its pairing (see the device documentation).
-1. When the device has joined, the assistant shows what the plugin learned about it, and the widgets created.
+1. **Devices that joined** shows the device as *Discovering* while the plugin reads what it can do, then *Paired*, with what the plugin learned about it (model, certified or not, endpoints and clusters) and the widgets created.
 
-   ![Assisted Provisioning: Done](../Images/Provisionning_3.png)
+*4 minutes again* gives 4 more minutes, *Stop* closes the network before the end. The list of joined devices is kept until you leave the page; leaving the page doesn't close the network.
 
-1. Click *Exit* to close the assistant.
+Only devices joining for the first time are listed. A device that was already known to the plugin (re-paired) doesn't appear: check the Domoticz log (*Setup > Log*, you can filter on the plugin name) to see that it has rejoined.
 
-The assistant only shows devices joining for the first time. A device that was already known to the plugin (re-paired) doesn't appear: check the Domoticz log to see that it has rejoined.
-
-If nothing happens after 2 minutes:
+If a device shows *Failed* or *Unexpected*, or if nothing happens after 2 minutes:
 
 * check the Domoticz log for errors;
+* prepare a full reset of the device (see [Reset of a device](#reset-of-a-device)) and pair it again;
 * restart the plugin and try again.
 
 ------------------------------------------------
-### 2. For a period of time
-
-This method opens the network without the assistant; you follow the pairing in the Domoticz log (*Setup > Log*, you can filter on the plugin name).
-
-1. In the **Pairing a new device for a period of time** panel, click *4 minutes*. The *Accept new hardware* switch of the WebUI menu bar does the same.
-
-   ![Accept new hardware](../Images/Dashboard_Accept_new_Hardware.png)
-
-1. Check that the coordinator LED blinks or changes color.
-1. Reset the device to start its pairing.
-1. Watch the Domoticz log, and the new widgets in *Setup > Devices*.
-
-Click *Stop* to close the network before the 4 minutes are over.
-
-------------------------------------------------
-### 3. On a specific router
+### 2. Through one router
 
 By default a new device joins through whichever router or coordinator answers it. You can make it join through a router you choose, for example a device far from the coordinator.
 
 The device is only forced to join through that router: later, the network may route its messages another way, and you have no control over that.
 
 1. Make sure the network is not open for pairing: if it is, click *Stop*.
-1. In the **Pairing a new device on a router** panel, select the router.
+1. Select **Through one router**, then choose the router in the list.
 
-   ![Pairing from a router](../Images/PairingOnRouter.png)
+   ![Pairing through one router](Images/EN_WebUI-Admin-Provisioning-Router.png)
 
-1. Click *4 minutes*. Only this router accepts new devices.
-1. Reset the device to start its pairing, and follow it in the Domoticz log as above.
+1. Click *Open for 4 minutes*. Only this router accepts new devices.
+1. Reset the device to start its pairing, and follow it in **Devices that joined** as above.
 
 After a device has joined, the network may be opened on all the routers. To pair another device through that specific router only, start again from step 1.
+
+------------------------------------------------
+### Before plugin 9.1.009
+
+The *Admin > Provisionning* page has one panel per method:
+
+* **Pairing a new device with the assistant**: click *Pairing*, reset the device, and the assistant shows what the plugin learned about it. Click *Exit* to close the assistant.
+* **Pairing a new device for a period of time**: *4 minutes* opens the network, *Stop* closes it. You follow the pairing in the Domoticz log.
+* **Pairing a new device on a router**: select the router, then *4 minutes*.
 
 ## Managing the widgets of a device
 
@@ -101,14 +90,14 @@ When a device is paired, the plugin creates one widget per function of the devic
 
 You can delete the widgets you don't need in Domoticz. A deleted widget is not created again on its own. To get it back:
 
-* **Recreate the widgets**: on the *Admin > Provisionning* page, in the **Recreate widget(s) of existing device** panel, select the device and click *Recreate widget*. All the widgets of the device are created again, so you get duplicates of the ones you kept (in the example above: 2 kept + 5 recreated = 7 widgets). Delete the duplicates you don't want in Domoticz.
+* **Recreate the widgets**: on the *Admin > Provisionning* tab, in **A device already paired**, choose the device and click *Recreate widget* (before plugin 9.1.009: the **Recreate widget(s) of existing device** panel). All the widgets of the device are created again, so you get duplicates of the ones you kept (in the example above: 2 kept + 5 recreated = 7 widgets). Delete the duplicates you don't want in Domoticz.
 * **Or remove and pair again**: delete all the remaining widgets of the device (this removes the device from the plugin, see [Remove a device](HowTo_Remove-device.md)), then pair it again. The 5 widgets are created again, but **the history of the old widgets is lost**.
 
 Don't delete **all** the widgets of a device unless you want to remove it: deleting the last widget removes the device from the network.
 
 ## Reset of a device
 
-If you factory-reset a device that is already paired, prepare the plugin first: on the *Admin > Provisionning* page, in the **Preparing device for full reset** panel, select the device and click *Reset mode*.
+If you factory-reset a device that is already paired, prepare the plugin first: on the *Admin > Provisionning* tab, in **A device already paired**, choose the device and click *Reset mode* (**Prepare a full reset**; before plugin 9.1.009: the **Preparing device for full reset** panel).
 
 The plugin forgets what it learned about the device (bindings, reporting configuration…). At its next pairing, the device goes through the full discovery and configuration again, as if it were paired for the first time. Its existing widgets are kept.
 
