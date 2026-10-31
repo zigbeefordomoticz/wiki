@@ -17,11 +17,13 @@ The messages from the source to the target travel through the Zigbee network. If
 
 ## Create a binding
 
-1. Go to *Tools > Binding* (see [WebUI Tools](WebUI_Tools.md#bindings)).
+From plugin 9.1.009, bindings are made from the source device, on the *Tools > Binding / Reporting* tab (see [WebUI Tools](WebUI_Tools.md#bindings)).
 
-   ![Bindings](../Images/Binding.png)
+1. Go to *Tools > Binding / Reporting* and choose the **source** device in the list on the left: the one that triggers the action (the switch, the remote, the sensor).
 
-1. Select the **cluster**. The list only shows the clusters that your devices have, among:
+   ![Tools > Binding / Reporting](Images/EN_WebUI-Tools-Binding-Reporting.png)
+
+1. The table lists the clusters of the device that can be bound, one row per endpoint and cluster, among:
 
    | Cluster | Use |
    | ------- | --- |
@@ -32,12 +34,14 @@ The messages from the source to the target travel through the Zigbee network. If
    | `0300` Colour Control | color and color temperature |
    | `0402` Temperature Measurement | send the temperature, for example from a sensor to a thermostat valve |
 
-1. Select the **source** device: the one that triggers the action (the switch, the remote, the sensor).
-1. Select the **target** device: the one that is commanded.
+1. On the row of the cluster and endpoint you want, click *+ Bind*.
+1. Choose the **target**: the device (and its endpoint) that is commanded. The list only shows the devices that have this cluster.
 1. If the source is a battery device, wake it up (press one of its buttons) just before the next step, so that it receives the request.
-1. Click *Binding*.
+1. Click *Bind*.
 
-To remove a binding, select the same cluster, source and target and click *Unbinding*.
+To remove a binding, click the **×** of the target in the *Bound to* column (wake a battery source first).
+
+Before plugin 9.1.009, the page is *Tools > Binding*: select the cluster, the source device and endpoint and the target device and endpoint, then click *Binding* (or *Unbinding* to remove it).
 
 ### Devices with several endpoints
 
@@ -54,7 +58,7 @@ Each endpoint is one button. Press a button and see which widget changes to know
 
 1. Pair the micromodule, and check that you can switch it from Domoticz. It has one widget, for example `Micromodule switch_Switch-00047400001f09a4-01`.
 1. Pair the double remote switch, and check that pressing its buttons updates its two widgets (`-01` and `-02`).
-1. In *Tools > Binding*, select the cluster `0006`, the remote endpoint of the button you want (for example `01`) as source, the micromodule as target, wake the remote, and click *Binding*.
+1. In *Tools > Binding / Reporting*, choose the remote, click *+ Bind* on the cluster `0006` row of the endpoint of the button you want (for example `01`), choose the micromodule as target, wake the remote, and click *Bind*.
 1. That button now switches the micromodule directly. With a dimmer as target, add a second binding with the cluster `0008` to dim it too.
 
 The Legrand *Remote Shutter* doesn't accept bindings.
@@ -72,7 +76,9 @@ curl -X PUT http://127.0.0.1:9440/rest-z4d/1/binding-group \
 
 ## Check the bindings of a device
 
-The plugin can read the binding table of a device, also through the REST API only. With the short address (NwkId) of the device:
+On *Tools > Binding / Reporting*, choose the device and click *Read binding table* (wake a battery device first). The plugin asks the device for its binding table; a few seconds later, the *Bound to* column shows each target: another device, the *Coordinator*, or a group. The date of the last read is shown under the device name.
+
+Before plugin 9.1.009, this is only possible through the REST API, with the short address (NwkId) of the device:
 
 1. `curl http://127.0.0.1:9440/rest-z4d/1/binding-table-req/<NwkId>` asks the device for its binding table.
 1. A few seconds later, `curl http://127.0.0.1:9440/rest-z4d/1/binding-table-disp/<NwkId>` displays it.

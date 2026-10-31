@@ -49,4 +49,4 @@ If the device is not reset, it stays in the network and keeps sending its data t
 
 ## A device the plugin still lists
 
-If the device still appears in *Management > Device Management* (for example a device whose widgets were deleted while the plugin was stopped, or whose pairing never completed), click the trash icon in the *Del.* column and confirm. The trash icon only appears for a device that has no working widget in Domoticz. See [WebUI Management](WebUI_Management.md#device-management).
+If the device still appears in *Management > Device Management* (for example a device whose widgets were deleted while the plugin was stopped, or whose pairing never completed), click its row to open the device details, click *Remove device* and confirm. *Remove device* is only available for a device whose pairing failed, that is not in Domoticz, or that has no widget. See [WebUI Management](WebUI_Management.md#device-details). Before plugin 9.1.009, click the trash icon in the *Del.* column instead.

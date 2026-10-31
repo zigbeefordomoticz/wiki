@@ -49,7 +49,7 @@ A ZiGate network can't be restored onto a zigpy coordinator: the devices must be
 1. Pair the devices again, routers first: reset each device and pair it (see [Add a new device](HowTo_Pairing-device.md)). Their widgets and history are kept.
 1. Turn `autoRestore` back on.
 
-Note: the pairing assistant doesn't show devices that the plugin already knew. Follow the re-pairing in the Domoticz log, or open the network with *4 minutes* instead of the assistant.
+Note: *Devices that joined*, on the *Admin > Provisionning* tab (the pairing assistant before plugin 9.1.009), doesn't show devices that the plugin already knew. Follow the re-pairing in the Domoticz log.
 
 ## See also
 

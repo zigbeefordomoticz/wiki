@@ -16,13 +16,18 @@ There are two ways to change the channel.
 
 ## Method 1: live channel change (recommended)
 
-The coordinator moves to the new channel and broadcasts the change to the whole network. The paired devices are kept.
+The coordinator moves to the new channel and broadcasts the change to the whole network. The paired devices are kept. From plugin 9.1.009:
+
+1. Go to *Admin > Coordinator* and look at **Change channel**: the bars show the energy the routers measured on each channel at the last energy scan, lower is quieter. Without a scan yet, run one from *Network > Interference level*.
+1. Click the number of the new channel, then *Move to channel N*, and confirm.
+
+![Change the Zigbee channel](Images/EN_WebUI-Admin-Coordinator.png)
+
+Before plugin 9.1.009:
 
 1. Go to *Admin > Coordinator* (see [WebUI Admin](WebUI_Admin.md#zigate)).
 1. In the **Coordinator change channel** panel, select the new channel.
 1. Click *Change channel*.
-
-![Change the Zigbee channel](Images/EN_Channel_change.png)
 
 The routers (mains-powered devices) receive the broadcast and follow. End devices (battery devices) sleep and miss it:
 
@@ -35,7 +40,7 @@ Wait a while, then check in *Management > Device Management* which devices don't
 
 The `channel` setting (WebUI *Settings*, *Coordinator settings*, advanced) is only applied when the coordinator forms a new network. **Forming a new network erases it: all the devices must be paired again.** Use this method only when you start a network from scratch.
 
-1. Set `channel` to the channel you want and click *Validate*.
+1. Set `channel` to the channel you want and click *Save* (*Validate* before plugin 9.1.009).
 
    ![Channel setting](../Images/Channel_setting.png)
 
@@ -47,4 +52,4 @@ With a ZiGate, the `channel` setting is applied with a coordinator restart (*Adm
 
 ## Check the channel
 
-Go to *Tools > Tools* and click **Coordinator info**: the `Channel` field gives the current channel. See [Use the plugin tools](HowTo_Using-tools.md).
+The *Channel* card at the top of the *Admin* page, and the *Coordinator* card of *Admin > Coordinator*, give the current channel. You can also look at *Tools > Data*, **Coordinator information** (*Tools > Tools*, **Coordinator info**, before plugin 9.1.009): the `Channel` field. See [Use the plugin tools](HowTo_Using-tools.md).

@@ -32,7 +32,7 @@ At that stage, you have:
 
 ### Phase 2: Receive the Remote events in the plugin
 
-1. In the WebUI, go to **Admin > Group** and run a **Full scan** (or a **Scan** of the bulb only).
+1. In the WebUI, go to **Admin > Group** and click **Scan all** (or tick the bulb and click **Scan N selected**; **Full scan** or **Scan** before plugin 9.1.009).
    * The plugin asks the bulbs (and the other routers) which groups they belong to, and discovers the group created when pairing the Remote and the Bulb.
    * A Group widget is created in DomoticZ. This group widget commands the Bulb, so you can cross check that it is the right one.
 1. Go to **Management > Group Management**. The new group is listed with its **Group id**.

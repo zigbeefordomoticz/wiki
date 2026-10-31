@@ -5,7 +5,7 @@ Most Zigbee devices work with the plugin. Some are **optimized** (or *certified*
 ## Is my device optimized?
 
 * Look for it on [zigbee.blakadder.com](https://zigbee.blakadder.com/z4d.html), under the gateway **Zigbee for Domoticz**, or in the list of [certified devices](Info_Compatible-devices.md).
-* Once paired, check the *Optimized* column of *Management > Device Management* in the WebUI (green: optimized, orange: not optimized), or the *Optimized devices* chart of the Dashboard.
+* Once paired, check *Management > Device Management* in the WebUI (*Optimized* in green or *Not optimized* in orange under the model), or the *Optimized devices* bar of the Dashboard.
 
 Some optimized devices still need a specific setup: see the [Devices specifics](Readme.md#devices-specifics) pages.
 

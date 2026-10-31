@@ -4,16 +4,23 @@ The __Settings__ menu of the WebUI lets you view and change the plugin settings.
 
 ## How the page works
 
+> **Plugin 9.1.009 and later.** This section describes the Settings page available since plugin 9.1.009. In older versions, all the sections are shown one below the other, the changes are saved with **Validate**, and **Settings (default)** puts every setting back to its default.
+
 ![Settings](Images/EN_WebUI-Settings.png)
 *This picture may have changed since this documentation was written.*
 
-* The settings are grouped by theme, in the sections below.
-* By default, only the main settings are shown. Enable the **Advanced settings** switch to see all of them (the *Advanced parameters* tables below).
-* Change the values, then click **Validate** to save them. **Settings (default)** puts all settings back to their default value.
-* Some settings only take effect after a restart. After **Validate**, a pop-up tells you what is needed:
-  * **Plugin Reload**: restart the plugin (**Admin > Plugin > Restart**). The WebUI header also shows that a restart is pending.
+* The settings are grouped by theme, the sections below. The list on the left shows one theme at a time; a number next to a theme tells how many of its settings you changed and haven't saved yet.
+* **Search all settings** finds settings by name or by their text, in every theme. Each result shows the theme it belongs to.
+* By default, only the main settings are shown. Enable the **Advanced settings** switch to see all of them (the *Advanced parameters* tables below). A setting you changed stays shown when you switch it off.
+* Each setting shows its text, its name in the plugin and tags: *Advanced*, and what a change requires: *Restart* (plugin restart), *Coordinator reset* or *Erase PDM*.
+* When a value differs from the default, the default is shown under it, with a **reset** link that puts the default back.
+* **Changes to save**, on the right, lists each change with its old and new value, and what saving it implies (the highest of the changes: restart the plugin, reset the coordinator, or erase the coordinator memory and pair all the devices again). **Save (N)** saves them, **Discard** drops them. A value that is not valid (red field) blocks the saving.
+* **Reset all settings to defaults** puts every setting back to its default, except the folder paths. Nothing is saved until you click **Save**.
+* After **Save**, a pop-up tells you what is needed:
+  * **Plugin Reload**: restart the plugin (**Admin > Plugin > Restart…**). The *Restart needed* indicator of the menu bar also shows that a restart is pending.
   * **Coordinator Reset**: the coordinator must be reset (for example after a channel change).
   * **Erase PDM**: the Zigbee network must be created again, and all devices paired again.
+* **Every setting on the wiki** opens this page.
 * A few settings only appear with a given coordinator family (for example Silicon Labs EZSP or Texas Instruments ZNP); they are noted below.
 * The debug and logging options are not on this page: they are in **Tools > Debug**, see [Debug mode](Problem_Debuging-mode.md).
 * The settings are saved in `Conf/PluginConf-XX.json` in the plugin folder (XX is the hardware idx of the plugin in DomoticZ), with a copy in the DomoticZ database.

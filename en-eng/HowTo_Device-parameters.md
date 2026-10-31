@@ -2,14 +2,16 @@
 
 A number of parameters are available inside the plugin to customize the behavior of the plugin or the behavior of the device.
 
-By default, a Certified device get default parameters already initialized. If you want to customize, you have to go to the plugin Web Admin page,
-then go to Management -> Device Management and you will find for each device a Parameters icon ( right column ) > a popup will open :
+By default, a certified device gets its default parameters when it is paired. To change them, open the plugin WebUI, go to *Management > Device Management* and click the *Parameters* button of the device (last column). A side panel opens:
 
-![EN_WebUI-Device-management-parametres.png](../Images/EN_WebUI-Device-management-parametres.png)
+![Device parameters](Images/EN_WebUI-Management-Device-Parameters.png)
 
-You can edit this field, by adding, removing or updating attributes. Please make sure to follow the syntax:
+* in the **Fields** view, change a value, remove a parameter with ✕, or add one with *Add a parameter*;
+* in the **JSON** view, edit all the parameters as one JSON object, with double quotes: `{"parameter1": value, "parameter2": value}`.
 
-{ 'parameter1': value, 'parameter2': value .... }
+Then click *Save parameters*: they are sent to the device at its next heartbeat. See [WebUI Management](WebUI_Management.md#parameters) for the details of the panel.
+
+> **Before plugin 9.1.009**, the *Parameters* icon opens a window with a single text field, in the form `{'parameter1': value, 'parameter2': value}`.
 
 > **Note:** the parameter names below must be used exactly as written, including the few that are misspelled in the engine (e.g. `KeybadLockout`, `ZG204Z_MotionSensivity`, `SonOffTRVWindowDectection`). Using the corrected spelling would have no effect.
 
