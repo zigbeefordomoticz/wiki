@@ -94,7 +94,10 @@ A few things worth knowing:
 
 - **The file name does not matter.** The plugin reads the manufacturer code, image
   type and version out of the image header, so you can rename files freely. Keep only
-  `README.md` and firmware images in these folders.
+  `README.md` and firmware images in these folders. One exception, from plugin version
+  9.1.009: the firmware of the legacy Schneider Wiser devices (`EH-ZB-…`) is recognised
+  by its file name, keep it unchanged (see
+  [Schneider Wiser](Corner_Schneider_Wiser.md#firmware-update-of-the-legacy-devices)).
 - **Several brands can share a folder**, and that is fine — `Xiaomi`, `devbis` and
   `z03mmc` all read from `OTAFirmware/XIAOMI/`.
 - **The root is configurable.** `pluginOTAFirmware` (an advanced setting) can point
