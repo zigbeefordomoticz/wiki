@@ -40,7 +40,7 @@ The legacy Wiser devices (models `EH-ZB-…`) are updated from Schneider's own f
 
 The first file of a model (`EH_ZB_SNP_…`, or `EH_PZA_…` for `EH-ZB-SPD-V2`) is the Zigbee stack, the second one the application, as in Schneider's package. `EH-ZB-NANO` (the Schneider hub, a USB `.tar` image) is not updated by the plugin.
 
-- Copy the files to `OTAFirmware/SCHNEIDER-WISER/` and **keep their names**: unlike other firmware (see [Device firmware update](HowTo_Update-device-firmware.md)), the plugin recognises these files by their name.
+- Copy the files to `OTAFirmware/SCHNEIDER-WISER/` and **keep their names**: unlike other firmware (see [Update device firmware](HowTo_Update-device-firmware.md)), the plugin recognises these files by their name.
 - A legacy device is offered only the files of its model, in the order above. A file of another model, or a current Wiser file, is never offered to it.
 - The legacy files, and any file whose name starts with `EH_`, are never offered to another device. An `EH_…` file that is not in the table is offered to no device at all: the plugin log says so when the firmware folder is read.
 - A device whose model is not known yet is offered no Schneider (`0x105E`) firmware.
