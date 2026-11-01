@@ -2,7 +2,7 @@
 
 A number of parameters are available inside the plugin to customize the behavior of the plugin or the behavior of the device.
 
-By default, a certified device gets its default parameters when it is paired. To change them, open the plugin WebUI, go to *Management > Device Management* and click the *Parameters* button of the device (last column). A side panel opens:
+By default, a certified device gets its default parameters when it is paired. To change them, open the plugin WebUI, go to *Management > Devices* and click the *Parameters* button of the device (last column). A side panel opens:
 
 ![Device parameters](Images/EN_WebUI-Management-Device-Parameters.png)
 

@@ -65,7 +65,7 @@ Refer to the tutorial [Add a new device](HowTo_Pairing-device.md) for more infor
 ------------------------------------------------
 ## Group
 
-The __Group__ tab (*Admin > Group*) asks the routers which Zigbee groups they belong to, so that the plugin knows which device is in which group. The result also shows in *Management > Group Management*.
+The __Group__ tab (*Admin > Group*) asks the routers which Zigbee groups they belong to, so that the plugin knows which device is in which group. The result also shows in *Management > Groups*.
 
 ![Admin > Group](Images/EN_WebUI-Admin-Group.png)
 *This picture may have changed since this documentation was written.*
@@ -79,7 +79,7 @@ The plugin sends the requests (*Sending the requests…* is shown meanwhile), an
 
 The groups created via the plugin are seen in Domoticz as a single switch widget, whatever the number of devices in the group. An action on that switch is sent to all the devices of the group.
 
-Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)): until then, the tab only shows *Group management is off* and a link to the settings. Groups themselves are created and edited in *Management > Group Management* (see [Group Management](WebUI_Management.md#group-management)).
+Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)): until then, the tab only shows *Group management is off* and a link to the settings. Groups themselves are created and edited in *Management > Groups* (see [Group Management](WebUI_Management.md#group-management)).
 
 Refer to the tutorial [Group Management](HowTo_Group-management.md) for more information.
 

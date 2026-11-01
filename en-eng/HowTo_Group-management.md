@@ -37,21 +37,23 @@ The plugin creates a widget for every group found.
 
 ## Create a group
 
-1. Go to *Management > Group Management* (see [WebUI Management](WebUI_Management.md#group-management)).
+1. Go to *Management > Groups* (see [WebUI Management](WebUI_Management.md#group-management)).
+1. Click *New*.
 
-   ![Adding Group Management](../Images/AddingGroup.png)
+   ![Creating a group](Images/EN_WebUI-Management-Group-New.png)
 
-1. Click *Add a new Group*.
-1. Enter the name of the group: it becomes the name of the Domoticz widget.
-1. Select the devices (endpoints) of the group from the list. Use the small cross to remove one.
-1. If needed, tick *Coordinator (in the group)* (see below).
-1. Click *Validate*.
+1. Enter the *Group name*: it becomes the name of the Domoticz widget.
+1. Click the *Add a member* field and pick the devices (endpoints) of the group from the list. Type part of a name, model or short id to narrow it. Each one added shows in green, *added when you save*; *Undo* takes it back out.
+1. If needed, switch on *Coordinator is a member* (see below).
+1. Click *Save group*.
 
-The plugin sends the membership request to each device and creates the group widget in Domoticz. It can take a few seconds: refresh the page if the group doesn't show.
+The plugin gives the group the first free group id, sends the membership request to each device and creates the group widget in Domoticz. The page reads the groups again a few seconds later and opens the new group.
+
+Before plugin 9.1.009: *Management > Group Management*, *Add a new Group*, enter the name, select the devices in the drop-down, tick *Coordinator (in the group)* if needed, and click *Validate*. Refresh the page if the group doesn't show.
 
 ### Adding the coordinator to a group
 
-Tick *Coordinator (in the group)* when the coordinator must receive the commands sent to the group, so that the plugin sees them and updates the widgets. This is needed, for example, to receive the commands of an Ikea remote: see [Ikea remote](Corner_Ikea-Remote.md).
+Switch on *Coordinator is a member* (before plugin 9.1.009: tick *Coordinator (in the group)*) when the coordinator must receive the commands sent to the group, so that the plugin sees them and updates the widgets. This is needed, for example, to receive the commands of an Ikea remote: see [Ikea remote](Corner_Ikea-Remote.md).
 
 The coordinator can only belong to a limited number of groups: see [Coordinators](Coordinators.md#limited-number-of-groups).
 
@@ -65,21 +67,29 @@ A remote sends commands to a group; it isn't a member of it. So most remotes don
 
 ## Update a group
 
-1. Make sure all the devices of the group are connected to the network.
-1. Go to *Management > Group Management*.
-1. Add or remove devices of the group.
-1. Click *Validate*.
+1. Make sure all the devices of the group are connected to the network: the *Health* column of the members shows *Live* for them.
+1. Go to *Management > Groups* and click the group in the list.
+1. Change what you need:
+   * rename the group: the Domoticz widget is renamed too;
+   * add members with the *Add a member* field;
+   * click *Remove* on a member to take it out of the group (*Undo* to keep it);
+   * switch *Coordinator is a member* on or off.
+1. Click *Save group*. *Discard* drops your changes.
 
-As for the creation, the requests are sent to the devices and the change takes a few seconds.
+   ![Adding a member to a group](Images/EN_WebUI-Management-Group-Add-Member.png)
+
+As for the creation, the requests are sent to the devices and the change shows once they have answered. A device that is off keeps its old membership until then. Members the page can't offer for groups (a remote, a battery device without `GroupOnBattery`) are marked *not offered for groups now; kept as it is* and stay in the group when you save.
+
+Before plugin 9.1.009: *Management > Group Management*, add or remove devices in the drop-down of the group, and click *Validate*. Saving there could drop the members it couldn't list, such as a remote or a battery device.
 
 ## Delete a group
 
 Either:
 
 * delete the group widget in Domoticz;
-* or, in *Management > Group Management*, click the trash icon of the group and click *Validate*.
+* or, in *Management > Groups*, open the group, click *Delete group…* and confirm (before plugin 9.1.009: click the trash icon of the group in *Management > Group Management*, then *Validate*).
 
-The plugin asks each device of the group to leave the group.
+The plugin asks each device of the group to leave the group. When the last one has answered, it removes the group and its widget.
 
 ## Group settings
 

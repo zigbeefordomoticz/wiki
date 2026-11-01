@@ -2,16 +2,18 @@
 
 Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get access to the Web interface administration.
 
-The __Management__ menu contains the pages:
+The __Management__ menu opens the *Devices* page. A tab bar at the top switches between its two pages:
 
-* [Device Management](#device-management)
-* [Group Management](#group-management)
+* [Devices](#device-management): the devices paired with the plugin (*Management > Devices*)
+* [Groups](#group-management): the Zigbee groups (*Management > Groups*)
+
+Before plugin 9.1.009, *Management* is a drop-down menu with *Device Management* and *Group Management*.
 
 
 ------------------------------------------------
 ## Device Management
 
-The __Device Management__ page (*Management > Device Management*) lists all the devices paired with the plugin. From it you rename a device, set its parameters, enable or disable it, and open its details.
+The __Device Management__ page (*Management > Devices*) lists all the devices paired with the plugin. From it you rename a device, set its parameters, enable or disable it, and open its details.
 
 > **Plugin 9.1.009 and later.** This section describes the Device Management page available since plugin 9.1.009. In older versions, the page is a wide table with a *Del.* (trash) column, an *Optimized* icon to copy the device data, names typed in the table and saved with *Validate*, and a parameter window where the parameters are typed as one text.
 
@@ -148,23 +150,84 @@ The counters count what the plugin received, repeats included (a device that ret
 ------------------------------------------------
 ## Group Management
 
-The __Group Management__ page (*Management > Group Management*) is where you create and edit the Zigbee groups. Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)).
+The __Groups__ page (*Management > Groups*) is where you create and edit the Zigbee groups. Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)): until then, the page only shows *Group management is off* and a link to the settings.
+
+> **Plugin 9.1.009 and later.** This section describes the Groups page available since plugin 9.1.009. In older versions, the page (*Management > Group Management*) is one table of all the groups, with the devices of each group picked in a drop-down, a *Coordinator (in the group)* tick box, a trash icon to delete a group, *Add a new Group*, and one *Validate* button that saves every group at once.
 
 ![Group Management](Images/EN_WebUI-Management-Group.png)
 
 *This picture may have changed since this documentation was written.*
 
-### Columns
+The page has the key figures on top, the list of the groups on the left, and the editor of one group on the right. *Help on the wiki* opens this section.
+
+### Key figures
+
+| Figure | Content |
+|--------|---------|
+| Groups | The number of groups, and below it how many have the coordinator as a member. |
+| Devices in a group | The number of devices that belong to at least one group, and below it how many devices that can join a group are in no group yet. |
+| Needs attention | The number of groups with at least one member that is *Not reachable*, *Timed out* or *Not seen recently*. The figure turns yellow when it isn't 0. |
+| Membership scan | *Ready*, or *Running* while the plugin asks the routers which groups they belong to. Click it to open [Admin > Group](WebUI_Admin.md#group), where the scan is started. |
+
+### The group list
+
+Each group shows its name, its group id (4 hexadecimal digits), its number of members, *coordinator* when the coordinator is a member, and a status:
+
+* **OK**: every member answers;
+* **n not reachable**: n members are *Not reachable*, *Timed out* or *Not seen recently*. A remote that sleeps (see [the members](#the-members)) can show as *Timed out* and put its group here;
+* **No member**.
+
+The list is sorted by group id. **Search** keeps the groups whose name or id, or the name, model, short id (NwkId) or widget of a member, contains what you type.
+
+Click a group to open it in the editor. **New** opens an empty group.
+
+### The group editor
+
+* **Group name**: the name of the group and of its Domoticz widget. Renaming an existing group renames its widget.
+* **Group id**: the group address. For a new group, *given when you save*: the plugin picks the first free address from `0001`.
+* **Widget type**: the type of the group's Domoticz widget (for example *LvlControl* for covers or dimmable lights, *Plug* for plugs). The plugin chooses it from the members.
+* **Coordinator is a member**: switch it on when a remote is bound to this group. The coordinator then receives the remote's commands, so the plugin hears them and updates the group's widget. See [Adding the coordinator to a group](HowTo_Group-management.md#adding-the-coordinator-to-a-group).
+
+#### The members
+
+![Adding a member to a group](Images/EN_WebUI-Management-Group-Add-Member.png)
+
+*Adding a member to an existing group: the new member is marked in green until you save.*
 
 | Column | Content |
 |--------|---------|
-| Group id | The group address, 4 hexadecimal digits. |
-| Group name | The name of the group, given to the group's Domoticz widget when it is created. Required. |
-| Devices selected in the group | The device endpoints (widgets) that belong to the group. Pick them from the list. |
-| Coordinator (in the group) | Tick it to make the coordinator a member of the group too, so that it receives the commands sent to the group (for example by a remote bound to that group) and the plugin can update the widgets. |
-| *(trash icon)* | Delete the group. |
+| Widget | The Domoticz widget(s) of the member endpoint, or the device name when it has none. |
+| Device | The model of the device, and below it its short id (NwkId). |
+| Ep | The endpoint of the device that is in the group. A device with several endpoints (a double switch, for example) can have each one in a different group. |
+| Health | The health of the device, as in the [device list](#the-list). |
 
-*Add a new Group* adds an empty row; a group needs at least one device, or the coordinator. Click *Validate* to save your changes. When the changes need a plugin restart, the WebUI says so and the *Restart needed* indicator blinks in the menu bar until you restart the plugin.
+* **Remove** marks a member: it is struck through, *removed when you save*. **Undo** keeps it.
+* *Members* shows, on the right, how many members the group will have after saving.
+* A member marked *not offered for groups now; kept as it is* is a device the page doesn't offer for groups: most remotes (the IKEA RODRET, for example; the IKEA Tradfri round remote is offered), a battery device without the `GroupOnBattery` setting, or a device whose pairing isn't complete. It stays in the group when you save; you can still remove it.
+
+**Add a member**: click the field under the members. It lists every device endpoint that can still join the group, sorted by name, with its model, short id and endpoint. Type part of a name, model or short id to narrow the list. Click a row, or move with the arrow keys and press `Enter`, to add it: it shows in green, *added when you save*, and the list stays open for the next one. `Esc` closes the list. *Undo* takes an added member back out.
+
+The list offers lights, plugs, switches, covers and thermostats paired with the plugin. Battery devices only appear with the `GroupOnBattery` setting (see [How Zigbee groups work](HowTo_Group-management.md#how-zigbee-groups-work)). *Every device that can join is already in this group* means there is nothing left to add.
+
+#### Save, discard, delete
+
+![Creating a group](Images/EN_WebUI-Management-Group-New.png)
+
+*Creating a group: the group id is given when you save.*
+
+The editor counts your changes (*Unsaved changes: n*: name, coordinator, each member added or removed). The buttons act on this group only:
+
+* **Save group**: sends the group to the plugin. A group needs a name and at least one member, or the coordinator: otherwise the button stays grey and the page says so.
+* **Discard**: goes back to the group as the plugin has it.
+* **Delete group…** (existing groups only): asks for confirmation. Each member is then asked to leave the group; when the last one has answered, the plugin removes the group and its Domoticz widget.
+
+If you click another group, or *New*, with unsaved changes, the page asks first: *Keep editing* or *Discard*.
+
+### After saving
+
+The plugin sends the change to each member. A membership changes when the device answers, so the page reads the groups again just after saving, then after 3 and 8 seconds, and says so: *Sent to the devices…*. A device that is off keeps its old membership until it answers. To check what each router really has, run a membership scan in [Admin > Group](WebUI_Admin.md#group).
+
+When the change needs a plugin restart, the message says so and the *Restart needed* indicator blinks in the menu bar until you restart the plugin.
 
 Refer to the section [How to manage groups](HowTo_Group-management.md) for more information.
 

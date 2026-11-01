@@ -101,7 +101,7 @@ The commands below are those of plugin 9.1.007 (`stable9`).
 
 | Command | Verbs | Description |
 | ------- | ----- | ----------- |
-| `zgroup` | GET, PUT | The groups and their members; PUT saves the groups (*Management > Group Management*). |
+| `zgroup` | GET, PUT | The groups and their members; PUT saves the groups (*Management > Groups*). |
 | `zgroup-list-available-device` | GET | The device endpoints that can be put in a group. |
 | `rescan-groups` | GET | Ask every router for its group memberships (*Admin > Group*, *Full scan*). |
 | `scan-device-for-grp` | PUT | Scan some devices only: a JSON list of NwkIds. |

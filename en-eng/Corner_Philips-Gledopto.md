@@ -13,7 +13,7 @@ Polling is a **per-device** setting: the [device parameter](HowTo_Device-paramet
 
 To change it for a light:
 
-1. Open the plugin WebUI and go to **Management > Device Management**.
+1. Open the plugin WebUI and go to **Management > Devices**.
 1. Click the **Parameters** button of the light (last column).
 1. Set `OnOffPollingFreq` to the value you want, for example `120` to poll every 2 minutes, and click **Save parameters**. Keep the other parameters of the device as they are.
 

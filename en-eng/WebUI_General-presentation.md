@@ -21,7 +21,7 @@ The menu bar at the top of every page gives access to the following sections:
 | Menu | Entries | Purpose |
 |------|---------|---------|
 | *(plugin name)* | — | [Dashboard](WebUI_Dashboard.md): overview of the plugin, the coordinator and the network. The menu shows the name you gave the plugin hardware in Domoticz. |
-| [Management](WebUI_Management.md) | Device Management, Group Management | List, rename and configure the paired devices and the Zigbee groups |
+| [Management](WebUI_Management.md) | Devices, Groups (tabs) | List, rename and configure the paired devices and the Zigbee groups |
 | [Network](WebUI_Network.md) | Topology, [Mesh graph](WebUI_Network-Mesh.md) (from plugin 9.1.008), Interference level | Neighbour tables of the mesh, the mesh drawn as a graph, and an energy scan of the Zigbee channels |
 | [Admin](WebUI_Admin.md) | Plugin, Provisionning, Group, Coordinator, Firmware | One page with a status bar and five tabs (from plugin 9.1.009; a drop-down menu before). *Plugin*: upgrade and restart the plugin. *Provisionning*: open the network for pairing, full-reset pairing, recreate widgets. *Group*: ask the routers for their groups. *Coordinator*: coordinator details, change the Zigbee channel, soft reset (ZiGate). *Firmware*: device firmware updates (OTA). |
 | [Settings](WebUI_Settings.md) | — | The plugin settings |

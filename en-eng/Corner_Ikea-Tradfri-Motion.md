@@ -27,14 +27,14 @@ When finished, the red light in the MS switches, the bulb flashes, and the WO ma
 The MS sends its commands to a Zigbee group, created when you paired it with the bulb or WO. To get the motion events in DomoticZ, the coordinator must be a member of that group.
 
 1. In the WebUI, go to **Admin > Group** and click **Scan all** (or tick the bulb or WO and click **Scan N selected**; **Full scan** or **Scan** before plugin 9.1.009). The routers answer over the next minutes. The plugin finds the new group and creates a group widget in DomoticZ.
-1. Go to **Management > Group Management**: the new group is in the list.
-1. Check **Coordinator (in the group)** for this group and click **Validate**.
+1. Go to **Management > Groups**: the new group is in the list. Click it.
+1. Switch on **Coordinator is a member** and click **Save group** (before plugin 9.1.009: check **Coordinator (in the group)** and click **Validate**).
 
 Whenever movement is detected, the MS switches on the bulb or WO. The status of the bulb, the WO and the MS widget change. Depending on the settings of the MS, it switches off after the set time.
 
 ## 5. Making the Motion Sensor a standalone device
 
-The MS can be made standalone by removing the bulb or WO from the group in **Management > Group Management**, keeping **Coordinator (in the group)** checked. After validating, the group still exists, with only the coordinator in it. The motion sensor still sends to this group in the background: its status changes can be seen in the MS widget.
+The MS can be made standalone by removing the bulb or WO from the group in **Management > Groups** (**Remove**, then **Save group**), keeping **Coordinator is a member** on (**Coordinator (in the group)** before plugin 9.1.009). After saving, the group still exists, with only the coordinator in it. The motion sensor still sends to this group in the background: its status changes can be seen in the MS widget.
 
 Now it is possible to use the MS in a script (Lua, dzVents or Blockly). This way you are not bound to Zigbee products and you can use it with devices running other protocols (Z-Wave, wifi, mqtt or 433MHz).
 

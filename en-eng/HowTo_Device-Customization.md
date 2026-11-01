@@ -226,7 +226,7 @@ To do so, you have to create a 'config' file under the `Conf/Local-Devices` fold
 
 1. First you need to extract raw device information from the plugin.
 
-   1. open the WebUI and go to *Management > Device Management* (see [WebUI Management](WebUI_Management.md#device-management)).
+   1. open the WebUI and go to *Management > Devices* (see [WebUI Management](WebUI_Management.md#device-management)).
 
    1. the devices shown as *Not optimized* (in orange, under the model) have no configuration file for the plugin, and their behavior might not be optimum. The *Not optimized* filter lists them.
 

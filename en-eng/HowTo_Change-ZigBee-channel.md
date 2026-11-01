@@ -34,7 +34,7 @@ The routers (mains-powered devices) receive the broadcast and follow. End device
 * Zigbee 3.0 end devices look for the network on the other channels when they wake up and no longer reach their parent, and rejoin it;
 * older end devices don't: **reset them** to make them rejoin the network on the new channel (see [Add a new device](HowTo_Pairing-device.md)).
 
-Wait a while, then check in *Management > Device Management* which devices don't report any more.
+Wait a while, then check in *Management > Devices* which devices don't report any more.
 
 ## Method 2: form a new network on the chosen channel
 

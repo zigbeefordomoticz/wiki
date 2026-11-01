@@ -13,7 +13,7 @@ The messages from the source to the target travel through the Zigbee network. If
 ## Before you start
 
 * Pair both devices (see [Add a new device](HowTo_Pairing-device.md)) and check that each one works from Domoticz.
-* Give each device a friendly name in *Management > Device Management* (see [WebUI Management](WebUI_Management.md#device-management)): the binding page lists the devices by name.
+* Give each device a friendly name in *Management > Devices* (see [WebUI Management](WebUI_Management.md#device-management)): the binding page lists the devices by name.
 
 ## Create a binding
 

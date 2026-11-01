@@ -15,4 +15,4 @@ This is how these devices behave: when they rejoin the network, they may get a n
 
 ## Aqara vibration sensor: change the sensitivity
 
-Set the `vibrationAqarasensitivity` device parameter to `'high'`, `'medium'` or `'low'` in *Management > Device Management*, parameter editor (see [Device parameters](../HowTo_Device-parameters.md)).
+Set the `vibrationAqarasensitivity` device parameter to `'high'`, `'medium'` or `'low'` in *Management > Devices*, parameter editor (see [Device parameters](../HowTo_Device-parameters.md)).

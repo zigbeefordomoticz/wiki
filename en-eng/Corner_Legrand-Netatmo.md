@@ -42,7 +42,7 @@ If a device has trouble joining, enable the `LegrandCompatibilityMode` setting (
 
 ## Device parameters
 
-The Legrand options are **device parameters**, set per device in *Management > Device Management*, parameter editor (see [Device parameters](HowTo_Device-parameters.md#legrand--netatmo)). They replace the old global settings `EnableLedIfOn`, `EnableLedInDark`, `EnableDimmer`…
+The Legrand options are **device parameters**, set per device in *Management > Devices*, parameter editor (see [Device parameters](HowTo_Device-parameters.md#legrand--netatmo)). They replace the old global settings `EnableLedIfOn`, `EnableLedInDark`, `EnableDimmer`…
 
 | Parameter | Use | Devices |
 | --------- | --- | ------- |
@@ -59,16 +59,16 @@ A Legrand remote switch can command a micromodule or a switch directly, without 
 
 ## Using a remote with a group
 
-A Legrand remote switch is never a *member* of a Zigbee group: it has no Groups cluster, and it sends commands rather than receiving them. So it doesn't appear in *Management > Group Management*, even with `GroupOnBattery` enabled. Instead, the remote is given a group address, and it sends its on, off and dimming commands to that group.
+A Legrand remote switch is never a *member* of a Zigbee group: it has no Groups cluster, and it sends commands rather than receiving them. So it can't be added in *Management > Groups*, even with `GroupOnBattery` enabled. Instead, the remote is given a group address, and it sends its on, off and dimming commands to that group.
 
 The plugin does this when the remote is paired. The remote asks for a group, and the plugin gives it one from a reserved range, starting at `fefe` and going down (`fefd`, `fefc`…). A double gang remote gets one group per gang. The plugin also creates the group widget in Domoticz, named `Zigate Group fefe` (with the group's own address).
 
 To have the remote command your lights:
 
 1. Pair the remote (see [Pairing](#pairing)).
-1. Go to *Management > Group Management* (see [Manage Zigbee groups](HowTo_Group-management.md#update-a-group)). The group `Zigate Group fefe` is listed with no device selected: the remote itself isn't shown, which is expected.
-1. Add the lights or switches the remote must command, and rename the group if you want.
-1. Click *Validate*.
+1. Go to *Management > Groups* (see [Manage Zigbee groups](HowTo_Group-management.md#update-a-group)). Click the group `Zigate Group fefe`. The remote is listed as its member, marked *not offered for groups now; kept as it is*: it is the device that sends to the group, and the page keeps it when you save. Before plugin 9.1.009, the group is listed with no device selected, and the remote isn't shown.
+1. Add the lights or switches the remote must command with the *Add a member* field, and rename the group if you want.
+1. Click *Save group* (*Validate* before plugin 9.1.009).
 
 The devices of the group now follow the remote directly, without going through Domoticz.
 

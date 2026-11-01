@@ -32,7 +32,7 @@ A device request opened on Domoticz-Zigbee is not a bug: it will be redirected t
 
 Open an issue on [z4d-certified-devices](https://github.com/zigbeefordomoticz/z4d-certified-devices/issues) when:
 
-* you paired a device that is **not optimized** yet: *Not optimized* under its model in *Management > Device Management* (the orange icon of the *Optimized* column before plugin 9.1.009), or the log message `We have detected a working device ... not optimized with the plugin`;
+* you paired a device that is **not optimized** yet: *Not optimized* under its model in *Management > Devices* (the orange icon of the *Optimized* column before plugin 9.1.009), or the log message `We have detected a working device ... not optimized with the plugin`;
 * an optimized device needs an update: a widget is missing, a value is wrong, or a new firmware or model variant doesn't behave like the one already known.
 
 See [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md) for the complete procedure.
@@ -135,7 +135,7 @@ The `Python/zigpy...` modules show the messages of the zigpy library itself. The
 ### A device on z4d-certified-devices
 
 * The product name and brand, and a link to the product page or where you bought it.
-* The discovery data: in *Management > Device Management*, click the device row, then *Copy device info* in its details (before plugin 9.1.009: click the orange icon of the device in the *Optimized* column). It is copied to the clipboard.
+* The discovery data: in *Management > Devices*, click the device row, then *Copy device info* in its details (before plugin 9.1.009: click the orange icon of the device in the *Optimized* column). It is copied to the clipboard.
 * What works, what doesn't, and what you expect.
 * The pairing log, with the `Pairing` debug modules enabled (see [above](#4-use-the-debug-parameters)).
 * If asked: the device data, from *Tools > Data*, **Devices (raw)**, *Download* (`z4d-zdevice-raw.json`; before plugin 9.1.009: *Tools > Tools*, **Plugin Raw Devices**, then *Export*, `export.json`).
