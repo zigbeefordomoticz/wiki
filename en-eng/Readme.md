@@ -107,6 +107,7 @@ Devices that need a specific setup or have known limits, by brand.
 A device doesn't pair, doesn't report, or the plugin shows errors: start here.
 
 * [Troubleshooting pairing or connection](Troubleshooting_Pairing.md)
+* [A device shows a low LQI: a worked case](Troubleshooting_Low-LQI.md) — find the weak link: the device, its parent router, or the coordinator
 * [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md)
 * [Deal with plugin errors](HowTo_Dealing-plugin-errors.md)
 * [Debug mode](Problem_Debuging-mode.md)

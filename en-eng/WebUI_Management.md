@@ -117,6 +117,8 @@ So a link can show a good RSSI and a poor LQI (a strong but disturbed signal), a
 
 To see the quality of each link in the mesh, including the device's own link to its parent, use the neighbour tables of a topology scan: [Network > Mesh](WebUI_Network-Mesh.md#a-note-on-lqi). For the path a device's messages take, see [Computed routes](WebUI_Network-Mesh.md#computed-routes).
 
+For a worked example, from a low LQI in the device list to the link that is actually weak, see [A device shows a low LQI: a worked case](Troubleshooting_Low-LQI.md).
+
 **Where the values come from.**
 
 | Coordinator | LQI | RSSI |
