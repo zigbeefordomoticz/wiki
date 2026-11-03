@@ -20,6 +20,32 @@ The legacy Wiser devices (models `EH-ZB-…`) need specific settings and a netwo
 
 The device parameters of the Wiser devices (room number, thermostat lock, open-window detection, shutter travel time, override) are listed in [Device parameters](HowTo_Device-parameters.md#schneider-wiser).
 
+## Firmware update of the legacy devices
+
+> Plugin version **9.1.009** and later. Earlier versions match a firmware file on the manufacturer code and image type only, and can offer a legacy file to the wrong model: do not put legacy firmware files in the firmware folder with an earlier version.
+
+The legacy Wiser devices (models `EH-ZB-…`) are updated from Schneider's own firmware package (`WU.EH.R.04.05.08`). Its `OTADEF.xml` file says which file goes to which model. These files use the same manufacturer code (`0x105E`) as the current Wiser range, and their image type does not tell one model from another, so the plugin uses that list instead:
+
+| Model | Firmware files, in install order |
+| --- | --- |
+| `EH-ZB-RTS` (Wiser Thermostat) | `EH_ZB_SNP_R_04_01_14_RTS.zigbee`, then `EH_RTS_R_04_01_00.zigbee` |
+| `EH-ZB-HACT` (Wiser H-Relay) | `EH_ZB_SNP_R_04_01_14_HACT.zigbee`, then `EH_HAC_R_04_01_02.zigbee` |
+| `EH-ZB-LMACT` (Wiser L-Relay) | `EH_ZB_SNP_R_04_01_14_LACT.zigbee`, then `EH_LAC_R_04_01_02.zigbee` |
+| `EH-ZB-SPD` (Wiser Smart Plug FR) | `EH_ZB_SNP_R_04_01_14_SPD.zigbee`, then `EH_SPD_R_04_01_02.zigbee` |
+| `EH-ZB-SPD-V2` (Wiser Smart Plug DK) | `EH_PZA_R_03_02_64.zigbee`, then `EH_PMA_R_03_00_26.zigbee` |
+| `EH-ZB-UIO` | `EH_UIO_R_04_01_18.zigbee` |
+| `EH-ZB-ECOBUTTON` | `EH_ZB_SNP_R_04_01_14_ECO.zigbee`, then `EH_ECO_R_03_03_12.zigbee` |
+| `EH-ZB-BMS` (Wiser S-Meter) | `EH_ZB_SNP_R_04_01_14_BMS.zigbee`, then `CTC.R.03.00.10.zigbee` |
+| `EH-ZB-VACT` (Wiser Radiator Thermostat) | `EH_ZB_SNP_R_04_01_14_VACT.zigbee`, then `EH_VAC_R_04_00_02.zigbee` |
+
+The first file of a model (`EH_ZB_SNP_…`, or `EH_PZA_…` for `EH-ZB-SPD-V2`) is the Zigbee stack, the second one the application, as in Schneider's package. `EH-ZB-NANO` (the Schneider hub, a USB `.tar` image) is not updated by the plugin.
+
+- Copy the files to `OTAFirmware/SCHNEIDER-WISER/` and **keep their names**: unlike other firmware (see [Update device firmware](HowTo_Update-device-firmware.md)), the plugin recognises these files by their name.
+- A legacy device is offered only the files of its model, in the order above. A file of another model, or a current Wiser file, is never offered to it.
+- The legacy files, and any file whose name starts with `EH_`, are never offered to another device. An `EH_…` file that is not in the table is offered to no device at all: the plugin log says so when the firmware folder is read.
+- A device whose model is not known yet is offered no Schneider (`0x105E`) firmware.
+- In **Admin → Firmware**, picking a legacy file for a device of another model is refused with *This firmware is not for this device model*.
+
 The rest of this page gathers the protocol findings made in 2020-2021, with a ZiGate coordinator, while integrating the legacy Wiser devices.
 
 ## Wiser Smeter
