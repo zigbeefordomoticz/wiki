@@ -30,6 +30,7 @@ UNITS = {
     "ForceDeviceTimedOut_afterXhours": "h", "checkConfigurationReporting": "s", "resetMotiondelay": "s",
     "resetSwitchSelectorPushButton": "s", "pingDevicesFeq": "s",
     "GrpmoveToColourTemp": "1/10 s", "GrpmoveToColourRGB": "1/10 s", "GrpmoveToLevel": "1/10 s",
+    "HealthTimeOut": "s",
 }
 
 NOTES = {
@@ -46,7 +47,6 @@ NOTES = {
     "OverWriteCoordinatorIEEEOnlyOnce": "Shown with Silicon Labs (EZSP) coordinators only.",
     "autoBackup": "See [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md) and [Plugin Backup](Plugin_Backup.md).",
     "autoRestore": "Used when you replace the coordinator by a new one of the same family.",
-    "BackupFullDevices": "Shown with Texas Instruments (ZNP) coordinators only.",
     "EzspAllowUnsecuredRejoins": "Shown with Silicon Labs (EZSP) coordinators only.",
     "BellowsNoMoreEndDeviceChildren": "Shown with Silicon Labs (EZSP) coordinators only. End devices then pair through a router.",
     "autoServeOTA": "See [Upgrading device firmware](HowTo_Update-device-firmware.md).",
@@ -57,6 +57,8 @@ NOTES = {
     "Lang": "Also the language of the selector levels of some widgets created after the change.",
     "ForceDeviceTimedOut_afterXhours": "0 disables.",
     "checkConfigurationReporting": "75600 s = 21 hours. 0 disables.",
+    "HealthTimeOut": "21600 s = 6 hours (21200 s before plugin 9.1.009). 0 disables. A device's own `HealthTimeOut` parameter (Device Management, parameters), when above 0, overrides it for that device. Devices silent for longer are counted as *Not seen for n h* on the [Dashboard](WebUI_Dashboard.md#needs-attention).",
+    "ZigpyTopologyAssociatedDevices": "A zigpy topology scan also collects the devices attached to each router; the scan then takes longer. The *Associated devices* button collects them on its own, see [Network](WebUI_Network.md) and [Associated devices](WebUI_Network-Mesh.md#associated-devices-a-router-and-what-is-attached-to-it).",
     "resetConfigureReporting": "One shot: the plugin clears it after the restart.",
     "resetReadAttributes": "One shot: the plugin clears it after the restart.",
     "forceSwitchSelectorPushButton": "See [domoticz/domoticz#4143](https://github.com/domoticz/domoticz/issues/4143).",
