@@ -32,8 +32,8 @@ The Ikea remote controls and the motion sensor don't send their commands to the 
 1. Enable the group management, if not yet done (__Enable Groups__ in the WebUI [Settings](WebUI_Settings.md), restart needed).
 1. Pair the bulb (or outlet) and the remote (or motion sensor) with the coordinator.
 1. Pair the remote (or motion sensor) with the bulb (see below). This creates the group.
-1. In **Admin > Group**, run a **Full scan** (or a **Scan** of the bulb only): the plugin asks the routers which groups they belong to, and finds the new group. The group gets its own widget in DomoticZ.
-1. In **Management > Group Management**, check **Coordinator (in the group)** for this group and click **Validate**.
+1. In **Admin > Group**, click **Scan all** (or tick the bulb and click **Scan N selected**; **Full scan** or **Scan** before plugin 9.1.009): the plugin asks the routers which groups they belong to, and finds the new group. The group gets its own widget in DomoticZ.
+1. In **Management > Groups**, open this group, switch on **Coordinator is a member** and click **Save group** (before plugin 9.1.009: check **Coordinator (in the group)** and click **Validate**).
 
 From then on, each action on the remote or the motion sensor is visible on its widget, and you can use it in Blockly, dzVents or Lua scripts.
 
@@ -63,12 +63,12 @@ Once reset, the switch controls group 0x0000 (which is also used by Xiaomi plugs
 1. Make sure that the coordinator is a member of group 0000
 
    * With a Silicon Labs (EZSP) coordinator, enable __Create Group 0000__ (`zigatePartOfGroup0000`) in the WebUI Settings (advanced settings, Group management section), then restart the plugin.
-   * Otherwise, add the coordinator to group 0000 in **Management > Group Management** (**Coordinator (in the group)**).
+   * Otherwise, add the coordinator to group 0000 in **Management > Groups** (**Coordinator is a member**; **Coordinator (in the group)** before plugin 9.1.009).
 
 1. To add devices to the group
 
    * Don't use the pairing button of the switch to pair devices, otherwise you'll lose the link with the coordinator and the events in DomoticZ.
-   * Add the devices to group 0000 in **Management > Group Management**.
+   * Add the devices to group 0000 in **Management > Groups**.
 
 [More info](Corner_Ikea-Remote.md)
 
@@ -112,10 +112,10 @@ After steps 1-3, the remote can be used by receiving the button presses in Domot
 
 With the following additional steps, the remote controls the blind(s) directly, through a group, and DomoticZ scripting is not necessary:
 
-1. In the WebUI, **Management > Group Management**, press **Add a new Group** and select the blind(s) in the group. Press **Validate**: the group is created. Refresh the page to see the created group, and note its **Group id**.
+1. In the WebUI, **Management > Groups**, press **New**, enter a name and add the blind(s) with the **Add a member** field. Press **Save group**: the group is created, and the page opens it a few seconds later. Note its **Group id**. (Before plugin 9.1.009: **Add a new Group**, select the blind(s), **Validate**, then refresh the page.)
    * A DomoticZ group widget is also created.
 1. Bind the remote to this group. There is no WebUI page for group binding, so use the plugin REST API, for example with curl from the DomoticZ host:
-   * Find the remote IEEE address in **Management > Device Management**. We use the IEEE address `680ae2fffeaae6cb` in this example.
+   * Find the remote IEEE address in **Management > Devices**. We use the IEEE address `680ae2fffeaae6cb` in this example.
    * Unbind the remote from its default group `0000`:
 
      ```bash
@@ -128,10 +128,10 @@ With the following additional steps, the remote controls the blind(s) directly, 
      curl -X PUT -d '{"sourceIeee":"680ae2fffeaae6cb", "sourceEp": "01", "groupId": "0002", "cluster": "0102"}' http://127.0.0.1:9440/rest-z4d/1/binding-group
      ```
 
-   * The remote doesn't appear in the Group Management page, but if everything went well it controls the blind(s) in the group.
+   * The remote doesn't appear in *Management > Groups*, but if everything went well it controls the blind(s) in the group.
 
 Test that the remote controls the blind(s), and that the blind DomoticZ widget controls the blind.
-If you need to read the remote button presses from its DomoticZ widget, add the coordinator to the same group as the blinds (**Coordinator (in the group)** in Group Management).
+If you need to read the remote button presses from its DomoticZ widget, add the coordinator to the same group as the blinds (**Coordinator is a member** in *Management > Groups*; **Coordinator (in the group)** before plugin 9.1.009).
 
 If you need to redo the grouping of the remote, it is best to remove it from the plugin (remove the DomoticZ widget), pair it again (step 3 of the first list) and bind it to the group again.
 

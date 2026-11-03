@@ -36,7 +36,7 @@ Most Python scripts accept `--help`. With Docker, run them inside the container 
 
 ### plugin-auto-upgrade.sh
 
-Updates the plugin: `git pull` of the plugin folder, then installation of the Python modules listed in `requirements.txt` (`pip install -r requirements.txt --upgrade`). It is the script run by *Admin > Plugin > Plugin Upgrade* in the WebUI (see [Admin](WebUI_Admin.md)), and by `customstart.sh` in a new Docker container.
+Updates the plugin: `git pull` of the plugin folder, then installation of the Python modules listed in `requirements.txt` (`pip install -r requirements.txt --upgrade`). It is the script run by *Admin > Plugin > Upgrade* in the WebUI (see [Admin](WebUI_Admin.md)), and by `customstart.sh` in a new Docker container.
 
 ```bash
 ./Tools/plugin-auto-upgrade.sh

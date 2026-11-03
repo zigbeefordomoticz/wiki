@@ -31,7 +31,7 @@ For a Wiser Home thermostat (CCTFR6400) that doesn't communicate, enable `Wiser2
 
 The extended PAN ID is only applied when the coordinator forms a new network. **Changing it erases the network: all the devices already paired must be paired again**, whatever their brand. The other brands (Ikea, Philips, Xiaomi, Tuya…) work fine on a network with a Wiser extended PAN ID, so if you plan to use legacy Wiser devices, set it before pairing anything.
 
-1. Set `extendedPANID` (and the other settings above) and click *Validate*.
+1. Set `extendedPANID` (and the other settings above) and click *Save* (*Validate* before plugin 9.1.009).
 1. Turn the `autoRestore` setting off (*Zigpy CIE specific configuration*, advanced): otherwise the plugin restores the last coordinator backup, with the old extended PAN ID, instead of forming a new network.
 1. Form a new network: in Domoticz, *Setup > Hardware*, select the plugin hardware, set *Initialize Coordinator* to *True* and click *Update* (see [Plugin settings](Plugin_Settings.md); if the network isn't formed, see [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md)).
 1. The plugin forms the network, then sets *Initialize Coordinator* back to *False* and restarts by itself; check it in the hardware list, and set it back yourself if needed.

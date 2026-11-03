@@ -5,7 +5,7 @@ Tips for the Aqara (Xiaomi Lumi) devices that need a specific setup with the plu
 * [Opple wireless switches](#opple-wireless-switches)
 * [Presence detector FP1 (RTCZCGQ11LM)](#presence-detector-fp1-rtczcgq11lm)
 
-The device parameters mentioned on this page are set per device in *Management > Device Management*, parameter editor: see [Device parameters](HowTo_Device-parameters.md).
+The device parameters mentioned on this page are set per device in *Management > Devices*, parameter editor: see [Device parameters](HowTo_Device-parameters.md).
 
 ## Opple wireless switches
 

@@ -64,7 +64,7 @@ To get a useful answer quickly, give from the start:
 * Your system (OS and version, Raspberry Pi model, Docker or not), the DomoticZ version and the Python version DomoticZ uses (__Setup > About__).
 * The plugin version (shown at the bottom of the WebUI) and your coordinator (model and firmware).
 * What you did, what you expected and what happened.
-* The [plugin log](#q2-where-are-the-logs-) from the plugin start, and the error history exported from __WebUI > Tools > Error(s)__ (see [Deal with plugin errors](HowTo_Dealing-plugin-errors.md)).
+* The [plugin log](#q2-where-are-the-logs-) from the plugin start, and the error history downloaded from __WebUI > Tools > Errors__ (*Tools > Error(s)* before plugin 9.1.009, see [Deal with plugin errors](HowTo_Dealing-plugin-errors.md)).
 
 ------------
 
@@ -544,4 +544,4 @@ DomoticZ refused to create a widget for a device. The plugin keeps the device an
 
 1. In DomoticZ, __Setup > Settings > System__, check that __Accept new Hardware Devices__ is enabled (see [Add a new device](HowTo_Pairing-device.md#before-you-start-let-domoticz-accept-new-devices)).
 1. Look in the DomoticZ log, at the same time, for the reason DomoticZ gave.
-1. Then restart the plugin, or use __Recreate widget__ in [WebUI > Admin > Pairing](WebUI_Admin.md#pairing) to create the widgets of the device again.
+1. Then restart the plugin, or use __Recreate widget__ in [WebUI > Admin > Provisionning](WebUI_Admin.md#pairing) to create the widgets of the device again.

@@ -32,11 +32,11 @@ At that stage, you have:
 
 ### Phase 2: Receive the Remote events in the plugin
 
-1. In the WebUI, go to **Admin > Group** and run a **Full scan** (or a **Scan** of the bulb only).
+1. In the WebUI, go to **Admin > Group** and click **Scan all** (or tick the bulb and click **Scan N selected**; **Full scan** or **Scan** before plugin 9.1.009).
    * The plugin asks the bulbs (and the other routers) which groups they belong to, and discovers the group created when pairing the Remote and the Bulb.
    * A Group widget is created in DomoticZ. This group widget commands the Bulb, so you can cross check that it is the right one.
-1. Go to **Management > Group Management**. The new group is listed with its **Group id**.
-1. Check **Coordinator (in the group)** for this group and click **Validate**.
+1. Go to **Management > Groups**. The new group is listed with its **Group id**: click it.
+1. Switch on **Coordinator is a member** and click **Save group** (before plugin 9.1.009: check **Coordinator (in the group)** and click **Validate**).
 
 ### Phase 3: Testing
 
@@ -46,11 +46,11 @@ If you want to trigger actions based on the Remote, you can use Blockly, dzVents
 ### Option 1: Make Left/Right buttons change the Color schema of the group
 
 The plugin can also 'natively' interpret the Left and Right buttons and change the color of the group the remote belongs to.
-To enable this feature, edit the group in **Management > Group Management**, add the Tradfri Remote to the devices of the group, and click **Validate**.
+To enable this feature, open the group in **Management > Groups**, add the Tradfri Remote with the **Add a member** field, and click **Save group** (**Validate** before plugin 9.1.009).
 
 ### Option 2: Remove the Bulb from the group
 
-If you want to use the Remote only as a remote control, without the bulb involved at all, remove the Bulb from the group: edit the group in **Management > Group Management**, remove the bulb from the devices of the group, keep **Coordinator (in the group)** checked, and click **Validate**.
+If you want to use the Remote only as a remote control, without the bulb involved at all, remove the Bulb from the group: open the group in **Management > Groups**, click **Remove** on the bulb, keep **Coordinator is a member** on, and click **Save group** (before plugin 9.1.009: remove the bulb from the devices of the group, keep **Coordinator (in the group)** checked, and click **Validate**).
 
 The group then only contains the coordinator: the remote events still reach DomoticZ, and nothing is switched directly by the remote.
 

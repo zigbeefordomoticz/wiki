@@ -90,7 +90,7 @@ The firmware and the board (antenna, external amplifier) also matter: two sticks
 1. Set `TXpower_set`:
    * Texas Instruments, Silicon Labs: the power in dBm, or `0` to keep the coordinator's own;
    * ZiGate V1: one of the 4 levels in the list.
-1. Click *Validate*.
+1. Click *Save* (*Validate* before plugin 9.1.009).
 1. On Silicon Labs and ZiGate V1, restart the plugin.
 
 The `Certification` setting (CE or FCC) is only sent to ZiGate coordinators. It doesn't limit the TX power of the other coordinators.

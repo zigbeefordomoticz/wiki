@@ -19,11 +19,11 @@ The plugin can be updated from its own administration page. This is the recommen
 
 * Open the plugin Web Interface.
 * Go to section [Admin > Plugin](WebUI_Admin.md#plugin).
-* Click on the button **Start upgrade (can take several minutes)**.
+* Click on the button **Upgrade** (**Start upgrade (can take several minutes)** before plugin 9.1.009).
 
   The plugin pulls the latest version of the branch you are on, then installs or upgrades the Python modules listed in `requirements.txt`. A box appears with the output of the update, as if you were running it from a terminal.
 
-* When the update succeeds, the WebUI shows "You can restart the plugin now": click on the **Restart** button.
+* When the update succeeds, the WebUI shows *Done. Restart the plugin to use the new version.*: click on **Restart now** (before plugin 9.1.009: "You can restart the plugin now", then the **Restart** button).
 
 If the update fails, read the output in the box, then update manually.
 

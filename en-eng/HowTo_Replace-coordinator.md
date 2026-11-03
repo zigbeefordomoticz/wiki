@@ -22,7 +22,7 @@ For example a Sonoff ZBDongle-P replaced by another Texas Instruments coordinato
 1. **Silicon Labs only:** enable `OverWriteCoordinatorIEEEOnlyOnce` in the WebUI *Settings* (*Zigpy CIE specific configuration*, advanced, shown with Silicon Labs coordinators) before starting with the new dongle. The coordinator IEEE address of the backup is written into the new dongle; this can only be done once per dongle.
 1. Start the plugin. With `autoRestore` on (default), the plugin finds a blank coordinator, restores the most recent backup onto it, and starts the same network: same PAN ID, channel and network key, same coordinator address. The devices keep working; battery devices reconnect when they next wake up.
 
-Check the Domoticz log for the restore, then check in *Management > Device Management* that the devices report.
+Check the Domoticz log for the restore, then check in *Management > Devices* that the devices report.
 
 ## Case 2: another family
 
@@ -49,7 +49,7 @@ A ZiGate network can't be restored onto a zigpy coordinator: the devices must be
 1. Pair the devices again, routers first: reset each device and pair it (see [Add a new device](HowTo_Pairing-device.md)). Their widgets and history are kept.
 1. Turn `autoRestore` back on.
 
-Note: the pairing assistant doesn't show devices that the plugin already knew. Follow the re-pairing in the Domoticz log, or open the network with *4 minutes* instead of the assistant.
+Note: *Devices that joined*, on the *Admin > Provisionning* tab (the pairing assistant before plugin 9.1.009), doesn't show devices that the plugin already knew. Follow the re-pairing in the Domoticz log.
 
 ## See also
 
