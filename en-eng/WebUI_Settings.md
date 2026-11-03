@@ -84,7 +84,6 @@ Specific to some CIE as ConBeeII and RasBeeII it might required to enable some C
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `autoBackup` | Automatic backup of coordinator | on |  |  | See [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md) and [Plugin Backup](Plugin_Backup.md). |
 | `MonitorLoopLatency` | Monitor the zigpy event loop latency | off |  |  |  |
-| `BackupFullDevices` | backup device information | off |  |  | Shown with Texas Instruments (ZNP) coordinators only. |
 
 ### Advanced parameters
 
@@ -100,6 +99,7 @@ Specific to some CIE as ConBeeII and RasBeeII it might required to enable some C
 | `autoRestore` | Automaticaly apply the most recent coordinator backup when a clean coordinator is found | on |  |  | Used when you replace the coordinator by a new one of the same family. |
 | `ZigpyTopologyReport` | Enable the use of zigpy Topology Scanner | on |  |  |  |
 | `ZigpyTopologyReportAutoBackup` | Automaticaly backup auto-triggered Topology scan | off |  |  |  |
+| `ZigpyTopologyAssociatedDevices` |  | off |  |  | A zigpy topology scan also collects the devices attached to each router; the scan then takes longer. The *Associated devices* button collects them on its own, see [Network](WebUI_Network.md) and [Associated devices](WebUI_Network-Mesh.md#associated-devices-a-router-and-what-is-attached-to-it). |
 | `ZigpyAutoTopology` | Automatic topology scan by zigpy (every 12 hours) | off |  |  |  |
 | `CaptureRxFrames` | Capture received frames | off |  | plugin restart |  |
 | `CaptureTxFrames` | Capture transmitted frames | off |  | plugin restart |  |
@@ -192,6 +192,7 @@ Here are all settings related to Devices and how the coordinator interact with t
 | `forcePollingAfterAction` | Get device status after action | on |  |  |  |
 | `forcePassiveWidget` | Allow Domoticz actions on Widgets from remote devices | off |  |  |  |
 | `ForceDeviceTimedOut_afterXhours` | Mark device as Timed Out after X hours without traffic (0 to disable) | `0` | h |  | 0 disables. |
+| `HealthTimeOut` | Seconds without any message before a device is flagged as not seen recently (0 = off). A device can have its own value, device parameter HealthTimeOut | `21600` | s |  | 21600 s = 6 hours (21200 s before plugin 9.1.009). 0 disables. A device's own `HealthTimeOut` parameter (Device Management, parameters), when above 0, overrides it for that device. Devices silent for longer are counted as *Not seen for n h* on the [Dashboard](WebUI_Dashboard.md#needs-attention). |
 | `resetConfigureReporting` | Reset all existing Configure Reporting | off |  | plugin restart | One shot: the plugin clears it after the restart. |
 | `checkConfigurationReporting` | Check the device Report configuration regularly | `75600` | s |  | 75600 s = 21 hours. 0 disables. |
 | `resetReadAttributes` | Reset all read attributes | off |  | plugin restart | One shot: the plugin clears it after the restart. |
