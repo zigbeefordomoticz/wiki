@@ -232,4 +232,4 @@ When the change needs a plugin restart, the message says so and the *Restart nee
 Refer to the section [How to manage groups](HowTo_Group-management.md) for more information.
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).

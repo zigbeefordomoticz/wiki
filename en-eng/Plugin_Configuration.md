@@ -43,6 +43,6 @@ Go to the *Settings* page of the WebUI (see [WebUI Settings](WebUI_Settings.md))
 
 * The menu bar: the pages, the *Accept new hardware* switch that opens the network for pairing, and the indicators (restart needed, errors). See [General presentation](WebUI_General-presentation.md).
 * The bar at the bottom of every page: start time, messages per second, *MaxLoad* (a value above 5 can be a sign of congestion, often caused by devices polled too often), plugin state, plugin and coordinator firmware versions. See [The footer](WebUI_Dashboard.md#the-footer).
-* The other pages are described in the [plugin Web interface](Readme.md#plugins-web-interface) section.
+* The other pages are described in the [plugin Web interface](Readme.md#4-the-webui) section.
 
 Next step: [Step 4: Plugin integration](Plugin_Integration.md), then [pair your devices](HowTo_Pairing-device.md).

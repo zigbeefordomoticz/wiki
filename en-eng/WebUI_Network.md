@@ -115,4 +115,4 @@ Sources:
 * <https://en.wikipedia.org/wiki/Received_signal_strength_indication> ( RSSI - Received Signal Strength Indication)
 
 ------------------------------------------------
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).

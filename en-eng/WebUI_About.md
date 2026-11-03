@@ -17,4 +17,4 @@ This page compile the plugin's overall informations :
 * The team : developers, testers, translators, writers
 
 
-Look at the other pages of the [plugin Web interface](Readme.md#plugins-web-interface).
+Look at the other pages of the [plugin Web interface](Readme.md#4-the-webui).
