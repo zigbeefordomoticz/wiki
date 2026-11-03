@@ -21,6 +21,7 @@ Technical notes for developers and advanced users. Some pages were written while
   * [Device configuration attributes](device-configuration-attributes.md)
   * [Device specific parameters ("Param" section)](device_specific-parameters.md)
 * [Model name resolution and `Conf/Local-Devices` precedence](Model-name-resolution.md)
+* [Device-side auto-off: On With Timed Off (ZCL and Tuya)](OnOff-timed-off.md)
 * [Standard cluster / widget association](Clusters_Widget.md)
 * [Manufacturer codes](Manufacturer-codes.md)
 * [Profile ID and ZDevice ID](ProfileID---ZDeviceID.md)

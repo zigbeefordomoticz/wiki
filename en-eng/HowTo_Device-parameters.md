@@ -20,8 +20,8 @@ You can edit this field, by adding, removing or updating attributes. Please make
 | Parameter | Description / valid values | Applicable devices |
 | --------- | -------------------------- | ------------------ |
 | PowerOnAfterOffOn | If managed by the device, the device goes to a desired state after an electrical Off/On. 0 = stay Off, 1 = switch On, 255 = previous state (special handling for Philips, Enki, Tuya relays) | Ikea, ENki, BlitzWolf plug, Legrand, Philips (may require a firmware update of the end device) |
-| OnOffOnTimeDelay | On/Off "on time" delay; equivalent to `OnOffOffWaitTime` (handled the same way) | Devices exposing the On/Off cluster |
-| OnOffOffWaitTime | Off "wait time" delay written to the On/Off cluster | Devices exposing the On/Off cluster |
+| OnOffOnTimeDelay | Auto-off handled by the device itself, in seconds: every On is sent as *On With Timed Off*, so the device switches Off after this delay even if Domoticz or the plugin is down. One value, or one per endpoint (`{'01': 1500, '02': 900}`). 0 or absent = plain On. Max 6553 s (12 h on Tuya countdown relays). Needs a zigpy coordinator. See [Device-side auto-off](Technical/OnOff-timed-off.md) | Devices supporting On With Timed Off; Tuya relays need `TuyaOnOffCountdown` in their device configuration |
+| OnOffOffWaitTime | Used with `OnOffOnTimeDelay`, in seconds: after an Off command ends the timed On early, the device ignores *On With Timed Off* (not a plain On) for this time. Usually 0. Ignored on Tuya countdown relays | Same as `OnOffOnTimeDelay` |
 | Countdown | When switching On or Off, wait *n* seconds before actually switching (workaround for Tuya DIN energy switches) | Tuya energy / multi-gang switches |
 
 ## Light dimming / colour transitions
