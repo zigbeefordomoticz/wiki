@@ -87,7 +87,7 @@ NOTES = {
 COORDINATOR_DEPENDENT = {
     "TXpower_set": {
         "unit": "dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm",
-        "restart": "Texas Instruments: none. Silicon Labs, ZiGate V1: plugin restart",
+        "restart": "Texas Instruments, Silicon Labs: none. ZiGate V1: plugin restart",
     },
 }
 
