@@ -4,7 +4,7 @@ The plugin includes a built-in web interface accessible from your browser. It pr
 
 It opens on the [Dashboard](WebUI_Dashboard.md), below the menu bar that is shown on every page:
 
-![The web interface, on the Dashboard page](Images/EN_WebUI-General-Presentation.png)
+![The web interface, on the Dashboard page](Images/EN_WebUI-Dashboard.png)
 
 ## Accessing the Web Interface
 
