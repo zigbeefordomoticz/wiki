@@ -2,6 +2,10 @@
 
 The plugin includes a built-in web interface accessible from your browser. It provides a graphical way to manage devices, monitor the Zigbee network, and configure the plugin without editing configuration files directly.
 
+It opens on the [Dashboard](WebUI_Dashboard.md), below the menu bar that is shown on every page:
+
+![The web interface, on the Dashboard page](Images/EN_WebUI-Dashboard.png)
+
 ## Accessing the Web Interface
 
 Please refer to [Step 3 — Plugin Configuration](Plugin_Configuration.md) for instructions on how to enable and access the web interface.
