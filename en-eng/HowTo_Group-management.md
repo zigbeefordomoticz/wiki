@@ -43,11 +43,12 @@ The plugin creates a widget for every group found.
    ![Creating a group](Images/EN_WebUI-Management-Group-New.png)
 
 1. Enter the *Group name*: it becomes the name of the Domoticz widget.
+1. Leave *Group id* empty, unless the group must have a given id, for example to match a remote set on a fixed group. Enter it as four hexadecimal digits, such as `0a2b` (plugin 9.1.010 and later). `0000`, `fff8` to `ffff` and the group of the `pingViaGroup` setting cannot be used, nor an id that another group has.
 1. Click the *Add a member* field and pick the devices (endpoints) of the group from the list. Type part of a name, model or short id to narrow it. Each one added shows in green, *added when you save*; *Undo* takes it back out.
 1. If needed, switch on *Coordinator is a member* (see below).
 1. Click *Save group*.
 
-The plugin gives the group the first free group id, sends the membership request to each device and creates the group widget in Domoticz. The page reads the groups again a few seconds later and opens the new group.
+The plugin gives the group the first free group id, unless you chose one, sends the membership request to each device and creates the group widget in Domoticz. The page reads the groups again a few seconds later and opens the new group.
 
 Before plugin 9.1.009: *Management > Group Management*, *Add a new Group*, enter the name, select the devices in the drop-down, tick *Coordinator (in the group)* if needed, and click *Validate*. Refresh the page if the group doesn't show.
 

@@ -110,6 +110,8 @@ Leave **Scene ID** empty unless you need a particular one: the plugin takes the 
 
 You may need a given ID, typically for a remote that recalls a fixed scene. Enter it in **Scene ID** as two hexadecimal digits, such as `2a`. Be careful with remotes that document a decimal number: scene 42 is `2a`.
 
+Such a remote usually has a fixed group too, and the scene must be in that group: a scene is identified by both. In that case, create the group with the [*Group id*](HowTo_Group-management.md#create-a-group) it uses.
+
 Since saving under an ID replaces what a device holds, the plugin first scans the group:
 
 * *Checking that ID 2a is free on the devices…* shows during the scan. It can last 30 seconds if a device does not answer. **Leave the lights as they are**: they are captured when the scan ends, not when you clicked.

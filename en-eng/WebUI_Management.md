@@ -187,7 +187,7 @@ Click a group to open it in the editor. **New** opens an empty group.
 ### The group editor
 
 * **Group name**: the name of the group and of its Domoticz widget. Renaming an existing group renames its widget.
-* **Group id**: the group address. For a new group, *given when you save*: the plugin picks the first free address from `0001`.
+* **Group id**: the group address. For a new group, *given when you save*: the plugin picks the first free address from `0001`. Since plugin 9.1.010 you can enter one instead, as four hexadecimal digits, to match a device set on a fixed group: see [Create a group](HowTo_Group-management.md#create-a-group).
 * **Widget type**: the type of the group's Domoticz widget (for example *LvlControl* for covers or dimmable lights, *Plug* for plugs). The plugin chooses it from the members.
 * **Coordinator is a member**: switch it on when a remote is bound to this group. The coordinator then receives the remote's commands, so the plugin hears them and updates the group's widget. See [Adding the coordinator to a group](HowTo_Group-management.md#adding-the-coordinator-to-a-group).
 
