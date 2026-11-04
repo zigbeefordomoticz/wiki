@@ -43,6 +43,7 @@ Everyday tasks: add and remove devices, set them up, use groups and bindings.
 * [Replace a device while keeping its Domoticz history](HowTo_Replace_Device.md) — Domoticz's own *Replace* doesn't work with the plugin
 * [Device parameters](HowTo_Device-parameters.md) — per-device options (LEDs, sensitivity, power-on state, polling…)
 * [Manage Zigbee groups](HowTo_Group-management.md)
+* [Zigbee scenes](HowTo_Zigbee-scenes.md) — a state stored in the devices, recalled with one frame
 * [Bind two devices](HowTo_Binding.md) — let a switch command a light directly
 * [Change the Zigbee channel](HowTo_Change-ZigBee-channel.md)
 * [Change the coordinator transmit power](HowTo_Change-TX-Power.md)

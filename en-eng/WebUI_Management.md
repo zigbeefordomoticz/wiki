@@ -5,7 +5,7 @@ Please refer to STEP 3 [Plugin Configuration](Plugin_Configuration.md) to get ac
 The __Management__ menu opens the *Devices* page. A tab bar at the top switches between its two pages:
 
 * [Devices](#device-management): the devices paired with the plugin (*Management > Devices*)
-* [Groups](#group-management): the Zigbee groups (*Management > Groups*)
+* [Groups & Scenes](#group-management): the Zigbee groups and scenes (*Management > Groups & Scenes*)
 
 Before plugin 9.1.009, *Management* is a drop-down menu with *Device Management* and *Group Management*.
 
@@ -152,7 +152,7 @@ The counters count what the plugin received, repeats included (a device that ret
 ------------------------------------------------
 ## Group Management
 
-The __Groups__ page (*Management > Groups*) is where you create and edit the Zigbee groups. Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)): until then, the page only shows *Group management is off* and a link to the settings.
+The __Groups & Scenes__ page (*Management > Groups & Scenes*, *Groups* before plugin 9.1.010) is where you create and edit the Zigbee groups. Groups must be enabled first with the `enablegroupmanagement` setting (see [Group management settings](WebUI_Settings.md#group-management-settings)): until then, the page only shows *Group management is off* and a link to the settings.
 
 > **Plugin 9.1.009 and later.** This section describes the Groups page available since plugin 9.1.009. In older versions, the page (*Management > Group Management*) is one table of all the groups, with the devices of each group picked in a drop-down, a *Coordinator (in the group)* tick box, a trash icon to delete a group, *Add a new Group*, and one *Validate* button that saves every group at once.
 
@@ -169,7 +169,8 @@ The page has the key figures on top, the list of the groups on the left, and the
 | Groups | The number of groups, and below it how many have the coordinator as a member. |
 | Devices in a group | The number of devices that belong to at least one group, and below it how many devices that can join a group are in no group yet. |
 | Needs attention | The number of groups with at least one member that is *Not reachable*, *Timed out* or *Not seen recently*. The figure turns yellow when it isn't 0. |
-| Membership scan | *Ready*, or *Running* while the plugin asks the routers which groups they belong to. Click it to open [Admin > Group](WebUI_Admin.md#group), where the scan is started. |
+| Scenes | With [Zigbee scenes](HowTo_Zigbee-scenes.md) enabled: the number of scenes, the groups that have some, and how many need a look. |
+| Membership scan | *Ready*, or *Running* while the plugin asks the routers which groups they belong to. *Scan all* starts the scan, and the link opens [Admin > Group](WebUI_Admin.md#group). |
 
 ### The group list
 
@@ -230,6 +231,10 @@ If you click another group, or *New*, with unsaved changes, the page asks first:
 The plugin sends the change to each member. A membership changes when the device answers, so the page reads the groups again just after saving, then after 3 and 8 seconds, and says so: *Sent to the devices…*. A device that is off keeps its old membership until it answers. To check what each router really has, run a membership scan in [Admin > Group](WebUI_Admin.md#group).
 
 When the change needs a plugin restart, the message says so and the *Restart needed* indicator blinks in the menu bar until you restart the plugin.
+
+### Scenes
+
+With [Zigbee scenes](HowTo_Zigbee-scenes.md) enabled, the editor of a group has a **Scenes** section under its members, and a **By group / By scene** switch shows the page from the scenes. The page on Zigbee scenes describes them.
 
 Refer to the section [How to manage groups](HowTo_Group-management.md) for more information.
 

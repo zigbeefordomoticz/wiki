@@ -104,6 +104,10 @@ The group settings are in the *Group management* section of the WebUI *Settings*
 | `zigatePartOfGroup0000` | Creates group `0000`, used by some Ikea and Xiaomi switches (Silicon Labs coordinators). |
 | `GroupLevelWithOnOff` | Send the *Move to Level with On/Off* command to groups, so that setting a level also switches the lights on. |
 
+## Scenes
+
+A group can hold [Zigbee scenes](HowTo_Zigbee-scenes.md): a state stored in its devices, and recalled with one frame.
+
 ## Warnings
 
 * Make sure all the devices of a group are connected to the network before you scan, create or change a group: a device that is not reachable doesn't get the change.
