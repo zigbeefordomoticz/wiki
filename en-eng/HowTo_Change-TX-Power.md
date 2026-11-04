@@ -6,7 +6,7 @@ The transmit power (TX power) is the power, in dBm, at which the coordinator sen
 
 By default the plugin doesn't set it: the coordinator keeps its own. You can raise or lower it with the `TXpower_set` setting. Before you do, keep in mind that a Zigbee link works in both directions, and that the TX power only changes one of them.
 
-This page describes the plugin from stable9 9.1.008. For the change from older versions, see [Upgrading from 9.1.007 or older](#upgrading-from-91007-or-older).
+This page describes the plugin from stable9 9.1.009. For the changes from older versions, see [Upgrading from 9.1.007 or older](#upgrading-from-91007-or-older) and [Upgrading from 9.1.008 or older](#upgrading-from-91008-or-older).
 
 ## What more power brings
 
@@ -47,13 +47,11 @@ ConBee / RaspBee (deCONZ) and BLZ coordinators don't support it. On a ZiGate V1 
 | Coordinator family | Supported | When a change applies | Kept across a restart |
 | ------------------ | --------- | --------------------- | --------------------- |
 | Texas Instruments (ZNP): CC2652, CC1352, CC2538… | Yes | At once | No: the firmware's own power comes back at each radio reset, and the plugin sets the value again at every start |
-| Silicon Labs (EZSP): EFR32MG21, EFR32MG24, MGM210… | Yes | At the next plugin restart | Yes: the stick saves it to its own memory (when the firmware supports it) |
+| Silicon Labs (EZSP): EFR32MG21, EFR32MG24, MGM210… | Yes | At once | Yes: the stick saves it to its own memory (when the firmware supports it) |
 | ConBee / RaspBee (deCONZ) | No | The value is ignored | — |
 | BLZ | No | The value is ignored | — |
 | ZiGate V1 (legacy) | 4 levels only: 0, -9, -20 and -32 dBm | At the next plugin restart | — |
 | ZiGate+ V2 (legacy) | No: the plugin doesn't set it | — | — |
-
-<!-- Update the Silicon Labs row once Domoticz-Zigbee #2166 is released (planned for 9.1.009): a change from the WebUI then applies at once. -->
 
 ### Silicon Labs: the saved value
 
@@ -91,7 +89,7 @@ The firmware and the board (antenna, external amplifier) also matter: two sticks
    * Texas Instruments, Silicon Labs: the power in dBm, or `0` to keep the coordinator's own;
    * ZiGate V1: one of the 4 levels in the list.
 1. Click *Save* (*Validate* before plugin 9.1.009).
-1. On Silicon Labs and ZiGate V1, restart the plugin.
+1. On ZiGate V1, restart the plugin. On Texas Instruments and Silicon Labs the new power applies at once, except `0`: the plugin sends nothing, and stops setting the power at the next restart.
 
 The `Certification` setting (CE or FCC) is only sent to ZiGate coordinators. It doesn't limit the TX power of the other coordinators.
 
@@ -124,3 +122,11 @@ From 9.1.008:
 * with any other value, nothing changes.
 
 The coordinator may then reach further than before. Some end devices may pick a different parent after the restart: give the network some time to settle.
+
+## Upgrading from 9.1.008 or older
+
+From 9.1.009, on Silicon Labs:
+
+* a change of `TXpower_set` from the WebUI applies at once, without a restart;
+* a configured power no longer forces the power mode (boost and alternate transmitter output): the plugin only sets the power in dBm, and the stick stays on its firmware's default mode. A board with an external amplifier on the alternate output may lose range;
+* with `TXpower_set` = `0`, nothing changes.
