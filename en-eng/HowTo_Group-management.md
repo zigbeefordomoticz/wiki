@@ -92,6 +92,22 @@ Either:
 
 The plugin asks each device of the group to leave the group. When the last one has answered, it removes the group and its widget.
 
+## Groups created before plugin 8.1.003
+
+> **We highly recommend deleting these groups and creating them again.**
+
+Since plugin 8.1.003, the widget of a new group is always on unit 1. An older group kept the unit it had, which can be any number, and newer features of the plugin are built on unit 1.
+
+To find them, open *Setup > Devices* in Domoticz and filter on your Zigbee hardware. The `ID` column of a group is its Group id, four characters such as `0002`, and the `Unit` column should be `1`. Any other number means an older group.
+
+To do it:
+
+1. Note the name of the group and its members.
+1. [Delete the group](#delete-a-group), and wait until it is gone from *Management > Groups*.
+1. [Create it again](#create-a-group). You can give it the same *Group id*.
+
+The new widget has a new `idx` in Domoticz: update the dashboards, events and scripts that use the old one. Deleting a group also deletes its [Zigbee scenes](HowTo_Zigbee-scenes.md), so capture them again.
+
 ## Group settings
 
 The group settings are in the *Group management* section of the WebUI *Settings* (see [Group management settings](WebUI_Settings.md#group-management-settings)):

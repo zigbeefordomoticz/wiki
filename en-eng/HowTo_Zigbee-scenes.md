@@ -56,18 +56,20 @@ The coordinator does not have to be a member of the group: *Coordinator is a mem
 
 Everything happens on *Management > Groups & Scenes*. The page has the [key figures](WebUI_Management.md#key-figures) on top, a switch **By group / By scene**, and below it the list and the detail of what you selected.
 
+![The Groups & Scenes page, on a group without a scene](Images/EN_WebUI-Scenes-Page.png)
+
 With scenes enabled, the key figures gain **Scenes**: the number of scenes, the number of groups that have some, and how many need a look, for example a device that did not save the scene. In the list of groups, each group shows its number of scenes.
 
 ### By group
 
-This is where you create and change scenes. Select a group: its scenes are in the **Scenes** section, under its members.
+This is where you create and change scenes. Select a group: its scenes are in the **Scenes** section, under its members. Both sections fold when you click their title.
 
 ![The Scenes section of a group](Images/EN_WebUI-Scenes-By-Group.png)
 
 | Column | What it shows |
 |---|---|
 | Scene | The name, and the scene ID in hexadecimal. Click it to see the [devices](#the-devices-of-a-scene). *Found on the devices* marks a scene the plugin did not create (see [Scan](#find-the-scenes-already-on-the-devices)). |
-| Transition | The time the devices take to reach the state, in seconds. *Unknown* on a scene found by a scan. |
+| Transition | The time the devices take to reach the state of the scene when it is recalled, in seconds (see [The transition time](#the-transition-time)). *Unknown* on a scene found by a scan. |
 | Saved on | How many devices with the Scenes cluster hold the scene: `3 / 3`. Green when all do, orange when one is missing, grey during a capture. *Direct control* devices are not counted. *Not on n new member(s)* means devices joined the group since the capture. |
 
 | Button | What it does |
@@ -78,7 +80,7 @@ This is where you create and change scenes. Select a group: its scenes are in th
 | **Rename** | Changes the name in the plugin. Nothing is sent to the devices. |
 | **Delete** | Removes the scene from the devices of the group and from the plugin, after a confirmation. |
 
-The transition time can only change with *Re-capture*: on a device, it is saved with the scene.
+[The transition time](#the-transition-time) can only change with *Re-capture*: on a device, it is saved with the scene.
 
 ### The devices of a scene
 
@@ -101,10 +103,36 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 1. Set the lights the way you want them.
 1. Select the group and go to **New scene**.
 1. Give it a **Name**: up to 32 characters, without `|`, and unique in the group.
-1. Set the **Transition**, in whole seconds.
+1. Set the **Transition**, in whole seconds (see [The transition time](#the-transition-time)).
 1. Click **Capture current state**. The scene appears with *Waiting…* on its devices, then *Saved*.
 
 Leave **Scene ID** empty unless you need a particular one: the plugin takes the lowest free ID.
+
+### The transition time
+
+**Transition** is the time a device takes to go from the state it is in to the state of the scene, **when the scene is recalled**. It is a fade, and it has nothing to do with the capture: capturing a scene changes nothing on the lights, whatever the transition.
+
+For example, a scene saved with a lamp at 100 % and a transition of 5:
+
+* the lamp is at 20 %: on a recall it rises to 100 % over 5 seconds;
+* the lamp is off: it comes on and rises to 100 % over 5 seconds;
+* the lamp is already at 100 %: nothing shows.
+
+| Transition | What happens at a recall |
+|---|---|
+| `0` | The device goes to the state as fast as it can. |
+| `1` | One second. This is the default. |
+| Up to `65534` | About 18 hours. Whole seconds only. |
+
+What to know about it:
+
+* **The device keeps it, with the scene.** A recall carries no time, so the transition is the same from the WebUI and from a Zigbee remote.
+* **To change it, re-capture.** There is no other way, and *Re-capture* also saves the state the lights are in now: put them back first.
+* **The device does the fade.** It only applies to what can change gradually. A plug or a relay goes straight to on or off. If a device jumps instead of fading, its firmware ignores the transition: the plugin cannot change that, and it does not know it either. Try it with *Test*.
+* **A *Direct control* device** has no scene to hold it. At a recall the plugin sends it the level with the same time. On or off without a level goes at once.
+* **On a scene found by a scan it shows *Unknown*:** the device holds one, but a scan cannot read it. *Test* shows it in practice. *Re-capture* sets it, starting from `1`, and so does *Retry* on a failed device.
+
+It is not the same thing as the [Command transitions for Lights in Groups](WebUI_Settings.md#command-transitions-for-lights-in-groups) of the *Settings*. Those are in tenths of a second, for the commands of the group widget. They play no part in a scene.
 
 ### Choosing the scene ID
 
