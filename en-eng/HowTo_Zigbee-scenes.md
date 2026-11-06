@@ -8,7 +8,7 @@ This page explains what a Zigbee scene is, how it differs from a Domoticz scene,
 
 A Zigbee scene is a state that **the devices remember themselves**. You set your lights the way you want them, you ask each device to save that state under a number, and from then on one short command tells them all: "go back to number 3".
 
-* **A scene lives in the devices**, not in the plugin and not in Domoticz. Each device keeps its own scene table, with what it has to do: its on/off state, its level, its colour if it has one.
+* **A scene lives in the devices**, not in the plugin and not in Domoticz. Each device keeps its own scene table, with what it has to do: its on/off state, its level, its colour if it has one, the position of a cover.
 * **A scene belongs to one group.** On a device, a scene is identified by its group and its scene ID, from `00` to `ff`. Scene `01` of group `0001` and scene `01` of group `0002` are two different scenes. So you need a [Zigbee group](HowTo_Group-management.md) first. It can be on all the devices of the group or on [some of them](#a-scene-on-part-of-a-group).
 * **The name is only known to the plugin.** The devices only know the ID.
 * **Recalling a scene takes a single frame**, sent to the group. Each device of the group receives it, looks in its own table, and applies what it saved.
@@ -42,7 +42,7 @@ Domoticz has its own scenes (*Setup > More Options > Scenes/Groups*). They are a
 1. **Capture.** The plugin talks to **each device separately**, not to the group, because only a direct command gets an answer. It sends *Add Scene*, which creates the entry with the transition time, then *Store Scene*, which makes the device save its current state. The answer to *Store Scene* decides: the device is *Saved*, or the page tells you why not.
 1. **Recall.** The plugin sends one *Recall Scene* to the group. The devices do the rest.
 
-A device of the group **without the Scenes cluster**, such as some plugs, cannot store anything. The plugin keeps its on/off state and level at the capture and sends them as direct commands at each recall. It shows as *Direct control*. A device with a Scenes cluster only as an output, such as a remote, is not part of the scene.
+A device of the group **without the Scenes cluster**, such as some plugs, cannot store anything. The plugin keeps its on/off state and level, or the position of a cover, at the capture and sends them as direct commands at each recall. It shows as *Direct control*. A device with a Scenes cluster only as an output, such as a remote, is not part of the scene.
 
 ## Before you start
 
@@ -91,7 +91,7 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 | Column | What it shows |
 |---|---|
 | Widget, Device, Ep | The Domoticz widget, the model and short address of the device, its endpoint. |
-| State at capture | On/off and level **as the plugin last saw them** at the capture. It is a reminder, not what the device holds: nothing reads it back, and colour is not shown. *Unknown* means the plugin had no value. That is normal on a shutter, which does not report on/off or level, and on a scene found by a scan. The scene itself is fine. |
+| State at capture | On/off and level, or `Position 60 % · tilt 15 %` on a cover, **as the plugin last saw them** at the capture. It is a reminder, not what the device holds: nothing reads it back, and colour is not shown. *Unknown* means the plugin had no value. That is normal on a scene found by a scan. The scene itself is fine. |
 | On the device | *Saved*, *Waiting…* during a capture, or what went wrong (see [Troubleshooting](#troubleshooting)). *Direct control* for a device without the Scenes cluster. |
 | Last check | When the device last confirmed this scene: at the capture, or at a scan. |
 | Scenes | The scenes on the device against what it can hold, such as `3 / 16`. It counts all the groups of the device, which share one table. The total comes from a [scan](#find-the-scenes-already-on-the-devices). `?` means no scan yet, or a device that cannot tell how much room it has left. Empty for a *Direct control* device. |
@@ -128,6 +128,23 @@ Three things to know:
 * A device that did not hear the order, because it was off, still holds the scene and still answers a recall. The plugin does not wait for the answer. The next [scan](#find-the-scenes-already-on-the-devices) shows it in the scene again: take it out once more, with the device on.
 * A scene ID you choose is checked on the whole group, including the devices left out: a device holding that ID would answer the recall.
 * The *Off* level of the Selector switches off the whole group, not only the devices of the scene.
+
+### Scenes with covers
+
+Shutters, blinds and curtains (cluster `0102`) can be in a scene, alone or with lights.
+
+* **A cover with the Scenes cluster** stores its position itself, like a lamp stores its level. Most covers do.
+* **A cover without it** shows as *Direct control*: the plugin keeps its lift and tilt at the capture and sends them at each recall.
+
+**Let a cover stop before you capture.** It saves where it is at that moment, so a shutter still moving saves a position halfway.
+
+**The position is the one the device reports**, shown as it is in *State at capture*. On a cover set as inverted in Domoticz, it can read the other way round from its widget. A recall is not affected.
+
+**The transition time does not apply.** A cover moves at its own speed.
+
+**The Selector waits longer.** After a recall it leaves a scene with a cover alone for 2 minutes, for the cover to arrive, instead of 10 seconds. After that it goes to *Off* if a cover moves by more than 2 %. A cover moved during those 2 minutes is not noticed.
+
+**A battery cover** may not follow a recall (see [Limits today](#limits-today)). Test it with **Test** before you rely on it.
 
 ### The transition time
 
@@ -195,7 +212,8 @@ Each group has its **Test** button and **Open in the group**, which takes you to
 
 * **No Domoticz widget yet.** A scene can be recalled from the WebUI, from the [REST API](#for-the-curious) or by a Zigbee remote, not from a Domoticz widget, so neither from a Domoticz scene, timer or script directly.
 * **The plugin does not follow a recall sent by a remote.** *Last recalled* only counts the WebUI.
-* **Colour** is saved by the devices that support it, but not shown in *State at capture*. A *Direct control* device gets on/off and level only.
+* **Colour** is saved by the devices that support it, but not shown in *State at capture*. A *Direct control* device gets on/off and level, or the position of a cover, and no colour.
+* **Thermostats** cannot be in a scene: most are not offered for groups, and a scene belongs to a group.
 * **Battery devices** do not follow group commands (see [Zigbee groups](HowTo_Group-management.md#how-zigbee-groups-work)), so they do not follow a scene either.
 * **Group `0000`** cannot hold scenes.
 * **The table of a device is limited**, and the limit depends on the device. It is shared by all its groups.
