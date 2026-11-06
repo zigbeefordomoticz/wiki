@@ -9,7 +9,7 @@ This page explains what a Zigbee scene is, how it differs from a Domoticz scene,
 A Zigbee scene is a state that **the devices remember themselves**. You set your lights the way you want them, you ask each device to save that state under a number, and from then on one short command tells them all: "go back to number 3".
 
 * **A scene lives in the devices**, not in the plugin and not in Domoticz. Each device keeps its own scene table, with what it has to do: its on/off state, its level, its colour if it has one.
-* **A scene belongs to one group.** On a device, a scene is identified by its group and its scene ID, from `00` to `ff`. Scene `01` of group `0001` and scene `01` of group `0002` are two different scenes. So you need a [Zigbee group](HowTo_Group-management.md) first.
+* **A scene belongs to one group.** On a device, a scene is identified by its group and its scene ID, from `00` to `ff`. Scene `01` of group `0001` and scene `01` of group `0002` are two different scenes. So you need a [Zigbee group](HowTo_Group-management.md) first. It can be on all the devices of the group or on [some of them](#a-scene-on-part-of-a-group).
 * **The name is only known to the plugin.** The devices only know the ID.
 * **Recalling a scene takes a single frame**, sent to the group. Each device of the group receives it, looks in its own table, and applies what it saved.
 
@@ -70,14 +70,14 @@ This is where you create and change scenes. Select a group: its scenes are in th
 |---|---|
 | Scene | The name, the scene ID in hexadecimal, and the comment if it has one. Click it to see the [devices](#the-devices-of-a-scene). *Found on the devices* marks a scene the plugin did not create (see [Scan](#find-the-scenes-already-on-the-devices)). |
 | Transition | The time the devices take to reach the state of the scene when it is recalled, in seconds (see [The transition time](#the-transition-time)). *Unknown* on a scene found by a scan. |
-| Saved on | How many devices with the Scenes cluster hold the scene: `3 / 3`. Green when all do, orange when one is missing, grey during a capture. *Direct control* devices are not counted. *Not on n new member(s)* means devices joined the group since the capture. |
+| Saved on | How many devices with the Scenes cluster hold the scene: `3 / 3`. Green when all do, orange when one is missing, grey during a capture. *Direct control* devices are not counted. *Not on n device(s) of the group* means the others are [outside this scene](#a-scene-on-part-of-a-group), which is normal. |
 
 | Button | What it does |
 |---|---|
 | **Test** | Recalls the scene, for real: the lights change. |
-| **Re-capture** | Replaces the scene with the current state of the lights, and lets you change the transition time. Devices that joined the group since then are added. |
+| **Re-capture** | Replaces the scene with the current state of the ticked devices, and lets you change the transition time. Tick a device to bring it in, such as one that joined the group since. Untick one to take it out. |
 | **Retry** | Only when a device failed. Captures again on the failed devices only. Each one saves **the state it is in now**, so put the lights back first. |
-| **Edit** | Changes the name and the comment in the plugin. Nothing is sent to the devices. |
+| **Edit** | Changes the name and the comment in the plugin, and can take devices out of the scene. Only a device taken out is sent anything. |
 | **Delete** | Removes the scene from the devices of the group and from the plugin, after a confirmation. |
 
 [The transition time](#the-transition-time) can only change with *Re-capture*: on a device, it is saved with the scene.
@@ -103,6 +103,7 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 
 1. Set the lights the way you want them.
 1. Select the group and go to **New scene**.
+1. Under **Devices in this scene**, untick the devices that must stay out of it, if any.
 1. Give it a **Name**: up to 32 characters, without `|`, and unique in the group.
 1. Set the **Transition**, in whole seconds (see [The transition time](#the-transition-time)).
 1. Click **Capture current state**. The scene appears with *Waiting…* on its devices, then *Saved*.
@@ -110,6 +111,23 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 Leave **Scene ID** empty unless you need a particular one: the plugin takes the lowest free ID.
 
 **Comment** is optional: up to 200 characters to say what the scene is for. You can change it later with *Edit*. Like the name, it is only kept by the plugin: a device stores neither. If the scenes file of the plugin is lost, a scan finds the scenes again, without their names and comments.
+
+### A scene on part of a group
+
+A scene does not have to be on every device of its group. The recall still goes to the whole group, in one frame, and a device without the scene ignores it: it stays as it is. So a *Reading* scene can light two lamps of the living room and leave the third alone.
+
+The device boxes only show with two devices or more. A scene needs at least one device with the Scenes cluster.
+
+* **At the capture**, untick the devices to leave out. They save nothing.
+* **To take a device out later**, untick it in *Edit* and save. It is told to forget this scene and stays in the group. Its other scenes do not change, nor do the other devices.
+* **To bring a device in**, or one that joined the group since, tick it in *Re-capture*. This saves the current state of all the ticked devices: set the lights first.
+* *Re-capture* stays on the devices of the scene: a device taken out does not come back unless you tick it.
+
+Three things to know:
+
+* A device that did not hear the order, because it was off, still holds the scene and still answers a recall. The plugin does not wait for the answer. The next [scan](#find-the-scenes-already-on-the-devices) shows it in the scene again: take it out once more, with the device on.
+* A scene ID you choose is checked on the whole group, including the devices left out: a device holding that ID would answer the recall.
+* The *Off* level of the Selector switches off the whole group, not only the devices of the scene.
 
 ### The transition time
 
@@ -195,7 +213,7 @@ Each group has its **Test** button and **Open in the group**, which takes you to
 | *Refused: status xx* | The device refused, with this ZCL status. | Note the status and turn on the *Scene* debug. |
 | *Interrupted by a restart* | The plugin restarted during a capture. | *Retry*. |
 | *No longer on this device* | A scan did not find the scene on the device: it was reset, or the scene was removed by something else. | *Retry* or *Re-capture*. |
-| *Not on n new member(s)* | The devices joined the group after the capture. | *Re-capture*. |
+| *Not on n device(s) of the group* | Not an error: these devices are outside this scene. | To bring one in, tick it in *Re-capture*. |
 | *The coordinator is busy.* | The plugin has too many commands waiting. | Try again in a moment. |
 | A scene does not do what you saved | The device stored something else, or was not in the state you thought. | *Test* it, then *Re-capture* with the lights set. |
 
