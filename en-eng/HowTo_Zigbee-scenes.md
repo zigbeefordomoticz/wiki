@@ -68,7 +68,7 @@ This is where you create and change scenes. Select a group: its scenes are in th
 
 | Column | What it shows |
 |---|---|
-| Scene | The name, and the scene ID in hexadecimal. Click it to see the [devices](#the-devices-of-a-scene). *Found on the devices* marks a scene the plugin did not create (see [Scan](#find-the-scenes-already-on-the-devices)). |
+| Scene | The name, the scene ID in hexadecimal, and the comment if it has one. Click it to see the [devices](#the-devices-of-a-scene). *Found on the devices* marks a scene the plugin did not create (see [Scan](#find-the-scenes-already-on-the-devices)). |
 | Transition | The time the devices take to reach the state of the scene when it is recalled, in seconds (see [The transition time](#the-transition-time)). *Unknown* on a scene found by a scan. |
 | Saved on | How many devices with the Scenes cluster hold the scene: `3 / 3`. Green when all do, orange when one is missing, grey during a capture. *Direct control* devices are not counted. *Not on n new member(s)* means devices joined the group since the capture. |
 
@@ -77,7 +77,7 @@ This is where you create and change scenes. Select a group: its scenes are in th
 | **Test** | Recalls the scene, for real: the lights change. |
 | **Re-capture** | Replaces the scene with the current state of the lights, and lets you change the transition time. Devices that joined the group since then are added. |
 | **Retry** | Only when a device failed. Captures again on the failed devices only. Each one saves **the state it is in now**, so put the lights back first. |
-| **Rename** | Changes the name in the plugin. Nothing is sent to the devices. |
+| **Edit** | Changes the name and the comment in the plugin. Nothing is sent to the devices. |
 | **Delete** | Removes the scene from the devices of the group and from the plugin, after a confirmation. |
 
 [The transition time](#the-transition-time) can only change with *Re-capture*: on a device, it is saved with the scene.
@@ -94,6 +94,7 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 | State at capture | On/off and level **as the plugin last saw them** at the capture. It is a reminder, not what the device holds: nothing reads it back, and colour is not shown. *Unknown* means the plugin had no value. That is normal on a shutter, which does not report on/off or level, and on a scene found by a scan. The scene itself is fine. |
 | On the device | *Saved*, *Waiting…* during a capture, or what went wrong (see [Troubleshooting](#troubleshooting)). *Direct control* for a device without the Scenes cluster. |
 | Last check | When the device last confirmed this scene: at the capture, or at a scan. |
+| Scenes | The scenes on the device against what it can hold, such as `3 / 16`. It counts all the groups of the device, which share one table. The total comes from a [scan](#find-the-scenes-already-on-the-devices). `?` means no scan yet, or a device that cannot tell how much room it has left. Empty for a *Direct control* device. |
 | Health | The state of the device, as on the [device list](WebUI_Management.md#device-management). |
 
 ### Create a scene
@@ -107,6 +108,8 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 1. Click **Capture current state**. The scene appears with *Waiting…* on its devices, then *Saved*.
 
 Leave **Scene ID** empty unless you need a particular one: the plugin takes the lowest free ID.
+
+**Comment** is optional: up to 200 characters to say what the scene is for. You can change it later with *Edit*. Like the name, it is only kept by the plugin: a device stores neither. If the scenes file of the plugin is lost, a scan finds the scenes again, without their names and comments.
 
 ### The transition time
 
