@@ -39,7 +39,7 @@ Everyday tasks: add and remove devices, set them up, use groups and bindings.
 
 * [Build a Zigbee mesh network](HowTo_Build-a-ZigBee-network.md) — pair in the right order, routers first
 * [Add a new device](HowTo_Pairing-device.md)
-* [Pair a Green Power device](HowTo_Pair-Green-Power-device.md) — self-powered switches and remotes: follow the pairing live, leave the device's pairing mode
+* [Pair a Green Power device](HowTo_Pair-Green-Power-device.md) — self-powered switches and remotes: choose the device type, follow the pairing live, leave the device's pairing mode
 * [Remove a device](HowTo_Remove-device.md)
 * [Replace a device while keeping its Domoticz history](HowTo_Replace_Device.md) — Domoticz's own *Replace* doesn't work with the plugin
 * [Device parameters](HowTo_Device-parameters.md) — per-device options (LEDs, sensitivity, power-on state, polling…)
