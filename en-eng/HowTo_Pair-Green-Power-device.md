@@ -17,7 +17,7 @@ The plugin learns about a Green Power device from the pairing request (*Commissi
 
 * **Let Domoticz accept new devices**, as for any pairing: see [Add a new device](HowTo_Pairing-device.md#before-you-start-let-domoticz-accept-new-devices).
 * **Know your network channel.** The page shows it under the pairing buttons: *Network on channel N*. A device you set to a channel by hand must use this one. Green Power devices use channels 11 to 26.
-* **Coordinator.** Tested with a Silicon Labs (EZSP) coordinator. With a deCONZ (ConBee, RaspBee) coordinator, Green Power pairing stays closed. Other coordinators have not been tested yet.
+* **Coordinator.** Tested with a Silicon Labs (EZSP) coordinator. With a deCONZ (ConBee, RaspBee) coordinator, Green Power pairing stays closed. A **Texas Instruments (Z-Stack, ZNP)** coordinator cannot receive Green Power frames at all: it would need a router with full Green Power support between the device and the coordinator ([zigpy discussion #1955](https://github.com/zigpy/zigpy/discussions/1955)). Green Power is not supported with a Z-Stack coordinator. Other coordinators have not been tested yet.
 
 ## The Zigbee Green Power page
 
