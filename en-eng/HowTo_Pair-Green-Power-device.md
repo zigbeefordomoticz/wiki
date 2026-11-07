@@ -31,7 +31,7 @@ The plugin learns about a Green Power device from the pairing request (*Commissi
 
 ### Device types
 
-Choose the type before opening the pairing: the device paired during that pairing gets it.
+Choose the type before opening the pairing: the device paired during that pairing gets it. No type is selected when the page opens, and *Open for 4 minutes* stays disabled until you choose one.
 
 | Type | Widget | For |
 |------|--------|-----|
@@ -44,7 +44,7 @@ A device keeps its type when it is paired again. To change the type of a paired 
 ## Pairing
 
 1. Open the WebUI, *Admin > Provisionning > Zigbee Green Power*.
-1. Choose the **device type**.
+1. Choose the **device type**. *Open for 4 minutes* stays disabled until you do.
 1. Click **Open for 4 minutes**. The page shows **Accepting Green Power devices**, the time left and *Pairing as:* the type you chose; the log shows **Pairing opened**.
 1. Put the device in its pairing mode, as its manual says (see [the Sunricher switch](#sunricher-zgp2801k2-dim) for an example).
 1. Watch the **Green Power log**: each frame the network hears is listed with its time, the device ID (for example `0xC220BD02`), what it sent and the signal strength.
@@ -90,9 +90,13 @@ The switch declares itself as an On/Off switch (Green Power device type `0x02`) 
 
 ## Check a paired device
 
-*Tools > Data > Green Power devices (raw)* shows what the plugin keeps for each Green Power device: its ID, its device type, the security level, the last frame counter, its model and its widgets. The security key of the device is never shown.
+* **Management > Devices** lists the Green Power devices with the other devices; the *Green Power* chip shows them alone. Each row shows the model and the widgets, the source ID and the IEEE, the LQI of the last frame, and when the device was last heard. The rows are read-only: no details, no name, no parameters, no removal there (see [Remove a Green Power device](#remove-a-green-power-device)).
+* **Dashboard**: the Green Power devices have a *Green Power* segment of their own in *Plugin devices* and in *Type of devices*, and *Devices live* adds *+ N Green Power*. They are never counted as live: the plugin never sends a Green Power device anything, so it has no health status, and a battery-free switch can stay silent for days.
+* **Tools > Data > Green Power devices (raw)** shows what the plugin keeps for each Green Power device: its ID, its device type, the security level, the last frame counter, its model and its widgets. The security key of the device is never shown.
 
-A Green Power device is not listed in *Device names*, *Devices (raw)* or *Management > Devices*, which only show Zigbee devices.
+A Green Power device is not listed in *Tools > Data > Device names* or *Devices (raw)*, which show the Zigbee devices only.
+
+A Green Power device **never appears in a topology report** (*Network > Topology*, *Network > Mesh graph*). It does not join the network: it has no neighbour table and no route, and no router lists it as a neighbour. That is expected.
 
 ## Remove a Green Power device
 
