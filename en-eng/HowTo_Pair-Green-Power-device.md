@@ -91,7 +91,7 @@ The switch declares itself as an On/Off switch (Green Power device type `0x02`) 
 ## Check a paired device
 
 * **Management > Devices** lists the Green Power devices with the other devices; the *Green Power* chip shows them alone. Each row shows the model and the widgets, the source ID and the IEEE, the LQI of the last frame, and when the device was last heard. The rows are read-only: no details, no name, no parameters, no removal there (see [Remove a Green Power device](#remove-a-green-power-device)).
-* **Dashboard**: the Green Power devices have a *Green Power* segment of their own in *Plugin devices* and in *Type of devices*, and *Devices live* adds *+ N Green Power*. They are never counted as live: the plugin never sends a Green Power device anything, so it has no health status, and a battery-free switch can stay silent for days.
+* **Dashboard**: the Green Power devices have a *Green Power* segment of their own in *Plugin devices* and in *Type of devices*. The plugin never sends a Green Power device anything, so it has no health status, and a battery-free switch can stay silent for days. So *Devices live* counts a Green Power device as fine, never as a problem: one Green Power switch alone shows *1 / 1*, with *including Green Power: 1 (not polled)*.
 * **Tools > Data > Green Power devices (raw)** shows what the plugin keeps for each Green Power device: its ID, its device type, the security level, the last frame counter, its model and its widgets. The security key of the device is never shown.
 
 A Green Power device is not listed in *Tools > Data > Device names* or *Devices (raw)*, which show the Zigbee devices only.
