@@ -122,7 +122,7 @@ For example : If you power off an Ikea bulb (with the physical switch) and then 
 If you encounter problems like the above example, it is most likely the automatic reporting is not configured correctly from the device end. Please follow below steps to fix this issue:
 
 1. Go to the Settings page of the WebUI.
-1. Activate the advanced settings.
+1. Choose *All settings* (before plugin 9.1.010, activate the advanced settings).
 1. Check that the parameter __allowReBindingClusters__ is enabled (it is by default).
 1. Switch off the bulb with the physical switch, wait for 10 seconds, then turn it on again.
 The rebinding process starts by itself, and the status problems should be fixed.
@@ -268,7 +268,7 @@ Before 9.1.008, the zigpy topology scan had a bug: each scan kept the readings o
 
 From 9.1.008:
 
-1. Check in the WebUI __Settings__ page (advanced settings) that __ZigpyTopologyReport__ and __TopologyV2__ (*Network Topology based on routing and neighbourghs tables*) are enabled. They are by default.
+1. Check in the WebUI __Settings__ page (*All settings*; advanced settings before plugin 9.1.010) that __ZigpyTopologyReport__ and __TopologyV2__ (*Network Topology based on routing and neighbourghs tables*) are enabled. They are by default.
 1. In [WebUI > Network > Topology](WebUI_Network.md#the-reports), delete the reports made by the older versions: they were built the old way and give wrong results.
 1. Start a new scan and wait for it to complete: on a large network it takes several minutes, and the report only appears in the list once it is complete.
 

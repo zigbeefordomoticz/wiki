@@ -4,7 +4,7 @@
 
 1. One Tradfri motion sensor (MS)
 1. One Tradfri bulb or wall outlet (WO)
-1. The group management enabled in the plugin: in the WebUI [Settings](WebUI_Settings.md), check __Enable Groups__ (`enablegroupmanagement`), validate, and restart the plugin.
+1. The group management enabled in the plugin: in the WebUI [Settings](WebUI_Settings.md), *Available services*, switch on __Enable Groups__ (`enablegroupmanagement`), click *Save* (*Validate* before plugin 9.1.009) and restart the plugin.
 
 ## 2. Pairing the devices with the coordinator
 
