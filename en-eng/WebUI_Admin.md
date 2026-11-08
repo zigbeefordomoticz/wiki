@@ -131,6 +131,20 @@ The __Firmware__ page (*Admin > Firmware*) updates the firmware of your paired d
 
 A firmware file copied into the plugin's `OTAFirmware/` folders shows up when you open or reload this page, without restarting the plugin. With earlier plugin versions, the page has three drop-down lists (manufacturer, firmware file, device(s)) and a new file needs a plugin restart.
 
+From plugin version 9.1.010 the page opens with a red warning: firmware files come from each device's manufacturer, an update can fail and leave a device unusable, and Zigbee for Domoticz takes no responsibility for it. Under it, the link *Firmware updates found online for your devices* opens the page below.
+
+### Firmware updates found online
+
+*Admin > Firmware > Firmware updates found online* (plugin 9.1.010 and later) lists the newer firmware the plugin found for your devices in the online firmware indexes (zigbee-OTA, IKEA, SONOFF). The *Firmware update available* item of the [Dashboard](WebUI_Dashboard.md) opens it too.
+
+![Admin > Firmware > Firmware updates found online](Images/WebUI-Admin-Firmware-updates-online.png)
+*This picture may have changed since this documentation was written.*
+
+* One row per device and firmware: the device name, model and short address, the manufacturer, the image type, the installed version and the newest version found online.
+* **Download** opens the link given by the index, with the file name under it. The plugin does not download anything: you do. The **Download** buttons stay disabled until you tick *I understand: I update my devices at my own risk* in the warning, each time you open the page. *No download link* means the index gave none.
+* **How to update a device** recalls the three steps: download the file, copy it into the `OTAFirmware` folder of the device's brand, then open the **Firmware** page to start the update.
+* The list is filled by the online check of `checkFirmwareAgainstZigbeeOTARepository` (enabled by default). It is empty when that check is off or found nothing.
+
 Refer to [Update device firmware](HowTo_Update-device-firmware.md) for where to put the firmware files and how the update runs.
 
 ------------------------------------------------
