@@ -4,17 +4,20 @@ The __Settings__ menu of the WebUI lets you view and change the plugin settings.
 
 ## How the page works
 
-> **Plugin 9.1.009 and later.** This section describes the Settings page available since plugin 9.1.009. In older versions, all the sections are shown one below the other, the changes are saved with **Validate**, and **Settings (default)** puts every setting back to its default.
+> **Plugin 9.1.010 and later.** This section describes the Settings page available since plugin 9.1.010. In 9.1.009, a list on the left shows one theme at a time, an **Advanced settings** switch shows every setting, and **Changes to save** sits on the right; the rest works as below. In older versions, all the sections are shown one below the other, the changes are saved with **Validate**, and **Settings (default)** puts every setting back to its default.
 
 ![Settings](Images/EN_WebUI-Settings.png)
 *This picture may have changed since this documentation was written.*
 
-* The settings are grouped by theme, the sections below. The list on the left shows one theme at a time; a number next to a theme tells how many of its settings you changed and haven't saved yet.
-* **Search all settings** finds settings by name or by their text, in every theme. Each result shows the theme it belongs to.
-* By default, only the main settings are shown. Enable the **Advanced settings** switch to see all of them (the *Advanced parameters* tables below). A setting you changed stays shown when you switch it off.
-* Each setting shows its text, its name in the plugin and tags: *Advanced*, and what a change requires: *Restart* (plugin restart), *Coordinator reset* or *Erase PDM*.
+* The settings are grouped by theme, the sections below. The buttons under the search box show one theme at a time; a number on a theme tells how many of its settings you changed and haven't saved yet.
+* Inside a theme, the settings are split into cards by subject (for example *Internet and privacy*, *Domoticz*, *Features* and *Device ping* in *Available services*). When a theme has four cards or more, **In this section:** links to each card.
+* **Essentials** / **All settings** chooses what is shown. *Essentials* shows the main settings, and folds the advanced ones (the *Advanced parameters* tables below) at the bottom of each card: **Show advanced settings (N)** opens them for that card. A card with only advanced settings shows *Advanced settings: N* and a **Show** link. *All settings* shows every setting. A setting you changed always stays shown. Your browser remembers the choice.
+* **Search all settings** finds settings by name or by their text, in every theme. Two filters work the same way: **Changed from default** (with the number of settings that differ from their default) and **Needs a restart**. While a search or a filter is on, the page lists the matches of every theme, with *Settings shown: N*; **Clear search and filters** goes back to the theme.
+* Each setting shows its text, its name in the plugin and tags: *Advanced*, *Applied once, at the next start* (one-time resets), and what a change requires: *Restart* (plugin restart), *Coordinator reset* or *Erase PDM*. A number shows its allowed range and unit when the plugin gives them.
+* Some settings only appear when the setting they depend on is enabled.
+* Settings that can stop the plugin from starting, or make you pair every device again, are kept apart in a red **Handle with care** card at the end of their theme, folded: **Show** opens it. Saving a change to one of them asks for a confirmation (**Save anyway**).
 * When a value differs from the default, the default is shown under it, with a **reset** link that puts the default back.
-* **Changes to save**, on the right, lists each change with its old and new value, and what saving it implies (the highest of the changes: restart the plugin, reset the coordinator, or erase the coordinator memory and pair all the devices again). **Save (N)** saves them, **Discard** drops them. A value that is not valid (red field) blocks the saving.
+* As soon as a setting is changed, a bar at the bottom of the page shows *Unsaved changes: N* and what saving implies: how many of the changes need a plugin restart or, when a change needs more, that the coordinator must be reset, or its memory erased and all the devices paired again. **Review** lists each change with its old and new value. **Save (N)** saves them, **Discard** drops them. A value that is not valid (red field) blocks the saving.
 * **Reset all settings to defaults** puts every setting back to its default, except the folder paths. Nothing is saved until you click **Save**.
 * After **Save**, a pop-up tells you what is needed:
   * **Plugin Reload**: restart the plugin (**Admin > Plugin > Restart…**). The *Restart needed* indicator of the menu bar also shows that a restart is pending.
