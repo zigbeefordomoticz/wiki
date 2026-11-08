@@ -5,15 +5,21 @@ labels shown by the WebUI (src/translations/en-US.json in Domoticz-Zigbee-UI).
 Hidden settings and the VerboseLogging category (Tools > Debug) are left out.
 
 The hand-written part of the page, above the GENERATED_MARKER line, is kept
-as is; everything below it is replaced. Units and notes for individual
-settings are in UNITS and NOTES below: add one there when a new setting needs
-an explanation.
+as is; everything below it is replaced.
 
-Usage, from the wiki folder, with the plugin and the WebUI checked out next to it:
+Units and ranges come from the setting itself when the plugin gives them (its
+"Unit", "Min" and "Max" keys, plugin 9.1.010 and later); UNITS below overrides
+them. The notes are in NOTES; "OneShot" and "Danger" settings get a note of
+their own. Add an entry when a new setting needs an explanation.
+
+Usage, from the wiki folder, with the plugin and the WebUI checked out next to it.
+Read PluginConf.py from the release the page documents: origin/stable9 once
+it is released, its integration branch before (9.1.010:
+origin/integration/stable9-9.1.010), and the WebUI labels from origin/beta:
 
     git -C ../Domoticz-Zigbee show origin/stable9:Classes/PluginConf.py > /tmp/PluginConf.py
-    python3 _tools/gen_settings.py /tmp/PluginConf.py \
-        ../Domoticz-Zigbee-UI/src/translations/en-US.json en-eng/WebUI_Settings.md
+    git -C ../Domoticz-Zigbee-UI show origin/beta:src/translations/en-US.json > /tmp/en-US.json
+    python3 _tools/gen_settings.py /tmp/PluginConf.py /tmp/en-US.json en-eng/WebUI_Settings.md
 """
 import ast, json, sys
 
@@ -26,19 +32,23 @@ SETTINGS = next(ast.literal_eval(n.value) for n in tree.body
 LABELS = json.load(open(labels_file))
 
 UNITS = {
-    "TradfriKelvinStep": "K", "Lang": "en-US, fr-FR, de-DE, es-ES, it-IT, nl-NL", "reenforcementWiser": "s", "bindingDelay": "s", "pairingCommandsDelay": "s",
-    "ForceDeviceTimedOut_afterXhours": "h", "checkConfigurationReporting": "s", "resetMotiondelay": "s",
-    "resetSwitchSelectorPushButton": "s", "pingDevicesFeq": "s",
-    "GrpmoveToColourTemp": "1/10 s", "GrpmoveToColourRGB": "1/10 s", "GrpmoveToLevel": "1/10 s",
-    "HealthTimeOut": "s",
+    # A step on Domoticz's 0-255 white scale (Classes/GroupMgtv2/GrpIkeaRemote.py), not kelvin
+    "TradfriKelvinStep": "step on the 0–255 white scale (1–255)",
+    "Lang": "en-US, fr-FR, de-DE, es-ES, it-IT, nl-NL",
 }
+
+# The plugin's "Unit" key, as written in the tables
+UNIT_TEXT = {"s": "s", "h": "h", "ds": "1/10 s", "dBm": "dBm"}
 
 NOTES = {
     "MatomoOptIn": "See [Plugin statistics](WebUI_Statistics.md) for what is sent.",
     "enablegroupmanagement": "See [Group Management](HowTo_Group-management.md).",
     "internetAccess": "Used to check for plugin and firmware updates, to update the certified devices database and for OTA firmware repositories. It doesn't control the [statistics](WebUI_Statistics.md).",
     "DomoticzCustomMenu": "See [Plugin integration](Plugin_Integration.md).",
-    "pingDevices": "See also `pingDevicesFeq` (Coordinator settings).",
+    "pingDevices": "How often: `pingDevicesFeq`.",
+    "Ping": "ZiGate coordinators only.",
+    "enableNativeScenes": "Needs Group Management and a zigpy coordinator.",
+    "GreenPowerEnable": "Not offered on Texas Instruments (Z-Stack) coordinators, which cannot receive Green Power frames directly.",
     "zigatePartOfGroupTint": "Shown with Silicon Labs (EZSP) coordinators only. See [Muller Licht / Tint](Corner_Tint.md).",
     "zigatePartOfGroup0000": "Shown with Silicon Labs (EZSP) coordinators only. Group 0000 is used by Ikea and Xiaomi switches, see [Ikea Tradfri](Corner_Ikea-Tradfri.md).",
     "Livolo": "See [Livolo](Corner_Livolo.md).",
@@ -59,8 +69,6 @@ NOTES = {
     "checkConfigurationReporting": "75600 s = 21 hours. 0 disables.",
     "HealthTimeOut": "21600 s = 6 hours (21200 s before plugin 9.1.009). 0 disables. A device's own `HealthTimeOut` parameter (Device Management, parameters), when above 0, overrides it for that device. Devices silent for longer are counted as *Not seen for n h* on the [Dashboard](WebUI_Dashboard.md#needs-attention).",
     "ZigpyTopologyAssociatedDevices": "A zigpy topology scan also collects the devices attached to each router; the scan then takes longer. The *Associated devices* button collects them on its own, see [Network](WebUI_Network.md) and [Associated devices](WebUI_Network-Mesh.md#associated-devices-a-router-and-what-is-attached-to-it).",
-    "resetConfigureReporting": "One shot: the plugin clears it after the restart.",
-    "resetReadAttributes": "One shot: the plugin clears it after the restart.",
     "forceSwitchSelectorPushButton": "See [domoticz/domoticz#4143](https://github.com/domoticz/domoticz/issues/4143).",
     "TrackingEraticValue": "Useful when [writing a device configuration](HowTo_Device-Customization.md) with a `Range`.",
     "allowReBindingClusters": "See [FAQ Q8](Problem_FAQ.md#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually).",
@@ -96,6 +104,8 @@ SKIP = ("Reserved", "PluginTransport", "VerboseLogging")
 
 def fmt_default(p):
     t, v = p["type"], p["default"]
+    if isinstance(v, float) and v.is_integer():
+        v = int(v)
     if t == "bool":
         return "on" if v else "off"
     if t == "list":
@@ -117,7 +127,19 @@ def fmt_restart(r):
 def values(p):
     if p["type"] == "list":
         return ", ".join(p["list"].keys())
-    return ""
+    unit = UNIT_TEXT.get(p.get("Unit"), p.get("Unit", ""))
+    if "Min" in p and "Max" in p:
+        return f"{unit} ({p['Min']}–{p['Max']})".strip()
+    return unit
+
+
+def notes(name, p):
+    text = NOTES.get(name, "")
+    if p.get("OneShot"):
+        text = ("One shot: applied at the next start, then switched off. " + text).strip()
+    if p.get("Danger"):
+        text = ("In the *Handle with care* card. " + text).strip()
+    return text
 
 
 def table(params):
@@ -131,7 +153,7 @@ def table(params):
             unit = COORDINATOR_DEPENDENT[name]["unit"]
             restart = COORDINATOR_DEPENDENT[name]["restart"]
         default = "`0`" if name in COORDINATOR_DEPENDENT else fmt_default(p)
-        rows.append(f"| `{name}` | {label} | {default} | {unit} | {restart} | {NOTES.get(name, '')} |")
+        rows.append(f"| `{name}` | {label} | {default} | {unit} | {restart} | {notes(name, p)} |")
     return "\n".join(rows)
 
 
