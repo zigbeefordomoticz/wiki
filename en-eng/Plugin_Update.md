@@ -15,7 +15,7 @@ The plugin is regularly updated, for bug fixing or enhancement, without changing
 
 ### From the WebUI (recommended)
 
-The plugin can be updated from its own administration page. This is the recommended way: the update runs with the Python environment Domoticz uses, including a virtual environment (detected from `VIRTUAL_ENV`, as in the official Docker image, or from `PYTHONPATH`).
+The plugin can be updated from its own administration page. This is the recommended way: the update runs with the Python environment Domoticz uses, including a virtual environment: it is detected from `VIRTUAL_ENV`, from `PYTHONPATH`, or from the `python3` found in `PATH`, as in the official Docker image (see [Tools folder](Plugin_Tools-folder.md#plugin-auto-upgradesh)).
 
 * Open the plugin Web Interface.
 * Go to section [Admin > Plugin](WebUI_Admin.md#plugin).

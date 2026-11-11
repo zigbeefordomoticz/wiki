@@ -42,9 +42,15 @@ Updates the plugin: `git pull` of the plugin folder, then installation of the Py
 ./Tools/plugin-auto-upgrade.sh
 ```
 
-It looks for the Python virtual environment the plugin runs in, from the `VIRTUAL_ENV` and `PYTHONPATH` variables, and hands over to one of two scripts:
+It looks for the Python virtual environment the plugin runs in, in this order:
 
-* `plugin-auto-upgrade-v2.sh` when `VIRTUAL_ENV` is set, or when `PYTHONPATH` points to a `lib/python3.x/site-packages` folder. Before running it, `plugin-auto-upgrade.sh` cleans the virtual environment: **everything in its root folder except `bin`, `lib`, `lib64`, `include` and `pyvenv.cfg` is deleted**, as well as the `__pycache__` folders and `.pyc` files. Don't keep anything of your own there.
+1. the `VIRTUAL_ENV` variable, when its folder has a `bin/activate`;
+1. the `PYTHONPATH` variable;
+1. the `python3` found in `PATH`, when it runs from a virtual environment. This is how the official Docker image enables `/opt/venv` (through `PATH` only, with neither `VIRTUAL_ENV` nor `PYTHONPATH` set). Plugin 9.1.008 and later.
+
+It then hands over to one of two scripts:
+
+* `plugin-auto-upgrade-v2.sh` when the virtual environment comes from `VIRTUAL_ENV` or from `PATH`, or when `PYTHONPATH` points to a `lib/python3.x/site-packages` folder. Before running it, `plugin-auto-upgrade.sh` cleans the virtual environment: **everything in its root folder except `bin`, `lib`, `lib64`, `include` and `pyvenv.cfg` is deleted**, as well as the `__pycache__` folders and `.pyc` files. Don't keep anything of your own there.
 * `plugin-auto-upgrade-v1.sh` in all other cases (`PYTHONPATH` points to the root of a virtual environment, or there is no virtual environment). Before installing, it uninstalls the modules listed in `constraints.txt`, so that they are installed again at the pinned version.
 
 Both scripts also install `python3-venv` and `python3-pip` with the system package manager (`apt`; `v2` also handles `dnf` and `yum`) and upgrade `pip` if needed. When you are not `root`, they use `sudo`: the user must be able to run `sudo` without a password, or the script stops on the module installation.

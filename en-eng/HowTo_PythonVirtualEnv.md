@@ -16,7 +16,7 @@ error: externally-managed-environment
 
 The clean way is a Python **virtual environment** (venv) dedicated to Domoticz, in which you install the modules of the plugin (and of your other Python plugins), and which Domoticz uses when it starts.
 
-**With the official Domoticz Docker image, there is nothing to do:** the image already runs Domoticz with a virtual environment (`/opt/venv`), and the plugin installs its modules there. See [Installation with Docker](How-To-Install-RPI-Docker.md).
+**With the official Domoticz Docker image, there is nothing to do:** the image already runs Domoticz with a virtual environment (`/opt/venv`), and the plugin installs its modules there. See [Installation with Docker](How-To-Install-RPI-Docker.md). That virtual environment is part of the container, so the modules are lost when the container is recreated; to keep them, put the virtual environment in the userdata volume, see [Keep the Python modules in the userdata volume](How-To-Install-RPI-Docker.md#keep-the-python-modules-in-the-userdata-volume).
 
 ## 1. Find the Python version of Domoticz
 
@@ -113,11 +113,17 @@ export VIRTUAL_ENV=/home/pi/Domoticz_Python_Environment
 export PATH="$VIRTUAL_ENV/bin:$PATH"
 ```
 
+Putting the two lines at the top of the script, next to the other variables (`NAME`, `USERNAME`, …), works as well. Remove any `export PYTHONPATH=...` line used for the plugin (see [Older setups with PYTHONPATH](#older-setups-with-pythonpath)). Then restart Domoticz:
+
+```bash
+sudo service domoticz.sh restart
+```
+
 ## 6. Check
 
 At start-up, the plugin writes `VIRTUAL_ENV is set to: /home/pi/Domoticz_Python_Environment` in the Domoticz log. If it writes `VIRTUAL_ENV is not set`, Domoticz was not started with the virtual environment.
 
-The official Docker image is the exception: it enables `/opt/venv` through `PATH` only, so the log says `VIRTUAL_ENV is not set` although the virtual environment is used.
+The official Docker image is the exception: it enables `/opt/venv` through `PATH` only, so the log says `VIRTUAL_ENV is not set` although the virtual environment is used. If you [keep the virtual environment in the userdata volume](How-To-Install-RPI-Docker.md#keep-the-python-modules-in-the-userdata-volume), you set `VIRTUAL_ENV` yourself and the log shows its path.
 
 ## Older setups with PYTHONPATH
 

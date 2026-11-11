@@ -96,7 +96,7 @@ Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial
 
 ## Updating
 
-* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again.
+* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again (or [keep them in the userdata volume](#keep-the-python-modules-in-the-userdata-volume)).
 * **Domoticz, or the plugin's Python requirements**: rebuild the image and recreate the container:
 
   ```bash
@@ -106,6 +106,52 @@ Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial
   ```
 
 * The plugin also provides `Tools/update_domoticz_docker_container.sh`, which rebuilds the image (`--rebuild`), restarts the container and checks for plugin updates. Its defaults (image `domoticz-custom:latest`, plugin folder `/opt/domoticz/plugins/Domoticz-Zigbee`) differ from this page: use `--image` and `--plugin-dir` to match your setup, and `--dry-run` to see what it would do. Run it with `--help` for all the options.
+
+## Keep the Python modules in the userdata volume
+
+The virtual environment of the image (`/opt/venv`) is part of the container, not of the volume. When the container is recreated (image update, *Reset* or project rebuild in Synology Container Manager), the plugin modules are gone and must be installed again, by `customstart.sh` or by hand.
+
+You can instead keep a virtual environment in the userdata volume. It survives the recreation of the container, and works with the plain `domoticz/domoticz` image, without building a custom one. The commands below use the container name `domoticz`; adapt them.
+
+1. Open a shell in the container:
+
+   ```bash
+   docker exec -it domoticz bash
+   ```
+
+1. Create the virtual environment in the volume. The `python3` of the image is the one Domoticz uses, so the versions match:
+
+   ```bash
+   python3 -m venv /opt/domoticz/userdata/venv
+   ```
+
+1. Install the plugin modules in it, still from the container shell:
+
+   ```bash
+   /opt/domoticz/userdata/venv/bin/python3 -m pip install \
+     -r /opt/domoticz/userdata/plugins/Domoticz-Zigbee/requirements.txt
+   ```
+
+   Do it now, from the shell: with an empty virtual environment, the plugin can't start, so its WebUI (and its *Upgrade* button) isn't available.
+
+1. Add `VIRTUAL_ENV` and `PATH` to the `environment` of the compose file (on Synology, in the Container Manager project), and remove any `PYTHONPATH`:
+
+   ```yaml
+       environment:
+         VIRTUAL_ENV: /opt/domoticz/userdata/venv
+         # Written in full: Compose would replace $PATH with the PATH of the host
+         PATH: /opt/domoticz/userdata/venv/bin:/opt/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+   ```
+
+   The virtual environment of the volume comes first in `PATH`: Domoticz looks for its Python there.
+
+1. Recreate the container (`docker compose up -d`) and check the Domoticz log. The plugin writes `VIRTUAL_ENV is set to: /opt/domoticz/userdata/venv`, then starts normally.
+
+Afterwards:
+
+* The update from the WebUI (*Admin > Plugin*) installs the modules in this virtual environment; its log shows `Detected virtualenv via VIRTUAL_ENV (V2)`. The update cleans the root folder of the virtual environment (see [plugin-auto-upgrade.sh](Plugin_Tools-folder.md#plugin-auto-upgradesh)): don't keep anything of your own in `/opt/domoticz/userdata/venv`.
+* `customstart.sh` (step 5) isn't needed any more. If it stays linked, it reinstalls the modules in this virtual environment each time a new container starts, which is harmless.
+* When a new image comes with another Python version (for example 3.13 to 3.14), the virtual environment no longer works: `/opt/domoticz/userdata/venv/bin/python3 --version` fails, and the plugin doesn't start. Delete it (`rm -rf /opt/domoticz/userdata/venv`) and do steps 1 to 3 again. Your Zigbee devices and settings are not in it.
 
 ## Troubleshooting
 
