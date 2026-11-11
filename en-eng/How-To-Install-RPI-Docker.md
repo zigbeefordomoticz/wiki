@@ -96,7 +96,7 @@ Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial
 
 ## Updating
 
-* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again (or [keep them in the userdata volume](#keep-the-python-modules-in-the-userdata-volume)).
+* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again (if that fails on your system, see [Keep the Python modules in the userdata volume](#keep-the-python-modules-in-the-userdata-volume)).
 * **Domoticz, or the plugin's Python requirements**: rebuild the image and recreate the container:
 
   ```bash
@@ -109,9 +109,17 @@ Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial
 
 ## Keep the Python modules in the userdata volume
 
-The virtual environment of the image (`/opt/venv`) is part of the container, not of the volume. When the container is recreated (image update, *Reset* or project rebuild in Synology Container Manager), the plugin modules are gone and must be installed again, by `customstart.sh` or by hand.
+**Optional.** The setup above, with `customstart.sh`, is the recommended one: you have nothing to configure, and the image handles Python.
 
-You can instead keep a virtual environment in the userdata volume. It survives the recreation of the container, and works with the plain `domoticz/domoticz` image, without building a custom one. The commands below use the container name `domoticz`; adapt them.
+The virtual environment of the image (`/opt/venv`) is part of the container, not of the volume. When the container is recreated (image update, *Reset* or project rebuild in Synology Container Manager), the plugin modules are gone, and `customstart.sh` installs them again when the new container first starts. That first start takes longer, and it only happens when you change the image, typically for a new Domoticz version.
+
+If that reinstallation fails on your system (for example, no network yet when the NAS boots), you can instead keep a virtual environment in the userdata volume. Weigh the trade-off first:
+
+* The modules survive the recreation of the container: no reinstallation, no network needed at start.
+* It is more configuration: a virtual environment to create, and two environment variables in the compose file.
+* When a new image comes with another Python version, this virtual environment stops working and you have to rebuild it by hand (see the end of this section). With the default setup, `customstart.sh` handles that by itself.
+
+It works with the plain `domoticz/domoticz` image, without building a custom one. The commands below use the container name `domoticz`; adapt them.
 
 1. Open a shell in the container:
 
