@@ -16,7 +16,7 @@ error: externally-managed-environment
 
 The clean way is a Python **virtual environment** (venv) dedicated to Domoticz, in which you install the modules of the plugin (and of your other Python plugins), and which Domoticz uses when it starts.
 
-**With the official Domoticz Docker image, there is nothing to do:** the image already runs Domoticz with a virtual environment (`/opt/venv`), and the plugin installs its modules there. See [Installation with Docker](How-To-Install-RPI-Docker.md). That virtual environment is part of the container, so the modules are lost when the container is recreated; to keep them, put the virtual environment in the userdata volume, see [Keep the Python modules in the userdata volume](How-To-Install-RPI-Docker.md#keep-the-python-modules-in-the-userdata-volume).
+**With the official Domoticz Docker image, there is nothing to do:** the image already runs Domoticz with a virtual environment (`/opt/venv`), and the plugin installs its modules there. See [Installation with Docker](How-To-Install-RPI-Docker.md). That virtual environment is part of the container: when the container is recreated, the plugin's `customstart.sh` installs the modules again. An optional alternative keeps them in the userdata volume, see [Keep the Python modules in the userdata volume](How-To-Install-RPI-Docker.md#keep-the-python-modules-in-the-userdata-volume).
 
 ## 1. Find the Python version of Domoticz
 
