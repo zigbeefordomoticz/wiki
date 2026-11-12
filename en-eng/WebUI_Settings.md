@@ -4,17 +4,20 @@ The __Settings__ menu of the WebUI lets you view and change the plugin settings.
 
 ## How the page works
 
-> **Plugin 9.1.009 and later.** This section describes the Settings page available since plugin 9.1.009. In older versions, all the sections are shown one below the other, the changes are saved with **Validate**, and **Settings (default)** puts every setting back to its default.
+> **Plugin 9.1.010 and later.** This section describes the Settings page available since plugin 9.1.010. In 9.1.009, a list on the left shows one theme at a time, an **Advanced settings** switch shows every setting, and **Changes to save** sits on the right; the rest works as below. In older versions, all the sections are shown one below the other, the changes are saved with **Validate**, and **Settings (default)** puts every setting back to its default.
 
 ![Settings](Images/EN_WebUI-Settings.png)
 *This picture may have changed since this documentation was written.*
 
-* The settings are grouped by theme, the sections below. The list on the left shows one theme at a time; a number next to a theme tells how many of its settings you changed and haven't saved yet.
-* **Search all settings** finds settings by name or by their text, in every theme. Each result shows the theme it belongs to.
-* By default, only the main settings are shown. Enable the **Advanced settings** switch to see all of them (the *Advanced parameters* tables below). A setting you changed stays shown when you switch it off.
-* Each setting shows its text, its name in the plugin and tags: *Advanced*, and what a change requires: *Restart* (plugin restart), *Coordinator reset* or *Erase PDM*.
+* The settings are grouped by theme, the sections below. The buttons under the search box show one theme at a time; a number on a theme tells how many of its settings you changed and haven't saved yet.
+* Inside a theme, the settings are split into cards by subject (for example *Internet and privacy*, *Domoticz*, *Features* and *Device ping* in *Available services*). When a theme has four cards or more, **In this section:** links to each card.
+* **Essentials** / **All settings** chooses what is shown. *Essentials* shows the main settings, and folds the advanced ones (the *Advanced parameters* tables below) at the bottom of each card: **Show advanced settings (N)** opens them for that card. A card with only advanced settings shows *Advanced settings: N* and a **Show** link. *All settings* shows every setting. A setting you changed always stays shown. Your browser remembers the choice.
+* **Search all settings** finds settings by name or by their text, in every theme. Two filters work the same way: **Changed from default** (with the number of settings that differ from their default) and **Needs a restart**. While a search or a filter is on, the page lists the matches of every theme, under *Settings matching “…”: N* (search) or *Settings shown: N* (filters only); **Clear search and filters** goes back to the theme.
+* Each setting shows its text and tags: *Advanced* (in *All settings*), *Applied once, at the next start* (one-time resets), and what a change requires: *Restart* (plugin restart), *Coordinator reset* or *Erase PDM*. Its name in the plugin, the one used in the tables below, shows in search results and when you hover its text. A number shows its allowed range and unit.
+* Some settings only appear when the setting they depend on is enabled, or when you changed them. With **Enable Groups** off, the *Group management settings* and *Command transitions for Lights in Groups* themes are not shown at all.
+* Settings that can stop the plugin from starting, or make you pair every device again, are kept apart in a red **Handle with care** card at the end of their theme, folded: **Show** opens it. It also opens by itself when one of its settings has an unsaved change, and in search and filter results. Saving a change to one of them asks for a confirmation (**Save anyway**).
 * When a value differs from the default, the default is shown under it, with a **reset** link that puts the default back.
-* **Changes to save**, on the right, lists each change with its old and new value, and what saving it implies (the highest of the changes: restart the plugin, reset the coordinator, or erase the coordinator memory and pair all the devices again). **Save (N)** saves them, **Discard** drops them. A value that is not valid (red field) blocks the saving.
+* As soon as a setting is changed, a bar at the bottom of the page shows *Unsaved changes: N* and what saving implies: how many of the changes need a plugin restart or, when a change needs more, that the coordinator must be reset, or its memory erased and all the devices paired again. **Review** lists each change with its old and new value. **Save (N)** saves them, **Discard** drops them. A value that is not valid (red field) blocks the saving.
 * **Reset all settings to defaults** puts every setting back to its default, except the folder paths. Nothing is saved until you click **Save**.
 * After **Save**, a pop-up tells you what is needed:
   * **Plugin Reload**: restart the plugin (**Admin > Plugin > Restart…**). The *Restart needed* indicator of the menu bar also shows that a restart is pending.
@@ -40,8 +43,8 @@ Enable the services you want to be active
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `MatomoOptIn` | Enable the plugin to collect informations for analyticz purposes such as Coordinator model, version... | on |  |  | See [Plugin statistics](WebUI_Statistics.md) for what is sent. |
 | `enablegroupmanagement` | Enable Groups | off |  | plugin restart | See [Group Management](HowTo_Group-management.md). |
+| `enableNativeScenes` | Enable native Zigbee scenes | off |  | plugin restart | Needs Group Management and a zigpy coordinator. |
 | `internetAccess` | Allow Internet access | on |  | plugin restart | Used to check for plugin and firmware updates, to update the certified devices database and for OTA firmware repositories. It doesn't control the [statistics](WebUI_Statistics.md). |
-| `CheckSSLCertificateValidity` | Check the validity of SSL certificates | off |  | plugin restart |  |
 | `DomoticzCustomMenu` | Enable Plugin WebUI from Domoticz Custom menu | on |  | plugin restart | See [Plugin integration](Plugin_Integration.md). |
 | `NightShift` | Push background activity from 11PM to 6AM | off |  |  |  |
 
@@ -49,7 +52,9 @@ Enable the services you want to be active
 
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
-| `pingDevices` | Ping main-powered devices regularly to vérify their health | on |  | plugin restart | See also `pingDevicesFeq` (Coordinator settings). |
+| `CheckSSLCertificateValidity` | Check the validity of SSL certificates | off |  | plugin restart |  |
+| `pingDevices` | Ping main-powered devices regularly to vérify their health | on |  | plugin restart | How often: `pingDevicesFeq`. |
+| `pingDevicesFeq` | Frequency of regular ping main-powered devices | `3600` | s (300–86400) |  |  |
 
 ## Group management settings
 
@@ -61,8 +66,6 @@ Here are all setting to enable and configure the Group management feature.
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `GroupOnBattery` | Enable group creation to a battery devices | off |  |  |  |
 | `OnIfOneOn` | Group is On if one device is On (otherwise needs all devices On) | on |  |  |  |
-| `TradfriKelvinStep` | Kelvin step for Tradfri remote | `51` | K |  |  |
-| `pingViaGroup` | Group address used to ping devices (0 to disable) | `0000` |  |  |  |
 
 ### Advanced parameters
 
@@ -73,6 +76,8 @@ Here are all setting to enable and configure the Group management feature.
 | `allowGroupMembership` | Add newly paired devices to their group membership | on |  | plugin restart |  |
 | `zigatePartOfGroupTint` | Add the coordinator to the Tint remote group | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. See [Muller Licht / Tint](Corner_Tint.md). |
 | `zigatePartOfGroup0000` | Create Group 0000 | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. Group 0000 is used by Ikea and Xiaomi switches, see [Ikea Tradfri](Corner_Ikea-Tradfri.md). |
+| `TradfriKelvinStep` | Kelvin step for Tradfri remote | `51` | step on the 0–255 white scale (1–255) |  |  |
+| `pingViaGroup` | Group address used to ping devices (0 to disable) | `0000` |  |  |  |
 
 ## Zigpy CIE specific configuration
 
@@ -83,7 +88,6 @@ Specific to some CIE as ConBeeII and RasBeeII it might required to enable some C
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `autoBackup` | Automatic backup of coordinator | on |  |  | See [Backup a ZigPy coordinator](HowTo_Backup-zigpy-coordinators.md) and [Plugin Backup](Plugin_Backup.md). |
-| `MonitorLoopLatency` | Monitor the zigpy event loop latency | off |  |  |  |
 
 ### Advanced parameters
 
@@ -95,18 +99,20 @@ Specific to some CIE as ConBeeII and RasBeeII it might required to enable some C
 | `Terncy` | Enable the Terncy specific endpoint | off |  | plugin restart |  |
 | `Wiser` | Enable the Schneider Wiser specific endpoint | off |  | plugin restart | See [Schneider Wiser](Corner_Schneider_Wiser.md). |
 | `Wiser2` | Enable the Schneider Wiser 2 specific endpoint | off |  | plugin restart | See [Schneider Wiser](Corner_Schneider_Wiser.md). |
-| `OverWriteCoordinatorIEEEOnlyOnce` | Overwrite the coordinator IEEE only once (EZSP) | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. |
+| `OverWriteCoordinatorIEEEOnlyOnce` | Overwrite the coordinator IEEE only once (EZSP) | off |  | plugin restart | In the *Handle with care* card. Shown with Silicon Labs (EZSP) coordinators only. |
 | `autoRestore` | Automaticaly apply the most recent coordinator backup when a clean coordinator is found | on |  |  | Used when you replace the coordinator by a new one of the same family. |
 | `ZigpyTopologyReport` | Enable the use of zigpy Topology Scanner | on |  |  |  |
 | `ZigpyTopologyReportAutoBackup` | Automaticaly backup auto-triggered Topology scan | off |  |  |  |
-| `ZigpyTopologyAssociatedDevices` |  | off |  |  | A zigpy topology scan also collects the devices attached to each router; the scan then takes longer. The *Associated devices* button collects them on its own, see [Network](WebUI_Network.md) and [Associated devices](WebUI_Network-Mesh.md#associated-devices-a-router-and-what-is-attached-to-it). |
+| `ZigpyTopologyAssociatedDevices` | Also collect the associated devices of each router after a topology scan (a few more minutes) | off |  |  | A zigpy topology scan also collects the devices attached to each router; the scan then takes longer. The *Associated devices* button collects them on its own, see [Network](WebUI_Network.md) and [Associated devices](WebUI_Network-Mesh.md#associated-devices-a-router-and-what-is-attached-to-it). |
 | `ZigpyAutoTopology` | Automatic topology scan by zigpy (every 12 hours) | off |  |  |  |
+| `MonitorLoopLatency` | Monitor the zigpy event loop latency | off |  |  |  |
 | `CaptureRxFrames` | Capture received frames | off |  | plugin restart |  |
 | `CaptureTxFrames` | Capture transmitted frames | off |  | plugin restart |  |
 | `enableZclDuplicatecheck` | Discard duplicated ZCL messages | off |  |  |  |
 | `EzspAllowUnsecuredRejoins` | Allow unsecured rejoins (EZSP) | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. |
 | `BellowsNoMoreEndDeviceChildren` | Disable direct pairing on Coordinator | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. End devices then pair through a router. |
 | `zigpySourceRouting` | Enable Zigbee Source routing (plugin) | off |  | plugin restart |  |
+| `GreenPowerEnable` | Accept Green Power devices when pairing is open | off |  |  | Not offered on Texas Instruments (Z-Stack) coordinators, which cannot receive Green Power frames directly. |
 
 ## Device firmware update Over-The-Air
 
@@ -144,14 +150,13 @@ Special settings for special devices or special conditions
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `TuyaMagicRead` | Send the Tuya magic read command when pairing | on |  |  |  |
-| `ConfigureReportingChunk` | Max number of attributes when Configure Reporting | `3` |  |  |  |
+| `ConfigureReportingChunk` | Max number of attributes when Configure Reporting | `3` | (1–7) |  |  |
 | `AqaraOppleBulbMode` | Enable to have Aqara Opple remote commanding directly devices | off |  |  |  |
-| `reenforcementWiser` | Enable reenforcement messages (legacy Wiser only) | `300` | s |  |  |
-| `ReadAttributeChunk` | Max number of attributes when Read Attributes | `10` |  |  |  |
-| `ReadAttributeChunkWhenPairing` | Max number of attributes per Read Attributes while pairing | `3` |  |  |  |
+| `ReadAttributeChunk` | Max number of attributes when Read Attributes | `3` | (1–7) |  |  |
+| `ReadAttributeChunkWhenPairing` | Max number of attributes per Read Attributes while pairing | `3` | (1–7) |  |  |
 | `ZiGateConfigureReporting` | Let the ZiGate firmware handle Configure Reporting | on |  |  | ZiGate coordinators only. |
-| `bindingDelay` | Delay in sec after each binding command | `0.75` | s |  |  |
-| `pairingCommandsDelay` | Delay in sec between commands sent during pairing | `0` | s |  |  |
+| `bindingDelay` | Delay in sec after each binding command | `0.75` | s (0–5) |  |  |
+| `pairingCommandsDelay` | Delay in sec between commands sent during pairing | `0` | s (0–5) |  |  |
 
 ## Web Interface settings
 
@@ -162,8 +167,7 @@ Allows to enable/disable Web UI
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `Lang` | Web UI language | `en-US` | en-US, fr-FR, de-DE, es-ES, it-IT, nl-NL |  | Also the language of the selector levels of some widgets created after the change. |
-| `numTopologyReports` | Number of Topology reports saved | `4` |  |  |  |
-| `numEnergyReports` | Number of Interference reports saved | `4` |  |  |  |
+| `numTopologyReports` | Number of Topology reports saved | `4` | (1–20) |  |  |
 
 ### Advanced parameters
 
@@ -179,8 +183,8 @@ Here are all settings related to Devices and how the coordinator interact with t
 
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
-| `resetMotiondelay` | Delay in sec to reset motion detection | `30` | s |  |  |
-| `resetSwitchSelectorPushButton` | Number of sec after the Selector is reset to Off | `0` | s |  |  |
+| `resetMotiondelay` | Delay in sec to reset motion detection | `30` | s (0–3600) |  |  |
+| `resetSwitchSelectorPushButton` | Number of sec after the Selector is reset to Off | `0` | s (0–3600) |  |  |
 | `forceSwitchSelectorPushButton` | Workaround Domoticz issue #4143 | off |  |  | See [domoticz/domoticz#4143](https://github.com/domoticz/domoticz/issues/4143). |
 | `TrackingEraticValue` | Log attribute values received out of the expected range | off |  |  | Useful when [writing a device configuration](HowTo_Device-Customization.md) with a `Range`. |
 
@@ -191,12 +195,12 @@ Here are all settings related to Devices and how the coordinator interact with t
 | `deviceOffWhenTimeOut` | Switch device to Off when network Timeout | off |  |  |  |
 | `forcePollingAfterAction` | Get device status after action | on |  |  |  |
 | `forcePassiveWidget` | Allow Domoticz actions on Widgets from remote devices | off |  |  |  |
-| `ForceDeviceTimedOut_afterXhours` | Mark device as Timed Out after X hours without traffic (0 to disable) | `0` | h |  | 0 disables. |
-| `HealthTimeOut` | Seconds without any message before a device is flagged as not seen recently (0 = off). A device can have its own value, device parameter HealthTimeOut | `21600` | s |  | 21600 s = 6 hours (21200 s before plugin 9.1.009). 0 disables. A device's own `HealthTimeOut` parameter (Device Management, parameters), when above 0, overrides it for that device. Devices silent for longer are counted as *Not seen for n h* on the [Dashboard](WebUI_Dashboard.md#needs-attention). |
-| `resetConfigureReporting` | Reset all existing Configure Reporting | off |  | plugin restart | One shot: the plugin clears it after the restart. |
-| `checkConfigurationReporting` | Check the device Report configuration regularly | `75600` | s |  | 75600 s = 21 hours. 0 disables. |
-| `resetReadAttributes` | Reset all read attributes | off |  | plugin restart | One shot: the plugin clears it after the restart. |
-| `resetOTAUpdate` | Reset the OTA update status of all devices at startup | off |  | plugin restart |  |
+| `ForceDeviceTimedOut_afterXhours` | Mark device as Timed Out after X hours without traffic (0 to disable) | `0` | h (0–720) |  | 0 disables. |
+| `HealthTimeOut` | Seconds without any message before a device is flagged as not seen recently (0 = off). A device can have its own value, device parameter HealthTimeOut | `21600` | s (0–604800) |  | 21600 s = 6 hours (21200 s before plugin 9.1.009). 0 disables. A device's own `HealthTimeOut` parameter (Device Management, parameters), when above 0, overrides it for that device. Devices silent for longer are counted as *Not seen for n h* on the [Dashboard](WebUI_Dashboard.md#needs-attention). |
+| `resetConfigureReporting` | Reset all existing Configure Reporting | off |  | plugin restart | One shot: applied at the next start, then switched off. |
+| `checkConfigurationReporting` | Check the device Report configuration regularly | `75600` | s (0–604800) |  | 75600 s = 21 hours. 0 disables. |
+| `resetReadAttributes` | Reset all read attributes | off |  | plugin restart | One shot: applied at the next start, then switched off. |
+| `resetOTAUpdate` | Reset the OTA update status of all devices at startup | off |  | plugin restart | One shot: applied at the next start, then switched off. |
 | `doUnbindBind` | Unbind and then bind, when doing a binding operation | off |  |  |  |
 | `allowReBindingClusters` | Enable re-binding clusters during configure reporting operations | on |  |  | See [FAQ Q8](Problem_FAQ.md#q8-my-device-is-not-updated-in-domoticz-when-interacting-via-a-remote-control-or-manually). |
 
@@ -209,18 +213,17 @@ Here are all settings related to the coordinator hardware.
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `blueLedOnOff` | Enable Coordinator Blue Led | on |  |  |  |
-| `Certification` | Certification ( FCC or CE ) | CE regulation | CE regulation, FCC regulation | plugin restart |  |
+| `Certification` | Certification ( FCC or CE ) | CE regulation | CE regulation, FCC regulation | plugin restart | In the *Handle with care* card. |
 
 ### Advanced parameters
 
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
-| `pingDevicesFeq` | Frequency of regular ping main-powered devices | `3600` | s |  |  |
 | `resetPermit2Join` | Reset permit to join at startup | on |  |  |  |
-| `Ping` | Enable Ping | on |  |  |  |
-| `channel` | Coordinator chanel (default 0) | default | default, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 | coordinator reset | **Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md). |
-| `TXpower_set` | Coordinator transmission power level | `0` | dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm | Texas Instruments, Silicon Labs: none. ZiGate V1: plugin restart | On Texas Instruments and Silicon Labs, `0` keeps the coordinator's own power. When a change applies, and the allowed range, depend on the coordinator: see [Change the coordinator transmit power](HowTo_Change-TX-Power.md). |
-| `extendedPANID` | Zigbee Extended PAN Identifier | `0000` |  | erase network | **Only applied when a new network is formed** (*Initialize Coordinator* with `autoRestore` off): all devices must then be paired again. See [Schneider Wiser setup](Corner_Wiser-Setup.md). |
+| `Ping` | Enable Ping | on |  |  | ZiGate coordinators only. |
+| `channel` | Coordinator chanel (default 0) | default | default, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 | coordinator reset | In the *Handle with care* card. **Changing it requires a coordinator reset.** See [Change the ZigBee Channel](HowTo_Change-ZigBee-channel.md). |
+| `TXpower_set` | Coordinator transmission power level | `0` | dBm (zigpy coordinators: a number, e.g. `-9`). ZiGate: 0dbM, -9 dBm, -20dBm, -32dBm | Texas Instruments, Silicon Labs: none. ZiGate V1: plugin restart | In the *Handle with care* card. On Texas Instruments and Silicon Labs, `0` keeps the coordinator's own power. When a change applies, and the allowed range, depend on the coordinator: see [Change the coordinator transmit power](HowTo_Change-TX-Power.md). |
+| `extendedPANID` | Zigbee Extended PAN Identifier | `0000` |  | erase network | In the *Handle with care* card. **Only applied when a new network is formed** (*Initialize Coordinator* with `autoRestore` off): all devices must then be paired again. See [Schneider Wiser setup](Corner_Wiser-Setup.md). |
 | `forceClosingAllNodes` | Enable to close Pairing mode in each router | off |  | plugin restart | When pairing mode is switched off, the plugin also closes it on every router. |
 
 ## Command transitions for Lights in Groups
@@ -232,20 +235,14 @@ For Groups only. You can specify the transition time in 10th of seconds with whi
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
 | `GrpfadingOff` | Fadding mode | default | default, 50% fade, 12s to off, 20% dim up, 1s off, No fade |  |  |
-| `GrpmoveToColourTemp` | Transition time for TEMP move color | `0` | 1/10 s |  |  |
-| `GrpmoveToColourRGB` | Transition time for RGB move color | `0` | 1/10 s |  |  |
-| `GrpmoveToLevel` | Transition time for one dim position to an other one | `0` | 1/10 s |  |  |
+| `GrpmoveToColourTemp` | Transition time for TEMP move color | `0` | 1/10 s (0–65535) |  |  |
+| `GrpmoveToColourRGB` | Transition time for RGB move color | `0` | 1/10 s (0–65535) |  |  |
+| `GrpmoveToLevel` | Transition time for one dim position to an other one | `0` | 1/10 s (0–65535) |  |  |
 | `GroupLevelWithOnOff` | Send Move to Level with On/Off for groups | on |  |  |  |
 
 ## Plugin environment settings
 
 Here are all Plugin environements settings
-
-### Parameters
-
-| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
-| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
-| `numDeviceListVersion` | Number of DeviceList history | `12` |  |  | Number of old copies of `Data/DeviceList-XX.txt` (and of the coordinator backup) kept. |
 
 ### Advanced parameters
 
@@ -254,24 +251,15 @@ Here are all Plugin environements settings
 | `storeDomoticzDb` | Store the plugin device list in the Domoticz database | on |  |  | See [Plugin Backup](Plugin_Backup.md). |
 | `useDomoticzDb` | Read the plugin device list from the Domoticz database | on |  |  | See [Plugin Backup](Plugin_Backup.md). |
 | `PluginLogMode` | File permissions applied to the plugin log files | system default | system default, 0600, 0640, 0644 | plugin restart |  |
-| `pluginData` | Plugin data folder | (empty) |  | plugin restart | Empty means the `Data` folder of the plugin. |
-| `pluginConfig` | Plugin configuration folder | (empty) |  | plugin restart | Empty means the `Conf` folder of the plugin. |
-| `pluginOTAFirmware` | OTA firmware folder | (empty) |  | plugin restart | Empty means the `OTAFirmware` folder of the plugin. |
-| `pluginReports` | Plugin reports folder | (empty) |  | plugin restart | Empty means the `Reports` folder of the plugin. |
-| `pluginWWW` | Web UI files folder | (empty) |  | plugin restart | Empty means the `www` folder of the plugin. |
-| `pluginLogs` | Plugin logs folder | (empty) |  | plugin restart | Empty means the `Logs` folder of the plugin. |
-| `SSLCertificate` | Path to the SSL certificate used by the Web UI | (empty) |  | plugin restart | Empty means `certs/server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https. `Tools/generate_z4d_certificates.py` creates a self-signed pair there: see [Tools folder](Plugin_Tools-folder.md#generate_z4d_certificatespy). |
-| `SSLPrivateKey` | Path to the SSL private key used by the Web UI | (empty) |  | plugin restart | Empty means `certs/server.key` in the plugin folder. See `SSLCertificate`. |
-
-## Device patches and workarounds
-
-Enable a corrective patch for a known device issue. Use it only if you have been asked to.
-
-### Advanced parameters
-
-| Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
-| :------ | :-------------------- | :------ | :------------ | :------ | :---- |
-| `Bug566` | Apply the issue #566 fix on TRADFRI control outlet | off |  |  |  |
+| `numDeviceListVersion` | Number of DeviceList history | `12` | (1–50) |  | Number of old copies of `Data/DeviceList-XX.txt` (and of the coordinator backup) kept. |
+| `pluginData` | Plugin data folder | (empty) |  | plugin restart | In the *Handle with care* card. Empty means the `Data` folder of the plugin. |
+| `pluginConfig` | Plugin configuration folder | (empty) |  | plugin restart | In the *Handle with care* card. Empty means the `Conf` folder of the plugin. |
+| `pluginOTAFirmware` | OTA firmware folder | (empty) |  | plugin restart | In the *Handle with care* card. Empty means the `OTAFirmware` folder of the plugin. |
+| `pluginReports` | Plugin reports folder | (empty) |  | plugin restart | In the *Handle with care* card. Empty means the `Reports` folder of the plugin. |
+| `pluginWWW` | Web UI files folder | (empty) |  | plugin restart | In the *Handle with care* card. Empty means the `www` folder of the plugin. |
+| `pluginLogs` | Plugin logs folder | (empty) |  | plugin restart | In the *Handle with care* card. Empty means the `Logs` folder of the plugin. |
+| `SSLCertificate` | Path to the SSL certificate used by the Web UI | (empty) |  | plugin restart | In the *Handle with care* card. Empty means `certs/server.crt` in the plugin folder. When a valid certificate and key are found, the WebUI is served over https. `Tools/generate_z4d_certificates.py` creates a self-signed pair there: see [Tools folder](Plugin_Tools-folder.md#generate_z4d_certificatespy). |
+| `SSLPrivateKey` | Path to the SSL private key used by the Web UI | (empty) |  | plugin restart | In the *Handle with care* card. Empty means `certs/server.key` in the plugin folder. See `SSLCertificate`. |
 
 ## Experimental parameters
 
