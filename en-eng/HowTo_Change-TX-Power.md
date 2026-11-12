@@ -84,11 +84,11 @@ The firmware and the board (antenna, external amplifier) also matter: two sticks
 
 ## Change it with the plugin
 
-1. Go to *Settings*, *Coordinator settings*, and show the advanced settings (see [WebUI Settings](WebUI_Settings.md#coordinator-settings)).
+1. Go to *Settings*, *Coordinator settings*, and open the *Handle with care* card at the end with *Show* (before plugin 9.1.010: show the advanced settings). See [WebUI Settings](WebUI_Settings.md#coordinator-settings).
 1. Set `TXpower_set`:
    * Texas Instruments, Silicon Labs: the power in dBm, or `0` to keep the coordinator's own;
    * ZiGate V1: one of the 4 levels in the list.
-1. Click *Save* (*Validate* before plugin 9.1.009).
+1. Click *Save*, and from plugin 9.1.010 confirm with *Save anyway* (*Validate* before plugin 9.1.009).
 1. On ZiGate V1, restart the plugin. On Texas Instruments and Silicon Labs the new power applies at once, except `0`: the plugin sends nothing, and stops setting the power at the next restart.
 
 The `Certification` setting (CE or FCC) is only sent to ZiGate coordinators. It doesn't limit the TX power of the other coordinators.
