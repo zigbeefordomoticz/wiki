@@ -973,6 +973,15 @@ is not counted against the scan's coverage. It appears:
 a scan cut short by a radio restart, or a device the scanner skipped. It is a gap in the picture, not
 a statement about the device.
 
+### Green Power devices are never in the picture
+
+A [Green Power device](HowTo_Pair-Green-Power-device.md) (a battery-free switch, for example) does
+not join the network: it has no parent, no neighbour table and no route, and it never answers a
+request. It only sends short frames, picked up by the coordinator or by a router close to it. No
+table that a scan reads can hold it, so it is **never** drawn on the Mesh graph, whatever the scan.
+That is expected, not a gap in the report. The Green Power devices are listed in
+*Management > Devices* and counted on the *Dashboard*.
+
 ### Reading the coverage banner
 
 `answered / requested`, where `requested` counts only the nodes that *could* have answered. A node

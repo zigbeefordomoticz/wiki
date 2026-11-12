@@ -35,6 +35,11 @@ Some cards only appear when needed:
 
 The __Provisionning__ tab (*Admin > Provisionning*) is used to pair your devices with the coordinator and Domoticz, and to act on a device already paired.
 
+It has two pages:
+
+* **Zigbee & Zigbee 3.0**: the Zigbee devices, described below;
+* **Zigbee Green Power**: the Green Power devices (self-powered switches and remotes): choose the device type, open the Green Power pairing only, follow the pairing in the *Green Power log*. See [Pair a Green Power device](HowTo_Pair-Green-Power-device.md#the-zigbee-green-power-page).
+
 ![Admin > Provisionning](Images/EN_WebUI-Admin-Provisioning.png)
 *This picture may have changed since this documentation was written.*
 
@@ -60,7 +65,7 @@ The list is kept until you leave the page, and emptied when you open pairing *An
 * **Prepare a full reset** (*Reset mode*): do this before you factory-reset a device that is already paired. The plugin forgets what it learnt about the device (bindings, reporting configuration, neighbours…) and, when the device rejoins, redoes a full discovery and configuration as for a first pairing.
 * **Recreate widgets** (*Recreate widget*): creates the Domoticz widgets of the device again, using the latest device configuration. You may end up with duplicate widgets in Domoticz: delete the ones you don't need.
 
-Refer to the tutorial [Add a new device](HowTo_Pairing-device.md) for more information.
+Refer to the tutorials [Add a new device](HowTo_Pairing-device.md) and [Pair a Green Power device](HowTo_Pair-Green-Power-device.md) for more information.
 
 ------------------------------------------------
 ## Group

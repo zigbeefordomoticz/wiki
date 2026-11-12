@@ -35,6 +35,10 @@ A report is displayed in two ways:
 * **Topology diagram**: a wheel showing every link between two devices. Leave the mouse on a link to see its direction and the link quality (from 0 to 255, the best).
 * **Network graph**: the hierarchical structure of the network. Type a name to filter the nodes; click a device to list, below the graph, the devices linked to it with their LQI, model, status, health and battery.
 
+### Green Power devices
+
+A [Green Power device](HowTo_Pair-Green-Power-device.md) never appears in a topology report. It does not join the network: it has no neighbour table, no route, and no router lists it as a neighbour. It only sends short frames, picked up by the coordinator or by a router close to it. Its absence from the report is expected. The Green Power devices are listed in *Management > Devices* and counted on the *Dashboard*.
+
 ### See also: the Mesh graph
 
 From plugin version 9.1.008 a third representation is available, on its own page:
