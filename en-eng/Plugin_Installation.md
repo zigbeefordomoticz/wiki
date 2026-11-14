@@ -114,7 +114,7 @@ Move on to [step 2 Plugin settings](Plugin_Settings.md).
 
 ## 2 - Installation on Docker
 
-These steps use the official `domoticz/domoticz` image. It already comes with a Python virtual environment (`/opt/venv`, enabled through `PATH`), so there is no venv to configure. That virtual environment is in the container, not in the volume: when the container is recreated, the plugin's `customstart.sh` installs the modules again (an alternative is described in [Keep the Python modules in the userdata volume](How-To-Install-RPI-Docker.md#keep-the-python-modules-in-the-userdata-volume)). Everything the plugin needs lives in the Domoticz __userdata__ folder, which must be a volume mapped to the host so the plugin survives container updates.
+These steps use the official `domoticz/domoticz` image. It already comes with a Python virtual environment (`/opt/venv`, enabled through `PATH`), so there is no venv to configure. That virtual environment is in the container, not in the volume: when the container is recreated, the plugin's `customstart.sh` installs the modules again (an alternative is described in [Keep the Python modules in the userdata volume](How-To-Install-RPI-Docker.md#alternative-keep-the-python-modules-in-the-userdata-volume)). Everything the plugin needs lives in the Domoticz __userdata__ folder, which must be a volume mapped to the host so the plugin survives container updates.
 
 For a complete step-by-step example on a Raspberry Pi, see [How to install Zigbee4Domoticz on a Docker based setup](How-To-Install-RPI-Docker.md).
 
