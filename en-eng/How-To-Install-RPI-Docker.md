@@ -30,7 +30,7 @@ cp userdata/plugins/Domoticz-Zigbee/Docker/dockerfile .
 cp userdata/plugins/Domoticz-Zigbee/Docker/docker-compose.yml .
 ```
 
-The **dockerfile** builds the custom image: it starts from `domoticz/domoticz:stable`, sets the time zone (`TZ=Europe/Paris`, change it if needed), installs a few tools (`ping`, `vim`, `ssh` for `git pull`), and installs the Python modules listed in the plugin `requirements.txt` into the Domoticz virtual environment of the image (`/opt/venv`). Use the file of the plugin as is; you only need to rebuild the image when the plugin's Python requirements change.
+The **dockerfile** builds the custom image: it starts from `domoticz/domoticz:stable`, sets the time zone (`TZ=Europe/Paris`, change it if needed), installs a few tools (`ping`, `vim`, `ssh` for `git pull`), and installs the Python modules listed in the plugin `requirements.txt` into the Domoticz virtual environment of the image (`/opt/venv`). This is the virtual environment Domoticz already uses: there is none to create or configure. Use the file of the plugin as is; you only need to rebuild the image when the plugin's Python requirements change.
 
 The **docker-compose.yml** runs the container. Adapt it to your installation; it should look like this:
 
@@ -74,7 +74,7 @@ Use this `/dev/serial/by-id/…` path, which doesn't change after a reboot, on t
 
 ## 5. Use the plugin start script
 
-When the container starts, the Domoticz image runs `/opt/domoticz/userdata/customstart.sh` if it exists. The plugin provides one, which, the first time a new container starts, reinstalls the tools and the plugin Python modules (through `Tools/plugin-auto-upgrade.sh`). Link it, so that plugin updates bring its updates too:
+When the container starts, the Domoticz image runs `/opt/domoticz/userdata/customstart.sh` if it exists. The plugin provides one, which, the first time a new container starts, reinstalls the tools and the plugin Python modules in the image virtual environment `/opt/venv` (through `Tools/plugin-auto-upgrade.sh`). Link it, so that plugin updates bring its updates too:
 
 ```bash
 ln -s /opt/domoticz/userdata/plugins/Domoticz-Zigbee/Tools/customstart.sh /opt/domoticz/userdata/customstart.sh
@@ -96,7 +96,7 @@ Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial
 
 ## Updating
 
-* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again (if that fails on your system, see [Keep the Python modules in the userdata volume](#keep-the-python-modules-in-the-userdata-volume)).
+* **The plugin**: from the WebUI, *Admin > Plugin* (see [Plugin update](Plugin_Update.md)), or with `git pull` in the plugin folder. The modules are installed in the container: when the container is recreated, `customstart.sh` installs them again (if that fails on your system, see [Keep the Python modules in the userdata volume](#alternative-keep-the-python-modules-in-the-userdata-volume)).
 * **Domoticz, or the plugin's Python requirements**: rebuild the image and recreate the container:
 
   ```bash
@@ -107,7 +107,7 @@ Follow [Plugin settings](Plugin_Settings.md). For a USB coordinator, the *Serial
 
 * The plugin also provides `Tools/update_domoticz_docker_container.sh`, which rebuilds the image (`--rebuild`), restarts the container and checks for plugin updates. Its defaults (image `domoticz-custom:latest`, plugin folder `/opt/domoticz/plugins/Domoticz-Zigbee`) differ from this page: use `--image` and `--plugin-dir` to match your setup, and `--dry-run` to see what it would do. Run it with `--help` for all the options.
 
-## Keep the Python modules in the userdata volume
+## Alternative: keep the Python modules in the userdata volume
 
 **Optional.** The setup above, with `customstart.sh`, is the recommended one: you have nothing to configure, and the image handles Python.
 
