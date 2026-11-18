@@ -13,15 +13,19 @@ Compared with [the move from stable8](HowTo_Upgrade-stable8-to-stable9.md), two 
 * Any device you pair **after** the switch is created under the Domoticz Extended Framework by `stable9`, and can't be used by `stable7`. As soon as you pair one new device on `stable9`, going back to `stable7` stops being an option.
 * **ZiGate users:** ZiGate coordinators are no longer supported by the plugin. Read [ZiGate (legacy)](Coordinators.md#zigate-legacy) before you upgrade.
 
-## Step 0 — Which path is yours?
+## Step 0 — Check your Python and Domoticz versions first
 
-Check two versions:
+Do this **before anything else**, before the backup and before touching the plugin: these two versions decide which path you follow.
 
-1. **The Python version Domoticz runs with.** Look for this line in the Domoticz log at start-up:
+1. **The Python version Domoticz runs with.** Look for these lines in the Domoticz log at start-up:
 
    `Status: PluginSystem: Started, Python version '3.9.2', 10 plugin definitions loaded.`
 
-1. **The Domoticz version**, in *Setup > About*.
+   `Status: Zigbee: Z4D requires python3.9 or above and you are running 3.9`
+
+   The first one comes from Domoticz, the second one from the `stable7` plugin (`Zigbee` is the name of your plugin hardware). `stable9` needs **3.11 or newer** there. The version of `python3` in a terminal is not always the one Domoticz uses: rely on the log. See [Find the Python version of Domoticz](HowTo_PythonVirtualEnv.md#1-find-the-python-version-of-domoticz).
+
+1. **The Domoticz version**, in *Setup > About*. `stable9` needs **2025.1 or newer** (2026.3 recommended).
 
 Then:
 
