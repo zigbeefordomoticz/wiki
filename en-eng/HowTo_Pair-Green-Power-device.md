@@ -37,6 +37,9 @@ Choose the type before opening the pairing: the device paired during that pairin
 |------|--------|-----|
 | **On/Off switch** | One On/Off switch | A switch with an *On* and an *Off* button |
 | **On/Off switch with dimming** | One selector: *Off*, *On*, *Dim +*, *Dim -*, *Stop* | A switch that also dims while a button is held: *Dim +* and *Dim -* when held, *Stop* when released |
+| **4-button switch, 2 switches** | Two On/Off switches | A switch with two rockers, left and right, each with an *Up* and a *Down* button |
+| **4-button switch, 3 switches** | Three On/Off switches | The same, plus a third switch for both rockers pressed together |
+| **4-button switch, single rocker** | One On/Off switch | The same switch fitted with one wide rocker, *Up* and *Down* |
 | **Automatic** | From what the device declares | A device that gives its model or its commands |
 
 A device keeps its type when it is paired again. To change the type of a paired device, [remove it](#remove-a-green-power-device), then pair it again with the new type.
@@ -46,7 +49,7 @@ A device keeps its type when it is paired again. To change the type of a paired 
 1. Open the WebUI, *Admin > Provisionning > Zigbee Green Power*.
 1. Choose the **device type**. *Open for 4 minutes* stays disabled until you do.
 1. Click **Open for 4 minutes**. The page shows **Accepting Green Power devices**, the time left and *Pairing as:* the type you chose; the log shows **Pairing opened**.
-1. Put the device in its pairing mode, as its manual says (see [the Sunricher switch](#sunricher-zgp2801k2-dim) for an example).
+1. Put the device in its pairing mode, as its manual says (see [the Sunricher switch](#sunricher-zgp2801k2-dim) and [the NodOn switch](#nodon-cws-4-1-00) for examples).
 1. Watch the **Green Power log**: each frame the network hears is listed with its time, the device ID (for example `0xC220BD02`), what it sent and the signal strength.
 1. As soon as the log shows **Paired**, **take the device out of its pairing mode**, as its manual says (often: press another button). Left in its pairing mode, some devices change channel at the next press, and the network no longer hears them.
 1. The log then shows **Widgets created**, and the device appears in **Devices that joined** as *Paired*, with its model and its widget.
@@ -87,6 +90,32 @@ Green Power switch with an *On* and an *Off* button: a short press sends *On* or
 Each press of *On* in the pairing mode sends a pairing request and moves the switch to the next channel, starting at channel 11: keep pressing until the log shows *Paired*. A press of the other button ends the pairing mode.
 
 The switch declares itself as an On/Off switch (Green Power device type `0x02`) and gives neither its manufacturer nor its model, so *Automatic* gives it an On/Off widget only. With **On/Off switch with dimming**, it gets a selector: *On* and *Off* on a short press, *Dim +* and *Dim -* while *On* or *Off* is held, *Stop* when the button is released.
+
+## NodOn CWS-4-1-00
+
+Battery-free wall switch with four buttons, *A0* and *B0* at the top, *AI* and *BI* at the bottom, on two rockers (left and right), or on one wide rocker. A Green Power *Generic Switch*: every button sends the same command, *8-bit Vector Press*, with the button in its payload, and *8-bit Vector Release* when it is released. Tested on 18 November 2026 with a Silicon Labs coordinator on channel 11.
+
+The switch pairs on the channel of the button you hold, so check the network channel first: the *Zigbee Green Power* page shows it.
+
+| Hold | Channel |
+|------|---------|
+| *B0* | 11 |
+| *A0* | 15 |
+| *AI* | 20 |
+| *BI* | 25 |
+
+1. On the *Zigbee Green Power* page, choose the type that matches how the switch is fitted:
+   * two rockers: **4-button switch, 2 switches** (left *Up* / *Down*, right *Up* / *Down*), or **4-button switch, 3 switches** to also use both rockers pressed together;
+   * one wide rocker: **4-button switch, single rocker**.
+1. Click **Open for 4 minutes**, and wait for **Pairing opened** in the log.
+1. Press and hold the button of the network channel (*B0* for channel 11) for **7 seconds or more**, then release it. The log shows *Heard: Commissioning*, then **Paired**.
+1. Close the pairing mode of the switch: press **AI and B0 together**. This also confirms the channel to the switch.
+
+If the network is on another channel than 11, 15, 20 or 25, the manual of the switch gives no direct pairing procedure.
+
+A switch that was paired before, here or with another system, keeps sending normal presses until it is put in its pairing mode: the log shows *Heard: 8-bit Vector Press* with *The device reaches the network, but is not in its pairing mode*. Short presses never pair it: hold the channel button for 7 seconds.
+
+The switch declares neither its manufacturer, its model nor its commands, so *Automatic* gives it no widget: choose one of the three types. Each press updates its switch in Domoticz, also when the switch already shows that state (*Off* pressed on a switch that is *Off*), so a Domoticz event runs at each press.
 
 ## Check a paired device
 
