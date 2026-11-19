@@ -14,9 +14,39 @@ Only run the switch once you're ready to commit to `stable9`.
 
 Still on `stable7`? Follow [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md) instead: it goes straight to `stable9`.
 
+## Step 0 — Check your Python and Domoticz versions first
+
+Do this **before anything else**, before the backup and before the switch. `stable9` needs:
+
+* **Python 3.11 or newer**, the Python that Domoticz runs with. On an older Python, `stable9` refuses to start (`Z4D requires Python 3.11, found 3.9`). The switch tool does **not** check the Python version.
+* **Domoticz 2025.1 or newer** (2026.3 recommended).
+
+`stable8` itself runs with Python 3.9 and Domoticz 2023.1, so a working `stable8` installation doesn't prove that your system is ready.
+
+1. **The Python version Domoticz runs with.** Look for these lines in the Domoticz log at start-up:
+
+   `Status: PluginSystem: Started, Python version '3.9.2', 10 plugin definitions loaded.`
+
+   `Status: Zigbee: Z4D requires python3.11 or above and you are running 3.9`
+
+   The first one comes from Domoticz, the second one from the `stable8` plugin (`Zigbee` is the name of your plugin hardware). The version of `python3` in a terminal is not always the one Domoticz uses: rely on the log. See [Find the Python version of Domoticz](HowTo_PythonVirtualEnv.md#1-find-the-python-version-of-domoticz).
+
+1. **The Domoticz version**, in *Setup > About*.
+
+Then:
+
+| Your system | What to do |
+| :---------- | :--------- |
+| Python **3.11 or newer** and Domoticz **2025.1 or newer** | Go on with the [prerequisites](#prerequisites) and [Step 1](#step-1--back-up-domoticz-and-the-plugin-first). |
+| Python **3.11 or newer**, Domoticz **older than 2025.1** | Upgrade Domoticz first (2026.3 recommended), then check the Python version in the log again. |
+| Python **3.10 or older** (Debian 11 *Bullseye* or older, Raspberry Pi OS Bullseye or older, Ubuntu 22.04 or older) | **Don't switch.** Your system is too old for `stable9`: move to a new system as described in [Path B of the stable7 page](HowTo_Upgrade-stable7-to-stable9.md#path-b--move-to-a-new-system). It applies to `stable8` in the same way. |
+| **Docker** (official `domoticz/domoticz` image) | The image comes with a recent Python. Update the image to Domoticz 2025.1 or newer first. |
+
+These distributions don't provide Python 3.11, and recent official Domoticz builds no longer run on them (they need OpenSSL 3). Building your own Python or Domoticz on an old distribution is not supported by the plugin team.
+
 ## Prerequisites
 
-* Domoticz **2025.1 or newer**, with the Extended Framework available. `plugin-switch-stable9.sh` verifies this automatically by querying Domoticz's own JSON API — you don't need to check it manually. **Domoticz 2026.3 is the recommended version** for the best experience with the Extended Framework — if you're still on an older release, consider upgrading Domoticz itself at the same time.
+* Python **3.11 or newer** and Domoticz **2025.1 or newer**, with the Extended Framework available, as checked in [Step 0](#step-0--check-your-python-and-domoticz-versions-first). `plugin-switch-stable9.sh` checks the Domoticz version again through the Domoticz JSON API, and refuses to switch if it is too old. **Domoticz 2026.3 is the recommended version** for the best experience with the Extended Framework.
 * Your plugin checkout must currently be on `stable8`, with no uncommitted local changes (`git status` clean). Commit or stash anything pending first.
 
 ## Step 1 — Back up Domoticz and the plugin first
@@ -111,6 +141,7 @@ Use the WebUI action rather than running `pip install` yourself from a terminal:
 
 * **"You have uncommitted changes"**: commit or stash them (`git stash -u`), then re-run the script.
 * **"Domoticz version requirement not met"**: upgrade Domoticz to 2025.1 or newer first — the plugin will fail to start on `stable9` otherwise.
+* **`Z4D requires Python 3.11, found 3.9`** after the restart: Domoticz runs with a Python that is too old for `stable9` (see [Step 0](#step-0--check-your-python-and-domoticz-versions-first)). You can't fix it with the plugin: move to a new system as in [Path B of the stable7 page](HowTo_Upgrade-stable7-to-stable9.md#path-b--move-to-a-new-system), or go back to `stable8`: `git checkout stable8`, then restore the backup of Step 1.
 * **Version check can't connect to Domoticz**: pass `--ip`/`--port`, or confirm your version manually via **Setup > About**, then re-run with `--i-understand` once you're sure.
 
 ## See also
