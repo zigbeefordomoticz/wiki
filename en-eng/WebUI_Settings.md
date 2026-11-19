@@ -272,6 +272,6 @@ Use it only if you have been asked to
 | `ControllerInRawMode` | Use the coordinator in raw mode | off |  |  |  |
 | `enableZigpyPersistentInMemory` | Keep the zigpy database in memory instead of a file | on |  | plugin restart |  |
 | `EventLoopInstrumentation` | Instrument the zigpy event loop | on |  | plugin restart |  |
-| `DomoticzDB_Stats` | Collect statistics on Domoticz database accesses | on |  |  |  |
-| `ZigpyTransport_Stats` | Collect statistics on the zigpy transport | on |  |  |  |
+| `DomoticzDB_Stats` | Collect statistics on Domoticz database accesses | off |  |  |  |
+| `ZigpyTransport_Stats` | Collect statistics on the zigpy transport | off |  |  |  |
 | `EnableTraceMalloc` | Enable memory allocation tracing (tracemalloc) | off |  |  |  |
