@@ -18,7 +18,7 @@ We assume here that neither the Bulb nor the Remote have been paired with the co
 
 ### Phase 1: bring everyone on the Zigbee network
 
-1. Enable the group management: in the WebUI [Settings](WebUI_Settings.md), check __Enable Groups__ (`enablegroupmanagement`), validate, and restart the plugin.
+1. Enable the group management: in the WebUI [Settings](WebUI_Settings.md), *Available services*, switch on __Enable Groups__ (`enablegroupmanagement`), click *Save* (*Validate* before plugin 9.1.009) and restart the plugin.
 1. Put the plugin in pairing mode (see [Add a new device](HowTo_Pairing-device.md)).
 1. Pair your bulb(s) with the coordinator. To do so, reset the bulb: from a power on state, power it off and on 6 times (in a short time). At the end of that process, you have a new Widget in DomoticZ which commands the Bulb.
 1. Pair the Tradfri remote with the coordinator. To do so, reset the remote by pressing the small pairing button 4 times. At the end of that process, you have a new widget in DomoticZ representing the Remote. At that stage the widget doesn't get any event from the remote - this is normal -. The widget is passive.

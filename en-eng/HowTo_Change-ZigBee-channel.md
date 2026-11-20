@@ -38,9 +38,9 @@ Wait a while, then check in *Management > Devices* which devices don't report an
 
 ## Method 2: form a new network on the chosen channel
 
-The `channel` setting (WebUI *Settings*, *Coordinator settings*, advanced) is only applied when the coordinator forms a new network. **Forming a new network erases it: all the devices must be paired again.** Use this method only when you start a network from scratch.
+The `channel` setting (WebUI *Settings*, *Coordinator settings*, in the *Handle with care* card from plugin 9.1.010, advanced before) is only applied when the coordinator forms a new network. **Forming a new network erases it: all the devices must be paired again.** Use this method only when you start a network from scratch.
 
-1. Set `channel` to the channel you want and click *Save* (*Validate* before plugin 9.1.009).
+1. Set `channel` to the channel you want and click *Save*, and from plugin 9.1.010 confirm with *Save anyway* (*Validate* before plugin 9.1.009).
 
    ![Channel setting](../Images/Channel_setting.png)
 

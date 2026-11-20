@@ -17,13 +17,13 @@ The **legacy Wiser** devices only work on a network with a specific *extended PA
 
 ## Settings for legacy Wiser
 
-All these settings are in the WebUI *Settings* page, with *Advanced settings* switched on (see [WebUI Settings](WebUI_Settings.md)).
+All these settings are in the WebUI *Settings* page: choose *All settings* to see them (before plugin 9.1.010, switch *Advanced settings* on). From plugin 9.1.010, `extendedPANID` is in the *Handle with care* card at the end of *Coordinator settings*: click *Show* to open it (see [WebUI Settings](WebUI_Settings.md)).
 
 | Setting | Section | Value | Why |
 | ------- | ------- | ----- | --- |
 | `enableSchneiderWiser` | *Pairing settings* | on | The plugin asks the legacy Wiser devices for their model during pairing. |
 | `Wiser` | *Zigpy CIE specific configuration* (zigpy coordinators) | on | Adds the endpoint `0x0b` the legacy Wiser devices talk to. Needs a plugin restart. |
-| `extendedPANID` | *Coordinator settings* | `xxxx484504015e10` | The legacy Wiser devices only join a network whose extended PAN ID ends with `484504015e10`. Replace `xxxx` with any 4 hexadecimal digits, for example `2141484504015e10`. |
+| `extendedPANID` | *Coordinator settings*, *Handle with care* card | `xxxx484504015e10` | The legacy Wiser devices only join a network whose extended PAN ID ends with `484504015e10`. Replace `xxxx` with any 4 hexadecimal digits, for example `2141484504015e10`. |
 
 For a Wiser Home thermostat (CCTFR6400) that doesn't communicate, enable `Wiser2` in *Zigpy CIE specific configuration* instead: it adds the endpoint `0x03` used by these devices.
 
@@ -31,7 +31,7 @@ For a Wiser Home thermostat (CCTFR6400) that doesn't communicate, enable `Wiser2
 
 The extended PAN ID is only applied when the coordinator forms a new network. **Changing it erases the network: all the devices already paired must be paired again**, whatever their brand. The other brands (Ikea, Philips, Xiaomi, Tuya…) work fine on a network with a Wiser extended PAN ID, so if you plan to use legacy Wiser devices, set it before pairing anything.
 
-1. Set `extendedPANID` (and the other settings above) and click *Save* (*Validate* before plugin 9.1.009).
+1. Set `extendedPANID` (and the other settings above) and click *Save*. From plugin 9.1.010 the page asks you to confirm the change of a *Handle with care* setting: click *Save anyway* (*Validate* before plugin 9.1.009).
 1. Turn the `autoRestore` setting off (*Zigpy CIE specific configuration*, advanced): otherwise the plugin restores the last coordinator backup, with the old extended PAN ID, instead of forming a new network.
 1. Form a new network: in Domoticz, *Setup > Hardware*, select the plugin hardware, set *Initialize Coordinator* to *True* and click *Update* (see [Plugin settings](Plugin_Settings.md); if the network isn't formed, see [Form a network with a zigpy coordinator](HowTo_Form-network-zigpy.md)).
 1. The plugin forms the network, then sets *Initialize Coordinator* back to *False* and restarts by itself; check it in the hardware list, and set it back yourself if needed.

@@ -11,7 +11,7 @@ Livolo switches **don't follow the Zigbee standard**:
 
 ## Setup with a zigpy coordinator
 
-Livolo switches send their messages to endpoint `0x08` of the coordinator. With a zigpy coordinator (Texas Instruments, Silicon Labs, ConBee/RaspBee…), enable the `Livolo` setting before pairing them: WebUI *Settings*, *Advanced settings* on, section *Zigpy CIE specific configuration*, **Enable the Livolo specific endpoint** (see [WebUI Settings](WebUI_Settings.md#zigpy-cie-specific-configuration)). Then restart the plugin.
+Livolo switches send their messages to endpoint `0x08` of the coordinator. With a zigpy coordinator (Texas Instruments, Silicon Labs, ConBee/RaspBee…), enable the `Livolo` setting before pairing them: WebUI *Settings*, *All settings*, section *Zigpy CIE specific configuration*, card *Manufacturer quirks*, **Enable the Livolo specific endpoint** (before plugin 9.1.010: *Advanced settings* on, section *Zigpy CIE specific configuration*) (see [WebUI Settings](WebUI_Settings.md#zigpy-cie-specific-configuration)). Then restart the plugin.
 
 ## Pairing
 

@@ -37,7 +37,7 @@ See also the security notes of the [REST API](Technical/REST-API.md#security).
 
 ## Check the settings
 
-Go to the *Settings* page of the WebUI (see [WebUI Settings](WebUI_Settings.md)). The defaults suit most installations; switch *Advanced settings* on to see all of them. A setting marked *plugin restart* takes effect after a restart: the *Restart needed* indicator blinks in the menu bar until you restart the plugin (*Admin > Plugin*).
+Go to the *Settings* page of the WebUI (see [WebUI Settings](WebUI_Settings.md)). The defaults suit most installations; choose *All settings* to see all of them (before plugin 9.1.010, switch *Advanced settings* on). A setting marked *plugin restart* takes effect after a restart: the *Restart needed* indicator blinks in the menu bar until you restart the plugin (*Admin > Plugin*).
 
 ## Find your way in the WebUI
 

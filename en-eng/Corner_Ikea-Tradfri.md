@@ -62,7 +62,7 @@ Once reset, the switch controls group 0x0000 (which is also used by Xiaomi plugs
 
 1. Make sure that the coordinator is a member of group 0000
 
-   * With a Silicon Labs (EZSP) coordinator, enable __Create Group 0000__ (`zigatePartOfGroup0000`) in the WebUI Settings (advanced settings, Group management section), then restart the plugin.
+   * With a Silicon Labs (EZSP) coordinator, enable __Create Group 0000__ (`zigatePartOfGroup0000`) in the WebUI Settings (*Group management settings*, card *Group membership*, advanced; before plugin 9.1.010, *Advanced settings* on), then restart the plugin.
    * Otherwise, add the coordinator to group 0000 in **Management > Groups** (**Coordinator is a member**; **Coordinator (in the group)** before plugin 9.1.009).
 
 1. To add devices to the group
