@@ -26,6 +26,7 @@ The new widgets are listed in Domoticz under *Setup > Devices* (the last ones). 
 * Pair devices where they will be used, not next to the coordinator: a device remembers the parent it joined through.
 * Pair the routers (mains-powered devices) first, starting with the ones closest to the coordinator and moving away, then the end devices (battery devices).
 * Check whether your device needs a special procedure: see the [Device-specific notes](Readme.md#6-device-specific-notes) pages.
+* Green Power devices (self-powered switches and remotes) pair differently: see [Pair a Green Power device](HowTo_Pair-Green-Power-device.md).
 
 More advice in [Build a Zigbee network](HowTo_Build-a-ZigBee-network.md).
 
