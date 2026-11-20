@@ -43,11 +43,12 @@ The plugin creates a widget for every group found.
    ![Creating a group](Images/EN_WebUI-Management-Group-New.png)
 
 1. Enter the *Group name*: it becomes the name of the Domoticz widget.
+1. Leave *Group id* empty, unless the group must have a given id, for example to match a remote set on a fixed group. Enter it as four hexadecimal digits, such as `0a2b` (plugin 9.1.010 and later). `0000`, `fff8` to `ffff` and the group of the `pingViaGroup` setting cannot be used, nor an id that another group has.
 1. Click the *Add a member* field and pick the devices (endpoints) of the group from the list. Type part of a name, model or short id to narrow it. Each one added shows in green, *added when you save*; *Undo* takes it back out.
 1. If needed, switch on *Coordinator is a member* (see below).
 1. Click *Save group*.
 
-The plugin gives the group the first free group id, sends the membership request to each device and creates the group widget in Domoticz. The page reads the groups again a few seconds later and opens the new group.
+The plugin gives the group the first free group id, unless you chose one, sends the membership request to each device and creates the group widget in Domoticz. The page reads the groups again a few seconds later and opens the new group.
 
 Before plugin 9.1.009: *Management > Group Management*, *Add a new Group*, enter the name, select the devices in the drop-down, tick *Coordinator (in the group)* if needed, and click *Validate*. Refresh the page if the group doesn't show.
 
@@ -91,6 +92,22 @@ Either:
 
 The plugin asks each device of the group to leave the group. When the last one has answered, it removes the group and its widget.
 
+## Groups created before plugin 8.1.003
+
+> **We highly recommend deleting these groups and creating them again.**
+
+Since plugin 8.1.003, the widget of a new group is always on unit 1. An older group kept the unit it had, which can be any number, and newer features of the plugin are built on unit 1.
+
+To find them, open *Setup > Devices* in Domoticz and filter on your Zigbee hardware. The `ID` column of a group is its Group id, four characters such as `0002`, and the `Unit` column should be `1`. Any other number means an older group.
+
+To do it:
+
+1. Note the name of the group and its members.
+1. [Delete the group](#delete-a-group), and wait until it is gone from *Management > Groups*.
+1. [Create it again](#create-a-group). You can give it the same *Group id*.
+
+The new widget has a new `idx` in Domoticz: update the dashboards, events and scripts that use the old one. Deleting a group also deletes its [Zigbee scenes](HowTo_Zigbee-scenes.md), so capture them again.
+
 ## Group settings
 
 The group settings are in the *Group management* section of the WebUI *Settings* (see [Group management settings](WebUI_Settings.md#group-management-settings)):
@@ -103,6 +120,10 @@ The group settings are in the *Group management* section of the WebUI *Settings*
 | `zigatePartOfGroupTint` | Adds the coordinator to the group of the Müller Licht Tint remote (Silicon Labs coordinators). See [Müller Licht / Tint](Corner_Tint.md). |
 | `zigatePartOfGroup0000` | Creates group `0000`, used by some Ikea and Xiaomi switches (Silicon Labs coordinators). |
 | `GroupLevelWithOnOff` | Send the *Move to Level with On/Off* command to groups, so that setting a level also switches the lights on. |
+
+## Scenes
+
+A group can hold [Zigbee scenes](HowTo_Zigbee-scenes.md): a state stored in its devices, and recalled with one frame.
 
 ## Warnings
 
