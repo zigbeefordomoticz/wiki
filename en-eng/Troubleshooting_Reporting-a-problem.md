@@ -117,7 +117,7 @@ By default, the plugin doesn't write debug messages. To understand a problem, or
 1. **Enable `logThreadName`** when you will send the logs: each line then shows the thread, the module and the device short address, which makes the analysis much easier.
 1. **Reproduce the problem**, and note the time when it happens.
 1. **Collect** the part of the plugin log file around that time.
-1. **Disable the debug modules** when you are done (*Turn all off*, then **Save**; before plugin 9.1.009, **Settings (default)**): some modules are very verbose and make the log file grow fast.
+1. **Disable the debug modules** when you are done (*Restore defaults*, then **Save**; *Turn all off* in plugin 9.1.009; before, **Settings (default)**): some modules are very verbose and make the log file grow fast.
 
 The `Python/zigpy...` modules show the messages of the zigpy library itself. They are very verbose: enable them only when asked.
 
