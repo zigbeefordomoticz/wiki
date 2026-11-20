@@ -42,7 +42,7 @@ Choose the type before opening the pairing: the device paired during that pairin
 | **4-button switch, single rocker** | One On/Off switch | The same switch fitted with one wide rocker, *Up* and *Down* |
 | **Automatic** | From what the device declares | A device that gives its model or its commands |
 
-A device keeps its type when it is paired again. To change the type of a paired device, [remove it](#remove-a-green-power-device), then pair it again with the new type.
+A device keeps its type when it is paired again. A paired device that got **no widget** (no configuration matched it) can be given its type afterwards, without a new pairing: see [Check a paired device](#check-a-paired-device). To change the type of a device that has widgets, [remove it](#remove-a-green-power-device), then pair it again with the new type.
 
 ## Pairing
 
@@ -54,7 +54,7 @@ A device keeps its type when it is paired again. To change the type of a paired 
 1. As soon as the log shows **Paired**, **take the device out of its pairing mode**, as its manual says (often: press another button). Left in its pairing mode, some devices change channel at the next press, and the network no longer hears them.
 1. The log then shows **Widgets created**, and the device appears in **Devices that joined** as *Paired*, with its model and its widget.
 
-![A Sunricher switch paired as an On/Off switch with dimming, then used](Images/EN_WebUI-Admin-Provisioning-GreenPower.png)
+![The Green Power pairing open, as an On/Off switch: the log shows what the network hears](Images/EN_WebUI-Admin-Provisioning-GreenPower.png)
 
 ### What the Green Power log tells you
 
@@ -73,7 +73,7 @@ A device keeps its type when it is paired again. To change the type of a paired 
 
 ### Green Power with the Zigbee pairing
 
-The setting **Accept Green Power devices when pairing is open** (`GreenPowerEnable`, *Settings*, advanced, *Zigpy* section) only concerns the **Zigbee & Zigbee 3.0** page and the *Accept new hardware* switch of the menu bar: when it is on, opening the Zigbee pairing also opens the Green Power pairing, without a device type (*Automatic*). The Green Power page does not need it.
+The setting **Accept Green Power devices when pairing is open** (`GreenPowerEnable`, *Settings*, *Available services*, card *Features*; before plugin 9.1.010: advanced, *Zigpy* section) only concerns the **Zigbee & Zigbee 3.0** page and the *Accept new hardware* switch of the menu bar: when it is on, opening the Zigbee pairing also opens the Green Power pairing, without a device type (*Automatic*). The Green Power page does not need it.
 
 ## Sunricher ZGP2801K2-DIM
 
@@ -119,7 +119,8 @@ The switch declares neither its manufacturer, its model nor its commands, so *Au
 
 ## Check a paired device
 
-* **Management > Devices** lists the Green Power devices with the other devices; the *Green Power* chip shows them alone. Each row shows the model and the widgets, the source ID and the IEEE, the LQI of the last frame, and when the device was last heard. The rows are read-only: no details, no name, no parameters, no removal there (see [Remove a Green Power device](#remove-a-green-power-device)).
+* **Management > Devices** lists the Green Power devices with the other devices; the *Green Power* chip shows them alone. Each row shows the model and the widgets, the source ID and the IEEE, the LQI of the last frame, and when the device was last heard. Open a Green Power device to see its details: source ID, Green Power device type, manufacturer and model ID, commands, the device type it was paired as, its widgets, the security level, the frame counter, and when it was commissioned and last heard. There is no name and no parameter to change there.
+* **A device without widgets** is marked *No widget* in the list. Its details window lets you **choose its device type**: click *Create the widgets*, and the plugin creates them within a minute, with no new pairing. The same window can **remove** it (see [Remove a Green Power device](#remove-a-green-power-device)).
 * **Dashboard**: the Green Power devices have a *Green Power* segment of their own in *Plugin devices* and in *Type of devices*. The plugin never sends a Green Power device anything, so it has no health status, and a battery-free switch can stay silent for days. So *Devices live* counts a Green Power device as fine, never as a problem: one Green Power switch alone shows *1 / 1*, with *including Green Power: 1 (not polled)*.
 * **Tools > Data > Green Power devices (raw)** shows what the plugin keeps for each Green Power device: its ID, its device type, the security level, the last frame counter, its model and its widgets. The security key of the device is never shown.
 
@@ -130,5 +131,7 @@ A Green Power device **never appears in a topology report** (*Network > Topology
 ## Remove a Green Power device
 
 Delete its widget in Domoticz (*Setup > Devices*). When the last widget of a Green Power device is deleted, the plugin removes the device from its list and from the network.
+
+A Green Power device **without widgets** has nothing to delete in Domoticz: remove it from its details window, in *Management > Devices* (plugin 9.1.010 and later).
 
 To pair it again, follow [Pairing](#pairing) from the start.
