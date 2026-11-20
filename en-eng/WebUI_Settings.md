@@ -44,6 +44,7 @@ Enable the services you want to be active
 | `MatomoOptIn` | Enable the plugin to collect informations for analyticz purposes such as Coordinator model, version... | on |  |  | See [Plugin statistics](WebUI_Statistics.md) for what is sent. |
 | `enablegroupmanagement` | Enable Groups | off |  | plugin restart | See [Group Management](HowTo_Group-management.md). |
 | `enableNativeScenes` | Enable native Zigbee scenes | off |  | plugin restart | Needs Group Management and a zigpy coordinator. |
+| `GreenPowerEnable` | Accept Green Power devices when pairing is open | off |  |  | Not offered on Texas Instruments (Z-Stack) coordinators, which cannot receive Green Power frames directly. |
 | `internetAccess` | Allow Internet access | on |  | plugin restart | Used to check for plugin and firmware updates, to update the certified devices database and for OTA firmware repositories. It doesn't control the [statistics](WebUI_Statistics.md). |
 | `DomoticzCustomMenu` | Enable Plugin WebUI from Domoticz Custom menu | on |  | plugin restart | See [Plugin integration](Plugin_Integration.md). |
 | `NightShift` | Push background activity from 11PM to 6AM | off |  |  |  |
@@ -112,7 +113,6 @@ Specific to some CIE as ConBeeII and RasBeeII it might required to enable some C
 | `EzspAllowUnsecuredRejoins` | Allow unsecured rejoins (EZSP) | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. |
 | `BellowsNoMoreEndDeviceChildren` | Disable direct pairing on Coordinator | off |  | plugin restart | Shown with Silicon Labs (EZSP) coordinators only. End devices then pair through a router. |
 | `zigpySourceRouting` | Enable Zigbee Source routing (plugin) | off |  | plugin restart |  |
-| `GreenPowerEnable` | Accept Green Power devices when pairing is open | off |  |  | Not offered on Texas Instruments (Z-Stack) coordinators, which cannot receive Green Power frames directly. |
 
 ## Device firmware update Over-The-Air
 
@@ -269,7 +269,6 @@ Use it only if you have been asked to
 
 | Setting | Shown in the WebUI as | Default | Unit / values | Restart | Notes |
 | :------ | :-------------------- | :------ | :------------ | :------ | :---- |
-| `ControllerInRawMode` | Use the coordinator in raw mode | off |  |  |  |
 | `enableZigpyPersistentInMemory` | Keep the zigpy database in memory instead of a file | on |  | plugin restart |  |
 | `EventLoopInstrumentation` | Instrument the zigpy event loop | on |  | plugin restart |  |
 | `DomoticzDB_Stats` | Collect statistics on Domoticz database accesses | off |  |  |  |
