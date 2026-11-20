@@ -26,7 +26,7 @@ The debugging options are in the WebUI, **Tools > Debug** (see [WebUI Tools](Web
 
 * **What are you looking into?** turns on a starting set of modules for a type of problem (a device does not pair, a device does not update, radio or coordinator, firmware update);
 * **Limit the log** holds `MatchingNwkId` (*Only these devices*: pick the devices in the list), `LQIthreshold`, `loggingBackupCount` and `loggingMaxMegaBytes`;
-* **Modules** holds the switches, grouped by what they cover, with a search and *Turn all off*.
+* **Modules** holds the switches, grouped by what they cover, with a search and *Restore defaults* (*Turn all off* before plugin 9.1.010).
 
 Switch on the modules you need and click **Save**. They take effect immediately, no restart needed (except `enablePluginLogging`, `loggingBackupCount` and `loggingMaxMegaBytes`).
 
@@ -55,6 +55,7 @@ Each module enables the debug messages of one part of the plugin. The ones you w
 | `Input` | Incoming messages from the coordinator |
 | `Cluster` | Decoding of the incoming messages: this is where the plugin extracts the values from the message payload |
 | `Widget`, `WidgetUpdate` | Update of the DomoticZ widgets, usually called from Input or Cluster |
+| `WidgetTouch` | Refresh of the widgets' *Last Seen* (touch), with the device, when a widget is skipped and why (plugin 9.1.010 and later). For a device whose *Last Seen* stays old |
 | `WidgetCreation` | Creation of the DomoticZ widgets at pairing |
 | `Command` | Actions coming from DomoticZ (switch on, set level...) |
 | `BasicOutput` | Commands sent to the devices |
