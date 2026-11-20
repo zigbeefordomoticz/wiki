@@ -70,6 +70,14 @@ Z4D detects a potential new firmware for device Kitchen bulb [1a2b]
 
 That last line is the one to act on: it names the folder the image belongs in.
 
+From plugin version **9.1.010** the WebUI lists the same findings, with their download
+links: *Admin > Firmware > Firmware updates found online*, also opened from the
+*Firmware update available* item of the Dashboard. The **Download** buttons work once you
+tick the risk warning above the list. See
+[Firmware updates found online](WebUI_Admin.md#firmware-updates-found-online).
+
+![Firmware updates found online, with their download links](Images/WebUI-Admin-Firmware-updates-online.png)
+
 The indexes consulted are the [Koenkk zigbee-OTA
 index](https://github.com/Koenkk/zigbee-OTA), IKEA's own firmware feed and Sonoff's
 firmware feed. All three are configurable — see [Settings](#settings).

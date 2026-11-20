@@ -34,7 +34,7 @@ This list gathers what may need an action. Only the items that apply are shown; 
 | **Not seen for *n* h** | Devices that sent nothing for the delay set by the `HealthTimeOut` setting. |
 | **Groups with a member not reachable or not seen** | Zigbee groups with at least one member that is not reachable or not seen: a command sent to the group may not reach every member. |
 | **Not optimized** | Devices without a certified configuration, handled generically by the plugin. See [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md). |
-| **Firmware update available** | Devices for which the plugin has a newer firmware than the one they run. *Admin > Firmware* lets you start the update. |
+| **Firmware update available** | Devices for which the plugin found a newer firmware online than the one they run. From plugin 9.1.010 it opens [*Firmware updates found online*](WebUI_Admin.md#firmware-updates-found-online), with the download links; *Admin > Firmware* then starts the update. |
 
 Each item has two buttons:
 
