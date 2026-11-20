@@ -99,7 +99,7 @@ Click a scene to open it. The first line gives its dates: when it was created (o
 
 ### Create a scene
 
-![New scene, and a chosen ID that was refused](Images/EN_WebUI-Scenes-New-Scene.png)
+![New scene: the devices in it, the optional scene ID and comment](Images/EN_WebUI-Scenes-New-Scene.png)
 
 1. Set the lights the way you want them.
 1. Select the group and go to **New scene**.
