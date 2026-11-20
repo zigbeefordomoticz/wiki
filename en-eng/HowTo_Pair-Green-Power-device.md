@@ -119,7 +119,11 @@ The switch declares neither its manufacturer, its model nor its commands, so *Au
 
 ## Check a paired device
 
-* **Management > Devices** lists the Green Power devices with the other devices; the *Green Power* chip shows them alone. Each row shows the model and the widgets, the source ID and the IEEE, the LQI of the last frame, and when the device was last heard. Open a Green Power device to see its details: source ID, Green Power device type, manufacturer and model ID, commands, the device type it was paired as, its widgets, the security level, the frame counter, and when it was commissioned and last heard. There is no name and no parameter to change there.
+* **Management > Devices** lists the Green Power devices with the other devices; the *Green Power* chip shows them alone. Each row shows the model and the widgets, the source ID and the IEEE, the LQI of the last frame, and when the device was last heard. Open a Green Power device to see its details: source ID, IEEE, alias short address, Green Power device type, manufacturer and model ID, commands, the device type it was paired as, its widgets, the security level, the frame counter, when it was commissioned and last heard, and the LQI. There is no name and no parameter to change there.
+
+  ![The details of a Green Power device with widgets](Images/EN_WebUI-Devices-GreenPower-Details.png)
+
+  On a device with widgets, *Remove device* is disabled: such a device is removed by deleting its last widget in Domoticz.
 * **A device without widgets** is marked *No widget* in the list. Its details window lets you **choose its device type**: click *Create the widgets*, and the plugin creates them within a minute, with no new pairing. The same window can **remove** it (see [Remove a Green Power device](#remove-a-green-power-device)).
 * **Dashboard**: the Green Power devices have a *Green Power* segment of their own in *Plugin devices* and in *Type of devices*. The plugin never sends a Green Power device anything, so it has no health status, and a battery-free switch can stay silent for days. So *Devices live* counts a Green Power device as fine, never as a problem: one Green Power switch alone shows *1 / 1*, with *including Green Power: 1 (not polled)*.
 * **Tools > Data > Green Power devices (raw)** shows what the plugin keeps for each Green Power device: its ID, its device type, the security level, the last frame counter, its model and its widgets. The security key of the device is never shown.
