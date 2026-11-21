@@ -125,6 +125,8 @@ The group settings are in the *Group management* section of the WebUI *Settings*
 
 A group can hold [Zigbee scenes](HowTo_Zigbee-scenes.md): a state stored in its devices, and recalled with one frame.
 
+A group with scenes gets a second widget in Domoticz, a Selector Switch with one level per scene, to [recall them from Domoticz](HowTo_Zigbee-scenes.md#recall-a-scene-from-domoticz).
+
 ## Warnings
 
 * Make sure all the devices of a group are connected to the network before you scan, create or change a group: a device that is not reachable doesn't get the change.
