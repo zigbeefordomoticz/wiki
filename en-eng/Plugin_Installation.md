@@ -20,7 +20,7 @@ You are on an older branch? Don't reinstall: follow [Upgrading from stable8 to s
 * 3 - [Installation on a Synology NAS (Docker)](#3---installation-on-a-synology-nas-docker)
 * 4 - [Installation on Windows](#4---installation-on-windows)
 * 5 - [Installation on OpenWRT](#5---installation-on-openwrt)
-* 6 - [Python Plugin Manager](#6---python-plugin-manager)
+* 6 - [PyPluginStore](#6---pypluginstore)
 
 PiZigate installation (Raspbian and Fedora) has moved to [Legacy - PiZigate installation](Legacy_PiZigate-Installation.md): ZiGate coordinators are no longer supported.
 
@@ -296,6 +296,6 @@ __Community procedure, not tested by the plugin maintainers.__
 
 ------------
 
-## 6 - Python Plugin Manager
+## 6 - PyPluginStore
 
-__Not maintained by the plugin team.__ If you use [pp-manager](https://github.com/ycahome/pp-manager), search for the "Zigbee for domoticz Plugin" entry. You still have to install the Python modules (`requirements.txt`) as in [the manual installation](#1c---procedure), and make sure you get the `stable9` branch.
+__Not maintained by the plugin team.__ [PyPluginStore](https://github.com/adrighem/PyPluginStore) installs the plugin (`stable9` branch) from a web page in Domoticz, together with its Python modules, and keeps it up to date. See [Install the plugin with PyPluginStore](HowTo_Install-PyPluginStore.md).

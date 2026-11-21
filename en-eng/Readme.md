@@ -28,6 +28,7 @@ Install the plugin, declare it in Domoticz and open its WebUI, in four steps.
   * [With Docker](How-To-Install-RPI-Docker.md)
   * [With Docker on a Synology NAS](Info_Install-Domoticz-NAS-Synology-Docker.md)
   * [On a DUSUN IoT gateway](Corner_DUSUN.md)
+  * [With PyPluginStore](HowTo_Install-PyPluginStore.md)
   * [Python virtual environment for Domoticz](HowTo_PythonVirtualEnv.md)
 * Step 2: [Plugin settings](Plugin_Settings.md) — declare the plugin hardware in Domoticz
 * Step 3: [Plugin configuration](Plugin_Configuration.md) — open the WebUI and check the settings
