@@ -38,7 +38,11 @@ The `.shared_deps` folder is shared by all the plugins PyPluginStore manages. If
 ## 4. Install the plugin
 
 1. In __Custom → pypluginstore__, in the __Plugins__ tab, search for __Zigate__ (description: "Cloud-free Zigbee integration for Domoticz, built on zigpy…") and install it.
-1. Wait for the installation to finish. The Domoticz log shows:
+1. Wait for the installation to finish. The store shows __Executing install for Zigate…__, then a message: "Successfully completed install for Zigate. Domoticz restart may be required."
+
+   ![PyPluginStore: Zigate installed](Images/EN_PyPluginStore-Install-Zigate.png)
+
+   The Domoticz log shows:
 
    ```
    Plugin Store: Calling: git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git Zigate
@@ -52,6 +56,10 @@ The `.shared_deps` folder is shared by all the plugins PyPluginStore manages. If
 
    * On Linux with systemd: `sudo systemctl restart domoticz`, or the __Restart Domoticz__ button of PyPluginStore if you allowed it (see the [PyPluginStore README](https://github.com/adrighem/PyPluginStore#restart-button)).
    * On Docker: see [5. Docker](#5-docker).
+
+   The __Restart Domoticz__ button asks for a confirmation. Once the installation is done, the Zigate card shows __Installed__, the installed version and __Up to date__.
+
+   ![PyPluginStore: Restart Domoticz](Images/EN_PyPluginStore-Restart-Domoticz.png)
 
    As long as the restart is pending, the log shows:
 
@@ -90,7 +98,9 @@ Domoticz has no restart command inside a container: PyPluginStore can only stop 
 
    or with `docker run`, add `--restart unless-stopped`. Recreate the container once to apply it (`docker compose up -d`).
 
-1. On the PyPluginStore hardware (__Setup → Hardware__), set __Container Restart__ to __Enabled__.
+1. On the PyPluginStore hardware (__Setup → Hardware__), set __Container Restart__ to __Enabled__, then click __Update__.
+
+   ![PyPluginStore hardware with Container Restart enabled](Images/EN_PyPluginStore-Hardware.png)
 
 From then on, after an installation or after the container is recreated, PyPluginStore restarts Domoticz once by itself. If it is still disabled, restart the container yourself with `docker compose restart` (not `down`/`up`, which would remove the `.pth` file again).
 
