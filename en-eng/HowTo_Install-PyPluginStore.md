@@ -38,7 +38,11 @@ The `.shared_deps` folder is shared by all the plugins PyPluginStore manages. If
 ## 4. Install the plugin
 
 1. In __Custom → pypluginstore__, in the __Plugins__ tab, search for __Zigate__ (description: "Cloud-free Zigbee integration for Domoticz, built on zigpy…") and install it.
-1. Wait for the installation to finish. The Domoticz log shows:
+1. Wait for the installation to finish. The store shows __Executing install for Zigate…__, then a message: "Successfully completed install for Zigate. Domoticz restart may be required."
+
+   ![PyPluginStore: Zigate installed](Images/EN_PyPluginStore-Install-Zigate.png)
+
+   The Domoticz log shows:
 
    ```
    Plugin Store: Calling: git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git Zigate
