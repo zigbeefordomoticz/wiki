@@ -26,12 +26,12 @@ Domoticz has its own scenes (*Setup > More Options > Scenes/Groups*). They are a
 | Fading | Done by the devices, from the transition time of the scene | Depends on what each command allows |
 | Without Domoticz | A Zigbee remote that recalls the scene keeps working | Nothing happens |
 | Devices | Zigbee only, in the same group | Anything Domoticz controls: Zigbee, Wi-Fi, 433 MHz… |
-| Triggers | The WebUI, or a Zigbee remote (see [Limits](#limits-today)) | Timers, events, dzVents, the Domoticz dashboard |
+| Triggers | The [Selector Switch](#recall-a-scene-from-domoticz) of the group (dashboard, timers, events, dzVents, Domoticz scenes), the WebUI, or a Zigbee remote | Timers, events, dzVents, the Domoticz dashboard |
 | Capacity | Limited by the table of each device | No real limit |
 
 **Choose a Zigbee scene** when several Zigbee lights must change together, without a visible delay, or when a remote must keep working if Domoticz is down.
 
-**Stay on a Domoticz scene** when you mix technologies, or when you need timers and Domoticz events. Today a Domoticz scene cannot trigger a Zigbee scene (see [Limits](#limits-today)).
+**Stay on a Domoticz scene** when you mix technologies. You can also combine both: a Domoticz scene, timer or script can recall a Zigbee scene through the [Selector Switch](#recall-a-scene-from-domoticz) of its group.
 
 ## How a scene is recorded and recalled
 
@@ -49,6 +49,8 @@ A device of the group **without the Scenes cluster**, such as some plugs, cannot
 1. Enable [group management](HowTo_Group-management.md#enable-group-management) and create a group with your lights.
 1. In *Settings*, *Available services*, enable __Enable native Zigbee scenes__ (`enableNativeScenes`).
 1. Click *Save* and restart the plugin.
+
+With its first scene, a group also gets a [Selector Switch](#recall-a-scene-from-domoticz) in Domoticz to recall its scenes.
 
 The coordinator does not have to be a member of the group: *Coordinator is a member* plays no part in capturing or recalling a scene.
 
@@ -127,7 +129,7 @@ Three things to know:
 
 * A device that did not hear the order, because it was off, still holds the scene and still answers a recall. The plugin does not wait for the answer. The next [scan](#find-the-scenes-already-on-the-devices) shows it in the scene again: take it out once more, with the device on.
 * A scene ID you choose is checked on the whole group, including the devices left out: a device holding that ID would answer the recall.
-* The *Off* level of the Selector switches off the whole group, not only the devices of the scene.
+* The *Off* level of the [Selector](#recall-a-scene-from-domoticz) switches off the whole group, not only the devices of the scene.
 
 ### Scenes with covers
 
@@ -208,10 +210,47 @@ The list on the left has every scene, with its groups, its number of devices and
 
 Each group has its **Test** button and **Open in the group**, which takes you to that scene in *By group*: re-capture, rename and delete are done there, as they apply to one group.
 
+## Recall a scene from Domoticz
+
+Each group with at least one scene has a **Selector Switch** in Domoticz, next to the widget of the group, named after the plugin hardware and the group: *Zigbee - Lampes Salon - Scenes* for a group *Lampes Salon* on a hardware *Zigbee*. The plugin creates it with the first scene of the group. It has one level per scene, under the name of the scene, plus *Off*.
+
+* **Click a scene** and the plugin recalls it: one frame to the group, as with *Test*. Clicking the same scene again recalls it again, for example after a lamp was moved by hand. The levels show as buttons for that reason.
+* **Off** switches off the **whole group**, as the widget of the group does, not only the devices of the scene.
+* **It shows the scene in force.** A recall from the WebUI moves it to that scene too. Once the devices have settled, if one of them leaves the scene (switched off or on, or its level changed by hand), the Selector goes back to *Off*. It moves with its triggers, so events and scripts see it.
+* **It is an ordinary Selector Switch.** Put it on the dashboard or a room plan, use it in a timer, in a Domoticz scene or group, in Blockly or dzVents. Its *Selector Actions* and the other options you set are kept.
+
+### Levels, for scripts and events
+
+A Domoticz Selector stores a level, not a name: the first scene is level `10`, the second `20`, and so on. *Off* is `0`.
+
+* **A scene keeps its level for life.** Renaming it only changes the name of the level. Deleting it leaves its level shown as `-`, which does nothing, so the following scenes keep theirs. A new scene takes the lowest free level.
+* So a script or a timer that uses a level keeps working when you rename, add or delete other scenes.
+
+For example, in dzVents, to recall the scene at level 20:
+
+```lua
+domoticz.devices('Zigbee - Lampes Salon - Scenes').switchSelector(20)
+```
+
+Use the name of your own Selector, as shown in *Setup > Devices*.
+
+### When the Selector goes back to Off
+
+After a recall the plugin waits for the devices to arrive: the transition time of the scene plus 10 seconds, or 2 minutes when the scene holds a cover (see [Scenes with covers](#scenes-with-covers)). From then on, the Selector goes to *Off* as soon as a device of the scene:
+
+* switches on or off;
+* changes its level by more than 5 steps out of 254 (about 2 %), or a cover moves by more than 2 %.
+
+A device of the group outside the scene does not count. A **colour** change is not seen. Going to *Off* this way only shows it: nothing is sent to the devices, and the *Off* action of the Selector runs like any other level change.
+
+### Deleting the Selector
+
+* **When the last scene of a group is deleted**, the plugin removes the Selector. If you had deleted the widget of the group before, the group goes with it.
+* **If you delete the Selector yourself** in Domoticz, the scenes stay on the devices and in the WebUI. The Selector comes back with the next new scene of the group, the next [scan](#find-the-scenes-already-on-the-devices), or the next start of the plugin.
+
 ## Limits today
 
-* **No Domoticz widget yet.** A scene can be recalled from the WebUI, from the [REST API](#for-the-curious) or by a Zigbee remote, not from a Domoticz widget, so neither from a Domoticz scene, timer or script directly.
-* **The plugin does not follow a recall sent by a remote.** *Last recalled* only counts the WebUI.
+* **The plugin does not follow a recall sent by a remote.** Neither *Last recalled* nor the Selector change: they only follow a recall from Domoticz, the WebUI or the [REST API](#for-the-curious).
 * **Colour** is saved by the devices that support it, but not shown in *State at capture*. A *Direct control* device gets on/off and level, or the position of a cover, and no colour.
 * **Thermostats** cannot be in a scene: most are not offered for groups, and a scene belongs to a group.
 * **Battery devices** do not follow group commands (see [Zigbee groups](HowTo_Group-management.md#how-zigbee-groups-work)), so they do not follow a scene either.
