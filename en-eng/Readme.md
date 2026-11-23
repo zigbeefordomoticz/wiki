@@ -129,7 +129,7 @@ For users who want to go further: describe a device yourself, reach the WebUI fr
 * Reach the WebUI from outside:
   * [Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
   * [Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
-  * [Dashboard access with basic authentication over https](HowTo_Dashboard-Access-Basic-Auth.md)
+  * [Reverse proxy with nginx](HowTo_Dashboard-Access-Basic-Auth.md)
 * [Scripts](../Contrib/Readme.md) — community dzVents scripts: battery levels, lost devices, automation examples
 * [Technical information](Technical/Readme.md) — REST API, plugin internals, device configuration files, protocol notes
 

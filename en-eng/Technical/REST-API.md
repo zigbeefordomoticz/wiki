@@ -7,7 +7,7 @@ The plugin WebUI talks to the plugin through a REST API, served on the *Plugin W
 **The REST API has no authentication of its own**: anyone who can reach the port can read the plugin data (including, with `domoticz-env`, the Domoticz user name and password set in the plugin) and send commands to the coordinator and the devices.
 
 * By default the plugin listens on all the network interfaces. Set the *Plugin WebUI port* hardware parameter to `127.0.0.1:9440` to accept local connections only.
-* Never expose the port to the Internet. To reach the WebUI from outside, put it behind a reverse proxy with authentication: see [Reverse proxy with Caddy](../HowTo_Reverse-Proxy-with-Caddy.md), [Reverse proxy with Apache 2](../HowTo_Reverse-Proxy-with-Apache2.md) and [Dashboard access with basic authentication](../HowTo_Dashboard-Access-Basic-Auth.md).
+* Never expose the port to the Internet. To reach the WebUI from outside, put it behind a reverse proxy with authentication: see [Reverse proxy with Caddy](../HowTo_Reverse-Proxy-with-Caddy.md), [Reverse proxy with Apache 2](../HowTo_Reverse-Proxy-with-Apache2.md) and [Reverse proxy with nginx](../HowTo_Dashboard-Access-Basic-Auth.md).
 
 ## Format
 
