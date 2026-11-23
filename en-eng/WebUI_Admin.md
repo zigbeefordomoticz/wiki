@@ -63,7 +63,9 @@ The list is kept until you leave the page, and emptied when you open pairing *An
 **A device already paired**: choose the device (search by name, NwkId or model), then:
 
 * **Prepare a full reset** (*Reset mode*): do this before you factory-reset a device that is already paired. The plugin forgets what it learnt about the device (bindings, reporting configuration, neighbours…) and, when the device rejoins, redoes a full discovery and configuration as for a first pairing.
-* **Recreate widgets** (*Recreate widget*): creates the Domoticz widgets of the device again, using the latest device configuration. You may end up with duplicate widgets in Domoticz: delete the ones you don't need.
+* **Recreate widgets** (*Recreate widget*): creates the Domoticz widgets the device is missing, using the latest device configuration. The widgets you kept stay as they are, with their name and history: no duplicate is created. Before plugin 9.1.011, a device with the same kind of widget on two endpoints (for example a sensor with an external temperature probe) could get a kept widget linked to the wrong endpoint, and a duplicate.
+
+  Never delete **all** the widgets of a device to get them back: deleting the last widget removes the device from the network, and it must be paired again (see [Remove a device](HowTo_Remove-device.md)).
 
 Refer to the tutorials [Add a new device](HowTo_Pairing-device.md) and [Pair a Green Power device](HowTo_Pair-Green-Power-device.md) for more information.
 
