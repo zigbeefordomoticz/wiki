@@ -1,190 +1,250 @@
-# Protection Plugin Web Admin via Basic Authentication
+# Reverse proxy with nginx: reach Domoticz and the plugin WebUI over HTTPS, with a login
 
-## Introduction
+## Overview
 
-The aim of this page is to allow you to acces to the plugin admin page through a basic authentication page.
-This method uses nginx and a let's encrypt certificate on rpi with Raspbian but the nginx configuration works on other systems.
+The plugin WebUI (port `9440` by default) has **no login of its own**. Whoever can reach that port can use the WebUI and its REST API: change the plugin settings, send commands to your Zigbee devices, download the logs.
 
-**Prefer to use a VPN to your local network or other methods (VPS...) that avoid exposing a web page.**
+So the WebUI port must never be opened on your Internet box. To use it from outside your home:
 
-Adding fail2ban (see below) limits the risk of authentication flood attack but you can still have a vulnerability on your system.
+* **prefer a VPN** to your local network; nothing is exposed;
+* otherwise, put a reverse proxy in front of it that asks for a user name and password, and make the WebUI reachable **only through that proxy**. This page does it with nginx and a Let's Encrypt certificate on Debian / Ubuntu / Raspberry Pi OS. [Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md) does the same with less configuration, and [Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md) with Apache.
 
-## Prerequisite
+Once done:
 
-First of all, you'll need a domain name to generate and use your ssl certificate. A sub domain is necessary if you're using your main domain. I'll use dashboard.
+* `https://domoticz.example.com/` opens Domoticz;
+* `https://domoticz.example.com/z4d/` opens the plugin WebUI;
+* both are behind an nginx login (the browser asks for a user name and password), and Domoticz keeps its own login as well.
 
-The port 80 need to be open during the certificate generation process.
-We'll add a restrict access by implementing a username/password authentication. Usernames and passwords are taken from a file created and populated by a password file creation tool, in our case, apache2-utils.
+## Assumptions
 
-You'll need the following tools:
+* nginx, Domoticz and the plugin run on the same machine, here `192.168.1.10`.
+* Domoticz listens on port `8080`, the plugin WebUI on `9440`. Replace them with your values.
+* You have a domain name, or a dynamic DNS name, here `domoticz.example.com`, that points to your Internet box.
+* Port `80` can be forwarded to the machine while the certificate is created and renewed.
 
-```shell
-sudo apt-get install nginx apache2-utils certbot python-certbot-nginx
+## 1- Restrict the WebUI to the local machine
+
+In Domoticz, *Setup* > *Hardware*, select the Zigbee for Domoticz hardware and set *Plugin WebUI port* to:
+
+```
+127.0.0.1:9440
 ```
 
-## SSL Certificate for nginx
+Then press *Update*. The plugin restarts, and the WebUI now only answers on the Domoticz machine itself.
 
-Be sure that the port 80 is opened.
+Check it. On the Domoticz machine, the WebUI must listen on `127.0.0.1` only:
 
-By following the certbot [instructions](https://certbot.eff.org/lets-encrypt/debianbuster-nginx):
+```shell
+ss -ltn | grep 9440
+```
 
-### Choose how you'd like to run Certbot
+```
+LISTEN 0      5          127.0.0.1:9440       0.0.0.0:*
+```
 
-* Either get and install your certificates...
-    Run this command to get a certificate and have Certbot edit your Nginx configuration automatically to serve it, turning on HTTPS access in a single step.
+`0.0.0.0:9440` or `*:9440` means the parameter was not taken: check it and restart the plugin.
 
-    ```shell
-    sudo certbot --nginx
-    ```
+From another computer on your network, the WebUI must not answer:
 
-* Or, just get a certificate.
-    If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, run this command.
+```shell
+curl -s -o /dev/null -w '%{http_code}\n' --connect-timeout 5 http://192.168.1.10:9440/z4d/
+```
 
-    ```shell
-    sudo certbot certonly --nginx
-    ```
+must print `000` (no connection). Any other code means the proxy can be bypassed from your network.
 
-### Renew certificate
+## 2- Domoticz keeps its own login
 
-The certificate is valid for 90 days.
+Requests reach Domoticz from nginx, so from `127.0.0.1`. In the Domoticz settings, the list of networks that may connect without a user name and password (*Local Networks*, or *Trusted Networks* depending on the version) must **not** cover `127.0.0.1` (for example `127.0.0.*`). Otherwise every request coming through nginx gets into Domoticz without a Domoticz login.
 
-The Certbot packages on your system come with a cron job or systemd timer that will renew your certificates automatically before they expire. You will not need to run Certbot again, unless you change your configuration. You can test automatic renewal for your certificates by running this command:
+## 3- Install nginx and get the certificate
+
+```shell
+sudo apt-get install nginx apache2-utils certbot python3-certbot-nginx
+nginx -v
+```
+
+`apache2-utils` only provides `htpasswd`, used in step 4; it does not install Apache.
+
+Forward port `80` of your Internet box to `192.168.1.10:80`, then get the certificate:
+
+```shell
+sudo certbot certonly --nginx -d domoticz.example.com
+```
+
+`certbot` prints where it saved the certificate, normally `/etc/letsencrypt/live/domoticz.example.com/`. The certificate is valid 90 days, and the `certbot` package renews it automatically, through port `80`. Check that renewal works:
 
 ```shell
 sudo certbot renew --dry-run
 ```
 
-If, like me, you always close the port 80, you'll have to run the renew command manually after opening it.
+If you close port `80` again, the automatic renewal fails: open it and run `sudo certbot renew` before the certificate expires.
 
-## Add a Restricting Access with HTTP Basic Authentication
+## 4- Create the login
 
-You can use online generator or the local tool.
-
-Create a password file and a first user. Run the htpasswd utility with the -c flag (to create a new file), the file pathname as the first argument, and the username as the second argument:
+Create the password file and a first user. `-B` stores the password as a bcrypt hash; `-c` creates the file, leave it out to add more users later:
 
 ```shell
-sudo htpasswd -c /etc/nginx/.htpasswd zigbeefordomoticz
+sudo htpasswd -B -c /etc/nginx/.htpasswd zigbee
 ```
 
-Press Enter and type the password for zigbeefordomoticz at the prompts.
-
-You can confirm that the file contains paired usernames and encrypted passwords:
+`zigbee` is the user name: choose your own. Give nginx read access to the file, and nobody else:
 
 ```shell
-$ cat /etc/nginx/.htpasswd
-zigbeefordomoticz:$apr1$/woC1jnP$KAh0SsVn5qeSMjTtn0E9Q0
+sudo chown root:www-data /etc/nginx/.htpasswd
+sudo chmod 640 /etc/nginx/.htpasswd
 ```
 
-## Reverse Proxy with HTTP Basic Authentication
+## 5- Configure the site
 
-Now, we need to configure nginx.
+Create `/etc/nginx/sites-available/domoticz`:
 
-```shell
-sudo nano /etc/nginx/sites-enabled/default
-```
+```nginx
+# WebSocket upgrade for Domoticz (its live updates go through /json)
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+}
 
-Add or replace:
-
-```script
 server {
-        listen 443 ssl;
-        listen [::]:443 ssl;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name domoticz.example.com;
 
-        auth_basic "Restricted website";
-        auth_basic_user_file /etc/nginx/.htpasswd;
+    ssl_certificate     /etc/letsencrypt/live/domoticz.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/domoticz.example.com/privkey.pem;
+    ssl_protocols       TLSv1.2 TLSv1.3;
 
-        server_name dashboard.mydomain.com;
-        #change to match your address
+    add_header Strict-Transport-Security "max-age=31536000" always;
 
-        #SSL-settings and generic server options here
-        ssl_certificate           /etc/letsencrypt/live/$domain/fullchain.pem;
-        ssl_certificate_key       /etc/letsencrypt/live/$domain/privkey.pem;
+    # One login for everything served under this name: Domoticz and the plugin WebUI
+    auth_basic           "Zigbee for Domoticz";
+    auth_basic_user_file /etc/nginx/.htpasswd;
 
-        ssl on;
-        ssl_session_cache  builtin:1000  shared:SSL:10m;
-        ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;
-        ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
-        ssl_prefer_server_ciphers on;
+    proxy_http_version 1.1;
 
-        location / {
-            root   /home/pi/domoticz/plugins/Domoticz-Zigbee/www;
-            index  index.html index.htm;
-        }
+    # Zigbee for Domoticz: the WebUI, its REST API and the log downloads
+    location ~ ^/(z4d|rest-z4d|download)(/|$) {
+        proxy_pass http://127.0.0.1:9440;
+    }
 
-        location /rest-zigbee {
-            proxy_pass http://127.0.0.1:9440/rest-zigbee;
-        }
+    # Everything else is Domoticz
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host       $host;
+        proxy_set_header Upgrade    $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+    }
 }
 ```
 
-You'll have to fill the server name (server_name) and complete the path name for the certificates ($domain) if you choose the manual option with certbot, otherwise, it's already filled.
+**Keep `auth_basic` at the `server` level.** There it applies to every `location`, so no path is left without a login. The WebUI is `/z4d/`, but it reads and changes everything through `/rest-z4d/`, and downloads the logs through `/download/`: a login on `/z4d/` alone leaves the REST API open to anyone.
 
-When finished, check your configuration:
+`proxy_pass` has no path after the port, so nginx passes the request path to the plugin as it is.
+
+Enable the site, check the configuration, then reload nginx:
 
 ```shell
+sudo ln -s /etc/nginx/sites-available/domoticz /etc/nginx/sites-enabled/domoticz
 sudo nginx -t
+sudo systemctl reload nginx
 ```
 
-and if it's ok, restart nginx:
+`nginx -t` must end with `test is successful`.
 
-```shell
-sudo service nginx restart
+### Domoticz mobile apps
+
+Some Domoticz mobile apps cannot send an nginx user name and password. If you need one of them, move the two `auth_basic` lines from the `server` level into the `location ~ ^/(z4d|rest-z4d|download)(/|$)` block: the plugin WebUI keeps the nginx login, and Domoticz relies on its own login only.
+
+## 6- Internet box
+
+Forward port `443` of your Internet box to `192.168.1.10:443`, and port `80` only as long as `certbot` needs it (step 3). Do **not** forward `8080` or `9440`.
+
+## 7- Check the login
+
+Run these from any computer that can reach `domoticz.example.com`. Use the user name you created instead of `zigbee`.
+
+* Without a user name and password, the WebUI, its REST API and the downloads are refused:
+
+  ```shell
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/z4d/
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/rest-z4d/1/plugin
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/download/
+  ```
+
+  All three must print `401`.
+
+* With the user name and the right password, the REST API answers:
+
+  ```shell
+  curl -s -o /dev/null -w '%{http_code}\n' -u zigbee https://domoticz.example.com/rest-z4d/1/plugin
+  ```
+
+  `curl` asks for the password, then must print `200`. `500` with the right password means the system cannot check bcrypt hashes: create the user again without `-B` (step 4).
+
+* Run the same command with a wrong password, and with any password you used before: it must print `401`.
+
+* Domoticz:
+
+  ```shell
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/
+  ```
+
+  prints `401` with the configuration of step 5. With the mobile-app variant (login on the WebUI only), it prints `200`, and the page is the Domoticz login.
+
+Then, from a device that is **not** on your home network (a phone on mobile data, for example):
+
+* `https://domoticz.example.com/z4d/` asks for the user name and password, then opens the WebUI;
+* in the WebUI, *Tools* > *Data*, the *Plugin log* item downloads the log file (the item is there when the plugin writes its own log file, `enablePluginLogging`).
+
+Run the checks of step 1 and of this step again after every change to the nginx configuration, to the *Plugin WebUI port*, or to the port forwarding on your Internet box.
+
+## 8- Domoticz custom menu
+
+The *Zigbee* entry the plugin adds to the Domoticz custom menu points to `http://<address>:9440/z4d/`. It does not work through nginx, nor when the *Plugin WebUI port* is `127.0.0.1:9440`.
+
+Create your own entry instead: a file in the `www/templates/` folder of Domoticz, for example `www/templates/Zigbee-Remote.html`:
+
+```html
+<iframe id="Zigbee-Remote" style="width:100%;height:800px;overflow:scroll;"></iframe>
+<script>
+document.getElementById('Zigbee-Remote').src = "/z4d/";
+</script>
 ```
 
-Your dashboard is now accessible: <https://dashboard.mydomain.com/>
+Opened through nginx, Domoticz and the WebUI share the same address, so `/z4d/` is enough.
 
-## OPTION 1 - Add jail with fail2ban
+## Option: ban repeated login failures with fail2ban
 
-This measure can help to protect your system by checking repeatedly fail on authenticate.
-Fail2ban can issue a temporary bans on the offending IP address.
-Install fail2ban:
+fail2ban reads the nginx error log and bans, for a while, an address that keeps failing the login.
 
 ```shell
 sudo apt-get install fail2ban
-```
-
-Add the jail configuration by opening the jail file:
-
-```shell
 sudo nano /etc/fail2ban/jail.local
 ```
 
-and paste:
-
-```config
+```ini
 [nginx-http-auth]
-
 enabled  = true
-filter   = nginx-http-auth
+backend  = auto
 logpath  = /var/log/nginx/error.log
 maxretry = 3
-findtime = 900
-bantime = 900
-ignoreip = 127.0.0.1 192.168.1.0/24
+findtime = 15m
+bantime  = 1h
+ignoreip = 127.0.0.1/8 ::1 192.168.1.0/24
 ```
 
-and restart fail2ban
+`ignoreip` keeps your own network from being banned: use your network's range.
 
 ```shell
-sudo service fail2ban restart
+sudo systemctl restart fail2ban
+sudo fail2ban-client status nginx-http-auth
 ```
 
-You can check what is going on:
+## References
 
-```shell
-sudo fail2ban-client status
-```
-
-## OPTION 2 - Use the certificate with DomoticZ
-
-You can use the certificate with DomoticZ by running (replace \<your domain>):
-
-```shell
-sudo mv ~/domoticz/server_cert.pem ~/domoticz/server_cert.pem.org
-sudo cat /etc/letsencrypt/live/<your domain>/privkey.pem >> ~/domoticz/server_cert.pem
-sudo cat /etc/letsencrypt/live/<your domain>/fullchain.pem >> ~/domoticz/server_cert.pem
-sudo cp ~/domoticz/server_cert.pem ~/domoticz/letsencrypt_server_cert.pem
-sudo service domoticz restart
-```
-
-As every update of DomoticZ overwrites your certificate, the last command backups your new certificate so that you may may restore it if needed.
+* [nginx `ngx_http_auth_basic_module`](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)
+* [nginx `ngx_http_proxy_module`](https://nginx.org/en/docs/http/ngx_http_proxy_module.html)
+* [Certbot](https://certbot.eff.org/)
+* [Reverse proxy with Caddy](HowTo_Reverse-Proxy-with-Caddy.md)
+* [Reverse proxy with Apache 2](HowTo_Reverse-Proxy-with-Apache2.md)
+* [Plugin configuration](Plugin_Configuration.md) (*Plugin WebUI port*)
