@@ -32,13 +32,39 @@ In Domoticz, *Setup* > *Hardware*, select the Zigbee for Domoticz hardware and s
 
 Then press *Update*. The plugin restarts, and the WebUI now only answers on the Domoticz machine itself.
 
-Check it from another computer on your network: `http://<Domoticz address>:9440/z4d/` must **fail to connect**. If it still opens, the proxy could be bypassed from your network.
+Check it. On the Domoticz machine, the WebUI must listen on `127.0.0.1` only:
+
+```shell
+ss -ltn | grep 9440
+```
+
+```
+LISTEN 0      5          127.0.0.1:9440       0.0.0.0:*
+```
+
+`0.0.0.0:9440` or `*:9440` means the parameter was not taken: check it and restart the plugin.
+
+From another computer on your network, the WebUI must not answer:
+
+```shell
+curl -s -o /dev/null -w '%{http_code}\n' --connect-timeout 5 http://<Domoticz address>:9440/z4d/
+```
+
+must print `000` (no connection). Any other code means the proxy can be bypassed from your network.
 
 > If Caddy runs on another machine, set the *Plugin WebUI port* to the LAN address of the Domoticz machine (for example `192.168.1.10:9440`). Then block port `9440` on the Domoticz machine for every address except the Caddy machine, for example with `ufw` or `nftables`.
 
 ## 2- Install Caddy
 
-Follow the [Caddy installation guide](https://caddyserver.com/docs/install#debian-ubuntu-raspbian) for your system. This page needs Caddy 2.8 or later for the `basic_auth` directive; with an older Caddy, write `basicauth` instead.
+Follow the [Caddy installation guide](https://caddyserver.com/docs/install#debian-ubuntu-raspbian) for your system. Prefer Caddy's own package repository: the Caddy packaged by a distribution is often several versions behind, and Caddy is the program facing the Internet.
+
+Check the version:
+
+```shell
+caddy version
+```
+
+This page uses the `basic_auth` directive, which needs Caddy 2.8 or later. With an older Caddy (2.7.6 for example), write `basicauth` instead, or better, upgrade. From 2.8 on, `basicauth` still works but logs a deprecation warning.
 
 ## 3- DNS and Internet box
 
@@ -54,11 +80,19 @@ Caddy stores a hash of the password, never the password itself:
 caddy hash-password
 ```
 
-Type the password twice. Caddy prints a hash starting with `$2a$14$`: copy it for the next step.
+Type the password twice. Caddy prints a hash: copy it for the next step, exactly as printed. Recent versions print it as is (`$2a$14$…`), older ones base64-encoded (`JDJh…`): use what your own Caddy printed.
+
+**Never use a hash copied from an example**, on this page or anywhere else. A published hash can be attacked offline, as fast as the attacker's computer allows. If you ever did, run `caddy hash-password` again, put the new hash in your Caddyfile, and reload Caddy.
 
 ## 5- Write the Caddyfile
 
-Edit `/etc/caddy/Caddyfile` (replace its content, or add this block if Caddy already serves other sites):
+Edit `/etc/caddy/Caddyfile` (replace its content, or add this block if Caddy already serves other sites).
+
+> To keep one file per site, put the block in its own file, for example `/etc/caddy/Caddyfile.d/domoticz.caddyfile`, and add this line to `/etc/caddy/Caddyfile`:
+>
+> ```
+> import Caddyfile.d/*.caddyfile
+> ```
 
 ```
 domoticz.example.com {
@@ -90,12 +124,19 @@ domoticz.example.com {
 
 **Keep `basic_auth` without a path after it.** In Caddy, a path without `*` matches only that exact path: `basic_auth / { … }` protects the home page and nothing else, and leaves `/z4d/`, `/rest-z4d/` and all of Domoticz open.
 
-Check the file, then reload Caddy:
+Check the configuration, then reload Caddy:
 
 ```shell
 caddy validate --config /etc/caddy/Caddyfile
 sudo systemctl reload caddy
 ```
+
+Always validate the main `/etc/caddy/Caddyfile`: it also checks the files it imports, as Caddy will load them. If `caddy validate` fails:
+
+| Message | Cause | Fix |
+| --- | --- | --- |
+| `decoding config: invalid character '…' looking for beginning of value` | The file given to `--config` is not named `Caddyfile`, so Caddy read it as JSON | Validate `/etc/caddy/Caddyfile`, or add `--adapter caddyfile` |
+| `unrecognized directive: basic_auth` | Caddy is older than 2.8 | Write `basicauth`, or upgrade Caddy (step 2) |
 
 ### Domoticz keeps its own login
 
@@ -105,19 +146,43 @@ Requests reach Domoticz from Caddy, so from `127.0.0.1`. Check that Domoticz sti
 
 Some Domoticz mobile apps cannot send a Caddy user name and password. If you need one of them, move the `basic_auth` block inside `handle @z4d { … }`: the plugin WebUI keeps the Caddy login, and Domoticz relies on its own login only.
 
-## 6- Check from outside
+## 6- Check the login
 
-From a device that is **not** on your home network (a phone on mobile data, for example):
+Run these from any computer that can reach `domoticz.example.com`. Use the user name you put in the Caddyfile instead of `zigbee`.
 
-* `https://domoticz.example.com/z4d/` asks for the user name and password, then opens the WebUI;
-* without the password, the REST API is refused:
+* Without a user name and password, the WebUI and its REST API are refused:
 
   ```shell
-  curl -i https://domoticz.example.com/rest-z4d/1/plugin
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/z4d/
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/rest-z4d/1/plugin
   ```
 
-  must answer `HTTP/2 401`;
+  Both must print `401`.
+
+* With the user name and the right password, the REST API answers:
+
+  ```shell
+  curl -s -o /dev/null -w '%{http_code}\n' -u zigbee https://domoticz.example.com/rest-z4d/1/plugin
+  ```
+
+  `curl` asks for the password, then must print `200`.
+
+* Run the same command with a wrong password, and with any password you used before: it must print `401`.
+
+* Domoticz:
+
+  ```shell
+  curl -s -o /dev/null -w '%{http_code}\n' https://domoticz.example.com/
+  ```
+
+  prints `401` with the Caddyfile of step 5. With the mobile-app variant (login on the WebUI only), it prints `200`, and the page is the Domoticz login.
+
+Then, from a device that is **not** on your home network (a phone on mobile data, for example):
+
+* `https://domoticz.example.com/z4d/` asks for the user name and password, then opens the WebUI;
 * in the WebUI, *Tools* > *Data*, the *Plugin log* item downloads the log file (the item is there when the plugin writes its own log file, `enablePluginLogging`).
+
+Run the checks of step 1 and of this step again after every change to the Caddyfile, to the *Plugin WebUI port*, or to the port forwarding on your Internet box.
 
 ## 7- Domoticz custom menu
 
