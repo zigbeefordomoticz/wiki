@@ -101,7 +101,7 @@ reboot
     ```bash
     cd userdata
     mkdir plugins
-    git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+    git clone --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
     ```
 
 1. Put in place the customstart so, it will load all python3 modules for the Zigbee4Domoticz plugin

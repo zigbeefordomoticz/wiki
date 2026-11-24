@@ -59,6 +59,8 @@ See [What is the python version running under Domoticz](HowTo_PythonVirtualEnv.m
 
 ### 1.C - Procedure
 
+> `--filter=blob:none` downloads the plugin without the old versions of its files: about 16 MB of git data instead of about 150 MB. Updates and going back to a previous version work the same way; git downloads an old file when it needs it. If your git refuses this option, remove it from the command.
+
 1. Go to the __plugins__ folder of Domoticz:
 
    ```bash
@@ -68,7 +70,7 @@ See [What is the python version running under Domoticz](HowTo_PythonVirtualEnv.m
 1. Get the plugin (`stable9` branch):
 
    ```bash
-   git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+   git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
    ```
 
    The folder __Domoticz-Zigbee__ is created in the plugins folder.
@@ -124,7 +126,7 @@ From the host, in the folder mapped to `/opt/domoticz/userdata`:
 
 ```bash
 cd userdata/plugins
-git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 
 ### 2.B - Install the Python modules
@@ -184,7 +186,7 @@ The `customstart.sh` script is run by Domoticz each time the container starts; o
 
 ```bash
 cd /opt/domoticz/userdata/plugins
-git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 cp Domoticz-Zigbee/Tools/customstart.sh /opt/domoticz/userdata/customstart.sh
 ```
 
@@ -194,7 +196,7 @@ Then restart the container.
 
 ```bash
 cd /opt/domoticz/userdata/plugins
-git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 cd Domoticz-Zigbee
 python3 -m pip install -r requirements.txt --upgrade
 ```
@@ -237,7 +239,7 @@ Install the USB-serial driver of your coordinator (for example Silicon Labs CP21
 * Open a command prompt as Administrator in the __plugins__ folder of Domoticz (for example `C:\Domoticz\plugins`), then run:
 
   ```bat
-  git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+  git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
   cd Domoticz-Zigbee
   py -m pip install -r requirements.txt --upgrade
   ```
@@ -268,7 +270,7 @@ __Community procedure, not tested by the plugin maintainers.__
 
    ```bash
    cd /etc/domoticz/plugins
-   git clone -b stable9 https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+   git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
    cd Domoticz-Zigbee
    python3 -m pip install -r requirements.txt
    chmod +x plugin.py

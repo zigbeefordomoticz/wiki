@@ -72,7 +72,7 @@ The plugin's own web interface, at `http://<Domoticz server>:9440/z4d/`: one pag
 
 Updates, backups, and what to do when the coordinator changes.
 
-* [Plugin update](Plugin_Update.md) — routine updates of `stable9`, going back to a previous release, the plugin branches
+* [Plugin update](Plugin_Update.md) — routine updates of `stable9`, going back to a previous release, reducing the disk space, the plugin branches
 * [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) — one-way switch for users still on `stable8`
 * [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md) — for users still on `stable7`, including old distributions and the move to a Python virtual environment
 * [Backup and restore](Plugin_Backup.md) — what to back up (plugin files and the Domoticz database), the backup scripts, reinstalling the plugin
