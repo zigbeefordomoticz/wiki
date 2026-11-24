@@ -149,6 +149,7 @@ From plugin version 9.1.010 the page opens with a red warning: firmware files co
 * **Download** opens the link given by the index, with the file name under it. The plugin does not download anything: you do. The **Download** buttons stay disabled until you tick *I understand: I update my devices at my own risk* in the warning, each time you open the page. *No download link* means the index gave none.
 * **How to update a device** recalls the three steps: download the file, copy it into the `OTAFirmware` folder of the device's brand, then open the **Firmware** page to start the update.
 * The list is filled by the online check of `checkFirmwareAgainstZigbeeOTARepository` (enabled by default). It is empty when that check is off or found nothing.
+* From plugin version 9.1.011 the list holds only the firmware still to download: a firmware whose file is already in `OTAFirmware`, in that version or a newer one, is left out, and the **Firmware** page installs it. The folders are read again each time the page opens, so a file you just copied leaves the list without restarting the plugin. An older file of the same firmware does not hide the newer one. Before 9.1.011, a firmware stays listed until it is installed.
 
 Refer to [Update device firmware](HowTo_Update-device-firmware.md) for where to put the firmware files and how the update runs.
 
