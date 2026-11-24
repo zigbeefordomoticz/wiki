@@ -165,7 +165,7 @@ With a zigpy coordinator, each reported attribute has its own row under its clus
 From plugin 9.1.011, *Read reporting* asks the device how it really reports. Its answer shows a few seconds later, and the date of the last answer is under the device name:
 
 * *device: 300* under *Min*, *Max* or *Change* is the value held by the device. It is in bold when it differs from the value saved in the plugin: the device did not receive the configuration, or does not accept this value.
-* *device: no reporting configured*: the device has no reporting for this attribute. It sends no regular report for it.
+* *device: no reporting configured*: the device has no reporting for this attribute.
 * *device: not readable*: the device refused to answer for this attribute, with the Zigbee status it gave (`86` is an attribute it does not have).
 * An attribute the device reports, with no configuration in the plugin on that endpoint, has its own row with the values of the device only.
 
