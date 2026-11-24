@@ -98,6 +98,76 @@ git pull
 
 Don't go back to a `stable8` (or older) tag: moving to `stable9` is one-way as soon as you have paired a device on `stable9` (see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md)).
 
+## Reduce the disk space used by the plugin
+
+The folder `.git/objects/pack` of the plugin holds its git history: all the previous versions of the plugin files. It takes about 150 MB on a plain `git clone`, and more on an old installation. The plugin doesn't need it to run, but updates do: __don't delete these files__. If you already did, see [Make it much smaller, or repair it](#make-it-much-smaller-or-repair-it).
+
+Don't do this while an update is running. If you installed the plugin with PyPluginStore, its folder is `plugins/Zigate`. With Docker, run the commands in the container (`docker exec -it domoticz bash`), in `/opt/domoticz/userdata/plugins/Domoticz-Zigbee`. Run the commands as the user who owns the plugin folder, or you may get a [`dubious ownership`](Problem_FAQ.md#e19-error-during-an-update--detected-dubious-ownership-in-repository-or-you-have-uncommitted-changes) error.
+
+To see the size used:
+
+```bash
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+git count-objects -vH
+```
+
+`size-pack` is the history. `size-garbage` is what interrupted downloads left behind.
+
+### Clean it
+
+This removes the branches deleted on GitHub and the leftovers of interrupted downloads. It is enough on an installation that has grown over time; on a recent one it changes almost nothing. git needs free space for a second copy of the history while it works.
+
+```bash
+cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+git remote prune origin
+git gc --prune=now
+```
+
+### Make it much smaller, or repair it
+
+This replaces the history with a light one, of about 16 MB. Your configuration and data are not touched, but local branches and stashes are not carried over. It requires an Internet connection, about 35 MB of free space, and being on `stable9` (see [Know your branch](#know-your-branch)).
+
+1. Update the plugin. `git status` must show no modified file. If you already deleted files of `.git/objects/pack`, skip this step.
+
+   ```bash
+   cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+   git pull
+   git status
+   ```
+
+1. Get a light copy, __outside__ the `plugins` folder (Domoticz would see it as a second plugin), and use its `.git` folder:
+
+   ```bash
+   cd ~
+   git clone -b stable9 --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git z4d-new
+   mv /home/pi/domoticz/plugins/Domoticz-Zigbee/.git ~/z4d-git-old && \
+   mv ~/z4d-new/.git /home/pi/domoticz/plugins/Domoticz-Zigbee/.git
+   ```
+
+1. Check the result. `git status` must show no modified file; untracked files are not a problem.
+
+   ```bash
+   cd /home/pi/domoticz/plugins/Domoticz-Zigbee
+   git status
+   git pull
+   ```
+
+   After a repair, the plugin files may be older than the new history, and `git status` then shows modified files. Put them at the latest version with `git reset --hard`, which drops the changes you made to the plugin files, then [update the Python modules](#manually) and restart Domoticz.
+
+1. When everything works, remove the two folders that are no longer needed:
+
+   ```bash
+   rm -rf ~/z4d-new ~/z4d-git-old
+   ```
+
+   Until then, you can undo: remove the new `.git` folder and move `~/z4d-git-old` back to `.git`.
+
+### What not to do
+
+* `git clone --depth 1` or `git fetch --depth=1`: the history comes back at the next update, and on an installation that is not up to date the next `git pull` can fail (`divergent branches`).
+* `git reflog expire --expire=now --all`: it deletes your stashes, and doesn't free more space.
+* `git gc --aggressive`: it used 1.5 GB of memory in our tests, too much for a small Raspberry Pi, for a limited gain.
+
 ## Plugin branches
 
 The plugin is under constant development in order to bug fix and add new features as well as taking into account new devices. As Domoticz evolves, it is not possible to keep the plugin compatible with every older Domoticz release, so each major version has its own branch.

@@ -13,6 +13,7 @@
 * [Q11. Can I use the DomoticZ *Replace* button to keep the history of a dead device ?](#q11-can-i-use-the-domoticz-replace-button-to-keep-the-history-of-a-dead-device-)
 * [Q12. My ZiGate is no longer supported: what should I replace it with ?](#q12-my-zigate-is-no-longer-supported-what-should-i-replace-it-with-)
 * [Q13. How do I uninstall the plugin ?](#q13-how-do-i-uninstall-the-plugin-)
+* [Q14. Can I delete the large files in `.git/objects/pack` ?](#q14-can-i-delete-the-large-files-in-gitobjectspack-)
 
 ## Troubleshooting
 
@@ -172,6 +173,12 @@ The plugin no longer supports ZiGate coordinators. Pick a Texas Instruments, Sil
 
 ------------
 
+## Q14. Can I delete the large files in `.git/objects/pack` ?
+
+No. They are the git history of the plugin: the plugin runs without them, but it can't be updated any more. You can make them much smaller, or repair the plugin folder if you already deleted them: see [Reduce the disk space used by the plugin](Plugin_Update.md#reduce-the-disk-space-used-by-the-plugin).
+
+------------
+
 ## T1. My coordinator is not working
 
 I can see in the [log file](#q2-where-are-the-logs-) some messages like that
@@ -234,6 +241,7 @@ The WebUI shows `Plugin Upgrade process completed without errors.`, but after th
 * __You are on an older branch (`stable7`, `stable8`).__ The WebUI updates the branch you are on, but can't switch to another one: the question `[y/N]` of the switch script gets no answer and ends with `Aborted by user. No changes made.`. Switch branches on the command line: see [Upgrading from stable8 to stable9](HowTo_Upgrade-stable8-to-stable9.md) or [Upgrading from stable7 to stable9](HowTo_Upgrade-stable7-to-stable9.md), and [Know your branch](Plugin_Update.md#know-your-branch).
 * __You are on DomoticZ 2026.1 and restarted only the plugin.__ This is a DomoticZ 2026.1 bug: restarting the plugin (from the DomoticZ hardware page or from the WebUI) doesn't load the new code. Restart DomoticZ itself after each plugin update, or upgrade DomoticZ (2026.3 is recommended).
 * __The update failed on a git error__ (`dubious ownership`, `uncommitted changes`): see [E19](#e19-error-during-an-update--detected-dubious-ownership-in-repository-or-you-have-uncommitted-changes).
+* __The git history is damaged__ (`bad tree object HEAD`, `This is probably due to repo corruption`), for example after files of `.git/objects/pack` were deleted: see [Make it much smaller, or repair it](Plugin_Update.md#make-it-much-smaller-or-repair-it).
 
 See [Plugin update](Plugin_Update.md) for the manual update.
 

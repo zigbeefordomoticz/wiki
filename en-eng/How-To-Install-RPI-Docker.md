@@ -17,7 +17,7 @@ The image build needs the plugin, so clone it first, into the `userdata/plugins`
 ```bash
 mkdir -p /opt/domoticz/userdata/plugins
 cd /opt/domoticz/userdata/plugins
-git clone https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
+git clone --filter=blob:none https://github.com/zigbeefordomoticz/Domoticz-Zigbee.git
 ```
 
 ## 3. The Dockerfile and the compose file
