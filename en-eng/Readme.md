@@ -56,7 +56,7 @@ Everyday tasks: add and remove devices, set them up, use groups and bindings.
 
 The plugin's own web interface, at `http://<Domoticz server>:9440/z4d/`: one page per menu.
 
-* [General presentation](WebUI_General-presentation.md) — the menu bar, the indicators
+* [General presentation](WebUI_General-presentation.md) — the menu bar, the indicators, the [status colours](WebUI_General-presentation.md#status-colours)
 * [Dashboard](WebUI_Dashboard.md) — the state of the plugin and the devices at a glance
 * [Management](WebUI_Management.md) — devices and groups
 * [Network](WebUI_Network.md) — topology and interference level
