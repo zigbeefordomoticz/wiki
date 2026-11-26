@@ -1,63 +1,64 @@
 -- This is a basic/simple dzVents script that is intended to detect dead or timed-out devices.
+-- It reads LastUpdate through the Domoticz JSON API, i.e. from the database, so the
+-- 'Last Seen' touch done by the plugin is taken into account even when the value
+-- of the device did not change.
 -- It is based on the script written by Benp:
 -- https://easydomoticz.com/forum/viewtopic.php?f=28&t=8251&start=80#p69239
 -- You can find a more complete script from Deufo here :
 -- https://github.com/zigbeefordomoticz/wiki/blob/master/Contrib/CheckDeadDevices.lua
 
+local BASE_URL = 'http://127.0.0.1:8080'  -- your Domoticz port; 127.0.0.1 must be in Setup > Settings > Local Networks
+local THRESHOLD_MINUTES = 240             -- must be longer than the reporting interval of the devices
 
-
-
-local devicesToCheck = {
-  { ['name'] = 'Door Sensor ENOCEAN', ['DeviceIdx'] = 5 },  			-- add you device list here. First line is an example from my Domoticz.
-	{ ['name'] = 'Device name 2', ['DeviceIdx'] = Idx2 },				-- find you devices IDx in Domoticz/Setup/Devices
-	{ ['name'] = 'Device name 3', ['DeviceIdx'] = Idx3 },
-	{ ['name'] = 'Device name 4', ['DeviceIdx'] = Idx4 },
-	{ ['name'] = 'Device name 5', ['DeviceIdx'] = Idx5 },
-	{ ['name'] = 'Device name 6', ['DeviceIdx'] = Idx6 }				-- last line does not have a ","
+local devicesToCheck = {                  -- find the idx of your devices in Setup > Devices
+    { name = 'Door Sensor ENOCEAN', idx = 5 },
+    -- { name = 'Device name 2', idx = 12 },
+    -- { name = 'Device name 3', idx = 13 },
 }
 
-
-return
-{
-	on = {
-     timer = {'at 11:50'},				-- Choose how often you want to check if devices are alive. I check it once a day at 11:50
-     httpResponses = {'lastUP' }
-	},
+return {
+    on = {
+        timer = { 'every 30 minutes' },   -- how often the devices are checked
+        httpResponses = { 'lastUP' },
+    },
+    data = { alerted = { initial = {} } }, -- devices already reported, so the alert is sent once per outage
+    logging = { marker = 'CheckLastSeen' },
 
     execute = function(domoticz, item)
-        print('trigger:' .. tostring(item.isTimer) .. '/' .. tostring(item.isHTTPResponse))
-
-		for i, deviceToCheck in pairs(devicesToCheck) do
-			local name = deviceToCheck['name']
-			local DeviceIdx = deviceToCheck['DeviceIdx']
-
-
-            if (item.isTimer) then
+        if item.isTimer then
+            for _, d in ipairs(devicesToCheck) do
                 domoticz.openURL({
-                    url = 'http://127.0.0.1:8080/json.htm?type=command&param=getdevices&rid='..DeviceIdx..'',
+                    url = BASE_URL .. '/json.htm?type=command&param=getdevices&rid=' .. d.idx,
                     method = 'GET',
-                    callback = 'lastUP'
+                    callback = 'lastUP',
                 })
             end
+            return
         end
 
-            if (item.isHTTPResponse and item.ok) then
-                local Time = require('Time')
-                local results = item.json.result
+        if not item.ok or not item.isJSON or item.json.result == nil then
+            domoticz.log('getdevices failed, HTTP ' .. tostring(item.statusCode), domoticz.LOG_ERROR)
+            return
+        end
 
-                 for i, node in pairs(results) do
-                    -- convert the time stamp in the raw data into a
-                    -- dzVents Time object
-                    local lastUpdate = Time(node.LastUpdate)
-                    print(node.Name)
-                    print('Hours ago: ' .. lastUpdate.hoursAgo)
-
-                    if(lastUpdate.hoursAgo > 4) then  	-- Set the threshold to consider the device timed-out. Write here what you want to do if the device is timed-out.
-                        local message = ""				-- I send a SMS to my phone using free-mobile SMS notifications feature.
-                        message = message .. 'Device ' .. node.Name .. ' seems to be timed-out. Last seen: ' .. lastUpdate.hoursAgo ..' hours ago.'
-                        domoticz.openURL('https://smsapi.free-mobile.fr/sendmsg?user=XXXXXXXX&pass=xxxxxxxxxxxxxx&msg= ' .. message .. ' ')
-                    end
+        local Time = require('Time')
+        for _, node in ipairs(item.json.result) do
+            local key = tostring(node.idx)
+            local last = Time(node.LastUpdate)
+            if last.minutesAgo > THRESHOLD_MINUTES then
+                if not domoticz.data.alerted[key] then
+                    domoticz.data.alerted[key] = true
+                    local message = 'Device ' .. node.Name .. ' seems to be timed-out. Last seen: '
+                        .. last.minutesAgo .. ' minutes ago.'
+                    domoticz.log(message, domoticz.LOG_ERROR)
+                    -- Write here what you want to do when a device is timed-out,
+                    -- e.g. domoticz.notify('Zigbee', message), or a free-mobile SMS:
+                    domoticz.openURL('https://smsapi.free-mobile.fr/sendmsg?user=XXXXXXXX&pass=xxxxxxxxxxxxxx&msg='
+                        .. domoticz.utils.urlEncode(message, '%20'))
                 end
+            else
+                domoticz.data.alerted[key] = nil
             end
+        end
     end
 }
