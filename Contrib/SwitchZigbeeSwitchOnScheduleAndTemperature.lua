@@ -12,7 +12,7 @@ return {
 	},
 
 	execute = function(domoticz, device)
-			-- define summer = from may till october
+			-- define summer = from May to September
     	local Summer = (domoticz.time.month > 4) and (domoticz.time.month < 10)
 			-- define midday at noon
       local midday = domoticz.time.matchesRule('at 12:00')
@@ -22,11 +22,11 @@ return {
       end
       -- during wintertime if water temp higher than 25 degrees, switch on FloorheatingPump
       if (not Summer) and (domoticz.devices('Floorheating - Temp+Hum').temperature >= 25) then   
-          domoticz.devices('FloorheatingPump').switchOn() -- turn pump on
+          domoticz.devices('FloorheatingPump').switchOn().checkFirst() -- turn pump on (checkFirst: no command if it is already on)
     	else
     	-- leave the pump on for at least 5 minutes if temp drops lower than 25 degrees
 	    if (domoticz.devices('FloorheatingPump').lastUpdate.minutesAgo >= TurnOff) then
-            domoticz.devices('FloorheatingPump').switchOff() -- turn pump off
+            domoticz.devices('FloorheatingPump').switchOff().checkFirst() -- turn pump off (checkFirst: no command every minute when it is already off)
         end
     end
   end
