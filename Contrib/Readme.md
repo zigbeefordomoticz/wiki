@@ -10,7 +10,7 @@ All of them are dzVents scripts, including the `.lua` files: in Domoticz, create
 
 * [Device health](Devices-Health.md): monitor that devices are still alive, with a short dzVents example.
 * [CheckBatteryLevel.dzVents](CheckBatteryLevel.dzVents): weekly check of the battery level of a list of devices.
-* [CheckLastSeen.dzVents](CheckLastSeen.dzVents): daily check of when a list of devices was last seen.
+* [CheckLastSeen.dzVents](CheckLastSeen.dzVents): checks every 30 minutes when a list of devices was last seen, and alerts once when one goes silent.
 * [CheckDeadDevices.lua](CheckDeadDevices.lua): every 10 minutes, check that a list of devices was seen within a threshold, with notifications.
 * [GetDevicesStatus.lua](GetDevicesStatus.lua): every 15 minutes, count the live, lost and unknown devices from the plugin REST API, and show it on an Alert widget.
 
