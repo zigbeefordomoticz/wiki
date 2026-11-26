@@ -25,6 +25,7 @@ return {
 
 	if (item.isTimer) then
 	   domoticz.devices(Alertidx).updateAlertSensor(domoticz.ALERTLEVEL_GREY, "Requesting ...")
+        local fullURL
         if (user == '') then
             fullURL = protocol .. '://' .. hostWebUI .. ':' .. portWebUI .. apiPath
         else
@@ -42,30 +43,34 @@ return {
 			if (item.isJSON) then
 
 				local result_table = item.json
-				local tc = #result_table
-				
-				for i = 1, tc do
-				    if result_table[i].Health == "Live" then
-                        devicesLive=devicesLive+1
-                    elseif result_table[i].Health == "Not Reachable" then
-                        devicesLost=devicesLost+1
-                    else
-                        devicesUndefined=devicesUndefined+1
-                    end
-                end
-				
-				
-				if devicesLost == 0 and devicesUndefined==0 then
+				local lostNames = {}
+				local level
+
+				for _, device in ipairs(result_table) do
+				    local health = device.Health
+				    if health == "Live" then
+				        devicesLive = devicesLive + 1
+				    elseif health == "Not Reachable" or health == "TimedOut" then
+				        devicesLost = devicesLost + 1
+				        local name = device.ZDeviceName
+				        if name == nil or name == "" then name = tostring(device._NwkId) end
+				        table.insert(lostNames, name)
+				    elseif health ~= "Disabled" then   -- devices disabled in the plugin are not counted
+				        devicesUndefined = devicesUndefined + 1
+				    end
+				end
+
+				if devicesLost == 0 and devicesUndefined == 0 then
 				    level = domoticz.ALERTLEVEL_GREEN 	-- domoticz.ALERTLEVEL_GREY, ALERTLEVEL_GREEN, ALERTLEVEL_YELLOW, ALERTLEVEL_ORANGE, ALERTLEVEL_RED
-				    AlertText = devicesLive	
-				elseif devicesLost==0 then
-				    level = domoticz.ALERTLEVEL_ORANGE 	
-				    AlertText = devicesUndefined
-				else 
-				    level = domoticz.ALERTLEVEL_RED 	
-				    AlertText = devicesLost
-                end
-                AlertText="Live: " .. devicesLive .. "\nUnknown: " .. devicesUndefined .. "\nLost: " ..devicesLost 
+				elseif devicesLost == 0 then
+				    level = domoticz.ALERTLEVEL_ORANGE
+				else
+				    level = domoticz.ALERTLEVEL_RED
+				end
+				local AlertText = "Live: " .. devicesLive .. "\nUnknown: " .. devicesUndefined .. "\nLost: " .. devicesLost
+				if devicesLost > 0 then
+				    AlertText = AlertText .. " (" .. table.concat(lostNames, ", ") .. ")"
+				end
 				-- update device in Domoticz
 				domoticz.devices(Alertidx).updateAlertSensor(level, AlertText)
 			end
