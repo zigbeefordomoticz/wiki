@@ -1,42 +1,63 @@
--- This dzvents script is intended to trigger an action in case of low battery device.
+-- This dzVents script is intended to trigger an action in case of low battery device.
+-- The battery levels are read through the Domoticz JSON API, i.e. from the database:
+-- the plugin writes the battery level without triggering an event, so the dzVents
+-- device.batteryLevel can lag behind until the value of the device changes.
+
+local BASE_URL = 'http://127.0.0.1:8080'  -- your Domoticz port; 127.0.0.1 must be in Setup > Settings > Local Networks
 
 local devicesToCheck = {
-    { ['name'] = 'Device_name_1', ['threshold'] = 15 },  -- add you device list here, and the battery level to trigger a warning.
-    { ['name'] = 'Device_name_2', ['threshold'] = 15 },
-    { ['name'] = 'Device_name_3', ['threshold'] = 15 },
-    { ['name'] = 'Device_name_4', ['threshold'] = 15 },
-    { ['name'] = 'Device_name_5', ['threshold'] = 15 },
-    { ['name'] = 'Device_name_6', ['threshold'] = 15 }
+    { name = 'Device_name_1', threshold = 15 },  -- add your device list here (names as in Setup > Devices), and the battery level to trigger a warning.
+    -- { name = 'Device_name_2', threshold = 15 },
 }
 
 return {
-	active = true,
-	on = {
-		['timer'] = {
-			'at 12:15 on sun'		-- Choose how often you want to check device's battery level. I check it on sundays at 12:15
-		}
-	},
-	execute = function(domoticz)
+    active = true,
+    on = {
+        timer = { 'at 12:15 on sun' },      -- Choose how often you want to check device's battery level. I check it on sundays at 12:15
+        httpResponses = { 'batteryLevels' },
+    },
+    logging = { marker = 'CheckBatteryLevel' },
 
-		local message = ""
+    execute = function(domoticz, item)
+        if item.isTimer then
+            domoticz.openURL({
+                url = BASE_URL .. '/json.htm?type=command&param=getdevices&used=true',
+                method = 'GET',
+                callback = 'batteryLevels',
+            })
+            return
+        end
 
-		for i, deviceToCheck in pairs(devicesToCheck) do
-			local name = deviceToCheck['name']
-			local threshold = deviceToCheck['threshold']
-			local bat_level = domoticz.devices(name).batteryLevel
-            print('Device: ' .. name .. ' Battery Level: ' ..bat_level)
+        if not item.ok or not item.isJSON or item.json.result == nil then
+            domoticz.log('getdevices failed, HTTP ' .. tostring(item.statusCode), domoticz.LOG_ERROR)
+            return
+        end
 
-			if ( bat_level < threshold) then
-				message = message .. 'Device ' .. name .. ' is low  battery. Battery level is ' .. bat_level .. ' %. '
-			end
-		end
+        local levels = {}
+        for _, node in ipairs(item.json.result) do
+            levels[node.Name] = node.BatteryLevel
+        end
 
-		if (message ~= "") then    	-- Write here what you want to do if a device has a battery level below threshold.
-		    local urlmsg = ""		-- I send a SMS to my phone using free-mobile SMS notifications feature.
-		    urlmsg = 'https://smsapi.free-mobile.fr/sendmsg?user=XXXXXXXX&pass=xxxxxxxxxxxxxx&msg= ' .. message .. ' '
-			domoticz.log('Low battery devices found: ' .. message, domoticz.LOG_ERROR)
-			domoticz.openURL(urlmsg)
-		end
-	end
+        local message = ''
+        for _, d in ipairs(devicesToCheck) do
+            local level = levels[d.name]
+            if level == nil then
+                domoticz.log('Device ' .. d.name .. ' not found (check its name, and that it is used)', domoticz.LOG_ERROR)
+            elseif level == 255 then
+                domoticz.log('Device ' .. d.name .. ' reports no battery level', domoticz.LOG_INFO)
+            else
+                domoticz.log('Device: ' .. d.name .. ' Battery Level: ' .. level, domoticz.LOG_INFO)
+                if level < d.threshold then
+                    message = message .. 'Device ' .. d.name .. ' is low battery. Battery level is ' .. level .. ' %. '
+                end
+            end
+        end
+
+        if message ~= '' then       -- Write here what you want to do if a device has a battery level below threshold.
+            domoticz.log('Low battery devices found: ' .. message, domoticz.LOG_ERROR)
+            -- e.g. domoticz.notify('Battery', message), or a free-mobile SMS:
+            domoticz.openURL('https://smsapi.free-mobile.fr/sendmsg?user=XXXXXXXX&pass=xxxxxxxxxxxxxx&msg='
+                .. domoticz.utils.urlEncode(message, '%20'))
+        end
+    end
 }
- 
