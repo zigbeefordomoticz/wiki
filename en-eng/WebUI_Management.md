@@ -21,6 +21,18 @@ The __Device Management__ page (*Management > Devices*) lists all the devices pa
 
 *This picture may have changed since this documentation was written.*
 
+### Key figures
+
+From plugin 9.1.011, five figures are shown above the list. Click one to list the devices it counts, and again to list all the devices. The colour of their dots is explained in [Status colours](WebUI_General-presentation.md#status-colours).
+
+| Figure | Content | Click |
+|--------|---------|-------|
+| Devices live | The devices in *Live* health, out of the enabled devices, how many are not live, and how many are disabled. | All the devices |
+| Needs attention | The devices that are not reachable, not seen recently or timed out, with a battery at 15 % or below, or whose pairing is not complete, and how many for each reason. A device with two reasons counts once in the figure. | These devices |
+| Low battery | The devices with a battery at 15 % or below, out of the battery devices. | These devices |
+| Weak link | The *Live* devices with an LQI under 40 (see [What the LQI and RSSI measure](#what-the-lqi-and-rssi-measure)). | These devices |
+| Optimized devices | The devices with a certified configuration, out of the enabled devices. | The devices that are not optimized |
+
 ### The list
 
 | Column | Content |
@@ -35,7 +47,7 @@ The __Device Management__ page (*Management > Devices*) lists all the devices pa
 
 Above the list:
 
-* **Quick filters**, with the number of devices in each: *All*, *Needs attention* (not reachable, timed out, not seen recently, battery at 15 % or below, or pairing not complete), *Not optimized*, *Disabled*, *Routers*, *End devices*.
+* **Quick filters**, with the number of devices in each: *All*, *Needs attention* (not reachable, timed out, not seen recently, battery at 15 % or below, or pairing not complete), *Not optimized*, *Disabled*, *Routers*, *End devices*. From plugin 9.1.011, *Low battery* and *Weak link* are added when there are some, and the disabled devices are only in *All* and *Disabled*.
 * **Search**: type part of a name, model, short id, IEEE or widget name.
 
 Click a column header to sort the list. The page remembers your sort order and page size.
@@ -160,7 +172,7 @@ The __Groups & Scenes__ page (*Management > Groups & Scenes*, *Groups* before pl
 
 *This picture may have changed since this documentation was written.*
 
-The page has the key figures on top, the list of the groups on the left, and the editor of one group on the right. *Help on the wiki* opens this section.
+The page has the key figures on top (see [Status colours](WebUI_General-presentation.md#status-colours) for the dots, from plugin 9.1.011), the list of the groups on the left, and the editor of one group on the right. *Help on the wiki* opens this section.
 
 ### Key figures
 

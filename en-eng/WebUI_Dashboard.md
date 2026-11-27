@@ -12,13 +12,15 @@ The __Dashboard__ is the home page of the WebUI (the first item of the menu bar,
 
 ## Key figures (top row)
 
+From plugin 9.1.011, the colour of the dot of each figure is explained in [Status colours](WebUI_General-presentation.md#status-colours).
+
 | Figure | What it shows |
 |--------|---------------|
-| **Devices live** | The devices in *Live* health, out of all the devices known to the plugin, and how many are not live. |
+| **Devices live** | The devices in *Live* health, out of the enabled devices, how many are not live, and how many are disabled. Before plugin 9.1.011, out of all the devices, the disabled ones included. |
 | **Received / min** | The messages received per minute, and below them the messages sent per minute, both averaged since the plugin started. |
-| **Delivery** | The share of unicast messages acknowledged by the device (APS ack), out of those acknowledged or failed, since the plugin started, with both counts below. Green from 98 %, orange from 90 %, red below. |
+| **Delivery** | The share of unicast messages acknowledged by the device (APS ack), out of those acknowledged or failed, since the plugin started, with both counts below. Green from 98 %, yellow from 90 %, red below. |
 | **Coordinator** | The coordinator model, its firmware version and the Zigbee channel. |
-| **Plugin** | The plugin version when it runs from a `stable` branch. On any other branch, the branch name and its commit, shown in orange: useful when you test a fix branch. |
+| **Plugin** | The plugin version when it runs from a `stable` branch. On any other branch, the branch name and its commit, with a yellow dot: useful when you test a fix branch. See [Why is the Plugin card yellow?](WebUI_General-presentation.md#why-is-the-plugin-card-yellow) |
 | **Uptime** | How long the plugin has been running, and when it started. |
 | **Firmware updates** | Only while an OTA firmware transfer runs: the device(s) being updated and the progress, with a link to *Admin > Firmware* (see [Update device firmware](HowTo_Update-device-firmware.md)). |
 
@@ -32,7 +34,9 @@ This list gathers what may need an action. Only the items that apply are shown; 
 | **New errors in the plugin log** | The plugin has logged new errors. They are also signalled by the warning icon in the menu bar. Viewing or downloading them marks them as read. |
 | **Battery below 15 %** | Battery devices that need a new battery soon, lowest first. |
 | **Not seen for *n* h** | Devices that sent nothing for the delay set by the `HealthTimeOut` setting. |
-| **Groups with a member not reachable or not seen** | Zigbee groups with at least one member that is not reachable or not seen: a command sent to the group may not reach every member. |
+| **Timed out** | From plugin 9.1.011: devices that sent nothing for the delay set by the `ForceDeviceTimedOut_afterXhours` setting. Before, they were only counted as *Unknown*. |
+| **Pairing not complete** | From plugin 9.1.011: devices whose pairing failed or did not finish. |
+| **Groups with a member not reachable or not seen** | Zigbee groups with at least one member that is not reachable, not seen or timed out: a command sent to the group may not reach every member. |
 | **Not optimized** | Devices without a certified configuration, handled generically by the plugin. See [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md). |
 | **Firmware update available** | Devices for which the plugin found a newer firmware online than the one they run. From plugin 9.1.010 it opens [*Firmware updates found online*](WebUI_Admin.md#firmware-updates-found-online), with the download links; *Admin > Firmware* then starts the update. |
 
@@ -54,7 +58,7 @@ Click the ⓘ next to a title to see how the figure is defined.
 
 Each family of devices is a bar, split by state. Click a part of a bar, or one of the labels below it, to open the list of the matching devices (short id, IEEE, model, name, status, battery, health). *Device Management →* opens the [Device Management](WebUI_Management.md#device-management) page.
 
-* **Plugin devices**: all the devices known to the plugin, by health: *Live*, *Not seen recently* (no message for the `HealthTimeOut` delay), *Lost* (away from the network), *Unknown*, *Disabled*.
+* **Plugin devices**: all the devices known to the plugin, by health: *Live*, *Not seen recently* (no message for the `HealthTimeOut` delay), *Timed out* (no message for the `ForceDeviceTimedOut_afterXhours` delay), *Not reachable* (away from the network), *Unknown*, *Disabled*. Before plugin 9.1.011, *Not reachable* is named *Lost*, and the timed out devices are in *Unknown*.
 * **Type of devices**: *Routers* (mains-powered devices that relay messages in the mesh) and *End devices* (devices that don't route and sleep most of the time, usually battery powered).
 * **Battery**: battery-powered devices by battery level (< 15 %, < 35 %, < 75 %, > 75 %).
 * **Optimized devices**: devices for which the plugin has a certified configuration (*Optimized*) and the others (*Non-optimized*), which may not work fully or may generate unexpected traffic. See [Dealing with a non-optimized device](Problem_Dealing-with-none-optimized-device.md).
@@ -67,14 +71,14 @@ The dashboard is not refreshed automatically: click *Refresh* to update it. To h
 
 ## The footer
 
-The bar at the bottom of every WebUI page gives, from left to right:
+The bar at the bottom of every WebUI page is green, yellow, red or blue (see [Status colours](WebUI_General-presentation.md#status-colours)). It gives, from left to right:
 
 * **Started at**: when the plugin was started.
 * **Rx/s, Tx/s**: the messages received and sent per second by the coordinator (per minute or per hour when traffic is low).
 * **MaxLoad**: the highest number of messages waiting to be sent by the coordinator. A MaxLoad above 5 can be a sign of congestion, and therefore of a malfunction; devices polled too often are a frequent cause.
 * The plugin state (*Ready*, *Busy*…).
 * When running: the group scan status, *Topology scan in progress*, and the OTA firmware update in progress (device and progress).
-* **Plugin**: the plugin version, followed by the version of the certified-device database in brackets. It is shown in red when an update is available: click it for a link to *Admin > Plugin*, where you can upgrade (see [Plugin update](Plugin_Update.md)).
+* **Plugin**: the plugin version (from plugin 9.1.011, the branch and the commit when it is not a release), followed by the version of the certified-device database in brackets. It is shown in red when an update is available: click it for a link to *Admin > Plugin*, where you can upgrade (see [Plugin update](Plugin_Update.md)).
 * **Firmware**: the coordinator firmware version, shown in red when a newer firmware is available (click it for more information).
 
 ------------------------------------------------

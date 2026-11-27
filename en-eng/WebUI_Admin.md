@@ -16,7 +16,7 @@ The __Admin__ page has five tabs:
 
 ### The status bar
 
-Above the tabs, a row of cards shows the state of the installation. It is read when the page opens.
+Above the tabs, a row of cards shows the state of the installation. It is read when the page opens. The colour of the dots is explained in [Status colours](WebUI_General-presentation.md#status-colours) (from plugin 9.1.011; before, they were always green).
 
 * **Plugin**: the version and branch of a release. When the plugin runs from a git branch, the branch name and the commit.
 * **Radio**: the coordinator model, with the radio maker and the zigpy library used (for example *Texas Instruments · zigpy-znp*), or *ZiGate*.
