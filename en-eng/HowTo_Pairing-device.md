@@ -91,7 +91,7 @@ When a device is paired, the plugin creates one widget per function of the devic
 
 You can delete the widgets you don't need in Domoticz. A deleted widget is not created again on its own. To get it back:
 
-* **Recreate the widgets**: on the *Admin > Provisionning* tab, in **A device already paired**, choose the device and click *Recreate widget* (before plugin 9.1.009: the **Recreate widget(s) of existing device** panel). All the widgets of the device are created again, so you get duplicates of the ones you kept (in the example above: 2 kept + 5 recreated = 7 widgets). Delete the duplicates you don't want in Domoticz.
+* **Recreate the widgets**: on the *Admin > Provisionning* tab, in **A device already paired**, choose the device and click *Recreate widget* (before plugin 9.1.009: the **Recreate widget(s) of existing device** panel). Only the missing widgets are created: the ones you kept stay as they are, with their name and history (in the example above: 2 kept + 3 recreated = 5 widgets). Before plugin 9.1.011, a device with the same kind of widget on two endpoints (for example a sensor with an external temperature probe) could get a kept widget linked to the wrong endpoint, and a duplicate.
 * **Or remove and pair again**: delete all the remaining widgets of the device (this removes the device from the plugin, see [Remove a device](HowTo_Remove-device.md)), then pair it again. The 5 widgets are created again, but **the history of the old widgets is lost**.
 
 Don't delete **all** the widgets of a device unless you want to remove it: deleting the last widget removes the device from the network.
