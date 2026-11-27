@@ -375,6 +375,12 @@ Keep `fail_safe` at least as long as the irrigation, or the valve closes before 
 | DanfossRoom | Room number linking an eTRV with an external temperature sensor in the same plugin instance | Danfoss eTRV thermostat + any temperature sensor |
 | DanfossRoomFreq | Polling frequency (seconds) for refreshing the external temperature; 0 disables. Recommended 1800-10800 in Auto-Offset mode, 300-1800 in Room-Sensor mode | Danfoss eTRV thermostat |
 
+## Eurotronic
+
+| Parameter | Description / valid values | Applicable devices |
+| --------- | -------------------------- | ------------------ |
+| EurotronicSetpointAttribute | From plugin 9.1.011. Attribute the setpoint from Domoticz is written to. Not set (default), or any value other than `4003`: the standard Occupied Heating Setpoint `0x0012`. `4003`: the manufacturer attribute `0x4003`, as plugins before 9.1.011 did. Read at each setpoint change, no restart needed. See [Eurotronic](Corner_Eurotronics.md#setpoint) | Eurotronic Spirit (SPZB0001) |
+
 ## GammaTroniques (TIC meter)
 
 | Parameter | Description / valid values | Applicable devices |
