@@ -150,7 +150,7 @@ A binding makes the device send its commands or reports for one cluster directly
 * *+ Bind* on a cluster row, then choose the target (the devices that have this cluster, with their endpoint) and click *Bind*.
 * The **×** of a target unbinds it.
 
-A battery device sleeps: wake it up (press one of its buttons) just before you read its table or bind it, so that it receives the request.
+A battery device sleeps: wake it up (press one of its buttons) just before you read its table, bind it, or read and send its reporting, so that it receives the request.
 
 Refer to the tutorial [Bind two devices](HowTo_Binding.md) for more information.
 
@@ -158,9 +158,18 @@ Refer to the tutorial [Bind two devices](HowTo_Binding.md) for more information.
 
 With a zigpy coordinator, each reported attribute has its own row under its cluster, with its data type and three values: *Min (s)* and *Max (s)*, in seconds, and *Change* (the minimum change that triggers a report, only for values that are numbers). The device sends a report when the value has changed by at least *Change*, but not more often than every *Min*, and at least every *Max* even if nothing changed.
 
-* Change the values, then *Save (N)* stores them in the plugin for this device. *Discard* drops your changes.
-* *Send reporting again* sends the reporting configuration to the device now.
-* *Reporting back to defaults* drops the values of this device: it goes back to the plugin's default configuration.
+* Change the values, then *Save (N)* stores them in the plugin for this device and, from plugin 9.1.011, sends them to it. *Discard* drops your changes.
+* *Send reporting again* sends the reporting configuration to the device now. Before plugin 9.1.011 it sent nothing to a battery device, and nothing to a mains powered one whose reporting was already as configured.
+* *Reporting back to defaults* drops the values of this device: it goes back to the plugin's default configuration. Nothing is sent: click *Send reporting again* for a battery device, which keeps its previous values until then.
+
+From plugin 9.1.011, *Read reporting* asks the device how it really reports. Its answer shows a few seconds later, and the date of the last answer is under the device name:
+
+* *device: 300* under *Min*, *Max* or *Change* is the value held by the device. It is in bold when it differs from the value saved in the plugin: the device did not receive the configuration, or does not accept this value.
+* *device: no reporting configured*: the device has no reporting for this attribute.
+* *device: not readable*: the device refused to answer for this attribute, with the Zigbee status it gave (`86` is an attribute it does not have).
+* An attribute the device reports, with no configuration in the plugin on that endpoint, has its own row with the values of the device only.
+
+A Zigbee device cannot list its reporting table: the plugin asks for the attributes it configures and for those it has read before, not for all the attributes of the device.
 
 With a ZiGate coordinator, only the binding part is shown.
 
